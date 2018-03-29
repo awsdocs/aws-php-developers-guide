@@ -1,0 +1,79 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+===================================
+Enabling Long Polling in |SQS|
+===================================
+
+.. meta::
+   :description:
+   :keywords: |SQS|, |sdk-php| examples
+
+Long polling reduces the number of empty responses by allowing |SQS| to wait a specified time for a message to become available in the queue before 
+sending a response. Also, long polling eliminates false empty responses by querying all of the servers instead of a sampling of servers. To enable 
+long polling, you must specify a non-zero wait time for received messages. To learn more, see :SQS-dg:`SQS Long Polling <sqs-long-polling>`.
+
+The examples below show how to:
+
+* Set attributes on an SQS queue to enable long polling, using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
+* Retrieve one or more messages with long polling using :aws-php-class:`ReceiveMessage <api-sqs-2012-11-05.html#receivemessage>`.
+* Create a long polling queue using :aws-php-class:`CreateQueue <api-sqs-2012-11-05.html#createqueue>`.
+
+All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+
+Credentials
+-----------
+
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+
+Set Attributes on a Queue to Enable Long Polling
+------------------------------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/sqs/LongPollingSetQueueAttributes.php
+   :lines: 15-18
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/sqs/LongPollingSetQueueAttributes.php
+   :lines: 27-46
+   :language: php
+
+Retrieve Messages with Long Polling
+-----------------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/sqs/LongPollingReceiveMessage.php
+   :lines: 15-18
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/sqs/LongPollingReceiveMessage.php
+   :lines: 27-47
+   :language: php
+
+Create a Queue with Long Polling
+--------------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/sqs/LongPollingCreateQueue.php
+   :lines: 15-18
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/sqs/LongPollingCreateQueue.php
+   :lines: 27-46
+   :language: php

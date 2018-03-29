@@ -1,0 +1,96 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+======================================
+Working with |IAM| Server Certificates
+======================================
+
+.. meta::
+   :description: List, update, and get information about certificates using IAM.
+   :keywords: |IAMlong|, |sdk-php| examples
+
+To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to |IAM| or import it into AWS Certificate Manager.
+
+The examples below show how to:
+
+* List the certificates stored in |IAM| using :aws-php-class:`ListServerCertificates <api-iam-2010-05-08.html#listservercertificates>`.
+* Retrieve information about a certificate using :aws-php-class:`GetServerCertificate <api-iam-2010-05-08.html#getservercertificate>`.
+* Update a certificate using :aws-php-class:`UpdateServerCertificate <api-iam-2010-05-08.html#updateservercertificate>`.
+* Delete a certificate using :aws-php-class:`DeleteServerCertificate <api-iam-2010-05-08.html#deleteservercertificate>`.
+
+All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+
+Credentials
+-----------
+
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+
+List Server Certificates
+------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/ListServerCertificates.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/ListServerCertificates.php
+   :lines: 27-39
+   :language: php
+
+
+Retrieve a Server Certificate
+-----------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/GetServerCertificate.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/GetServerCertificate.php
+   :lines: 27-42
+   :language: php
+
+
+Update a Server Certificate
+---------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/UpdateServerCertificate.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/UpdateServerCertificate.php
+   :lines: 27-42
+   :language: php
+
+
+Delete a Server Certificate
+---------------------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/DeleteServerCertificate.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/DeleteServerCertificate.php
+   :lines: 27-42
+   :language: php

@@ -1,0 +1,61 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+==============================================
+Publishing Custom Metrics in |CWlong|
+==============================================
+
+.. meta::
+   :description: Publish metric data and create alarms for |CWlong|.
+   :keywords: |CWlong|, |sdk-php| examples
+
+Metrics are data about the performance of your systems. An alarm watches a single metric over a time period you specify, and performs one or more actions based on the value of the metric relative to a given threshold over a number of time periods.
+
+The examples below show how to:
+
+* Publish metric data using :aws-php-class:`PutMetricData </api-monitoring-2010-08-01.html#putmetricdata>`.
+* Create an alarm using :aws-php-class:`PutMetricAlarm </api-monitoring-2010-08-01.html#putmetricalarm>`.
+
+All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+
+Credentials
+-----------
+
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+
+Publish Metric Data
+-------------------
+
+**Imports**
+
+.. literalinclude::  example_code/cloudwatch/PutMetricData.php
+   :lines: 15-19
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/cloudwatch/PutMetricData.php
+   :lines: 27-50
+   :language: php
+
+Create an Alarm
+---------------
+
+**Imports**
+
+.. literalinclude::  example_code/cloudwatch/PutMetricAlarm.php
+   :lines: 15-19
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/cloudwatch/PutMetricAlarm.php
+   :lines: 27-44
+   :language: php

@@ -1,0 +1,671 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+=============================
+Credentials for the |sdk-php|
+=============================
+
+.. meta::
+   :description: Connect the |sdk-php| to AWS services with AWS access keys. 
+   :keywords: |sdk-php| credentials, |sdk-php| access keys, iam profile for |sdk-php|
+
+To authenticate requests, AWS services require you to provide your
+:iam-ug:`AWS access keys <id_credentials_access-keys>`, also known
+as your AWS **access key ID** and **secret access key**. In the |sdk-php|,
+these access keys are often referred to collectively as your
+**credentials**. This guide demonstrates how to provide your credentials to the
+|sdk-php| using one of the following methods:
+
+- :ref:`credential_profiles`
+- :ref:`credential_provider`
+- :ref:`instance_profile_credentials`
+- :ref:`ecs_credentials`
+- :ref:`environment_credentials`
+- :ref:`temporary_credentials`
+- :ref:`assume_role_credentials`
+- :ref:`hardcoded_credentials`
+
+In general, we recommend that you use |IAM| roles when running your
+application on |EC2|, and use credential profiles or environment variables
+elsewhere. Regardless of how you supply credentials to the SDK, we encourage you to
+follow the :iam-ug:`IAM Best Practices <best-practices>` when managing your credentials.
+
+
+.. _credential_profiles:
+
+Using the AWS Credentials File and Credential Profiles
+------------------------------------------------------
+
+Starting with the |sdk-php| version 2.6.2, you can use an AWS credentials
+file to specify your credentials. This is a special, INI-formatted file stored
+under your HOME directory, and is a good way to manage credentials for your
+development environment. You should place the file at ``~/.aws/credentials``,
+where ``~`` represents your HOME directory.
+
+Using an AWS credentials file offers a the following benefits:
+
+1. Your projects' credentials are stored outside of your projects, so there is
+   no chance of accidentally committing them into version control.
+2. You can define and name multiple sets of credentials in one place.
+3. You can easily reuse the same credentials between projects.
+4. Other AWS SDKs and tools support, or will soon support, this same
+   credentials file. This allows you to reuse your credentials with other
+   tools.
+
+The format of the AWS credentials file should look something like the
+following.
+
+.. code-block:: ini
+
+    [default]
+    aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
+    aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
+
+    [project1]
+    aws_access_key_id = ANOTHER_AWS_ACCESS_KEY_ID
+    aws_secret_access_key = ANOTHER_AWS_SECRET_ACCESS_KEY
+
+Each section (e.g., ``[default]``, ``[project1]``), represents a separate
+credential **profile**. You can reference profiles from an SDK configuration
+file, or when you are instantiating a client, using the ``profile`` option.
+
+.. code-block:: php
+
+    <?php
+
+    use Aws\DynamoDb\DynamoDbClient;
+
+    // Instantiate a client with the credentials from the project1 profile
+    $client = new DynamoDbClient([
+        'profile' => 'project1',
+        'region'  => 'us-west-2',
+        'version' => 'latest'
+    ]);
+
+If no credentials or profiles were explicitly provided to the SDK and no
+credentials were defined in environment variables, but a credentials file is
+defined, the SDK uses the "default" profile. You can change the default
+profile by specifying an alternate profile name in the ``AWS_PROFILE``
+environment variable.
+
+.. _credential_provider:
+
+Using a Credential Provider
+---------------------------
+
+A credential provider is a function that returns a ``GuzzleHttp\Promise\PromiseInterface``
+that is fulfilled with an ``Aws\Credentials\CredentialsInterface`` instance or
+rejected with an ``Aws\Exception\CredentialsException``. You can use credential
+providers to implement your own custom logic for creating credentials or to
+optimize credential loading.
+
+Credential providers are passed into the ``credentials`` client constructor
+option. Credential providers are asynchronous, which forces them to be lazily
+evaluated each time an API operation is invoked. As such, passing in a
+credential provider function to an SDK client constructor does not immediately
+validate the credentials. If the credential provider does not return a
+credentials object, an API operation will be rejected with an
+``Aws\Exception\CredentialsException``.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    // Use the default credential provider
+    $provider = CredentialProvider::defaultProvider();
+
+    // Pass the provider to the client
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
+The SDK provides several built-in providers that can be combined together
+with any custom providers.
+
+.. important::
+
+    Credential providers are invoked every time an API operation is performed.
+    If loading credentials is an expensive task (e.g., loading from disk or a
+    network resource) or if credentials are not cached by your provider,
+    you should consider wrapping your credential provider in an
+    ``Aws\Credentials\CredentialProvider::memoize`` function. The default
+    credential provider used by the SDK is automatically memoized.
+
+env provider
+~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::env`` attempts to load credentials from
+environment variables.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => CredentialProvider::env()
+    ]);
+
+ini provider
+~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::ini`` attempts to load credentials from
+an :ref:`ini credential file <credential_profiles>`. By default, the SDK
+attempts to load the "default" profile from a file located at
+``~/.aws/credentials``.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    $provider = CredentialProvider::ini();
+    // Cache the results in a memoize function to avoid loading and parsing
+    // the ini file on every API operation
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
+You can use a custom profile or .ini file location by providing arguments to
+the function that creates the provider.
+
+.. code-block:: php
+
+    $profile = 'production';
+    $path = '/full/path/to/credentials.ini';
+
+    $provider = CredentialProvider::ini($profile, $path);
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
+instanceProfile provider
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::instanceProfile`` attempts to load
+credentials from |EC2| instance profiles.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    $provider = CredentialProvider::instanceProfile();
+    // Be sure to memoize the credentials
+    $memoizedProvider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $memoizedProvider
+    ]);
+
+.. note::
+
+    You can disable this attempt to load from |EC2| instance profiles by
+    setting the ``AWS_EC2_METADATA_DISABLED`` environment variable to ``true``.
+
+ecsCredentials provider
+~~~~~~~~~~~~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::ecsCredentials`` attempts to load
+credentials by a ``GET`` request, whose URI is specified by environment variable
+``AWS_CONTAINER_CREDENTIALS_RELATIVE_URI`` in the container.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    $provider = CredentialProvider::ecsCredentials();
+    // Be sure to memoize the credentials
+    $memoizedProvider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $memoizedProvider
+    ]);
+
+defaultProvider provider
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::defaultProvider`` is the default
+credential provider. This provider is used if you omit a ``credentials`` option
+when creating a client. It first attempts to load credentials from environment
+variables, then from an .ini file (``.aws/credentials`` file first, followed by ``.aws/config`` file),
+and then from an instance profile (``EcsCredentials`` first, followed by ``Ec2`` metadata).
+
+.. note::
+
+    The result of the default provider is automatically memoized.
+
+assumeRole provider
+~~~~~~~~~~~~~~~~~~~
+
+``Aws\Credentials\CredentialProvider::assumeRole`` is a credential provider
+that creates credentials using assume role parameters and ``StsClient`` information.
+
+.. note::
+
+   To avoid unnecessarily fetching |STS| credentials on every API operation, you can use
+   the ``memoize`` function to handle automatically refreshing the credentials when they expire.
+   See details with following example code.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+    use Aws\Sts\StsClient;
+
+    // Passing Aws\Credentials\AssumeRoleCredentialProvider options directly
+    $provider = CredentialProvider::assumeRole([
+        'client' => new StsClient(['region' => 'us-west-2', 'version' => 'latest']),
+        'assume_role_params' => [
+            'RoleArn' => 'arn:aws:iam::012345678910:role/role_name',
+            'RoleSessionName' => 'test_session',
+        ]
+    ]);
+
+    // To avoid unnecessarily fetching STS credentials on every API operation,
+    // memoize function will handle automatically refreshing the credentials when they expire
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => 'latest',
+        'credentials' => $provider
+    ]);
+
+Creating a Custom Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Credential providers are simply functions that when invoked return a promise
+(``GuzzleHttp\Promise\PromiseInterface``) that is fulfilled with an
+``Aws\Credentials\CredentialsInterface`` object or rejected with an
+``Aws\Exception\CredentialsException``.
+
+A best practice for creating providers is to create a function that is invoked
+to create the actual credential provider. As an example, here's the source of
+the ``env`` provider (slightly modified for example purposes). Notice that it
+is a function that returns the actual provider function. This allows you to
+easily compose credential providers and pass them around as values.
+
+.. code-block:: php
+
+    use GuzzleHttp\Promise;
+    use GuzzleHttp\Promise\RejectedPromise;
+
+    // This function CREATES a credential provider
+    public static function env()
+    {
+        // This function IS the credential provider
+        return function () {
+            // Use credentials from environment variables, if available
+            $key = getenv(self::ENV_KEY);
+            $secret = getenv(self::ENV_SECRET);
+            if ($key && $secret) {
+                return Promise\promise_for(
+                    new Credentials($key, $secret, getenv(self::ENV_SESSION))
+                );
+            }
+
+            $msg = 'Could not find environment variable '
+                . 'credentials in ' . self::ENV_KEY . '/' . self::ENV_SECRET;
+            return new RejectedPromise(new CredentialsException($msg));
+        };
+    }
+
+Memoizing Credentials
+~~~~~~~~~~~~~~~~~~~~~
+
+It is sometimes necessary to create a credential provider that remembers the
+previous return value. This can be useful for performance when loading
+credentials is an expensive operation or when using the ``Aws\Sdk`` class to
+share a credential provider across multiple clients. You can add memoization to
+a credential provider by wrapping the credential provider function in a
+``memoize`` function.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+
+    $provider = CredentialProvider::instanceProfile();
+    // Wrap the actual provider in a memoize function
+    $provider = CredentialProvider::memoize($provider);
+
+    // Pass the provider into the Sdk class and share the provider
+    // across multiple clients. Each time a new client is constructed,
+    // it will use the previously returned credentials as long as
+    // they have not yet expired.
+    $sdk = new Aws\Sdk(['credentials' => $provider]);
+
+    $s3 = $sdk->getS3(['region' => 'us-west-2', 'version' => 'latest']);
+    $ec2 = $sdk->getEc2(['region' => 'us-west-2', 'version' => 'latest']);
+
+    assert($s3->getCredentials() === $ec2->getCredentials());
+
+When the memoized credentials become expired, the memoize wrapper invokes
+the wrapped provider in an attempt to refresh the credentials.
+
+Chaining Providers
+~~~~~~~~~~~~~~~~~~
+
+Credential providers can be chained using the
+``Aws\Credentials\CredentialProvider::chain()`` function. This function accepts
+a variadic number of arguments, each of which are credential provider
+functions. This function then returns a new function that is the composition of
+the provided functions such that they are invoked one after the other until one
+of the providers returns a promise that is fulfilled successfully.
+
+The ``defaultProvider`` uses this composition to check multiple
+providers before failing. The source of the ``defaultProvider`` demonstrates
+the use of the ``chain`` function.
+
+.. code-block:: php
+
+    // This function returns a provider
+    public static function defaultProvider(array $config = [])
+    {
+        // This function is the provider, which is actually the composition
+        // of multiple providers. Notice that we are memoizing the result by
+        // default as well.
+        return self::memoize(
+            self::chain(
+                self::env(),
+                self::ini(),
+                self::instanceProfile($config)
+            )
+        );
+    }
+
+.. _anonymous_access:
+
+Creating Anonymous Clients
+--------------------------
+
+In some cases, you might want to create a client that is not associated with any
+credentials. This enables you to make anonymous requests to a service. For
+example, both |S3| objects and |CSLong| domains can be configured to allow
+anonymous access.
+
+To create an anonymous client, you can set the ``'credentials'`` option to
+``false``.
+
+.. code-block:: php
+
+    $s3Client = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'credentials' => false
+    ]);
+
+    // Makes an anonymous request. The object would need to be publicly
+    // readable for this to succeed.
+    $result = $s3Client->getObject([
+        'Bucket' => 'my-bucket',
+        'Key'    => 'my-key',
+    ]);
+
+.. _instance_profile_credentials:
+
+Using |IAM| Roles for |EC2| Instances
+----------------------------------------
+
+Using |IAM| roles is the preferred technique for providing credentials to
+applications running on |EC2|. |IAM| roles remove the need to worry about
+credential management from your application. They allow an instance to "assume"
+a role by retrieving temporary credentials from the EC2 instance's metadata
+server. These temporary credentials, often referred to as
+**instance profile credentials**, allow access to the actions and resources
+that the role's policy allows.
+
+When launching an EC2 instance, you can choose to associate it with an IAM
+role. Any application running on that EC2 instance is then allowed to assume
+the associated role. |EC2| handles all the legwork of securely
+authenticating instances to the |IAM| service to assume the role, and periodically
+refreshing the retrieved role credentials. This keeps your application secure with
+almost no work on your part.
+
+If you don't explicitly provide credentials to the client object and no
+environment variable credentials are available, the SDK attempts to retrieve
+instance profile credentials from an |EC2| instance metadata server. These
+credentials are available only when running on |EC2| instances that have
+been configured with an |IAM| role.
+
+.. note::
+
+    Instance profile credentials and other temporary credentials generated by
+    the |STSlong| (|STS|) are not supported by every
+    service. To determine whether the service you are using supports temporary
+    credentials, see :iam-ug:`AWS Services that Support AWS STS <reference_aws-services-that-work-with-iam>`.
+
+    To avoid hitting the metadata service every time, an instance of ``Aws\CacheInterface``
+    can be passed in as the ``'credentials'`` option to a client constructor. This lets the SDK
+    use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
+
+For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon-ec2>`.
+
+.. _ecs_credentials:
+
+Using |IAM| Roles for |ECSlong| Tasks
+-------------------------------------
+
+With |IAM| roles for |ECS| tasks, you can specify an |IAM| role that can be
+used by the containers in a task. This provides a strategy for managing credentials
+for your applications to use, similar to the way that |EC2| instance profiles
+provide credentials to EC2 instances.
+
+Instead of creating and distributing your AWS credentials to the containers or
+using the EC2 instance’s role, you can associate an |IAM| role with an ECS task definition or
+``RunTask`` :aws-php-class:`API </api-ecs-2014-11-13.html#runtask>` operation.
+
+.. note::
+
+    Instance profile credentials and other temporary credentials generated by
+    the |STS|) are not supported by every
+    service. To determine whether the service you are using supports temporary
+    credentials, see :iam-ug:`AWS Services that Support AWS STS <reference_aws-services-that-work-with-iam>`.
+
+For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Tasks<task-iam-roles>`.
+
+.. _environment_credentials:
+
+Using Credentials from Environment Variables
+--------------------------------------------
+
+If you don't provide credentials to a client object at the time of its
+instantiation, the SDK attempts to find credentials in your environment.
+The first place the SDK checks for credentials is in your environment
+variables. The SDK uses the ``getenv()`` function function to look for the
+``AWS_ACCESS_KEY_ID``, ``AWS_SECRET_ACCESS_KEY``, and ``AWS_SESSION_TOKEN``
+environment variables. These credentials are referred to as
+**environment credentials**.
+
+.. _temporary_credentials:
+
+Using Temporary Credentials from |STS|
+--------------------------------------
+
+:STS-api:`AWS Security Token Service <Welcome>`
+(AWS STS) enables you to request limited-privilege, **temporary credentials**
+for AWS |IAM| users, or for users that you authenticate via identity federation.
+One common use case for using temporary credentials is to grant mobile or
+client-side applications access to AWS resources by authenticating users
+through third-party identity providers (for details, see :IAM-ug:`Web Identity Federation
+<id_roles_providers_oidc>`).
+
+.. note::
+
+    Temporary credentials generated by |STS| are not supported by every
+    service. To determine whether the service you are using supports temporary
+    credentials, see :iam-ug:`AWS Services that Support AWS STS <reference_aws-services-that-work-with-iam>`.
+
+Getting Temporary Credentials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|STS| has several operations that return temporary credentials, but the
+``GetSessionToken`` operation is the simplest for demonstration purposes.
+Assuming you have an instance of ``Aws\Sts\StsClient`` stored in the
+``$stsClient`` variable, this is how you call it.
+
+.. code-block:: php
+
+    $result = $stsClient->getSessionToken();
+
+The result for ``GetSessionToken`` and the other |STS| operations always
+contains a ``'Credentials'`` value. If you print the result
+(e.g., ``print_r($result)``), it looks like the following:
+
+::
+
+    Array
+    (
+        ...
+        [Credentials] => Array
+        (
+            [SessionToken] => '<base64 encoded session token value>'
+            [SecretAccessKey] => '<temporary secret access key value>'
+            [Expiration] => 2013-11-01T01:57:52Z
+            [AccessKeyId] => '<temporary access key value>'
+        )
+        ...
+    )
+
+Providing Temporary Credentials to the |sdk-php|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use temporary credentials with another AWS client by instantiating
+the client and passing in the values received from |STS| directly.
+
+.. code-block:: php
+
+    use Aws\S3\S3Client;
+
+    $result = $stsClient->getSessionToken();
+
+    $s3Client = new S3Client([
+        'version'     => '2006-03-01',
+        'region'      => 'us-west-2',
+        'credentials' => [
+            'key'    => $result['Credentials']['AccessKeyId'],
+            'secret' => $result['Credentials']['SecretAccessKey'],
+            'token'  => $result['Credentials']['SessionToken']
+        ]
+    ]);
+
+You can also construct a ``Aws\Credentials\Credentials`` object and use that
+when instantiating the client.
+
+.. code-block:: php
+
+    use Aws\Credentials\Credentials;
+    use Aws\S3\S3Client;
+
+    $result = $stsClient->getSessionToken();
+
+    $credentials = new Credentials(
+        $result['Credentials']['AccessKeyId'],
+        $result['Credentials']['SecretAccessKey'],
+        $result['Credentials']['SessionToken']
+    );
+
+    $s3Client = new S3Client([
+        'version'     => '2006-03-01',
+        'region'      => 'us-west-2',
+        'credentials' => $credentials
+    ]);
+
+However, the *best* way to provide temporary credentials is to use the
+``createCredentials()`` helper method included with the ``StsClient``. This
+method extracts the data from an |STS| result and creates the ``Credentials``
+object for you.
+
+.. code-block:: php
+
+    $result = $stsClient->getSessionToken();
+    $credentials = $stsClient->createCredentials($result);
+
+    $s3Client = new S3Client([
+        'version'     => '2006-03-01',
+        'region'      => 'us-west-2',
+        'credentials' => $credentials
+    ]);
+
+For more information about why you might need to use temporary credentials in
+your application or project, see :iam-ug:`Scenarios for Granting Temporary Access <id_credentials_temp>` in the |STS| documentation.
+
+.. _assume_role_credentials:
+
+Using Assume Role Credentials
+-----------------------------
+
+If you use ``Aws\Credentials\AssumeRoleCredentialProvider`` to create credentials by assuming a role,
+you need to provide ``'client'`` information with an ``StsClient`` object and
+``'assume_role_params'`` details.
+
+For more information regarding ``'assume_role_params'``, see :aws-php-class:`AssumeRole </api-sts-2011-06-15.html#assumerole>`.
+
+.. code-block:: php
+
+    $assumeRoleCredentials = new AssumeRoleCredentialProvider([
+        'client' => new StsClient([
+            'region' => 'us-west-2',
+            'version' => '2011-06-15'
+        ]),
+        'assume_role_params' => [
+            'RoleArn' => '<string>', // REQUIRED
+            'RoleSessionName' => '<string>', // REQUIRED
+            ...
+        ]
+    ]);
+
+.. _hardcoded_credentials:
+
+Using Hard-Coded Credentials
+----------------------------
+
+.. warning::
+
+    Hard-coding your credentials can be dangerous, because it's easy to
+    accidentally commit your credentials into an SCM repository. This can potentially
+    expose your credentials to more people than you intend. It can also make it
+    difficult to rotate credentials in the future.
+
+If you decide to hard-coded credentials to an SDK client, provide an associative array of "key",
+"secret", and optional "token" key-value pairs to the "credentials" option of
+a client constructor.
+
+.. code-block:: php
+
+    // Hardcoded credentials
+	$s3Client = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'credentials' => [
+            'key'    => 'my-access-key-id',
+            'secret' => 'my-secret-access-key',
+        ],
+    ]);
+
+

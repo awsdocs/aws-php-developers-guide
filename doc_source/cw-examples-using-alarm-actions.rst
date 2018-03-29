@@ -1,0 +1,61 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+=================================================
+Using Alarm Actions with |CWlong| Alarms
+=================================================
+
+.. meta::
+   :description: Create |CW| alarms that automatically stop, terminate, reboot, or recover EC2 instances.
+   :keywords: |CWlong|, |sdk-php| examples
+
+Using alarm actions, you can create alarms that automatically stop, terminate, reboot, or recover your |EC2| instances. You can use the stop or terminate actions when you no longer need an instance to be running. You can use the reboot and recover actions to automatically reboot those instances.
+
+The examples below show how to:
+
+* Enable actions for specified alarms using :aws-php-class:`EnableAlarmActions </api-monitoring-2010-08-01.html#enablealarmactions>`.
+* Disable actions for specified alarms using :aws-php-class:`DisableAlarmActions </api-monitoring-2010-08-01.html#disablealarmactions>`.
+
+All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+
+Credentials
+-----------
+
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+
+Enable Alarm Actions
+--------------------
+
+**Imports**
+
+.. literalinclude::  example_code/cloudwatch/EnableAlarmActions.php
+   :lines: 15-19
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/cloudwatch/EnableAlarmActions.php
+   :lines: 27-43
+   :language: php
+
+Disable Alarm Actions
+---------------------
+
+**Imports**
+
+.. literalinclude::  example_code/cloudwatch/DisableAlarmActions.php
+   :lines: 15-19
+   :language: PHP
+
+**Code**
+
+.. literalinclude:: example_code/cloudwatch/DisableAlarmActions.php
+   :lines: 27-43
+   :language: php

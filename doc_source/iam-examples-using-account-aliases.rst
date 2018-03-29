@@ -1,0 +1,77 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+===========================
+Using |IAM| Account Aliases
+===========================
+
+.. meta::
+   :description: Create, list, and delete aliases for AWS accout IDs using |IAM|.
+   :keywords: |IAMlong|, |sdk-php| examples
+
+If you want the URL for your sign-in page to contain your company name or other friendly identifier instead of your AWS account ID, you can create an alias for your AWS account ID. If you create an AWS account alias, your sign-in page URL changes to incorporate the alias.
+
+The examples below show how to:
+
+* Create an alias using :aws-php-class:`CreateAccountAlias </api-iam-2010-05-08.html#createaccountalias>`.
+* List the alias associated with the AWS account using :aws-php-class:`ListAccountAliases </api-iam-2010-05-08.html#listaccountaliases>`.
+* Delete an alias using :aws-php-class:`DeleteAccountAlias </api-iam-2010-05-08.html#deleteaccountalias>`.
+
+All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+
+Credentials
+-----------
+
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+
+Create an Alias
+---------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/CreateAccountAlias.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/CreateAccountAlias.php
+   :lines: 27-42
+   :language: php
+
+List Account Aliases
+--------------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/ListAccountAliases.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/ListAccountAliases.php
+   :lines: 27-39
+   :language: php
+
+Delete an Alias
+---------------
+
+**Imports**
+
+.. literalinclude::  example_code/iam/DeleteAccountAlias.php
+   :lines: 15-18
+   :language: php
+
+**Code**
+
+.. literalinclude:: example_code/iam/DeleteAccountAlias.php
+   :lines: 27-42
+   :language: php
