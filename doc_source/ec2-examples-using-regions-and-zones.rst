@@ -36,13 +36,13 @@ Describe Availability Zones
 **Imports**
 
 .. literalinclude::  example_code/ec2/DescribeAvailabilityZones.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DescribeAvailabilityZones.php
-   :lines: 26-34
+   :lines: 30-38
    :language: php
 
 Describe Regions
@@ -51,11 +51,11 @@ Describe Regions
 **Imports**
 
 .. literalinclude::  example_code/ec2/DescribeRegions.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DescribeRegions.php
-   :lines: 26-34
+   :lines: 30-38
    :language: php

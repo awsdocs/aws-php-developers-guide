@@ -37,13 +37,13 @@ Create a Key Pair
 **Imports**
 
 .. literalinclude::  example_code/ec2/CreateKeyPair.php
-   :lines: 15-17
+   :lines: 19-21
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/CreateKeyPair.php
-   :lines: 26-43
+   :lines: 30-47
    :language: php
 
 
@@ -53,13 +53,13 @@ Delete a Key Pair
 **Imports**
 
 .. literalinclude::  example_code/ec2/DeleteKeypair.php
-   :lines: 15-17
+   :lines: 19-21
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DeleteKeypair.php
-   :lines: 26-39
+   :lines: 30-43
    :language: php
 
 
@@ -69,11 +69,11 @@ Describe Key Pairs
 **Imports**
 
 .. literalinclude::  example_code/ec2/DescribeKeyPairs.php
-   :lines: 15-17
+   :lines: 19-21
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DescribeKeyPairs.php
-   :lines: 26-34
+   :lines: 30-38
    :language: php

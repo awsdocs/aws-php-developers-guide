@@ -38,13 +38,13 @@ Create a Policy
 **Imports**
 
 .. literalinclude::  example_code/iam/CreatePolicy.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/CreatePolicy.php
-   :lines: 27-66
+   :lines: 31-70
    :language: php
 
 Attach a Policy to a Role
@@ -53,13 +53,13 @@ Attach a Policy to a Role
 **Imports**
 
 .. literalinclude::  example_code/iam/AttachRolePolicy.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/AttachRolePolicy.php
-   :lines: 27-61
+   :lines: 31-65
    :language: php
 
 Attach a Policy to a User
@@ -68,13 +68,13 @@ Attach a Policy to a User
 **Imports**
 
 .. literalinclude::  example_code/iam/AttachUserPolicy.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/AttachUserPolicy.php
-   :lines: 27-61
+   :lines: 31-65
    :language: php
 
 Detach a User Policy
@@ -83,11 +83,11 @@ Detach a User Policy
 **Imports**
 
 .. literalinclude::  example_code/iam/DetachUserPolicy.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/DetachUserPolicy.php
-   :lines: 27-44
+   :lines: 31-49
    :language: php

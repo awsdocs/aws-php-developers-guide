@@ -35,11 +35,11 @@ Change the Visibility Timeout of Multiple Messages
 **Imports**
 
 .. literalinclude::  example_code/sqs/ChangeMessageVisibilityBatch.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/ChangeMessageVisibilityBatch.php
-   :lines: 28-65
+   :lines: 32-69
    :language: php

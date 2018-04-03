@@ -39,13 +39,13 @@ Send a Message
 **Imports**
 
 .. literalinclude::  example_code/sqs/SendMessage.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/SendMessage.php
-   :lines: 27-59
+   :lines: 31-63
    :language: php
 
 Receive and Delete Messages
@@ -54,11 +54,11 @@ Receive and Delete Messages
 **Imports**
 
 .. literalinclude::  example_code/sqs/ReceiveMessage.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/ReceiveMessage.php
-   :lines: 27-55
+   :lines: 31-59
    :language: php

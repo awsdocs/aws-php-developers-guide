@@ -37,13 +37,13 @@ Create an Alias
 **Imports**
 
 .. literalinclude::  example_code/iam/CreateAccountAlias.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/CreateAccountAlias.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php
 
 List Account Aliases
@@ -52,13 +52,13 @@ List Account Aliases
 **Imports**
 
 .. literalinclude::  example_code/iam/ListAccountAliases.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/ListAccountAliases.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 Delete an Alias
@@ -67,11 +67,11 @@ Delete an Alias
 **Imports**
 
 .. literalinclude::  example_code/iam/DeleteAccountAlias.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/DeleteAccountAlias.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php

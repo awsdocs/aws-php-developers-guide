@@ -85,7 +85,7 @@ Promise
 
 Region
     Services are supported in :AWS-gr:`one or more geographical regions <rande>`. 
-	Services may have different endpoints/URLs in each region, which exist to reduce data
+    Services may have different endpoints/URLs in each region, which exist to reduce data
     latency in your applications. You must :ref:`provide a region <cfg_region>`
     when you configure a client object, so that the SDK can determine which
     endpoint to use with the service.

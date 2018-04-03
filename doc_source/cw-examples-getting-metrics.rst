@@ -38,13 +38,13 @@ List Metrics
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/ListMetrics.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/ListMetrics.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 
@@ -54,13 +54,13 @@ Retrieve Alarms for a Metric
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/DescribeAlarmsForMetric.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/DescribeAlarmsForMetric.php
-   :lines: 27-44
+   :lines: 31-48
    :language: php
 
 Get Metric Statistics
@@ -69,11 +69,11 @@ Get Metric Statistics
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/GetMetricStatistics.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/GetMetricStatistics.php
-   :lines: 27-49
+   :lines: 31-53
    :language: php

@@ -38,13 +38,13 @@ Return a List of Queues
 **Imports**
 
 .. literalinclude::  example_code/sqs/ListQueues.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/ListQueues.php
-   :lines: 27-41
+   :lines: 31-45
    :language: php
 
 Create a Queue
@@ -53,13 +53,13 @@ Create a Queue
 **Imports**
 
 .. literalinclude::  example_code/sqs/CreateQueue.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/CreateQueue.php
-   :lines: 27-47
+   :lines: 31-51
    :language: php
 
 Return the URL of a Queue
@@ -68,13 +68,13 @@ Return the URL of a Queue
 **Imports**
 
 .. literalinclude::  example_code/sqs/GetQueueUrl.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/GetQueueUrl.php
-   :lines: 27-43
+   :lines: 31-47
    :language: php
 
 Delete a Queue
@@ -83,11 +83,11 @@ Delete a Queue
 **Imports**
 
 .. literalinclude::  example_code/sqs/DeleteQueue.php
-   :lines: 15-18
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/sqs/DeleteQueue.php
-   :lines: 27-43
+   :lines: 31-47
    :language: php

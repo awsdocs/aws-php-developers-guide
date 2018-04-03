@@ -38,13 +38,13 @@ Describe an Instance
 **Imports**
 
 .. literalinclude::  example_code/ec2/DescribeInstances.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DescribeInstances.php
-   :lines: 26-34
+   :lines: 30-38
    :language: php
 
 
@@ -54,13 +54,13 @@ Allocate and Associate an Address
 **Imports**
 
 .. literalinclude::  example_code/ec2/AllocateAddresses.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/AllocateAddresses.php
-   :lines: 26-45
+   :lines: 30-49
    :language: php
 
 
@@ -70,11 +70,11 @@ Release an Address
 **Imports**
 
 .. literalinclude::  example_code/ec2/ReleaseAddress.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/ReleaseAddress.php
-   :lines: 26-44
+   :lines: 30-48
    :language: php

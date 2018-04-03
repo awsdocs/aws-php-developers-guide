@@ -40,13 +40,13 @@ Create an Access Key
 **Imports**
 
 .. literalinclude::  example_code/iam/CreateAccessKey.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/CreateAccessKey.php
-   :lines: 27-41
+   :lines: 31-45
    :language: php
 
 
@@ -56,13 +56,13 @@ List Access Keys
 **Imports**
 
 .. literalinclude::  example_code/iam/ListAccessKeys.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/ListAccessKeys.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 
@@ -72,13 +72,13 @@ Get Info about Access Key's Last Usage
 **Imports**
 
 .. literalinclude::  example_code/iam/GetAccessKeyLastUsed.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/GetAccessKeyLastUsed.php
-   :lines: 27-41
+   :lines: 31-45
    :language: php
 
 Update an Access Key
@@ -87,13 +87,13 @@ Update an Access Key
 **Imports**
 
 .. literalinclude::  example_code/iam/UpdateAccessKey.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/UpdateAccessKey.php
-   :lines: 27-43
+   :lines: 31-47
    :language: php
 
 Delete an Access Key
@@ -102,11 +102,11 @@ Delete an Access Key
 **Imports**
 
 .. literalinclude::  example_code/iam/DeleteAccessKey.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/DeleteAccessKey.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php

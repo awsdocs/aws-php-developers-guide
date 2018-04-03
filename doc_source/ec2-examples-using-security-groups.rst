@@ -38,13 +38,13 @@ Describe Security Groups
 **Imports**
 
 .. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
-   :lines: 26-34
+   :lines: 30-38
    :language: php
 
 Add an Ingress Rule
@@ -53,13 +53,13 @@ Add an Ingress Rule
 **Imports**
 
 .. literalinclude:: example_code/ec2/AuthorizeSecurityGroupIngress.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/AuthorizeSecurityGroupIngress.php
-   :lines: 26-37
+   :lines: 30-41
    :language: php
 
 
@@ -69,13 +69,13 @@ Create a Security Group
 **Imports**
 
 .. literalinclude:: example_code/ec2/CreateSecurityGroup.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/CreateSecurityGroup.php
-   :lines: 26-43
+   :lines: 30-47
    :language: php
 
 Delete a Security Group
@@ -84,11 +84,11 @@ Delete a Security Group
 **Imports**
 
 .. literalinclude:: example_code/ec2/DeleteSecurityGroup.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/DeleteSecurityGroup.php
-   :lines: 26-39
+   :lines: 30-42
    :language: php

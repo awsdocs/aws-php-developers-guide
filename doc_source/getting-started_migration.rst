@@ -339,7 +339,7 @@ completely. You should retrieve your client objects from the ``Aws\Sdk`` object
 and use them as object instances, not static classes.
 
 Paginators Supersede  iterators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Version 2 of the |sdk-php| had a feature named * iterators*. These were objects that
 were used for iterating over paginated results. One complaint we had about these
@@ -427,7 +427,7 @@ Comparing Code Samples from Both Versions of the SDK
 ----------------------------------------------------
 
 The following examples show some of the ways in which using version 3 of
-the |skd-php| might differ from version 2.
+the |sdk-php| might differ from version 2.
 
 Example: |S3| ListObjects Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

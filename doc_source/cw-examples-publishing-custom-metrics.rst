@@ -36,13 +36,13 @@ Publish Metric Data
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/PutMetricData.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/PutMetricData.php
-   :lines: 27-50
+   :lines: 31-54
    :language: php
 
 Create an Alarm
@@ -51,11 +51,11 @@ Create an Alarm
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/PutMetricAlarm.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/PutMetricAlarm.php
-   :lines: 27-44
+   :lines: 31-63
    :language: php

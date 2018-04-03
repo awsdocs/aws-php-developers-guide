@@ -27,20 +27,22 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials` and import the |sdk-php|.
+
+**Imports**
+
+.. literalinclude::  example_code/s3/ListBuckets.php
+   :lines: 20-23
+   :language: PHP
+
 
 List Buckets
 ------------
 
 Create a php file with following code. First create an AWS.S3 client service specifying the region and version, then call the listBuckets method which will return all |s3| buckets owned by the sender of the request as an array of Bucket structures.   
 
-**Imports**
 
-.. literalinclude::  example_code/s3/ListBuckets.php
-   :lines: 19-22
-   :language: PHP
-
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ListBuckets.php
    :lines: 32-42
@@ -52,13 +54,7 @@ Create a Bucket
 
 Create a php file with following code. First create an AWS.S3 client service specifying the region and version, then call the createBucket method with an array as the parameter. The only required field is the key 'Bucket' with a string value for bucket name you want to create, but you can specify the region with the 'CreateBucketConfiguration' field.  If successful this method will return the 'Location' of the bucket.  
 
-**Imports**
-
-.. literalinclude::  example_code/s3/CreateBucket.php
-   :lines: 19-22
-   :language: PHP
-
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/CreateBucket.php
    :lines: 31-49
@@ -66,14 +62,12 @@ Create a php file with following code. First create an AWS.S3 client service spe
 
 Put an Object in a Bucket
 -------------------------
+To add files to your new bucket, create a php file with the following code. 
 
-**Imports**
 
-.. literalinclude::  example_code/s3//PutObject.php
-   :lines: 19-22
-   :language: PHP
+In your command line execute this file and pass in the name of the bucket where you want to upload your file as a string, followed by the full file path to the file you want to upload. 
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3//PutObject.php
    :lines: 31-60

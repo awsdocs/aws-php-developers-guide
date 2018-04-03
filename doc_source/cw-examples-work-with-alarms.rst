@@ -37,13 +37,13 @@ Describe Alarms
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/DescribeAlarms.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/DescribeAlarms.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php
 
 
@@ -53,13 +53,13 @@ Create an Alarm
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/PutMetricAlarm.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/PutMetricAlarm.php
-   :lines: 27-59
+   :lines: 31-63
    :language: php
 
 Delete Alarms
@@ -68,11 +68,11 @@ Delete Alarms
 **Imports**
 
 .. literalinclude::  example_code/cloudwatch/DeleteAlarms.php
-   :lines: 15-19
+   :lines: 19-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/cloudwatch/DeleteAlarms.php
-   :lines: 27-43
+   :lines: 31-47
    :language: php

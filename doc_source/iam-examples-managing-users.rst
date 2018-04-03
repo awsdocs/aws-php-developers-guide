@@ -39,13 +39,13 @@ Create an |IAM| User
 **Imports**
 
 .. literalinclude::  example_code/iam/CreateUser.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/CreateUser.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php
 
 
@@ -55,13 +55,13 @@ List |IAM| Users
 **Imports**
 
 .. literalinclude::  example_code/iam/ListUsers.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/ListUsers.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 Update an |IAM| User
@@ -71,13 +71,13 @@ Update an |IAM| User
 **Imports**
 
 .. literalinclude::  example_code/iam/UpdateUser.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/UpdateUser.php
-   :lines: 27-43
+   :lines: 31-47
    :language: php
 
 Get Info about an |IAM| User
@@ -86,13 +86,13 @@ Get Info about an |IAM| User
 **Imports**
 
 .. literalinclude::  example_code/iam/GetUser.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/GetUser.php
-   :lines: 27-41
+   :lines: 31-45
    :language: php
 
 Delete an |IAM| User
@@ -101,11 +101,11 @@ Delete an |IAM| User
 **Imports**
 
 .. literalinclude::  example_code/iam/DeleteUser.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/DeleteUser.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php

@@ -38,13 +38,13 @@ List Server Certificates
 **Imports**
 
 .. literalinclude::  example_code/iam/ListServerCertificates.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/ListServerCertificates.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 
@@ -54,13 +54,13 @@ Retrieve a Server Certificate
 **Imports**
 
 .. literalinclude::  example_code/iam/GetServerCertificate.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/GetServerCertificate.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php
 
 
@@ -70,13 +70,13 @@ Update a Server Certificate
 **Imports**
 
 .. literalinclude::  example_code/iam/UpdateServerCertificate.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/UpdateServerCertificate.php
-   :lines: 27-42
+   :lines: 31-47
    :language: php
 
 
@@ -86,11 +86,11 @@ Delete a Server Certificate
 **Imports**
 
 .. literalinclude::  example_code/iam/DeleteServerCertificate.php
-   :lines: 15-18
+   :lines: 19-22
    :language: php
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/iam/DeleteServerCertificate.php
-   :lines: 27-42
+   :lines: 31-46
    :language: php
