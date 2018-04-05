@@ -13,8 +13,8 @@ Additional Resources
 =====================
 
 .. meta::
-   :description: Other resources to use if you do not find your answer in the |sdk-php| developer or API guide.
-   :keywords: |sdk-php| 
+   :description: Other resources to use if you do not find your answer in the AWS SDK for PHP developer or API guide.
+   :keywords: AWS SDK for PHP
 
 The following links provide additional resources you can use with the SDK for PHP \.
 

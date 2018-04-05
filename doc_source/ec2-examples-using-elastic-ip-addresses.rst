@@ -8,20 +8,21 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================
+=====================================
 Using Elastic IP Addresses with |EC2|
-==========================================
+=====================================
 
 .. meta::
-   :description: Describe |EC2| instances and acquire, associate, and release Elastic IP addresses.
-   :keywords: |EC2|, |sdk-php| examples
+   :description: Describe Amazon EC2 instances and acquire, associate, and release Elastic IP addresses using the AWS SDK for PHP.
+   :keywords: Amazon EC2 code examples for PHP
 
-An Elastic IP address is a static IP address designed for dynamic cloud computing. An Elastic IP address is associated with your AWS account. It is a public IP address, which is reachable from the Internet. If your instance does not have a public IP address, you can associate an Elastic IP address with your instance to enable communication with the Internet.
+An Elastic IP address is a static IP address designed for dynamic cloud computing. An Elastic IP address is associated with your AWS account. It's a public IP address, 
+which is reachable from the internet. If your instance does not have a public IP address, you can associate an Elastic IP address with your instance to enable communication with the internet.
 
-The examples below show how to:
+The following examples show how to:
 
-* Describes one or more of your instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
-* Acquires an Elastic IP address using :aws-php-class:`AllocateAddress </api-ec2-2016-11-15.html#allocateaddress>`.
+* Describe one or more of your instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
+* Acquire an Elastic IP address using :aws-php-class:`AllocateAddress </api-ec2-2016-11-15.html#allocateaddress>`.
 * Associate an Elastic IP address with an instance using :aws-php-class:`AssociateAddress </api-ec2-2016-11-15.html#associateaddress>`.
 * Release an Elastic IP address using :aws-php-class:`ReleaseAddress </api-ec2-2016-11-15.html#releaseaddress>`.
 
@@ -30,7 +31,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe an Instance
 --------------------

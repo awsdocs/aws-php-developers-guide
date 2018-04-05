@@ -13,8 +13,8 @@ Promises in the |sdk-php|
 =========================
 
 .. meta::
-   :description: Set up asynchronous work flow for |sdk-php|.
-   :keywords: |sdk-php| promises, asynchronous |sdk-php| 
+   :description: Set up asynchronous work flow for AWS SDK for PHP.
+   :keywords: AWS SDK for PHP promises, asynchronous AWS SDK for PHP 
 
 The |sdk-php| uses **promises** to allow for asynchronous workflows, and
 this asynchronicity allows HTTP requests to be sent concurrently. The promise
@@ -47,7 +47,7 @@ Promises are used throughout the SDK. For example, promises are used in most
 high-level abstractions provided by the SDK: :ref:`paginators <async_paginators>`,
 :ref:`waiters <async_waiters>`, :ref:`command pools <command_pool>`,
 :doc:`multipart uploads <s3-multipart-upload>`,
-:doc:`S3 directory/bucket transfers <s3-transfer>`, and so on.
+:doc:`S3 directory/bucket transfers <s3-examples-transfer>`, and so on.
 
 All of the clients that the SDK provides return promises when you invoke any
 of the ``Async`` suffixed methods. For example, the following code shows how to

@@ -13,8 +13,8 @@ Command Objects in the |sdk-php|
 ================================
 
 .. meta::
-   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the |sdk-php|. 
-   :keywords: |sdk-php|, php handler, use php for aws
+   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP. 
+   :keywords: AWS SDK for PHP, php handler, use php for aws
 
 
 The |sdk-php| uses the `command pattern <http://en.wikipedia.org/wiki/Command_pattern>`_

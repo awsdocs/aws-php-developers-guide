@@ -8,17 +8,18 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================================
+====================================
 Managing Visibility Timeout in |SQS|
-=========================================
+====================================
 
 .. meta::
-   :description: Change the visibility timeout for messages in |SQS|.
-   :keywords: |SQS|, |sdk-php| examples
+   :description: Change the visibility timeout for messages in Amazon SQS using the AWS SDK for PHP.
+   :keywords: Amazon SQS code examples for PHP
 
 A visibility timeout is a period of time during which |SQS| prevents other consuming components from receiving and processing a message. To learn more, see `Visibility Timeout <http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html>`_.
 
-The example below shows how to:
+The following example shows how to:
+
 
 * Change the visibility timeout of specified messages in a queue to new values, using :aws-php-class:`ChangeMessageVisibilityBatch <api-sqs-2012-11-05.html#changemessagevisibilitybatch>`.
 
@@ -27,7 +28,8 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
+
 
 Change the Visibility Timeout of Multiple Messages
 --------------------------------------------------

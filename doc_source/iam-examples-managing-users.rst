@@ -13,17 +13,17 @@ Managing |IAM| Users
 ====================
 
 .. meta::
-   :description: Create, list, update, or retrieve info about |IAM| users.
-   :keywords: |IAMlong|, |sdk-php| examples
+   :description: Create, list, update, or retrieve info about AWS Identity and Access Management (IAM) users.
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
 
 An |IAM| user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS. A user in AWS consists of a name and credentials.
 
-The examples below show how to:
+The following examples show how to:
 
 * Create a new |IAM| user using :aws-php-class:`CreateUser </api-iam-2010-05-08.html#createuser>`.
 * List |IAM| users using :aws-php-class:`ListUsers </api-iam-2010-05-08.html#listusers>`.
 * Update an |IAM| user using :aws-php-class:`UpdateUser </api-iam-2010-05-08.html#updateuser>`.
-* Retrieve info about an |IAM| user using :aws-php-class:`GetUser </api-iam-2010-05-08.html#getuser>`.
+* Retrieve information about an |IAM| user using :aws-php-class:`GetUser </api-iam-2010-05-08.html#getuser>`.
 * Delete an |IAM| user using :aws-php-class:`DeleteUser </api-iam-2010-05-08.html#deleteuser>`.
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
@@ -31,7 +31,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Create an |IAM| User
 --------------------
@@ -67,7 +67,6 @@ List |IAM| Users
 Update an |IAM| User
 --------------------
 
-
 **Imports**
 
 .. literalinclude::  example_code/iam/UpdateUser.php
@@ -80,8 +79,9 @@ Update an |IAM| User
    :lines: 31-47
    :language: php
 
-Get Info about an |IAM| User
-----------------------------
+
+Get Information about an |IAM| User
+-----------------------------------
 
 **Imports**
 

@@ -13,8 +13,8 @@ Waiters in the |sdk-php|
 ========================
 
 .. meta::
-   :description: Set up asynchronous work flow for |sdk-php|.
-   :keywords: |sdk-php| waiters, asynchronous |sdk-php| 
+   :description: Set up asynchronous work flow for AWS SDK for PHP.
+   :keywords: AWS SDK for PHP waiters, asynchronous AWS SDK for PHP 
 
 Waiters help make it easier to work with *eventually consistent* systems by
 providing an abstracted way to wait until a resource enters into a particular

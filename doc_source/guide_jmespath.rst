@@ -13,8 +13,8 @@ JMESPath Expressions in the |sdk-php|
 =====================================
 
 .. meta::
-   :description: Extract JSON data from the |sdk-php|.
-   :keywords: |sdk-php|, Json, AWS results, paginators
+   :description: Extract JSON data from the AWS SDK for PHP.
+   :keywords: AWS SDK for PHP, Json, AWS results, paginators
 
 
 `JMESPath <http://jmespath.org/>`_ enables you to declaratively specify how to

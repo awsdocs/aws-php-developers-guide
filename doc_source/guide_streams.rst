@@ -13,8 +13,8 @@ Streams in the |sdk-php|
 ========================
 
 .. meta::
-   :description: Creating a Guzzle stream decorator with the |sdk-php|.
-   :keywords: |sdk-php|, steam decorators, guzzle, PHP for AWS
+   :description: Creating a Guzzle stream decorator with the AWS SDK for PHP.
+   :keywords: AWS SDK for PHP, steam decorators, guzzle, PHP for AWS
 
 As part of its integration of the `PSR-7 <http://www.php-fig.org/psr/psr-7/>`_
 HTTP message standard, the |sdk-php| uses the :aws-php-class:`PSR-7 StreamInterface

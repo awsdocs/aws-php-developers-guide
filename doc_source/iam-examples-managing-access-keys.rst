@@ -13,12 +13,13 @@ Managing |IAM| Access Keys
 ==========================
 
 .. meta::
-   :description: Create, delete, and get information about |IAM| access keys.
-   :keywords: |IAMlong|, |sdk-php| examples
+   :description: Create, delete, and get information about IAM access keys.
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
 
-Users need their own access keys to make programmatic calls to AWS. To fill this need, you can create, modify, view, or rotate access keys (access key IDs and secret access keys) for |IAM| users. By default, when you create an access key, its status is Active, which means the user can use the access key for API calls.
+Users need their own access keys to make programmatic calls to AWS. To fill this need, you can create, modify, view,
+or rotate access keys (access key IDs and secret access keys) for |IAM| users. By default, when you create an access key, its status is Active. This means the user can use the access key for API calls.
 
-The examples below show how to:
+The following examples show how to:
 
 * Create a secret access key and corresponding access key ID using :aws-php-class:`CreateAccessKey <api-iam-2010-05-08.html#createaccesskey>`.
 * Return information about the access key IDs associated with an |IAM| user using :aws-php-class:`ListAccessKeys <api-iam-2010-05-08.html#listaccesskeys>`.
@@ -31,7 +32,8 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
+
 
 Create an Access Key
 --------------------
@@ -66,7 +68,7 @@ List Access Keys
    :language: php
 
 
-Get Info about Access Key's Last Usage
+Get Information about an Access Key's Last Use
 --------------------------------------
 
 **Imports**

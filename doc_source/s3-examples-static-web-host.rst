@@ -8,17 +8,18 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================
+
+=========================================
 Using an |S3| Bucket as a Static Web Host
-==============================================
+=========================================
 
 .. meta::
-   :description: Get, set, and remove website configuration for an |S3| bucket with |sdk-php|.
-   :keywords: |S3|, |sdk-php| examples
+   :description: Get, set, and remove website configuration for an Amazon S3 bucket with the AWS SDK for PHP.
+   :keywords: Amazon S3 code examples
 
 You can host a static website on |S3|. To learn more, see :S3-dg:`Hosting a Static Website on S3 <WebsiteHosting>`.
 
-The example below shows how to:
+The following example shows how to:
 
 * Get the website configuration for a bucket using :aws-php-class:`GetBucketWebsite <api-s3-2006-03-01.html#getbucketwebsite>`.
 * Set the website configuration for a bucket using :aws-php-class:`PutBucketWebsite <api-s3-2006-03-01.html#putbucketwebsite>`.
@@ -29,7 +30,8 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
+
 
 Get, Set, and Delete the Website Configuration for a Bucket
 -----------------------------------------------------------

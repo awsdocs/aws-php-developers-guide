@@ -13,8 +13,8 @@ Migrating from Version 2 of the |sdk-php|
 =========================================
 
 .. meta::
-   :description: Shows how to migrate to |sdk-php| version 3 from version 2.
-   :keywords: |sdk-php| version 2, |sdk-php| v2, |sdk-php| 2, migrate to version 3
+   :description: Shows how to migrate to AWS SDK for PHP version 3 from version 2.
+   :keywords: AWS SDK for PHP version 2, AWS SDK for PHP v2, AWS SDK for PHP 2, migrate to version 3
 
 This topic shows how to migrate your code to use version 3 of the |sdk-php|
 and how the new version differs from version 2 of the SDK.
@@ -44,8 +44,8 @@ Other new features include
 - Easy debugging via the ``'debug'`` configuration option
 
 
- Decoupled HTTP layer
- ~~~~~~~~~~~~~~~~~~~~
+Decoupled HTTP layer
+~~~~~~~~~~~~~~~~~~~~
 
 - `Guzzle 6 <http://guzzlephp.org>`_ is used by default to send requests, but
   Guzzle 5 is also supported.
@@ -404,7 +404,7 @@ even been removed.
     * The ``Aws\S3\Sync`` namespace has been replaced by the ``Aws\S3\Transfer``
       class. The ``S3Client::uploadDirectory()`` and ``S3Client::downloadBucket()``
       methods are still available, but have different options. See the documentation for
-      :doc:`s3-transfer`.
+      :doc:`s3-examples-transfer`.
     * ``Aws\S3\Model\ClearBucket`` and ``Aws\S3\Model\DeleteObjectsBatch``
       have been replaced by ``Aws\S3\BatchDelete`` and ``S3Client::deleteMatchingObjects()``.
     * The options and behaviors for the :doc:`service_dynamodb-session-handler`

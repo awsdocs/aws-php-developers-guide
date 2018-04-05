@@ -13,8 +13,8 @@ Configuration for the |sdk-php|
 ===============================
 
 .. meta::
-   :description: Custom client configuration options for the |sdk-php| client.
-   :keywords: |sdk-php| constructor, |sdk-php| client configuration
+   :description: Custom client configuration options for the AWS SDK for PHP client.
+   :keywords: AWS SDK for PHP constructor, AWS SDK for PHP client configuration
 
 This guide describes client constructor options. These options can be provided
 in a client constructor or provided to the ``Aws\Sdk`` class. The array of options

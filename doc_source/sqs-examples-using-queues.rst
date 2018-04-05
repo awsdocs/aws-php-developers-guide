@@ -8,17 +8,18 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================
+
+=====================
 Using Queues in |SQS|
-==========================
+=====================
 
 .. meta::
-   :description: Create or delete |SQS| queues, and return lists and URLs for queues.
-   :keywords: |SQS|, |sdk-php| examples
+   :description: Create or delete Amazon SQS queues, and return lists and URLs for queues using the AWS SDK for PHP.
+   :keywords: Amazon SQS code examples for PHP
 
 To learn about |SQS| queues, see :SQS-dg:`How SQS Queues Work <sqs-how-it-works>`.
 
-The examples below show how to:
+The following examples show how to:
 
 * Return a list of your queues using :aws-php-class:`ListQueues <api-sqs-2012-11-05.html#listqueues>`.
 * Create a new queue using :aws-php-class:`CreateQueue <api-sqs-2012-11-05.html#createqueue>`.
@@ -30,7 +31,8 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
+
 
 Return a List of Queues
 -----------------------
@@ -91,3 +93,4 @@ Delete a Queue
 .. literalinclude:: example_code/sqs/DeleteQueue.php
    :lines: 31-47
    :language: php
+

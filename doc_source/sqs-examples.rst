@@ -8,16 +8,18 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========
-|SQS|
-==========
+
+==================================
+|SQS| Examples Using the |sdk-php|
+==================================
 
 .. meta::
-   :description: |SQS| code examples for |sdk-php|.
-   :keywords: |SQS| PHP examples , |sdk-php| examples, |SQS| for PHP code examples
+   :description: Amazon SQS code examples for the AWS SDK for PHP.
+   :keywords: Amazon SQS code examples for PHP
 
-   
-|SQSlong| (SQS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS| includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first-in, first-out) delivery and exactly-once processing.
+
+|SQSlong| (SQS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS| 
+includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first-in, first-out) delivery and exactly-once processing.
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 

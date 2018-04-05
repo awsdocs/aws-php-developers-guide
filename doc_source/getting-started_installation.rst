@@ -13,8 +13,8 @@ Installing the |sdk-php|
 ========================
 
 .. meta::
-   :description:  Install the |sdk-php|. 
-   :keywords: |sdk-php|, php for aws, install |sdk-php|
+   :description:  Install the AWS SDK for PHP. 
+   :keywords: AWS SDK for PHP, php for aws, install AWS SDK for PHP
    
 You can install the |sdk-php| by using:
 

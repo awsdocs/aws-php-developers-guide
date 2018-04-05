@@ -13,15 +13,15 @@ Signing an |ESlong| Search Request
 ==================================
 
 .. meta::
-   :description: Sign and use |ESlong| with the |sdk-php|.
-   :keywords: |sdk-php| Elasticsearch, |ESlong| for PHP
+   :description: Sign and use Amazon Elasticsearch Service with the AWS SDK for PHP.
+   :keywords: AWS SDK for PHP Elasticsearch, Amazon Elasticsearch Service for PHP
 
 |ESlong| (|ES|) is a managed service that makes it easy
-to deploy, operate, and scale Elasticsearch, a popular open-source search and
-analytics engine. |ES| offers direct access to the Elasticsearch API. This
+to deploy, operate, and scale |ESlong|, a popular open-source search and
+analytics engine. |ES| offers direct access to the |ESlong| API. This
 means that developers can use the tools with which they’re familiar, as well
 as robust security options, such as using IAM users and roles for access
-control. Many Elasticsearch clients support request signing, but if you're using
+control. Many |ESlong| clients support request signing, but if you're using
 a client that doesn't, you can sign arbitrary PSR-7 requests with the
 built-in credential providers and signers of the |sdk-php|.
 

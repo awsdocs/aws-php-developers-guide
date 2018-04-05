@@ -8,17 +8,17 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================================
+========================================
 Using Alarm Actions with |CWlong| Alarms
-=================================================
+========================================
 
 .. meta::
-   :description: Create |CW| alarms that automatically stop, terminate, reboot, or recover EC2 instances.
-   :keywords: |CWlong|, |sdk-php| examples
+   :description: Create Amazon CloudWatch alarms that automatically stop, terminate, reboot, or recover EC2 instances using the AWS SDK for PHP.
+   :keywords: Amazon CloudWatch code examples for PHP
 
-Using alarm actions, you can create alarms that automatically stop, terminate, reboot, or recover your |EC2| instances. You can use the stop or terminate actions when you no longer need an instance to be running. You can use the reboot and recover actions to automatically reboot those instances.
+Use alarm actions to create alarms that automatically stop, terminate, reboot, or recover your |EC2| instances. You can use the stop or terminate actions when you no longer need an instance to be running. You can use the reboot and recover actions to automatically reboot those instances.
 
-The examples below show how to:
+The following examples show how to:
 
 * Enable actions for specified alarms using :aws-php-class:`EnableAlarmActions </api-monitoring-2010-08-01.html#enablealarmactions>`.
 * Disable actions for specified alarms using :aws-php-class:`DisableAlarmActions </api-monitoring-2010-08-01.html#disablealarmactions>`.
@@ -28,7 +28,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Enable Alarm Actions
 --------------------

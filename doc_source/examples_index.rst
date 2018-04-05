@@ -8,23 +8,24 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================
-SDK for PHP Code Examples
-=========================
+=======================
+|sdk-php| Code Examples
+=======================
 
 .. meta::
-   :description: Code examples for |sdk-php|.
-   :keywords: |sdk-php| constructor, |sdk-php| examples
+   :description: Code examples for the AWS SDK for PHP.
+   :keywords:
 
-This chapter includes code examples that demonstrate common Amazon Web Services scenarios using the |sdk-php|.
+The |sdk-php| includes code examples that demonstrate common Amazon Web Services scenarios that use the SDK.
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
     :maxdepth: 2
 
-    cw-examples.rst
-    ec2-examples.rst
-    iam-examples.rst
-    s3-examples.rst
-    sqs-examples.rst
+    Amazon CloudWatch Examples <cw-examples.rst>
+    Amazon EC2 Examples <ec2-examples.rst>
+    AWS IAM Examples <iam-examples.rst>
+    Amazon S3 Examples <s3-examples.rst>
+    Amazon SQS Examples <sqs-examples.rst>
+

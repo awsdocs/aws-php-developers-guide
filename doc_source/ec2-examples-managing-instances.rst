@@ -1,4 +1,4 @@
-        .. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -8,17 +8,17 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=============================
-Managing |EC2| Instances
-=============================
+============================================
+Managing |EC2| Instances Using the |sdk-php|
+============================================
 
 .. meta::
-   :description: Engaging with |EC2| instances using the |sdk-php|
-   :keywords: |EC2|, |sdk-php| examples
+   :description: Engage with Amazon EC2 instances using the AWS SDK for PHP.
+   :keywords: Amazon EC2 code examples for PHP
 
-The examples below show how to:
+The following examples show how to:
 
-* Describe EC2 instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
+* Describe |EC2| instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
 * Enable detailed monitoring for a running instance using :aws-php-class:`MonitorInstances </api-ec2-2016-11-15.html#monitorinstances>`.
 * Disable monitoring for a running instance using :aws-php-class:`UnmonitorInstances </api-ec2-2016-11-15.html#unmonitorinstances>`.
 * Start an |EBS|-backed AMI that you've previously stopped, using :aws-php-class:`StartInstances </api-ec2-2016-11-15.html#startinstances>`.
@@ -30,23 +30,22 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe Instances
 ------------------
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeInstances.php
-   :lines: 19-21
+.. literalinclude::  example_code/ec2/DescribeSecurityGroups.php
+   :lines: 15-17
    :language: PHP
 
-**Sample Code**
+**Code**
 
-.. literalinclude:: example_code/ec2/DescribeInstances.php
-   :lines: 30-38
+.. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
+   :lines: 26-34
    :language: php
-
 
 Enable and Disable Monitoring
 -----------------------------
@@ -55,13 +54,13 @@ Enable and Disable Monitoring
 **Imports**
 
 .. literalinclude::  example_code/ec2/InstanceMonitoring.php
-   :lines: 19-21
+   :lines: 15-17
    :language: PHP
 
-**Sample Code**
+**Code**
 
 .. literalinclude:: example_code/ec2/InstanceMonitoring.php
-   :lines: 30-50
+   :lines: 26-46
    :language: php
 
 Start and Stop an Instance
@@ -70,13 +69,13 @@ Start and Stop an Instance
 **Imports**
 
 .. literalinclude::  example_code/ec2/StartAndStopInstance.php
-   :lines: 19-21
+   :lines: 15-17
    :language: PHP
 
-**Sample Code**
+**Code**
 
 .. literalinclude:: example_code/ec2/StartAndStopInstance.php
-   :lines: 30-50
+   :lines: 26-46
    :language: php
 
 Reboot an Instances
@@ -85,11 +84,11 @@ Reboot an Instances
 **Imports**
 
 .. literalinclude::  example_code/ec2/RebootInstances.php
-   :lines: 19-21
+   :lines: 15-17
    :language: PHP
 
-**Sample Code**
+**Code**
 
 .. literalinclude:: example_code/ec2/RebootInstances.php
-   :lines: 30-42
+   :lines: 26-38
    :language: php

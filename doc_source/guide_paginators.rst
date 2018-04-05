@@ -13,8 +13,8 @@ Paginators in the |sdk-php|
 ===========================
 
 .. meta::
-   :description: Processing paginated results from the |sdk-php|.
-   :keywords: |sdk-php|, paginators, iterate through results, PHP for AWS
+   :description: Processing paginated results from the AWS SDK for PHP.
+   :keywords: AWS SDK for PHP, paginators, iterate through results, PHP for AWS
 
 
 Some AWS service operations are paginated and respond with truncated results.

@@ -13,8 +13,8 @@ Glossary
 ========
 
 .. meta::
-   :description:  Learn the frequently used terms to utilize the |sdk-php|. 
-   :keywords: |sdk-php|, php for aws
+   :description:  Learn the frequently used terms to utilize the AWS SDK for PHP. 
+   :keywords: AWS SDK for PHP, php for aws
 
 API Version
     Services have one or more API versions, and which version you are using
@@ -48,7 +48,14 @@ Credentials
     you configure a client object.
 
 Handler
-    .. include:: _snippets/handler-description.txt
+    A handler is a function that performs the actual transformation of a command
+    and request into a result. A handler typically sends HTTP requests. Handlers
+    can be composed with middleware to augment their behavior. A handler is a
+    function that accepts an ``Aws\CommandInterface`` and a
+    ``Psr\Http\Message\RequestInterface`` and returns a promise that is fulfilled
+    with an ``Aws\ResultInterface`` or rejected with an
+    ``Aws\Exception\AwsException`` reason.
+
 
 JMESPath
     `JMESPath <http://jmespath.org/>`_ is a query language for JSON-like data.
@@ -57,7 +64,13 @@ JMESPath
     ``Aws\ResultPaginator`` objects via the ``search($expression)`` method.
 
 Middleware
-    .. include:: _snippets/middleware-description.txt
+    Middleware are a special type of high level function that that augment the
+    behavior of transferring a command and delegate to a "next" handler. Middleware
+    functions accept an ``Aws\CommandInterface`` and a
+    ``Psr\Http\Message\RequestInterface`` and return a promise that is fulfilled
+    with an ``Aws\ResultInterface`` or rejected with an
+    ``Aws\Exception\AwsException`` reason.
+
 
 Operation
     Refers to a single operation within a service's API (e.g., ``CreateTable``

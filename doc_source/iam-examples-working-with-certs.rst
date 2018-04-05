@@ -13,12 +13,12 @@ Working with |IAM| Server Certificates
 ======================================
 
 .. meta::
-   :description: List, update, and get information about certificates using IAM.
-   :keywords: |IAMlong|, |sdk-php| examples
+   :description: List, update, and get information about certificates using AWS Identity and Access Management (IAM).
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
 
-To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to |IAM| or import it into AWS Certificate Manager.
+To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to |IAM| or import it into |ACMlong|.
 
-The examples below show how to:
+The following examples show how to:
 
 * List the certificates stored in |IAM| using :aws-php-class:`ListServerCertificates <api-iam-2010-05-08.html#listservercertificates>`.
 * Retrieve information about a certificate using :aws-php-class:`GetServerCertificate <api-iam-2010-05-08.html#getservercertificate>`.
@@ -30,7 +30,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 List Server Certificates
 ------------------------

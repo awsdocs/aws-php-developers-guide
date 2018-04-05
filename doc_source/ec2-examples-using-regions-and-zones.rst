@@ -8,27 +8,28 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-====================================
-Using Regions and Availability Zones
-====================================
+==============================================
+Using Regions and Availability Zones for |EC2|
+==============================================
 
 .. meta::
-   :description: Describe AWS Regions and Availability Zones for |EC2|.
-   :keywords: |EC2|, |sdk-php| examples
+   :description: Describe AWS Regions and Availability Zones for Amazon EC2 using the AWS SDK for PHP.
+   :keywords: Amazon EC2 code examples for PHP
 
-|EC2| is hosted in multiple locations worldwide. These locations are composed of regions and Availability Zones. Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones. |EC2| provides the ability to place instances and data in multiple locations.
+|EC2| is hosted in multiple locations worldwide. These locations are composed of AWS Regions and Availability Zones. Each Region is a separate geographic area, 
+with multiple isolated locations known as Availability Zones. |EC2| provides the ability to place instances and data in multiple locations.
 
-The examples below show how to:
+The following examples show how to:
 
 * Describe the Availability Zones that are available to you using :aws-php-class:`DescribeAvailabilityZones </api-ec2-2016-11-15.html#describeavailabilityzones>`.
-* Describe regions that are currently available to you using :aws-php-class:`DescribeRegions </api-ec2-2016-11-15.html#describeregions>`.
+* Describe AWS Regions that are currently available to you using :aws-php-class:`DescribeRegions </api-ec2-2016-11-15.html#describeregions>`.
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe Availability Zones
 ---------------------------
@@ -59,3 +60,4 @@ Describe Regions
 .. literalinclude:: example_code/ec2/DescribeRegions.php
    :lines: 30-38
    :language: php
+

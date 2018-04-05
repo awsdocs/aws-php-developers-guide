@@ -13,8 +13,8 @@ Signing Custom |CSlong| Domain Requests
 =======================================
 
 .. meta::
-   :description: Making a |CS| domain request using the |sdk-php|.
-   :keywords: |CSlong|, |sdk-php| examples, |CS| for PHP code examples
+   :description: Making a Cloud Search domain request using the AWS SDK for PHP.
+   :keywords: Amazon Cloud Search, AWS SDK for PHP examples, Cloud Search for PHP code examples
 
 
 |CS| domain requests can be customized beyond what is supported by the |sdk-php|.

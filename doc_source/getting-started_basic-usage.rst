@@ -13,8 +13,8 @@ Basic Use of the |sdk-php|
 ==========================
 
 .. meta::
-   :description: Describes the basic usage pattern of the |sdk-php|.
-   :keywords: |sdk-php|, create a client, asynchronous requests, getting started with |sdk-php|
+   :description: Describes the basic usage pattern of the AWS SDK for PHP.
+   :keywords: AWS SDK for PHP, create a client, asynchronous requests, getting started with AWS SDK for PHP
 
 This topic focuses on basic usage patterns of the |sdk-php|.
 
