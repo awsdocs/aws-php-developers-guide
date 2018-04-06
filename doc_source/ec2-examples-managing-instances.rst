@@ -37,14 +37,14 @@ Describe Instances
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeSecurityGroups.php
-   :lines: 15-17
+.. literalinclude::  example_code/ec2/DescribeInstances.php
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
-   :lines: 26-34
+.. literalinclude:: example_code/ec2/DescribeInstances.php
+   :lines: 30-38
    :language: php
 
 Enable and Disable Monitoring
@@ -54,13 +54,13 @@ Enable and Disable Monitoring
 **Imports**
 
 .. literalinclude::  example_code/ec2/InstanceMonitoring.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/InstanceMonitoring.php
-   :lines: 26-46
+   :lines: 30-50
    :language: php
 
 Start and Stop an Instance
@@ -69,13 +69,13 @@ Start and Stop an Instance
 **Imports**
 
 .. literalinclude::  example_code/ec2/StartAndStopInstance.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/StartAndStopInstance.php
-   :lines: 26-46
+   :lines: 30-50
    :language: php
 
 Reboot an Instances
@@ -84,11 +84,11 @@ Reboot an Instances
 **Imports**
 
 .. literalinclude::  example_code/ec2/RebootInstances.php
-   :lines: 15-17
+   :lines: 19-21
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/ec2/RebootInstances.php
-   :lines: 26-38
+   :lines: 30-42
    :language: php

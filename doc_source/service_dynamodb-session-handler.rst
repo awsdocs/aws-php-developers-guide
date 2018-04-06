@@ -13,8 +13,8 @@ Using the |DDB| Session Handler with |sdk-php|
 ===============================================
 
 .. meta::
-   :description: Programing |DDB| using the |sdk-php|.
-   :keywords: |DDB|, |sdk-php| examples, |DDBlong| for PHP code examples
+   :description: Programing Amazon DynamoDB using the AWS SDK for PHP..
+   :keywords: Amazon DynamoDB, AWS SDK for PHP examples, Amazon DynamoDB for PHP code examples
 
 
 The |DDB| Session Handler is a custom session handler for PHP that
@@ -23,6 +23,9 @@ for session storage alleviates issues that occur with session handling in a
 distributed web application by moving sessions off of the local file system and
 into a shared location. |DDB| is fast, scalable, easy to set up, and handles
 replication of your data automatically.
+
+.. image:: images/code-samples-dynamodb.png
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon DynamoDB
 
 The |DDB| Session Handler uses the ``session_set_save_handler()`` function
 to hook |DDB| operations into PHP's `native session functions <http://www.php.net/manual/en/ref.session.php>`_
@@ -145,7 +148,7 @@ Pricing
 
 Aside from data storage and data transfer fees, the costs associated with using |DDB| are calculated based on
 the provisioned throughput capacity of your table (see the `Amazon DynamoDB pricing details
-<https://aws.amazon.com/dynamodb/pricing/>`). Throughput is measured in units of write capacity and read capacity. The
+<https://aws.amazon.com/dynamodb/pricing/>_`). Throughput is measured in units of write capacity and read capacity. The
 |DDBlong| homepage says:
 
     A unit of read capacity represents one strongly consistent read per second (or two eventually consistent reads per

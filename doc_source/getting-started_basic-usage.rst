@@ -64,13 +64,13 @@ client's constructor.
 **Imports**
 
 .. literalinclude::  example_code/s3/CreateClient.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 28-32
+   :lines: 32-36
    :language: php
 
 Notice that we did **not** explicitly provide credentials to the client. That's
@@ -102,13 +102,13 @@ provided to a specific client constructor can also be supplied to the
 **Imports**
 
 .. literalinclude::  example_code/s3/CreateClient.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 35-45
+   :lines: 39-49
    :language: php
 
 Options that are shared across all clients are placed in root-level key-value
@@ -152,13 +152,13 @@ call the ``Aws\S3\S3Client::putObject()`` method.
 **Imports**
 
 .. literalinclude::  example_code/s3/PutObjectServiceOperations.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/PutObjectServiceOperations.php
-   :lines: 27-53
+   :lines: 31-57
    :language: php
 
 Operations available to a client and the structure of the input and output are
@@ -206,13 +206,13 @@ transfers the requests.
 **Imports**
 
 .. literalinclude::  example_code/s3/ListBucketsAsync.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 27-39
+   :lines: 31-43
    :language: php
 
 You can force a promise to complete synchronously by using the ``wait`` method of
@@ -229,17 +229,17 @@ that is resolved or rejected when the operation completes.
 **Imports**
 
 .. literalinclude::  example_code/s3/ListBucketsAsync.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 27-35
+   :lines: 31-39
    :language: php
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 41-49
+   :lines: 45-53
    :language: php
 
 
@@ -259,13 +259,13 @@ You can access data from the AWS\Result object like an associative PHP array.
 **Imports**
 
 .. literalinclude::  example_code/s3/ListBucketsResultObject.php
-   :lines: 16-18
+   :lines: 20-22
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 27-45
+   :lines: 31-49
    :language: php
 
 
@@ -280,14 +280,14 @@ manipulate JSON data or, in our case, PHP arrays. The result object contains a
 ``search()`` method you can use to more declaratively extract data from the
 result.
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 37-39
+   :lines: 41-42
    :language: php
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-  :lines: 47-48
+  :lines: 51-52
   :language: php
 
 
@@ -313,13 +313,13 @@ about the failure, including the request-id, error code, and error type.
 **Imports**
 
 .. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 16-20
+   :lines: 20-24
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 27-45
+   :lines: 33-53
    :language: php
 
 
@@ -333,13 +333,13 @@ receive the result or error.
 **Imports**
 
 .. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 16-20
+   :lines: 20-24
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 52-61
+   :lines: 56-65
    :language: php
 
 
@@ -348,15 +348,15 @@ You can "unwrap" the promise and cause the exception to be thrown instead.
 **Imports**
 
 .. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 16-20
+   :lines: 20-24
    :language: PHP
 
-**Code**
+**Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 52
+   :lines: 56
    :language: php
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-  :lines: 64-68
+  :lines: 68-72
   :language: php

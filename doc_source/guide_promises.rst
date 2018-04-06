@@ -47,7 +47,7 @@ Promises are used throughout the SDK. For example, promises are used in most
 high-level abstractions provided by the SDK: :ref:`paginators <async_paginators>`,
 :ref:`waiters <async_waiters>`, :ref:`command pools <command_pool>`,
 :doc:`multipart uploads <s3-multipart-upload>`,
-:doc:`S3 directory/bucket transfers <s3-examples-transfer>`, and so on.
+:doc:`S3 directory/bucket transfers <s3-transfer>`, and so on.
 
 All of the clients that the SDK provides return promises when you invoke any
 of the ``Async`` suffixed methods. For example, the following code shows how to

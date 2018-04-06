@@ -14,11 +14,15 @@
 
 .. meta::
    :description: Amazon CloudWatch code examples for the AWS SDK for PHP
-   :keywords:
+   :keywords: Amazon CloudWatch PHP examples , AWS SDK for PHP examples. Amazon CloudWatch
 
 |CWlong| (|CW|) is a web service that monitors your |AWSlong| (AWS) resources and the applications you run on AWS in real time.
 You can use |CW| to collect and track metrics, which are variables you can measure for your resources and applications.
 |CW| alarms send notifications or automatically make changes to the resources you are monitoring based on rules that you define.
+
+.. image:: images/code-samples-cloudwatch.png
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon CloudWatch
+
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 

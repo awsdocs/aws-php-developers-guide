@@ -30,7 +30,7 @@ There are several repos on GitHub for the AWS SDK for PHP\.
 
 * The current SDK for PHP is available in the `SDK repo <https://github.com/aws/aws-sdk-php>`_\.
 
-* The SDK for PHP Developer Guide is available in markdown format in its own `documentation repo <https://github.com/awsdocs/aws-php-developer-guide-v2/blob/master/index.rst>`_\.
+* The SDK for PHP Developer Guide is available in markdown format in its own `documentation repo <https://github.com/awsdocs/aws-php-developers-guide>`_\.
 
 * The sample code included in this guide is available in the `SDK sample code repo <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_\.
 

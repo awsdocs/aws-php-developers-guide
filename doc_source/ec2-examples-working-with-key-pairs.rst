@@ -13,12 +13,14 @@ Working with |EC2| Key Pairs
 =================================
 
 .. meta::
-   :description: Create and delete key pairs for |EC2|.
-   :keywords: |EC2|, |sdk-php| examples
+   :description: Create and delete key pairs for Amazon EC2 using the AWS SDK for PHP.
+   :keywords: Amazon EC2 code examples for PHP
 
-|EC2| uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses a public key to encrypt data; then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair.
+|EC2| uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses
+a public key to encrypt data. Then the recipient uses the private key to decrypt the data. The public and
+private keys are known as a key pair.
 
-The examples below show how to:
+The following examples show how to:
 
 * Create a 2048-bit RSA key pair using :aws-php-class:`CreateKeyPair </api-ec2-2016-11-15.html#createkeypair>`.
 * Delete a specified key pair using :aws-php-class:`DeleteKeyPair </api-ec2-2016-11-15.html#deletekeypair>`.
@@ -29,7 +31,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 -----------
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
+Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Create a Key Pair
 -----------------

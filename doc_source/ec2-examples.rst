@@ -13,11 +13,14 @@
 ==========
 
 .. meta::
-   :description: Programing |EC2| using the |sdk-php|.
-   :keywords: |EC2|, |sdk-php| examples, |EC2| for PHP code examples
+   :description: Programing  Elastic Compute Cloud using the AWS SDK for PHP.
+   :keywords: Elastic Compute Cloud (EC2), AWS SDK for PHP examples, EC2 for PHP code examples
 
 
 |EC2long| (|EC2|) is a web service that provides virtual server hosting in the cloud. It's designed to make web-scale cloud computing easier for developers by providing resizeable compute capacity.
+
+.. image:: images/code-samples-ec2.png
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon EC2
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 

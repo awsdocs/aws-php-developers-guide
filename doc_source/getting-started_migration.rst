@@ -192,7 +192,7 @@ To provide consistency in how the SDK parses the result of an API
 operation, |ELClong|, |RDS|, and |RSlong| now have an
 additional wrapping element on some API responses.
 
-For example, calling the |RDS| :RDS-api:`DescribeEngineDefaultParameters <API_DescribeEngineDefaultParameters>`
+For example, calling the |RDS|  :RDS-api:`DescribeEngineDefaultParameters <API_DescribeEngineDefaultParameters>`
 result in version 3 now includes a wrapping "EngineDefaults" element. In
 version 2, this element was not present.
 
@@ -404,7 +404,7 @@ even been removed.
     * The ``Aws\S3\Sync`` namespace has been replaced by the ``Aws\S3\Transfer``
       class. The ``S3Client::uploadDirectory()`` and ``S3Client::downloadBucket()``
       methods are still available, but have different options. See the documentation for
-      :doc:`s3-examples-transfer`.
+      :doc:`s3-transfer`.
     * ``Aws\S3\Model\ClearBucket`` and ``Aws\S3\Model\DeleteObjectsBatch``
       have been replaced by ``Aws\S3\BatchDelete`` and ``S3Client::deleteMatchingObjects()``.
     * The options and behaviors for the :doc:`service_dynamodb-session-handler`
