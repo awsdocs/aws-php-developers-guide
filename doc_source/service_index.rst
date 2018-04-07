@@ -23,11 +23,11 @@ higher-level features per service.
 .. toctree::
     :maxdepth: 2
 
-    service_cloudsearch-custom-requests
-    service_cloudfront-signed-url
-    cloud9
-    service_dynamodb-session-handler
-    service_es-data-plane
+    Amazon CloudSearch <service_cloudsearch-custom-requests.rst>
+    Amazon CloudFront <service_cloudfront-signed-url.rst>
+    AWS Cloud9 <cloud9>
+    Amazon DynamoDB <service_dynamodb-session-handler.rst>
+    Amazon Elasticsearch <service_es-data-plane.rst>
     s3-multipart-upload
     s3-multiregion-client
     s3-presigned-post

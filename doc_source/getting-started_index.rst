@@ -17,7 +17,7 @@ This chapter is dedicated to getting you up and running with the |sdk-php|.
 .. toctree::
     :maxdepth: 2
 
-    getting-started_requirements
-    getting-started_installation
-    getting-started_basic-usage
-    getting-started_migration
+    Prerequisites <getting-started_requirements.rst>
+    Installing the SDK <getting-started_installation.rst>
+    Basic Use <getting-started_basic-usage.rst>
+    Upgrading From Version 2 <getting-started_migration.rst>

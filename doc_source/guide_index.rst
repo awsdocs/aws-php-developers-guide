@@ -18,12 +18,12 @@ following topics describe the components that are used in the SDK.
 .. toctree::
     :maxdepth: 1
 
-    guide_configuration
-    guide_credentials
-    guide_commands
-    guide_promises
-    guide_handlers-and-middleware
-    guide_streams
-    guide_paginators
-    guide_waiters
-    guide_jmespath
+    Configuration Options <guide_configuration.rst>
+    Setting Credentials <guide_credentials.rst>
+    Command Objects <guide_commands.rst>
+    Promises <guide_promises.rst>
+    Handlers and Middleware <guide_handlers-and-middleware.rst>
+    Streams <guide_streams.rst>
+    Paginators <guide_paginators.rst>
+    Waiters <guide_waiters.rst>
+    JMESPath Expressions  <guide_jmespath.rst>
