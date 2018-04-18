@@ -44,7 +44,7 @@ Create a PHP file with the following code. First create an AWS.S3 client service
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ListBuckets.php
-   :lines: 32-42
+   :lines: 32-
    :language: php
 
 Create a Bucket
@@ -55,7 +55,7 @@ Create a PHP file with following code. First create an AWS.S3 client service tha
 **Sample Code**
 
 .. literalinclude:: example_code/s3/CreateBucket.php
-   :lines: 31-49
+   :lines: 31-
    :language: php
 
 Put an Object in a Bucket
@@ -68,6 +68,6 @@ In your command line execute this file and pass in the name of the bucket where 
 **Sample Code**
 
 .. literalinclude:: example_code/s3//PutObject.php
-   :lines: 31-60
+   :lines: 31-
    :language: php
 

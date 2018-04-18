@@ -44,5 +44,5 @@ Get, Delete, and Replace a Policy on a Bucket
 **Sample Code**
 
 .. literalinclude:: example_code/s3/s3BucketPolicy.php
-   :lines: 25-70
+   :lines: 25-
    :language: php

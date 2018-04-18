@@ -50,7 +50,7 @@ The only parameter required is the name of the selected bucket. If the bucket cu
 **Sample Code**
 
 .. literalinclude:: example_code/s3/GetBucketCors.php
-   :lines: 31-46
+   :lines: 31-
    :language: php
 
 Set the CORS Configuration
@@ -62,5 +62,5 @@ to set, and the CORSConfiguration as a :aws-php-class:`CORSRules JSON object </a
 **Sample Code**
 
 .. literalinclude:: example_code/s3/PutBucketCors.php
-   :lines: 38-57
+   :lines: 38-
    :language: php

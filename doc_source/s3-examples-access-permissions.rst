@@ -44,5 +44,5 @@ Get and Set an Access Control List Policy
 **Sample Code**
 
 .. literalinclude:: example_code/s3/s3BucketAcl.php
-   :lines: 25-78
+   :lines: 25-
    :language: php

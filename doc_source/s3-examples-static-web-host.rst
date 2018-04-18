@@ -45,5 +45,5 @@ Get, Set, and Delete the Website Configuration for a Bucket
 **Sample Code**
 
 .. literalinclude:: example_code/s3/s3WebHost.php
-   :lines: 25-76
+   :lines: 25-
    :language: php
