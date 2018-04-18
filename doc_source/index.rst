@@ -14,11 +14,11 @@
 
 .. toctree::
 
-    What is the AWS SDK for PHP? <welcome.rst>
-    getting-started_index
-    guide_index
+    AWS SDK for PHP <welcome.rst>
+    Getting Started <getting-started_index>
+    Configuring the SDK <guide_index>
     Using AWS Services <service_index.rst>
-    examples_index
+    Code Examples <examples_index>
     faq
     glossary
     resources

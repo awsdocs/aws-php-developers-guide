@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========
-|sdk-php|
-=========
+======================
+What Is the |sdk-php|?
+======================
 
 .. meta::
    :description: AWS SDK for PHP enables PHP developers to use Amazon Web Services in their PHP code.
