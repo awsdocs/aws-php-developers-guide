@@ -64,7 +64,7 @@ which to store the sessions. You can this ahead of time by using the
 `AWS Console for Amazon DynamoDB <https://console.aws.amazon.com/dynamodb/home>`_,
 or by using the |sdk-php|.
 
-3. Use PHP Sessions as You Normally Would
+Step 3. Use PHP Sessions as You Normally Would
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the session handler is registered and the table exists, you can write to
