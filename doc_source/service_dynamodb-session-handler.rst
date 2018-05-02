@@ -148,7 +148,7 @@ Pricing
 
 Aside from data storage and data transfer fees, the costs associated with using |DDB| are calculated based on
 the provisioned throughput capacity of your table (see the `Amazon DynamoDB pricing details
-<https://aws.amazon.com/dynamodb/pricing/>_`). Throughput is measured in units of write capacity and read capacity. The
+<https://aws.amazon.com/dynamodb/pricing/>`_). Throughput is measured in units of write capacity and read capacity. The
 |DDBlong| homepage says:
 
     A unit of read capacity represents one strongly consistent read per second (or two eventually consistent reads per
