@@ -65,7 +65,6 @@ which to store the sessions. You can this ahead of time by using the
 or by using the |sdk-php|.
 
 Step 3. Use PHP Sessions as You Normally Would
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the session handler is registered and the table exists, you can write to
