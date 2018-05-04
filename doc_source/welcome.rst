@@ -79,7 +79,7 @@ Service-Specific Features
 * :doc:`s3-presigned-url`
 * :doc:`s3-stream-wrapper`
 * :doc:`s3-transfer`
-* :doc:`s3-service-encryption-client`
+* :doc:`s3-encryption-client`
 
 Examples
 --------
