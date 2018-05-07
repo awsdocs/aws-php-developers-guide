@@ -70,7 +70,7 @@ client's constructor.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 32-36
+   :lines: 32-37
    :language: php
 
 Notice that we did **not** explicitly provide credentials to the client. That's
@@ -108,7 +108,7 @@ provided to a specific client constructor can also be supplied to the
 **Sample Code**
 
 .. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 39-49
+   :lines: 39-
    :language: php
 
 Options that are shared across all clients are placed in root-level key-value
@@ -158,7 +158,7 @@ call the ``Aws\S3\S3Client::putObject()`` method.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/PutObjectServiceOperations.php
-   :lines: 31-57
+   :lines: 31-
    :language: php
 
 Operations available to a client and the structure of the input and output are
@@ -212,7 +212,7 @@ transfers the requests.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 31-43
+   :lines: 31-44
    :language: php
 
 You can force a promise to complete synchronously by using the ``wait`` method of
@@ -235,11 +235,11 @@ that is resolved or rejected when the operation completes.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 31-39
+   :lines: 31-40
    :language: php
 
 .. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 45-53
+   :lines: 46-
    :language: php
 
 
@@ -265,7 +265,7 @@ You can access data from the AWS\Result object like an associative PHP array.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 31-49
+   :lines: 31-50
    :language: php
 
 
@@ -283,11 +283,11 @@ result.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 41-42
+   :lines: 41-43
    :language: php
 
 .. literalinclude:: example_code/s3/ListBucketsResultObject.php
-  :lines: 51-52
+  :lines: 51-
   :language: php
 
 
@@ -319,7 +319,7 @@ about the failure, including the request-id, error code, and error type.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 33-53
+   :lines: 33-54
    :language: php
 
 
@@ -339,7 +339,7 @@ receive the result or error.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 56-65
+   :lines: 56-66
    :language: php
 
 
@@ -358,5 +358,5 @@ You can "unwrap" the promise and cause the exception to be thrown instead.
    :language: php
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-  :lines: 68-72
+  :lines: 68-
   :language: php
