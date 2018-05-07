@@ -38,7 +38,7 @@ The most common scenario is creating a pre-signed URL to GET an object.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 25-36
+   :lines: 25-37
    :language: php
 
 Creating a Pre-Signed URL
@@ -53,7 +53,7 @@ returned request.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 39-47
+   :lines: 39-48
    :language: php
 
 Getting the URL to an Object
@@ -66,7 +66,7 @@ returns an unsigned URL to the given bucket and key.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 49-50
+   :lines: 49-
    :language: php
 
 .. important::
