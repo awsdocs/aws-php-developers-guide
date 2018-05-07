@@ -59,7 +59,7 @@ custom policy.
         'url'         => $resourceKey,
         'expires'     => $expires,
         'private_key' => '/path/to/your/cloudfront-private-key.pem',
-        'key_pair_id' => '<|CF|key pair id>'
+        'key_pair_id' => '<CloudFront key pair id>'
     ]);
 
 To use a custom policy, provide the ``policy`` key instead of ``expires``.
@@ -85,7 +85,7 @@ To use a custom policy, provide the ``policy`` key instead of ``expires``.
         'url'    => $resourceKey,
         'policy' => $customPolicy,
         'private_key' => '/path/to/your/cloudfront-private-key.pem',
-        'key_pair_id' => '<|CF|key pair id>'
+        'key_pair_id' => '<CloudFront key pair id>'
     ]);
 
 The form of the signed URL is actually different depending on whether the URL you
@@ -155,7 +155,7 @@ difference is the method called (``getSignedCookie`` instead of ``getSignedUrl``
         'url'         => $resourceKey,
         'expires'     => $expires,
         'private_key' => '/path/to/your/cloudfront-private-key.pem',
-        'key_pair_id' => '<|CF|key pair id>'
+        'key_pair_id' => '<CloudFront key pair id>'
     ]);
 
 As with ``getSignedUrl``, you can provide a ``'policy'`` parameter instead of an
@@ -183,7 +183,7 @@ to create a single signed cookie for multiple files.
     $signedCookieCustomPolicy = $cloudFront->getSignedCookie([
         'policy' => $customPolicy,
         'private_key' => '/path/to/your/cloudfront-private-key.pem',
-        'key_pair_id' => '<|CF|key pair id>'
+        'key_pair_id' => '<CloudFront key pair id>'
     ]);
 
 ``getSignedCookie`` returns an array of key-value pairs, all of which must
