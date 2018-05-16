@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================
-Promises in the |sdk-php|
-=========================
+===================================
+Promises in the |sdk-php| version 3 
+===================================
 
 .. meta::
-   :description: Set up asynchronous work flow for AWS SDK for PHP.
-   :keywords: AWS SDK for PHP promises, asynchronous AWS SDK for PHP 
+   :description: Set up asynchronous work flow for AWS SDK for PHP version 3.
+   :keywords: AWS SDK for PHP version 3 promises, asynchronous AWS SDK for PHP version 3 
 
 The |sdk-php| uses **promises** to allow for asynchronous workflows, and
 this asynchronicity allows HTTP requests to be sent concurrently. The promise

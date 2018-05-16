@@ -8,17 +8,17 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================
-|sdk-php| Code Examples
-=======================
+=================================
+|sdk-php| version 3 Code Examples
+=================================
 
 .. meta::
-   :description: Code examples for the AWS SDK for PHP.
+   :description: Code examples for the AWS SDK for PHP version 3.
    :keywords:
 
-The |sdk-php| includes code examples that demonstrate common Amazon Web Services scenarios that use the SDK.
+The |sdk-php| version 3 includes code examples that demonstrate common Amazon Web Services scenarios that use the SDK.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
     :maxdepth: 2

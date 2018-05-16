@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================================
-JMESPath Expressions in the |sdk-php|
-=====================================
+=================================================
+JMESPath Expressions in the |sdk-php| version 3
+=================================================
 
 .. meta::
-   :description: Extract JSON data from the AWS SDK for PHP.
-   :keywords: AWS SDK for PHP, Json, AWS results, paginators
+   :description: Extract JSON data from the AWS SDK for PHP version 3.
+   :keywords: AWS SDK for PHP version 3, Json, AWS results, paginators
 
 
 `JMESPath <http://jmespath.org/>`_ enables you to declaratively specify how to

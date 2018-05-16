@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
-Working with |EC2| Key Pairs
-=================================
+=====================================================
+Working with |EC2| Key Pairs with |sdk-php| version 3
+=====================================================
 
 .. meta::
-   :description: Create and delete key pairs for Amazon EC2 using the AWS SDK for PHP.
+   :description: Create and delete key pairs for Amazon EC2 using the AWS SDK for PHP version 3.
    :keywords: Amazon EC2 code examples for PHP
 
 |EC2| uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses

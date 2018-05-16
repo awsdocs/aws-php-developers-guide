@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
-Using AWS Services with |sdk-php|   
-=================================
+===========================================
+Using AWS Services with |sdk-php| version 3
+===========================================
 
 .. meta::
    :description: Features of AWS Services supported by the AWS SDK for PHP.
    :keywords: AWS for PHP, AWS SDK for PHP examples
 
-Some of the AWS services supported by the |sdk-php| include additional
+Some of the AWS services supported by the |sdk-php| version 3 include additional
 features beyond executing operations on an API. This guide documents these
 higher-level features per service.
 
@@ -28,10 +28,22 @@ higher-level features per service.
     AWS Cloud9 <cloud9>
     Amazon DynamoDB <service_dynamodb-session-handler.rst>
     Amazon Elasticsearch <service_es-data-plane.rst>
-    s3-multipart-upload
-    s3-multiregion-client
-    s3-presigned-post
-    s3-presigned-url
-    s3-stream-wrapper
-    s3-transfer
-    s3-encryption-client
+    Amazon S3 Multipart Uploads <s3-multipart-upload.rst>
+    Amazon S3 Multi-Region Client <s3-multiregion-client.rst>
+    Amazon S3 Pre-Signed POSTs <s3-presigned-post.rst>
+    Amazon S3 Pre-Signed URL <s3-presigned-url.rst>
+    Amazon S3 Stream Wrapper <s3-stream-wrapper.rst>
+    Amazon S3 Transfer Manager <s3-transfer.rst>
+    Amazon S3 Client Side Encryption <s3-encryption-client.rst>
+
+
+
+
+
+
+
+
+
+
+
+

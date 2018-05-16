@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================
-Working with |CWlong| Alarms
-============================
+=====================================================
+Working with |CWlong| Alarms with |sdk-php| version 3
+=====================================================
 
 .. meta::
-   :description: Create Amazon CloudWatch alarms that automatically stop, terminate, reboot, or recover Amazon EC2 instances using the AWS SDK for PHP.
+   :description: Create Amazon CloudWatch alarms that automatically stop, terminate, reboot, or recover Amazon EC2 instances using the AWS SDK for PHP version 3.
    :keywords: Amazon CloudWatch code examples for PHP
 
 An |CWlong| alarm watches a single metric over a time period you specify. It performs one or more actions based on the value of

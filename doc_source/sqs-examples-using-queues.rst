@@ -9,12 +9,12 @@
    limitations under the License.
 
 
-=====================
-Using Queues in |SQS|
-=====================
+====================================================
+Using Queues in |SQS| with AWS SDK for PHP version 3 
+====================================================
 
 .. meta::
-   :description: Create or delete Amazon SQS queues, and return lists and URLs for queues using the AWS SDK for PHP.
+   :description: Create or delete Amazon SQS queues, and return lists and URLs for queues using the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
 To learn about |SQS| queues, see :SQS-dg:`How SQS Queues Work <sqs-how-it-works>`.

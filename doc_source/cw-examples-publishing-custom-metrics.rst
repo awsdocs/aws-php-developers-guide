@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================================
-Publishing Custom Metrics in |CWlong|
-=====================================
+==============================================================
+Publishing Custom Metrics in |CWlong| with |sdk-php| version 3
+==============================================================
 
 .. meta::
-   :description: Publish metric data and create alarms for Amazon CloudWatch using the AWS SDK for PHP.
+   :description: Publish metric data and create alarms for Amazon CloudWatch using the AWS SDK for PHP version 3.
    :keywords: Amazon CloudWatch code examples for PHP
 
 Metrics are data about the performance of your systems. An alarm watches a single metric over a time period you

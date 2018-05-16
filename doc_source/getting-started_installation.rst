@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-========================
-Installing the |sdk-php|
-========================
+==================================
+Installing the |sdk-php| version 3
+==================================
 
 .. meta::
-   :description:  Install the AWS SDK for PHP. 
-   :keywords: AWS SDK for PHP, php for aws, install AWS SDK for PHP
+   :description:  Install the AWS SDK for PHP version 3. 
+   :keywords: AWS SDK for PHP version 3, php for aws, install AWS SDK for PHP version 3
    
-You can install the |sdk-php| by using:
+You can install the |sdk-php| version 3 by using:
 
 * Composer
 * The prepackaged phar in the SDK

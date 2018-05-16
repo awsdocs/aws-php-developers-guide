@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===================
-|S3| Stream Wrapper
-===================
+============================================
+|S3| Stream Wrapper with |sdk-php| version 3
+============================================
 
 .. meta::
-   :description: Store and retrieve data from |S3| with the |sdk-php|.
-   :keywords: |S3| with |sdk-php|, |S3| steam wrapper, |S3| files
+   :description: Store and retrieve data from |S3| with the AWS SDK for PHP version 3.
+   :keywords: |S3| with AWS SDK for PHP version 3, |S3| steam wrapper, |S3| files
 
 The |S3| stream wrapper enables you to store and retrieve data from |S3|
 using built-in PHP functions, such as ``file_get_contents``, ``fopen``,

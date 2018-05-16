@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================
-What Is the |sdk-php|?
-======================
+=================================
+What is the |sdk-php| version 3?
+=================================
 
 .. meta::
-   :description: AWS SDK for PHP enables PHP developers to use Amazon Web Services in their PHP code.
-   :keywords: AWS SDK for PHP , AWS for PHP, Amazon PHP, 
+   :description: AWS SDK for PHP version 3 enables PHP developers to use Amazon Web Services in their PHP code.
+   :keywords: AWS SDK for PHP version 3, AWS for PHP, Amazon PHP, 
 
-The |sdk-php| enables PHP developers to use
+The |sdk-php| version 3 enables PHP developers to use
 `Amazon Web Services <http://aws.amazon.com/>`_ in their PHP code, and build
 robust applications and software using services like |S3|, |DDBlong|, |GL|, etc.
 You can get started in minutes by installing the
@@ -25,10 +25,10 @@ downloading the standalone `aws.zip <http://docs.aws.amazon.com/aws-sdk-php/v3/d
 or `aws.phar <http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar>`_ file.
 
 .. image:: images/php-sdk-overview.png
-   :alt: Diagram that provides an overview of how AWS SDK for PHP works
+   :alt: Diagram that provides an overview of how AWS SDK for PHP version 3 works
 
 Not all services are immediately available in the SDK. To find out which services are currently supported by the |sdk-php|, see :aws-php-class:`Service Name and API Version <index.html>`.
-For information about the |sdk-php| on GitHub, see :doc:`Additional Resources <resources>`.
+For information about the |sdk-php| version 3 on GitHub, see :doc:`Additional Resources <resources>`.
 
 External links: :aws-php-class:`API Docs <index.html>`
 | `GitHub <https://github.com/aws/aws-sdk-php>`_
@@ -54,46 +54,46 @@ Getting Started
 SDK Guides
 ----------
 
-* :doc:`guide_configuration`
-* :doc:`guide_credentials`
-* :doc:`guide_commands`
-* :doc:`guide_promises`
-* :doc:`guide_handlers-and-middleware`
-* :doc:`guide_streams`
-* :doc:`guide_paginators`
-* :doc:`guide_waiters`
-* :doc:`guide_jmespath`
-
+* :doc:`Configuration for the AWS SDK for PHP <guide_configuration>`
+* :doc:`Credentials for the AWS SDK for PHP <guide_credentials>`
+* :doc:`Command Objects in the AWS SDK for PHP <guide_commands>`
+* :doc:`Promises in the AWS SDK for PHP <guide_promises>`
+* :doc:`Handlers and Middleware in the AWS SDK for PHP <guide_handlers-and-middleware>`
+* :doc:`Streams in the AWS SDK for PHP <guide_streams>`
+* :doc:`Paginators in the AWS SDK for PHP <guide_paginators>`
+* :doc:`Waiters in the AWS SDK for PHP <guide_waiters>`
+* :doc:`JMESPath Expressions in the AWS SDK for PHP <guide_jmespath>`
 
 Service-Specific Features
 -------------------------
 
-* :doc:`service_cloudsearch-custom-requests`
-* :doc:`service_cloudfront-signed-url`
-* :doc:`cloud9`
-* :doc:`service_dynamodb-session-handler`
-* :doc:`service_es-data-plane`
-* :doc:`s3-multipart-upload`
-* :doc:`s3-multiregion-client`
-* :doc:`s3-presigned-post`
-* :doc:`s3-presigned-url`
-* :doc:`s3-stream-wrapper`
-* :doc:`s3-transfer`
-* :doc:`s3-encryption-client`
+* :doc:`Signing Custom Amazon CloudSearch Domain Requests  <service_cloudsearch-custom-requests>`
+* :doc:`Signing Amazon CloudFront URLs  <service_cloudfront-signed-url>`
+* :doc:`Using AWS Cloud9 with the AWS SDK for PHP  <cloud9>`
+* :doc:`Using the DynamoDB Session Handler with AWS SDK for PHP  <service_dynamodb-session-handler>`
+* :doc:`Signing an Amazon Elasticsearch Service Search Request  <service_es-data-plane>`
+* :doc:`Using Amazon S3 Multipart Uploads  <s3-multipart-upload>`
+* :doc:`Amazon S3 Multi-Region Client  <s3-multiregion-client>`
+* :doc:`Amazon S3 Pre-Signed POSTs  <s3-presigned-post>`
+* :doc:`Amazon S3 Pre-Signed URL  <s3-presigned-url>`
+* :doc:`Amazon S3 Stream Wrapper  <s3-stream-wrapper>`
+* :doc:`Amazon S3 Transfer Manager  <s3-transfer>`
+* :doc:`Amazon S3 Client Side Encryption  <s3-encryption-client>`
+
 
 Examples
 --------
-* :doc:`cw-examples`
-* :doc:`ec2-examples`
-* :doc:`iam-examples`
-* :doc:`s3-examples`
-* :doc:`sqs-examples`
+* :doc:`Amazon CloudWatch Examples <cw-examples>`
+* :doc:`Amazon EC2 <ec2-examples>`
+* :doc:`AWS IAM Examples <iam-examples>`
+* :doc:`Amazon S3 Examples <s3-examples>`
+* :doc:`Amazon SQS Examples <sqs-examples>`
 
 Reference
 ---------
 
-* :doc:`faq`
-* :doc:`glossary`
+* :doc:`FAQ <faq>`
+* :doc:`Glossary <glossary>`
 * `Contributing to the SDK <https://github.com/aws/aws-sdk-php/blob/master/CONTRIBUTING.md>`_
 * `Guzzle Documentation <http://guzzlephp.org>`_
 

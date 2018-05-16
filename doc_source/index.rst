@@ -19,8 +19,8 @@
     Configuring the SDK <guide_index>
     Using AWS Services <service_index.rst>
     Code Examples <examples_index>
-    faq
-    glossary
+    FAQ <faq>
+    glossary 
     resources
 	
 

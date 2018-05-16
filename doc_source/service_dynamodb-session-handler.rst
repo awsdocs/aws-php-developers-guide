@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===============================================
-Using the |DDB| Session Handler with |sdk-php|
-===============================================
+=========================================================
+Using the |DDB| Session Handler with |sdk-php| version 3
+=========================================================
 
 .. meta::
    :description: Programing Amazon DynamoDB using the AWS SDK for PHP..

@@ -9,28 +9,32 @@
    limitations under the License.
 
 
-==================================
-|SQS| Examples Using the |sdk-php|
-==================================
+=============================================
+|SQS| Examples Using the |sdk-php| version 3 
+=============================================
 
 .. meta::
-   :description: Amazon SQS code examples for the AWS SDK for PHP.
+   :description: Amazon SQS code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
 
 |SQSlong| (SQS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS| 
-includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first-in, first-out) delivery and exactly-once processing.
+includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first>-in, first>-out) delivery and exactly-once processing.
 
 .. image:: images/code-samples-sqs.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SQS
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
     :maxdepth: 1
 
-    sqs-examples-enable-long-polling.rst
-    sqs-examples-managing-visibility-timeout.rst
-    sqs-examples-send-receive-messages.rst
-    sqs-examples-dead-letter-queues.rst
-    sqs-examples-using-queues.rst
+    Enabling Long Polling in Amazon SQS <sqs-examples-enable-long-polling.rst>
+    Managing Visibility Timeout in Amazon SQS <sqs-examples-managing-visibility-timeout.rst>
+    Sending and Receiving Messages in Amazon SQS <sqs-examples-send-receive-messages.rst>
+    Using Dead Letter Queues in Amazon SQS <sqs-examples-dead-letter-queues.rst>
+    Using Queues in Amazon SQS <sqs-examples-using-queues.rst>
+
+
+
+

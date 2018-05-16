@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================
-Managing |S3| Bucket Access Permissions
-=======================================
+======================================================================
+Managing |S3| Bucket Access Permissions with AWS SDK for PHP version 3 
+======================================================================
 
 .. meta::
-   :description: Get access control lists (ACLs) and set permissions for Amazon S3 buckets using the AWS SDK for PHP.
+   :description: Get access control lists (ACLs) and set permissions for Amazon S3 buckets using the AWS SDK for PHP version 3.
    :keywords: Amazon S3 code examples for PHP
 
 Access control lists (ACLs) are one of the resource-based access policy options you can use to manage access to your buckets and objects.

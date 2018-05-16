@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
-Working with |S3| Bucket Policies
-=================================
+================================================================
+Working with |S3| Bucket Policies with AWS SDK for PHP version 3 
+================================================================
 
 .. meta::
-   :description: Return, replace, or delete Amazon S3 bucket policies using the AWS SDK for PHP.
+   :description: Return, replace, or delete Amazon S3 bucket policies using the AWS SDK for PHP version 3.
    :keywords: Amazon S3 code examples for PHP
 
 You can use a bucket policy to grant permission to your |S3| resources. To learn more, see `Using Bucket Policies and User Policies <http://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html>`_.

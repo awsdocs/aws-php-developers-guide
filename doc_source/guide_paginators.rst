@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================
-Paginators in the |sdk-php|
-===========================
+=======================================
+Paginators in the |sdk-php| version 3
+=======================================
 
 .. meta::
-   :description: Processing paginated results from the AWS SDK for PHP.
-   :keywords: AWS SDK for PHP, paginators, iterate through results, PHP for AWS
+   :description: Processing paginated results from the AWS SDK for PHP version 3.
+   :keywords: AWS SDK for PHP version 3, paginators, iterate through results, PHP for AWS
 
 
 Some AWS service operations are paginated and respond with truncated results.

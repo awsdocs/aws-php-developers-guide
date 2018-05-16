@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================
-Using |S3| Multipart Uploads
-============================
+===========================================================
+Using |S3| Multipart Uploads with AWS SDK for PHP version 3 
+===========================================================
 
 .. meta::
-   :description: Break larger files into smaller parts when you upload to |S3| using the |sdk-php|.
-   :keywords: |S3|, |sdk-php| examples, |S3| for PHP code examples
+   :description: Break larger files into smaller parts when you upload to Amazon S3 using the AWS SDK for PHP version 3 .
+   :keywords: Amazon S3, AWS SDK for PHP version 3  examples, |S3| for PHP code examples
 
 
 With a single ``PutObject`` operation, you can upload objects up to 5 GB in

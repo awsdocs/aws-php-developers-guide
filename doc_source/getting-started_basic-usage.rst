@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================
-Basic Use of the |sdk-php|
-==========================
+====================================
+Basic Use of the |sdk-php| version 3
+====================================
 
 .. meta::
-   :description: Describes the basic usage pattern of the AWS SDK for PHP.
-   :keywords: AWS SDK for PHP, create a client, asynchronous requests, getting started with AWS SDK for PHP
+   :description: Describes the basic usage pattern of the AWS SDK for PHP version 3.
+   :keywords: AWS SDK for PHP version 3, create a client, asynchronous requests, getting started with AWS SDK for PHP version 3
 
 This topic focuses on basic usage patterns of the |sdk-php|.
 

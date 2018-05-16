@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===============================
-Configuration for the |sdk-php|
-===============================
+=========================================
+Configuration for the |sdk-php| version 3
+=========================================
 
 .. meta::
-   :description: Custom client configuration options for the AWS SDK for PHP client.
-   :keywords: AWS SDK for PHP constructor, AWS SDK for PHP client configuration
+   :description: Custom client configuration options for the AWS SDK for PHP version 3 client.
+   :keywords: AWS SDK for PHP version 3 constructor, AWS SDK for PHP version 3 client configuration
 
 This guide describes client constructor options. These options can be provided
 in a client constructor or provided to the ``Aws\Sdk`` class. The array of options

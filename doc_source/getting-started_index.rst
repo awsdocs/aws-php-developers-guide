@@ -8,11 +8,11 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===================================
-Getting Started with the |sdk-php|
-===================================
+=============================================
+Getting Started with the |sdk-php| version 3
+=============================================
 
-This chapter is dedicated to getting you up and running with the |sdk-php|.
+This chapter is dedicated to getting you up and running with the |sdk-php| version 3.
 
 .. toctree::
     :maxdepth: 2

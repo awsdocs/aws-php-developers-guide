@@ -9,12 +9,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=============================
-Getting Metrics from |CWlong|
-=============================
+======================================================
+Getting Metrics from |CWlong| with |sdk-php| version 3
+======================================================
 
 .. meta::
-   :description: List Amazon CloudWatch metrics, retrieve alarms for metrics, and get metric statistics using the AWS SDK for PHP.
+   :description: List Amazon CloudWatch metrics, retrieve alarms for metrics, and get metric statistics using the AWS SDK for PHP version 3.
    :keywords: Amazon CloudWatch code examples for PHP
 
 Metrics are data about the performance of your systems. You can enable detailed monitoring of some resources,

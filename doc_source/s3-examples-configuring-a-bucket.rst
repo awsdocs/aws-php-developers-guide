@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-========================
-Configuring |S3| Buckets
-========================
+=======================================================
+Configuring |S3| Buckets with AWS SDK for PHP version 3 
+=======================================================
 
 .. meta::
-   :description: Get or set CORS configuration for an Amazon S3 bucket using the AWS SDK for PHP.
-   :keywords: Amazon S3 code examples for PHP
+   :description: Get or set CORS configuration for an Amazon S3 bucket using the AWS SDK for PHP version 3.
+   :keywords: Amazon S3 code examples for PHP, AWS SDK for PHP version 3 
 
 Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. With CORS support in |S3|,
 you can build rich client-side web applications with |S3| and selectively allow cross-origin access to your |S3| resources.
