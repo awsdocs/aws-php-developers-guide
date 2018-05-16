@@ -9,7 +9,7 @@
    limitations under the License.
 
 =================================
-What is the |sdk-php| version 3?
+What Is the |sdk-php| Version 3?
 =================================
 
 .. meta::
