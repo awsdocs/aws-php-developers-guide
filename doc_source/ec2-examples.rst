@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========
-|EC2|
-==========
+============================================
+|EC2| Examples Using the |sdk-php| version 3
+============================================
 
 .. meta::
-   :description: Programing  Elastic Compute Cloud using the AWS SDK for PHP.
-   :keywords: Elastic Compute Cloud (EC2), AWS SDK for PHP examples, EC2 for PHP code examples
+   :description: Programing  Elastic Compute Cloud using the AWS SDK for PHP version 3.
+   :keywords: Elastic Compute Cloud (EC2), AWS SDK for PHP version 3 examples, EC2 for PHP code examples
 
 
 |EC2long| (|EC2|) is a web service that provides virtual server hosting in the cloud. It's designed to make web-scale cloud computing easier for developers by providing resizeable compute capacity.
@@ -27,8 +27,13 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 .. toctree::
     :maxdepth: 1
 
-    ec2-examples-managing-instances.rst
-    ec2-examples-using-elastic-ip-addresses.rst
-    ec2-examples-using-regions-and-zones.rst
-    ec2-examples-working-with-key-pairs.rst
-    ec2-examples-using-security-groups.rst
+    Managing Amazon EC2 Instances Using the AWS SDK for PHP <ec2-examples-managing-instances.rst>
+    Using Elastic IP Addresses with Amazon EC2 <ec2-examples-using-elastic-ip-addresses.rst>
+    Using Regions and Availability Zones for Amazon EC2 <ec2-examples-using-regions-and-zones.rst>
+    Working with Amazon EC2 Key Pairs <ec2-examples-working-with-key-pairs.rst>
+    Working with Security Groups in Amazon EC2 <ec2-examples-using-security-groups.rst>
+    
+
+
+
+

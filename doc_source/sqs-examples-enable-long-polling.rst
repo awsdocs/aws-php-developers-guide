@@ -9,12 +9,12 @@
    limitations under the License.
 
 
-==============================
-Enabling Long Polling in |SQS|
-==============================
+=======================================================
+Enabling Long Polling in |SQS| with |sdk-php| version 3 
+=======================================================
 
 .. meta::
-   :description: Enable long polling, retrieve messages with long pulling, and create a long polling queue using the AWS SDK for PHP.
+   :description: Enable long polling, retrieve messages with long pulling, and create a long polling queue using the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
 Long polling reduces the number of empty responses by allowing |SQS| to wait a specified time for a message to become available in the queue before

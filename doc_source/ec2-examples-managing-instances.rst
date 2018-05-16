@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
-Managing |EC2| Instances Using the |sdk-php|
-============================================
+=======================================================
+Managing |EC2| Instances Using the |sdk-php| version 3
+=======================================================
 
 .. meta::
-   :description: Engage with Amazon EC2 instances using the AWS SDK for PHP.
+   :description: Engage with Amazon EC2 instances using the AWS SDK for PHP version 3.
    :keywords: Amazon EC2 code examples for PHP
 
 The following examples show how to:

@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=============================
-Credentials for the |sdk-php|
-=============================
+=======================================
+Credentials for the |sdk-php| version 3
+=======================================
 
 .. meta::
-   :description: Connect the AWS SDK for PHP to AWS services with AWS access keys. 
-   :keywords: AWS SDK for PHP credentials, AWS SDK for PHP access keys, iam profile for AWS SDK for PHP
+   :description: Connect the AWS SDK for PHP version 3 to AWS services with AWS access keys. 
+   :keywords: AWS SDK for PHP version 3 credentials, AWS SDK for PHP version 3 access keys, iam profile for AWS SDK for PHP version 3
 
 To authenticate requests, AWS services require you to provide your
 :iam-ug:`AWS access keys <id_credentials_access-keys>`, also known

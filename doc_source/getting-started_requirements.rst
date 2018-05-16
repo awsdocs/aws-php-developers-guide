@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==================================================
-Requirements and Recommendations for the |sdk-php|
-==================================================
+============================================================
+Requirements and Recommendations for the |sdk-php| version 3
+============================================================
 
 .. meta::
-   :description:  Set up your environment to use the AWS SDK for PHP. 
-   :keywords: AWS SDK for PHP, php for aws
+   :description:  Set up your environment to use the AWS SDK for PHP version 3. 
+   :keywords: AWS SDK for PHP version 3, php for aws
 
 For best results with |sdk-php|, ensure your environment supports the following requirements and recommendations.
 

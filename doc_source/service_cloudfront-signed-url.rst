@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================
-Signing |CFlong| URLs
-=====================
+==============================================
+Signing |CFlong| URLs with |sdk-php| version 3
+==============================================
 
 .. meta::
-   :description: Programing Cloud Front using the AWS SDK for PHP.
-   :keywords: Cloud Front, AWS SDK for PHP examples, Cloud Front for PHP code examples
+   :description: Programing Cloud Front using the AWS SDK for PHP version 3.
+   :keywords: Cloud Front, AWS SDK for PHP version 3 examples, Cloud Front for PHP code examples
 
 
 Signing |CF| URLs for Private Distributions

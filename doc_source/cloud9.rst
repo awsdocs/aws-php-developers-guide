@@ -10,16 +10,16 @@
 
 .. _cloud9-php:
 
-##################################
-Using |AC9long| with the |sdk-php|
-##################################
+============================================
+Using |AC9long| with the |sdk-php| version 3
+============================================
 
 .. meta::
     :description:
-        Describes how to use |AC9long| with the |sdk-php|.
-	:keywords: 	|AC9long|, |sdk-php| examples,
+        Describes how to use AWS Cloud9 with the AWS SDK for PHP version 3.
+	:keywords: 	AWS Cloud9, AWS SDK for PHP version 3 examples,
 
-You can use |AC9long| with the |sdk-php| to write, run, and debug your PHP code using just a browser. |AC9| includes tools such as a
+You can use |AC9long| with the |sdk-php| version 3 to write, run, and debug your PHP code using just a browser. |AC9| includes tools such as a
 code editor, debugger, and terminal. Because the |AC9| IDE is cloud based, you can work on your projects from your office, home,
 or anywhere using an internet-connected machine. For general information about |AC9|, see the |AC9-ug|_.
 

@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================
-Working with |IAM| Policies
-===========================
+====================================================
+Working with |IAM| Policies with |sdk-php| version 3
+====================================================
 
 .. meta::
    :description: Create, attach, or remove AWS Identity and Access Management (IAM) user policies.
-   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP version 3
 
 You grant permissions to a user by creating a policy. A policy is a document that lists the actions that a user can perform and the resources those actions can affect. By default, any actions or resources that are not explicitly allowed are denied. Policies can be created and attached to users, groups of users, roles assumed by users, and resources.
 

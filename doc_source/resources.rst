@@ -13,18 +13,18 @@ Additional Resources
 =====================
 
 .. meta::
-   :description: Other resources to use if you do not find your answer in the AWS SDK for PHP developer or API guide.
+   :description: Other resources to use if you do not find your answer in the AWS SDK for PHP version 3 developer or API guide.
    :keywords: AWS SDK for PHP
 
-The following links provide additional resources you can use with the SDK for PHP \.
+The following links provide additional resources you can use with the SDK for PHP version 3 \.
 
 PHP SDK Forum
 ---------------
 
 You can find questions and discussions on matters of interest to users of the SDK for PHP in the `PHP SDK Forum <https://forums.aws.amazon.com/forum.jspa?forumID=80>`_.
 
-PHP SDK and Developer Guide on GitHub
---------------------------------------
+PHP SDK v3 and Developer Guide on GitHub
+----------------------------------------
 
 There are several repos on GitHub for the AWS SDK for PHP\.
 

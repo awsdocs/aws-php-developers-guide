@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================
-Configuring the |sdk-php|
-=========================
+=====================================
+Configuring the |sdk-php| version 3
+=====================================
 
 The |sdk-php| consists of various features and components. Each of the
 following topics describe the components that are used in the SDK.

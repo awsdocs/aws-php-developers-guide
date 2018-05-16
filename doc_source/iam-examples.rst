@@ -8,27 +8,32 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================================
-AWS |IAM| Examples Using the |sdk-php|
-======================================
+================================================
+AWS |IAM| Examples Using the |sdk-php| version 3
+================================================
 
 .. meta::
-   :description: Programing Itentity and Access Managment using the AWS SDK for PHP.
-   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
+   :description: Programing Itentity and Access Managment using the AWS SDK for PHP version 3.
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP version 3
 
 |IAMlong|  (|IAM|) is a web service that enables |AWSlong| (AWS) customers to manage users and user permissions in AWS. The service is targeted at organizations with multiple users 
 or systems in the cloud that use AWS products. With |IAM|, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users can access.
 
 .. image:: images/code-samples-iam.png
-   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon Identity & Access Managment
+   :alt: Diagram that provides an overview of how AWS SDK for PHP version 3 connects to Amazon Identity & Access Managment
 
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
     :maxdepth: 1
 
-    iam-examples-managing-access-keys.rst
-    iam-examples-managing-users.rst
-    iam-examples-using-account-aliases.rst
-    iam-examples-working-with-policies.rst
-    iam-examples-working-with-certs.rst
+    Managing IAM Access Keys <iam-examples-managing-access-keys.rst>
+    Managing IAM Users <iam-examples-managing-users.rst>
+    Using IAM Account Aliases <iam-examples-using-account-aliases.rst>
+    Working with IAM Policies <iam-examples-working-with-policies.rst>
+    Working with IAM Server Certificates <iam-examples-working-with-certs.rst>
+
+    
+
+
+

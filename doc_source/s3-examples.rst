@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========
-|S3|
-=========
+===========================================
+|S3| Examples Using the |sdk-php| version 3
+===========================================
 
 .. meta::
-   :description: Amazon S3 code examples for AWS SDK for PHP.
+   :description: Amazon S3 code examples for AWS SDK for PHP version 3.
    :keywords: Amazon S3 PHP examples , AWS SDK for PHP examples, Amazon Simple Storage Service for PHP code examples
 
 |S3long|  (|S3|) is a web service that provides highly scalable cloud storage. |S3| provides easy to use object storage, with a simple web service interface to store and retrieve any amount of data from anywhere on the web.
@@ -26,9 +26,13 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 .. toctree::
     :maxdepth: 1
 
-    s3-examples-creating-buckets.rst
-    s3-examples-access-permissions.rst
-    s3-examples-configuring-a-bucket.rst
-    s3-examples-static-web-host.rst
-    s3-examples-bucket-policies.rst
+    Creating and Using Amazon S3 Buckets <s3-examples-creating-buckets.rst>
+    Managing Amazon S3 Bucket Access Permissions <s3-examples-access-permissions.rst>
+    Configuring Amazon S3 Buckets <s3-examples-configuring-a-bucket.rst>
+    Using an Amazon S3 Bucket as a Static Web Host <s3-examples-static-web-host.rst>
+    Working with Amazon S3 Bucket Policies <s3-examples-bucket-policies.rst>
+
+
+
+
 

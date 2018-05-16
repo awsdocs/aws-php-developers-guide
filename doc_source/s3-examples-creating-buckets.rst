@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===============================
-Creating and Using |S3| Buckets
-===============================
+==============================================================
+Creating and Using |S3| Buckets with AWS SDK for PHP version 3 
+==============================================================
 
 .. meta::
-   :description: Describes how to use Amazon S3 buckets with the AWS SDK for PHP.
+   :description: Describes how to use Amazon S3 buckets with the AWS SDK for PHP version 3 .
    :keywords: Amazon S3 code examples for PHP
 
 The following examples show how to:

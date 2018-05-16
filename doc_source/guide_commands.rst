@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-================================
-Command Objects in the |sdk-php|
-================================
+==========================================
+Command Objects in the |sdk-php| version 3
+==========================================
 
 .. meta::
-   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP. 
-   :keywords: AWS SDK for PHP, php handler, use php for aws
+   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP version 3. 
+   :keywords: AWS SDK for PHP version 3, php handler, use php for aws
 
 
 The |sdk-php| uses the `command pattern <http://en.wikipedia.org/wiki/Command_pattern>`_

@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
    
-===
-FAQ
-===
+===========================
+FAQ for |sdk-php| version 3
+===========================
 
 .. meta::
-   :description:  Frequently asked questions about the |sdk-php|. 
-   :keywords: |sdk-php|, php for aws, faq, 
+   :description:  Frequently asked questions about the AWS SDK for PHP version 3. 
+   :keywords: AWS SDK for PHP version 3, php for aws, faq, 
 
 What methods are available on a client?
 ---------------------------------------

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================
-Signing Custom |CSlong| Domain Requests
-=======================================
+================================================================
+Signing Custom |CSlong| Domain Requests with |sdk-php| version 3
+================================================================
 
 .. meta::
    :description: Making a Cloud Search domain request using the AWS SDK for PHP.

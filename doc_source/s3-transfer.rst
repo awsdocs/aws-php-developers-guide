@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================
-|S3| Transfer Manager
-=====================
+==============================================
+|S3| Transfer Manager with |sdk-php| version 3
+==============================================
 
 .. meta::
-   :description: Upload, copy, or download files and directories to an |S3| bucket using the |sdk-php|.
-   :keywords: |S3|, |sdk-php| examples, |S3| for PHP code examples, |S3| transfer
+   :description: Upload, copy, or download files and directories to an |S3| bucket using the AWS SDK for PHP version 3.
+   :keywords: |S3|, AWS SDK for PHP version 3 examples, |S3| for PHP code examples, |S3| transfer
 
 
 The |sdk-php| |S3| transfer manager is used to upload entire directories to

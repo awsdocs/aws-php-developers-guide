@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
-Using Dead Letter Queues in |SQS|
-=================================
+==========================================================
+Using Dead Letter Queues in |SQS| with |sdk-php| version 3 
+==========================================================
 
 .. meta::
-   :description: Enable dead letter queues with Amazon SQS using the AWS SDK for PHP.
+   :description: Enable dead letter queues with Amazon SQS using the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
 A dead letter queue is one that other (source) queues can target for messages that can't be processed successfully. You can set aside and isolate these messages

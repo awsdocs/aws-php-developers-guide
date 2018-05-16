@@ -13,8 +13,8 @@ Glossary
 ========
 
 .. meta::
-   :description:  Learn the frequently used terms to utilize the AWS SDK for PHP. 
-   :keywords: AWS SDK for PHP, php for aws
+   :description:  Learn the frequently used terms to utilize the AWS SDK for PHP version 3. 
+   :keywords: AWS SDK for PHP version 3, php for aws
 
 API Version
     Services have one or more API versions, and which version you are using

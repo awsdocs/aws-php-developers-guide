@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===================
-|S3| Pre-Signed URL
-===================
+============================================
+|S3| Pre-Signed URL with |sdk-php| version 3
+============================================
 
 .. meta::
-   :description: Create direct browser access to private |S3| data using the |sdk-php|.
-   :keywords: |S3|, |sdk-php| examples, |S3| for PHP code examples
+   :description: Create direct browser access to private Amazon S3 data using the AWS SDK for PHP version 3.
+   :keywords: Amazon S3 , AWS SDK for PHP version 3 examples, Amazon S3 for PHP code examples
 
 You can authenticate certain types of requests by passing the required
 information as query-string parameters instead of using the Authorization HTTP

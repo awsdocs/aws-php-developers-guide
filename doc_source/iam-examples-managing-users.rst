@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-====================
-Managing |IAM| Users
-====================
+=============================================
+Managing |IAM| Users with |sdk-php| version 3
+=============================================
 
 .. meta::
    :description: Create, list, update, or retrieve info about AWS Identity and Access Management (IAM) users.
-   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP version 3
 
 An |IAM| user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS. A user in AWS consists of a name and credentials.
 

@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================
-|S3| Pre-Signed POSTs
-=====================
+==============================================
+|S3| Pre-Signed POSTs with |sdk-php| version 3
+==============================================
 
 .. meta::
-   :description: Create write access to private |S3| data using the |sdk-php|.
-   :keywords: |S3|, |sdk-php| examples, |S3| for PHP code examples
+   :description: Create write access to private Amazon S3 data using the AWS SDK for PHP version 3.
+   :keywords: |S3|, AWS SDK for PHP version 3 examples, Amazon S3 for PHP code examples
 
 Much like pre-signed URLs, pre-signed POSTs enable you to give write access to a
 user without giving them AWS credentials. Pre-signed POST forms can be created

@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================
-Using Regions and Availability Zones for |EC2|
-==============================================
+=======================================================================
+Using Regions and Availability Zones for |EC2| with |sdk-php| version 3
+=======================================================================
 
 .. meta::
-   :description: Describe AWS Regions and Availability Zones for Amazon EC2 using the AWS SDK for PHP.
+   :description: Describe AWS Regions and Availability Zones for Amazon EC2 using the AWS SDK for PHP version 3.
    :keywords: Amazon EC2 code examples for PHP
 
 |EC2| is hosted in multiple locations worldwide. These locations are composed of AWS Regions and Availability Zones. Each Region is a separate geographic area, 

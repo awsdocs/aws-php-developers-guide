@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-========================
-Waiters in the |sdk-php|
-========================
+==================================
+Waiters in the |sdk-php| version 3
+==================================
 
 .. meta::
-   :description: Set up asynchronous work flow for AWS SDK for PHP.
-   :keywords: AWS SDK for PHP waiters, asynchronous AWS SDK for PHP 
+   :description: Set up asynchronous work flow for AWS SDK for PHP version 3.
+   :keywords: AWS SDK for PHP version 3 waiters, asynchronous AWS SDK for PHP version 3 
 
 Waiters help make it easier to work with *eventually consistent* systems by
 providing an abstracted way to wait until a resource enters into a particular

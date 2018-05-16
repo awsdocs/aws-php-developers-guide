@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================================
-Working with |IAM| Server Certificates
-======================================
+===============================================================
+Working with |IAM| Server Certificates with |sdk-php| version 3
+===============================================================
 
 .. meta::
    :description: List, update, and get information about certificates using AWS Identity and Access Management (IAM).
-   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP
+   :keywords: AWS Identity and Access Management (IAM) code examples, AWS SDK for PHP version 3
 
 To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to |IAM| or import it into |ACMlong|.
 

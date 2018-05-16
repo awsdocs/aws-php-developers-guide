@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-========================================
-Handlers and Middleware in the |sdk-php|
-========================================
+====================================================
+Handlers and Middleware in the |sdk-php| version 3
+====================================================
 
 .. meta::
-   :description: Extend the AWS SDK for PHP with handlers and middleware.
-   :keywords: AWS SDK for PHP, php handler, php middleware
+   :description: Extend the AWS SDK for PHP version 3 with handlers and middleware.
+   :keywords: AWS SDK for PHP version 3, php handler, php middleware
 
 The primary mechanism for extending the |sdk-php| is through **handlers** and
 **middleware**. Each SDK client class owns an ``Aws\HandlerList`` instance that

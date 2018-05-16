@@ -9,12 +9,12 @@
    limitations under the License.
 
 
-=======================================
-Sending and Receiving Messages in |SQS|
-=======================================
+================================================================
+Sending and Receiving Messages in |SQS| with |sdk-php| version 3 
+================================================================
 
 .. meta::
-   :description: Deliver, delete, or retrieve messages using Amazon SQS with the AWS SDK for PHP.
+   :description: Deliver, delete, or retrieve messages using Amazon SQS with the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
 To learn about |SQS| messages, see :SQS-dg:`Sending a Message to an SQS Queue <sqs-send-message>`
