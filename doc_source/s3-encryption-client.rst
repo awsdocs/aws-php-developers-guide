@@ -64,7 +64,7 @@ interface and requires two new parameters.
     $bucket = 'the-bucket-name';
     $key = 'the-upload-key';
     $cipherOptions = [
-        'Cipher' => 'gcm'
+        'Cipher' => 'gcm',
         'KeySize' => 256,
         // Additional configuration options
     ];
