@@ -43,13 +43,13 @@ chain to find AWS credentials. The SDK uses the first provider
 in the chain that returns credentials without an error. The default provider chain
 looks for credentials in the following order:
 
-1. :doc:`Environment variables <guide_credentials_environment>` .
+1. :doc:`Using Credentials from Environment Variables <guide_credentials_environment>`
 
    Setting environment variables is useful if you're doing development
    work on a machine other than an |EC2| instance.
 
 
-2. :doc:`Shared credentials file <guide_credentials_profiles>` .
+2. :doc:`Using the AWS Shared Credentials File and Profiles <guide_credentials_profiles>` 
 
    This credentials file is the same one used by other SDKs and the |CLI|.
    If you're already using a shared credentials file, you can also use
@@ -57,7 +57,7 @@ looks for credentials in the following order:
    
    You will see this method used in most of our PHP code examples. 
    
-3. If your application is running on an |EC2| instance, :doc:`use an IAM role <guide_credentials_instance_profile>` .
+3. If your application is running on an |EC2| instance, :doc:`use an IAM role for EC2 Instances <guide_credentials_instance_profile>`
 
    |IAM| roles provide applications on the instance temporary security
    credentials to make AWS calls. |IAM| roles provide an easy way to
