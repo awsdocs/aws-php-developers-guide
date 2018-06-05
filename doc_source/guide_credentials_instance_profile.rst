@@ -17,36 +17,19 @@
    :keywords: configuration, specify region, region, credentials, proxy
    
    
-   
-If you are running your application on an |EC2| instance, you can
-use the instance's :ec2-ug:`IAM role <iam-roles-for-amazon-ec2>`
-to get temporary security credentials to make calls to AWS.
+If you are running your application on an |EC2| instance, the preferred technique for providing credentials to 
+make calls to AWS is using an :ec2-ug:`IAM role <iam-roles-for-amazon-ec2>`
+to get temporary security credentials. 
 
-If you have configured your instance to use |IAM| roles, the SDK uses
-these credentials for your application automatically. You don't need to
-manually specify these credentials.
-   
-When running applications on |EC2| you do not want to store your Access keys in your instance, since this might   
-the preferred technique for providing credentials to applications is |IAM|  Roles. |IAM|  roles remove the need to worry about 
+|IAM| roles remove the need to worry about 
 credential management from your application. They allow an instance to "assume" a role by retrieving temporary 
-credentials from the |EC2| instance's metadata server. 
+credentials from the |EC2| instance's metadata server.   
 
-The temporary credentials, often referred to as
-**instance profile credentials**, allow access to the actions and resources
-that the role's policy allows.
-
-When launching an EC2 instance, you can choose to associate it with an IAM
-role. Any application running on that EC2 instance is then allowed to assume
-the associated role. |EC2| handles all the legwork of securely
+The temporary credentials, often referred to as **instance profile credentials**, allow 
+access to the actions and resources that the role's policy allows. |EC2| handles all the legwork of securely
 authenticating instances to the |IAM| service to assume the role, and periodically
 refreshing the retrieved role credentials. This keeps your application secure with
 almost no work on your part.
-
-If you don't explicitly provide credentials to the client object and no
-environment variable credentials are available, the SDK attempts to retrieve
-instance profile credentials from an |EC2| instance metadata server. These
-credentials are available only when running on |EC2| instances that have
-been configured with an |IAM| role.
 
 .. note::
 
@@ -58,5 +41,99 @@ been configured with an |IAM| role.
     To avoid hitting the metadata service every time, an instance of ``Aws\CacheInterface``
     can be passed in as the ``'credentials'`` option to a client constructor. This lets the SDK
     use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
+    
+1. Create an IAM Client 
 
-For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon-ec2>`.
+    **Imports**
+    
+    .. code-block:: php
+    
+       require 'vendor/autoload.php';
+       
+       use Aws\Iam\IamClient;
+       
+    
+    **Sample Code**
+    
+    .. code-block:: php
+    
+       $client = new IamClient([
+           'region' => 'us-west-2',
+           'version' => '2010-05-08'
+       ]);   
+    
+2. Create an |IAM| Role with the permissions for the actions and resources that you will be using
+    
+    **Sample Code**
+     
+     .. code-block:: php
+    
+       $result = $client->createRole([
+           'AssumeRolePolicyDocument' => 'IAM JSON Policy', // REQUIRED
+           'Description' => 'Description of Role',
+           'RoleName' => 'RoleName', // REQUIRED
+       ]);
+    
+    
+    
+    
+3. Create an |IAM| Instance Profile and store the Amazon Resource Name (ARN) from the result.
+    
+    .. note::
+    
+        If you use the IAM console instead of the AWS SDK, the console creates an instance profile automatically and gives it the same name as the role to which it corresponds. 
+        
+     **Sample Code**
+     
+     .. code-block:: php
+    
+       $IPN = 'InstanceProfileName';
+       
+       $result = $client->createInstanceProfile([
+           'InstanceProfileName' => $IPN ,
+       ]);
+       
+       $ARN = $result['Arn'];
+       $InstanceID =  $result['InstanceProfileId'];
+    
+        
+        
+4. Create an EC2 Client    
+    
+    **Imports**
+    
+    .. code-block:: php
+    
+       require 'vendor/autoload.php';
+         
+       use Aws\Ec2\Ec2Client;
+      
+    
+    **Sample Code**
+    
+    .. code-block:: php
+       
+       $ec2Client = new Ec2Client([
+           'region' => 'us-west-2',
+           'version' => '2016-11-15',
+       ]);
+    
+        
+5. Add the instance profile to a running or stopped EC2 instance. Use the instance profile name of your |IAM| Role
+    
+     **Sample Code**
+     
+    .. code-block:: php
+    
+       $result = $ec2Client->associateIamInstanceProfile([
+          'IamInstanceProfile' => [ 
+              'Arn' => $ARN
+              'Name' => $IPN,
+          ],
+          'InstanceId' => $InstanceID
+      ]);
+    
+    
+    
+    For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon-ec2>`.
+
