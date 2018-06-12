@@ -58,7 +58,7 @@ Define the region in which to get the endpoint, and create an *AWSMediaConvert* 
 Call the describeEndpoints method to retrieve the endpoints and save the endpoint's URL:
 
 .. literalinclude:: example_code/mediaconvert/GetEndpoint.php
-   :lines: 39-51
+   :lines: 39-49
    :language: php
    
 
