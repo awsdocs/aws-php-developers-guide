@@ -86,6 +86,7 @@ Examples
 * :doc:`Amazon CloudWatch Examples <cw-examples>`
 * :doc:`Amazon EC2 <ec2-examples>`
 * :doc:`AWS IAM Examples <iam-examples>`
+* :doc:`Amazon MediaConvert Examples <emc-examples>`
 * :doc:`Amazon S3 Examples <s3-examples>`
 * :doc:`Amazon SQS Examples <sqs-examples>`
 
