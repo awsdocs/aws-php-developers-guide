@@ -14,33 +14,38 @@ Using the AWS Credentials File and Credential Profiles
 ======================================================
 
 .. meta::
-   :description: How to load credentials for AWS using the AWS SDK for PHP.
+   :description: How to retrieve credentials for AWS using the AWS SDK for PHP.
    :keywords: configuration, specify region, region, credentials, proxy
 
-A credential file is a plaintext file that contains your access keys.
-The file must be on the same machine on which you're running your
-application. The file must be named :file:`credentials` and located in the
-:file:`.aws/` folder in your home directory. The home directory can vary by
-operating system. In Windows, you can refer to your home directory by
-using the environment variable :code:`%UserProfile%`. In Unix-like systems, you
+A credentials file is a plaintext file that contains your access keys.
+The file must:
+
+* Be on the same machine on which you're running your
+application.
+* Be named :file:`credentials`.
+* Be located in the
+:file:`.aws/` folder in your home directory.
+
+The home directory can vary by
+operating system. On Windows, you can refer to your home directory by
+using the environment variable :code:`%UserProfile%`. On Unix-like systems, you
 can use the environment variable :code:`$HOME` or :code:`~` (tilde).
 
 If you already use this file for other SDKs and tools (like the |CLI|),
 you don't need to change anything to use the files in this SDK. If
 you use different credentials for different tools or applications, you
-can use *profiles* to configure multiple access keys in the same
+can use **profiles** to configure multiple access keys in the same
 configuration file.
 
-You will see this method used in all our PHP code examples. 
+We use this method in all our PHP code examples.
 
+Using an AWS credentials file offers the following benefits:
 
-Using an AWS credentials file offers a the following benefits:
-
-1. Your projects' credentials are stored outside of your projects, so there is
+* Your projects' credentials are stored outside of your projects, so there is
    no chance of accidentally committing them into version control.
-2. You can define and name multiple sets of credentials in one place.
-3. You can easily reuse the same credentials between projects.
-4. Other AWS SDKs and tools support, or will soon support, this same
+* You can define and name multiple sets of credentials in one place.
+* You can easily reuse the same credentials among projects.
+* Other AWS SDKs and tools support, this same
    credentials file. This allows you to reuse your credentials with other
    tools.
 
@@ -58,12 +63,10 @@ following.
     aws_secret_access_key = ANOTHER_AWS_SECRET_ACCESS_KEY
 
 Each section (e.g., ``[default]``, ``[project1]``), represents a separate
-credential **profile**. You can reference profiles from an SDK configuration
-file, or when you are instantiating a client, using the ``profile`` option.
+credential profile. You can reference profiles from an SDK configuration
+file, or when you are instantiating a client, by using the ``profile`` option.
 
 .. code-block:: php
-
-    <?php
 
     use Aws\DynamoDb\DynamoDbClient;
 

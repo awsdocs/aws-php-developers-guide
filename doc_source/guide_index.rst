@@ -20,7 +20,7 @@ following topics describe the components that are used in the SDK.
 
     Configuration Options <guide_configuration.rst>
     Setting Credentials <guide_credentials.rst>
-    Credentials II <guide_credentials_into.rst>
+    Current Credentials  <guide_credentials_old.rst>
     Command Objects <guide_commands.rst>
     Promises <guide_promises.rst>
     Handlers and Middleware <guide_handlers-and-middleware.rst>

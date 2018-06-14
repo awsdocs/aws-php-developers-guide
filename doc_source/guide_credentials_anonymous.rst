@@ -8,22 +8,21 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+==========================
 Creating Anonymous Clients
-============================================
+==========================
 
 .. meta::
-   :description: How to configure  anonymous access for AWS Services using the AWS SDK for PHP.
-   :keywords: 
-
-
+   :description: How to configure anonymous access for AWS Services using the AWS SDK for PHP.
+   :keywords:
 
 In some cases, you might want to create a client that is not associated with any
-credentials. This enables you to make anonymous requests to a service. For
-example, both |S3| objects and |CSLong| domains can be configured to allow
+credentials. This enables you to make anonymous requests to a service.
+
+For example, you can configure both |S3| objects and |CSLong| domains to allow
 anonymous access.
 
-To create an anonymous client, you can set the ``'credentials'`` option to
+To create an anonymous client, you set the ``'credentials'`` option to
 ``false``.
 
 .. code-block:: php
@@ -40,4 +39,3 @@ To create an anonymous client, you can set the ``'credentials'`` option to
         'Bucket' => 'my-bucket',
         'Key'    => 'my-key',
     ]);
-

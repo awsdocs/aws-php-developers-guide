@@ -8,13 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+============================
 Using Hard-Coded Credentials
-============================================
+============================
 
 .. meta::
    :description: How to supply hardcoded AWS credentials for the AWS SDK for PHP.
-   :keywords: 
+   :keywords:
 
 
 .. warning::
@@ -23,14 +23,16 @@ Using Hard-Coded Credentials
     accidentally commit your credentials into an SCM repository. This can potentially
     expose your credentials to more people than you intend. It can also make it
     difficult to rotate credentials in the future.
+    
+:doc: `Credentials for the |sdk-php| Version 3 <guide_credentials >`  lists  many recommended ways to safely add credentials to your project.
 
-If you decide to hard-coded credentials to an SDK client, provide an associative array of "key",
+If you decide to hard-code credentials to an SDK client, provide an associative array of "key",
 "secret", and optional "token" key-value pairs to the "credentials" option of
 a client constructor.
 
 .. code-block:: php
 
-    // Hardcoded credentials
+    // Hard-coded credentials
 	$s3Client = new S3Client([
         'version'     => 'latest',
         'region'      => 'us-west-2',
@@ -39,5 +41,4 @@ a client constructor.
             'secret' => 'my-secret-access-key',
         ],
     ]);
-   
 
