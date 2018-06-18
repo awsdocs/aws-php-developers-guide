@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-=======================================================
+#######################################################
 Enabling Long Polling in |SQS| with |sdk-php| version 3 
-=======================================================
+#######################################################
 
 .. meta::
    :description: Enable long polling, retrieve messages with long pulling, and create a long polling queue using the AWS SDK for PHP version 3.
@@ -30,12 +30,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Set Attributes on a Queue to Enable Long Polling
-------------------------------------------------
+================================================
 
 **Imports**
 
@@ -50,7 +50,7 @@ Set Attributes on a Queue to Enable Long Polling
    :language: php
 
 Retrieve Messages with Long Polling
------------------------------------
+===================================
 
 **Imports**
 
@@ -65,7 +65,7 @@ Retrieve Messages with Long Polling
    :language: php
 
 Create a Queue with Long Polling
---------------------------------
+================================
 
 **Imports**
 

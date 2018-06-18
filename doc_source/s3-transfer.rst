@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================
+##############################################
 |S3| Transfer Manager with |sdk-php| version 3
-==============================================
+##############################################
 
 .. meta::
    :description: Upload, copy, or download files and directories to an |S3| bucket using the AWS SDK for PHP version 3.
@@ -21,7 +21,7 @@ The |sdk-php| |S3| transfer manager is used to upload entire directories to
 an |S3| bucket and download entire buckets to a local directory.
 
 Uploading a Local Directory to |S3|
------------------------------------
+===================================
 
 The ``Aws\S3\Transfer`` object is used to perform transfers. The following
 example shows how to recursively upload a local directory of files to an
@@ -66,7 +66,7 @@ local files on disk to the ``bucket`` bucket and stores the files under the
     $manager->transfer();
 
 Downloading an |S3| Bucket
---------------------------
+==========================
 
 You can recursively download an |S3| bucket to a local directory on disk
 by specifying the ``$source`` argument as an |S3| URI
@@ -101,7 +101,7 @@ only files stored under the "/foo" key prefix of the given bucket.
     $manager->transfer();
 
 Configuration
--------------
+=============
 
 The ``Transfer`` object constructor accepts the following arguments.
 
@@ -135,7 +135,7 @@ The ``Transfer`` object constructor accepts the following arguments.
 .. _s3_transfer_options:
 
 Transfer Options
-----------------
+================
 
 ``base_dir`` (string)
     Base directory of the source, if ``$source`` is an iterator. If
@@ -164,7 +164,7 @@ Transfer Options
     to STDOUT.
 
 Async Transfers
----------------
+===============
 
 The ``Transfer`` object is an instance of
 ``GuzzleHttp\Promise\PromisorInterface``. This means that the transfer can
@@ -203,7 +203,7 @@ Because the ``Transfer`` object returns a promise, these transfers can occur
 concurrently with other asynchronous promises.
 
 Customizing the Transfer Manager's Commands
--------------------------------------------
+===========================================
 
 Custom options can be set on the operations executed by the transfer manager via
 a callback passed to its constructor.
@@ -218,7 +218,7 @@ a callback passed to its constructor.
                 // Set custom cache-control metadata
                 $command['CacheControl'] = 'max-age=3600';
                 // Apply a canned ACL
-                $command['ACL'] = strpos($command['Key'], 'CONFIDENTIAL') === false
+                $command['ACL'] = strpos($command['Key'], 'CONFIDENTIAL') ### false
                     ? 'public-read'
                     : 'private';
             }

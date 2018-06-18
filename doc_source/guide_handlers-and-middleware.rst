@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-====================================================
+####################################################
 Handlers and Middleware in the |sdk-php| version 3
-====================================================
+####################################################
 
 .. meta::
    :description: Extend the AWS SDK for PHP version 3 with handlers and middleware.
@@ -23,7 +23,7 @@ retrieve a client's ``HandlerList`` and modify it to add or remove client
 behavior.
 
 Handlers
---------
+========
 
 A handler is a function that performs the actual transformation of a command
 and request into a result. A handler typically sends HTTP requests. Handlers
@@ -68,7 +68,7 @@ You can also change the handler of a client after it is constructed using the
     $s3->getHandlerList()->setHandler($myHandler);
 
 Mock Handler
-~~~~~~~~~~~~
+------------
 
 We recommend using the ``MockHandler`` when writing tests that use the SDK.
 You can use the ``Aws\MockHandler`` to return mocked results or throw mock
@@ -108,7 +108,7 @@ them in FIFO order.
     $client->listTables();
 
 Middleware
-----------
+==========
 
 Middleware is a special type of high-level function that augments the
 behavior of transferring a command, and delegates to a "next" handler. Middleware
@@ -151,7 +151,7 @@ method of the promise to modify the eventual result or error before
 returning the promise back up the stack of middleware.
 
 HandlerList
-~~~~~~~~~~~
+-----------
 
 The SDK uses an ``Aws\HandlerList`` to manage the middleware and handlers used
 when executing a command. Each SDK client owns a ``HandlerList``, and this
@@ -268,7 +268,7 @@ sign
         $client->getHandlerList()->prependSign($middleware, 'custom-name');
 
 Available Middleware
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 The SDK provides several middleware that you can use to augment the behavior
 of a client or to observe the execution of a command.
@@ -470,7 +470,7 @@ and an optional ``Psr\Http\Message\RequestInterface`` that is being executed.
     );
 
 Creating Custom handlers
-------------------------
+========================
 
 A handler is simply a function that accepts an ``Aws\CommandInterface`` object
 and ``Psr\Http\Message\RequestInterface`` object, and returns a

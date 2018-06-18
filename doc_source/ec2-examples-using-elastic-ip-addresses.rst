@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================================
+##############################################################
 Using Elastic IP Addresses with |EC2| with |sdk-php| version 3
-==============================================================
+##############################################################
 
 .. meta::
    :description: Describe Amazon EC2 instances and acquire, associate, and release Elastic IP addresses using the AWS SDK for PHP version 3.
@@ -29,12 +29,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe an Instance
---------------------
+====================
 
 **Imports**
 
@@ -50,7 +50,7 @@ Describe an Instance
 
 
 Allocate and Associate an Address
----------------------------------
+=================================
 
 **Imports**
 
@@ -66,7 +66,7 @@ Allocate and Associate an Address
 
 
 Release an Address
-------------------
+==================
 
 **Imports**
 

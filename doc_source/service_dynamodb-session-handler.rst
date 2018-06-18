@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================================================
+#########################################################
 Using the |DDB| Session Handler with |sdk-php| version 3
-=========================================================
+#########################################################
 
 .. meta::
    :description: Programing Amazon DynamoDB using the AWS SDK for PHP..
@@ -37,10 +37,10 @@ For more information about the |DDB| service, see the
 `Amazon DynamoDB homepage <https://aws.amazon.com/dynamodb/>`_.
 
 Basic Usage
------------
+===========
 
 Step 1: Register the Handler
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 First, instantiate and register the session handler.
 
@@ -57,7 +57,7 @@ First, instantiate and register the session handler.
 .. _create-a-table-for-storing-your-sessions:
 
 Step 2. Create a Table to Store Your Sessions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 Before you can actually use the session handler, you need to create a table in
 which to store the sessions. You can this ahead of time by using the
@@ -65,7 +65,7 @@ which to store the sessions. You can this ahead of time by using the
 or by using the |sdk-php|.
 
 Step 3. Use PHP Sessions as You Normally Would
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 Once the session handler is registered and the table exists, you can write to
 and read from the session using the ``$_SESSION`` superglobal, just like you
@@ -86,7 +86,7 @@ you to simply use PHP's native session functions and interface.
     session_write_close();
 
 Configuration
--------------
+=============
 
 You can configure the behavior of the session handler using the following
 options. All options are optional, but you should be sure to understand
@@ -144,7 +144,7 @@ following code is an example with all of the configuration options specified.
     ]);
 
 Pricing
--------
+=======
 
 Aside from data storage and data transfer fees, the costs associated with using |DDB| are calculated based on
 the provisioned throughput capacity of your table (see the `Amazon DynamoDB pricing details
@@ -159,28 +159,28 @@ Ultimately, the throughput and the costs required for your sessions table will c
 traffic and session size. The following table explains the amount of read and write operations that are performed on
 your |DDB| table for each of the session functions.
 
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 | Read via ``session_start()``        | * 1 read operation (only 0.5 if ``consistent_read`` is ``false``).          |
 |                                     | * (Conditional) 1 write operation to delete the session if it is expired.   |
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 | Read via ``session_start()``        | * A minimum of 1 *write* operation.                                         |
 | (Using session locking)             | * (Conditional) Additional write operations for each attempt at acquiring a |
 |                                     |   lock on the session. Based on configured lock wait time and retry options.|
 |                                     | * (Conditional) 1 write operation to delete the session if it is expired.   |
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 | Write via ``session_write_close()`` | * 1 write operation.                                                        |
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 | Delete via ``session_destroy()``    | * 1 write operation.                                                        |
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 | Garbage Collection                  | * 0.5 read operations **per 4 KB of data in the table** to scan for expired |
 |                                     |   sessions.                                                                 |
 |                                     | * 1 write operation **per expired item** to delete it.                      |
-+-------------------------------------+-----------------------------------------------------------------------------+
++=====================================+=============================================================================+
 
 .. _ddbsh-session-locking:
 
 Session Locking
----------------
+===============
 
 The |DDB| Session Handler supports pessimistic session locking to mimic the behavior of PHP's default
 session handler. By default, the |DDB| Session Handler has this feature *turned off* because it can become a performance
@@ -199,7 +199,7 @@ To enable session locking, set the ``'locking'`` option to ``true`` when you ins
 .. _ddbsh-garbage-collection:
 
 Garbage Collection
-------------------
+==================
 
 The |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``
 operations. Due to the nature of how the ``Scan`` operation works, and to find all of the expired sessions and
@@ -243,7 +243,7 @@ help you stay close to or within your provisioned throughput capacity during gar
     $sessionHandler->garbageCollect();
 
 Best Practices
---------------
+==============
 
 #. Create your sessions table in an AWS Region that is geographically closest to or in the same Region as your application
    servers. This ensures the lowest latency between your application and |DDB| database.
@@ -258,7 +258,7 @@ Best Practices
    or another scheduling mechanism, to run during off-peak hours. Use the ``'batch_config'`` option to your advantage.
 
 Required IAM Permissions
-------------------------
+========================
 
 To use the |DDB| SessionHhandler, your :doc:`configured credentials <guide_credentials>`
 must have permission to use the |DDB| table that :ref:`you created in a previous step <create-a-table-for-storing-your-sessions>`.

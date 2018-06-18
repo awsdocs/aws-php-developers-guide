@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================================
+##########################################################
 Using Dead Letter Queues in |SQS| with |sdk-php| version 3 
-==========================================================
+##########################################################
 
 .. meta::
    :description: Enable dead letter queues with Amazon SQS using the AWS SDK for PHP version 3.
@@ -29,12 +29,12 @@ The following example shows how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Enable a Dead Letter Queue
---------------------------
+==========================
 
 **Imports**
 

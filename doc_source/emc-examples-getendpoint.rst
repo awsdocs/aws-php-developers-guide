@@ -9,9 +9,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================================================
+##############################################################################
 Getting Your Account\-Specific Endpoint for |EMClong| with |sdk-php| version 3
-==============================================================================
+##############################################################################
 
 .. meta::
    :description: Example that shows how to get the account-specific endpoint for use with AWS Elemental MediaConvert. using the AWS SDK for PHP version 3.
@@ -26,7 +26,7 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
 
@@ -34,7 +34,7 @@ Before running the example code, configure your AWS credentials. See :doc:`guide
 
 
 Retrieve Endpoints
-------------------
+==================
 
 Create an object to pass the empty request parameters for the describeEndpoints method of the AWS.MediaConvert client class. To call the describeEndpoints method, create a promise for invoking an AWS Elemental MediaConvert service object, passing the parameters. Handle the response in the promise callback.
 

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-====================================================
+####################################################
 Working with |IAM| Policies with |sdk-php| version 3
-====================================================
+####################################################
 
 .. meta::
    :description: Create, attach, or remove AWS Identity and Access Management (IAM) user policies.
@@ -28,12 +28,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
 
 Create a Policy
----------------
+===============
 
 **Imports**
 
@@ -48,7 +48,7 @@ Create a Policy
    :language: php
 
 Attach a Policy to a Role
--------------------------
+=========================
 
 **Imports**
 
@@ -63,7 +63,7 @@ Attach a Policy to a Role
    :language: php
 
 Attach a Policy to a User
--------------------------
+=========================
 
 **Imports**
 
@@ -78,7 +78,7 @@ Attach a Policy to a User
    :language: php
 
 Detach a User Policy
---------------------
+====================
 
 **Imports**
 

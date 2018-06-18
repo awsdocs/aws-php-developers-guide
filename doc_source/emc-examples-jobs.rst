@@ -9,9 +9,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================================================
+############################################################################
 Creating and Managing Transcoding Jobs in |EMClong| with |sdk-php| version 3
-============================================================================
+############################################################################
 
 .. meta::
    :description: Example that shows how to create and manage conversion jobs in AWS Elemental MediaConvert using the AWS SDK for PHP version 3.
@@ -31,14 +31,14 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`. 
 
 Create a Client
----------------
+===============
 Configure the SDK for PHP by creating a MediaConvert client, with the region for your code. In this example, the region is set to us-west-2. Because AWS Elemental MediaConvert uses custom endpoints for each account, you must also configure the AWS.MediaConvert client class to use your account-specific endpoint. To do this, set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples-getendpoint>`.
 
 **Imports**
@@ -55,7 +55,7 @@ Configure the SDK for PHP by creating a MediaConvert client, with the region for
 
 
 Defining a Simple Transcoding Job
----------------------------------
+=================================
 Create the JSON that defines the transcode job parameters.
 
 These parameters are detailed. You can use the `AWS Elemental MediaConvert console <https://console.aws.amazon.com/mediaconvert/>`_ to generate the JSON job parameters by choosing your job settings in the console, and then choosing **Show job JSON** at the bottom of the **Job** section. This example shows the JSON for a simple job.
@@ -67,7 +67,7 @@ These parameters are detailed. You can use the `AWS Elemental MediaConvert conso
    :language: php
 
 Create a Job
-------------
+============
 
 After creating the job parameters JSON, call the createJob method by invoking an AWS.MediaConvert service object, and passing the parameters. The ID of the job created is returned in the response data.
 
@@ -80,7 +80,7 @@ After creating the job parameters JSON, call the createJob method by invoking an
    
    
 Retrieve a Job
---------------
+==============
 
 With the JobID returned when you called createjob, you can get detailed descriptions of recent jobs in JSON format. 
 
@@ -91,7 +91,7 @@ With the JobID returned when you called createjob, you can get detailed descript
    :language: php
    
 Cancel a Job
-------------
+============
 
 With the JobID returned when you called createjob, you can cancel a job while it is still in the queue. You can’t cancel jobs that have already started transcoding.
 
@@ -102,7 +102,7 @@ With the JobID returned when you called createjob, you can cancel a job while it
    :language: php
    
 Listing Recent Transcoding Jobs
--------------------------------
+===============================
 
 Create the parameters JSON, including values to specify whether to sort the list in ASCENDING, or DESCENDING order, the ARN of the job queue to check, and the status of jobs to include. This will return up to 20 Jobs. To retrieve the twenty next most recent jobs use the nextToken string returned with result.
 

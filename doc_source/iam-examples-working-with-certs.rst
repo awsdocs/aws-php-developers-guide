@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===============================================================
+###############################################################
 Working with |IAM| Server Certificates with |sdk-php| version 3
-===============================================================
+###############################################################
 
 .. meta::
    :description: List, update, and get information about certificates using AWS Identity and Access Management (IAM).
@@ -28,12 +28,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 List Server Certificates
-------------------------
+========================
 
 **Imports**
 
@@ -49,7 +49,7 @@ List Server Certificates
 
 
 Retrieve a Server Certificate
------------------------------
+=============================
 
 **Imports**
 
@@ -65,7 +65,7 @@ Retrieve a Server Certificate
 
 
 Update a Server Certificate
----------------------------
+===========================
 
 **Imports**
 
@@ -81,7 +81,7 @@ Update a Server Certificate
 
 
 Delete a Server Certificate
----------------------------
+===========================
 
 **Imports**
 

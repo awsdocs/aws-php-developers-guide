@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-================================================
+################################################
 |EMClong| Examples Using the |sdk-php| version 3
-================================================
+################################################
 
 .. meta::
    :description: Examples that show how to use the AWS Elemental MediaConvert client class using the AWS SDK for PHP version 3.

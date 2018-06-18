@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-====================================================
+####################################################
 Sending Events to |CWElong| with |sdk-php| version 3
-====================================================
+####################################################
 
 .. meta::
    :description: Create rules and add targets to them, and send custom events to Amazon CloudWatch Events using the AWS SDK for PHP version 3.
@@ -28,12 +28,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Create a Rule
--------------
+=============
 
 **Imports**
 
@@ -48,7 +48,7 @@ Create a Rule
    :language: php
 
 Add Targets to a Rule
----------------------
+=====================
 
 **Imports**
 
@@ -63,7 +63,7 @@ Add Targets to a Rule
    :language: php
 
 Send Custom Events
-------------------
+==================
 
 **Imports**
 

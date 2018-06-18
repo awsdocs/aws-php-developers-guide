@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+############################################
 |S3| Stream Wrapper with |sdk-php| version 3
-============================================
+############################################
 
 .. meta::
    :description: Store and retrieve data from |S3| with the AWS SDK for PHP version 3.
@@ -44,7 +44,7 @@ bucket name followed by a forward slash and an optional object key or prefix:
     directly.
 
 Downloading Data
-----------------
+================
 
 You can grab the contents of an object by using ``file_get_contents``. However, be careful
 with this function; it loads the entire contents of the object into
@@ -80,7 +80,7 @@ from |S3|.
     returned when calling ``file_put_contents`` because of how PHP implements it.
 
 Opening Seekable Streams
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Streams opened in "r" mode only allow data to be read from the stream, and are
 not seekable by default. This is so that data can be downloaded from |S3|
@@ -114,7 +114,7 @@ to disk. Keep this in mind when downloading large files from |S3| using
 the ``seekable`` stream context setting.
 
 Uploading Data
---------------
+==============
 
 You can upload data to |S3| using ``file_put_contents()``.
 
@@ -149,7 +149,7 @@ HTTP protocol doesn't allow simultaneous reading and writing.
     These errors are also not returned when calling ``file_put_contents`` because of how PHP implements it.
 
 fopen Modes
------------
+===========
 
 PHP's `fopen() <http://php.net/manual/en/function.fopen.php>`_ function
 requires that you specify a ``$mode`` option. The mode option specifies
@@ -157,23 +157,23 @@ whether data can be read or written to a stream, and whether the file must
 exist when opening a stream. The |S3| stream wrapper supports the
 following modes.
 
-= =============================================================================
+= #############################################################################
 r A read-only stream where the file must already exist.
 w A write-only stream. If the file already exists, it will be overwritten.
 a A write-only stream. If the file already exists, it will be downloaded to a
   temporary stream and any writes to
   the stream will be appended to any previously uploaded data.
 x A write-only stream. An error is raised if the file does not already exist.
-= =============================================================================
+= #############################################################################
 
 Other Object Functions
-----------------------
+======================
 
 Stream wrappers allow many different built-in PHP functions to work with a
 custom system such as |S3|. Here are some of the functions that the |S3|
 stream wrapper enables you to perform with objects stored in |S3|.
 
-=============== ================================================================
+############### ################################################################
 unlink()        Delete an object from a bucket.
 
                 .. code-block:: php
@@ -226,7 +226,7 @@ rename()        Rename an object by copying the object then deleting the
                 context parameters to modify how the object is copied and
                 deleted.
 
-=============== ================================================================
+############### ################################################################
 
 .. note::
 
@@ -237,7 +237,7 @@ rename()        Rename an object by copying the object then deleting the
     instead.
 
 Working with Buckets
---------------------
+====================
 
 You can modify and browse |S3| buckets similarly to how PHP allows the
 modification and traversal of directories on your file system.
@@ -272,7 +272,7 @@ You can delete buckets using the ``rmdir()`` function.
     A bucket can only be deleted if it is empty.
 
 Listing the Contents of a Bucket
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 You can use the `opendir() <http://www.php.net/manual/en/function.opendir.php>`_,
 `readdir() <http://www.php.net/manual/en/function.readdir.php>`_,
@@ -288,7 +288,7 @@ modify how objects are listed.
     $dir = "s3://bucket/";
 
     if (is_dir($dir) && ($dh = opendir($dir))) {
-        while (($file = readdir($dh)) !== false) {
+        while (($file = readdir($dh)) !## false) {
             echo "filename: {$file} : filetype: " . filetype($dir . $file) . "\n";
         }
         closedir($dh);
@@ -321,7 +321,7 @@ function.
     }
 
 Stream Context Options
-----------------------
+======================
 
 You can customize the client used by the stream wrapper, or the cache used to
 cache previously loaded information about buckets and keys, by passing in custom

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================
+#######################################
 Credentials for the |sdk-php| version 3
-=======================================
+#######################################
 
 .. meta::
    :description: Connect the AWS SDK for PHP version 3 to AWS services with AWS access keys. 
@@ -42,7 +42,7 @@ follow the :iam-ug:`IAM Best Practices <best-practices>` when managing your cred
 .. _environment_credentials:
 
 Using Credentials from Environment Variables
---------------------------------------------
+============================================
 
 If you don't provide credentials to a client object at the time of its
 instantiation, the SDK attempts to find credentials in your environment.
@@ -56,7 +56,7 @@ environment variables. These credentials are referred to as
 .. _instance_profile_credentials:
 
 Using |IAM| Roles for |EC2| Instances
-----------------------------------------
+========================================
 
 Using |IAM| roles is the preferred technique for providing credentials to
 applications running on |EC2|. |IAM| roles remove the need to worry about
@@ -95,7 +95,7 @@ For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon
 .. _ecs_credentials:
 
 Using |IAM| Roles for |ECSlong| Tasks
--------------------------------------
+=====================================
 
 With |IAM| roles for |ECS| tasks, you can specify an |IAM| role that can be
 used by the containers in a task. This provides a strategy for managing credentials
@@ -119,7 +119,7 @@ For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Ta
 .. _credential_profiles:
 
 Using the AWS Credentials File and Credential Profiles
-------------------------------------------------------
+======================================================
 
 Starting with the |sdk-php| version 2.6.2, you can use an AWS credentials
 file to specify your credentials. This is a special, INI-formatted file stored
@@ -176,7 +176,7 @@ environment variable.
 .. _assume_role_credentials:
 
 Using Assume Role Credentials
------------------------------
+=============================
 
 If you use ``Aws\Credentials\AssumeRoleCredentialProvider`` to create credentials by assuming a role,
 you need to provide ``'client'`` information with an ``StsClient`` object and
@@ -201,7 +201,7 @@ For more information regarding ``'assume_role_params'``, see :aws-php-class:`Ass
 .. _credential_provider:
 
 Using a Credential Provider
----------------------------
+===========================
 
 A credential provider is a function that returns a ``GuzzleHttp\Promise\PromiseInterface``
 that is fulfilled with an ``Aws\Credentials\CredentialsInterface`` instance or
@@ -245,7 +245,7 @@ with any custom providers.
     credential provider used by the SDK is automatically memoized.
 
 env provider
-~~~~~~~~~~~~
+------------
 
 ``Aws\Credentials\CredentialProvider::env`` attempts to load credentials from
 environment variables.
@@ -262,7 +262,7 @@ environment variables.
     ]);
 
 ini provider
-~~~~~~~~~~~~
+------------
 
 ``Aws\Credentials\CredentialProvider::ini`` attempts to load credentials from
 an :ref:`ini credential file <credential_profiles>`. By default, the SDK
@@ -303,7 +303,7 @@ the function that creates the provider.
     ]);
 
 instanceProfile provider
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 ``Aws\Credentials\CredentialProvider::instanceProfile`` attempts to load
 credentials from |EC2| instance profiles.
@@ -329,7 +329,7 @@ credentials from |EC2| instance profiles.
     setting the ``AWS_EC2_METADATA_DISABLED`` environment variable to ``true``.
 
 ecsCredentials provider
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 ``Aws\Credentials\CredentialProvider::ecsCredentials`` attempts to load
 credentials by a ``GET`` request, whose URI is specified by environment variable
@@ -351,7 +351,7 @@ credentials by a ``GET`` request, whose URI is specified by environment variable
     ]);
 
 defaultProvider provider
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 ``Aws\Credentials\CredentialProvider::defaultProvider`` is the default
 credential provider. This provider is used if you omit a ``credentials`` option
@@ -364,7 +364,7 @@ and then from an instance profile (``EcsCredentials`` first, followed by ``Ec2``
     The result of the default provider is automatically memoized.
 
 assumeRole provider
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ``Aws\Credentials\CredentialProvider::assumeRole`` is a credential provider
 that creates credentials using assume role parameters and ``StsClient`` information.
@@ -401,7 +401,7 @@ that creates credentials using assume role parameters and ``StsClient`` informat
     ]);
 
 Creating a Custom Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Credential providers are simply functions that when invoked return a promise
 (``GuzzleHttp\Promise\PromiseInterface``) that is fulfilled with an
@@ -440,7 +440,7 @@ easily compose credential providers and pass them around as values.
     }
 
 Memoizing Credentials
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 It is sometimes necessary to create a credential provider that remembers the
 previous return value. This can be useful for performance when loading
@@ -466,13 +466,13 @@ a credential provider by wrapping the credential provider function in a
     $s3 = $sdk->getS3(['region' => 'us-west-2', 'version' => 'latest']);
     $ec2 = $sdk->getEc2(['region' => 'us-west-2', 'version' => 'latest']);
 
-    assert($s3->getCredentials() === $ec2->getCredentials());
+    assert($s3->getCredentials() ### $ec2->getCredentials());
 
 When the memoized credentials become expired, the memoize wrapper invokes
 the wrapped provider in an attempt to refresh the credentials.
 
 Chaining Providers
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Credential providers can be chained using the
 ``Aws\Credentials\CredentialProvider::chain()`` function. This function accepts
@@ -506,7 +506,7 @@ the use of the ``chain`` function.
 .. _temporary_credentials:
 
 Using Temporary Credentials from |STS|
---------------------------------------
+======================================
 
 :STS-api:`AWS Security Token Service <Welcome>`
 (AWS STS) enables you to request limited-privilege, **temporary credentials**
@@ -523,7 +523,7 @@ through third-party identity providers (for details, see :IAM-ug:`Web Identity F
     credentials, see :iam-ug:`AWS Services that Support AWS STS <reference_aws-services-that-work-with-iam>`.
 
 Getting Temporary Credentials
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 |STS| has several operations that return temporary credentials, but the
 ``GetSessionToken`` operation is the simplest for demonstration purposes.
@@ -554,7 +554,7 @@ contains a ``'Credentials'`` value. If you print the result
     )
 
 Providing Temporary Credentials to the |sdk-php|
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------
 
 You can use temporary credentials with another AWS client by instantiating
 the client and passing in the values received from |STS| directly.
@@ -621,7 +621,7 @@ your application or project, see :iam-ug:`Scenarios for Granting Temporary Acces
 .. _hardcoded_credentials:
 
 Using Hard-Coded Credentials
-----------------------------
+============================
 
 .. warning::
 
@@ -649,7 +649,7 @@ a client constructor.
 .. _anonymous_access:
 
 Creating Anonymous Clients
---------------------------
+==========================
 
 In some cases, you might want to create a client that is not associated with any
 credentials. This enables you to make anonymous requests to a service. For

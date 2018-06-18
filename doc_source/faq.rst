@@ -8,16 +8,16 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
    
-===========================
+###########################
 FAQ for |sdk-php| version 3
-===========================
+###########################
 
 .. meta::
    :description:  Frequently asked questions about the AWS SDK for PHP version 3. 
    :keywords: AWS SDK for PHP version 3, php for aws, faq, 
 
 What methods are available on a client?
----------------------------------------
+=======================================
 
 The |sdk-php| uses service descriptions and dynamic
 `magic __call() methods <http://www.php.net/manual/en/language.oop5.overloading.php#object.call>`_
@@ -26,7 +26,7 @@ web service client in the :aws-php-class:`API documentation </index.html>`
 of the client.
 
 What do I do about a cURL SSL certificate error?
-------------------------------------------------
+================================================
 
 This issue can occur when using an out-of-date CA bundle with cURL and SSL. You
 can get around this issue by updating the CA bundle on your server or
@@ -39,7 +39,7 @@ compiled. You can change the default CA bundle used by PHP by modifying the
 file on disk.
 
 What API versions are available for a client?
----------------------------------------------
+=============================================
 
 A ``version`` option is required when creating a client. A list of available
 API versions can be found on each client's API documentation page
@@ -58,7 +58,7 @@ SDK for API models).
     break your production application.
 
 What Region versions are available for a client?
--------------------------------------------------
+=================================================
 
 A ``region`` option is required when creating a client, and is specified using
 a string value. For a list of available AWS Regions and endpoints, see 
@@ -73,7 +73,7 @@ a string value. For a list of available AWS Regions and endpoints, see
     ]);
 
 Why can't I upload or download files larger than 2 GB?
-------------------------------------------------------
+======================================================
 
 Because PHP's integer type is signed, and many platforms use 32-bit integers, the
 |sdk-php| doesn't correctly handle files larger than 2 GB on a 32-bit
@@ -87,7 +87,7 @@ such as the 64-bit Amazon Linux AMI, with the latest version of PHP installed.
 For more information, see `PHP filesize: Return values <http://docs.php.net/manual/en/function.filesize.php#refsect1-function.filesize-returnvalues>`_.
 
 How can I see what data is sent over the wire?
-----------------------------------------------
+==============================================
 
 You can get debug information, including the data sent over the wire, using the
 ``debug`` option in a client constructor. When this option is set to ``true``,
@@ -104,7 +104,7 @@ This includes the data that is sent and received over the wire.
     ]);
 
 How can I set arbitrary headers on a request?
----------------------------------------------
+=============================================
 
 You can add any arbitrary headers to a service operation by adding a custom
 middleware to the ``Aws\HandlerList`` of an ``Aws\CommandInterface`` or
@@ -115,7 +115,7 @@ middleware to the ``Aws\HandlerList`` of an ``Aws\CommandInterface`` or
 See :ref:`map-request` for more information.
 
 How can I sign an arbitrary request?
-------------------------------------
+====================================
 
 You can sign an arbitrary :aws-php-class: `PSR-7 request </class-Psr.Http.Message.RequestInterface.html>`
 using the SDK's :aws-php-class: `SignatureV4 class </class-Aws.Signature.SignatureV4.html>`.
@@ -124,7 +124,7 @@ See :doc:`service_cloudsearch-custom-requests` for a full example of how to do
 this.
 
 How can I modify a command before sending it?
----------------------------------------------
+=============================================
 
 You can modify a command before sending it by adding a custom
 middleware to the ``Aws\HandlerList`` of an ``Aws\CommandInterface`` or
@@ -135,7 +135,7 @@ This example uses the ``Aws\Middleware::mapCommand`` helper method.
 See :ref:`map-command` for more information.
 
 What is a CredentialsException?
--------------------------------
+===============================
 
 If you are seeing an ``Aws\Exception\CredentialsException`` while using
 the |sdk-php|, it means that the SDK was not provided with any credentials and
@@ -159,14 +159,14 @@ credentials to the SDK.
 For more information, see :doc:`guide_credentials`.
 
 Does the |sdk-php| work on HHVM?
---------------------------------
+================================
 
 The |sdk-php| doesn't currently run on HHVM, and won't be able to until the
 `issue with the yield semantics in HHVM <https://github.com/facebook/hhvm/issues/6807>`_
 is resolved.
 
 How do I disable SSL?
----------------------
+=====================
 
 You can disable SSL by setting the ``scheme`` parameter in a client factory
 method to 'http'. It is important to note that not all services support
@@ -191,7 +191,7 @@ in the |AWS-gr| for a list of regions, endpoints, and the supported schemes.
     the network.
 
 What do I do about a "Parse error"?
------------------------------------
+===================================
 
 The PHP engine will throw parsing errors when it encounters syntax it doesn't
 understand. This is almost always encountered when attempting to run code that
@@ -201,7 +201,7 @@ If you encounter a parsing error, check your system and be sure it
 fulfills the SDK's :doc:`getting-started_requirements`.
 
 Why is the |S3| client decompressing gzipped files?
----------------------------------------------------
+===================================================
 
 Some HTTP handlers, including the default Guzzle 6 HTTP handler, will
 inflate compressed response bodies by default. You can override this behavior
@@ -213,7 +213,7 @@ See :ref:`http_decode_content` for an example of how to disable automatic
 content decoding.
 
 How do I disable body signing in |S3|?
---------------------------------------
+======================================
 
 You can disable body signing by setting the ``ContentSHA256`` parameter in the
 command object to ``Aws\Signature\S3SignatureV4::UNSIGNED_PAYLOAD``. Then the |sdk-php| will use it as
@@ -240,7 +240,7 @@ the 'x-amz-content-sha-256' header and the body checksum in the canonical reques
     $result = $s3Client->execute($command);
 
 How is retry scheme handled in the |sdk-php|?
----------------------------------------------
+=============================================
 
 The |sdk-php| has a ``RetryMiddleware`` that handles retry behavior. In terms of 5xx HTTP
 status codes for server errors, the SDK retries on 500, 502, 503 and 504.
@@ -253,7 +253,7 @@ The |sdk-php| also integrates exponential delay with a backoff and jitter algori
 default retry behavior is configured as ``3`` for all services except |DDBlong|, which is ``10``.
 
 How do I handle exceptions with error codes?
---------------------------------------------
+============================================
 
 Besides |sdk-php|-customized ``Exception`` classes, each AWS service client has its own exception class that
 inherits from :aws-php-class:`Aws\Exception\AwsException </class-Aws.Exception.AwsException.html>`.

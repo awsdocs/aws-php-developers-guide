@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
+#################################
 What Is the |sdk-php| Version 3?
-=================================
+#################################
 
 .. meta::
    :description: AWS SDK for PHP version 3 enables PHP developers to use Amazon Web Services in their PHP code.
@@ -44,7 +44,7 @@ External links: :aws-php-class:`API Docs <index.html>`
     Version 3, be sure to read :doc:`getting-started_migration`.
 
 Getting Started
----------------
+===============
 
 *  :doc:`getting-started_requirements`
 *  :doc:`getting-started_installation`
@@ -52,7 +52,7 @@ Getting Started
 *  :doc:`getting-started_migration`
 
 SDK Guides
-----------
+==========
 
 * :doc:`Configuration for the AWS SDK for PHP <guide_configuration>`
 * :doc:`Credentials for the AWS SDK for PHP <guide_credentials>`
@@ -65,7 +65,7 @@ SDK Guides
 * :doc:`JMESPath Expressions in the AWS SDK for PHP <guide_jmespath>`
 
 Service-Specific Features
--------------------------
+=========================
 
 * :doc:`Signing Custom Amazon CloudSearch Domain Requests  <service_cloudsearch-custom-requests>`
 * :doc:`Signing Amazon CloudFront URLs  <service_cloudfront-signed-url>`
@@ -82,7 +82,7 @@ Service-Specific Features
 
 
 Examples
---------
+========
 * :doc:`Amazon CloudWatch Examples <cw-examples>`
 * :doc:`Amazon EC2 <ec2-examples>`
 * :doc:`AWS IAM Examples <iam-examples>`
@@ -91,7 +91,7 @@ Examples
 * :doc:`Amazon SQS Examples <sqs-examples>`
 
 Reference
----------
+=========
 
 * :doc:`FAQ <faq>`
 * :doc:`Glossary <glossary>`
@@ -101,6 +101,6 @@ Reference
 .. _supported-services:
 
 API Documentation
------------------
+=================
 
 Find API documentation for the SDK at  http://docs.aws.amazon.com/aws-sdk-php/v3/api/.

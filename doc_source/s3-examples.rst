@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================================
+###########################################
 |S3| Examples Using the |sdk-php| version 3
-===========================================
+###########################################
 
 .. meta::
    :description: Amazon S3 code examples for AWS SDK for PHP version 3.

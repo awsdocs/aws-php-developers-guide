@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================================================
+###########################################################
 Using |S3| Multipart Uploads with AWS SDK for PHP version 3 
-===========================================================
+###########################################################
 
 .. meta::
    :description: Break larger files into smaller parts when you upload to Amazon S3 using the AWS SDK for PHP version 3 .
@@ -30,7 +30,7 @@ independently, in any order, and in parallel.
 than 100 MB.
 
 MultipartUploader Object
-------------------------
+========================
 
 The SDK has a special ``MultipartUploader`` object that simplifies the multipart upload
 process.
@@ -59,7 +59,7 @@ source data is read. It then either completes the upload or throws an
 exception that contains information about the parts that failed to upload.
 
 Customizing a Multipart Upload
-------------------------------
+==============================
 
 You can set custom options on the ``CreateMultipartUpload``, ``UploadPart``, and
 ``CompleteMultipartUpload`` operations executed by the multipart uploader via
@@ -86,7 +86,7 @@ callbacks passed to its constructor.
     ]);
 
 Recovering from Errors
-----------------------
+======================
 
 When an error occurs during the multipart upload process, a
 ``MultipartUploadException`` is thrown. This exception provides access to the
@@ -149,7 +149,7 @@ when you're not handling an exception, by calling ``$uploader->getState()``.
         } while (!isset($result));
 
 Aborting a Multipart Upload
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Sometimes, you might not want to resume an upload, and would rather
 abort the the whole thing when an error occurs. This is also easy using the
@@ -166,7 +166,7 @@ data contained in the ``UploadState`` object.
     }
 
 Asynchronous Multipart Uploads
-------------------------------
+==============================
 
 Calling ``upload()`` on the ``MultipartUploader`` is a blocking request. If you are
 working in an asynchronous context, you can get a :doc:`promise <guide_promises>`
@@ -183,7 +183,7 @@ for the multipart upload.
     $promise = $uploader->promise();
 
 Configuration
--------------
+=============
 
 The ``MultipartUploader`` object constructor accepts the following arguments:
 
@@ -233,7 +233,7 @@ The ``MultipartUploader`` object constructor accepts the following arguments:
         are ignored.
     
 Multipart Copies
-----------------
+================
 
 The |sdk-php| also includes a ``MultipartCopy`` object that is used in a similar way
 to the ``MultipartUploader``, but is designed for copying objects between 5 GB and

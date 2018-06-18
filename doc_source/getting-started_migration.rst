@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================================
+#########################################
 Migrating from Version 2 of the |sdk-php|
-=========================================
+#########################################
 
 .. meta::
    :description: Shows how to migrate to AWS SDK for PHP version 3 from version 2.
@@ -25,14 +25,14 @@ and how the new version differs from version 2 of the SDK.
     has not changed from version 2 to version 3, which should result in a smooth migration.
 
 Introduction
-------------
+============
 
 Version 3 of the |sdk-php| represents a significant effort to improve the capabilities
 of the SDK, incorporate over two years of customer feedback, upgrade our
 dependencies, improve performance, and adopt the latest PHP standards.
 
 What's New in Version 3?
-------------------------
+========================
 Version 3 of the |sdk-php| follows the `PSR-4 and PSR-7 standards <http://php-fig.org>`_ and 
 will follow the `SemVer <http://semver.org/>`_ standard going forward. 
 
@@ -45,7 +45,7 @@ Other new features include
 
 
 Decoupled HTTP layer
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 - `Guzzle 6 <http://guzzlephp.org>`_ is used by default to send requests, but
   Guzzle 5 is also supported.
@@ -53,7 +53,7 @@ Decoupled HTTP layer
 - Custom HTTP handlers are also supported.
 
 Asynchronous requests
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 - Features like *waiters* and *multipart uploaders* can also be used
   asynchronously.
@@ -63,10 +63,10 @@ Asynchronous requests
 
 
 What's Different from Version 2?
---------------------------------
+================================
 
 Project Dependencies are Updated
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 The dependencies of the SDK have changed in this version.
 
@@ -97,7 +97,7 @@ The dependencies of the SDK have changed in this version.
   methods. See :doc:`guide_jmespath` for more details.
 
 Region and Version Options Are Now Required
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 When instantiating a client for any service, you must specify the ``'region'``
 and ``'version'`` options. In version 2 of the |sdk-php|, ``'version'`` was completely
@@ -129,7 +129,7 @@ changes until you are ready to explicitly update your configuration.
     ``region`` option supplied to the client constructor.
 
 Client Instantiation Uses the Constructor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 In version 3 of the |sdk-php|, the way you instantiate a client has changed. Instead
 of the ``factory`` methods in version 2, you can simply instantiate a client
@@ -156,7 +156,7 @@ by using the ``new`` keyword.
     considered deprecated.
 
 Client Configuration Has Changed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 The client configuration options in version 3 of the |sdk-php| have changed a little
 from version 2. See the :doc:`guide_configuration` page for a description of all
@@ -186,7 +186,7 @@ Configuration can be done more simply with basic arrays, and is documented
 in :ref:`sdk-class`.
 
 Some API Results Have Changed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 To provide consistency in how the SDK parses the result of an API
 operation, |ELClong|, |RDS|, and |RSlong| now have an
@@ -298,7 +298,7 @@ output of the result (provided below in parentheses):
   - RotateEncryptionKey (Cluster)
 
 Enum Classes Have Been Removed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 We have removed the ``Enum`` classes (e.g., ``Aws\S3\Enum\CannedAcl``) that
 existed in version 2 of the |sdk-php|. Enums were concrete classes within the public
@@ -312,7 +312,7 @@ Instead of using values from ``Enum`` objects, you should use the literal
 values directly (e.g., ``CannedAcl::PUBLIC_READ`` → ``'public-read'``).
 
 Fine-Grained Exception Classes Have Been Removed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------
 
 We have removed the fine-grained exception classes that existed in each
 service's namespaces (e.g., ``Aws\Rds\Exception\{SpecificError}Exception``)
@@ -329,7 +329,7 @@ equivalent to catching different exception classes, but provides that function
 without adding bloat to the SDK.
 
 Static Facade Classes Have Been Removed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 In version 2 of the |sdk-php|, there was an obscure feature inspired by Laravel that allowed you
 to call ``enableFacades()`` on the ``Aws`` class to enable static access to the
@@ -339,7 +339,7 @@ completely. You should retrieve your client objects from the ``Aws\Sdk`` object
 and use them as object instances, not static classes.
 
 Paginators Supersede  iterators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 Version 2 of the |sdk-php| had a feature named * iterators*. These were objects that
 were used for iterating over paginated results. One complaint we had about these
@@ -391,7 +391,7 @@ expressions to extract data more easily from the result set.
     paginators.
 
 Many Higher-Level Abstractions Have Changed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 In general, many of the higher-level abstractions (service-specific helper
 objects, aside from the clients) have been improved or updated. Some have
@@ -415,7 +415,7 @@ even been removed.
 
 * Removed:
     * |DDBlong| ``Item``, ``Attribute``, and ``ItemIterator`` classes - These
-      were previously deprecated in `Version 2.7.0 <https://github.com/aws/aws-sdk-php/blob/3.0.0/CHANGELOG.md#270---2014-10-08>`_.
+      were previously deprecated in `Version 2.7.0 <https://github.com/aws/aws-sdk-php/blob/3.0.0/CHANGELOG.md#270===2014-10-08>`_.
     * |SNS| message validator - This is now `a separate, lightweight project
       <https://github.com/aws/aws-php-sns-message-validator>`_ that does not
       require the SDK as a dependency. This project is, however, included in the
@@ -424,13 +424,13 @@ even been removed.
     * |S3| ``AcpBuilder`` and related objects were removed.
 
 Comparing Code Samples from Both Versions of the SDK
-----------------------------------------------------
+====================================================
 
 The following examples show some of the ways in which using version 3 of
 the |sdk-php| might differ from version 2.
 
 Example: |S3| ListObjects Operation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 From Version 2 of the SDK
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -499,7 +499,7 @@ Key differences:
     }
 
 Example: Instantiating a Client with global Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------
 
 From Version 2 of the SDK
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-=============================================
+#############################################
 |SQS| Examples Using the |sdk-php| version 3 
-=============================================
+#############################################
 
 .. meta::
    :description: Amazon SQS code examples for the AWS SDK for PHP version 3.

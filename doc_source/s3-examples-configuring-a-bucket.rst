@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================================
+#######################################################
 Configuring |S3| Buckets with AWS SDK for PHP version 3 
-=======================================================
+#######################################################
 
 .. meta::
    :description: Get or set CORS configuration for an Amazon S3 bucket using the AWS SDK for PHP version 3.
@@ -29,12 +29,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Get the CORS Configuration
---------------------------
+==========================
 
 Create a PHP file with following code. First create an AWS.S3 client service, then call the ``getBucketCors`` method and specify the bucket whose CORS configuration you want.
 
@@ -54,7 +54,7 @@ The only parameter required is the name of the selected bucket. If the bucket cu
    :language: php
 
 Set the CORS Configuration
---------------------------
+==========================
 
 Create a PHP file with following code. First create an AWS.S3 client service. Then call the ``putBucketCors`` method and specify the bucket whose CORS configuration you want
 to set, and the CORSConfiguration as a :aws-php-class:`CORSRules JSON object </api-s3-2006-03-01.html#shape-corsrule>`.

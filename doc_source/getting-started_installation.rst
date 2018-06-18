@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==================================
+##################################
 Installing the |sdk-php| version 3
-==================================
+##################################
 
 .. meta::
    :description:  Install the AWS SDK for PHP version 3. 
@@ -23,7 +23,7 @@ You can install the |sdk-php| version 3 by using:
 * The ZIP file in the SDK
 
 Installing by Using Composer
-----------------------------
+============================
 
 `Composer <http://getcomposer.org>`_ is the recommended way to install
 the |sdk-php|. Composer is a tool for PHP that manages and installs the dependencies of your project.
@@ -52,7 +52,7 @@ For more information on how to install Composer, configure autoloading, and foll
 practices for defining dependencies, see `getcomposer.org <http://getcomposer.org>`_.
 
 Installing by Using the Packaged Phar
--------------------------------------
+=====================================
 
 Each release of the |sdk-php| includes a prepackaged phar (PHP archive) that contains all the classes
 and dependencies you need to run the SDK. Additionally, the phar automatically registers a class
@@ -80,7 +80,7 @@ and include it in your scripts.
         suhosin.executor.include.whitelist = phar
 
 Installing by Using the ZIP file
---------------------------------
+================================
 
 The |sdk-php| includes a ZIP file containing all the classes and dependencies you need to run the SDK.
 Additionally, the ZIP file includes a class autoloader for the |sdk-php| and its dependencies.

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================================
+#################################################
 JMESPath Expressions in the |sdk-php| version 3
-=================================================
+#################################################
 
 .. meta::
    :description: Extract JSON data from the AWS SDK for PHP version 3.
@@ -34,7 +34,7 @@ Expressions you write for CLI output are 100 percent compatible with expressions
 written for the |sdk-php|.
 
 Extracting Data from Results
-----------------------------
+============================
 
 The ``Aws\ResultInterface`` interface has a ``search($expression)`` method that
 extracts data from a result model based on a JMESPath expression. Using
@@ -234,7 +234,7 @@ Availability Zone.
 
 .. code-block:: php
 
-    $data = $result->search("Volumes[?AvailabilityZone == 'us-west-2a']");
+    $data = $result->search("Volumes[?AvailabilityZone ## 'us-west-2a']");
 
 JMESPath also supports function expressions. Let's say you want to run the
 same query as above, but instead retrieve all volumes in which the volume is
@@ -246,10 +246,10 @@ filter projection.
 
 .. code-block:: php
 
-    $data = $result->search('Volumes[?starts_with(AvailabilityZone, 'us-') == `true`]');
+    $data = $result->search('Volumes[?starts_with(AvailabilityZone, 'us-') ## `true`]');
 
 Extracting Data from paginators
--------------------------------
+===============================
 
 As you know from the :doc:`guide_paginators` guide, ``Aws\ResultPaginator`` objects
 are used to yield results from a pageable API operation. The |sdk-php| enables you to
