@@ -195,28 +195,35 @@ unlink()        Delete an object from a bucket.
                     unlink('s3://bucket/key', stream_context_create([
                         's3' => ['VersionId' => '123']
                     ]);
+                    
 filesize()      Get the size of an object.
 
                 .. code-block:: php
                     // Get the Content-Length of an object
                     $size = filesize('s3://bucket/key', );
+                    
 is_file()       Checks if a URL is a file.
 
                 .. code-block:: php
                     if (is_file('s3://bucket/key')) {
                         echo 'It is a file!';
                     }
+                    
 file_exists()   Checks if an object exists.
 
                 .. code-block:: php
                     if (file_exists('s3://bucket/key')) {
                         echo 'It exists!';
                     }
+                    
 filetype()      Checks if a URL maps to a file or bucket (dir).
+
 file()          Load the contents of an object in an array of lines. You can
                 pass in any options available to the ``GetObject`` operation to
                 modify how the file is downloaded.
+                
 filemtime()     Get the last modified date of an object.
+
 rename()        Rename an object by copying the object then deleting the
                 original. You can pass in options available to the
                 ``CopyObject`` and ``DeleteObject`` operations to the stream
