@@ -184,13 +184,16 @@ stream wrapper enables you to perform with objects stored in |S3|.
 unlink()        Delete an object from a bucket.
 
                 .. code-block:: php
+                
                     // Delete an object from a bucket
                     unlink('s3://bucket/key');
+                    
                 You can pass in any options available to the ``DeleteObject``
                 operation to modify how the object is deleted (e.g. specifying
                 a specific object version).
 
                 .. code-block:: php
+                
                     // Delete a specific version of an object from a bucket
                     unlink('s3://bucket/key', stream_context_create([
                         's3' => ['VersionId' => '123']
@@ -199,12 +202,14 @@ unlink()        Delete an object from a bucket.
 filesize()      Get the size of an object.
 
                 .. code-block:: php
+                
                     // Get the Content-Length of an object
                     $size = filesize('s3://bucket/key', );
                     
 is_file()       Checks if a URL is a file.
 
                 .. code-block:: php
+                
                     if (is_file('s3://bucket/key')) {
                         echo 'It is a file!';
                     }
@@ -212,6 +217,7 @@ is_file()       Checks if a URL is a file.
 file_exists()   Checks if an object exists.
 
                 .. code-block:: php
+                
                     if (file_exists('s3://bucket/key')) {
                         echo 'It exists!';
                     }
