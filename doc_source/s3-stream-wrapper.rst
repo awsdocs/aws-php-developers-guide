@@ -157,14 +157,15 @@ whether data can be read or written to a stream, and whether the file must
 exist when opening a stream. The |S3| stream wrapper supports the
 following modes.
 
-= #############################################################################
+= =============================================================================
 r A read-only stream where the file must already exist.
 w A write-only stream. If the file already exists, it will be overwritten.
 a A write-only stream. If the file already exists, it will be downloaded to a
   temporary stream and any writes to
   the stream will be appended to any previously uploaded data.
 x A write-only stream. An error is raised if the file does not already exist.
-= #############################################################################
+= =============================================================================
+
 
 Other Object Functions
 ======================
@@ -173,48 +174,44 @@ Stream wrappers allow many different built-in PHP functions to work with a
 custom system such as |S3|. Here are some of the functions that the |S3|
 stream wrapper enables you to perform with objects stored in |S3|.
 
-############### ################################################################
+
+
+Stream wrappers allow many different built-in PHP functions to work with a
+custom system such as |S3|. Here are some of the functions that the |S3|
+stream wrapper enables you to perform with objects stored in |S3|.
+
+=============== ================================================================
 unlink()        Delete an object from a bucket.
 
                 .. code-block:: php
-
                     // Delete an object from a bucket
                     unlink('s3://bucket/key');
-
                 You can pass in any options available to the ``DeleteObject``
                 operation to modify how the object is deleted (e.g. specifying
                 a specific object version).
 
                 .. code-block:: php
-
                     // Delete a specific version of an object from a bucket
                     unlink('s3://bucket/key', stream_context_create([
                         's3' => ['VersionId' => '123']
                     ]);
-
 filesize()      Get the size of an object.
 
                 .. code-block:: php
-
                     // Get the Content-Length of an object
                     $size = filesize('s3://bucket/key', );
-
 is_file()       Checks if a URL is a file.
 
                 .. code-block:: php
-
                     if (is_file('s3://bucket/key')) {
                         echo 'It is a file!';
                     }
-
 file_exists()   Checks if an object exists.
 
                 .. code-block:: php
-
                     if (file_exists('s3://bucket/key')) {
                         echo 'It exists!';
                     }
-
 filetype()      Checks if a URL maps to a file or bucket (dir).
 file()          Load the contents of an object in an array of lines. You can
                 pass in any options available to the ``GetObject`` operation to
@@ -226,7 +223,7 @@ rename()        Rename an object by copying the object then deleting the
                 context parameters to modify how the object is copied and
                 deleted.
 
-############### ################################################################
+=============== ================================================================
 
 .. note::
 
