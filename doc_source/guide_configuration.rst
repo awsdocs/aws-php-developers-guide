@@ -285,7 +285,7 @@ endpoint
 :Type: ``string``
 
 The full URI of the web service. This is required for services, such as |EMC|_ , 
-that use account-specific endpoints. For these services, request this endpoint using the describeEndpoints method. 
+that use account-specific endpoints. For these services, request this endpoint using the :doc`describeEndpoints`<emc-examples-getendpoint>` method. 
 
 This is only required when connecting to a
 custom endpoint (e.g., a local version of |S3| or
