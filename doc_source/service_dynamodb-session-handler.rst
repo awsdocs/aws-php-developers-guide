@@ -159,23 +159,23 @@ Ultimately, the throughput and the costs required for your sessions table will c
 traffic and session size. The following table explains the amount of read and write operations that are performed on
 your |DDB| table for each of the session functions.
 
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 | Read via ``session_start()``        | * 1 read operation (only 0.5 if ``consistent_read`` is ``false``).          |
 |                                     | * (Conditional) 1 write operation to delete the session if it is expired.   |
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 | Read via ``session_start()``        | * A minimum of 1 *write* operation.                                         |
 | (Using session locking)             | * (Conditional) Additional write operations for each attempt at acquiring a |
 |                                     |   lock on the session. Based on configured lock wait time and retry options.|
 |                                     | * (Conditional) 1 write operation to delete the session if it is expired.   |
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 | Write via ``session_write_close()`` | * 1 write operation.                                                        |
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 | Delete via ``session_destroy()``    | * 1 write operation.                                                        |
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 | Garbage Collection                  | * 0.5 read operations **per 4 KB of data in the table** to scan for expired |
 |                                     |   sessions.                                                                 |
 |                                     | * 1 write operation **per expired item** to delete it.                      |
-+=====================================+=============================================================================+
++-------------------------------------+-----------------------------------------------------------------------------+
 
 .. _ddbsh-session-locking:
 
