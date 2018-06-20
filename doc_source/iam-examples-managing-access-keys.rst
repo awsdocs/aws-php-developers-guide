@@ -48,7 +48,7 @@ Create an Access Key
 **Sample Code**
 
 .. literalinclude:: example_code/iam/CreateAccessKey.php
-   :lines: 31-45
+   :lines: 31-
    :language: php
 
 
