@@ -32,15 +32,15 @@ the SDK in your code with just a single ``require`` statement. See
 the following table for the PHP code that best fits your installation technique.
 Replace any instances of ``/path/to/`` with the actual path on your system.
 
-########################## #####################################################
+========================== =====================================================
 Installation Technique     Require Statement
-########################## #####################################################
+========================== =====================================================
 Using Composer             ``require '/path/to/vendor/autoload.php';``
-========================== =====================================================
+-------------------------- -----------------------------------------------------
 Using the phar             ``require '/path/to/aws.phar';``
-========================== =====================================================
+-------------------------- -----------------------------------------------------
 Using the ZIP              ``require '/path/to/aws-autoloader.php';``
-########################## #####################################################
+========================== =====================================================
 
 In this topic, we show examples that assume the Composer
 installation method. If you're using a different installation method, you
@@ -354,7 +354,7 @@ You can "unwrap" the promise and cause the exception to be thrown instead.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 56
+   :lines: 57
    :language: php
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
