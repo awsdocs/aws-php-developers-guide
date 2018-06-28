@@ -18,6 +18,7 @@ Assuming |IAM| Roles
    :keywords: configuration, specify region, region, credentials, proxy
    
    
+.. _instance_profile_credentials:
 
 Using |IAM| Roles for |EC2| Instance Variable Credentials
 ==========================================================
@@ -47,6 +48,7 @@ almost no work on your part.
     in as the ``'credentials'`` option to a client constructor. This lets the SDK
     use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
     
+   
 Create and assign |IAM| role to an |EC2| Instance
 -------------------------------------------------
 
@@ -145,6 +147,7 @@ Create and assign |IAM| role to an |EC2| Instance
 
 For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon-ec2>`.
 
+.. _ecs_credentials:
  
 Using |IAM| Roles for |ECS| Tasks
 =================================

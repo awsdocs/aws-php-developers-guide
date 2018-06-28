@@ -16,6 +16,8 @@ Creating Anonymous Clients
    :description: How to configure anonymous access for AWS Services using the AWS SDK for PHP.
    :keywords:
 
+.. _anonymous_access:
+   
 In some cases, you might want to create a client that is not associated with any
 credentials. This enables you to make anonymous requests to a service.
 

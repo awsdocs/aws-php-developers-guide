@@ -17,11 +17,12 @@ Using the AWS Credentials File and Credential Profiles
    :description: How to retrieve credentials for AWS using the AWS SDK for PHP.
    :keywords: configuration, specify region, region, credentials, proxy
 
+.. _credential_profiles:
+
 A credentials file is a plaintext file that contains your access keys.
 The file must:
 
-* Be on the same machine on which you're running your
-application.
+* Be on the same machine on which you're running your application.
 * Be named :file:`credentials`.
 * Be located in the
 :file:`.aws/` folder in your home directory.

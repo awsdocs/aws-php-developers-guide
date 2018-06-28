@@ -17,6 +17,7 @@ Using Temporary Credentials from |STS|
    :keywords:
 
 
+.. _temporary_credentials:
 
 :STS-api:`AWS Security Token Service <Welcome>`
 (|STS|) enables you to request limited privilege, **temporary credentials**

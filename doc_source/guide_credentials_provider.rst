@@ -16,6 +16,7 @@ Using a Credential Provider
    :description: How to configure anonymous access for AWS Services using the AWS SDK for PHP.
    :keywords:
 
+.. _credential_provider:
 
 A credential provider is a function that returns a ``GuzzleHttp\Promise\PromiseInterface``
 that is fulfilled with an ``Aws\Credentials\CredentialsInterface`` instance or
@@ -234,7 +235,7 @@ ini provider
 ------------
 
 ``Aws\Credentials\CredentialProvider::ini`` attempts to load credentials from
-an :ref:`ini credential file <credential_profiles>`. By default, the SDK
+an :doc:`ini credential file <guide_credentials_profiles>`. By default, the SDK
 attempts to load the "default" profile from a file located at
 ``~/.aws/credentials``.
 

@@ -16,6 +16,7 @@ Using Credentials from Environment Variables
    :description: How to load credentials for AWS using the AWS SDK for PHP.
    :keywords: configuration, specify region, region, credentials, proxy
 
+.. _environment_credentials:
 
 Using environment variables to contain your credentials prevents you from accidentally sharing your AWS secret access key. 
 We recommend that you never add your AWS access keys directly to the client in any production files. Many developers have had 
