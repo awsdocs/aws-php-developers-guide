@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================================
+##########################################################
 |S3| Client Side Encryption with AWS SDK for PHP version 3 
-==========================================================
+##########################################################
 
 .. meta::
    :description: Client-side encryption for the with AWS SDK for PHP version 3  Amazon S3 client.
@@ -27,24 +27,32 @@ decrypting. The implementation is interoperable with :AWS-gr:`other SDKs that ma
 It's also compatible with :doc:`the SDK’s promise-based asynchronous workflow <guide_promises>`.
 
 Setup
------
+=====
 
 To get started with client-side encryption, you need the following:
 
 * An :KMS-dg:`AWS KMS encryption key <create-keys>`
 * An :S3-gsg:`S3 bucket <CreatingABucket>`
 
+Before running any example code, configure your AWS credentials. See :doc:`guide_credentials`.
+
 Encryption
-----------
+==========
 
 Uploading an encrypted object through the ``PutObject`` operation takes a similar
 interface and requires two new parameters.
 
 .. code-block:: php
 
+   use Aws\S3\S3Client;
+   use Aws\S3\Crypto\S3EncryptionClient;
+   use Aws\Kms\KmsClient;
+   use Aws\Crypto\KmsMaterialsProvider;
+
     // Let's construct our S3EncryptionClient using an S3Client
     $encryptionClient = new S3EncryptionClient(
         new S3Client([
+            'profile' => 'default',
             'region' => 'us-east-1',
             'version' => 'latest',
         ])
@@ -55,6 +63,7 @@ interface and requires two new parameters.
     // initialization vector, as well as encrypting your cipher key via AWS KMS
     $materialsProvider = new KmsMaterialsProvider(
         new KmsClient([
+            'profile' => 'default',
             'region' => 'us-east-1',
             'version' => 'latest',
         ]),
@@ -62,9 +71,9 @@ interface and requires two new parameters.
     );
 
     $bucket = 'the-bucket-name';
-    $key = 'the-upload-key';
+    $key = 'the-file-name';
     $cipherOptions = [
-        'Cipher' => 'gcm'
+        'Cipher' => 'gcm',
         'KeySize' => 256,
         // Additional configuration options
     ];
@@ -74,7 +83,7 @@ interface and requires two new parameters.
         '@CipherOptions' => $cipherOptions,
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => fopen('file-to-encrypt.txt'),
+        'Body' => fopen('file-to-encrypt.txt', 'r'),
     ]);
 
 .. note::
@@ -84,7 +93,7 @@ interface and requires two new parameters.
     ``'@CipherOptions'`` are not correctly configured.
 
 Decryption
-----------
+==========
 
 Downloading and decrypting an object requires only one additional parameter on
 top of ``GetObject``, and the client will detect the basic cipher options for you.
@@ -108,7 +117,7 @@ Additional configuration options are passed through for decryption.
     ``'@CipherOptions'`` are not correctly configured.
 
 Cipher Configuration
---------------------
+====================
 
 ``'Cipher'`` (string)
     Cipher method that the encryption client uses while
@@ -133,7 +142,7 @@ Cipher Configuration
     available only when using the 'gcm' cipher.
 
 Metadata Strategies
--------------------
+===================
 
 You also have the option of providing an instance of a class that implements
 the ``Aws\Crypto\MetadataStrategyInterface``. This simple interface handles
@@ -180,7 +189,7 @@ Class name constants for the ``HeadersMetadataStrategy`` and
     not be automatically deleted.
 
 Multipart Uploads
------------------
+=================
 
 Performing a multipart upload with client-side encryption is also possible. The
 ``Aws\S3\Crypto\S3EncryptionMultipartUploader`` prepares the source stream for
@@ -199,6 +208,7 @@ configurations.
         new KmsClient([
             'region' => 'us-east-1',
             'version' => 'latest',
+            'profile' => 'default',
         ]),
         $kmsKeyArn
     );
@@ -215,6 +225,7 @@ configurations.
         new S3Client([
             'region' => 'us-east-1',
             'version' => 'latest',
+            'profile' => 'default',
         ]),
         fopen('large-file-to-encrypt.txt'),
         [
