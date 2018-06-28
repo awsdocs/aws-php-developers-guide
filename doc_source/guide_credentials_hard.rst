@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+############################################
 Using |IAM| Roles for |ECSlong| Tasks
-============================================
+############################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.

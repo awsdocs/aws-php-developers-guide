@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================
+##########################################
 Credentials for the |sdk-php| version 3
-==========================================
+##########################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.
@@ -35,7 +35,7 @@ You can do this in the following ways:
 .. _default_credential_chain:
 
 Default credential provider chain
-----------------------------------
+==================================
 
 When you initialize a new service client without providing any
 credential arguments, the SDK uses the default credential provider
@@ -67,7 +67,7 @@ looks for credentials in the following order:
 .. _other_credentials:
 
 Other options for adding credentials
-------------------------------------
+====================================
 
 1. :doc:`Using IAM Roles for Amazon Elastic Container Service Tasks <guide_credentials_ecs>` 
 

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================================
+######################################
 Using Temporary Credentials from |STS|
-======================================
+######################################
 
 .. meta::
    :description: How to configure temporary access for AWS services using the AWS SDK for PHP.
@@ -35,7 +35,7 @@ through third-party identity providers (see :IAM-ug:`Web Identity Federation
 
 
 Getting Temporary Credentials
------------------------------
+=============================
 
 |STS| has several operations that return temporary credentials, but the
 ``GetSessionToken`` operation is the simplest to demonstrate.
@@ -66,7 +66,7 @@ contains a ``'Credentials'`` value. If you print the result
     )
 
 Providing Temporary Credentials to the |sdk-php|
-------------------------------------------------
+================================================
 
 You can use temporary credentials with another AWS client by instantiating
 the client and passing in the values received from |STS| directly.

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================
+#######################################
 Credentials for the |sdk-php| Version 3
-=======================================
+#######################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.
@@ -35,7 +35,7 @@ You can do this in the following ways:
 .. _default_credential_chain:
 
 Using the Default Credential Provider Chain
--------------------------------------------
+===========================================
 
 When you initialize a new service client without providing any
 credential arguments, the SDK uses the default credential provider
@@ -69,7 +69,7 @@ looks for and uses credentials as follows, in this order:
 .. _other_credentials:
 
 Other Ways to Add Credentials
------------------------------
+=============================
 
 You can also add credentials in these ways:
 

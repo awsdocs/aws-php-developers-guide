@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================================
+##########################################################
 Using |IAM| Roles for |EC2| Instance Variable Credentials
-==========================================================
+##########################################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.
@@ -43,7 +43,7 @@ almost no work on your part.
     use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
     
 Create and assign |IAM| role to an |EC2| Instance
--------------------------------------------------
+=================================================
 
 1. Create an IAM client.
 

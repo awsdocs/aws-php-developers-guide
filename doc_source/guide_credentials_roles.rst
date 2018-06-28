@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+############################################
 Using Credentials from Environment Variables
-============================================
+############################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.
@@ -18,7 +18,7 @@ Using Credentials from Environment Variables
 
 
 Using |IAM| Roles for |EC2| Instances
--------------------------------------
+=====================================
 
 Using |IAM| roles is the preferred technique for providing credentials to
 applications running on |EC2|. |IAM| roles remove the need to worry about
@@ -56,7 +56,7 @@ For more information, see :EC2-ug:`IAM Roles for Amazon EC2<iam-roles-for-amazon
 
    
 Using |IAM| Roles for |ECSlong| Tasks
--------------------------------------
+=====================================
 
 With |IAM| roles for |ECS| tasks, you can specify an |IAM| role that can be
 used by the containers in a task. This provides a strategy for managing credentials

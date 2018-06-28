@@ -9,9 +9,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================================================
+######################################################
 Using the AWS Credentials File and Credential Profiles
-======================================================
+######################################################
 
 .. meta::
    :description: How to retrieve credentials for AWS using the AWS SDK for PHP.

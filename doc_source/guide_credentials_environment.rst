@@ -4,13 +4,13 @@
    International License (the "License"). You may not use this file except in compliance with the
    License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,S
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+############################################
 Using Credentials from Environment Variables
-============================================
+############################################
 
 .. meta::
    :description: How to load credentials for AWS using the AWS SDK for PHP.
