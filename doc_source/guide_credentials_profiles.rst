@@ -24,8 +24,7 @@ The file must:
 
 * Be on the same machine on which you're running your application.
 * Be named :file:`credentials`.
-* Be located in the
-:file:`.aws/` folder in your home directory.
+* Be located in the :file:`.aws/` folder in your home directory.
 
 The home directory can vary by
 operating system. On Windows, you can refer to your home directory by
