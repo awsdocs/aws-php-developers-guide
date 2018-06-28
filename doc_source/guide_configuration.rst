@@ -78,9 +78,9 @@ credentials instance.
 If you don't provide a ``credentials`` option, the SDK attempts to load
 credentials from your environment in the following order:
 
-1. Load credentials from :ref:`environment variables <environment_credentials>`.
-2. Load credentials from a :ref:`credentials .ini file <credential_profiles>`.
-3. Load credentials from an :ref:`IAM instance profile <instance_profile_credentials>`.
+1. Load credentials from :doc:`environment variables <guide_credentials_environment>`.
+2. Load credentials from a :doc:`credentials .ini file <guide_credentials_profiles>`.
+3. Load credentials from an :doc:`IAM role <guide_credentials_assume_role>`.
 
 Pass ``false`` to use null credentials and not sign requests.
 
@@ -92,7 +92,7 @@ Pass ``false`` to use null credentials and not sign requests.
         'credentials' => false
     ]);
 
-Pass a callable :ref:`credential provider <credential_provider>` function to
+Pass a callable :doc:`credential provider <guide_credentials_provider>` function to
 create credentials using a function.
 
 .. code-block:: php

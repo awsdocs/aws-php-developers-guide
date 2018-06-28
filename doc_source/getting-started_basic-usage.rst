@@ -75,12 +75,12 @@ client's constructor.
 
 Notice that we did **not** explicitly provide credentials to the client. That's
 because the SDK should detect the credentials from
-:ref:`environment variables <environment_credentials>` (via
+:doc:`environment variables <guide_credentials_environment>` (via
 ``AWS_ACCESS_KEY_ID`` and ``AWS_SECRET_ACCESS_KEY``), an
-:ref:`AWS credentials INI file <credential_profiles>` in your HOME
+:doc:`AWS credentials INI file <guide_credentials_profiles>` in your HOME
 directory, |IAMlong| (IAM)
-:ref:`instance profile credentials <instance_profile_credentials>`, or
-:ref:`credential providers <credential_provider>`.
+:doc:`instance profile credentials <guide_credentials_assume_role>`, or
+:doc:`credential providers <guide_credentials_provider>`.
 
 All of the general client configuration options are described in detail in
 the :doc:`configuration guide <guide_configuration>`. The array of options

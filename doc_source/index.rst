@@ -22,5 +22,6 @@
     FAQ <faq>
     glossary 
     resources
+    Document History <document-history>
 	
 

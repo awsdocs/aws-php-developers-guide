@@ -16,10 +16,11 @@ The |sdk-php| consists of various features and components. Each of the
 following topics describe the components that are used in the SDK.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     Configuration Options <guide_configuration.rst>
     Setting Credentials <guide_credentials.rst>
+    Current Credentials  <guide_credentials_old.rst>
     Command Objects <guide_commands.rst>
     Promises <guide_promises.rst>
     Handlers and Middleware <guide_handlers-and-middleware.rst>
