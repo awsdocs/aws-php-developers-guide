@@ -544,7 +544,7 @@ You can connect to an AWS service through a proxy by using the ``proxy`` option.
         'region'  => 'us-west-2',
         'version' => 'latest',
         'http'    => [
-            'proxy' => [
+            'proxy' =>
                 'http' => 'tcp://192.168.16.1:10',
                 'https' => 'tcp://192.168.16.1:11',
             ]

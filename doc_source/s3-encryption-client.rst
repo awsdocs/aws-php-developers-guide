@@ -34,8 +34,6 @@ To get started with client-side encryption, you need the following:
 * An :KMS-dg:`AWS KMS encryption key <create-keys>`
 * An :S3-gsg:`S3 bucket <CreatingABucket>`
 
-Before running any example code, configure your AWS credentials. See :doc:`guide_credentials`.
-
 Encryption
 ----------
 
@@ -44,15 +42,9 @@ interface and requires two new parameters.
 
 .. code-block:: php
 
-   use Aws\S3\S3Client;
-   use Aws\S3\Crypto\S3EncryptionClient;
-   use Aws\Kms\KmsClient;
-   use Aws\Crypto\KmsMaterialsProvider;
-
     // Let's construct our S3EncryptionClient using an S3Client
     $encryptionClient = new S3EncryptionClient(
         new S3Client([
-            'profile' => 'default',
             'region' => 'us-east-1',
             'version' => 'latest',
         ])
@@ -63,7 +55,6 @@ interface and requires two new parameters.
     // initialization vector, as well as encrypting your cipher key via AWS KMS
     $materialsProvider = new KmsMaterialsProvider(
         new KmsClient([
-            'profile' => 'default',
             'region' => 'us-east-1',
             'version' => 'latest',
         ]),
@@ -71,9 +62,9 @@ interface and requires two new parameters.
     );
 
     $bucket = 'the-bucket-name';
-    $key = 'the-file-name';
+    $key = 'the-upload-key';
     $cipherOptions = [
-        'Cipher' => 'gcm',
+        'Cipher' => 'gcm'
         'KeySize' => 256,
         // Additional configuration options
     ];
@@ -83,7 +74,7 @@ interface and requires two new parameters.
         '@CipherOptions' => $cipherOptions,
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => fopen('file-to-encrypt.txt', 'r'),
+        'Body' => fopen('file-to-encrypt.txt'),
     ]);
 
 .. note::
@@ -208,7 +199,6 @@ configurations.
         new KmsClient([
             'region' => 'us-east-1',
             'version' => 'latest',
-            'profile' => 'default',
         ]),
         $kmsKeyArn
     );
@@ -225,7 +215,6 @@ configurations.
         new S3Client([
             'region' => 'us-east-1',
             'version' => 'latest',
-            'profile' => 'default',
         ]),
         fopen('large-file-to-encrypt.txt'),
         [
