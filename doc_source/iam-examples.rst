@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-================================================
+################################################
 AWS |IAM| Examples Using the |sdk-php| version 3
-================================================
+################################################
 
 .. meta::
    :description: Programing Itentity and Access Managment using the AWS SDK for PHP version 3.

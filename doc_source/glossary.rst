@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
    
-========
+########
 Glossary
-========
+########
 
 .. meta::
    :description:  Learn the frequently used terms to utilize the AWS SDK for PHP version 3. 

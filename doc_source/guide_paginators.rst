@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================
+#######################################
 Paginators in the |sdk-php| version 3
-=======================================
+#######################################
 
 .. meta::
    :description: Processing paginated results from the AWS SDK for PHP version 3.
@@ -44,7 +44,7 @@ object using ``foreach`` to get individual ``Aws\Result`` objects.
     }
 
 Paginator Objects
------------------
+=================
 
 The object returned by ``getPaginator()`` method is an instance of the
 ``Aws\ResultPaginator`` class. This class implements PHP's native ``iterator``
@@ -62,7 +62,7 @@ results, the first request is executed when you start iterating, the second in
 the second iteration of the loop, and so on.
 
 Enumerating Data from Results
------------------------------
+=============================
 
 Paginator objects have a method named ``search()``, which allows you to create
 iterators for data within a set of results. When you call ``search()``, you must
@@ -104,7 +104,7 @@ of a bucket), you could do the following.
 .. _async_paginators:
 
 Asynchronous Pagination
------------------------
+=======================
 
 You can iterate over the results of a paginator asynchronously by providing a
 callback for the ``each()`` method of an ``Aws\ResultPaginator``. The callback
@@ -138,7 +138,7 @@ downstream promises.
 
     // Delete all keys that end with "Foo"
     $promise = $results->each(function ($result) use ($s3Client) {
-        if (substr($result['Key'], -3) === 'Foo') {
+        if (substr($result['Key'], -3) ### 'Foo') {
             // Merge this promise into the iterator
             return $s3Client->deleteAsync([
                 'Bucket' => 'my-bucket',

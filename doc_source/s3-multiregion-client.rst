@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================================
+#######################################################
 |S3| Multi-Region Client with AWS SDK for PHP version 3 
-=======================================================
+#######################################################
 
 .. meta::
    :description: Create a multi-region Amazon S3 client using the AWS SDK for PHP version 3 .
@@ -27,7 +27,7 @@ users of the :doc:`s3-stream-wrapper`, whose buckets reside in multiple
 Regions.
 
 Basic Usage
------------
+===========
 
 The basic usage pattern of an |S3| client is the same whether using a
 standard S3 client or its multi-region counterpart. The only usage difference at
@@ -66,7 +66,7 @@ parameter.
     to the correct Region.
 
 Bucket Region Cache
--------------------
+===================
 
 |S3| multi-region clients maintain an internal cache of the AWS Regions in
 which given buckets reside. By default, each client has its own in-memory cache.

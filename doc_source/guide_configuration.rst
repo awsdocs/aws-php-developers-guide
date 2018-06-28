@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================================
+#########################################
 Configuration for the |sdk-php| version 3
-=========================================
+#########################################
 
 .. meta::
    :description: Custom client configuration options for the AWS SDK for PHP version 3 client.
@@ -46,7 +46,7 @@ See the :doc:`basic usage guide <getting-started_basic-usage>` for more
 information about constructing clients.
 
 api_provider
-~~~~~~~~~~~~
+============
 
 :Type: ``callable``
 
@@ -58,7 +58,7 @@ By default, the SDK uses an instance of ``Aws\Api\FileSystemApiProvider``
 that loads API files from the ``src/data`` folder of the SDK.
 
 credentials
-~~~~~~~~~~~
+===========
 
 :Type: ``array|Aws\CacheInterface|Aws\Credentials\CredentialsInterface|bool|callable``
 
@@ -131,7 +131,7 @@ You can find more information about providing credentials to a client in the
     Credentials are loaded and validated lazily when they are used.
 
 debug
-~~~~~
+=====
 
 :Type: ``bool|array``
 
@@ -213,7 +213,7 @@ auth_strings (array)
 .. _config_stats:
 
 stats
-~~~~~
+=====
 
 :Type: ``bool|array``
 
@@ -280,12 +280,12 @@ timer (bool)
     $stats = $result['@metadata']['transferStats']['total_retry_delay'];
 
 endpoint
-~~~~~~~~
+========
 
 :Type: ``string``
 
 The full URI of the web service. This is required for services, such as |EMC|_ , 
-that use account-specific endpoints. For these services, request this endpoint using the describeEndpoints method. 
+that use account-specific endpoints. For these services, request this endpoint using the :doc`describeEndpoints`<emc-examples-getendpoint>` method. 
 
 This is only required when connecting to a
 custom endpoint (e.g., a local version of |S3| or
@@ -305,7 +305,7 @@ See the `AWS General Reference <http://docs.aws.amazon.com/general/latest/gr/ran
 available AWS Regions and endpoints.
 
 endpoint_provider
-~~~~~~~~~~~~~~~~~
+=================
 
 :Type: ``callable``
 
@@ -326,7 +326,7 @@ Here's an example of how to create a minimal endpoint provider.
     });
 
 handler
-~~~~~~~
+=======
 
 :Type: ``callable``
 
@@ -376,7 +376,7 @@ them in FIFO order.
 .. _config_http:
 
 http
-~~~~
+====
 
 :Type: ``array``
 
@@ -674,7 +674,7 @@ You can find much more detail on SSL certificates on the
     ]);
 
 http_handler
-~~~~~~~~~~~~
+============
 
 :Type: ``callable``
 
@@ -701,7 +701,7 @@ The SDK automatically converts the given ``http_handler`` into a normal
     This option supersedes any provided ``handler`` option.
 
 profile
-~~~~~~~
+=======
 
 :Type: ``string``
 
@@ -728,7 +728,7 @@ See :doc:`guide_credentials` for more information about configuring credentials 
 .. _cfg_region:
 
 region
-~~~~~~
+======
 
 :Type: ``string``
 :Required: true
@@ -747,7 +747,7 @@ for a list of available Regions.
 .. _config_retries:
 
 retries
-~~~~~~~
+=======
 
 :Type: ``int``
 :Default: ``int(3)``
@@ -767,7 +767,7 @@ The following example disables retries for the |DDBlong| client.
     ]);
 
 scheme
-~~~~~~
+======
 
 :Type: ``string``
 :Default: ``string(5) "https"``
@@ -789,7 +789,7 @@ See the `AWS General Reference <http://docs.aws.amazon.com/general/latest/gr/ran
 endpoints and whether a service supports the ``http`` scheme.
 
 service
-~~~~~~~
+=======
 
 :Type: ``string``
 :Required: true
@@ -800,7 +800,7 @@ is useful when testing a service that has not yet been published in the SDK
 but that you have available on disk.
 
 signature_provider
-~~~~~~~~~~~~~~~~~~
+==================
 
 :Type: ``callable``
 
@@ -814,7 +814,7 @@ There are various functions provided by the SDK in the
 signature providers.
 
 signature_version
-~~~~~~~~~~~~~~~~~
+=================
 
 :Type: ``string``
 
@@ -842,7 +842,7 @@ The following examples show how to configure an |S3| client to use
     signature versions.
 
 ua_append
-~~~~~~~~~
+=========
 
 :Type: ``string|string[]``
 :Default: ``[]``
@@ -851,7 +851,7 @@ A string or array of strings that are added to the user-agent string passed
 to the HTTP handler.
 
 validate
-~~~~~~~~
+========
 
 :Type: ``bool|array``
 :Default: ``bool(true)``
@@ -889,7 +889,7 @@ constraints:
 .. _cfg_version:
 
 version
-~~~~~~~
+=======
 
 :Type: ``string``
 :Required: true

@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================================
+############################################################
 Requirements and Recommendations for the |sdk-php| version 3
-============================================================
+############################################################
 
 .. meta::
    :description:  Set up your environment to use the AWS SDK for PHP version 3. 
@@ -19,13 +19,13 @@ Requirements and Recommendations for the |sdk-php| version 3
 For best results with |sdk-php|, ensure your environment supports the following requirements and recommendations.
 
 Requirements
-------------
+============
 
 To use the |sdk-php|, you must be using PHP version 5.5.0 or later. If you need to sign private |CWlong| URLs, you
 also need the `OpenSSL PHP extension <http://php.net/manual/en/book.openssl.php>`_.
 
 Recommendations
----------------
+===============
 
 In addition to the minimum requirements, we recommend you also install, uninstall, and use the following.
 
@@ -53,10 +53,10 @@ In addition to the minimum requirements, we recommend you also install, uninstal
        PHP scripts required by your application, including the |sdk-php|.
 
        For production environments, we recommended you use a classmap autoloader to improve autoloader performance. You can generate a classmap autoloader by passing the
-       ``-o`` or ``--optimize-autoloader`` option to Composer's install command.
+       ``-o`` or ``==optimize-autoloader`` option to Composer's install command.
 
 Compatibility Test
-------------------
+==================
 
 Run the :file:`compatibility-test.php` file in the SDK to verify your system can run the SDK. In addition to meeting the SDK's minimum system requirements, the compatibility test checks for optional settings and makes 
 recommendations that can help improve performance. The compatibility test outputs results either to the command line or a web browser. When reviewing test results in a browser, successful checks appear in green, warnings 

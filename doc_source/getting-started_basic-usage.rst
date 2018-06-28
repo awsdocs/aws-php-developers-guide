@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-====================================
+####################################
 Basic Use of the |sdk-php| version 3
-====================================
+####################################
 
 .. meta::
    :description: Describes the basic usage pattern of the AWS SDK for PHP version 3.
@@ -19,13 +19,13 @@ Basic Use of the |sdk-php| version 3
 This topic focuses on basic usage patterns of the |sdk-php|.
 
 Prerequisites
--------------
+=============
 
 -  :doc:`Download and installed the SDK <getting-started_installation>` 
 -  Retrieve your `AWS access keys <http://aws.amazon.com/developers/access-keys/>`_.
 
 Including the SDK in Your Code
-------------------------------
+==============================
 
 No matter which technique you used to to install the SDK, you can include
 the SDK in your code with just a single ``require`` statement. See
@@ -47,7 +47,7 @@ installation method. If you're using a different installation method, you
 can refer back to this section to find the correct ``require`` code to use.
 
 Usage Summary
--------------
+=============
 
 To use the SDK to interact with an AWS service, instantiate a **Client** object. 
 Client objects have methods that
@@ -56,7 +56,7 @@ particular operation, you call its corresponding method. This method either retu
 array-like **Result** object on success, or throws an **Exception** on failure.
 
 Creating a Client
------------------
+=================
 
 You can create a client by passing an associative array of options to a
 client's constructor.
@@ -92,7 +92,7 @@ client.
 .. _sdk-class:
 
 Using the Sdk Class
--------------------
+===================
 
 The ``Aws\Sdk`` class acts as a client factory and is used to manage shared
 configuration options across multiple clients. The same options that can be
@@ -142,7 +142,7 @@ shallow-merged onto root-level values).
     HTTP requests sent by the SDK client might block promise orchestration between services.
 
 Executing Service Operations
-----------------------------
+============================
 
 You can execute a service operation by calling the method of the same name on
 a client object. For example, to perform the |S3|  :S3-api:`PutObject operation
@@ -173,7 +173,7 @@ operation in the SDK's API Documentation (e.g., see the API docs for
 :aws-php-class:`putObject operation </api-s3-2006-03-01.html#putobject>`).
 
 HTTP Handler Options
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 You can also fine-tune how the underlying HTTP handler executes the
 request by using the special ``@http`` parameter. The options you can include
@@ -193,7 +193,7 @@ instantiate the client with the :ref:`"http" client option <config_http>`.
     ]);
 
 Asynchronous Requests
----------------------
+=====================
 
 You can send commands concurrently using the asynchronous features of the SDK.
 You can send requests asynchronously by suffixing an operation name with
@@ -246,7 +246,7 @@ that is resolved or rejected when the operation completes.
 .. _result_objects:
 
 Working with Result Objects
----------------------------
+===========================
 
 Executing a successful operation returns an ``Aws\Result`` object. Instead
 of returning the raw XML or JSON data of a service, the SDK coerces the response
@@ -293,10 +293,10 @@ result.
 
 
 Handling Errors
----------------
+===============
 
 Synchronous Error Handling
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 If an error occurs while performing an operation, an exception is thrown.
 For this reason, if you need to handle errors in your code, you should use
@@ -324,7 +324,7 @@ about the failure, including the request-id, error code, and error type.
 
 
 Asynchronous Error Handling
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Exceptions are not thrown when sending asynchronous requests. Instead, you must
 use the ``then()`` or ``otherwise()`` method of the returned promise to
@@ -354,7 +354,7 @@ You can "unwrap" the promise and cause the exception to be thrown instead.
 **Sample Code**
 
 .. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 56
+   :lines: 57
    :language: php
 
 .. literalinclude:: example_code/s3/ErrorHandling.php

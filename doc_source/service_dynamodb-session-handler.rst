@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=========================================================
+#########################################################
 Using the |DDB| Session Handler with |sdk-php| version 3
-=========================================================
+#########################################################
 
 .. meta::
    :description: Programing Amazon DynamoDB using the AWS SDK for PHP..
@@ -37,10 +37,10 @@ For more information about the |DDB| service, see the
 `Amazon DynamoDB homepage <https://aws.amazon.com/dynamodb/>`_.
 
 Basic Usage
------------
+===========
 
 Step 1: Register the Handler
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 First, instantiate and register the session handler.
 
@@ -57,7 +57,7 @@ First, instantiate and register the session handler.
 .. _create-a-table-for-storing-your-sessions:
 
 Step 2. Create a Table to Store Your Sessions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 Before you can actually use the session handler, you need to create a table in
 which to store the sessions. You can this ahead of time by using the
@@ -65,7 +65,7 @@ which to store the sessions. You can this ahead of time by using the
 or by using the |sdk-php|.
 
 Step 3. Use PHP Sessions as You Normally Would
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 Once the session handler is registered and the table exists, you can write to
 and read from the session using the ``$_SESSION`` superglobal, just like you
@@ -86,7 +86,7 @@ you to simply use PHP's native session functions and interface.
     session_write_close();
 
 Configuration
--------------
+=============
 
 You can configure the behavior of the session handler using the following
 options. All options are optional, but you should be sure to understand
@@ -144,7 +144,7 @@ following code is an example with all of the configuration options specified.
     ]);
 
 Pricing
--------
+=======
 
 Aside from data storage and data transfer fees, the costs associated with using |DDB| are calculated based on
 the provisioned throughput capacity of your table (see the `Amazon DynamoDB pricing details
@@ -180,7 +180,7 @@ your |DDB| table for each of the session functions.
 .. _ddbsh-session-locking:
 
 Session Locking
----------------
+===============
 
 The |DDB| Session Handler supports pessimistic session locking to mimic the behavior of PHP's default
 session handler. By default, the |DDB| Session Handler has this feature *turned off* because it can become a performance
@@ -199,7 +199,7 @@ To enable session locking, set the ``'locking'`` option to ``true`` when you ins
 .. _ddbsh-garbage-collection:
 
 Garbage Collection
-------------------
+==================
 
 The |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``
 operations. Due to the nature of how the ``Scan`` operation works, and to find all of the expired sessions and
@@ -243,7 +243,7 @@ help you stay close to or within your provisioned throughput capacity during gar
     $sessionHandler->garbageCollect();
 
 Best Practices
---------------
+==============
 
 #. Create your sessions table in an AWS Region that is geographically closest to or in the same Region as your application
    servers. This ensures the lowest latency between your application and |DDB| database.
@@ -258,7 +258,7 @@ Best Practices
    or another scheduling mechanism, to run during off-peak hours. Use the ``'batch_config'`` option to your advantage.
 
 Required IAM Permissions
-------------------------
+========================
 
 To use the |DDB| SessionHhandler, your :doc:`configured credentials <guide_credentials>`
 must have permission to use the |DDB| table that :ref:`you created in a previous step <create-a-table-for-storing-your-sessions>`.

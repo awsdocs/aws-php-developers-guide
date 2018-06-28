@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================================================
+###########################################################
 Signing an |ESlong| Search Request with |sdk-php| version 3
-===========================================================
+###########################################################
 
 .. meta::
    :description: Sign and use Amazon Elasticsearch Service with the AWS SDK for PHP.
@@ -26,7 +26,7 @@ a client that doesn't, you can sign arbitrary PSR-7 requests with the
 built-in credential providers and signers of the |sdk-php|.
 
 Signing an |ES| Request
------------------------
+=======================
 
 |ES| uses :AWS-gr:`Signature Version 4 <signature-version-4>`.
 This means that you need to sign requests against the service's signing

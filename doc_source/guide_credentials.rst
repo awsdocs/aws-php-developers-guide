@@ -42,8 +42,10 @@ credential arguments, the SDK uses the default credential provider
 chain to find AWS credentials. The SDK uses the first provider
 in the chain that returns credentials without an error.
 
+
 The default provider chain
 looks for and uses credentials as follows, in this order:
+
 
 1. :doc:`Use credentials from environment variables <guide_credentials_environment>`.
 
@@ -83,7 +85,9 @@ You can also add credentials in these ways:
    When using a multi-factor authentication (MFA) token for two-factor authentication, use |STS| to
    give the user temporary crentials to access AWS services or use the |sdk-php|.
 
+
 * Using hard-coded credentials (not recommended).
+
 
 .. warning::
 
@@ -109,3 +113,4 @@ For more information, see `AWS Security Credentials Best Practices <https://docs
     Using a Credential Provider <guide_credentials_provider>
     Using Temporary Credentials from AWS STS <guide_credentials_temporary>
     Creating Anonymous Clients <guide_credentials_anonymous>
+

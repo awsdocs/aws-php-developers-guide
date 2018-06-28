@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=============================================
+#############################################
 Managing |IAM| Users with |sdk-php| version 3
-=============================================
+#############################################
 
 .. meta::
    :description: Create, list, update, or retrieve info about AWS Identity and Access Management (IAM) users.
@@ -29,12 +29,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Create an |IAM| User
---------------------
+====================
 
 **Imports**
 
@@ -50,7 +50,7 @@ Create an |IAM| User
 
 
 List |IAM| Users
-----------------
+================
 
 **Imports**
 
@@ -65,7 +65,7 @@ List |IAM| Users
    :language: php
 
 Update an |IAM| User
---------------------
+====================
 
 **Imports**
 
@@ -81,7 +81,7 @@ Update an |IAM| User
 
 
 Get Information about an |IAM| User
------------------------------------
+===================================
 
 **Imports**
 
@@ -96,7 +96,7 @@ Get Information about an |IAM| User
    :language: php
 
 Delete an |IAM| User
---------------------
+====================
 
 **Imports**
 

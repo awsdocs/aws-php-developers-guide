@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===================================================
+###################################################
 Managing |IAM| Access Keys with |sdk-php| version 3
-===================================================
+###################################################
 
 .. meta::
    :description: Create, delete, and get information about IAM access keys.
@@ -30,13 +30,13 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 
 Create an Access Key
---------------------
+====================
 
 
 **Imports**
@@ -48,12 +48,12 @@ Create an Access Key
 **Sample Code**
 
 .. literalinclude:: example_code/iam/CreateAccessKey.php
-   :lines: 31-45
+   :lines: 31-
    :language: php
 
 
 List Access Keys
-----------------
+================
 
 **Imports**
 
@@ -69,7 +69,7 @@ List Access Keys
 
 
 Get Information about an Access Key's Last Use
-----------------------------------------------
+==============================================
 
 **Imports**
 
@@ -84,7 +84,7 @@ Get Information about an Access Key's Last Use
    :language: php
 
 Update an Access Key
---------------------
+====================
 
 **Imports**
 
@@ -99,7 +99,7 @@ Update an Access Key
    :language: php
 
 Delete an Access Key
---------------------
+====================
 
 **Imports**
 

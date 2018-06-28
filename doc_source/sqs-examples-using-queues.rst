@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-====================================================
+####################################################
 Using Queues in |SQS| with AWS SDK for PHP version 3 
-====================================================
+####################################################
 
 .. meta::
    :description: Create or delete Amazon SQS queues, and return lists and URLs for queues using the AWS SDK for PHP version 3.
@@ -29,13 +29,13 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 
 Return a List of Queues
------------------------
+=======================
 
 **Imports**
 
@@ -50,7 +50,7 @@ Return a List of Queues
    :language: php
 
 Create a Queue
---------------
+==============
 
 **Imports**
 
@@ -65,7 +65,7 @@ Create a Queue
    :language: php
 
 Return the URL of a Queue
--------------------------
+=========================
 
 **Imports**
 
@@ -80,7 +80,7 @@ Return the URL of a Queue
    :language: php
 
 Delete a Queue
---------------
+==============
 
 **Imports**
 

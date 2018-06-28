@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==========================================
+##########################################
 Command Objects in the |sdk-php| version 3
-==========================================
+##########################################
 
 .. meta::
    :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP version 3. 
@@ -22,7 +22,7 @@ to encapsulate the parameters and handler that will be used to transfer an HTTP
 request at a later point in time.
 
 Implicit Use of Commands
-------------------------
+========================
 
 If you examine any client class, you can see that the methods corresponding to
 API operations don't actually exist. They are implemented using the
@@ -61,13 +61,13 @@ The following examples are functionally equivalent.
     $result = $s3Client->execute($command);
 
 Command Parameters
-------------------
+==================
 
 All commands support a few special parameters that are not part of a service's
 API but instead control the SDK's behavior.
 
 ``@http``
-~~~~~~~~~
+---------
 
 Using this parameter, it's possible to fine-tune how the underlying HTTP handler
 executes the request. The options you can include in the ``@http`` parameter are
@@ -82,7 +82,7 @@ the same as the ones you can set when you instantiate the client with the
     ];
 
 ``@retries``
-~~~~~~~~~~~~
+------------
 
 Like the :ref:`"retries" client option <config_retries>`, ``@retries`` controls
 how many times a command can be retried before it is considered to have failed.
@@ -99,7 +99,7 @@ Set it to ``0`` to disable retries.
      on individual commands passed to that client.
 
 Creating Command Objects
-------------------------
+========================
 
 You can create a command using a client's ``getCommand()`` method. It doesn't
 immediately execute or transfer an HTTP request, but is only executed when it is
@@ -122,7 +122,7 @@ to modify the command object before executing the command.
     $result = $s3Client->execute($command);
 
 Command HandlerList
--------------------
+===================
 
 When a command is created from a client, it is given a clone of the client's
 ``Aws\HandlerList`` object. The command is given a **clone** of the
@@ -185,7 +185,7 @@ middleware, which functions as an observer in the handler list.
 .. _command_pool:
 
 CommandPool
------------
+===========
 
 The ``Aws\CommandPool`` enables you to execute commands concurrently using an
 iterator that yields ``Aws\CommandInterface`` objects. The ``CommandPool``
@@ -313,7 +313,7 @@ objects, so we will need to map over the ``SplFileInfo`` objects to return
     $promise->then(function() { echo "Done\n"; });
 
 CommandPool Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 The ``Aws\CommandPool`` constructor accepts various configuration options.
 

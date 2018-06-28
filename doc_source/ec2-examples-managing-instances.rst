@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=======================================================
+#######################################################
 Managing |EC2| Instances Using the |sdk-php| version 3
-=======================================================
+#######################################################
 
 .. meta::
    :description: Engage with Amazon EC2 instances using the AWS SDK for PHP version 3.
@@ -28,12 +28,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe Instances
-------------------
+==================
 
 **Imports**
 
@@ -48,7 +48,7 @@ Describe Instances
    :language: php
 
 Enable and Disable Monitoring
------------------------------
+=============================
 
 
 **Imports**
@@ -64,7 +64,7 @@ Enable and Disable Monitoring
    :language: php
 
 Start and Stop an Instance
---------------------------
+==========================
 
 **Imports**
 
@@ -79,7 +79,7 @@ Start and Stop an Instance
    :language: php
 
 Reboot an Instances
--------------------
+===================
 
 **Imports**
 

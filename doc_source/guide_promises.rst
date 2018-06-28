@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===================================
+###################################
 Promises in the |sdk-php| version 3 
-===================================
+###################################
 
 .. meta::
    :description: Set up asynchronous work flow for AWS SDK for PHP version 3.
@@ -21,7 +21,7 @@ this asynchronicity allows HTTP requests to be sent concurrently. The promise
 specification used by the SDK is `Promises/A+ <https://promisesaplus.com/>`_.
 
 What Is a Promise?
-------------------
+==================
 
 A *promise* represents the eventual result of an asynchronous operation. The
 primary way of interacting with a promise is through its ``then`` method. This method
@@ -41,7 +41,7 @@ loop.
     rejecting promises).
 
 Promises in the SDK
--------------------
+===================
 
 Promises are used throughout the SDK. For example, promises are used in most
 high-level abstractions provided by the SDK: :ref:`paginators <async_paginators>`,
@@ -98,7 +98,7 @@ rejected (meaning it failed).
     );
 
 Executing Commands Concurrently
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 Multiple promises can be composed together such that they are executed
 concurrently. This can be achieved by integrating the SDK with a non-blocking
@@ -135,7 +135,7 @@ concurrently.
     mechanism for executing multiple API operations concurrently.
 
 Chaining Promises
------------------
+=================
 
 One of the best aspects of promises is that they are composable, allowing you
 to create transformation pipelines. Promises are composed by chaining ``then``
@@ -180,7 +180,7 @@ provided callbacks.
     function.
 
 Rejection Forwarding
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 You can register a callback to invoke when a promise is rejected. If an
 exception is thrown in any callback, the promise is rejected with the
@@ -190,7 +190,7 @@ the next promises in the promise chain is fulfilled with the return
 value from the ``$onRejected`` callback.
 
 Waiting on Promises
--------------------
+===================
 
 You can synchronously force promises to complete by using a promise's ``wait``
 method.
@@ -222,7 +222,7 @@ function. It simply returns the previously delivered value.
 
     $promise = $client->listTablesAsync();
     $result = $promise->wait();
-    assert($result === $promise->wait());
+    assert($result ### $promise->wait());
 
 Calling ``wait`` on a promise that has been rejected throws an exception. If
 the rejection reason is an instance of ``\Exception`` the reason is thrown.
@@ -237,7 +237,7 @@ can be obtained by calling the ``getReason`` method of the exception.
     a custom middleware that alters a rejection reason.
 
 Canceling Promises
-------------------
+==================
 
 Promises can be canceled using the ``cancel()`` method of a promise. If a
 promise has already been resolved, calling ``cancel()`` will have no
@@ -246,7 +246,7 @@ awaiting delivery from the promise. A canceled promise is rejected with a
 ``GuzzleHttp\Promise\RejectionException``.
 
 Combining Promises
-------------------
+==================
 
 You can combine promises into aggregate promises to build more sophisticated
 workflows. The ``guzzlehttp/promise`` package contains various functions that
@@ -256,7 +256,7 @@ You can find the API documentation for all of the promise collection functions
 at :aws-php-class:`namespace-GuzzleHttp.Promise </namespace-GuzzleHttp.Promise.html>`.
 
 each and each_limit
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Use the :ref:`CommandPool <command_pool>` when you have a task queue of
 ``Aws\CommandInterface`` commands to perform concurrently with a fixed pool
@@ -295,7 +295,7 @@ commands of different clients concurrently using a fixed pool size.
     $promise->wait();
 
 Promise Coroutines
-~~~~~~~~~~~~~~~~~~
+------------------
 
 One of the more powerful features of the Guzzle promises library is that it
 allows you to use promise coroutines that make writing asynchronous workflows

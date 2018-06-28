@@ -9,9 +9,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-======================================================
+######################################################
 Getting Metrics from |CWlong| with |sdk-php| version 3
-======================================================
+######################################################
 
 .. meta::
    :description: List Amazon CloudWatch metrics, retrieve alarms for metrics, and get metric statistics using the AWS SDK for PHP version 3.
@@ -29,12 +29,12 @@ The following examples show how to:
 All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
------------
+===========
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 List Metrics
-------------
+============
 
 **Imports**
 
@@ -50,7 +50,7 @@ List Metrics
 
 
 Retrieve Alarms for a Metric
-----------------------------
+============================
 
 **Imports**
 
@@ -65,7 +65,7 @@ Retrieve Alarms for a Metric
    :language: php
 
 Get Metric Statistics
----------------------
+=====================
 
 **Imports**
 

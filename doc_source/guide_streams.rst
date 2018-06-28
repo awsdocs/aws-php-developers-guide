@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==================================
+##################################
 Streams in the |sdk-php| version 3
-==================================
+##################################
 
 .. meta::
    :description: Creating a Guzzle stream decorator with the AWS SDK for PHP version 3.
@@ -40,7 +40,7 @@ can be satisfied with a string, a PHP stream resource, or an instance of
     PHP's garbage collector, so you will not need to close the stream yourself.
 
 Stream Decorators
------------------
+=================
 
 Guzzle provides several stream decorators that you can use to control how the
 SDK and Guzzle interact with the streaming resource provided as an input
@@ -49,7 +49,7 @@ to read and seek on a given stream. The following is a partial list; more can be
 found on the `GuzzleHttp\Psr7 repository <https://github.com/guzzle/psr7>`_.
 
 AppendStream
-~~~~~~~~~~~~
+------------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\AppendStream </class-GuzzleHttp.Psr7.AppendStream.html>`
 
@@ -68,7 +68,7 @@ Reads from multiple streams, one after the other.
     echo $composed(); // abc, 123. Above all listen to me.
 
 CachingStream
-~~~~~~~~~~~~~
+-------------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\CachingStream </class-GuzzleHttp.Psr7.CachingStream.html>`
 
@@ -95,7 +95,7 @@ then on disk.
     // 0
 
 InflateStream
-~~~~~~~~~~~~~
+-------------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\InflateStream </class-GuzzleHttp.Psr7.InflateStream.html>`
 
@@ -107,7 +107,7 @@ and then appends the zlib.inflate filter. The stream is then converted back
 to a Guzzle stream resource to be used as a Guzzle stream.
 
 LazyOpenStream
-~~~~~~~~~~~~~~
+--------------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\LazyOpenStream </class-GuzzleHttp.Psr7.LazyOpenStream.html>`
 
@@ -125,7 +125,7 @@ takes place on the stream.
     // The file is opened and read from only when needed.
 
 LimitStream
-~~~~~~~~~~~
+-----------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\LimitStream </class-GuzzleHttp.Psr7.LimitStream.html>`
 
@@ -149,7 +149,7 @@ chunks (e.g., the |S3| Multipart Upload API).
     // >>> 0
 
 NoSeekStream
-~~~~~~~~~~~~
+------------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\NoSeekStream </class-GuzzleHttp.Psr7.NoSeekStream.html>`
 
@@ -171,7 +171,7 @@ Wraps a stream and does not allow seeking.
     // NULL
 
 PumpStream
-~~~~~~~~~~
+----------
 
 :aws-php-class:`GuzzleHttp\\Psr7\\PumpStream </class-GuzzleHttp.Psr7.PumpStream.html>`
 
@@ -185,7 +185,7 @@ the read() function of the PumpStream. The provided callable MUST return
 false when there is no more data to read.
 
 Implementing Stream Decorators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 Creating a stream decorator is very easy thanks to the
 :aws-php-class:`GuzzleHttp\\Psr7\\StreamDecoratorTrait

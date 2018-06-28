@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-===========================================
+###########################################
 Using AWS Services with |sdk-php| version 3
-===========================================
+###########################################
 
 .. meta::
    :description: Features of AWS Services supported by the AWS SDK for PHP.

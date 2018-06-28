@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=====================
+#####################
 Additional Resources
-=====================
+#####################
 
 .. meta::
    :description: Other resources to use if you do not find your answer in the AWS SDK for PHP version 3 developer or API guide.
@@ -19,12 +19,12 @@ Additional Resources
 The following links provide additional resources you can use with the SDK for PHP version 3 \.
 
 PHP SDK Forum
----------------
+===============
 
 You can find questions and discussions on matters of interest to users of the SDK for PHP in the `PHP SDK Forum <https://forums.aws.amazon.com/forum.jspa?forumID=80>`_.
 
 PHP SDK v3 and Developer Guide on GitHub
-----------------------------------------
+========================================
 
 There are several repos on GitHub for the AWS SDK for PHP\.
 
@@ -35,6 +35,6 @@ There are several repos on GitHub for the AWS SDK for PHP\.
 * The sample code included in this guide is available in the `SDK sample code repo <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_\.
 
 PHP SDK on Gitter
------------------
+=================
 
 You can also find questions and discussions about the SDK for PHP in the `PHP SDK community <https://gitter.im/aws/aws-sdk-php>`_ on Gitter\.

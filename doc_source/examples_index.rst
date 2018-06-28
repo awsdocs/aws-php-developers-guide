@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-=================================
+#################################
 |sdk-php| version 3 Code Examples
-=================================
+#################################
 
 .. meta::
    :description: Code examples for the AWS SDK for PHP version 3.
@@ -26,6 +26,7 @@ All the example code for the |sdk-php| version 3 is available `here on GitHub <h
     Amazon CloudWatch Examples <cw-examples.rst>
     Amazon EC2 Examples <ec2-examples.rst>
     AWS IAM Examples <iam-examples.rst>
+    Amazon MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>
     Amazon SQS Examples <sqs-examples.rst>
 

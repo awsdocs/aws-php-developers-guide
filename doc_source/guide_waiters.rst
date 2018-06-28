@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==================================
+##################################
 Waiters in the |sdk-php| version 3
-==================================
+##################################
 
 .. meta::
    :description: Set up asynchronous work flow for AWS SDK for PHP version 3.
@@ -36,7 +36,7 @@ If the waiter has to poll the bucket too many times, it will throw a
 ``\RuntimeException`` exception.
 
 Waiter Configuration
---------------------
+====================
 
 Waiters are driven by an associative array of configuration options. All of the
 options used by a particular waiter have default values, but they can be
@@ -101,7 +101,7 @@ before (callable)
 .. _async_waiters:
 
 Waiting Asynchronously
-----------------------
+======================
 
 In addition to waiting synchronously, you can invoke a waiter to wait
 asynchronously while sending other requests or waiting on multiple resources

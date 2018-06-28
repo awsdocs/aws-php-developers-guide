@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-==============================================
+##############################################
 Signing |CFlong| URLs with |sdk-php| version 3
-==============================================
+##############################################
 
 .. meta::
    :description: Programing Cloud Front using the AWS SDK for PHP version 3.
@@ -18,7 +18,7 @@ Signing |CFlong| URLs with |sdk-php| version 3
 
 
 Signing |CF| URLs for Private Distributions
--------------------------------------------
+===========================================
 
 Signed URLs enable you to provide users access to your private content. A signed
 URL includes additional information (e.g., expiration time) that gives you more
@@ -119,7 +119,7 @@ but require different client-side code.
     </html>
 
 Signing |CF| Cookies for Private Distributions
-----------------------------------------------
+==============================================
 
 As an alternative to signed URLs, you can also grant clients access to a private
 distribution via signed cookies. Signed cookies enable you to provide access to

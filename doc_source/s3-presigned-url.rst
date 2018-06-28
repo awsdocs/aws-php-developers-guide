@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-============================================
+############################################
 |S3| Pre-Signed URL with |sdk-php| version 3
-============================================
+############################################
 
 .. meta::
    :description: Create direct browser access to private Amazon S3 data using the AWS SDK for PHP version 3.
@@ -25,7 +25,7 @@ retrieve. Additionally, you can limit a pre-signed request by specifying an
 expiration time.
 
 Creating a Pre-Signed Request
------------------------------
+=============================
 
 You can get the pre-signed URL to an |S3| object by using the
 ``Aws\S3\S3Client::createPresignedRequest()`` method. This method accepts an
@@ -42,7 +42,7 @@ The most common scenario is creating a pre-signed URL to GET an object.
    :language: php
 
 Creating a Pre-Signed URL
--------------------------
+=========================
 
 You can create pre-signed URLs for any |S3| operation using the
 ``getCommand`` method for creating a command object, and then calling the
@@ -57,7 +57,7 @@ returned request.
    :language: php
 
 Getting the URL to an Object
-----------------------------
+============================
 
 If you only need the public URL to an object stored in an |S3| bucket,
 you can use the ``Aws\S3\S3Client::getObjectUrl()`` method. This method
