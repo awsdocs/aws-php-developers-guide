@@ -64,7 +64,7 @@ with any custom providers.
 
     
 assumeRole provider
--------------------
+===================
 
 If you use ``Aws\Credentials\AssumeRoleCredentialProvider`` to create credentials by assuming a role,
 you need to provide ``'client'`` information with an ``StsClient`` object and
@@ -108,7 +108,7 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
 For more information regarding ``'assume_role_params'``, see :aws-php-class:`AssumeRole </api-sts-2011-06-15.html#assumerole>`.
 
 Chaining Providers
-------------------
+==================
 
 You can chain credential providers by using the
 ``Aws\Credentials\CredentialProvider::chain()`` function. This function accepts
@@ -139,7 +139,7 @@ the use of the ``chain`` function.
     }
 
 Creating a Custom Provider
---------------------------
+==========================
 
 Credential providers are simply functions that when invoked return a promise
 (``GuzzleHttp\Promise\PromiseInterface``) that is fulfilled with an
@@ -179,7 +179,7 @@ easily compose credential providers and pass them around as values.
     
     
 defaultProvider provider
-------------------------
+========================
 
 ``Aws\Credentials\CredentialProvider::defaultProvider`` is the default
 credential provider. This provider is used if you omit a ``credentials`` option
@@ -192,7 +192,7 @@ and then from an instance profile (``EcsCredentials`` first, followed by ``Ec2``
     The result of the default provider is automatically memoized.
 
 ecsCredentials provider
------------------------
+=======================
 
 ``Aws\Credentials\CredentialProvider::ecsCredentials`` attempts to load
 credentials by a ``GET`` request, whose URI is specified by the environment variable
@@ -215,7 +215,7 @@ credentials by a ``GET`` request, whose URI is specified by the environment vari
 
 
 env provider
-------------
+============
 
 ``Aws\Credentials\CredentialProvider::env`` attempts to load credentials from
 environment variables.
@@ -232,7 +232,7 @@ environment variables.
     ]);
 
 ini provider
-------------
+============
 
 ``Aws\Credentials\CredentialProvider::ini`` attempts to load credentials from
 an :doc:`ini credential file <guide_credentials_profiles>`. By default, the SDK
@@ -273,7 +273,7 @@ the function that creates the provider.
     ]);
 
 instanceProfile provider
-------------------------
+========================
 
 ``Aws\Credentials\CredentialProvider::instanceProfile`` attempts to load
 credentials from |EC2| instance profiles.
@@ -299,7 +299,7 @@ credentials from |EC2| instance profiles.
     setting the ``AWS_EC2_METADATA_DISABLED`` environment variable to ``true``.
 
 Memoizing Credentials
----------------------
+=====================
 
 At times you might need to create a credential provider that remembers the
 previous return value. This can be useful for performance when loading

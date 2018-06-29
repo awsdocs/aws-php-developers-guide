@@ -14,8 +14,7 @@
 Document History
 ================
 
-The following table describes the important changes since the last release of the *AWS SDK for PHP
-Developer Guide*.
+The following table describes the important changes since the last release of the |sdk-php-dg|.
 
 *Last major documentation update: May 9th, 2018*
 
