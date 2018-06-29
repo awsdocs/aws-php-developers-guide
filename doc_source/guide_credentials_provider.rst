@@ -89,7 +89,7 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
             'version' => '2011-06-15'
         ]),
         'assume_role_params' => [
-            'RoleArn' => 'arn:aws:iam::012345678910:role/role_name',
+            'RoleArn' => 'arn:aws:iam::123456789012:role/role_name',
             'RoleSessionName' => 'test_session',
         ]
     ]);
