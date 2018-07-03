@@ -17,13 +17,13 @@ Creating and Managing Transcoding Jobs in |EMClong| with |sdk-php| version 3
    :description: Example that shows how to create and manage conversion jobs in AWS Elemental MediaConvert using the AWS SDK for PHP version 3.
    :keywords: AWS Elemental MediaConvert Examples for PHP, Create MediaConvert Job for PHP
 
-In this example, you use the |sdk-php| version 3 to call |EMClong| and create a transcoding job. Before you begin, you will need to upload the input video to the Amazon S3 bucket you provisioned for input storage. For a list of supported input video codecs and containers, see 
+In this example, you use the |sdk-php| version 3 to call |EMClong| and create a transcoding job. Before you begin, you will need to upload the input video to the |S3| bucket you provisioned for input storage. For a list of supported input video codecs and containers, see 
 `Supported Input Codecs and Containers <https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html>`_ in the |EMC-ug|_.
 
 The following examples show how to:
 
-* Create transcoding jobs in AWS Elemental MediaConvert. :aws-php-class:`CreateJob </api-mediaconvert-2017-08-29.html#createjob>`.
-* Cancel a transcoding job from AWS Elemental MediaConvert queue. :aws-php-class:`CancelJob </api-mediaconvert-2017-08-29.html#canceljob>`
+* Create transcoding jobs in |EMClong|. :aws-php-class:`CreateJob </api-mediaconvert-2017-08-29.html#createjob>`.
+* Cancel a transcoding job from |EMClong| queue. :aws-php-class:`CancelJob </api-mediaconvert-2017-08-29.html#canceljob>`
 * Retrieve the JSON for a completed transcoding job. :aws-php-class:`GetJob </api-mediaconvert-2017-08-29.html#getjob>`
 * Retrieve a JSON array for up to 20 of the most recently created jobs. :aws-php-class:`ListJobs </api-mediaconvert-2017-08-29.html#listjobs>`
 
@@ -33,13 +33,13 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 ===========
 
-To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
+To access the MediaConvert client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`. 
 
 Create a Client
 ===============
-Configure the SDK for PHP by creating a MediaConvert client, with the region for your code. In this example, the region is set to us-west-2. Because AWS Elemental MediaConvert uses custom endpoints for each account, you must also configure the AWS.MediaConvert client class to use your account-specific endpoint. To do this, set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples-getendpoint>`.
+Configure the |sdk-php| by creating a |EMC| client, with the region for your code. In this example, the region is set to us-west-2. Because |EMClong| uses custom endpoints for each account, you must also configure the ``AWS.MediaConvert client class`` to use your account-specific endpoint. To do this, set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples-getendpoint>`.
 
 **Imports**
 
@@ -69,7 +69,7 @@ These parameters are detailed. You can use the `AWS Elemental MediaConvert conso
 Create a Job
 ============
 
-After creating the job parameters JSON, call the createJob method by invoking an AWS.MediaConvert service object, and passing the parameters. The ID of the job created is returned in the response data.
+After creating the job parameters JSON, call the createJob method by invoking an ``AWS.MediaConvert service object``, and passing the parameters. The ID of the job created is returned in the response data.
 
 
 **Sample Code**
