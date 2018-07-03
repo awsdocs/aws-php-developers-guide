@@ -28,8 +28,6 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-
-
 Return a List of Queues
 =======================
 

@@ -58,8 +58,9 @@ In addition to the minimum requirements, we recommend you also install, uninstal
 Compatibility Test
 ==================
 
-Run the :file:`compatibility-test.php` file in the SDK to verify your system can run the SDK. In addition to meeting the SDK's minimum system requirements, the compatibility test checks for optional settings and makes 
-recommendations that can help improve performance. The compatibility test outputs results either to the command line or a web browser. When reviewing test results in a browser, successful checks appear in green, warnings 
-in purple, and failures in red. When running from the command line, the result of a check appears on a separate line.
+Run the :file:`compatibility-test.php` file in the SDK to verify your system can run the SDK. In addition to meeting the SDK's minimum system requirements, the compatibility 
+test checks for optional settings and makes recommendations that can help improve performance. The compatibility test outputs results either to the command line or a web browser. 
+When reviewing test results in a browser, successful checks appear in green, warnings in purple, and failures in red. When running from the command line, the result of a check 
+appears on a separate line.
 
 When reporting an issue with the SDK, sharing the output of the compatibility test helps identify the underlying cause.

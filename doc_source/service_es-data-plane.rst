@@ -20,7 +20,7 @@ Signing an |ESlong| Search Request with |sdk-php| version 3
 to deploy, operate, and scale |ESlong|, a popular open-source search and
 analytics engine. |ES| offers direct access to the |ESlong| API. This
 means that developers can use the tools with which they’re familiar, as well
-as robust security options, such as using IAM users and roles for access
+as robust security options, such as using |IAM| users and roles for access
 control. Many |ESlong| clients support request signing, but if you're using
 a client that doesn't, you can sign arbitrary PSR-7 requests with the
 built-in credential providers and signers of the |sdk-php|.

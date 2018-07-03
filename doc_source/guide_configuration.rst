@@ -301,8 +301,7 @@ Here's an example of connecting to |DDBlong| Local:
         'endpoint' => 'http://localhost:8000'
     ]);
 
-See the `AWS General Reference <http://docs.aws.amazon.com/general/latest/gr/rande.html>`_ for a list of
-available AWS Regions and endpoints.
+See the :AWS-gr:`AWS Regions and Endpoints <rande>` for a list of available AWS Regions and endpoints.
 
 endpoint_provider
 =================
@@ -388,7 +387,7 @@ The SDK supports the following configuration options:
 .. _http_connect_timeout:
 
 connect_timeout
-^^^^^^^^^^^^^^^
+---------------
 
 A float describing the number of seconds to wait while trying to connect to a
 server. Use ``0`` to wait indefinitely (the default behavior).
@@ -409,7 +408,7 @@ server. Use ``0`` to wait indefinitely (the default behavior).
 .. _http_debug:
 
 debug
-^^^^^
+-----
 
 :Type: ``bool|resource``
 
@@ -423,7 +422,7 @@ information provided by different HTTP handlers will vary.
 .. _http_decode_content:
 
 decode_content
-^^^^^^^^^^^^^^
+--------------
 
 :Type: ``bool``
 
@@ -460,7 +459,7 @@ responses. When not enabled, compressed response bodies might be inflated with a
 .. _http_delay:
 
 delay
-^^^^^
+-----
 
 :Type: ``int``
 
@@ -470,7 +469,7 @@ used for delaying before retrying a request.
 .. _http_progress:
 
 progress
-^^^^^^^^
+--------
 
 :Type: ``callable``
 
@@ -512,7 +511,7 @@ accepts the following arguments:
 .. _http_proxy:
 
 proxy
-^^^^^
+-----
 
 :Type: ``string|array``
 
@@ -558,7 +557,7 @@ configure an "https" specific proxy.
 .. _http_sink:
 
 sink
-^^^^
+----
 
 :Type: ``resource|string|Psr\Http\Message\StreamInterface``
 
@@ -582,7 +581,7 @@ downloaded to.
 .. _http_sync:
 
 synchronous
-^^^^^^^^^^^
+-----------
 
 :Type: ``bool``
 
@@ -592,7 +591,7 @@ to block the result.
 .. _http_stream:
 
 stream
-^^^^^^
+------
 
 :Type: ``bool``
 
@@ -604,7 +603,7 @@ wrapper class to ensure that the data is streamed.
 .. _http_timeout:
 
 timeout
-^^^^^^^
+-------
 
 :Type: ``float``
 
@@ -627,7 +626,7 @@ indefinitely (the default behavior).
 .. _http_verify:
 
 verify
-^^^^^^
+------
 
 :Type: ``bool|string``
 
@@ -733,7 +732,7 @@ region
 :Type: ``string``
 :Required: true
 
-AWS Region to connect to. See the `AWS General Reference <http://docs.aws.amazon.com/general/latest/gr/rande.html>`_
+AWS Region to connect to. See the :AWS-gr:`AWS Regions and Endpoints <rande>`
 for a list of available Regions.
 
 .. code-block:: php
@@ -785,7 +784,7 @@ to "http".
         'scheme'  => 'http'
     ]);
 
-See the `AWS General Reference <http://docs.aws.amazon.com/general/latest/gr/rande.html>`_ for a list of
+See the :AWS-gr:`AWS Regions and Endpoints <rande>` for a list of
 endpoints and whether a service supports the ``http`` scheme.
 
 service
@@ -822,8 +821,8 @@ A string representing a custom signature version to use with a service
 (e.g., ``v4``, etc.). Per operation signature version MAY override this
 requested signature version, if needed.
 
-The following examples show how to configure an |S3| client to use
-`signature version 4 <http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html>`_:
+The following examples show how to configure an |S3| client to use 
+:AWS-gr:`signature version 4 <signature-version-4>`:
 
 .. code-block:: php
 

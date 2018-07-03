@@ -17,7 +17,8 @@ Getting Your Account\-Specific Endpoint for |EMClong| with |sdk-php| version 3
    :description: Example that shows how to get the account-specific endpoint for use with AWS Elemental MediaConvert. using the AWS SDK for PHP version 3.
    :keywords: AWS Elemental MediaConvert Examples
 
-In this example, you use the |sdk-php| version 3 to call |EMClong| and retrieve your account-specific endpoint. You can retrieve your endpoint URL from the service default endpoint and so do not yet need your acccount-specific endpoint. 
+In this example, you use the |sdk-php| version 3 to call |EMClong| and retrieve your account-specific endpoint. You can retrieve your endpoint 
+URL from the service default endpoint and so do not yet need your acccount-specific endpoint. 
 
 The following examples show how to:
 
@@ -25,12 +26,14 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-To access the |EMC| client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are stored. For details, see Set Up :EMC-ug:`IAM Permissions <iam-role>` in the |EMC-ug|_.
+To access the |EMC| client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are 
+stored. For details, see Set Up :EMC-ug:`IAM Permissions <iam-role>` in the |EMC-ug|_.
 
 Retrieve Endpoints
 ==================
 
-Create an object to pass the empty request parameters for the describeEndpoints method of the ``AWS.MediaConvert`` client class. To call the describeEndpoints method, create a promise for invoking an |EMClong| service object, passing the parameters. Handle the response in the promise callback.
+Create an object to pass the empty request parameters for the describeEndpoints method of the ``AWS.MediaConvert`` client class. To call the 
+describeEndpoints method, create a promise for invoking an |EMClong| service object, passing the parameters. Handle the response in the promise callback.
 
 **Imports**
 

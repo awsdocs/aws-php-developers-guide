@@ -23,12 +23,7 @@ The following examples show how to:
 * Enable actions for specified alarms using :aws-php-class:`EnableAlarmActions </api-monitoring-2010-08-01.html#enablealarmactions>`.
 * Disable actions for specified alarms using :aws-php-class:`DisableAlarmActions </api-monitoring-2010-08-01.html#disablealarmactions>`.
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
-
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
+.. include:: text/git-php-examples.txt
 
 Enable Alarm Actions
 ====================

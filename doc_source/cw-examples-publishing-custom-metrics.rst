@@ -26,7 +26,6 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-
 Publish Metric Data
 ===================
 

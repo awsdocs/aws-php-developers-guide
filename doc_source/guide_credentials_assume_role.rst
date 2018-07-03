@@ -52,7 +52,7 @@ almost no work on your part.
 Create and assign |IAM| role to an |EC2| Instance
 -------------------------------------------------
 
-1. Create an IAM client.
+1. Create an |IAM| client.
 
     **Imports**
 
@@ -91,7 +91,7 @@ Create and assign |IAM| role to an |EC2| Instance
 
     .. note::
 
-        If you use the IAM console instead of the AWS SDK, the console creates an instance profile automatically and gives it the same name as the role to which it corresponds.
+        If you use the |IAM| console instead of the |sdk-php|, the console creates an instance profile automatically and gives it the same name as the role to which it corresponds.
 
      **Sample Code**
 
@@ -108,7 +108,7 @@ Create and assign |IAM| role to an |EC2| Instance
 
 
 
-4. Create an EC2 client.
+4. Create an |EC2| client.
 
     **Imports**
 
@@ -129,7 +129,7 @@ Create and assign |IAM| role to an |EC2| Instance
        ]);
 
 
-5. Add the instance profile to a running or stopped EC2 instance. Use the instance profile name of your |IAM| role.
+5. Add the instance profile to a running or stopped |EC2| instance. Use the instance profile name of your |IAM| role.
 
      **Sample Code**
 
@@ -155,10 +155,10 @@ Using |IAM| Roles for |ECS| Tasks
 By using |IAM| roles for |ECSlong| (|ECS|) tasks, you can specify an |IAM| role that
 the containers in a task can use. This is a strategy for managing credentials
 for your applications to use, similar to the way that |EC2| instance profiles
-provide credentials to EC2 instances.
+provide credentials to |EC2| instances.
 
 Instead of creating and distributing your AWS credentials to the containers or
-using the EC2 instance’s role, you can associate an |IAM| role with an ECS task definition or
+using the |EC2| instance’s role, you can associate an |IAM| role with an ECS task definition or
 ``RunTask`` :aws-php-class:`API </api-ecs-2014-11-13.html#runtask>` operation.
 
 .. note::

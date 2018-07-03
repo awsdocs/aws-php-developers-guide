@@ -257,14 +257,14 @@ Best Practices
 #. Instead of using PHP's built-in session garbage collection triggers, schedule your garbage collection via a cron job,
    or another scheduling mechanism, to run during off-peak hours. Use the ``'batch_config'`` option to your advantage.
 
-Required IAM Permissions
+Required |IAM| Permissions
 ========================
 
 To use the |DDB| SessionHhandler, your :doc:`configured credentials <guide_credentials>`
 must have permission to use the |DDB| table that :ref:`you created in a previous step <create-a-table-for-storing-your-sessions>`.
-The following IAM policy contains the minimum permissions that you need. To use this policy, replace the Resource value
+The following |IAM| policy contains the minimum permissions that you need. To use this policy, replace the Resource value
 with the |arnlong| (ARN) of the table that you created previously. For more information about creating and
-attaching IAM policies, see :iam-ug:`Managing IAM Policies <access_policies_manage>`
+attaching |IAM| policies, see :iam-ug:`Managing IAM Policies <access_policies_manage>`
 in the |IAM-ug|.
 
 .. code-block:: js

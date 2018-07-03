@@ -102,7 +102,7 @@ You can also add credentials in these ways:
    Create a client that isn't associated with any credentials when the service allows anonymous access.
 
 
-For more information, see `AWS Security Credentials Best Practices <https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html>`_ in the |AWS-gr|.
+For more information, see |aws-credentials|_ Best Practices in the |AWS-gr|_.
 
 .. toctree::
     :maxdepth: 1

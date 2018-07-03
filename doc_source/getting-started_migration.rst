@@ -170,7 +170,7 @@ supported options.
     developers from hard-coding their AWS credentials into their projects.
 
 The Sdk Object
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 Version 3 of the |sdk-php| introduces the ``Aws\Sdk`` object as a replacement to
 ``Aws\Common\Aws``. The ``Sdk`` object acts as a client factory and is used
@@ -420,7 +420,7 @@ even been removed.
       <https://github.com/aws/aws-php-sns-message-validator>`_ that does not
       require the SDK as a dependency. This project is, however, included in the
       Phar and ZIP distributions of the SDK. You can find a getting started guide
-      `on the AWS PHP Development blog <https://aws.amazon.com/blogs/developer/receiving-amazon-sns-messages-in-php/>`_.
+      :blog:`on the AWS PHP Development blog <developer/receiving-amazon-sns-messages-in-php/>`.
     * |S3| ``AcpBuilder`` and related objects were removed.
 
 Comparing Code Samples from Both Versions of the SDK
@@ -433,7 +433,7 @@ Example: |S3| ListObjects Operation
 -----------------------------------
 
 From Version 2 of the SDK
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: php
 
@@ -463,7 +463,7 @@ From Version 2 of the SDK
     }
 
 From Version 3 of the SDK
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Key differences:
 
@@ -502,7 +502,7 @@ Example: Instantiating a Client with global Configuration
 ---------------------------------------------------------
 
 From Version 2 of the SDK
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: php
 
@@ -541,7 +541,7 @@ From Version 2 of the SDK
     // Note: DynamoDB client will be configured for us-west-2.
 
 From Version 3 of the SDK
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Key differences:
 

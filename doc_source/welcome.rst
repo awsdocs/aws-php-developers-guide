@@ -16,8 +16,7 @@ What Is the |sdk-php| Version 3?
    :description: AWS SDK for PHP version 3 enables PHP developers to use Amazon Web Services in their PHP code.
    :keywords: AWS SDK for PHP version 3, AWS for PHP, Amazon PHP, 
 
-The |sdk-php| version 3 enables PHP developers to use
-`Amazon Web Services <http://aws.amazon.com/>`_ in their PHP code, and build
+The |sdk-php| version 3 enables PHP developers to use |AWSlong|_ in their PHP code, and build
 robust applications and software using services like |S3|, |DDBlong|, |GL|, etc.
 You can get started in minutes by installing the
 SDK through Composer — by requiring the ``aws/aws-sdk-php`` package — or by
@@ -34,7 +33,7 @@ External links: :aws-php-class:`API Docs <index.html>`
 | `GitHub <https://github.com/aws/aws-sdk-php>`_
 | `Twitter <https://twitter.com/awsforphp>`_
 | `Gitter <https://gitter.im/aws/aws-sdk-php>`_
-| `Blog <https://aws.amazon.com/blogs/developer/category/php/>`_
+| :blog:`Blog <developer/category/php/>`
 | `Forum <https://forums.aws.amazon.com/forum.jspa?forumID=80>`_
 | `Packagist <https://packagist.org/packages/aws/aws-sdk-php>`_
 

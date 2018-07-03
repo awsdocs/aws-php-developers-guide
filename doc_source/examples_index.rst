@@ -18,7 +18,7 @@
 
 The |sdk-php| version 3 includes code examples that demonstrate common |AWSlong| scenarios that use the SDK.
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
 .. toctree::
     :maxdepth: 2

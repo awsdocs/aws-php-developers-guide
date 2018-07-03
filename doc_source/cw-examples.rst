@@ -24,8 +24,7 @@ You can use |CW| to collect and track metrics, which are variables you can measu
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon CloudWatch
 
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
-
+.. include:: text/git-php-examples.txt
 
 .. toctree::
     :maxdepth: 1
