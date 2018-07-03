@@ -27,7 +27,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 .. toctree::
     :maxdepth: 1
 
-    Managing Amazon EC2 Instances Using the AWS SDK for PHP <ec2-examples-managing-instances.rst>
+    Managing Amazon EC2 Instances <ec2-examples-managing-instances.rst>
     Using Elastic IP Addresses with Amazon EC2 <ec2-examples-using-elastic-ip-addresses.rst>
     Using Regions and Availability Zones for Amazon EC2 <ec2-examples-using-regions-and-zones.rst>
     Working with Amazon EC2 Key Pairs <ec2-examples-working-with-key-pairs.rst>
