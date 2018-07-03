@@ -26,12 +26,8 @@ The following examples show how to:
 * Associate an Elastic IP address with an instance using :aws-php-class:`AssociateAddress </api-ec2-2016-11-15.html#associateaddress>`.
 * Release an Elastic IP address using :aws-php-class:`ReleaseAddress </api-ec2-2016-11-15.html#releaseaddress>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe an Instance
 ====================

@@ -25,12 +25,8 @@ The following examples show how to:
 * Update a certificate using :aws-php-class:`UpdateServerCertificate <api-iam-2010-05-08.html#updateservercertificate>`.
 * Delete a certificate using :aws-php-class:`DeleteServerCertificate <api-iam-2010-05-08.html#deleteservercertificate>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 List Server Certificates
 ========================

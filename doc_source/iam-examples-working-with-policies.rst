@@ -25,12 +25,8 @@ The following examples show how to:
 * Attach a policy to a user using :aws-php-class:`AttachUserPolicy <api-iam-2010-05-08.html#attachuserpolicy>`.
 * Remove a user policy using :aws-php-class:`DetachUserPolicy <api-iam-2010-05-08.html#detachuserpolicy>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`.
 
 Create a Policy
 ===============

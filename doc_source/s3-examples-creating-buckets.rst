@@ -22,12 +22,7 @@ The following examples show how to:
 * Create a new bucket using :aws-php-class:`CreateBucket <api-s3-2006-03-01.html#createbucket>`.
 * Add an object to a bucket using :aws-php-class:`PutObject <api-s3-2006-03-01.html#putobject>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
-
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`. Then import the |sdk-php|.
+.. include:: text/git-php-examples.txt
 
 **Imports**
 

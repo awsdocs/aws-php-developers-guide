@@ -24,12 +24,8 @@ The following example shows how to:
 * Replace a policy on a bucket using :aws-php-class:`PutBucketPolicy <api-s3-2006-03-01.html#putbucketpolicy>`.
 * Delete a policy from a bucket using :aws-php-class:`DeleteBucketPolicy <api-s3-2006-03-01.html#deletebucketpolicy>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 
 Get, Delete, and Replace a Policy on a Bucket

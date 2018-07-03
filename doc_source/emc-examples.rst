@@ -26,7 +26,7 @@
 
 The PHP API for |EMClong| is exposed through the `AWS.MediaConvert` client class\. For more information, see :aws-php-class:`Class: AWS.MediaConvert </api-mediaconvert-2017-08-29.html>` in the API reference\.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
 .. toctree::
     :maxdepth: 1

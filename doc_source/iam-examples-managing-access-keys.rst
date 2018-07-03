@@ -27,12 +27,8 @@ The following examples show how to:
 * Change the status of an access key from Active to Inactive, or vice versa, using :aws-php-class:`UpdateAccessKey <api-iam-2010-05-08.html#updateaccesskey>`.
 * Delete an access key pair associated with an |IAM| user using :aws-php-class:`DeleteAccessKey <api-iam-2010-05-08.html#deleteaccesskey>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 
 Create an Access Key

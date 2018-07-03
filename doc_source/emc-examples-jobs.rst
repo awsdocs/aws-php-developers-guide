@@ -28,14 +28,10 @@ The following examples show how to:
 * Retrieve a JSON array for up to 20 of the most recently created jobs. :aws-php-class:`ListJobs </api-mediaconvert-2017-08-29.html#listjobs>`
 
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
-
-Credentials
-===========
+.. include:: text/git-php-examples.txt
 
 To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
 
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`. 
 
 Create a Client
 ===============

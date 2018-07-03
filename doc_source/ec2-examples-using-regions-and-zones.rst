@@ -24,12 +24,8 @@ The following examples show how to:
 * Describe the Availability Zones that are available to you using :aws-php-class:`DescribeAvailabilityZones </api-ec2-2016-11-15.html#describeavailabilityzones>`.
 * Describe AWS Regions that are currently available to you using :aws-php-class:`DescribeRegions </api-ec2-2016-11-15.html#describeregions>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe Availability Zones
 ===========================

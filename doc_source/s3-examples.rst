@@ -21,7 +21,7 @@
 .. image:: images/code-samples-s3.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon S3
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
 .. toctree::
     :maxdepth: 1

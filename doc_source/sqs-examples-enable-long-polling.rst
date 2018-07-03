@@ -27,12 +27,8 @@ The following examples show how to:
 * Retrieve one or more messages with long polling using :aws-php-class:`ReceiveMessage <api-sqs-2012-11-05.html#receivemessage>`.
 * Create a long polling queue using :aws-php-class:`CreateQueue <api-sqs-2012-11-05.html#createqueue>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Set Attributes on a Queue to Enable Long Polling
 ================================================

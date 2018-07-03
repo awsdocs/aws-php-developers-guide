@@ -26,12 +26,8 @@ The following example shows how to:
 
 * Enable a dead letter queue using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Enable a Dead Letter Queue
 ==========================

@@ -28,12 +28,8 @@ The following examples show how to:
 * Retrieve one or more messages (up to 10) from a specified queue using :aws-php-class:`ReceiveMessage <api-sqs-2012-11-05.html#receivemessage>`.
 * Delete a message from a queue using :aws-php-class:`DeleteMessage <api-sqs-2012-11-05.html#deletemessage>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Send a Message
 ==============

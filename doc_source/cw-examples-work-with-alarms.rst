@@ -25,12 +25,8 @@ The following examples show how to:
 * Create an alarm using :aws-php-class:`PutMetricAlarm <api-monitoring-2010-08-01.html#putmetricalarm>`.
 * Delete an alarm using :aws-php-class:`DeleteAlarms <api-monitoring-2010-08-01.html#deletealarms>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Describe Alarms
 ===============

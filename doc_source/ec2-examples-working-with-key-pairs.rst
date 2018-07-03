@@ -26,12 +26,8 @@ The following examples show how to:
 * Delete a specified key pair using :aws-php-class:`DeleteKeyPair </api-ec2-2016-11-15.html#deletekeypair>`.
 * Describe one or more of your key pairs using :aws-php-class:`DescribeKeyPairs </api-ec2-2016-11-15.html#describekeypairs>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Create a Key Pair
 =================

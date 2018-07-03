@@ -26,12 +26,8 @@ The following examples show how to:
 * Return the URL of an existing queue using :aws-php-class:`GetQueueUrl <api-sqs-2012-11-05.html#getqueueurl>`.
 * Delete a specified queue using :aws-php-class:`DeleteQueue <api-sqs-2012-11-05.html#deletequeue>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 
 Return a List of Queues

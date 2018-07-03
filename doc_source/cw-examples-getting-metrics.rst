@@ -26,12 +26,8 @@ The following examples show how to:
 * Retrieve alarms for a metric using :aws-php-class:`DescribeAlarmsForMetric </api-monitoring-2010-08-01.html#describealarmsformetric>`.
 * Get statistics for a specified metric using :aws-php-class:`GetMetricStatistics </api-monitoring-2010-08-01.html#getmetricstatistics>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 List Metrics
 ============

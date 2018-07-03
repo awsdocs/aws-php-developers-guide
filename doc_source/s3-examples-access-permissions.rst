@@ -25,12 +25,8 @@ The following example shows how to:
 * Get the access control policy for a bucket using :aws-php-class:`GetBucketAcl <api-s3-2006-03-01.html#getbucketacl>`.
 * Set the permissions on a bucket using ACLs, using :aws-php-class:`PutBucketAcl <api-s3-2006-03-01.html#putbucketacl>`.
 
-All the example code for the |sdk-php| is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+.. include:: text/git-php-examples.txt
 
-Credentials
-===========
-
-Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
 Get and Set an Access Control List Policy
 =========================================
