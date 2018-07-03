@@ -28,7 +28,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 ===========
 
-To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
+To access the |EMC| client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are stored. For details, see Set Up :EMC-ug:`IAM Permissions <iam-role>` in the |EMC-ug|_.
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`.
 
@@ -36,7 +36,7 @@ Before running the example code, configure your AWS credentials. See :doc:`guide
 Retrieve Endpoints
 ==================
 
-Create an object to pass the empty request parameters for the describeEndpoints method of the AWS.MediaConvert client class. To call the describeEndpoints method, create a promise for invoking an AWS Elemental MediaConvert service object, passing the parameters. Handle the response in the promise callback.
+Create an object to pass the empty request parameters for the describeEndpoints method of the ``AWS.MediaConvert`` client class. To call the describeEndpoints method, create a promise for invoking an |EMClong| service object, passing the parameters. Handle the response in the promise callback.
 
 **Imports**
 
@@ -48,7 +48,7 @@ Create an object to pass the empty request parameters for the describeEndpoints 
 
 **Sample Code**
 
-Define the region in which to get the endpoint, and create an *AWSMediaConvert* client object:
+Define the region in which to get the endpoint, and create an |EMC| client object:
 
 .. literalinclude:: example_code/mediaconvert/GetEndpoint.php
    :lines: 32-36
