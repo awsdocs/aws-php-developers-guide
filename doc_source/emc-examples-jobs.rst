@@ -33,7 +33,7 @@ All the example code for the |sdk-php| is available `here on GitHub <https://git
 Credentials
 ===========
 
-To access the MediaConvert client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are stored. For details, see Set Up `IAM Permissions <https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html>`_ in the |EMC-ug|_.
+To access the MediaConvert client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are stored. For details, see Set Up :EMC-ug:`IAM Permissions <iam-role>` in the |EMC-ug|_.
 
 Before running the example code, configure your AWS credentials. See :doc:`guide_credentials`. 
 
