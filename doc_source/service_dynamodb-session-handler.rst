@@ -258,7 +258,7 @@ Best Practices
    or another scheduling mechanism, to run during off-peak hours. Use the ``'batch_config'`` option to your advantage.
 
 Required |IAM| Permissions
-========================
+==========================
 
 To use the |DDB| SessionHhandler, your :doc:`configured credentials <guide_credentials>`
 must have permission to use the |DDB| table that :ref:`you created in a previous step <create-a-table-for-storing-your-sessions>`.

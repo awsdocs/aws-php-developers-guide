@@ -23,4 +23,4 @@ All the example code for the |sdk-php| version 3 is available `here on GitHub <h
 Credentials
 ===========
 
-Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`. Then import the |sdk-php|, as described in :doc:`guide_basic_usage`.
+Before running the example code, configure your AWS credentials, as described in :doc:`guide_credentials`. Then import the |sdk-php|, as described in :doc:`getting-started_basic-usage`.
