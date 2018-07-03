@@ -74,7 +74,7 @@ Middleware
 
 Operation
     Refers to a single operation within a service's API (e.g., ``CreateTable``
-    for DynamoDB, ``RunInstances`` for EC2). In the SDK, operations are
+    for |DDB|, ``RunInstances`` for |EC2|). In the SDK, operations are
     executed by calling a method of the same name on the corresponding service's
     client object. Executing an operation involves preparing and sending an HTTP
     request to the service and parsing the response. This process of executing
