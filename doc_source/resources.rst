@@ -26,9 +26,9 @@ You can find questions and discussions on matters of interest to users of the SD
 PHP SDK v3 and Developer Guide on GitHub
 ========================================
 
-There are several repos on GitHub for the AWS SDK for PHP\.
+There are several repos on GitHub for the |sdk-php|\.
 
-* The current SDK for PHP is available in the `SDK repo <https://github.com/aws/aws-sdk-php>`_\.
+* The current |sdk-php| is available in the `SDK repo <https://github.com/aws/aws-sdk-php>`_\.
 
 * The SDK for PHP Developer Guide is available in restructured text format in its own `documentation repo <https://github.com/awsdocs/aws-php-developers-guide>`_\.
 
@@ -37,4 +37,4 @@ There are several repos on GitHub for the AWS SDK for PHP\.
 PHP SDK on Gitter
 =================
 
-You can also find questions and discussions about the SDK for PHP in the `PHP SDK community <https://gitter.im/aws/aws-sdk-php>`_ on Gitter\.
+You can also find questions and discussions about the |sdk-php| in the `PHP SDK community <https://gitter.im/aws/aws-sdk-php>`_ on Gitter\.

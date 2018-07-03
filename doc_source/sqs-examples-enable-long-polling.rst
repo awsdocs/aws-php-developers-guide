@@ -23,7 +23,7 @@ long polling, you must specify a non-zero wait time for received messages. To le
 
 The following examples show how to:
 
-* Set attributes on an SQS queue to enable long polling, using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
+* Set attributes on an |SQS| queue to enable long polling, using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
 * Retrieve one or more messages with long polling using :aws-php-class:`ReceiveMessage <api-sqs-2012-11-05.html#receivemessage>`.
 * Create a long polling queue using :aws-php-class:`CreateQueue <api-sqs-2012-11-05.html#createqueue>`.
 

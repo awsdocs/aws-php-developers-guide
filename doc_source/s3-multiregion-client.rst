@@ -9,7 +9,7 @@
    limitations under the License.
 
 #######################################################
-|S3| Multi-Region Client with AWS SDK for PHP version 3 
+|S3| Multi-Region Client with |sdk-php| version 3 
 #######################################################
 
 .. meta::
@@ -21,7 +21,7 @@ The |sdk-php| version 3 provides a generic multi-region client that can be used 
 any service. This enables users to specify which AWS Region to send a command to by
 providing an ``@region`` input parameter to any command. In addition, the SDK
 provides a multi-region client for |S3| that responds intelligently to
-specific S3 errors and reroutes commands accordingly. This enables users to use
+specific |S3| errors and reroutes commands accordingly. This enables users to use
 the same client to talk to multiple Regions. This is a particularly useful feature for
 users of the :doc:`s3-stream-wrapper`, whose buckets reside in multiple
 Regions.
@@ -59,8 +59,8 @@ parameter.
 
 .. important::
 
-    When using the multi-region S3 client, you will not encounter any permanent
-    redirect exceptions. A standard S3 client will throw an instance of
+    When using the multi-region |S3| client, you will not encounter any permanent
+    redirect exceptions. A standard |S3| client will throw an instance of
     ``Aws\S3\Exception\PermanentRedirectException`` when a command is sent to
     the wrong Region. A multi-region client will instead redispatch the command
     to the correct Region.

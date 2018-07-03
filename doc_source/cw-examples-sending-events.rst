@@ -17,7 +17,7 @@ Sending Events to |CWElong| with |sdk-php| version 3
    :description: Create rules and add targets to them, and send custom events to Amazon CloudWatch Events using the AWS SDK for PHP version 3.
    :keywords: Amazon CloudWatch code examples for PHP
 
-|CWE| delivers a near real-time stream of system events that describe changes in Amazon Web Services (AWS) resources to any of various targets. Using simple rules, you can match events and route them to one or more target functions or streams.
+|CWE| delivers a near real-time stream of system events that describe changes in |AWSlong| (AWS) resources to any of various targets. Using simple rules, you can match events and route them to one or more target functions or streams.
 
 The following examples show how to:
 
