@@ -31,7 +31,7 @@ the |sdk-php|. Composer is a tool for PHP that manages and installs the dependen
 1. For Linux, type the following at the command line to install Composer.
 
   ::
-  
+
        curl -sS https://getcomposer.org/installer | php -- --check
        
   .. note::
