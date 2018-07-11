@@ -28,20 +28,22 @@ Installing by Using Composer
 `Composer <http://getcomposer.org>`_ is the recommended way to install
 the |sdk-php|. Composer is a tool for PHP that manages and installs the dependencies of your project.
 
-1. For Linux, type the following at the command line to install Composer.
+1. Install `Composer <http://getcomposer.org/download>`_. 
 
-  ::
-
-       curl -sS https://getcomposer.org/installer | php -- --check
-       
-  .. note::
-  
-       For Windows, download and run `Composer-Setup.exe <https://getcomposer.org/Composer-Setup.exe>`_ to install Composer.
-     
-
-2. Type the Composer command to install the latest stable version of the SDK.
+   For **Windows**, download and run the `Composer-Setup.exe <https://getcomposer.org/Composer-Setup.exe>`_. 
+   
+   For **Linux**, type the following at the command line to install Composer.
 
    ::
+
+
+       curl -sS https://getcomposer.org/installer | php -- --check
+
+
+2. Type the Composer command to install the latest stable version of the |sdk-php|.
+
+   ::
+
 
        php -d memory_limit=-1 composer.phar require aws/aws-sdk-php
 
