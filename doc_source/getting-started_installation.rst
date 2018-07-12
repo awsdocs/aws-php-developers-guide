@@ -40,7 +40,7 @@ the |sdk-php|. Composer is a tool for PHP that manages and installs the dependen
        curl -sS https://getcomposer.org/installer | php -- --check
 
 
-2. Type the Composer command to install the latest stable version of the |sdk-php|.
+2. Type the Composer command to install the latest version of the |sdk-php|.
 
    ::
 
