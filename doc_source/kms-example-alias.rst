@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-###############################################################
+################################################################
 Working with Aliases using |KMS| API and the |sdk-php| version 3
-###############################################################
+################################################################
 
 .. meta::
    :description: Use AWS KMS API to create, view, update and delete aliases.
