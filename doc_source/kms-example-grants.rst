@@ -25,8 +25,11 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
+For more information about using KMS, check out the |KMS-dg|_.
+
 Create a Grant
 ==============
+To create a grant for an |KMS| customer master key, use the :KMS-api:`CreateGrant operation.
 
 **Imports**
 
@@ -44,6 +47,9 @@ Create a Grant
 View a Grant
 ============
 
+To get detailed information about the grants on an |KMS| customer master key, use the :KMS-api:`ListGrants <API_ListGrants>` operation.
+
+
 **Imports**
 
 .. literalinclude::  example_code/kms/ListGrants.php
@@ -59,6 +65,8 @@ View a Grant
 Retire a Grant
 ==============
 
+To retire a grant for an |KMS| customer master key, use the :KMS-api:`RetireGrant <API_RetireGrant>` operation. You should retire a grant to clean up after you are done using it.
+
 **Imports**
 
 .. literalinclude::  example_code/kms/RetireGrant.php
@@ -73,6 +81,8 @@ Retire a Grant
 
 Revoke a Grant
 ==============
+
+To revoke a grant to an |KMS| customer master key, use the :KMS-api:`RevokeGrant <API_RevokeGrant>` operation. You can revoke a grant to explicitly deny operations that depend on it.
 
 **Imports**
 

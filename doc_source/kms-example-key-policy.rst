@@ -25,8 +25,12 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
+For more information about using KMS, check out the |KMS-dg|_.
+
 List all Key Policies
 =====================
+
+To get the names of key policies for a customer master key, use the ListKeyPolicies operation. The only key policy name it returns is default.
 
 **Imports**
 
@@ -43,6 +47,9 @@ List all Key Policies
 Retrieve a Key Policy
 =====================
 
+To get the key policy for a customer master key, use the GetKeyPolicy operation.
+
+GetKeyPolicy requires a policy name. The only valid policy name is default.
 
 **Imports**
 
@@ -58,6 +65,10 @@ Retrieve a Key Policy
 
 Set a Key Policy
 ================
+
+To establish or change a key policy for a CMK, use the PutKeyPolicy operation.
+
+PutKeyPolicy requires a policy name. The only valid policy name is default.
 
 **Imports**
 

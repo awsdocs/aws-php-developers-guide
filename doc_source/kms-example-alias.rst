@@ -27,8 +27,14 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-Create a Grant
-==============
+For more information about using KMS, check out the |KMS-dg|_.
+
+Create an Alias
+===============
+
+To create an alias, use the :KMS-api:`CreateAlias <API_CreateAlias>` operation. The alias must be unique in the account and region. 
+If you create an alias for a CMK that already has an alias, CreateAlias creates another alias to the same CMK. It does not replace the existing alias.
+
 
 **Imports**
 
@@ -43,8 +49,11 @@ Create a Grant
    :language: php
 
 
-View a Grant
-============
+View an Alias
+=============
+
+To list all aliases, use the :KMS-api:`ListAliases <API_ListAliases>` operation. The response includes aliases that are defined by AWS services, but are not associated with a CMK.
+
 
 **Imports**
 
@@ -58,8 +67,10 @@ View a Grant
    :lines: 33-
    :language: php
 
-Retire a Grant
-==============
+Update an Alias
+===============
+
+To associate an existing alias with a different CMK, use the :KMS-api:`UpdateAlias <API_UpdateAlias>` operation.
 
 **Imports**
 
@@ -73,8 +84,10 @@ Retire a Grant
    :lines: 30-42
    :language: php
 
-Revoke a Grant
-==============
+Delete an Alias
+===============
+
+To delete an alias, use the :KMS-api:`DeleteAlias <API_DeleteAlias>` operation. Deleting an alias has no effect on the underlying CMK.
 
 **Imports**
 
