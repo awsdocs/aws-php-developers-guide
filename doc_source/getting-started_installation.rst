@@ -28,7 +28,7 @@ Installing by Using Composer
 `Composer <http://getcomposer.org>`_ is the recommended way to install
 the |sdk-php|. Composer is a tool for PHP that manages and installs the dependencies of your project.
 
-1. Install `Composer <http://getcomposer.org/download>`_. 
+1. Download and `install Composer <http://getcomposer.org/download>`_. 
 
    For **Windows**, download and run the `Composer-Setup.exe <https://getcomposer.org/Composer-Setup.exe>`_. 
    

@@ -26,6 +26,7 @@ The |sdk-php| version 3 includes code examples that demonstrate common |AWSlong|
     Amazon CloudWatch Examples <cw-examples.rst>
     Amazon EC2 Examples <ec2-examples.rst>
     AWS IAM Examples <iam-examples.rst>
+    AWS Key Management Service <kms-examples>
     Amazon MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>
     Amazon SQS Examples <sqs-examples.rst>
