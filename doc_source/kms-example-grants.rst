@@ -77,7 +77,7 @@ To retire a grant for an |KMS| customer master key, use the :KMS-api:`RetireGran
 **Sample Code**
 
 .. literalinclude:: example_code/kms/RetireGrant.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 
 Revoke a Grant
@@ -94,6 +94,6 @@ To revoke a grant to an |KMS| customer master key, use the :KMS-api:`RevokeGrant
 **Sample Code**
 
 .. literalinclude:: example_code/kms/RevokeGrant.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 

@@ -19,7 +19,7 @@ Working with Keys using |KMS| API and the |sdk-php| version 3
 The following examples show how to:
 
 * Creating a Customer Master Key :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
-* Generating a Data Key:aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
+* Generating a Data Key :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
 * Viewing a Custom Master Key :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
 * Getting Key IDs and Key ARNS of Customer Master Keys :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
 * Enabling Customer Master Keys :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
@@ -96,7 +96,7 @@ To get the IDs and ARNs of the customer master keys, use the :KMS-api:`ListAlias
 **Sample Code**
 
 .. literalinclude:: example_code/kms/ListKeys.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 
 Enable Custom Master Key
@@ -113,7 +113,7 @@ To enable a disabled customer master key (CMK), use the :KMS-api:`EnableKey <API
 **Sample Code**
 
 .. literalinclude:: example_code/kms/EnableKey.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 
 Disable Custom Master Key
@@ -130,5 +130,5 @@ To disable a CMK, use the :KMS-api:`DisableKey <API_DisableKey>` operation. Disa
 **Sample Code**
 
 .. literalinclude:: example_code/kms/DisableKey.php
-   :lines: 30-42
+   :lines: 33-
    :language: php

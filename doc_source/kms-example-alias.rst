@@ -81,7 +81,7 @@ To associate an existing alias with a different CMK, use the :KMS-api:`UpdateAli
 **Sample Code**
 
 .. literalinclude:: example_code/kms/UpdateAlias.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 
 Delete an Alias
@@ -98,6 +98,6 @@ To delete an alias, use the :KMS-api:`DeleteAlias <API_DeleteAlias>` operation. 
 **Sample Code**
 
 .. literalinclude:: example_code/kms/DeleteAlias.php
-   :lines: 30-42
+   :lines: 33-
    :language: php
 
