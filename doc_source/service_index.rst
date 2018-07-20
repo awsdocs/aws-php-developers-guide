@@ -9,14 +9,14 @@
    limitations under the License.
 
 ###########################################
-Using AWS Services with |sdk-php| version 3
+Using AWS Services with |sdk-php| Version 3
 ###########################################
 
 .. meta::
    :description: Features of AWS Services supported by the AWS SDK for PHP.
    :keywords: AWS for PHP, AWS SDK for PHP examples
 
-Some of the AWS services supported by the |sdk-php| version 3 include additional
+Some of the AWS services supported by the |sdk-php| Version 3 include additional
 features beyond executing operations on an API. This guide documents these
 higher-level features per service.
 

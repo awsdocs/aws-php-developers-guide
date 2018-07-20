@@ -9,14 +9,14 @@
    limitations under the License.
 
 ##################################
-Installing the |sdk-php| version 3
+Installing the |sdk-php| Version 3
 ##################################
 
 .. meta::
    :description:  Install the AWS SDK for PHP version 3. 
    :keywords: AWS SDK for PHP version 3, php for aws, install AWS SDK for PHP version 3
    
-You can install the |sdk-php| version 3 by using:
+You can install the |sdk-php| Version 3 by using:
 
 * Composer
 * The prepackaged phar in the SDK

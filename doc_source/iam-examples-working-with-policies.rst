@@ -9,7 +9,7 @@
    limitations under the License.
 
 ####################################################
-Working with |IAM| Policies with |sdk-php| version 3
+Working with |IAM| Policies with |sdk-php| Version 3
 ####################################################
 
 .. meta::

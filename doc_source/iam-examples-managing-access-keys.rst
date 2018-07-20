@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###################################################
-Managing |IAM| Access Keys with |sdk-php| version 3
+Managing |IAM| Access Keys with |sdk-php| Version 3
 ###################################################
 
 .. meta::

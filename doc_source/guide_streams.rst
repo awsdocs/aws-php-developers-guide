@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##################################
-Streams in the |sdk-php| version 3
+Streams in the |sdk-php| Version 3
 ##################################
 
 .. meta::

@@ -9,7 +9,7 @@
    limitations under the License.
 
 #####################################################
-Working with |EC2| Key Pairs with |sdk-php| version 3
+Working with |EC2| Key Pairs with |sdk-php| Version 3
 #####################################################
 
 .. meta::

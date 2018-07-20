@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################################
-Publishing Custom Metrics in |CWlong| with |sdk-php| version 3
+Publishing Custom Metrics in |CWlong| with |sdk-php| Version 3
 ##############################################################
 
 .. meta::

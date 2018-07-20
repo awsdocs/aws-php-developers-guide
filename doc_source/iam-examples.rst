@@ -9,7 +9,7 @@
    limitations under the License.
 
 ################################################
-AWS |IAM| Examples Using the |sdk-php| version 3
+AWS |IAM| Examples Using the |sdk-php| Version 3
 ################################################
 
 .. meta::

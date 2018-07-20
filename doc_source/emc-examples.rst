@@ -9,7 +9,7 @@
    limitations under the License.
 
 ################################################
-|EMClong| Examples Using the |sdk-php| version 3
+|EMClong| Examples Using the |sdk-php| Version 3
 ################################################
 
 .. meta::

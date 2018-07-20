@@ -9,7 +9,7 @@
    limitations under the License.
 
 #######################################################
-|S3| Multi-Region Client with |sdk-php| version 3 
+|S3| Multi-Region Client with |sdk-php| Version 3 
 #######################################################
 
 .. meta::
@@ -17,7 +17,7 @@
    :keywords: Amazon S3, AWS SDK for PHP version 3 examples, Amazon S3 for PHP version 3 code examples
 
 
-The |sdk-php| version 3 provides a generic multi-region client that can be used with
+The |sdk-php| Version 3 provides a generic multi-region client that can be used with
 any service. This enables users to specify which AWS Region to send a command to by
 providing an ``@region`` input parameter to any command. In addition, the SDK
 provides a multi-region client for |S3| that responds intelligently to

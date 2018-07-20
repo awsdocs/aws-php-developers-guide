@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###################################
-Promises in the |sdk-php| version 3 
+Promises in the |sdk-php| Version 3 
 ###################################
 
 .. meta::

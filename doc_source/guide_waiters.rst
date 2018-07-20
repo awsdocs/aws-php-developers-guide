@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##################################
-Waiters in the |sdk-php| version 3
+Waiters in the |sdk-php| Version 3
 ##################################
 
 .. meta::

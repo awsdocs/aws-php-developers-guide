@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###############################################################
-Working with |IAM| Server Certificates with |sdk-php| version 3
+Working with |IAM| Server Certificates with |sdk-php| Version 3
 ###############################################################
 
 .. meta::

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################
-Signing |CFlong| URLs with |sdk-php| version 3
+Signing |CFlong| URLs with |sdk-php| Version 3
 ##############################################
 
 .. meta::

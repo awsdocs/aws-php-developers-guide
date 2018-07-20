@@ -9,7 +9,7 @@
    limitations under the License.
 
 ############################################
-|EC2| Examples Using the |sdk-php| version 3
+|EC2| Examples Using the |sdk-php| Version 3
 ############################################
 
 .. meta::

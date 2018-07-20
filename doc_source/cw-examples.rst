@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###############################################
-|CWlong| Examples Using the |sdk-php| version 3
+|CWlong| Examples Using the |sdk-php| Version 3
 ###############################################
 
 .. meta::

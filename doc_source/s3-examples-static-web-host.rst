@@ -10,7 +10,7 @@
 
 
 ###################################################################
-Using an |S3| Bucket as a Static Web Host with |sdk-php| version 3
+Using an |S3| Bucket as a Static Web Host with |sdk-php| Version 3
 ###################################################################
 
 .. meta::
@@ -25,7 +25,7 @@ The following example shows how to:
 * Set the website configuration for a bucket using :aws-php-class:`PutBucketWebsite <api-s3-2006-03-01.html#putbucketwebsite>`.
 * Remove the website configuration from a bucket using :aws-php-class:`DeleteBucketWebsite <api-s3-2006-03-01.html#deletebucketwebsite>`.
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 Credentials
 ===========

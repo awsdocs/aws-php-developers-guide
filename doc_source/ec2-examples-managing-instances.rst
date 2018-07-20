@@ -9,7 +9,7 @@
    limitations under the License.
 
 #######################################################
-Managing |EC2| Instances Using the |sdk-php| version 3
+Managing |EC2| Instances Using the |sdk-php| Version 3
 #######################################################
 
 .. meta::

@@ -10,7 +10,7 @@
 
 
 #######################################################
-Enabling Long Polling in |SQS| with |sdk-php| version 3 
+Enabling Long Polling in |SQS| with |sdk-php| Version 3 
 #######################################################
 
 .. meta::

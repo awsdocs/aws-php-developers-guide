@@ -23,7 +23,7 @@ more information about |KMS|, see the `Amazon KMS documentation <http://aws.amaz
 .. image:: images/code-samples-kms.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon KMS
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
    :maxdepth: 1

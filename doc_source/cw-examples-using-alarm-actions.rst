@@ -9,7 +9,7 @@
    limitations under the License.
 
 #################################################################
-Using Alarm Actions with |CWlong| Alarms with |sdk-php| version 3
+Using Alarm Actions with |CWlong| Alarms with |sdk-php| Version 3
 #################################################################
 
 .. meta::

@@ -10,7 +10,7 @@
 
 
 ################################################################
-Sending and Receiving Messages in |SQS| with |sdk-php| version 3 
+Sending and Receiving Messages in |SQS| with |sdk-php| Version 3 
 ################################################################
 
 .. meta::

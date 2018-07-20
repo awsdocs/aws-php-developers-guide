@@ -10,7 +10,7 @@
    limitations under the License.
 
 ######################################################
-Getting Metrics from |CWlong| with |sdk-php| version 3
+Getting Metrics from |CWlong| with |sdk-php| Version 3
 ######################################################
 
 .. meta::

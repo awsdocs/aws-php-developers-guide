@@ -9,7 +9,7 @@
    limitations under the License.
 
 #####################################
-Configuring the |sdk-php| version 3
+Configuring the |sdk-php| Version 3
 #####################################
 
 The |sdk-php| consists of various features and components. Each of the

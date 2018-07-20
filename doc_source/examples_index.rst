@@ -9,14 +9,14 @@
    limitations under the License.
 
 #################################
-|sdk-php| version 3 Code Examples
+|sdk-php| Version 3 Code Examples
 #################################
 
 .. meta::
    :description: Code examples for the AWS SDK for PHP version 3.
    :keywords:
 
-The |sdk-php| version 3 includes code examples that demonstrate common |AWSlong| scenarios that use the SDK.
+The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong| scenarios that use the SDK.
 
 .. include:: text/git-php-examples.txt
 

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################################
-Using Elastic IP Addresses with |EC2| with |sdk-php| version 3
+Using Elastic IP Addresses with |EC2| with |sdk-php| Version 3
 ##############################################################
 
 .. meta::

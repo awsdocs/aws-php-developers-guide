@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################
-|S3| Transfer Manager with |sdk-php| version 3
+|S3| Transfer Manager with |sdk-php| Version 3
 ##############################################
 
 .. meta::

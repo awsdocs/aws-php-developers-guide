@@ -9,7 +9,7 @@
    limitations under the License.
 
 #######################################
-Paginators in the |sdk-php| version 3
+Paginators in the |sdk-php| Version 3
 #######################################
 
 .. meta::

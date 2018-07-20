@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##########################################################
-Using Dead Letter Queues in |SQS| with |sdk-php| version 3 
+Using Dead Letter Queues in |SQS| with |sdk-php| Version 3 
 ##########################################################
 
 .. meta::

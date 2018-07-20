@@ -9,7 +9,7 @@
    limitations under the License.
 
 #############################################################
-Managing Visibility Timeout in |SQS| with |sdk-php| version 3 
+Managing Visibility Timeout in |SQS| with |sdk-php| Version 3 
 #############################################################
 
 .. meta::

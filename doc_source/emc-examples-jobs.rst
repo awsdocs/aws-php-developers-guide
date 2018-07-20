@@ -10,14 +10,14 @@
    limitations under the License.
 
 ############################################################################
-Creating and Managing Transcoding Jobs in |EMClong| with |sdk-php| version 3
+Creating and Managing Transcoding Jobs in |EMClong| with |sdk-php| Version 3
 ############################################################################
 
 .. meta::
    :description: Example that shows how to create and manage conversion jobs in AWS Elemental MediaConvert using the AWS SDK for PHP version 3.
    :keywords: AWS Elemental MediaConvert Examples for PHP, Create MediaConvert Job for PHP
 
-In this example, you use the |sdk-php| version 3 to call |EMClong| and create a transcoding job. Before you begin, you will need to upload the 
+In this example, you use the |sdk-php| Version 3 to call |EMClong| and create a transcoding job. Before you begin, you will need to upload the 
 input video to the |S3| bucket you provisioned for input storage. For a list of supported input video codecs and containers, see 
 :EMC-ug:`Supported Input Codecs and Containers <reference-codecs-containers-input>` in the |EMC-ug|_.
 

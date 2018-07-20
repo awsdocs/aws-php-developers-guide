@@ -10,14 +10,14 @@
    limitations under the License.
 
 ##############################################################################
-Getting Your Account\-Specific Endpoint for |EMClong| with |sdk-php| version 3
+Getting Your Account\-Specific Endpoint for |EMClong| with |sdk-php| Version 3
 ##############################################################################
 
 .. meta::
    :description: Example that shows how to get the account-specific endpoint for use with AWS Elemental MediaConvert. using the AWS SDK for PHP version 3.
    :keywords: AWS Elemental MediaConvert Examples
 
-In this example, you use the |sdk-php| version 3 to call |EMClong| and retrieve your account-specific endpoint. You can retrieve your endpoint 
+In this example, you use the |sdk-php| Version 3 to call |EMClong| and retrieve your account-specific endpoint. You can retrieve your endpoint 
 URL from the service default endpoint and so do not yet need your acccount-specific endpoint. 
 
 The following examples show how to:

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##########################################################
-|S3| Client Side Encryption with |sdk-php| version 3 
+|S3| Client Side Encryption with |sdk-php| Version 3 
 ##########################################################
 
 .. meta::

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ############################################################
-Requirements and Recommendations for the |sdk-php| version 3
+Requirements and Recommendations for the |sdk-php| Version 3
 ############################################################
 
 .. meta::

@@ -10,7 +10,7 @@
 
 
 #############################################
-|SQS| Examples Using the |sdk-php| version 3 
+|SQS| Examples Using the |sdk-php| Version 3 
 #############################################
 
 .. meta::
@@ -24,7 +24,7 @@ includes standard queues with high throughput and at-least-once processing, and 
 .. image:: images/code-samples-sqs.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SQS
 
-All the example code for the |sdk-php| version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
+All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
     :maxdepth: 1

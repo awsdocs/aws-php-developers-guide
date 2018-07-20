@@ -9,7 +9,7 @@
    limitations under the License.
 
 ############################################
-|S3| Pre-Signed URL with |sdk-php| version 3
+|S3| Pre-Signed URL with |sdk-php| Version 3
 ############################################
 
 .. meta::

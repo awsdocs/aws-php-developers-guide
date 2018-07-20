@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###############################################
-Basic Usage Patterns of the |sdk-php| version 3
+Basic Usage Patterns of the |sdk-php| Version 3
 ###############################################
 
 .. meta::

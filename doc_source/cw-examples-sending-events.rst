@@ -10,7 +10,7 @@
 
 
 ####################################################
-Sending Events to |CWElong| with |sdk-php| version 3
+Sending Events to |CWElong| with |sdk-php| Version 3
 ####################################################
 
 .. meta::

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ################################################################
-Signing Custom |CSlong| Domain Requests with |sdk-php| version 3
+Signing Custom |CSlong| Domain Requests with |sdk-php| Version 3
 ################################################################
 
 .. meta::

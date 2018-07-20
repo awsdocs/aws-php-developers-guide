@@ -9,7 +9,7 @@
    limitations under the License.
 
 #############################################
-Managing |IAM| Users with |sdk-php| version 3
+Managing |IAM| Users with |sdk-php| Version 3
 #############################################
 
 .. meta::

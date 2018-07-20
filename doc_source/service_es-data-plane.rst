@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###########################################################
-Signing an |ESlong| Search Request with |sdk-php| version 3
+Signing an |ESlong| Search Request with |sdk-php| Version 3
 ###########################################################
 
 .. meta::

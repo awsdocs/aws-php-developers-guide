@@ -9,10 +9,10 @@
    limitations under the License.
 
 #############################################
-Getting Started with the |sdk-php| version 3
+Getting Started with the |sdk-php| Version 3
 #############################################
 
-This chapter is dedicated to getting you up and running with the |sdk-php| version 3.
+This chapter is dedicated to getting you up and running with the |sdk-php| Version 3.
 
 .. toctree::
     :maxdepth: 2

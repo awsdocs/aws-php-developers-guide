@@ -9,7 +9,7 @@
    limitations under the License.
 
 #################################################
-JMESPath Expressions in the |sdk-php| version 3
+JMESPath Expressions in the |sdk-php| Version 3
 #################################################
 
 .. meta::

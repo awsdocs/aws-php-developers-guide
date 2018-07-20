@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################################
-Working with Security Groups in |EC2| with |sdk-php| version 3
+Working with Security Groups in |EC2| with |sdk-php| Version 3
 ##############################################################
 
 .. meta::

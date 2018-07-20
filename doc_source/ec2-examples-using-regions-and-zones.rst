@@ -9,7 +9,7 @@
    limitations under the License.
 
 #######################################################################
-Using Regions and Availability Zones for |EC2| with |sdk-php| version 3
+Using Regions and Availability Zones for |EC2| with |sdk-php| Version 3
 #######################################################################
 
 .. meta::

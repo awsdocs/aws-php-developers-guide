@@ -9,7 +9,7 @@
    limitations under the License.
 
 ####################################################
-Using |IAM| Account Aliases with |sdk-php| version 3
+Using |IAM| Account Aliases with |sdk-php| Version 3
 ####################################################
 
 .. meta::

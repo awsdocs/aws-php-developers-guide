@@ -9,7 +9,7 @@
    limitations under the License.
 
 #########################################################
-Using the |DDB| Session Handler with |sdk-php| version 3
+Using the |DDB| Session Handler with |sdk-php| Version 3
 #########################################################
 
 .. meta::

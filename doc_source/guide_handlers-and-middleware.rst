@@ -9,7 +9,7 @@
    limitations under the License.
 
 ####################################################
-Handlers and Middleware in the |sdk-php| version 3
+Handlers and Middleware in the |sdk-php| Version 3
 ####################################################
 
 .. meta::

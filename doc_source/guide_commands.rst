@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##########################################
-Command Objects in the |sdk-php| version 3
+Command Objects in the |sdk-php| Version 3
 ##########################################
 
 .. meta::
