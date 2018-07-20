@@ -9,30 +9,30 @@
    limitations under the License.
 
 #######################################################################
-Encrypting and Decrypting |KMS| Data Keys using the |sdk-php| version 3
+Encrypting and Decrypting |KMS| Data Keys Using the |sdk-php| Version 3
 #######################################################################
 
 .. meta::
-   :description: Use |KMS| API to encrpypt and decrypt customer data keys.
-   :keywords: Amazon KMS code examples for PHP, encrypt data in PHP, decypt data in PHP,
+   :description: Use the AWS KMS API to encrpypt and decrypt customer data keys (CMKs).
+   :keywords: AWS KMS code examples for PHP, encrypt data in PHP, decypt data in PHP
 
 The following examples show how to:
 
-* Encrypting a Key :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
-* Decypting a Data Key :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
-* Re-Encrypting a Data Key with new Master Key :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
+* Encrypt a data key :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
+* Decrypt a data key :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
+* Re-encrypt a data key with a new master key :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
 
 
 .. include:: text/git-php-examples.txt
 
-For more information about using KMS, check out the |KMS-dg|_.
+For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 
 Encrypt
 =======
 
-The :KMS-api:`Encrypt <API_Encrypt>` operation is designed to encrypt data keys, but it is not frequently used. The :KMS-api:`GenerateDataKey <API_GenerateDataKey>` and 
-:KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>` operations return encrypted data keys. You might use this 
-method when you are moving encrypted data to a new region and want to encrypt its data key with a CMK in the new region.
+The :KMS-api:`Encrypt <API_Encrypt>` operation is designed to encrypt data keys, but it's not frequently used. The :KMS-api:`GenerateDataKey <API_GenerateDataKey>` and
+:KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>` operations return encrypted data keys. You might use this
+method when you're moving encrypted data to a new AWS Region and want to encrypt its data key by using a CMK in the new Region.
 
 **Imports**
 
@@ -51,7 +51,7 @@ Decrypt
 
 To decrypt a data key, use the :KMS-api:`Decrypt <API_Decrypt>` operation.
 
-The ciphertextBlob that you specify must be the value of the CiphertextBlob field from a :KMS-api:`GenerateDataKey <API_GenerateDataKey>`, 
+The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlob`` field from a :KMS-api:`GenerateDataKey <API_GenerateDataKey>`,
 :KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>`, or :KMS-api:`Encrypt <API_Encrypt>` response.
 
 
@@ -70,10 +70,10 @@ The ciphertextBlob that you specify must be the value of the CiphertextBlob fiel
 ReEncrypt
 =========
 
-To decrypt an encrypted data key, and then immediately re-encrypt the data key under a different customer master key (CMK), use the 
+To decrypt an encrypted data key, and then immediately re-encrypt the data key under a different CMK, use the
 :KMS-api:`ReEncrypt <API_ReEncrypt>` operation. The operations are performed entirely on the server side within |KMS|, so they never expose your plaintext outside of |KMS|.
 
-The ciphertextBlob that you specify must be the value of the CiphertextBlob field from a :KMS-api:`GenerateDataKey <API_GenerateDataKey>`, 
+The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlob`` field from a :KMS-api:`GenerateDataKey <API_GenerateDataKey>`,
 :KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>`, or :KMS-api:`Encrypt <API_Encrypt>` response.
 
 **Imports**

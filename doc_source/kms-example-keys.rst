@@ -8,31 +8,31 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-#############################################################
-Working with Keys using |KMS| API and the |sdk-php| version 3
-#############################################################
+#################################################################
+Working with Keys Using the |KMS| API and the |sdk-php| Version 3
+#################################################################
 
 .. meta::
    :description: Use AWS KMS API to create, view, enable and disable customer master keys.
-   :keywords: Amazon KMS code examples for PHP, master keys with PHP
+   :keywords: AWS KMS code examples for PHP, master keys with PHP
 
 The following examples show how to:
 
-* Creating a Customer Master Key :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
-* Generating a Data Key :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
-* Viewing a Custom Master Key :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
-* Getting Key IDs and Key ARNS of Customer Master Keys :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
-* Enabling Customer Master Keys :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
-* Disabling Customer Master Keys :aws-php-class:`DisableKey <api-kms-2014-11-01.html.html#disablekey>`.
+* Create a customer CMK :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
+* Generate a data key :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
+* View a CMK :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
+* Get key IDs and key ARNS of CMKs :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
+* Enable CMKs :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
+* Disable CMKs :aws-php-class:`DisableKey <api-kms-2014-11-01.html.html#disablekey>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using KMS, check out the |KMS-dg|_.
+For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 
-Create Key
-==========
+Create a CMK
+============
 
-To create a :KMS-dg:`customer master key <concepts.html#master_keys>`, use the :KMS-api:`CreateKey <API_CreateKey>` operation.
+To create a :KMS-dg:`customer master key (CMK) <concepts.html#master_keys>`, use the :KMS-api:`CreateKey <API_CreateKey>` operation.
 
 **Imports**
 
@@ -46,10 +46,10 @@ To create a :KMS-dg:`customer master key <concepts.html#master_keys>`, use the :
    :lines: 33-
    :language: php
 
-Generate Data Key
-=================
+Generate a Data Key
+===================
 
-To generate a data key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates.
+To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates.
 
 **Imports**
 
@@ -63,12 +63,12 @@ To generate a data key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>`
    :lines: 33-
    :language: php
 
-View Custom Master Key
-======================
+View a CMK
+==========
 
-To get detailed information about a customer master key (CMK), including the CMK ARN and :KMS-dg:`key state<key-state>`, use the :KMS-api:`DescribeKey <API_DescribeKey>` operation.
+To get detailed information about a CMK, including the CMK's Amazon Resource Name (ARN) and :KMS-dg:`key state<key-state>`, use the :KMS-api:`DescribeKey <API_DescribeKey>` operation.
 
-DescribeKey does not get aliases. To get aliases, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
+DescribeKey doesn't get aliases. To get aliases, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
 
 **Imports**
 
@@ -82,10 +82,10 @@ DescribeKey does not get aliases. To get aliases, use the :KMS-api:`ListAliases 
    :lines: 33-
    :language: php
 
-Get Key IDs and Key ARNs of Custom Master Key
-=============================================
+Get the Key ID and Key ARNs of a CMK
+====================================
 
-To get the IDs and ARNs of the customer master keys, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
+To get the ID and ARN of the CMK, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
 
 **Imports**
 
@@ -99,10 +99,10 @@ To get the IDs and ARNs of the customer master keys, use the :KMS-api:`ListAlias
    :lines: 33-
    :language: php
 
-Enable Custom Master Key
-=========================
+Enable a CMK
+============
 
-To enable a disabled customer master key (CMK), use the :KMS-api:`EnableKey <API_EnableKey>` operation.
+To enable a disabled CMK, use the :KMS-api:`EnableKey <API_EnableKey>` operation.
 
 **Imports**
 
@@ -116,8 +116,8 @@ To enable a disabled customer master key (CMK), use the :KMS-api:`EnableKey <API
    :lines: 33-
    :language: php
 
-Disable Custom Master Key
-=========================
+Disable a CMK
+=============
 
 To disable a CMK, use the :KMS-api:`DisableKey <API_DisableKey>` operation. Disabling a CMK prevents it from being used.
 

@@ -10,19 +10,19 @@
 
 
 ################################################
-|KMSlong| Examples Using the |sdk-php| version 3 
+|KMSlong| Examples Using the |sdk-php| Version 3
 ################################################
 
 .. meta::
    :description: Amazon KMS code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon KMS code examples for PHP, AWS Key Management Service for PHP
+   :keywords: Amazon KMS code examples for PHP, AWS Key Management Service
 
 
-|KMSlong| (KMS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS| 
-includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first>-in, first>-out) delivery and exactly-once processing.
+|KMSlong| |KMS| is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS|
+includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first-in, first-out) delivery and exactly-once processing.
 
 
-|KMSlong| (AWS KMS) is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data. For
+|KMSlong| |KMS| is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data. For
 more information about |KMS|, see the `Amazon KMS documentation <http://aws.amazon.com/documentation/kms/>`_.
 
 .. image:: images/code-samples-sqs.png
@@ -38,6 +38,3 @@ All the example code for the |sdk-php| version 3 is available `here on GitHub <h
    Working with Key Policies <kms-example-key-policy>
    Working with Grants <kms-example-grants>
    Working with Aliases <kms-example-alias>
-   
-
-

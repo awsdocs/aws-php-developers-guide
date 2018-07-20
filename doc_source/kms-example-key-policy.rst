@@ -9,28 +9,28 @@
    limitations under the License.
 
 #############################################################
-Working with |KMS| Key Policies using the |sdk-php| version 3
+Working with |KMS| Key Policies Using the |sdk-php| Version 3
 #############################################################
 
 .. meta::
-   :description: Use AWS KMS API to view and change the key policies of AWS KMS customer master keys (CMKs).
-   :keywords: Amazon KMS code examples for PHP, PHP Key Polices, PHP Key Policy
+   :description: Use the AWS KMS API to view and change the key policies of AWS KMS customer master keys (CMKs).
+   :keywords: AWS KMS code examples for PHP, PHP key polices
 
 The following examples show how to:
 
-* List Key Policy Names :aws-php-class:`ListKeyPolicies </api-kms-2014-11-01.html#listkeypolicies>`.
-* Get a Key Policy :aws-php-class:`GetKeyPolicy </api-kms-2014-11-01.html.html#getkeypolicy>`.
-* Set a Key Policy :aws-php-class:`PutKeyPolicy </api-kms-2014-11-01.html.html#putkeypolicy>`.
+* List the names of key policies :aws-php-class:`ListKeyPolicies </api-kms-2014-11-01.html#listkeypolicies>`.
+* Get a key policy :aws-php-class:`GetKeyPolicy </api-kms-2014-11-01.html.html#getkeypolicy>`.
+* Set a key policy :aws-php-class:`PutKeyPolicy </api-kms-2014-11-01.html.html#putkeypolicy>`.
 
 
 .. include:: text/git-php-examples.txt
 
-For more information about using KMS, check out the |KMS-dg|_.
+For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 
-List all Key Policies
+List All Key Policies
 =====================
 
-To get the names of key policies for a customer master key, use the ListKeyPolicies operation. The only key policy name it returns is default.
+To get the names of key policies for a customer master key (CMK), use the ``ListKeyPolicies`` operation. The only key policy name it returns is the default name.
 
 **Imports**
 
@@ -47,9 +47,9 @@ To get the names of key policies for a customer master key, use the ListKeyPolic
 Retrieve a Key Policy
 =====================
 
-To get the key policy for a customer master key, use the GetKeyPolicy operation.
+To get the key policy for a CMK, use the ``GetKeyPolicy`` operation.
 
-GetKeyPolicy requires a policy name. The only valid policy name is default.
+``GetKeyPolicy`` requires a policy name. The only valid policy name is the default.
 
 **Imports**
 
@@ -66,9 +66,9 @@ GetKeyPolicy requires a policy name. The only valid policy name is default.
 Set a Key Policy
 ================
 
-To establish or change a key policy for a CMK, use the PutKeyPolicy operation.
+To establish or change a key policy for a CMK, use the ``PutKeyPolicy`` operation.
 
-PutKeyPolicy requires a policy name. The only valid policy name is default.
+``PutKeyPolicy`` requires a policy name. The only valid policy name is the default.
 
 **Imports**
 

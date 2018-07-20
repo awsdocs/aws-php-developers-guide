@@ -8,29 +8,29 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-###############################################################
-Working with Grants using |KMS| API and the |sdk-php| version 3
-###############################################################
+###################################################################
+Working with Grants Using the |KMS| API and the |sdk-php| Version 3
+###################################################################
 
 .. meta::
-   :description: Use AWS KMS API to create, view, retire and revoke grants.
-   :keywords: Amazon KMS code examples for PHP, PHP grants, PHP Key Management Service Grants
+   :description: Use AWS KMS API to create, view, retire, and revoke grants.
+   :keywords: AWS KMS code examples for PHP, PHP grants, PHP Key Management Service Grants
 
 The following examples show how to:
 
-* Create a Grant :aws-php-class:`CreateGrant </api-kms-2014-11-01.html#creategrant>`.
-* View a Grant :aws-php-class:`ListGrants </api-kms-2014-11-01.html.html#listgrants>`.
-* Retire a Grant :aws-php-class:`RetireGrant </api-kms-2014-11-01.html.html#retiregrant>`.
-* Revoke a Grant :aws-php-class:`RevokeGrant </api-kms-2014-11-01.html.html#revokegrant>`.
+* Create a grant for a customer master key (CMK) :aws-php-class:`CreateGrant </api-kms-2014-11-01.html#creategrant>`.
+* View a grant for a CMK :aws-php-class:`ListGrants </api-kms-2014-11-01.html.html#listgrants>`.
+* Retire a grant for a CMK :aws-php-class:`RetireGrant </api-kms-2014-11-01.html.html#retiregrant>`.
+* Revoke a grant for a CMK :aws-php-class:`RevokeGrant </api-kms-2014-11-01.html.html#revokegrant>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using KMS, check out the |KMS-dg|_.
+For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 
 Create a Grant
 ==============
 
-To create a grant for an |KMS| customer master key, use the :KMS-api:`CreateGrant <API_CreateGrant>` operation.
+To create a grant for an |KMS| CMK, use the :KMS-api:`CreateGrant <API_CreateGrant>` operation.
 
 **Imports**
 
@@ -66,7 +66,7 @@ To get detailed information about the grants on an |KMS| customer master key, us
 Retire a Grant
 ==============
 
-To retire a grant for an |KMS| customer master key, use the :KMS-api:`RetireGrant <API_RetireGrant>` operation. You should retire a grant to clean up after you are done using it.
+To retire a grant for an |KMS| CMK, use the :KMS-api:`RetireGrant <API_RetireGrant>` operation. You should retire a grant to clean up after you finish using it.
 
 **Imports**
 
@@ -83,7 +83,7 @@ To retire a grant for an |KMS| customer master key, use the :KMS-api:`RetireGran
 Revoke a Grant
 ==============
 
-To revoke a grant to an |KMS| customer master key, use the :KMS-api:`RevokeGrant <API_RevokeGrant>` operation. You can revoke a grant to explicitly deny operations that depend on it.
+To revoke a grant to an |KMS| CMK, use the :KMS-api:`RevokeGrant <API_RevokeGrant>` operation. You can revoke a grant to explicitly deny operations that depend on it.
 
 **Imports**
 
@@ -96,4 +96,3 @@ To revoke a grant to an |KMS| customer master key, use the :KMS-api:`RevokeGrant
 .. literalinclude:: example_code/kms/RevokeGrant.php
    :lines: 33-
    :language: php
-

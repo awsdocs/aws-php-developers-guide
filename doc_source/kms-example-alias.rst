@@ -8,32 +8,32 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-################################################################
-Working with Aliases using |KMS| API and the |sdk-php| version 3
-################################################################
+####################################################################
+Working with Aliases Using the |KMS| API and the |sdk-php| Version 3
+####################################################################
 
 .. meta::
-   :description: Use AWS KMS API to create, view, update and delete aliases.
-   :keywords: Amazon KMS code examples for PHP, PHP alias, PHP Key Management Service Alias, Customer Master Key in PHP, CMK PHP
+   :description: Use AWS KMS API to create, view, update, and delete aliases.
+   :keywords: AWS KMS code examples for PHP, PHP alias, PHP Key Management Service Alias, Customer Master Key in PHP, CMK PHP
 
-An alias is an optional display name for a :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>`.
+An alias is an optional display name for an |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>`.
 
 The following examples show how to:
 
-* Create an Alias :aws-php-class:`CreateAlias </api-kms-2014-11-01.html#createalias>`.
-* View an Alias :aws-php-class:`ListAliases </api-kms-2014-11-01.html.html#listaliases>`.
-* Update an Alias :aws-php-class:`UpdateAlias </api-kms-2014-11-01.html.html#updatealias>`.
-* Delete an Alias :aws-php-class:`DeleteAlias </api-kms-2014-11-01.html.html#deletealias>`.
+* Create an alias :aws-php-class:`CreateAlias </api-kms-2014-11-01.html#createalias>`.
+* View an alias :aws-php-class:`ListAliases </api-kms-2014-11-01.html.html#listaliases>`.
+* Update an alias :aws-php-class:`UpdateAlias </api-kms-2014-11-01.html.html#updatealias>`.
+* Delete an alias :aws-php-class:`DeleteAlias </api-kms-2014-11-01.html.html#deletealias>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using KMS, check out the |KMS-dg|_.
+For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 
 Create an Alias
 ===============
 
-To create an alias, use the :KMS-api:`CreateAlias <API_CreateAlias>` operation. The alias must be unique in the account and region. 
-If you create an alias for a CMK that already has an alias, CreateAlias creates another alias to the same CMK. It does not replace the existing alias.
+To create an alias for a CMK, use the :KMS-api:`CreateAlias <API_CreateAlias>` operation. The alias must be unique in the account and AWS Region.
+If you create an alias for a CMK that already has an alias, ``CreateAlias`` creates another alias to the same CMK. It doesn't replace the existing alias.
 
 
 **Imports**
@@ -100,4 +100,3 @@ To delete an alias, use the :KMS-api:`DeleteAlias <API_DeleteAlias>` operation. 
 .. literalinclude:: example_code/kms/DeleteAlias.php
    :lines: 33-
    :language: php
-
