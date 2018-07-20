@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-####################################
-Basic Use of the |sdk-php| version 3
-####################################
+###############################################
+Basic Usage Patterns of the |sdk-php| version 3
+###############################################
 
 .. meta::
    :description: Describes the basic usage pattern of the AWS SDK for PHP version 3.

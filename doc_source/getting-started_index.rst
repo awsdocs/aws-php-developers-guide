@@ -19,5 +19,5 @@ This chapter is dedicated to getting you up and running with the |sdk-php| versi
 
     Prerequisites <getting-started_requirements.rst>
     Installing the SDK <getting-started_installation.rst>
-    Basic Use <getting-started_basic-usage.rst>
-    Upgrading From Version 2 <getting-started_migration.rst>
+    Basic Usage <getting-started_basic-usage.rst>
+    Upgrading from Version 2 <getting-started_migration.rst>

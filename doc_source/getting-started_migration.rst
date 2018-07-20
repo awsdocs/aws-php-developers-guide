@@ -9,7 +9,7 @@
    limitations under the License.
 
 #########################################
-Migrating from Version 2 of the |sdk-php|
+Upgrading from Version 2 of the |sdk-php|
 #########################################
 
 .. meta::
