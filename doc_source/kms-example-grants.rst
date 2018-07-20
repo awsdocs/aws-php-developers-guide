@@ -15,13 +15,15 @@ Working with Grants Using the |KMS| API and the |sdk-php| Version 3
 .. meta::
    :description: Use AWS KMS API to create, view, retire, and revoke grants.
    :keywords: AWS KMS code examples for PHP, PHP grants, PHP Key Management Service Grants
+   
+A grant is another mechanism for providing permissions, an alternative to the key policy. You can use grants to give long-term access that allows AWS principals to use your |KMSlong| (|KMS|) :KMS-dg:`customer-managed CMKs<concepts.html#master_keys>`. For more information about grants, see :KMS-dg:`Using Grants<grants>`.
 
 The following examples show how to:
 
-* Create a grant for a customer master key (CMK) :aws-php-class:`CreateGrant </api-kms-2014-11-01.html#creategrant>`.
-* View a grant for a CMK :aws-php-class:`ListGrants </api-kms-2014-11-01.html.html#listgrants>`.
-* Retire a grant for a CMK :aws-php-class:`RetireGrant </api-kms-2014-11-01.html.html#retiregrant>`.
-* Revoke a grant for a CMK :aws-php-class:`RevokeGrant </api-kms-2014-11-01.html.html#revokegrant>`.
+* Create a grant for a customer master key (CMK) using :aws-php-class:`CreateGrant </api-kms-2014-11-01.html#creategrant>`.
+* View a grant for a CMK using :aws-php-class:`ListGrants </api-kms-2014-11-01.html.html#listgrants>`.
+* Retire a grant for a CMK using :aws-php-class:`RetireGrant </api-kms-2014-11-01.html.html#retiregrant>`.
+* Revoke a grant for a CMK using :aws-php-class:`RevokeGrant </api-kms-2014-11-01.html.html#revokegrant>`.
 
 .. include:: text/git-php-examples.txt
 

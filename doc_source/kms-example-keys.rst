@@ -15,15 +15,17 @@ Working with Keys Using the |KMS| API and the |sdk-php| Version 3
 .. meta::
    :description: Use AWS KMS API to create, view, enable and disable customer master keys.
    :keywords: AWS KMS code examples for PHP, master keys with PHP
+   
+The primary resources in |KMSlong| (|KMS|) are :KMS-dg:`customer master keys (CMKs)<concepts.html#master_keys>`. You can use a CMK to encrypt your data. 
 
 The following examples show how to:
 
-* Create a customer CMK :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
-* Generate a data key :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
-* View a CMK :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
-* Get key IDs and key ARNS of CMKs :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
-* Enable CMKs :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
-* Disable CMKs :aws-php-class:`DisableKey <api-kms-2014-11-01.html.html#disablekey>`.
+* Create a customer CMK using :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
+* Generate a data key using :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
+* View a CMK using :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
+* Get key IDs and key ARNS of CMKs using :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
+* Enable CMKs using :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
+* Disable CMKs using :aws-php-class:`DisableKey <api-kms-2014-11-01.html.html#disablekey>`.
 
 .. include:: text/git-php-examples.txt
 
@@ -49,7 +51,7 @@ To create a :KMS-dg:`customer master key (CMK) <concepts.html#master_keys>`, use
 Generate a Data Key
 ===================
 
-To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates.
+To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates. You must specify the customer master key (CMK) under which to generate the data key.
 
 **Imports**
 

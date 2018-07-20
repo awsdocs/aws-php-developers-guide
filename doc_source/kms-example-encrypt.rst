@@ -13,14 +13,18 @@ Encrypting and Decrypting |KMS| Data Keys Using the |sdk-php| Version 3
 #######################################################################
 
 .. meta::
-   :description: Use the AWS KMS API to encrpypt and decrypt customer data keys (CMKs).
+   :description: Use the AWS KMS API to encrpypt and decrypt data.
    :keywords: AWS KMS code examples for PHP, encrypt data in PHP, decypt data in PHP
+   
+Data keys are encryption keys that you can use to encrypt data, including large amounts of data and other data encryption keys.
+
+You can use a |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>` to generate, encrypt, and decrypt data keys. However, |KMS| does not store, manage, or track your data keys, or perform cryptographic operations with data keys. You must use and manage data keys outside of |KMS|.
 
 The following examples show how to:
 
-* Encrypt a data key :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
-* Decrypt a data key :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
-* Re-encrypt a data key with a new master key :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
+* Encrypt a data key using :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
+* Decrypt a data key using :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
+* Re-encrypt a data key with a new data key using :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
 
 
 .. include:: text/git-php-examples.txt
@@ -31,7 +35,7 @@ Encrypt
 =======
 
 The :KMS-api:`Encrypt <API_Encrypt>` operation is designed to encrypt data keys, but it's not frequently used. The :KMS-api:`GenerateDataKey <API_GenerateDataKey>` and
-:KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>` operations return encrypted data keys. You might use this
+:KMS-api:`GenerateDataKeyWithoutPlaintext <API_GenerateDataKeyWithoutPlaintext>` operations return encrypted data keys. You might use the ``Encypt``
 method when you're moving encrypted data to a new AWS Region and want to encrypt its data key by using a CMK in the new Region.
 
 **Imports**
