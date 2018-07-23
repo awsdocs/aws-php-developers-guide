@@ -15,8 +15,8 @@ Working with Keys Using the |KMS| API and the |sdk-php| Version 3
 .. meta::
    :description: Use AWS KMS API to create, view, enable and disable customer master keys.
    :keywords: AWS KMS code examples for PHP, master keys with PHP
-   
-The primary resources in |KMSlong| (|KMS|) are :KMS-dg:`customer master keys (CMKs)<concepts.html#master_keys>`. You can use a CMK to encrypt your data. 
+
+The primary resources in |KMSlong| (|KMS|) are :KMS-dg:`customer master keys (CMKs)<concepts.html#master_keys>`. You can use a CMK to encrypt your data.
 
 The following examples show how to:
 
@@ -34,7 +34,7 @@ For more information about using |KMSlong| (|KMS|), see the |KMS-dg|_.
 Create a CMK
 ============
 
-To create a :KMS-dg:`customer master key (CMK) <concepts.html#master_keys>`, use the :KMS-api:`CreateKey <API_CreateKey>` operation.
+To create a :KMS-dg:`CMK <concepts.html#master_keys>`, use the :KMS-api:`CreateKey <API_CreateKey>` operation.
 
 **Imports**
 
@@ -70,7 +70,7 @@ View a CMK
 
 To get detailed information about a CMK, including the CMK's Amazon Resource Name (ARN) and :KMS-dg:`key state<key-state>`, use the :KMS-api:`DescribeKey <API_DescribeKey>` operation.
 
-DescribeKey doesn't get aliases. To get aliases, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
+:code:`DescribeKey` doesn't get aliases. To get aliases, use the :KMS-api:`ListAliases <API_ListKeys>` operation.
 
 **Imports**
 

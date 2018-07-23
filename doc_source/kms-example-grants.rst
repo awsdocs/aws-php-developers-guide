@@ -15,8 +15,8 @@ Working with Grants Using the |KMS| API and the |sdk-php| Version 3
 .. meta::
    :description: Use AWS KMS API to create, view, retire, and revoke grants.
    :keywords: AWS KMS code examples for PHP, PHP grants, PHP Key Management Service Grants
-   
-A grant is another mechanism for providing permissions, an alternative to the key policy. You can use grants to give long-term access that allows AWS principals to use your |KMSlong| (|KMS|) :KMS-dg:`customer-managed CMKs<concepts.html#master_keys>`. For more information about grants, see :KMS-dg:`Using Grants<grants>`.
+
+A grant is another mechanism for providing permissions, an alternative to the key policy. You can use grants to give long-term access that allows AWS principals to use your |KMSlong| (|KMS|) :KMS-dg:`customer-managed CMKs<concepts.html#master_keys>`. For more information, see :KMS-dg:`Using Grants<grants>`.
 
 The following examples show how to:
 
@@ -50,7 +50,7 @@ To create a grant for an |KMS| CMK, use the :KMS-api:`CreateGrant <API_CreateGra
 View a Grant
 ============
 
-To get detailed information about the grants on an |KMS| customer master key, use the :KMS-api:`ListGrants <API_ListGrants>` operation.
+To get detailed information about the grants on an |KMS| CMK, use the :KMS-api:`ListGrants <API_ListGrants>` operation.
 
 
 **Imports**

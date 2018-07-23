@@ -17,7 +17,7 @@
    :description: Amazon KMS code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon KMS code examples for PHP, AWS Key Management Service
 
-|KMSlong| |KMS| is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data. For
+|KMSlong| (|KMS|) is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data. For
 more information about |KMS|, see the `Amazon KMS documentation <http://aws.amazon.com/documentation/kms/>`_. Whether you are writing secure PHP applications or sending data to other AWS services, AWS KMS helps you maintain control over who can use your master keys and gain access to your encrypted data.
 
 .. image:: images/code-samples-kms.png
