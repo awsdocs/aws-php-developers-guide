@@ -32,7 +32,6 @@ For information about the |sdk-php| Version 3 on GitHub, see :doc:`Additional Re
 
 External links: :aws-php-class:`API Docs <index.html>`
 | `GitHub <https://github.com/aws/aws-sdk-php>`_
-| `Twitter <https://twitter.com/awsforphp>`_
 | `Gitter <https://gitter.im/aws/aws-sdk-php>`_
 | :blog:`Blog <developer/category/php/>`
 | `Forum <https://forums.aws.amazon.com/forum.jspa?forumID=80>`_
