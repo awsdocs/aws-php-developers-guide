@@ -24,7 +24,7 @@ The following examples show how to:
 
 * Encrypt a data key using :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
 * Decrypt a data key using :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
-* Re-encrypt a data key with a new data key using :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
+* Re-encrypt a data key with a new CMK using :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
 
 
 .. include:: text/git-php-examples.txt
