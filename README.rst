@@ -100,7 +100,7 @@ repository.
 
 .. _`available sphinx builders`: http://www.sphinx-doc.org/en/stable/builders.html
 .. _`aws PHP v3 developer guide`: https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/welcome.html
-.. _`aws sdk for PHP`: https://aws.amazon.com/sdk-for-PHP/
+.. _`aws sdk for PHP`: https://aws.amazon.com/sdk-for-php/
 .. _`forking the repository`: https://help.github.com/articles/fork-a-repo/
 .. _`pull request`: https://help.github.com/articles/using-pull-requests/
 .. _`shared content`: https://github.com/awsdocs/aws-doc-shared-content
