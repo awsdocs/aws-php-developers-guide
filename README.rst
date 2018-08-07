@@ -12,18 +12,13 @@
 aws-PHP-developer-guide
 ########################
 
-This repository contains source content for the official `AWS PHP Developer Guide`_. The source
+This repository contains source content for the official `AWS PHP v3 Developer Guide`_. The source
 code for the `AWS SDK for PHP`_ is also on GitHub, at https://github.com/aws/aws-sdk-PHP/.
 
 The guide content is written in reStructuredText_ and built using Sphinx_. It relies upon content
 which is provided in the AWS documentation team's `shared content`_ and `SDK examples`_
 repositories.
 
-AWS SDK for PHP 2.0 Developer Preview
-======================================
-Take a look at the new AWS SDK for PHP 2.0 developer preview at https://github.com/aws/aws-sdk-PHP-v2/.
-It includes much awaited features, such as a way to plug in a HTTP implementation. To get started,
-see the `AWS SDK for PHP 2.0 Developer Guide`_.
 
 Reporting issues
 ================
@@ -74,7 +69,7 @@ Code examples in the documentation
 ----------------------------------
 
 The code examples featured in this documentation can be found in a separate repository:
-`aws-doc-sdk-examples <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/PHP>`_. Full
+`aws-doc-sdk-examples <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_. Full
 code and build files are included, so you can build and run any of the provided examples yourself.
 
 In addition to examples in PHP, you'll also find examples for each of the other AWS SDKs. If you
@@ -104,15 +99,14 @@ repository.
 .. =================================================================================
 
 .. _`available sphinx builders`: http://www.sphinx-doc.org/en/stable/builders.html
-.. _`aws PHP developer guide`: http://docs.aws.amazon.com/sdk-for-PHP/v1/developer-guide/welcome.html
-.. _`aws sdk for PHP 2.0 developer guide`: http://docs.aws.amazon.com/sdk-for-PHP/v2/developer-guide/welcome.html
-.. _`aws sdk for PHP`: https://aws.amazon.com/sdk-for-PHP/
+.. _`aws PHP v3 developer guide`: https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/welcome.html
+.. _`aws sdk for PHP`: https://aws.amazon.com/sdk-for-php/
 .. _`forking the repository`: https://help.github.com/articles/fork-a-repo/
 .. _`pull request`: https://help.github.com/articles/using-pull-requests/
 .. _`shared content`: https://github.com/awsdocs/aws-doc-shared-content
 .. _`sdk examples`: https://github.com/awsdocs/aws-doc-sdk-examples
 .. _extlinks: http://www.sphinx-doc.org/en/stable/ext/extlinks.html
-.. _issues: https://github.com/awsdocs/aws-PHP-developer-guide/issues
+.. _issues: https://github.com/awsdocs/aws-php-developers-guide/issues
 .. _restructuredtext: http://docutils.sourceforge.net/rst.html
 .. _sphinx: http://www.sphinx-doc.org/en/stable/
 .. _substitutions: http://www.sphinx-doc.org/en/stable/rest.html#substitutions
