@@ -12,18 +12,13 @@
 aws-PHP-developer-guide
 ########################
 
-This repository contains source content for the official `AWS PHP Developer Guide`_. The source
+This repository contains source content for the official `AWS PHP v3 Developer Guide`_. The source
 code for the `AWS SDK for PHP`_ is also on GitHub, at https://github.com/aws/aws-sdk-PHP/.
 
 The guide content is written in reStructuredText_ and built using Sphinx_. It relies upon content
 which is provided in the AWS documentation team's `shared content`_ and `SDK examples`_
 repositories.
 
-AWS SDK for PHP 2.0 Developer Preview
-======================================
-Take a look at the new AWS SDK for PHP 2.0 developer preview at https://github.com/aws/aws-sdk-PHP-v2/.
-It includes much awaited features, such as a way to plug in a HTTP implementation. To get started,
-see the `AWS SDK for PHP 2.0 Developer Guide`_.
 
 Reporting issues
 ================
@@ -104,8 +99,7 @@ repository.
 .. =================================================================================
 
 .. _`available sphinx builders`: http://www.sphinx-doc.org/en/stable/builders.html
-.. _`aws PHP developer guide`: http://docs.aws.amazon.com/sdk-for-PHP/v1/developer-guide/welcome.html
-.. _`aws sdk for PHP 2.0 developer guide`: http://docs.aws.amazon.com/sdk-for-PHP/v2/developer-guide/welcome.html
+.. _`aws PHP v3 developer guide`: https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/welcome.html
 .. _`aws sdk for PHP`: https://aws.amazon.com/sdk-for-PHP/
 .. _`forking the repository`: https://help.github.com/articles/fork-a-repo/
 .. _`pull request`: https://help.github.com/articles/using-pull-requests/
