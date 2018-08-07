@@ -69,7 +69,7 @@ Code examples in the documentation
 ----------------------------------
 
 The code examples featured in this documentation can be found in a separate repository:
-`aws-doc-sdk-examples <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/PHP>`_. Full
+`aws-doc-sdk-examples <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_. Full
 code and build files are included, so you can build and run any of the provided examples yourself.
 
 In addition to examples in PHP, you'll also find examples for each of the other AWS SDKs. If you
@@ -106,7 +106,7 @@ repository.
 .. _`shared content`: https://github.com/awsdocs/aws-doc-shared-content
 .. _`sdk examples`: https://github.com/awsdocs/aws-doc-sdk-examples
 .. _extlinks: http://www.sphinx-doc.org/en/stable/ext/extlinks.html
-.. _issues: https://github.com/awsdocs/aws-PHP-developer-guide/issues
+.. _issues: https://github.com/awsdocs/aws-php-developers-guide/issues
 .. _restructuredtext: http://docutils.sourceforge.net/rst.html
 .. _sphinx: http://www.sphinx-doc.org/en/stable/
 .. _substitutions: http://www.sphinx-doc.org/en/stable/rest.html#substitutions
