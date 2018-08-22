@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-###########################
-Using a Credential Provider
-###########################
+#####################################
+Creating a Custom Credential Provider
+#####################################
 
 .. meta::
    :description: How to configure anonymous access for AWS Services using the AWS SDK for PHP.
@@ -277,6 +277,8 @@ instanceProfile provider
 
 ``Aws\Credentials\CredentialProvider::instanceProfile`` attempts to load
 credentials from |EC2| instance profiles.
+
+For more information, see :doc:`Using Credentials from an EC2 Instance Profile<guide_credentials_ec2_instance_profile>`
 
 .. code-block:: php
 

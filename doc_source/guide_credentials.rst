@@ -61,11 +61,10 @@ looks for and uses credentials as follows, in this order:
 
    We use this method in most of our PHP code examples.
 
-3. :doc:`Assume an IAM role <guide_credentials_assume_role>`.
+3. :doc:`Use Credentials from an EC2 Instance Profile <guide_credentials_ec2_instance_profile>`.
 
-   |IAM| roles provide applications on the instance with temporary security
-   credentials to make AWS calls. For example, |IAM| roles offer an easy way to
-   distribute and manage credentials on multiple |EC2| instances.
+   |IAM| instance profile provide applications on the instance with temporary security
+   credentials that are associated with an |IAM| role to make AWS calls. 
 
 
 .. _other_credentials:
@@ -109,7 +108,7 @@ For more information, see |aws-credentials|_ Best Practices in the |AWS-gr|_.
 
     Using Credentials from Environment Variables <guide_credentials_environment>
     Using the AWS Credentials File and Credential Profiles <guide_credentials_profiles>
-    Assume an IAM Role <guide_credentials_assume_role>
+    Using Credentials from an EC2 Instance Profile <guide_credentials_ec2_instance_profile>
     Using a Credential Provider <guide_credentials_provider>
     Using Temporary Credentials from AWS STS <guide_credentials_temporary>
     Creating Anonymous Clients <guide_credentials_anonymous>
