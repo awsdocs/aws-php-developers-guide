@@ -16,24 +16,23 @@ Manage IP Address Filters Using the |SESlong| API and the |sdk-php| Version 3
    :description: Use AWS SES API to verify email address and domains.
    :keywords: AWS SES code examples for PHP, IP Address Email Filters with PHP
 
-When you first start using your Amazon SES account, all senders and recipeints must be verified in the same domain that you 
-will be sending emails. For more information about sending emails see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`
+In addition to sending emails, you can also recieve email with |SESlong|. An IP address filter enables you to optionally specify whether to accept or reject mail originating from an IP address or range of IP addresses. For more information about recieving emails see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`
 
 
 The following examples show how to:
 
-* Create an email filter using :aws-php-class:`CreateReceiptFilter <api-email-2010-12-01.html#createreceiptfilter>`.
-* List all email filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html.html#listreceiptfilters>`.
-* Remove an email filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html.html#deletereceiptfilter>`.
+* Create an IP address filter using :aws-php-class:`CreateReceiptFilter <api-email-2010-12-01.html#createreceiptfilter>`.
+* List all IP address filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html.html#listreceiptfilters>`.
+* Remove an IP address filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html.html#deletereceiptfilter>`.
 
 .. include:: text/git-php-examples.txt
 
 For more information about using |SESlong|, see the |SES-dg|_.
 
-Create an Email Filter
-========================
+Create an IP address Filter
+===========================
 
-TBA
+Allow or Block emails from a specific IP address. 
 
 **Imports**
 
@@ -47,10 +46,10 @@ TBA
    :lines: 26-
    :language: php
 
-List all Email Filters
-========================
+List all IP address Filters
+===========================
 
-TBA
+Lists the IP address filters associated with your AWS account in the current AWS Region.
 
 **Imports**
 
@@ -64,10 +63,10 @@ TBA
    :lines: 26-
    :language: php
 
-Delete an Email Filter
-========================
+Delete an IP address Filter
+===========================
 
-TBA
+Remove the filter for a specific IP address.
 
 **Imports**
 
