@@ -16,8 +16,7 @@ Create Custom Email Templates Using the |SESlong| API and the |sdk-php| Version 
    :description: Use AWS SES API to verify email address and domains.
    :keywords: AWS SES code examples for PHP, approve emails recipeints with PHP
 
-When you first start using your Amazon SES account, all senders and recipeints must be verified in the same domain that you 
-will be sending emails. For more information about sending emails see :SES-dg:`Using Custom Verification Email Templates with Amazon SES <custom-verification-emails>` in the |SES-dg|.
+|SESlong| allows you to send emails that are personalized for each recipeint using templates. Templates include a subject line, and the text and HTML parts of the email body. The subject and body sections may also contain unique values that are personalized for each recipient. For more information about sending emails see :SES-dg:`Sending Personalized Email Using the Amazon SES <send-personalized-email-api>` in the |SES-dg|.
 
 
 The following examples show how to:
@@ -36,7 +35,7 @@ For more information about using |SESlong|, see the |SES-dg|_.
 Create an Email Template
 ========================
 
-TBA
+Create a new template to send personalized email messages. 
 
 **Imports**
 
@@ -53,7 +52,7 @@ TBA
 Get an Email Templates
 ========================
 
-TBA
+View the content for an existing email template including the subject line, HTML body, and plain text. 
 
 **Imports**
 
@@ -70,7 +69,7 @@ TBA
 List all Email Templates
 ========================
 
-TBA
+Retrieve a list of all email templates associated with your AWS account in the current AWS Region.
 
 **Imports**
 
@@ -87,7 +86,7 @@ TBA
 Update an Email Templates
 =========================
 
-TBA
+Change the content for a specific email template including the subject line, HTML body, and plain text. 
 
 **Imports**
 
@@ -104,7 +103,7 @@ TBA
 Delete an Email Template
 ========================
 
-TBA
+Remove a specific email template. 
 
 **Imports**
 
