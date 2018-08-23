@@ -20,7 +20,7 @@
 |SESlong| (|SES|) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own 
 email addresses and domains. For more information about |SESlong|, see the |SES-dg|_.
 
-.. image:: images/code-samples-kms.png
+.. image:: images/code-samples-ses.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SES
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
@@ -28,7 +28,7 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 .. toctree::
    :maxdepth: 1
 
-   Verifying Emails <ses-verify>
+   Verifying Email Address <ses-verify>
    Working with Email Templates <ses-template>
    Creating Email Filters <ses-filters>
    Using Email Rules <ses-rules>
