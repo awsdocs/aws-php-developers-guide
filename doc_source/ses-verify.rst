@@ -17,7 +17,7 @@ Verify Email Addresses Using the |SESlong| API and the |sdk-php| Version 3
    :keywords: AWS SES code examples for PHP, approve emails recipeints with PHP
 
 When you first start using your Amazon SES account, all senders and recipeints must be verified in the same domain that you 
-will be sending emails. For more information about sending emails see :SES-dg:`Sending Email with Amazon SES <sending-email.html>`
+will be sending emails. For more information about sending emails see :SES-dg:`Sending Email with Amazon SES <sending-email>`
 
 
 The following examples show how to:
@@ -54,7 +54,11 @@ email to the address, where the recipeint must click a link to authorize |SESlon
 Verify an Email Domain
 ========================
 
-To send or recieve an email address, you must authorize that email's identity. Using this code sample will whitelist an entire email domain  to authorize |SESlong| to send or recieve messages to this address. 
+To send or recieve an email address, you must authorize that email's identity. Using this code sample will whitelist an entire email domain  to authorize |SESlong| to send or recieve messages to this address.
+
+.. note::
+    
+    To complete the domain verification, you will need to add the VerificationToken to your domain's DNS server. For more information, see :SES-dg:`Verifying a Domaing with Amazon SES <verify-domain-procedure>` in the |SES-dg|.
 
 **Imports**
 
