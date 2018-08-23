@@ -32,4 +32,3 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
    Working with Email Templates <ses-template>
    Creating Email Filters <ses-filters>
    Using Email Rules <ses-rules>
-   Using Email Rule Sets <ses-rules-set>
