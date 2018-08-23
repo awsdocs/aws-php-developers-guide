@@ -74,18 +74,18 @@ TBA
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Template.php
+.. literalinclude::  example_code/ses/List_Templates.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Template.php
+.. literalinclude:: example_code/ses/List_Templates.php
    :lines: 26-
    :language: php
    
 Update an Email Templates
-========================
+=========================
 
 TBA
 
@@ -125,12 +125,12 @@ TBA
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Send_Templated_Email.php.php
+.. literalinclude::  example_code/ses/Send_Templated_Email.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Send_Templated_Email.php.php
+.. literalinclude:: example_code/ses/Send_Templated_Email.php
    :lines: 26-
    :language: php

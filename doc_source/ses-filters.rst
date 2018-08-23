@@ -54,13 +54,13 @@ TBA
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Filter.php
+.. literalinclude::  example_code/ses/List_Filters.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Filter.php
+.. literalinclude:: example_code/ses/List_Filters.php
    :lines: 26-
    :language: php
 
