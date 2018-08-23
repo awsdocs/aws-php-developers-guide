@@ -22,16 +22,18 @@ will be sending emails. For more information about sending emails see :SES-dg:`S
 
 The following examples show how to:
 
-* Verify an email address using :aws-php-class:`CreateKey <api-ses-2014-11-01.html#createkey>`.
-* Verify an email domain using :aws-php-class:`GenerateDataKey <api-ses-2014-11-01.html.html#generatedatakey>`.
-* Remove an email address using :aws-php-class:`DescribeKey <api-ses-2014-11-01.html.html#describekey>`.
-* Remove an email domain using :aws-php-class:`ListKeys <api-ses-2014-11-01.html.html#listkeys>`.
+* Verify an email address using :aws-php-class:`VerifyEmailIdentity <api-email-2010-12-01.html#verifyemailidentity>`.
+* Verify an email domain using :aws-php-class:`VerifyDomainIdentity <api-email-2010-12-01.html.html#verifydomainidentity>`.
+* List all email address using :aws-php-class:`ListIdentities <api-email-2010-12-01.html.html#listidentities>`.
+* List all email domains using :aws-php-class:`ListIdentities <api-email-2010-12-01.html.html#listidentities>`.
+* Remove an email address using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html.html#deleteidentity>`.
+* Remove an email domain using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html.html#deleteidentity>`.
 
 .. include:: text/git-php-examples.txt
 
 For more information about using |SESlong|, see the |SES-dg|_.
 
-Verify an Email Identity
+Verify an Email Address
 ========================
 
 To send or recieve an email address, you must authorize that email's identity. Using this code sample will send an
@@ -46,7 +48,7 @@ email to the address, where the recipeint must click a link to authorize |SESlon
 **Sample Code**
 
 .. literalinclude:: example_code/ses/Add_Email.php
-   :lines: 33-
+   :lines: 26-
    :language: php
 
 Verify an Email Domain
@@ -56,14 +58,82 @@ To send or recieve an email address, you must authorize that email's identity. U
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Add_Email.php
+.. literalinclude::  example_code/ses/Add_Domain.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Add_Email.php
-   :lines: 33-
+.. literalinclude:: example_code/ses/Add_Domain.php
+   :lines: 26-
    :language: php
 
-      
+List Email Addresses
+========================
+
+Retrieve a list of email addresses submitted in the current AWS region regardless of verification status.   
+
+**Imports**
+
+.. literalinclude::  example_code/ses/List_Email.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/ses/List_Email.php
+   :lines: 26-
+   :language: php
+
+List Email Domains
+========================
+
+Retrieve a list of email domains submitted in the current AWS region regardless of verification status.  
+
+**Imports**
+
+.. literalinclude::  example_code/ses/List_Domain.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/ses/List_Domain.php
+   :lines: 26-
+   :language: php
+
+Delete an Email Address
+========================
+
+Deletes a verified email addresses from the list of verified identities.   
+
+**Imports**
+
+.. literalinclude::  example_code/ses/Delete_Email.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/ses/Delete_Email.php
+   :lines: 26-
+   :language: php
+
+Delete an Email Domain
+========================
+
+Deletes a verified email domain from the list of verified identities.   
+
+**Imports**
+
+.. literalinclude::  example_code/ses/Delete_Domain.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/ses/Delete_Domain.php
+   :lines: 26-
+   :language: php
+
+            
