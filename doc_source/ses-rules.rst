@@ -112,13 +112,13 @@ Lists the receipt rule sets that exist under your AWS account in the current AWS
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Rule_Sets.php
+.. literalinclude::  example_code/ses/List_Rules_Sets.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Rule_Sets.php
+.. literalinclude:: example_code/ses/List_Rules_Sets.php
    :lines: 26-
    :language: php
 
