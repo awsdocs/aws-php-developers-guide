@@ -30,5 +30,5 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 
    Verifying Email Address <ses-verify>
    Working with Email Templates <ses-template>
-   Creating Email Filters <ses-filters>
+   Managing Email Filters <ses-filters>
    Using Email Rules <ses-rules>

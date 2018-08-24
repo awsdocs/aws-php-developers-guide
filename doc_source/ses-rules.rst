@@ -37,7 +37,7 @@ The following examples show how to:
 
 For more information about using |SESlong|, see the |SES-dg|_.
 
-Create an Receipt Rule Set
+Create a Receipt Rule Set
 ==========================
 
 First, create a reciept rule set to contain a collection of receipt rules.  You must have at least one receipt rule set associated with your account before you can create a rule.  
@@ -54,10 +54,10 @@ First, create a reciept rule set to contain a collection of receipt rules.  You 
    :lines: 26-
    :language: php
 
-Create an Receipt Rule 
+Create a Receipt Rule 
 =======================
 
-Control your incomming email by adding a receipt rule to an exisiting receipt rule set. This example shows how to connect to an |S3| bucket, but you can also connect to |SNS|, and |LAMlong|. 
+Control your incomming email by adding a receipt rule to an exisiting receipt rule set. This example shows you how to create a receipt rule that sends incoming messages to an |S3| bucket, but you can also send messages to |SNS|, and |LAMlong|. 
 
 **Imports**
 
@@ -71,7 +71,7 @@ Control your incomming email by adding a receipt rule to an exisiting receipt ru
    :lines: 26-
    :language: php
 
-Describe an Receipt Rule Set
+Describe a Receipt Rule Set
 ============================
 
 Once per second, return the details of the specified receipt rule set.
@@ -88,7 +88,7 @@ Once per second, return the details of the specified receipt rule set.
    :lines: 26-
    :language: php
 
-Describe an Receipt Rule 
+Describe a Receipt Rule 
 ========================
 
 Returns the details of the specified receipt rule.
@@ -122,10 +122,10 @@ Lists the receipt rule sets that exist under your AWS account in the current AWS
    :lines: 26-
    :language: php
 
-Update an Receipt Rule 
+Update a Receipt Rule 
 =======================
 
-Change an existing receipt rule. This example shows how to connect to an |LAM| function, but you can also connect to |SNS|, and |S3|. 
+Change an existing receipt rule. This example shows you how to create a receipt rule that sends incoming messages to an |LAM| function, but you can also send messages to |SNS|, and |S3|. 
 
 **Imports**
 
@@ -139,7 +139,7 @@ Change an existing receipt rule. This example shows how to connect to an |LAM| f
    :lines: 26-
    :language: php
 
-Delete an Receipt Rule Set
+Delete a Receipt Rule Set
 ==========================
 
 Remove a specified receipt rule set that is not currently disabled. This will also delete all of the receipt rules it contains.
@@ -156,7 +156,7 @@ Remove a specified receipt rule set that is not currently disabled. This will al
    :lines: 26-
    :language: php
 
-Delete an Receipt Rule 
+Delete a Receipt Rule 
 =======================
 
 Deletes the specified receipt rule.
