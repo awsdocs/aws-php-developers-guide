@@ -86,7 +86,7 @@ You can also add credentials in these ways:
    give the user temporary crentials to access AWS services or use the |sdk-php|.
 
 
-* Using hard-coded credentials (not recommended).
+* :doc:`Using hard-coded credentials <guide_credentials_hardcoded>` (not recommended).
 
 
 .. warning::
@@ -112,5 +112,6 @@ For more information, see |aws-credentials|_ Best Practices in the |AWS-gr|_.
     Assume an IAM Role <guide_credentials_assume_role>
     Using a Credential Provider <guide_credentials_provider>
     Using Temporary Credentials from AWS STS <guide_credentials_temporary>
+    Hard code credentials <guide_credentials_hardcoded>
     Creating Anonymous Clients <guide_credentials_anonymous>
 
