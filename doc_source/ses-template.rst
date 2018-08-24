@@ -120,7 +120,7 @@ Remove a specific email template.
 Send an Email with a Template
 =============================
 
-TBA
+Use a template to send an email to recipeints.
 
 **Imports**
 

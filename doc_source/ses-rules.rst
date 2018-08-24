@@ -19,7 +19,7 @@ Create and Manage Email Rules Using the |SESlong| API and the |sdk-php| Version 
 In addition to sending emails, you can also recieve email with |SESlong|. AReceipt rules let you specify what Amazon SES does with email it receives for the email addresses or domains you own. 
 A rule can send email to other AWS services inlcuding but not limited to |S3|, |SNS|, or |LAMlong|.
 
-For more information about recieving emails see :SES-dg:`Managing Receipt Rule Sets for Amazon SES Email Receiving <receiving-email-managing-receipt-rule-sets>` and:SES-dg:`Managing Receipt Rules for Amazon SES Email Receiving <receiving-email-managing-receipt-rules>`
+For more information about recieving emails see :SES-dg:`Managing Receipt Rule Sets for Amazon SES Email Receiving <receiving-email-managing-receipt-rule-sets>` and :SES-dg:`Managing Receipt Rules for Amazon SES Email Receiving <receiving-email-managing-receipt-rules>`
 
 
 The following examples show how to:
@@ -57,7 +57,7 @@ First, create a reciept rule set to contain a collection of receipt rules.  You 
 Create an Receipt Rule 
 =======================
 
-Control your incomming email by adding a receipt rule to an exisiting receipt rule set 
+Control your incomming email by adding a receipt rule to an exisiting receipt rule set. This example shows how to connect to an |S3| bucket, but you can also connect to |SNS|, and |LAMlong|. 
 
 **Imports**
 
@@ -125,7 +125,7 @@ Lists the receipt rule sets that exist under your AWS account in the current AWS
 Update an Receipt Rule 
 =======================
 
-Change an existing receipt rule.
+Change an existing receipt rule. This example shows how to connect to an |LAM| function, but you can also connect to |SNS|, and |S3|. 
 
 **Imports**
 
