@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##########################################################################
-Verify Email Addresses Using the |SESlong| API and the |sdk-php| Version 3
-##########################################################################
+#############################################################################
+Managing Email Identities Using the |SESlong| API and the |sdk-php| Version 3
+#############################################################################
 
 .. meta::
    :description: Use AWS SES API to verify email address and domains.
@@ -35,9 +35,9 @@ For more information about using |SESlong|, see the |SES-dg|_.
 
 Verify an Email Address
 ========================
+|SESlong| can only send email from verified email addresses or domains. By verifying an email address, you demonstrate that you're the owner of that address, and that you want to allow |SES| to send email from that address. 
 
-To send or recieve an email address, you must authorize that email's identity. Using this code sample will send an
-email to the address, where the recipeint must click a link to authorize |SESlong| to send or recieve messages to this address. 
+When you run the following code sample, |SES| sends an email to the address you specified. When you (or the recipient of the email) click the link in the email, the address is verified. 
 
 **Imports**
 
@@ -54,11 +54,9 @@ email to the address, where the recipeint must click a link to authorize |SESlon
 Verify an Email Domain
 ========================
 
-To send or recieve an email address, you must authorize that email's identity. Using this code sample will whitelist an entire email domain  to authorize |SESlong| to send or recieve messages to this address.
+|SES| can only send email from verified email addresses or domains. By verifying a domain, you demonstrate that you're the owner of that domain. When you verify a domain, you allow |SES| to send email from any address on that domain. 
 
-.. note::
-    
-    To complete the domain verification, you will need to add the VerificationToken to your domain's DNS server. For more information, see :SES-dg:`Verifying a Domaing with Amazon SES <verify-domain-procedure>` in the |SES-dg|.
+When you run the following code sample, |SES| provides you with a VerificationToken. You have to add the token to your domain's DNS configuration. For more information, see :SES-dg:`Verifying a Domaing with Amazon SES <verify-domain-procedure>` in the |SES-dg|.
 
 **Imports**
 
@@ -109,7 +107,7 @@ Retrieve a list of email domains submitted in the current AWS region regardless 
 Delete an Email Address
 ========================
 
-Deletes a verified email addresses from the list of verified identities.   
+Deletes a verified email addresses from the list of identities.   
 
 **Imports**
 

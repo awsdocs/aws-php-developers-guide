@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##############################################################################
-Manage IP Address Filters Using the |SESlong| API and the |sdk-php| Version 3
+Manage Email Filters Using the |SESlong| API and the |sdk-php| Version 3
 ##############################################################################
 
 .. meta::
@@ -21,15 +21,15 @@ In addition to sending emails, you can also recieve email with |SESlong|. An IP 
 
 The following examples show how to:
 
-* Create an IP address filter using :aws-php-class:`CreateReceiptFilter <api-email-2010-12-01.html#createreceiptfilter>`.
-* List all IP address filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html.html#listreceiptfilters>`.
-* Remove an IP address filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html.html#deletereceiptfilter>`.
+* Create an email filter using :aws-php-class:`CreateReceiptFilter <api-email-2010-12-01.html#createreceiptfilter>`.
+* List all email filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html.html#listreceiptfilters>`.
+* Remove an email filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html.html#deletereceiptfilter>`.
 
 .. include:: text/git-php-examples.txt
 
 For more information about using |SESlong|, see the |SES-dg|_.
 
-Create an IP address Filter
+Create an email filter
 ===========================
 
 Allow or Block emails from a specific IP address. 
@@ -46,7 +46,7 @@ Allow or Block emails from a specific IP address.
    :lines: 26-
    :language: php
 
-List all IP address Filters
+List all email filters
 ===========================
 
 Lists the IP address filters associated with your AWS account in the current AWS Region.
@@ -63,7 +63,7 @@ Lists the IP address filters associated with your AWS account in the current AWS
    :lines: 26-
    :language: php
 
-Delete an IP address Filter
+Delete an email filter
 ===========================
 
 Remove the filter for a specific IP address.

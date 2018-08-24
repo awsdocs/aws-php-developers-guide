@@ -37,6 +37,9 @@ Create an Email Template
 
 Create a new template to send personalized email messages. 
 
+.. note:
+    |SES| does not validate your HTML, so double check that `HtmlPart` is valid before sending an email. 
+
 **Imports**
 
 .. literalinclude::  example_code/ses/Create_Template.php
