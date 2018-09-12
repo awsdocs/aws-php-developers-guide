@@ -17,7 +17,7 @@ Managing Email Identities Using the |SESlong| API and the |sdk-php| Version 3
    :keywords: AWS SES code examples for PHP, approve emails recipeints with PHP
 
 When you first start using your Amazon SES account, all senders and recipeints must be verified in the same region that you 
-will be sending emails. For more information about sending emails see :SES-dg:`Sending Email with Amazon SES <sending-email>`
+will be sending emails. For more information about sending emails see :SES-dg:`Sending Email with Amazon SES <sending-email>`.
 
 
 The following examples show how to:

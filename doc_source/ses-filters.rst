@@ -16,7 +16,7 @@ Manage Email Filters Using the |SESlong| API and the |sdk-php| Version 3
    :description: Use AWS SES API to verify email address and domains.
    :keywords: AWS SES code examples for PHP, IP Address Email Filters with PHP
 
-In addition to sending emails, you can also recieve email with |SESlong|. An IP address filter enables you to optionally specify whether to accept or reject mail originating from an IP address or range of IP addresses. For more information about recieving emails see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`
+In addition to sending emails, you can also recieve email with |SESlong|. An IP address filter enables you to optionally specify whether to accept or reject mail originating from an IP address or range of IP addresses. For more information about recieving emails see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`.
 
 
 The following examples show how to:
