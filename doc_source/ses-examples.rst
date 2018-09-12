@@ -21,7 +21,7 @@
 email addresses and domains. For more information about |SESlong|, see the |SES-dg|_.
 
 .. image:: images/code-samples-ses.png
-   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SES
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SES.
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
@@ -32,3 +32,5 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
    Working with Email Templates <ses-template>
    Managing Email Filters <ses-filters>
    Using Email Rules <ses-rules>
+   Authorizing Senders <ses-sender-policy>
+   Monitor your Activity <ses-send-email>
