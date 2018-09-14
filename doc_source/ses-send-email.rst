@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##################################################################################
-Monitor your Sender Activity Using the |SESlong| API and the |sdk-php| Version 3
-##################################################################################
+################################################################################
+Monitoring Your Sending Activity Using the |SES| API and the |sdk-php| Version 3
+################################################################################
 
 .. meta::
-   :description: Use the AWS SES API to monitor your sending reputation.
-   :keywords: AWS SES code examples for PHP, Simple Email Service Quota with PHP, Simple Email Statistics with PHP
+   :description: Use the Amazon SES API to monitor your sending reputation.
+   :keywords: Amazon SES code examples for PHP, Simple Email Service Quota with PHP, Simple Email Statistics with PHP
 
-|SES| provides methods for monitoring your sending activity. We recommend that you implement these methods so that you can keep track of important measures, such as your account's bounce, complaint and reject rates. Excessively high bounce and complaint rates may jeopardize your ability to send emails using |SES|.
+|SES| provides methods for monitoring your sending activity. We recommend that you implement these methods so that you can keep track of important measures, such as your account's bounce, complaint, and reject rates. Excessively high bounce and complaint rates may jeopardize your ability to send emails using |SES|.
 
 The following examples show how to:
 
@@ -25,12 +25,12 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |SESlong|, see the |SES-dg|_.
+For more information about using |SES|, see the |SES-dg|_.
 
-Check your sending quota
+Check Your Sending Quota
 ========================
 
-You are limited to only sending a certain amount of messages in a single 24 hour period. Use this code sample to check how many messages you are still allowed to send today. For more information about sending limits see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
+You are limited to sending only a certain amount of messages in a single 24-hour period. Use this code example to check how many messages you are still allowed to send today. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
 
 **Imports**
 
@@ -44,10 +44,10 @@ You are limited to only sending a certain amount of messages in a single 24 hour
    :lines: 26-
    :language: php
 
-Monitor your Sending Activity
+Monitor Your Sending Activity
 =============================
 
-Retrieve metrics for messages you've sent in the past two weeks. This sample will return the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments. 
+Retrieve metrics for messages you've sent in the past two weeks. This example returns the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments.
 
 **Imports**
 

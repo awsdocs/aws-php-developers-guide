@@ -9,18 +9,17 @@
    limitations under the License.
 
 #################################################################################
-Create and Manage Email Rules Using the |SESlong| API and the |sdk-php| Version 3
+Creating and Managing Email Rules Using the |SES| API and the |sdk-php| Version 3
 #################################################################################
 
 .. meta::
-   :description: Use AWS SES API to verify email address and domains.
-   :keywords: AWS SES code examples for PHP, IP Address Email Filters with PHP
+   :description: Use the Amazon SES API to manage email rules.
+   :keywords: Amazon SES code examples for PHP, managing email rules with PHP
 
-In addition to sending emails, you can also recieve email with |SESlong|. AReceipt rules let you specify what Amazon SES does with email it receives for the email addresses or domains you own. 
-A rule can send email to other AWS services inlcuding but not limited to |S3|, |SNS|, or |LAMlong|.
+In addition to sending emails, you can also receive email with |SESlong|. Receipt rules enable you to specify what |SES| does with email it receives for the email addresses or domains you own.
+A rule can send email to other AWS services including but not limited to |S3|, |SNS|, or |LAMlong|.
 
-For more information about recieving emails see :SES-dg:`Managing Receipt Rule Sets for Amazon SES Email Receiving <receiving-email-managing-receipt-rule-sets>` and :SES-dg:`Managing Receipt Rules for Amazon SES Email Receiving <receiving-email-managing-receipt-rules>`.
-
+For more information, see :SES-dg:`Managing Receipt Rule Sets for Amazon SES Email Receiving <receiving-email-managing-receipt-rule-sets>` and :SES-dg:`Managing Receipt Rules for Amazon SES Email Receiving <receiving-email-managing-receipt-rules>`.
 
 The following examples show how to:
 
@@ -35,12 +34,12 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |SESlong|, see the |SES-dg|_.
+For more information about using |SES|, see the |SES-dg|_.
 
 Create a Receipt Rule Set
 ==========================
 
-First, create a reciept rule set to contain a collection of receipt rules.  You must have at least one receipt rule set associated with your account before you can create a rule.  
+A receipt rule set contains a collection of receipt rules. You must have at least one receipt rule set associated with your account before you can create a receipt rule.
 
 **Imports**
 
@@ -54,10 +53,10 @@ First, create a reciept rule set to contain a collection of receipt rules.  You 
    :lines: 26-
    :language: php
 
-Create a Receipt Rule 
-=======================
+Create a Receipt Rule
+=====================
 
-Control your incomming email by adding a receipt rule to an exisiting receipt rule set. This example shows you how to create a receipt rule that sends incoming messages to an |S3| bucket, but you can also send messages to |SNS|, and |LAMlong|. 
+Control your incoming email by adding a receipt rule to an exisiting receipt rule set. This example shows you how to create a receipt rule that sends incoming messages to an |S3| bucket, but you can also send messages to |SNS| and |LAMlong|.
 
 **Imports**
 
@@ -88,10 +87,10 @@ Once per second, return the details of the specified receipt rule set.
    :lines: 26-
    :language: php
 
-Describe a Receipt Rule 
+Describe a Receipt Rule
 ========================
 
-Returns the details of the specified receipt rule.
+Return the details of a specified receipt rule.
 
 **Imports**
 
@@ -104,11 +103,11 @@ Returns the details of the specified receipt rule.
 .. literalinclude:: example_code/ses/Describe_Rule.php
    :lines: 26-
    :language: php
-   
-List all Receipt Rule Sets
+
+List All Receipt Rule Sets
 ==========================
 
-Lists the receipt rule sets that exist under your AWS account in the current AWS Region.
+List the receipt rule sets that exist under your AWS account in the current AWS Region.
 
 **Imports**
 
@@ -122,10 +121,10 @@ Lists the receipt rule sets that exist under your AWS account in the current AWS
    :lines: 26-
    :language: php
 
-Update a Receipt Rule 
+Update a Receipt Rule
 =======================
 
-Change an existing receipt rule. This example shows you how to create a receipt rule that sends incoming messages to an |LAM| function, but you can also send messages to |SNS|, and |S3|. 
+Change an existing receipt rule. This example shows you how to update a receipt rule that sends incoming messages to an |LAMlong| function, but you can also send messages to |SNS| and |S3|.
 
 **Imports**
 
@@ -142,7 +141,7 @@ Change an existing receipt rule. This example shows you how to create a receipt 
 Delete a Receipt Rule Set
 ==========================
 
-Remove a specified receipt rule set that is not currently disabled. This will also delete all of the receipt rules it contains.
+Remove a specified receipt rule set that isn't currently disabled. This also deletes all of the receipt rules it contains.
 
 **Imports**
 
@@ -156,10 +155,10 @@ Remove a specified receipt rule set that is not currently disabled. This will al
    :lines: 26-
    :language: php
 
-Delete a Receipt Rule 
-=======================
+Delete a Receipt Rule
+=====================
 
-Deletes the specified receipt rule.
+Delete a specified receipt rule.
 
 **Imports**
 
