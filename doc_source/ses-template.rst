@@ -8,16 +8,17 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-#################################################################################
-Create Custom Email Templates Using the |SESlong| API and the |sdk-php| Version 3
-#################################################################################
+###############################################################################
+Creating Custom Email Templates Using the |SES| API and the |sdk-php| Version 3
+###############################################################################
 
 .. meta::
-   :description: Use AWS SES API to verify email address and domains.
-   :keywords: AWS SES code examples for PHP, approve emails recipeints with PHP
+   :description: Use the Amazon SES API to create and use email templates.
+   :keywords: Amazon SES code examples for PHP, create email templates with PHP
 
-|SESlong| allows you to send emails that are personalized for each recipeint using templates. Templates include a subject line, and the text and HTML parts of the email body. The subject and body sections may also contain unique values that are personalized for each recipient. For more information about sending emails see :SES-dg:`Sending Personalized Email Using the Amazon SES <send-personalized-email-api>` in the |SES-dg|.
+|SESlong| enables you to send emails that are personalized for each recipeint by using templates. Templates include a subject line and the text and HTML parts of the email body. The subject and body sections can also contain unique values that are personalized for each recipient.
 
+For more information, see :SES-dg:`Sending Personalized Email Using the Amazon SES <send-personalized-email-api>` in the |SES-dg|.
 
 The following examples show how to:
 
@@ -30,15 +31,15 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |SESlong|, see the |SES-dg|_.
+For more information about using |SES|, see the |SES-dg|_.
 
 Create an Email Template
 ========================
 
-Create a new template to send personalized email messages. 
+Create a template to send personalized email messages.
 
-.. note:
-    |SES| does not validate your HTML, so double check that `HtmlPart` is valid before sending an email. 
+.. note::
+    |SES| doesn't validate your HTML, so double-check that `HtmlPart` is valid before sending an email.
 
 **Imports**
 
@@ -51,11 +52,11 @@ Create a new template to send personalized email messages.
 .. literalinclude:: example_code/ses/Create_Template.php
    :lines: 26-
    :language: php
-   
-Get an Email Templates
-========================
 
-View the content for an existing email template including the subject line, HTML body, and plain text. 
+Get an Email Template
+=====================
+
+View the content for an existing email template including the subject line, HTML body, and plain text.
 
 **Imports**
 
@@ -72,7 +73,7 @@ View the content for an existing email template including the subject line, HTML
 List all Email Templates
 ========================
 
-Retrieve a list of all email templates associated with your AWS account in the current AWS Region.
+Retrieve a list of all email templates that are associated with your AWS account in the current AWS Region.
 
 **Imports**
 
@@ -85,11 +86,11 @@ Retrieve a list of all email templates associated with your AWS account in the c
 .. literalinclude:: example_code/ses/List_Templates.php
    :lines: 26-
    :language: php
-   
-Update an Email Templates
-=========================
 
-Change the content for a specific email template including the subject line, HTML body, and plain text. 
+Update an Email Template
+========================
+
+Change the content for a specific email template including the subject line, HTML body, and plain text.
 
 **Imports**
 
@@ -106,7 +107,7 @@ Change the content for a specific email template including the subject line, HTM
 Delete an Email Template
 ========================
 
-Remove a specific email template. 
+Remove a specific email template.
 
 **Imports**
 
@@ -123,7 +124,7 @@ Remove a specific email template.
 Send an Email with a Template
 =============================
 
-Use a template to send an email to recipeints.
+Use a template to send an email to recipients.
 
 **Imports**
 
