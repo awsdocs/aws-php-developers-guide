@@ -37,13 +37,13 @@ Create an object containing the TopicArn parameter for the topic whose subscript
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/DeadLetterQueue.php
+.. literalinclude::  example_code/sns/ListSubscriptions.php
    :lines: 19-22
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/DeadLetterQueue.php
+.. literalinclude:: example_code/sns/ListSubscriptions.php
    :lines: 31-50
    :language: php
 
@@ -75,13 +75,13 @@ To call the subscribe method, create a promise for invoking an Amazon SNS servic
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/DeadLetterQueue.php
+.. literalinclude::  example_code/sns/SubscribeHTTPS.php
    :lines: 19-22
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/DeadLetterQueue.php
+.. literalinclude:: example_code/sns/SubscribeHTTPS.php
    :lines: 31-50
    :language: php
    
@@ -101,6 +101,36 @@ To call the subscribe method, create a promise for invoking an Amazon SNS servic
 **Sample Code**
 
 .. literalinclude:: example_code/sns/SubscribeLambda.php
+   :lines: 31-50
+   :language: php
+   
+Subscriping a Text SMS to a Topic
+=================================
+
+**Imports**
+
+.. literalinclude::  example_code/sns/SubscribeTextSMS.php
+   :lines: 19-22
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/sns/SubscribeTextSMS.php
+   :lines: 31-50
+   :language: php
+   
+Confirm Subscription to a Topic
+===============================
+
+**Imports**
+
+.. literalinclude::  example_code/sns/ConfirmSubscription.php
+   :lines: 19-22
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/sns/ConfirmSubscription.php
    :lines: 31-50
    :language: php
    
