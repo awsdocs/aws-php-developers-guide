@@ -25,7 +25,7 @@ In |snslong|, there are two types of clients—publishers and subscribers—also
 .. image:: images/code-samples-sns.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon sns
 
-Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (web servers, email addresses, |SQS| queues, Lambda functions) consume or receive the message or notification over one of the supported protocols (|SQS|, HTTP/S, email, |SMS|, |lambda|) when they are subscribed to the topic.
+Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (web servers, email addresses, |SQS| queues, Lambda functions) consume or receive the message or notification over one of the supported protocols (|SQS|, HTTP/S, email, |SMS|, |LAM|) when they are subscribed to the topic.
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
