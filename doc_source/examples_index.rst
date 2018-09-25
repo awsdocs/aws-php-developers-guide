@@ -29,6 +29,7 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
     AWS Key Management Service <kms-examples>
     AWS Elemental MediaConvert <emc-examples.rst>    
     Amazon S3 Examples <s3-examples.rst>
+    Amazon Simple Email Service <ses-examples.rst>
     AWS Simple Notification Service <sns-examples.rst>
     Amazon SQS Examples <sqs-examples.rst>
 
