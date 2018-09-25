@@ -20,10 +20,10 @@ An alias is an optional display name for an |KMSlong| (|KMS|) :KMS-dg:`customer 
 
 The following examples show how to:
 
-* Create an alias using :aws-php-class:`CreateAlias </api-kms-2014-11-01.html#createalias>`.
-* View an alias using :aws-php-class:`ListAliases </api-kms-2014-11-01.html.html#listaliases>`.
-* Update an alias using :aws-php-class:`UpdateAlias </api-kms-2014-11-01.html.html#updatealias>`.
-* Delete an alias using :aws-php-class:`DeleteAlias </api-kms-2014-11-01.html.html#deletealias>`.
+* Create an alias using :aws-php-class:`CreateAlias <api-kms-2014-11-01.html#createalias>`.
+* View an alias using :aws-php-class:`ListAliases <api-kms-2014-11-01.html#listaliases>`.
+* Update an alias using :aws-php-class:`UpdateAlias <api-kms-2014-11-01.html#updatealias>`.
+* Delete an alias using :aws-php-class:`DeleteAlias <api-kms-2014-11-01.html#deletealias>`.
 
 .. include:: text/git-php-examples.txt
 

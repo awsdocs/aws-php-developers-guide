@@ -20,10 +20,10 @@ A grant is another mechanism for providing permissions, an alternative to the ke
 
 The following examples show how to:
 
-* Create a grant for a customer master key (CMK) using :aws-php-class:`CreateGrant </api-kms-2014-11-01.html#creategrant>`.
-* View a grant for a CMK using :aws-php-class:`ListGrants </api-kms-2014-11-01.html.html#listgrants>`.
-* Retire a grant for a CMK using :aws-php-class:`RetireGrant </api-kms-2014-11-01.html.html#retiregrant>`.
-* Revoke a grant for a CMK using :aws-php-class:`RevokeGrant </api-kms-2014-11-01.html.html#revokegrant>`.
+* Create a grant for a customer master key (CMK) using :aws-php-class:`CreateGrant <api-kms-2014-11-01.html#creategrant>`.
+* View a grant for a CMK using :aws-php-class:`ListGrants <api-kms-2014-11-01.html#listgrants>`.
+* Retire a grant for a CMK using :aws-php-class:`RetireGrant <api-kms-2014-11-01.html#retiregrant>`.
+* Revoke a grant for a CMK using :aws-php-class:`RevokeGrant <api-kms-2014-11-01.html#revokegrant>`.
 
 .. include:: text/git-php-examples.txt
 
