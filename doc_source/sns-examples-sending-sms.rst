@@ -40,13 +40,13 @@ This example gets the DefaultSMSType attribute, which controls whether SMS messa
 
 **Imports**
 
-.. literalinclude::  example_code/GetSMSAtrributes.php
+.. literalinclude::  example_code/sns/GetSMSAtrributes.php
    :lines: 19-22
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/GetSMSAtrributes.php
+.. literalinclude:: example_code/sns/GetSMSAtrributes.php
    :lines: 31-50
    :language: php
    
@@ -59,13 +59,13 @@ This example sets the DefaultSMSType attribute to Transactional, which optimizes
 
 **Imports**
 
-.. literalinclude::  example_code/SetSMSAtrributes.php
+.. literalinclude::  example_code/sns/SetSMSAtrributes.php
    :lines: 19-22
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/SetSMSAtrributes.php
+.. literalinclude:: example_code/sns/SetSMSAtrributes.php
    :lines: 31-50
    :language: php
    
