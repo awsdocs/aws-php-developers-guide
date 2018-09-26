@@ -35,7 +35,7 @@ For more information about using |AKLlong|, see the |AKL-dg|_.
 Create a Data Stream using a |AKL| Data Stream
 =================================================
 
-Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. 
+Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about :AKL-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>`_ in the |AKL-dg|_.
 
 
 **Imports**
