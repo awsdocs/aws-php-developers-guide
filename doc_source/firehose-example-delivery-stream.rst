@@ -16,18 +16,20 @@ Creating Delivery Streams Using the |AKF| API and the |sdk-php| Version 3
    :description: Kinesis Firehose Delivery Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Firehose for PHP, Delivery Streams for PHP, Data Streams for PHP
 
-An alias is an optional display name for an |AKlong| (|AKlong|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>`.
+|AKFlong| allows you send real-time data to other AWS services including |AKL|, |S3|, |ES|, |RS| or Splunk. Create a data producer with Delivery Streams, 
+which will deliver data to the configured destination every time you add data. 
 
 The following examples show how to:
 
 * Create a delivery stream using :aws-php-class:`CreateDeliveryStream <api-firehose-2015-08-04.html#createdeliverystream>`.
-* View an alias using :aws-php-class:`ListAliases <api-firehose-2015-08-04.html#listaliases>`.
-* Update an alias using :aws-php-class:`UpdateAlias <api-firehose-2015-08-04.html#updatealias>`.
-* Delete an alias using :aws-php-class:`DeleteAlias <api-firehose-2015-08-04.html#deletealias>`.
+* Get details about a single delivery stream using :aws-php-class:`DescribeDeliveryStream <api-firehose-2015-08-04.html#describedeliverystream>`.
+* List your delivery streams using :aws-php-class:`ListDeliveryStreams <api-firehose-2015-08-04.html#listdeliverystreams>`.
+* Send Data to a delivery stream using :aws-php-class:`PutRecord <api-firehose-2015-08-04.html#putrecord>`.
+* Delete a delivery stream using :aws-php-class:`DeleteDeliveryStream <api-firehose-2015-08-04.html#deletedeliverystream>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |AKlong| (|AKlong|), see the |KMS-dg|_.
+For more information about using |AKFlong|, see the |AKF-dg|_.
 
 Create a Delivery Stream using a |AK| Data Stream
 =================================================
@@ -50,7 +52,7 @@ Establish a Delivery Stream that will put data into a classic Kinesis Data Strea
 Create a Delivery Stream using an |S3| Bucket
 =================================================
 
-Establish a Delivery Stream that will put data into an |S3| Bucket using the following code sample. 
+Establish a Delivery Stream that will put data into an existing |S3| Bucket using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AFK| access to your |S3| Bucket as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Destination <controlling-access.html#using-iam-s3>`.
 
 
 **Imports**
@@ -68,8 +70,7 @@ Establish a Delivery Stream that will put data into an |S3| Bucket using the fol
 Create a Delivery Stream using |ES|
 ===================================
 
-Establish a Delivery Stream that will put data into an |ES| using the following code sample. 
-
+Establish a Delivery Stream that will put data into an |ES| using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AFK| access to your |ES| cluster as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon ES Destination <controlling-access.html#using-iam-es>`.
 
 **Imports**
 
@@ -123,7 +124,7 @@ List all the existing Delivery Streams sending data to Kinesis Data Streams usin
 List existing Delivery Streams sending to other |AWS| Services
 =====================================================================
 
-List all the existing Delivery Streams sending data to |S3|, |ES|, |RS| or |LAM| using the following code sample. 
+List all the existing Delivery Streams sending data to |S3|, |ES|, |RS| or Splunk using the following code sample. 
 
 
 **Imports**
@@ -142,7 +143,8 @@ List all the existing Delivery Streams sending data to |S3|, |ES|, |RS| or |LAM|
 Send Data to an existing Delivery Streams 
 =========================================
 
-Once you've created a Delivery Stream, use the following example to send data through Firehose Delivery Streams to your specified destination.  
+Once you've created a Delivery Stream, use the following example to send data through Firehose Delivery Streams to your specified destination. 
+After you create a Delivery Stream, use DescribeDeliveryStream to see if the Delivery Stream is active before sending data to it.  
 
 **Imports**
 
@@ -159,7 +161,7 @@ Once you've created a Delivery Stream, use the following example to send data th
 Delete a Delivery Stream
 ========================
 
-Delete a Delivery Stream using the following code sample. 
+Delete a Delivery Stream using the following code sample. This will also delete any data you have sent to the Delivery Stream.
 
 
 **Imports**
