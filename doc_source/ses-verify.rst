@@ -38,6 +38,8 @@ Verify an Email Address
 
 When you run the following code example, |SES| sends an email to the address you specified. When you (or the recipient of the email) click the link in the email, the address is verified.
 
+To add an email address to your |SES| account use the the :SES-api:`VerifyEmailIdentity <API_VerifyEmailIdentity>`operation.
+
 **Imports**
 
 .. literalinclude::  example_code/ses/Add_Email.php
@@ -57,6 +59,8 @@ Verify an Email Domain
 
 When you run the following code example, |SES| provides you with a verification token. You have to add the token to your domain's DNS configuration. For more information, see :SES-dg:`Verifying a Domain with Amazon SES <verify-domain-procedure>` in the |SES-dg|.
 
+To add a sending domain to your |SES| account use the the :SES-api:`VerifyDomainIdentity <API_VerifyDomainIdentity>`operation.
+
 **Imports**
 
 .. literalinclude::  example_code/ses/Add_Domain.php
@@ -72,7 +76,8 @@ When you run the following code example, |SES| provides you with a verification 
 List Email Addresses
 ====================
 
-Retrieve a list of email addresses submitted in the current AWS Region, regardless of verification status.
+To retrieve a list of email addresses submitted in the current AWS Region, regardless of verification status use the the :SES-api:`ListIdentities <API_ListIdentities>`operation.
+.
 
 **Imports**
 
@@ -89,7 +94,7 @@ Retrieve a list of email addresses submitted in the current AWS Region, regardle
 List Email Domains
 ==================
 
-Retrieve a list of email domains submitted in the current AWS Region, regardless of verification status.
+To retrieve a list of email domains submitted in the current AWS Region, regardless of verification status use the the :SES-api:`ListIdentities <API_ListIdentities>`operation.
 
 **Imports**
 
@@ -106,7 +111,7 @@ Retrieve a list of email domains submitted in the current AWS Region, regardless
 Delete an Email Address
 ========================
 
-Delete a verified email address from the list of identities.
+To delete a verified email address from the list of identities use the the :SES-api:`DeleteIdentity <API_DeleteIdentity>`operation.
 
 **Imports**
 
@@ -123,7 +128,7 @@ Delete a verified email address from the list of identities.
 Delete an Email Domain
 ======================
 
-Delete a verified email domain from the list of verified identities.
+To delete a verified email domain from the list of verified identities, use the the :SES-api:`DeleteIdentity <API_DeleteIdentity>`operation.
 
 **Imports**
 
