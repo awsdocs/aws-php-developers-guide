@@ -39,7 +39,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Create a Receipt Rule Set
 ==========================
 
-A receipt rule set contains a collection of receipt rules. You must have at least one receipt rule set associated with your account before you can create a receipt rule.
+A receipt rule set contains a collection of receipt rules. You must have at least one receipt rule set associated with your account before you can create a receipt rule. To create a receipt rule set provide a unique RuleSetName and use the :SES-api:`CreateReceiptRuleSet <API_CreateReceiptRuleSet>`operation.
 
 **Imports**
 
@@ -56,7 +56,7 @@ A receipt rule set contains a collection of receipt rules. You must have at leas
 Create a Receipt Rule
 =====================
 
-Control your incoming email by adding a receipt rule to an exisiting receipt rule set. This example shows you how to create a receipt rule that sends incoming messages to an |S3| bucket, but you can also send messages to |SNS| and |LAMlong|.
+Control your incoming email by adding a receipt rule to an existing receipt rule set. This example shows you how to create a receipt rule that sends incoming messages to an |S3| bucket, but you can also send messages to |SNS| and |LAMlong|. To create a receipt rule provide a rule and the RuleSetName to the :SES-api:`CreateReceiptRule <API_CreateReceiptRule>`operation.
 
 **Imports**
 
@@ -73,7 +73,8 @@ Control your incoming email by adding a receipt rule to an exisiting receipt rul
 Describe a Receipt Rule Set
 ============================
 
-Once per second, return the details of the specified receipt rule set.
+Once per second, return the details of the specified receipt rule set. 
+To use the :SES-api:`DescribeReceiptRuleSet <API_DescribeReceiptRuleSet>`operation provide the RuleSetName.
 
 **Imports**
 
@@ -90,7 +91,7 @@ Once per second, return the details of the specified receipt rule set.
 Describe a Receipt Rule
 ========================
 
-Return the details of a specified receipt rule.
+Return the details of a specified receipt rule. To use the :SES-api:`DescribeReceiptRule <API_DescribeReceiptRule>`operation provide the RuleName and RuleSetName.
 
 **Imports**
 
@@ -107,7 +108,7 @@ Return the details of a specified receipt rule.
 List All Receipt Rule Sets
 ==========================
 
-List the receipt rule sets that exist under your AWS account in the current AWS Region.
+To list the receipt rule sets that exist under your AWS account in the current AWS Region use the :SES-api:`ListReceiptRuleSets <API_ListReceiptRuleSets>`operation.
 
 **Imports**
 
@@ -124,7 +125,7 @@ List the receipt rule sets that exist under your AWS account in the current AWS 
 Update a Receipt Rule
 =======================
 
-Change an existing receipt rule. This example shows you how to update a receipt rule that sends incoming messages to an |LAMlong| function, but you can also send messages to |SNS| and |S3|.
+Change an existing receipt rule. This example shows you how to update a receipt rule that sends incoming messages to an |LAMlong| function, but you can also send messages to |SNS| and |S3|. To use the :SES-api:`UpdateReceiptRule <API_UpdateReceiptRule>`operation provide the new receipt rule and the RuleSetName.
 
 **Imports**
 
@@ -141,7 +142,7 @@ Change an existing receipt rule. This example shows you how to update a receipt 
 Delete a Receipt Rule Set
 ==========================
 
-Remove a specified receipt rule set that isn't currently disabled. This also deletes all of the receipt rules it contains.
+Remove a specified receipt rule set that isn't currently disabled. This also deletes all of the receipt rules it contains. To delete a receipt rule set provide the RuleSetName to the :SES-api:`DeleteReceiptRuleSet <API_DeleteReceiptRuleSet>`operation.
 
 **Imports**
 
@@ -158,7 +159,7 @@ Remove a specified receipt rule set that isn't currently disabled. This also del
 Delete a Receipt Rule
 =====================
 
-Delete a specified receipt rule.
+To delete a specified receipt rule provide the RuleName and RuleSetName to the :SES-api:`DeleteReceiptRule <API_DeleteReceiptRule>`operation.
 
 **Imports**
 

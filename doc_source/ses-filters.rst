@@ -31,7 +31,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Create an Email Filter
 ======================
 
-Allow or block emails from a specific IP address.
+To allow or block emails from a specific IP address use the the :SES-api:`CreateReceiptFilter <API_CreateReceiptFilter>`operation. Provide the IP address or range of addresses and a unique name to identify this filter. 
 
 **Imports**
 
@@ -48,7 +48,8 @@ Allow or block emails from a specific IP address.
 List All Email Filters
 ======================
 
-List the IP address filters associated with your AWS account in the current AWS Region.
+To list the IP address filters associated with your AWS account in the current AWS Region use the the :SES-api:`ListReceiptFilters <API_ListReceiptFilters>`operation.
+..
 
 **Imports**
 
@@ -65,7 +66,9 @@ List the IP address filters associated with your AWS account in the current AWS 
 Delete an Email Filter
 ======================
 
-Remove the filter for a specific IP address.
+To remove an existing filter for a specific IP address use the the :SES-api:`DeleteReceiptFilter <API_DeleteReceiptFilter>`operation. Provide the unique filter name to identify the receipt filter you wish to delete.
+
+You can delete and create a new receipt filter, if you need to change the range of addresses that are filtered.
 
 **Imports**
 

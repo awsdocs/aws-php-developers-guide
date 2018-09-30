@@ -36,7 +36,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Create an Email Template
 ========================
 
-Create a template to send personalized email messages.
+To create a template to send personalized email messages use the :SES-api:`CreateTemplate <API_CreateTemplate>` operation. The template can be used by any account authorized to send messages in the region the template is added. 
 
 .. note::
     |SES| doesn't validate your HTML, so double-check that `HtmlPart` is valid before sending an email.
@@ -56,7 +56,7 @@ Create a template to send personalized email messages.
 Get an Email Template
 =====================
 
-View the content for an existing email template including the subject line, HTML body, and plain text.
+To view the content for an existing email template including the subject line, HTML body, and plain text use the :SES-api:`GetTemplate <API_GetTemplate>` operation. Only TemplateName is required. 
 
 **Imports**
 
@@ -73,7 +73,7 @@ View the content for an existing email template including the subject line, HTML
 List all Email Templates
 ========================
 
-Retrieve a list of all email templates that are associated with your AWS account in the current AWS Region.
+To retrieve a list of all email templates that are associated with your AWS account in the current AWS Region use the :SES-api:`ListTemplates <API_ListTemplates>`operation.
 
 **Imports**
 
@@ -90,24 +90,24 @@ Retrieve a list of all email templates that are associated with your AWS account
 Update an Email Template
 ========================
 
-Change the content for a specific email template including the subject line, HTML body, and plain text.
+To change the content for a specific email template including the subject line, HTML body, and plain text use the :SES-api:`UpdateTemplate <API_UpdadteTemplate>`operation.
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Get_Template.php
+.. literalinclude::  example_code/ses/Update_Template.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Get_Template.php
+.. literalinclude:: example_code/ses/Update_Template.php
    :lines: 26-
    :language: php
 
 Delete an Email Template
 ========================
 
-Remove a specific email template.
+To remove a specific email template use the :SES-api:`DeleteTemplate <API_DeleteTemplate>`operation. All you need is the TemplateName.
 
 **Imports**
 
@@ -124,7 +124,7 @@ Remove a specific email template.
 Send an Email with a Template
 =============================
 
-Use a template to send an email to recipients.
+To use a template to send an email to recipients use the :SES-api:`SendTemplatedEmail <API_SendTemplatedEmail>`operation.
 
 **Imports**
 

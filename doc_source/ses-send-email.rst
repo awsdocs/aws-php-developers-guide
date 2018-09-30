@@ -30,7 +30,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Check Your Sending Quota
 ========================
 
-You are limited to sending only a certain amount of messages in a single 24-hour period. Use this code example to check how many messages you are still allowed to send today. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
+You are limited to sending only a certain amount of messages in a single 24-hour period. To check how many messages you are still allowed to send use the :SES-api:`GetSendQuota <API_GetSendQuota>`operation. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
 
 **Imports**
 
@@ -47,16 +47,16 @@ You are limited to sending only a certain amount of messages in a single 24-hour
 Monitor Your Sending Activity
 =============================
 
-Retrieve metrics for messages you've sent in the past two weeks. This example returns the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments.
+To retrieve metrics for messages you've sent in the past two weeks use the :SES-api:`GetSendStatistics <API_GetSendStatistics>`operation. This example returns the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments.
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Filters.php
+.. literalinclude::  example_code/ses/Send_Statistics.php.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Filters.php
+.. literalinclude:: example_code/ses/Send_Statistics.php.php
    :lines: 26-
    :language: php
