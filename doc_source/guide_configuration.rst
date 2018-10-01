@@ -23,7 +23,7 @@ creating. These custom client configuration options are described in the
 `API documentation <http://docs.aws.amazon.com/aws-sdk-php/latest/>`_ of each
 client.
 
-.. contents:: Configuration Options
+.. contents:: Configuration Options:
     :depth: 1
     :local:
 
