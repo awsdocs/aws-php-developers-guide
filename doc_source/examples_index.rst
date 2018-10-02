@@ -27,6 +27,7 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
     Amazon EC2 Examples <ec2-examples.rst>
     AWS IAM Examples <iam-examples.rst>
     AWS Key Management Service <kms-examples>
+    Amazon Kinesis Examples <kinesis-examples.rst>
     AWS Elemental MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>
     Amazon SES Examples <ses-examples.rst>

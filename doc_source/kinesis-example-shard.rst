@@ -9,14 +9,14 @@
    limitations under the License.
 
 ##########################################################################
-Manage Data Shards Streams Using the |AKL| API and the |sdk-php| Version 3
+Manage Data Shards Streams Using the |AKS| API and the |sdk-php| Version 3
 ##########################################################################
 
 .. meta::
    :description: Kinesis Data Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Kinesis for PHP, Data Shards for PHP
 
-|AKLlong| allows you send real-time data. Create a data producer with Data Stream, 
+|AKSlong| allows you send real-time data. Create a data producer with Data Stream, 
 which will deliver data to the configured destination every time you add data. 
 
 The following examples show how to:
@@ -26,7 +26,7 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |AKLlong|, see the |AKL-dg|_.
+For more information about using |AKSlong|, see the |AKS-dg|_.
 
 List Data Stream Shards
 =======================
@@ -35,13 +35,13 @@ List up to 100 shards in a specific stream.
 
 **Imports**
 
-.. literalinclude::  example_code/kms/ListDataStreamShards.php
+.. literalinclude::  example_code/kinesis/ListDataStreamShards.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/ListDataStreamShards.php
+.. literalinclude:: example_code/kinesis/ListDataStreamShards.php
    :lines: 33-
    :language: php
 
@@ -52,13 +52,13 @@ If you need more Data Stream Shards, you can double your current amount by split
 
 **Imports**
 
-.. literalinclude::  example_code/kms/UpdateDataStreamShards.php
+.. literalinclude::  example_code/kinesis/UpdateDataStreamShards.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/UpdateDataStreamShards.php
+.. literalinclude:: example_code/kinesis/UpdateDataStreamShards.php
    :lines: 33-
    :language: php
 

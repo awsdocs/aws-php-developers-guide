@@ -9,16 +9,16 @@
    limitations under the License.
 
 #########################################################################
-Creating Data Streams Using the |AKL| API and the |sdk-php| Version 3
+Creating Data Streams Using the |AKS| API and the |sdk-php| Version 3
 #########################################################################
 
 .. meta::
    :description: Kinesis Data Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Kinesis for PHP, Data Streams for PHP
 
-|AKLlong| allows you send real-time data. Create a data producer with Data Stream, 
-which will deliver data to the configured destination every time you add data. Read more about  :AKL-dg:`Creating and Managing Streams 
-<working-with-streams.html>` in the |AKL-dg|_.
+|AKSlong| allows you send real-time data. Create a data producer with Data Stream, 
+which will deliver data to the configured destination every time you add data. Read more about  :AKS-dg:`Creating and Managing Streams 
+<working-with-streams.html>` in the |AKS-dg|_.
 
 The following examples show how to:
 
@@ -30,12 +30,12 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |AKLlong|, see the |AKL-dg|_.
+For more information about using |AKSlong|, see the |AKS-dg|_.
 
-Create a Data Stream using a |AKL| Data Stream
+Create a Data Stream using a |AKS| Data Stream
 =================================================
 
-Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about :AKL-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>`_ in the |AKL-dg|_.
+Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about :AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>`_ in the |AKS-dg|_.
 
 
 **Imports**

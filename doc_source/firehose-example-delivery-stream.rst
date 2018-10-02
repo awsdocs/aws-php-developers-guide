@@ -16,7 +16,7 @@ Creating Delivery Streams Using the |AKF| API and the |sdk-php| Version 3
    :description: Kinesis Firehose Delivery Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Firehose for PHP, Delivery Streams for PHP, Data Streams for PHP
 
-|AKFlong| allows you send real-time data to other AWS services including |AKL|, |S3|, |ES|, |RS| or Splunk. Create a data producer with Delivery Streams, 
+|AKFlong| allows you send real-time data to other AWS services including |AKS|, |S3|, |ES|, |RS| or Splunk. Create a data producer with Delivery Streams, 
 which will deliver data to the configured destination every time you add data. 
 
 The following examples show how to:
@@ -52,35 +52,35 @@ Establish a Delivery Stream that will put data into a classic Kinesis Data Strea
 Create a Delivery Stream using an |S3| Bucket
 =================================================
 
-Establish a Delivery Stream that will put data into an existing |S3| Bucket using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AFK| access to your |S3| Bucket as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Destination <controlling-access.html#using-iam-s3>`.
+Establish a Delivery Stream that will put data into an existing |S3| Bucket using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AKF| access to your |S3| Bucket as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Destination <controlling-access.html#using-iam-s3>`.
 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateDeliveryS3Stream.php
+.. literalinclude::  example_code/firehose/CreateS3DeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateDeliveryS3Stream.php
+.. literalinclude:: example_code/firehose/CreateS3DeliveryStream.php
    :lines: 33-
    :language: php
 
 Create a Delivery Stream using |ES|
 ===================================
 
-Establish a Delivery Stream that will put data into an |ES| using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AFK| access to your |ES| cluster as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon ES Destination <controlling-access.html#using-iam-es>`.
+Establish a Delivery Stream that will put data into an |ES| using the following code sample. Provide the destination parameters as described in the :AKF-dg:`Destination Parameters <create-destination.html>` and ensure that you grant |AKF| access to your |ES| cluster as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon ES Destination <controlling-access.html#using-iam-es>`.
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateDeliveryESStream.php
+.. literalinclude::  example_code/firehose/CreateESDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateDeliveryESStream.php
+.. literalinclude:: example_code/firehose/CreateESDeliveryStream.php
    :lines: 33-
    :language: php
    
