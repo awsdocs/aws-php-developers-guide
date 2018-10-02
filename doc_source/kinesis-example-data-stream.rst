@@ -35,8 +35,8 @@ For more information about using |AKSlong|, see the |AKS-dg|_.
 Create a Data Stream using a |AKS| Data Stream
 =================================================
 
-Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about :AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>`_ in the |AKS-dg|_.
-
+Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about 
+:AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>` in the |AKS-dg|_.
 
 **Imports**
 
