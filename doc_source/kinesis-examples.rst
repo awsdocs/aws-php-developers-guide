@@ -18,7 +18,7 @@
    :keywords: Amazon Kinesis code examples for PHP, Amazon Firehose for PHP, Delivery Streams for PHP, Data Streams for PHP
 
 |AKlong| is an AWS services that collects, processes, and analyzies data in real time.  For
-more information about |AKlong|, see the `Amazon Kinesis documentation <https://docs.aws.amazon.com/kinesis/index.html>`_. Configure your own Data Streams with |AKL| or use |AFK| to send data to |S3|, |ES|, |RS| or Splunk.
+more information about |AKlong|, see the `Amazon Kinesis documentation <https://docs.aws.amazon.com/kinesis/index.html>`_. Configure your own Data Streams with |AKS| or use |AKF| to send data to |S3|, |ES|, |RS| or Splunk.
 
 .. image:: images/code-samples-kinesis.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon Kinesis
