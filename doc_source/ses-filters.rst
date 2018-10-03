@@ -16,7 +16,7 @@ Managing Email Filters Using the |SES| API and the |sdk-php| Version 3
    :description: Use the Amazon SES API to manage email filters.
    :keywords: Amazon SES code examples for PHP, IP Address Email Filters with PHP
 
-In addition to sending emails, you can also receive email with |SESlong|. An IP address filter enables you to optionally specify whether to accept or reject mail that originates from an IP address or range of IP addresses. For more information, see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`.
+In addition to sending emails, you can also receive email with |SESlong| (|SES|). An IP address filter enables you to optionally specify whether to accept or reject mail that originates from an IP address or range of IP addresses. For more information, see :SES-dg:`Managing IP Address Filters for Amazon SES Email Receiving <receiving-email-managing-ip-filters>`.
 
 The following examples show how to:
 
@@ -31,7 +31,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Create an Email Filter
 ======================
 
-To allow or block emails from a specific IP address use the the :SES-api:`CreateReceiptFilter <API_CreateReceiptFilter>`operation. Provide the IP address or range of addresses and a unique name to identify this filter. 
+To allow or block emails from a specific IP address, use the :SES-api:`CreateReceiptFilter <API_CreateReceiptFilter>` operation. Provide the IP address or range of addresses and a unique name to identify this filter.
 
 **Imports**
 
@@ -48,8 +48,8 @@ To allow or block emails from a specific IP address use the the :SES-api:`Create
 List All Email Filters
 ======================
 
-To list the IP address filters associated with your AWS account in the current AWS Region use the the :SES-api:`ListReceiptFilters <API_ListReceiptFilters>`operation.
-..
+To list the IP address filters associated with your AWS account in the current AWS Region, use the :SES-api:`ListReceiptFilters <API_ListReceiptFilters>` operation.
+
 
 **Imports**
 
@@ -66,9 +66,9 @@ To list the IP address filters associated with your AWS account in the current A
 Delete an Email Filter
 ======================
 
-To remove an existing filter for a specific IP address use the the :SES-api:`DeleteReceiptFilter <API_DeleteReceiptFilter>`operation. Provide the unique filter name to identify the receipt filter you wish to delete.
+To remove an existing filter for a specific IP address use the :SES-api:`DeleteReceiptFilter <API_DeleteReceiptFilter>` operation. Provide the unique filter name to identify the receipt filter to delete.
 
-You can delete and create a new receipt filter, if you need to change the range of addresses that are filtered.
+If you need to change the range of addresses that are filtered, you can delete a receipt filter and create a new one.
 
 **Imports**
 
