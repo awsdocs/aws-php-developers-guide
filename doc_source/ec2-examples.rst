@@ -28,12 +28,7 @@
     :maxdepth: 1
 
     Managing Amazon EC2 Instances <ec2-examples-managing-instances.rst>
-    Using Elastic IP Addresses with Amazon EC2 <ec2-examples-using-elastic-ip-addresses.rst>
-    Using Regions and Availability Zones for Amazon EC2 <ec2-examples-using-regions-and-zones.rst>
-    Working with Amazon EC2 Key Pairs <ec2-examples-working-with-key-pairs.rst>
-    Working with Security Groups in Amazon EC2 <ec2-examples-using-security-groups.rst>
-    
-
-
-
-
+    Using Elastic IP Addresses <ec2-examples-using-elastic-ip-addresses.rst>
+    Using Regions and Availability Zones <ec2-examples-using-regions-and-zones.rst>
+    Working with Key Pairs <ec2-examples-working-with-key-pairs.rst>
+    Working with Security Groups <ec2-examples-using-security-groups.rst>

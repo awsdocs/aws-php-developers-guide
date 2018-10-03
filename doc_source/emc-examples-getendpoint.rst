@@ -27,7 +27,7 @@ The following examples show how to:
 .. include:: text/git-php-examples.txt
 
 To access the |EMC| client, create an |IAM| role that gives |EMClong| access to your input files and the |S3| buckets where your output files are 
-stored. For details, see Set Up :EMC-ug:`IAM Permissions <iam-role>` in the |EMC-ug|_.
+stored. For details, see :EMC-ug:`Set Up IAM Permissions <iam-role>` in the |EMC-ug|_.
 
 Retrieve Endpoints
 ==================

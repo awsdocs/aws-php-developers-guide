@@ -15,16 +15,16 @@ Encrypting and Decrypting |KMS| Data Keys Using the |sdk-php| Version 3
 .. meta::
    :description: Use the AWS KMS API to encrpypt and decrypt data.
    :keywords: AWS KMS code examples for PHP, encrypt data in PHP, decypt data in PHP
-   
+
 Data keys are encryption keys that you can use to encrypt data, including large amounts of data and other data encryption keys.
 
 You can use a |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>` to generate, encrypt, and decrypt data keys. However, |KMS| does not store, manage, or track your data keys, or perform cryptographic operations with data keys. You must use and manage data keys outside of |KMS|.
 
 The following examples show how to:
 
-* Encrypt a data key using :aws-php-class:`Encrypt <api-kms-2014-11-01.html#encrypt>`.
-* Decrypt a data key using :aws-php-class:`Decrypt <api-kms-2014-11-01.html#decrypt>`.
-* Re-encrypt a data key with a new CMK using :aws-php-class:`ReEncrypt <api-kms-2014-11-01.html#reencrypt>`.
+* Encrypt a data key using :aws-php-class:`Encrypt </api-kms-2014-11-01.html#encrypt>`.
+* Decrypt a data key using :aws-php-class:`Decrypt </api-kms-2014-11-01.html.html#decrypt>`.
+* Re-encrypt a data key with a new CMK using :aws-php-class:`ReEncrypt </api-kms-2014-11-01.html.html#reencrypt>`.
 
 
 .. include:: text/git-php-examples.txt
@@ -71,10 +71,10 @@ The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlo
    :lines: 33-
    :language: php
 
-ReEncrypt
+Reencrypt
 =========
 
-To decrypt an encrypted data key, and then immediately re-encrypt the data key under a different CMK, use the
+To decrypt an encrypted data key, and then immediately reencrypt the data key under a different CMK, use the
 :KMS-api:`ReEncrypt <API_ReEncrypt>` operation. The operations are performed entirely on the server side within |KMS|, so they never expose your plaintext outside of |KMS|.
 
 The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlob`` field from a :KMS-api:`GenerateDataKey <API_GenerateDataKey>`,

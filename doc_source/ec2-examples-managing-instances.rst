@@ -73,8 +73,8 @@ Start and Stop an Instance
    :lines: 30-50
    :language: php
 
-Reboot an Instances
-===================
+Reboot an Instance
+==================
 
 **Imports**
 
