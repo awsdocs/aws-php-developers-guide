@@ -16,7 +16,7 @@ Creating Custom Email Templates Using the |SES| API and the |sdk-php| Version 3
    :description: Use the Amazon SES API to create and use email templates.
    :keywords: Amazon SES code examples for PHP, create email templates with PHP
 
-|SESlong| enables you to send emails that are personalized for each recipeint by using templates. Templates include a subject line and the text and HTML parts of the email body. The subject and body sections can also contain unique values that are personalized for each recipient.
+|SESlong| (|SES|) enables you to send emails that are personalized for each recipient by using templates. Templates include a subject line and the text and HTML parts of the email body. The subject and body sections can also contain unique values that are personalized for each recipient.
 
 For more information, see :SES-dg:`Sending Personalized Email Using the Amazon SES <send-personalized-email-api>` in the |SES-dg|.
 
@@ -36,10 +36,10 @@ For more information about using |SES|, see the |SES-dg|_.
 Create an Email Template
 ========================
 
-To create a template to send personalized email messages use the :SES-api:`CreateTemplate <API_CreateTemplate>` operation. The template can be used by any account authorized to send messages in the region the template is added. 
+To create a template to send personalized email messages, use the :SES-api:`CreateTemplate <API_CreateTemplate>` operation. The template can be used by any account authorized to send messages in the AWS Region to which the template is added.
 
 .. note::
-    |SES| doesn't validate your HTML, so double-check that `HtmlPart` is valid before sending an email.
+    |SES| doesn't validate your HTML, so be sure that `HtmlPart` is valid before sending an email.
 
 **Imports**
 
@@ -56,7 +56,7 @@ To create a template to send personalized email messages use the :SES-api:`Creat
 Get an Email Template
 =====================
 
-To view the content for an existing email template including the subject line, HTML body, and plain text use the :SES-api:`GetTemplate <API_GetTemplate>` operation. Only TemplateName is required. 
+To view the content for an existing email template including the subject line, HTML body, and plain text, use the :SES-api:`GetTemplate <API_GetTemplate>` operation. Only TemplateName is required.
 
 **Imports**
 
@@ -70,10 +70,10 @@ To view the content for an existing email template including the subject line, H
    :lines: 26-
    :language: php
 
-List all Email Templates
+List All Email Templates
 ========================
 
-To retrieve a list of all email templates that are associated with your AWS account in the current AWS Region use the :SES-api:`ListTemplates <API_ListTemplates>`operation.
+To retrieve a list of all email templates that are associated with your AWS account in the current AWS Region, use the :SES-api:`ListTemplates <API_ListTemplates>` operation.
 
 **Imports**
 
@@ -90,7 +90,7 @@ To retrieve a list of all email templates that are associated with your AWS acco
 Update an Email Template
 ========================
 
-To change the content for a specific email template including the subject line, HTML body, and plain text use the :SES-api:`UpdateTemplate <API_UpdadteTemplate>`operation.
+To change the content for a specific email template including the subject line, HTML body, and plain text, use the :SES-api:`UpdateTemplate <API_UpdadteTemplate>` operation.
 
 **Imports**
 
@@ -107,7 +107,7 @@ To change the content for a specific email template including the subject line, 
 Delete an Email Template
 ========================
 
-To remove a specific email template use the :SES-api:`DeleteTemplate <API_DeleteTemplate>`operation. All you need is the TemplateName.
+To remove a specific email template, use the :SES-api:`DeleteTemplate <API_DeleteTemplate>` operation. All you need is the TemplateName.
 
 **Imports**
 
@@ -124,7 +124,7 @@ To remove a specific email template use the :SES-api:`DeleteTemplate <API_Delete
 Send an Email with a Template
 =============================
 
-To use a template to send an email to recipients use the :SES-api:`SendTemplatedEmail <API_SendTemplatedEmail>`operation.
+To use a template to send an email to recipients, use the :SES-api:`SendTemplatedEmail <API_SendTemplatedEmail>` operation.
 
 **Imports**
 

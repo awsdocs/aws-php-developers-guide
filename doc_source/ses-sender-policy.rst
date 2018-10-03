@@ -16,9 +16,11 @@ Authorizing Senders Using the |SES| API and the |sdk-php| Version 3
    :description: Use the Amazon SES API to authorize other users to send emails from addresses or domains.
    :keywords: Amazon SES code examples for PHP, sending authorization with PHP
 
-To enable another AWS account, |IAMlong| user, or AWS service to send email through |SESlong| on your behalf, you create a sending authorization policy. This is a JSON document that you attach to an identity that you own. The policy expressly lists who you are allowing to send for that identity, and under which conditions. All senders, other than you and the entities you explicitly grant permissions to in the policies, will not be allowed to send emails. An identity can have no policy, one policy, or multiple policies attached to it. You can also have one policy with multiple statements to achieve the effect of multiple policies.
+To enable another AWS account, |IAMlong| user, or AWS service to send email through |SESlong| (|SES|) on your behalf, you create a sending authorization policy. This is a JSON document that you attach to an identity that you own.
 
-For more information see, :SES-dg:`Using Sending Authorization with Amazon SES <sending-authorization>`.
+The policy expressly lists who you are allowing to send for that identity, and under which conditions. All senders, other than you and the entities you explicitly grant permissions to in the policy, are not allowed to send emails. An identity can have no policy, one policy, or multiple policies attached to it. You can also have one policy with multiple statements to achieve the effect of multiple policies.
+
+For more information, see :SES-dg:`Using Sending Authorization with Amazon SES <sending-authorization>`.
 
 
 The following examples show how to:
@@ -35,7 +37,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Create an Authorized Sender
 ===========================
 
-If you need to authorize another AWS account to send emails on your behalf, use an identity policy to add or update authorization to send emails from your verified email addresses or domains. To create an identity policy use the :SES-api:`PutIdentityPolicy <API_PutIdentityPolicy>`operation.
+To authorize another AWS account to send emails on your behalf, use an identity policy to add or update authorization to send emails from your verified email addresses or domains. To create an identity policy, use the :SES-api:`PutIdentityPolicy <API_PutIdentityPolicy>` operation.
 
 **Imports**
 
@@ -54,7 +56,7 @@ If you need to authorize another AWS account to send emails on your behalf, use 
 Retrieve Polices for an Authorized Sender
 =========================================
 
-Return the sending authorization policies that are associated with a specific email identity or domain identity. To get the sending authorization for a given email address or domain use the :SES-api:`GetIdentityPolicy <API_GetIdentityPolicy>`operation.
+Return the sending authorization policies that are associated with a specific email identity or domain identity. To get the sending authorization for a given email address or domain, use the :SES-api:`GetIdentityPolicy <API_GetIdentityPolicy>` operation.
 
 **Imports**
 
@@ -71,7 +73,7 @@ Return the sending authorization policies that are associated with a specific em
 List Authorized Senders
 =======================
 
-To list the sending authorization policies that are associated with a specific email identity or domain identity in the current AWS Region use the :SES-api:`ListIdentityPolicies <API_ListIdentityPolicies>`operation.
+To list the sending authorization policies that are associated with a specific email identity or domain identity in the current AWS Region, use the :SES-api:`ListIdentityPolicies <API_ListIdentityPolicies>` operation.
 
 **Imports**
 
@@ -90,7 +92,7 @@ To list the sending authorization policies that are associated with a specific e
 Revoke Permission for an Authorized Sender
 ==========================================
 
-Remove sending authorization for another AWS account to send emails with an email identity or domain identity, by deleting the associated identity policy with the :SES-api:`DeleteIdentityPolicy <API_DeleteIdentityPolicy>`operation.
+Remove sending authorization for another AWS account to send emails with an email identity or domain identity by deleting the associated identity policy with the :SES-api:`DeleteIdentityPolicy <API_DeleteIdentityPolicy>` operation.
 
 **Imports**
 

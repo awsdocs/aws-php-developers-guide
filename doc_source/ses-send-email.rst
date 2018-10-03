@@ -16,7 +16,7 @@ Monitoring Your Sending Activity Using the |SES| API and the |sdk-php| Version 3
    :description: Use the Amazon SES API to monitor your sending reputation.
    :keywords: Amazon SES code examples for PHP, Simple Email Service Quota with PHP, Simple Email Statistics with PHP
 
-|SES| provides methods for monitoring your sending activity. We recommend that you implement these methods so that you can keep track of important measures, such as your account's bounce, complaint, and reject rates. Excessively high bounce and complaint rates may jeopardize your ability to send emails using |SES|.
+|SESlong| (|SES|) provides methods for monitoring your sending activity. We recommend that you implement these methods so that you can keep track of important measures, such as your account's bounce, complaint, and reject rates. Excessively high bounce and complaint rates can jeopardize your ability to send emails using |SES|.
 
 The following examples show how to:
 
@@ -30,7 +30,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Check Your Sending Quota
 ========================
 
-You are limited to sending only a certain amount of messages in a single 24-hour period. To check how many messages you are still allowed to send use the :SES-api:`GetSendQuota <API_GetSendQuota>`operation. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
+You are limited to sending only a certain amount of messages in a single 24-hour period. To check how many messages you are still allowed to send, use the :SES-api:`GetSendQuota <API_GetSendQuota>` operation. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
 
 **Imports**
 
@@ -47,16 +47,16 @@ You are limited to sending only a certain amount of messages in a single 24-hour
 Monitor Your Sending Activity
 =============================
 
-To retrieve metrics for messages you've sent in the past two weeks use the :SES-api:`GetSendStatistics <API_GetSendStatistics>`operation. This example returns the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments.
+To retrieve metrics for messages you've sent in the past two weeks, use the :SES-api:`GetSendStatistics <API_GetSendStatistics>` operation. This example returns the number of delivery attempts, bounces, complaints, and rejected messages in 15-minute increments.
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Send_Statistics.php.php
+.. literalinclude::  example_code/ses/Send_Statistics.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Send_Statistics.php.php
+.. literalinclude:: example_code/ses/Send_Statistics.php
    :lines: 26-
    :language: php
