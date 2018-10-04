@@ -184,6 +184,7 @@ def run():
 
 
 # If run from the command-line...
+# A main function to run functions and implement tasks.
 if __name__ == '__main__':
     run()
 
