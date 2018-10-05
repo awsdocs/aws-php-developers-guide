@@ -88,6 +88,7 @@ Examples
 * :doc:`AWS Key Management Service <kms-examples>`
 * :doc:`Amazon MediaConvert Examples <emc-examples>`
 * :doc:`Amazon S3 Examples <s3-examples>`
+* :doc:`Amazon Simple Email Services Examples <ses-examples>`
 * :doc:`Amazon SQS Examples <sqs-examples>`
 
 Reference
