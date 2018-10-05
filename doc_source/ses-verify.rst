@@ -22,11 +22,11 @@ will be sending emails to. For more information about sending emails, see :SES-d
 The following examples show how to:
 
 * Verify an email address using :aws-php-class:`VerifyEmailIdentity <api-email-2010-12-01.html#verifyemailidentity>`.
-* Verify an email domain using :aws-php-class:`VerifyDomainIdentity <api-email-2010-12-01.html.html#verifydomainidentity>`.
-* List all email addresses using :aws-php-class:`ListIdentities <api-email-2010-12-01.html.html#listidentities>`.
-* List all email domains using :aws-php-class:`ListIdentities <api-email-2010-12-01.html.html#listidentities>`.
-* Remove an email address using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html.html#deleteidentity>`.
-* Remove an email domain using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html.html#deleteidentity>`.
+* Verify an email domain using :aws-php-class:`VerifyDomainIdentity <api-email-2010-12-01.html#verifydomainidentity>`.
+* List all email addresses using :aws-php-class:`ListIdentities <api-email-2010-12-01.html#listidentities>`.
+* List all email domains using :aws-php-class:`ListIdentities <api-email-2010-12-01.html#listidentities>`.
+* Remove an email address using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html#deleteidentity>`.
+* Remove an email domain using :aws-php-class:`DeleteIdentity <api-email-2010-12-01.html#deleteidentity>`.
 
 .. include:: text/git-php-examples.txt
 

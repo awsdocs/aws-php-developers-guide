@@ -21,8 +21,8 @@ In addition to sending emails, you can also receive email with |SESlong| (|SES|)
 The following examples show how to:
 
 * Create an email filter using :aws-php-class:`CreateReceiptFilter <api-email-2010-12-01.html#createreceiptfilter>`.
-* List all email filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html.html#listreceiptfilters>`.
-* Remove an email filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html.html#deletereceiptfilter>`.
+* List all email filters using :aws-php-class:`ListReceiptFilters <api-email-2010-12-01.html#listreceiptfilters>`.
+* Remove an email filter using :aws-php-class:`DeleteReceiptFilter <api-email-2010-12-01.html#deletereceiptfilter>`.
 
 .. include:: text/git-php-examples.txt
 

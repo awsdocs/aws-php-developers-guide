@@ -21,7 +21,7 @@ Monitoring Your Sending Activity Using the |SES| API and the |sdk-php| Version 3
 The following examples show how to:
 
 * Check your sending quota using :aws-php-class:`GetSendQuota <api-email-2010-12-01.html#getsendquota>`.
-* Monitor your sending activity using :aws-php-class:`GetSendStatistics <api-email-2010-12-01.html.html#getsendstatistics>`.
+* Monitor your sending activity using :aws-php-class:`GetSendStatistics <api-email-2010-12-01.html#getsendstatistics>`.
 
 .. include:: text/git-php-examples.txt
 
@@ -30,7 +30,7 @@ For more information about using |SES|, see the |SES-dg|_.
 Check Your Sending Quota
 ========================
 
-You are limited to sending only a certain amount of messages in a single 24-hour period. To check how many messages you are still allowed to send, use the :SES-api:`GetSendQuota <API_GetSendQuota>` operation. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`.
+Your account is limited in the number of emails it can send each second, as well as in the number of emails it can send in a 24-hour period. Use this code to determine both of these limits, and to see how many emails you’ve sent in the last 24 hours. To check how many messages you are still allowed to send, use the :SES-api:`GetSendQuota <API_GetSendQuota>` operation. For more information, see :SES-dg:`Managing Your Amazon SES Sending Limits <manage-sending-limits>`. 
 
 **Imports**
 
