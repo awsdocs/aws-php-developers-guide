@@ -8,12 +8,12 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##########################################################
-|S3| Client Side Encryption with |sdk-php| Version 3 
-##########################################################
+########################################################
+|S3| Client-Side Encryption with the |sdk-php| Version 3
+########################################################
 
 .. meta::
-   :description: Client-side encryption for the with AWS SDK for PHP version 3  Amazon S3 client.
+   :description: Client-side encryption for the Amazon S3 client with the AWS SDK for PHP version 3.
    :keywords: AWS SDK for PHP version 3 constructor, AWS SDK for PHP version 3 client configuration
 
 The |sdk-php| provides an ``S3EncryptionClient``. With client-side

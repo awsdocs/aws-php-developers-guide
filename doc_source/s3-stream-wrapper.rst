@@ -99,7 +99,7 @@ of a function.
         // Read bytes from the stream
         fread($stream, 1024);
         // Seek back to the beginning of the stream
-        fseek($stream, 0);
+        fseek($steam, 0);
         // Read the same bytes that were previously read
         fread($stream, 1024);
         fclose($stream);
