@@ -23,11 +23,11 @@ For more information, see :SES-dg:`Sending Personalized Email Using the Amazon S
 The following examples show how to:
 
 * Create an email template using :aws-php-class:`CreateTemplate <api-email-2010-12-01.html#createtemplate>`.
-* List all email templates using :aws-php-class:`ListTemplates <api-email-2010-12-01.html.html#listtemplates>`.
-* Retrieve an email template using :aws-php-class:`GetTemplate <api-email-2010-12-01.html.html#gettemplate>`.
-* Update an email template using :aws-php-class:`UpdateTemplate <api-email-2010-12-01.html.html#updateTemplate>`.
-* Remove an email template using :aws-php-class:`DeleteTemplate <api-email-2010-12-01.html.html#deletetemplate>`.
-* Send a templated email using :aws-php-class:`SendTemplatedEmail <api-email-2010-12-01.html.html#sendtemplatedemail>`.
+* List all email templates using :aws-php-class:`ListTemplates <api-email-2010-12-01.html#listtemplates>`.
+* Retrieve an email template using :aws-php-class:`GetTemplate <api-email-2010-12-01.html#gettemplate>`.
+* Update an email template using :aws-php-class:`UpdateTemplate <api-email-2010-12-01.html#updateTemplate>`.
+* Remove an email template using :aws-php-class:`DeleteTemplate <api-email-2010-12-01.html#deletetemplate>`.
+* Send a templated email using :aws-php-class:`SendTemplatedEmail <api-email-2010-12-01.html#sendtemplatedemail>`.
 
 .. include:: text/git-php-examples.txt
 

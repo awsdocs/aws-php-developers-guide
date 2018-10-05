@@ -21,7 +21,7 @@ Monitoring Your Sending Activity Using the |SES| API and the |sdk-php| Version 3
 The following examples show how to:
 
 * Check your sending quota using :aws-php-class:`GetSendQuota <api-email-2010-12-01.html#getsendquota>`.
-* Monitor your sending activity using :aws-php-class:`GetSendStatistics <api-email-2010-12-01.html.html#getsendstatistics>`.
+* Monitor your sending activity using :aws-php-class:`GetSendStatistics <api-email-2010-12-01.html#getsendstatistics>`.
 
 .. include:: text/git-php-examples.txt
 
