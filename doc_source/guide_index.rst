@@ -27,3 +27,4 @@ following topics describe the components that are used in the SDK.
     Paginators <guide_paginators.rst>
     Waiters <guide_waiters.rst>
     JMESPath Expressions  <guide_jmespath.rst>
+    ClientSide Monitoring <guide_client-side-monitor.rst>
