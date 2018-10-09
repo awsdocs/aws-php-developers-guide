@@ -19,7 +19,7 @@ The guide content is written in reStructuredText_ and built using Sphinx_. It re
 which is provided in the AWS documentation team's `shared content`_ and `SDK examples`_
 repositories.
 
-
+//comment added
 Reporting issues
 ================
 
