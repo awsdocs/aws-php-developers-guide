@@ -16,7 +16,7 @@ Creating Data Streams Using the |AKS| API and the |sdk-php| Version 3
    :description: Kinesis Data Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Kinesis for PHP, Data Streams for PHP
 
-|AKSlong| allows you send real-time data. Create a data producer with Data Stream, 
+|AKSlong| allows you to send real-time data. Create a data producer with Data Stream, 
 which will deliver data to the configured destination every time you add data. Read more about  :AKS-dg:`Creating and Managing Streams 
 <working-with-streams.html>` in the |AKS-dg|_.
 
@@ -38,6 +38,8 @@ Create a Data Stream using a |AKS| Data Stream
 Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about 
 :AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>` in the |AKS-dg|_.
 
+To create a |AKS| stream , use the :AKS-api:`CreateStream <API_CreateStream>` operation.
+
 **Imports**
 
 .. literalinclude::  example_code/kinesis/CreateDataStream.php
@@ -53,8 +55,9 @@ Establish a Data Stream that will put data into a classic Kinesis Data Stream us
 Retrieve a Data Stream 
 ==========================
 
-Get the details about an existing Data Stream using the following code sample. 
+Get the details about an existing Data Stream using the following code sample. By default this will return information about the first 10 Shards connected to the specified |AKS| data stream. Remember to check `StreamStatus` from the response before writing data to a |AKS| stream
 
+To retrieve details about a specified a |AKS| stream , use the :AKS-api:`DescribeStream <API_DescribeStream>` operation.
 
 **Imports**
 
@@ -71,8 +74,9 @@ Get the details about an existing Data Stream using the following code sample.
 List existing Data Streams connected to Kinesis
 ===================================================
 
-List all the existing Data Streams using the following code sample. 
+List the first 10 Data Streams from your AWS account in the selected region. Use the returned `HasMoreStreams` to determine if there are more streams associated with your account. 
 
+To list your |AKS| streams, use the :AKS-api:`ListStreams <API_ListStreams>` operation.
 
 **Imports**
 
@@ -91,7 +95,9 @@ Send Data to an existing Data Streams
 =========================================
 
 Once you've created a Data Stream, use the following example to send data. 
-After you create a Data Stream, use DescribeStream to check the Data StreamStatus is active before sending data to it.  
+After you create a Data Stream, use DescribeStream to check the Data StreamStatus is active before sending data to it. 
+
+To write a single data record to an |AKS| data stream , use the :AKS-api:`PutRecord <API_PutRecord>` operation. To write up to 500 records into an |AKS| data stream , use the :AKS-api:`PutRecords <API_PutRecords>` operation. 
 
 **Imports**
 
@@ -108,7 +114,9 @@ After you create a Data Stream, use DescribeStream to check the Data StreamStatu
 Delete a Data Stream
 ========================
 
-Delete a Data Stream using the following code sample. This will also delete any data you have sent to the Data Stream.
+This examples demonstrates how to delete a Data Stream. When you delete a Data Stream it will also delete any data you have sent to the Data Stream. Active |AKS| Data Streams will switch to DELETING state until the stream deletion is complete. While in DELETING the stream will continue to process data. 
+
+To delete a |AKS| stream , use the :AKS-api:`DeleteStream <API_DeleteStream>` operation.
 
 
 **Imports**
