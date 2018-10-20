@@ -40,13 +40,13 @@ The only parameter required is the name of the selected bucket. If the bucket cu
 **Imports**
 
 .. literalinclude::  example_code/s3/GetBucketCors.php
-   :lines: 19-23
+   :lines: 20-21
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/s3/GetBucketCors.php
-   :lines: 31-
+   :lines: 32-
    :language: php
 
 Set the CORS Configuration
