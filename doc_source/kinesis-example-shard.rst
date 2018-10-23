@@ -16,7 +16,9 @@ Manage Data Shards Streams Using the |AKS| API and the |sdk-php| Version 3
    :description: Kinesis Data Streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Kinesis for PHP, Data Shards for PHP
 
-|AKSlong| allows you to send real-time data to an endpoint. The rate of data flow depends on the number of shards in your stream. You can write 1,000 records per second to a single shard. There is also a upload limit of 1 MiB per second for each shard. Bills are calculated on a per-shard basis, so use these examples to manage the data capacity and cost of your stream.
+|AKSlong| enables you to send real-time data to an endpoint. The rate of data flow depends on the number of shards in your stream.
+
+You can write 1,000 records per second to a single shard. Each shard also has an upload limit of 1 MiB per second. Billing is calculated on a per-shard basis, so use these examples to manage the data capacity and cost of your stream.
 
 The following examples show how to:
 
@@ -30,9 +32,9 @@ For more information about using |AKSlong|, see the |AKS-dg|_.
 List Data Stream Shards
 =======================
 
-List the details of up to 100 shards in a specific stream. 
+List the details of up to 100 shards in a specific stream.
 
-To list the shards in a |AKS| stream , use the :AKS-api:`ListShards <API_ListShards>` operation.
+To list the shards in a |AK| data stream, use the :AKS-api:`ListShards <API_ListShards>` operation.
 
 **Imports**
 
@@ -46,14 +48,14 @@ To list the shards in a |AKS| stream , use the :AKS-api:`ListShards <API_ListSha
    :lines: 33-
    :language: php
 
-Add more Data Stream Shards
+Add More Data Stream Shards
 ===========================
 
-If you need more Data Stream Shards, you can double your current amount by splitting or updating the number of shards. You are limited to scale more than twice in one 24 hour period. 
+If you need more data stream shards, you can double your current amount by splitting or updating the number of shards. You are limited to scale more than twice in one 24-hour period.
 
-Remember bills for |AKS| usage are calculate per-shard, so when demand decreases, we recommend that you halve your shard count. You are limited to scale down to more than half of your current shard count. 
+Remember billing for |AKS| usage is calculated per shard, so when demand decreases, we recommend that you halve your shard count. You are limited to scale down to more than half of your current shard count.
 
-To update the shards count of a |AKS| stream , use the :AKS-api:`UpdateShardCount <API_UpdateShardCount>` operation.
+To update the shard count of a |AK| data stream, use the :AKS-api:`UpdateShardCount <API_UpdateShardCount>` operation.
 
 **Imports**
 
@@ -66,4 +68,3 @@ To update the shards count of a |AKS| stream , use the :AKS-api:`UpdateShardCoun
 .. literalinclude:: example_code/kinesis/UpdateDataStreamShards.php
    :lines: 33-
    :language: php
-

@@ -14,14 +14,16 @@
 ################################################
 
 .. meta::
-   :description: Kinesis Data and Firehose Delivery Streams code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon Kinesis code examples for PHP, Amazon Firehose for PHP, Delivery Streams for PHP, Data Streams for PHP
+   :description: Amazon Kinesis Data Streams and Amazon Kinesis Data Firehose code examples for the AWS SDK for PHP version 3.
+   :keywords: Amazon Kinesis code examples for PHP, Amazon Kinesis Data Firehose for PHP, Delivery Streams for PHP, Amazon Kinesis Data Streams for PHP
 
-|AKlong| is an AWS service that collects, processes, and analyzes data in real time.  For
-more information about |AKlong|, see the `Amazon Kinesis documentation <https://docs.aws.amazon.com/kinesis/index.html>`_. Configure your Data Streams with |AKS| or use |AKF| to send data to |S3|, |ES|, |RS| or Splunk.
+|AKlong| is an AWS service that collects, processes, and analyzes data in real time.
+Configure your data streams with |AKSlong| or use |AKFlong| to send data to |S3|, |ES|, |RS|, or Splunk.
+
+For more information about |AK|, see the `Amazon Kinesis documentation <https://docs.aws.amazon.com/kinesis/index.html>`_.
 
 .. image:: images/code-samples-kinesis.png
-   :alt: A Diagram that provides an overview of how AWS SDK for PHP connects to Amazon Kinesis
+   :alt: A diagram that provides an overview of how AWS SDK for PHP connects to Amazon Kinesis
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
@@ -30,5 +32,4 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 
    Kinesis Data Streams<kinesis-example-data-stream>
    Kinesis Shards <kinesis-example-shard>
-   Firehose Delivery Streams <kinesis-firehose-example-delivery-stream>
-
+   Kinesis Data Firehose Delivery Streams <kinesis-firehose-example-delivery-stream>

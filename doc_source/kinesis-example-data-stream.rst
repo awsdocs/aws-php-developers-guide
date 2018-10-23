@@ -9,124 +9,172 @@
    limitations under the License.
 
 #########################################################################
-Creating Data Streams Using the |AKS| API and the |sdk-php| Version 3
+Creating Delivery Streams Using the |AKF| API and the |sdk-php| Version 3
 #########################################################################
 
 .. meta::
-   :description: Kinesis Data Streams code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon Kinesis for PHP, Data Streams for PHP
+   :description: Kinesis Data Firehose delivery streams code examples for the AWS SDK for PHP version 3.
+   :keywords: Amazon Kinesis Data Firehose for PHP, delivery streams for PHP, data streams for PHP
 
-|AKSlong| allows you to send real-time data. Create a data producer with Data Stream, 
-which will deliver data to the configured destination every time you add data. Read more about  :AKS-dg:`Creating and Managing Streams 
-<working-with-streams.html>` in the |AKS-dg|_.
+|AKFlong| enables you to send real-time data to other AWS services including |AKS|, |S3|, |ESlong| (|ES|), and |RS|, or to Splunk. Create a data producer with delivery streams,
+which will deliver data to the configured destination every time you add data.
 
 The following examples show how to:
 
-* Create an alias using :aws-php-class:`CreateAlias <api-kinesis-2013-12-02.html#createstream>`.
-* Get details about a single data stream using :aws-php-class:`DescribeStream <api-kinesis-2013-12-02.html#describestream>`.
-* List your data streams using :aws-php-class:`ListStreams <api-kinesis-2013-12-02.html#liststreams>`.
-* Send Data to a data stream using :aws-php-class:`PutRecord <api-kinesis-2013-12-02.html#putrecord>`.
-* Delete a data stream using :aws-php-class:`DeleteStream <api-kinesis-2013-12-02.html#deletestream>`.
+* Create a delivery stream using :aws-php-class:`CreateDeliveryStream <api-firehose-2015-08-04.html#createdeliverystream>`.
+* Get details about a single delivery stream using :aws-php-class:`DescribeDeliveryStream <api-firehose-2015-08-04.html#describedeliverystream>`.
+* List your delivery streams using :aws-php-class:`ListDeliveryStreams <api-firehose-2015-08-04.html#listdeliverystreams>`.
+* Send data to a delivery stream using :aws-php-class:`PutRecord <api-firehose-2015-08-04.html#putrecord>`.
+* Delete a delivery stream using :aws-php-class:`DeleteDeliveryStream <api-firehose-2015-08-04.html#deletedeliverystream>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |AKSlong|, see the |AKS-dg|_.
+For more information about using |AKFlong|, see the |AKF-dg|_.
 
-Create a Data Stream using a |AKS| Data Stream
+Create a Delivery Stream Using a |AK| Data Stream
 =================================================
 
-Establish a Data Stream that will put data into a classic Kinesis Data Stream using the following code sample. Learn more about 
-:AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>` in the |AKS-dg|_.
+Establish a delivery stream that puts data into a classic Kinesis data stream using the following code example.
 
-To create a |AKS| stream , use the :AKS-api:`CreateStream <API_CreateStream>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/CreateDataStream.php
-   :lines: 20-23
+.. literalinclude::  example_code/firehose/CreateDeliveryStream.php
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/CreateDataStream.php
-   :lines: 33-
+.. literalinclude:: example_code/firehose/CreateDeliveryStream.php
+   :lines: 32-
    :language: php
 
-Retrieve a Data Stream 
+Create a Delivery Stream Using an |S3| Bucket
+=============================================
+
+Establish a delivery stream that puts data into an existing |S3| bucket using the following code example. Provide the destination parameters,
+as described in :AKF-dg:`Destination Parameters <create-destination.html>`. Then ensure that you grant |AKF| access to your |S3| bucket,
+as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Destination <controlling-access.html#using-iam-s3>`.
+
+**Imports**
+
+.. literalinclude::  example_code/firehose/CreateS3DeliveryStream.php
+   :lines: 19-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/firehose/CreateS3DeliveryStream.php
+   :lines: 32-
+   :language: php
+
+Create a Delivery Stream Using |ES|
+===================================
+
+Establish a Delivery Stream that will put data into an |ES| using the following code example. Provide the destination parameters, as described in
+:AKF-dg:`Destination Parameters <create-destination.html>`. Ensure that you grant |AKF| access to your |ES| cluster, as described in
+:AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon ES Destination <controlling-access.html#using-iam-es>`.
+
+**Imports**
+
+.. literalinclude::  example_code/firehose/CreateESDeliveryStream.php
+   :lines: 19-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/firehose/CreateESDeliveryStream.php
+   :lines: 32-
+   :language: php
+
+
+Retrieve a Delivery Stream
 ==========================
 
-Get the details about an existing Data Stream using the following code sample. By default this will return information about the first 10 Shards connected to the specified |AKS| data stream. Remember to check `StreamStatus` from the response before writing data to a |AKS| stream
+Get the details about an existing delivery stream using the following code example.
 
-To retrieve details about a specified a |AKS| stream , use the :AKS-api:`DescribeStream <API_DescribeStream>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/DescribeDataStream.php
-   :lines: 20-23
+.. literalinclude::  example_code/firehose/DescribeDeliveryStream.php
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/DescribeDataStream.php
-   :lines: 33-
+.. literalinclude:: example_code/firehose/DescribeDeliveryStream.php
+   :lines: 32-
    :language: php
-   
-List existing Data Streams connected to Kinesis
-===================================================
 
-List the first 10 Data Streams from your AWS account in the selected region. Use the returned `HasMoreStreams` to determine if there are more streams associated with your account. 
+List Existing Delivery Streams Connected to |AKS|
+=================================================
 
-To list your |AKS| streams, use the :AKS-api:`ListStreams <API_ListStreams>` operation.
+List all the existing delivery streams sending data to |AKS| using the following code example.
+
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/ListDataStreams.php
-   :lines: 20-23
+.. literalinclude::  example_code/firehose/ListKinesisDeliveryStreams.php
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/ListDataStreams.php
-   :lines: 33-
+.. literalinclude:: example_code/firehose/ListKinesisDeliveryStreams.php
+   :lines: 32-
    :language: php
 
-   
-Send Data to an existing Data Streams 
-=========================================
+List Existing Delivery Streams Sending Data to Other |AWS| Services
+===================================================================
 
-Once you've created a Data Stream, use the following example to send data. 
-After you create a Data Stream, use DescribeStream to check the Data StreamStatus is active before sending data to it. 
+List all the existing delivery streams sending data to |S3|, |ES|, or |RS|, or Splunk using the following code example.
 
-To write a single data record to an |AKS| data stream , use the :AKS-api:`PutRecord <API_PutRecord>` operation. To write up to 500 records into an |AKS| data stream , use the :AKS-api:`PutRecords <API_PutRecords>` operation. 
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/PutDataStreamRecord.php
-   :lines: 20-23
+.. literalinclude::  example_code/firehose/ListDirectDeliveryStreams.php
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/PutDataStreamRecord.php
-   :lines: 33-
+.. literalinclude:: example_code/firehose/ListDirectDeliveryStreams.php
+   :lines: 32-
    :language: php
 
-Delete a Data Stream
+
+Send Data to an Existing Delivery Stream
+========================================
+
+Once you've created a delivery stream, use the following code example to send data through Firehose Delivery Streams to your specified destination.
+Before sending data to it, use ``DescribeDeliveryStream`` to see if the delivery stream is active.
+
+**Imports**
+
+.. literalinclude::  example_code/firehose/PutRecordtoDeliveryStream.php
+   :lines: 19-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/firehose/PutRecordtoDeliveryStream.php
+   :lines: 32-
+   :language: php
+
+Delete a Delivery Stream
 ========================
 
-This examples demonstrates how to delete a Data Stream. When you delete a Data Stream it will also delete any data you have sent to the Data Stream. Active |AKS| Data Streams will switch to DELETING state until the stream deletion is complete. While in DELETING the stream will continue to process data. 
-
-To delete a |AKS| stream , use the :AKS-api:`DeleteStream <API_DeleteStream>` operation.
+Delete a delivery stream using the following code example. This also deletes any data you have sent to the delivery stream.
 
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/DeleteDataStream.php
-   :lines: 20-23
+.. literalinclude::  example_code/firehose/DeleteDeliveryStream.php
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/DeleteDataStream.php
-   :lines: 33-
+.. literalinclude:: example_code/firehose/DeleteDeliveryStream.php
+   :lines: 32-
    :language: php
