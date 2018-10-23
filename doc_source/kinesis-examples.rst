@@ -30,4 +30,4 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 
    Kinesis Data Streams<kinesis-example-data-stream>
    Kinesis Shards <kinesis-example-shard>
-   Firehose Delivery Streams <firehose-example-delivery-stream>
+   Firehose Delivery Streams <kinesis-firehose-example-delivery-stream>

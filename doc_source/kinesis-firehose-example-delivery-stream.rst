@@ -39,13 +39,13 @@ Establish a Delivery Stream that will put data into a classic Kinesis Data Strea
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateDeliveryStream.php
    :lines: 33-
    :language: php
 
@@ -57,13 +57,13 @@ Establish a Delivery Stream that will put data into an existing |S3| Bucket usin
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateS3DeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateS3DeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateS3DeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateS3DeliveryStream.php
    :lines: 33-
    :language: php
 
@@ -74,13 +74,13 @@ Establish a Delivery Stream that will put data into an |ES| using the following 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateESDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateESDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateESDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateESDeliveryStream.php
    :lines: 33-
    :language: php
    
@@ -93,13 +93,13 @@ Get the details about an existing Delivery Stream using the following code sampl
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/DescribeDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/DescribeDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/DescribeDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/DescribeDeliveryStream.php
    :lines: 33-
    :language: php
    
@@ -111,13 +111,13 @@ List all the existing Delivery Streams sending data to Kinesis Data Streams usin
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/ListKinesisDeliveryStreams.php
+.. literalinclude::  example_code/kinesisfirehose/ListKinesisDeliveryStreams.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/ListKinesisDeliveryStreams.php
+.. literalinclude:: example_code/kinesisfirehose/ListKinesisDeliveryStreams.php
    :lines: 33-
    :language: php
 
@@ -129,13 +129,13 @@ List all the existing Delivery Streams sending data to |S3|, |ES|, |RS| or Splun
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/ListDirectDeliveryStreams.php
+.. literalinclude::  example_code/kinesisfirehose/ListDirectDeliveryStreams.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/ListDirectDeliveryStreams.php
+.. literalinclude:: example_code/kinesisfirehose/ListDirectDeliveryStreams.php
    :lines: 33-
    :language: php
    
@@ -148,13 +148,13 @@ After you create a Delivery Stream, use DescribeDeliveryStream to see if the Del
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/PutRecordtoDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/PutRecordtoDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/PutRecordtoDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/PutRecordtoDeliveryStream.php
    :lines: 33-
    :language: php
 
@@ -166,12 +166,12 @@ Delete a Delivery Stream using the following code sample. This will also delete 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/DeleteDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/DeleteDeliveryStream.php
    :lines: 20-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/DeleteDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/DeleteDeliveryStream.php
    :lines: 33-
    :language: php
