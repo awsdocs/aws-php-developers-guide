@@ -34,18 +34,19 @@ For more information about using |AKFlong|, see the |AKF-dg|_.
 Create a Delivery Stream Using a |AK| Data Stream
 =================================================
 
-Establish a delivery stream that puts data into a classic Kinesis data stream using the following code example.
+Establish a delivery stream that puts data into an existing |AK| data stream using the following code example.
 
+To create a delivery an email address to your |SES| account, use the :AKF-api:`CreateDeliveryStream <API_CreateDeliveryStream>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateDeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateDeliveryStream.php
    :lines: 32-
    :language: php
 
@@ -58,32 +59,32 @@ as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Dest
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateS3DeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateS3DeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateS3DeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateS3DeliveryStream.php
    :lines: 32-
    :language: php
 
 Create a Delivery Stream Using |ES|
 ===================================
 
-Establish a Delivery Stream that will put data into an |ES| using the following code example. Provide the destination parameters, as described in
+Establish a |AKF| Delivery Stream that will put data into an |ES| using the following code example. Provide the destination parameters, as described in
 :AKF-dg:`Destination Parameters <create-destination.html>`. Ensure that you grant |AKF| access to your |ES| cluster, as described in
 :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon ES Destination <controlling-access.html#using-iam-es>`.
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/CreateESDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/CreateESDeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/CreateESDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/CreateESDeliveryStream.php
    :lines: 32-
    :language: php
 
@@ -91,90 +92,90 @@ Establish a Delivery Stream that will put data into an |ES| using the following 
 Retrieve a Delivery Stream
 ==========================
 
-Get the details about an existing delivery stream using the following code example.
+Get the details about an existing |AKF| Delivery Stream using the following code example.
 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/DescribeDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/DescribeDeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/DescribeDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/DescribeDeliveryStream.php
    :lines: 32-
    :language: php
 
 List Existing Delivery Streams Connected to |AKS|
 =================================================
 
-List all the existing delivery streams sending data to |AKS| using the following code example.
+List all the existing |AKF| Delivery Streams sending data to |AKS| using the following code example.
 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/ListKinesisDeliveryStreams.php
+.. literalinclude::  example_code/kinesisfirehose/ListKinesisDeliveryStreams.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/ListKinesisDeliveryStreams.php
+.. literalinclude:: example_code/kinesisfirehose/ListKinesisDeliveryStreams.php
    :lines: 32-
    :language: php
 
 List Existing Delivery Streams Sending Data to Other |AWS| Services
 ===================================================================
 
-List all the existing delivery streams sending data to |S3|, |ES|, or |RS|, or Splunk using the following code example.
+List all the existing |AKF| Delivery Streams sending data to |S3|, |ES|, or |RS|, or Splunk using the following code example.
 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/ListDirectDeliveryStreams.php
+.. literalinclude::  example_code/kinesisfirehose/ListDirectDeliveryStreams.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/ListDirectDeliveryStreams.php
+.. literalinclude:: example_code/kinesisfirehose/ListDirectDeliveryStreams.php
    :lines: 32-
    :language: php
 
 
-Send Data to an Existing Delivery Stream
-========================================
+Send Data to an Existing |AKF| Delivery Stream
+==============================================
 
-Once you've created a delivery stream, use the following code example to send data through Firehose Delivery Streams to your specified destination.
+Once you've created a |AKF| Delivery Stream, use the following code example to send data through a |AKF| Delivery Stream to your specified destination.
 Before sending data to it, use ``DescribeDeliveryStream`` to see if the delivery stream is active.
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/PutRecordtoDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/PutRecordtoDeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/PutRecordtoDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/PutRecordtoDeliveryStream.php
    :lines: 32-
    :language: php
 
-Delete a Delivery Stream
-========================
+Delete a |AKF| Delivery Stream
+==============================
 
-Delete a delivery stream using the following code example. This also deletes any data you have sent to the delivery stream.
+Delete a |AKF| Delivery Stream using the following code example. This also deletes any data you have sent to the delivery stream.
 
 
 **Imports**
 
-.. literalinclude::  example_code/firehose/DeleteDeliveryStream.php
+.. literalinclude::  example_code/kinesisfirehose/DeleteDeliveryStream.php
    :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/firehose/DeleteDeliveryStream.php
+.. literalinclude:: example_code/kinesisfirehose/DeleteDeliveryStream.php
    :lines: 32-
    :language: php

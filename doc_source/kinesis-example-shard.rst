@@ -9,7 +9,7 @@
    limitations under the License.
 
 ##########################################################################
-Manage Data Shards Streams Using the |AKS| API and the |sdk-php| Version 3
+Manage Data Shards Using the |AKS| API and the |sdk-php| Version 3
 ##########################################################################
 
 .. meta::
@@ -18,7 +18,7 @@ Manage Data Shards Streams Using the |AKS| API and the |sdk-php| Version 3
 
 |AKSlong| enables you to send real-time data to an endpoint. The rate of data flow depends on the number of shards in your stream.
 
-You can write 1,000 records per second to a single shard. Each shard also has an upload limit of 1 MiB per second. Billing is calculated on a per-shard basis, so use these examples to manage the data capacity and cost of your stream.
+You can write 1,000 records per second to a single shard. Each shard also has an upload limit of 1 MiB per second. Usage is calculated and charged on a per-shard basis, so use these examples to manage the data capacity and cost of your stream.
 
 The following examples show how to:
 
@@ -51,9 +51,9 @@ To list the shards in a |AK| data stream, use the :AKS-api:`ListShards <API_List
 Add More Data Stream Shards
 ===========================
 
-If you need more data stream shards, you can double your current amount by splitting or updating the number of shards. You are limited to scale more than twice in one 24-hour period.
+If you need more data stream shards, you can increase your current number of shards. We recommend that you double your shard count when increasing. This will make a copy of each shard currently available to increase your capacity. You can double the number of your shards only twice in one 24-hour period.
 
-Remember billing for |AKS| usage is calculated per shard, so when demand decreases, we recommend that you halve your shard count. You are limited to scale down to more than half of your current shard count.
+Remember billing for |AKS| usage is calculated per shard, so when demand decreases, we recommend that you reduce your shard count by half. When you remove shards, you can only scale down the amount of shards to half of your current shard count.
 
 To update the shard count of a |AK| data stream, use the :AKS-api:`UpdateShardCount <API_UpdateShardCount>` operation.
 

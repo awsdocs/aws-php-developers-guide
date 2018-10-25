@@ -37,7 +37,7 @@ For more information about using |AKSlong|, see the |AKS-dg|_.
 Create a Data Stream Using a |AK| Data Stream
 =============================================
 
-Establish a data stream that puts data into a |AK| data stream using the following code example. Learn more about
+Establish a |AK| data stream where you can send information to be processed by |AK| using the following code example. Learn more about
 :AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>` in the |AKS-dg|.
 
 To create a |AK| data stream, use the :AKS-api:`CreateStream <API_CreateStream>` operation.
@@ -57,7 +57,7 @@ To create a |AK| data stream, use the :AKS-api:`CreateStream <API_CreateStream>`
 Retrieve a Data Stream
 ======================
 
-Get details about an existing data stream using the following code example. By default, this returns information about the first 10 shards connected to the specified |AK| data stream. Remember to check ``StreamStatus`` from the response before writing data to a |AK| data stream.
+Get details about an existing data stream using the following code example. By default, this returns information about the first 10 shards connected to the specified |AK| data stream. Remember to check :code:`StreamStatus` from the response before writing data to a |AK| data stream.
 
 To retrieve details about a specified |AK| data stream, use the :AKS-api:`DescribeStream <API_DescribeStream>` operation.
 
@@ -97,7 +97,7 @@ Send Data to an Existing Data Stream
 ====================================
 
 Once you create a data stream, use the following example to send data.
-Before sending data to it, use ``DescribeStream`` to check whether the data ``StreamStatus`` is active.
+Before sending data to it, use ``DescribeStream`` to check whether the data :code:`StreamStatus` is active.
 
 To write a single data record to a |AK| data stream, use the :AKS-api:`PutRecord <API_PutRecord>` operation. To write up to 500 records into a |AK| data stream, use the :AKS-api:`PutRecords <API_PutRecords>` operation.
 
