@@ -37,7 +37,7 @@ that you can access GitHub repositories using SSH.
 DEPENDENCIES_FILE = 'dependencies.txt'
 DEPENDENCIES_DIR = 'build_dependencies'
 
-BUILD_DIR = 'doc_build'
+BUILD_DIR = 'doc_build'//hi
 OUTPUT_DIR = 'doc_output'
 SOURCE_DIR = 'doc_source'
 
