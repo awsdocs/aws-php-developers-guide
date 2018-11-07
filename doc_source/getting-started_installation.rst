@@ -16,38 +16,54 @@ Installing the |sdk-php| Version 3
    :description:  Install the AWS SDK for PHP version 3. 
    :keywords: AWS SDK for PHP version 3, php for aws, install AWS SDK for PHP version 3
    
-You can install the |sdk-php| Version 3 by using:
+You can install the |sdk-php| Version 3:
 
-* Composer
-* The prepackaged phar in the SDK
-* The ZIP file in the SDK
+* As a dependency via Composer
+* As a prepackaged phar of the SDK
+* As a ZIP file of the SDK
 
-Installing by Using Composer
-============================
+Before you install |sdk-php| Version 3 ensure your environment is using PHP version 5.5 or later. Learn more about :doc:`environment requirements and recommendations <getting-started_requirements>`
+
+Install |sdk-php| as a dependency via Composer
+==============================================
 
 `Composer <http://getcomposer.org>`_ is the recommended way to install
 the |sdk-php|. Composer is a tool for PHP that manages and installs the dependencies of your project.
 
-1. Download and `install Composer <http://getcomposer.org/download>`_. 
+For more information on how to install Composer, configure autoloading, and follow other best
+practices for defining dependencies, see `getcomposer.org <http://getcomposer.org>`_.
+
+
+Install Composer
+----------------
+
+If Composer is not already in your project, download and `install Composer <http://getcomposer.org/download>`_. 
 
    For **Windows**, download and run the `Composer-Setup.exe <https://getcomposer.org/Composer-Setup.exe>`_. 
    
-   For **Linux**, type the following at the command line to install Composer.
+   For **Linux**, follow the Command-line installation on `the Download Composer page <http://getcomposer.org/download>`_.   
+
+
+Add |sdk-php| as a dependency via Composer
+------------------------------------------
+
+If `Composer is already installed globally <https://getcomposer.org/doc/00-intro.md#globally>`_ on your system, run the following in the base directory of your project to install |sdk-php| as a dependency:
 
    ::
 
-
-       curl -sS https://getcomposer.org/installer | php 
-
-
-2. Type the Composer command to install the latest version of the |sdk-php|.
+       composer require aws/aws-sdk-php
+       
+     
+Otherwise type this Composer command to install the latest version of the |sdk-php| as a dependency.
 
    ::
-
 
        php -d memory_limit=-1 composer.phar require aws/aws-sdk-php
 
-3. Require the Composer autoloader in your scripts.
+Add autoloader to your php scripts
+----------------------------------
+       
+To utilize the |sdk-php| in your scripts, include the autoloader in your scripts, as follows.
 
    .. code-block:: php
 
@@ -55,8 +71,6 @@ the |sdk-php|. Composer is a tool for PHP that manages and installs the dependen
           require '/path/to/vendor/autoload.php';
        ?>
 
-For more information on how to install Composer, configure autoloading, and follow other best
-practices for defining dependencies, see `getcomposer.org <http://getcomposer.org>`_.
 
 Installing by Using the Packaged Phar
 =====================================
