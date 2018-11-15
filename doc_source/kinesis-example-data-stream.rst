@@ -38,7 +38,7 @@ Create a Data Stream Using a |AK| Data Stream
 =============================================
 
 Establish a |AK| data stream where you can send information to be processed by |AK| using the following code example. Learn more about
-:AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams.html>` in the |AKS-dg|.
+:AKS-dg:`Creating and Updating Data Streams <amazon-kinesis-streams>` in the |AKS-dg|.
 
 To create a |AK| data stream, use the :AKS-api:`CreateStream <API_CreateStream>` operation.
 

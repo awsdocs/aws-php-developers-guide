@@ -30,6 +30,5 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
     Amazon Kinesis Examples <kinesis-examples.rst>
     AWS Elemental MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>
-    Amazon SES Examples <ses-examples.rst>
     Amazon SQS Examples <sqs-examples.rst>
 
