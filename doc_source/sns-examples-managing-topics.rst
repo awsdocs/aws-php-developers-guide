@@ -9,23 +9,21 @@
    limitations under the License.
 
 ##########################################################
-Managing Topics in |SNS| with |sdk-php| Version 3 
+Managing Topics in |SQS| with |sdk-php| Version 3 
 ##########################################################
 
 .. meta::
-   :description: Create, list, delete, and handle Amazon SNS topics using the AWS SDK for PHP version 3.
+   :description: How to  create, list, and delete Amazon SNS topics, and to handle topic attributes using the AWS SDK for PHP version 3.
    :keywords: Amazon SNS topics for PHP
 
-XXX A dead letter queue is one that other (source) queues can target for 
-XXX messages that can't be processed successfully. You can set aside and 
-XXX isolate these messages in the dead letter queue to determine why their 
-XXX processing did not succeed. You must individually configure each source 
-XXX queue that sends messages to a dead letter queue. Multiple queues can 
-XXX target a single dead letter queue.
+A dead letter queue is one that other (source) queues can target for 
+messages that can't be processed successfully. You can set aside and 
+isolate these messages in the dead letter queue to determine why their 
+processing did not succeed. You must individually configure each source 
+queue that sends messages to a dead letter queue. Multiple queues can 
+target a single dead letter queue.
 
-A topic is a communication channel to send messages and subscribe to notifications. It provides an access point for publishers and subscribers to communicate with each other. 
-
-To learn more, see :SNS-dg:`Amazon SNS Topic Attributes for Message Delivery Status <sns-topic-attributes>`.
+To learn more, see :SQS-dg:`Using SQS Dead Letter Queues <sqs-dead-letter-queues>`.
 
 The following example shows how to:
 
@@ -39,9 +37,9 @@ The following example shows how to:
 
 
 Creating a Topic
-================
+==========================
 
-Pass the Name for the new topic to the createTopic method of the AWS.SNS client class. To call the createTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains the ARN of the topic.
+Pass the Name for the new topic to the createTopic method of the AWS.SNS client class. To call the createTopic method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains the ARN of the topic.
 
 **Imports**
 
@@ -58,7 +56,7 @@ Pass the Name for the new topic to the createTopic method of the AWS.SNS client 
 Listing Your Topics
 ==========================
 
-Create an empty object to pass to the listTopics method of the AWS.SNS client class. To call the listTopics method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains an array of your topic ARNs.
+Create an empty object to pass to the listTopics method of the AWS.SNS client class. To call the listTopics method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains an array of your topic ARNs.
 
 **Imports**
 
@@ -75,7 +73,7 @@ Create an empty object to pass to the listTopics method of the AWS.SNS client cl
 Deleting a Topic
 ==========================
 
-Create an object containing the TopicArn of the topic to delete to pass to the deleteTopic method of the AWS.SNS client class. To call the deleteTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+Create an object containing the TopicArn of the topic to delete to pass to the deleteTopic method of the AWS.SNS client class. To call the deleteTopic method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -92,7 +90,7 @@ Create an object containing the TopicArn of the topic to delete to pass to the d
 Getting Topic Attributes
 ==========================
 
-Create an object containing the TopicArn of a topic to delete to pass to the getTopicAttributes method of the AWS.SNS client class. To call the getTopicAttributes method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+Create an object containing the TopicArn of a topic to delete to pass to the getTopicAttributes method of the AWS.SNS client class. To call the getTopicAttributes method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -109,7 +107,7 @@ Create an object containing the TopicArn of a topic to delete to pass to the get
 Setting Topic Attributes
 ==========================
 
-Create an object containing the parameters for the attribute update, including the TopicArn of the topic whose attributes you want to set, the name of the attribute to set, and the new value for that attribute. You can set only the Policy, DisplayName, and DeliveryPolicy attributes. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the setTopicAttributes method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+Create an object containing the parameters for the attribute update, including the TopicArn of the topic whose attributes you want to set, the name of the attribute to set, and the new value for that attribute. You can set only the Policy, DisplayName, and DeliveryPolicy attributes. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the setTopicAttributes method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 

@@ -14,22 +14,18 @@
 #############################################
 
 .. meta::
-   :description: Amazon SNS code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon SNS code examples for PHP
+   :description: Amazon sns code examples for the AWS SDK for PHP version 3.
+   :keywords: Amazon sns code examples for PHP
 
 
-|snslong|\ (|SNS|) is a web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients.
+|snslong| (sns) is a web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients.
 
 In |snslong|, there are two types of clients—publishers and subscribers—also referred to as producers and consumers.
 
 .. image:: images/code-samples-sns.png
-   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon SNS
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon sns
 
-Publishers communicate asynchronously with subscribers by producing and sending a message to a topic. which is a logical access point and communication channel. 
-Subscribers consume or receive the message through a supported protocol (|SQS|, HTTP/S, email, |SMS|, |LAM|) when a message is sent to the topic.
-Web servers, email addresses, |SQS| queues, or Lambda functions can all be a subscriber.
-
-Learn more about |SNSlong| in the |SNS-dg|_
+Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (web servers, email addresses, |SQS| queues, Lambda functions) consume or receive the message or notification over one of the supported protocols (|SQS|, HTTP/S, email, |SMS|, |LAM|) when they are subscribed to the topic.
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
