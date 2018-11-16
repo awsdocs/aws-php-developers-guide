@@ -13,10 +13,20 @@ Sending SMS Messages in |SNS| with |sdk-php| Version 3
 ##########################################################
 
 .. meta::
-   :description: Get and set SMS messaging preferences, check a phone number,  and get a list of phone numbers for Amazon SNS using the AWS SDK for PHP version 3.
+   :description: Get and set SMS messaging preferences, check a phone number,  and get a list of phone numbers for |SNS| using the AWS SDK for PHP version 3.
    :keywords: Amazon SNS code examples for PHP, Amazon SNS for PHP
 
-You can use |SNS| to send text messages, or SMS messages,  to SMS-enabled devices. You can send a message directly to a phone number, or you can send a message to multiple phone numbers at once by subscribing those phone numbers to a topic and sending your message to the topic.
+Use |SNS| to send text or SMS messages to any SMS-enabled devices. To send a message directly to a single phone number, or multiple phone numbers, Subscribe the phone number to a topic then send a message to that topic.
+
+XXX A dead letter queue is one that other (source) queues can target for 
+XXX messages that can't be processed successfully. You can set aside and 
+XXX isolate these messages in the dead letter queue to determine why their 
+XXX processing did not succeed. You must individually configure each source 
+XXX queue that sends messages to a dead letter queue. Multiple queues can 
+XXX target a single dead letter queue.
+
+To learn more, see :SNS-dg:`Using Amazon SNS for User Notifications with a Mobile Phone Number as a Subscriber (Send SMS) <sns-mobile-phone-number-as-subscriber>`.
+
 
 The following example shows how to:
 
@@ -29,14 +39,12 @@ The following example shows how to:
 .. include:: text/git-php-examples.txt
 
 
-Getting SMS Attributes
-==========================
+Gett SMS Attributes
+===================
 
 Use |SNS| to specify preferences for SMS messaging, such as how your deliveries are optimized (for cost or for reliable delivery), your monthly spending limit, how message deliveries are logged, and whether to subscribe to daily SMS usage reports. These preferences are retrieved and set as SMS attributes for |SNS|.
 
 Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes to get. For details on available SMS attributes, see SetSMSAttributes in the Amazon Simple Notification Service API Reference.
-
-To get sms, use the :SNS-api:`GetSMSAtrributes <API_GetSMSAtrributes>` operation. 
 
 This example gets the DefaultSMSType attribute, which controls whether SMS messages are sent as Promotional, which optimizes message delivery to incur the lowest cost, or as Transactional, which optimizes message delivery to achieve the highest reliability. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the getSMSAttributes method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
@@ -52,8 +60,8 @@ This example gets the DefaultSMSType attribute, which controls whether SMS messa
    :lines: 31-50
    :language: php
    
-Setting SMS Attributes
-==========================
+Set SMS Attributes
+==================
 
 Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each. For details on available SMS attributes, see SetSMSAttributes in the Amazon Simple Notification Service API Reference.
 
@@ -71,8 +79,8 @@ This example sets the DefaultSMSType attribute to Transactional, which optimizes
    :lines: 31-50
    :language: php
    
-Checking If a Phone Number Has Opted Out
-========================================
+Check If a Phone Number Has Opted Out
+=====================================
 
 Create an object containing the phone number to check as a parameter.
 
@@ -91,8 +99,8 @@ This example sets the PhoneNumber parameter to specify the phone number to check
    :language: php
    
    
-Listing Opted-Out Phone Numbers
-========================================
+List Opted-Out Phone Numbers
+============================
 
 Create an empty object as a parameter.
 
@@ -110,8 +118,8 @@ Pass the object to the listPhoneNumbersOptedOut method of the AWS.SNS client cla
    :lines: 31-50
    :language: php
    
-Publishing to a SMS Text Message 
-================================
+Publish to a SMS Text Message 
+=============================
 
 Create an object containing the Message and PhoneNumber parameters.
 

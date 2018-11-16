@@ -9,14 +9,23 @@
    limitations under the License.
 
 ##########################################################
-Managing Subscriptions in |SQS| with |sdk-php| Version 3 
+Managing Subscriptions in |SNS| with |sdk-php| Version 3 
 ##########################################################
 
 .. meta::
-   :description: List all subscriptions,subscribe an email address, an application endpoint, or an AWS Lambda function or unsubscribe from Amazon SNS topics using the AWS SDK for PHP version 3.
+   :description: Subscribe to an email address, application endpoint, or an AWS Lambda function or unsubscribe from Amazon SNS topics using the AWS SDK for PHP version 3.
    :keywords: Amazon SNS code examples for PHP
 
-List all subscriptions,subscribe an email address, an application endpoint, or an AWS Lambda function or unsubscribe from Amazon SNS topics.
+List all subscriptions subscribed to an email address, an application endpoint, or an AWS Lambda function or unsubscribe from |SNS| topics.
+
+XXX A dead letter queue is one that other (source) queues can target for 
+XXX messages that can't be processed successfully. You can set aside and 
+XXX isolate these messages in the dead letter queue to determine why their 
+XXX processing did not succeed. You must individually configure each source 
+XXX queue that sends messages to a dead letter queue. Multiple queues can 
+XXX target a single dead letter queue.
+
+To learn more, see :SNS-dg:`Using Amazon SNS for System-to-System Messaging <sns-system-to-system-messaging>`.
 
 The following example shows how to:
 
@@ -33,7 +42,7 @@ Listing Subscriptions to a Topic
 
 Configure the SDK as previously shown.
 
-Create an object containing the TopicArn parameter for the topic whose subscriptions you want to list. Pass the parameters to the listSubscriptionsByTopic method of the AWS.SNS client class. To call the listSubscriptionsByTopic method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+Create an object containing the TopicArn parameter for the topic whose subscriptions you want to list. Pass the parameters to the listSubscriptionsByTopic method of the AWS.SNS client class. To call the listSubscriptionsByTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -50,9 +59,9 @@ Create an object containing the TopicArn parameter for the topic whose subscript
 Subscribing an Email Address to a Topic
 =======================================
 
-Create an object containing the Protocol parameter to specify the email protocol, the TopicArn for the topic to subscribe to, and an email address as the message Endpoint. Pass the parameters to the subscribe method of the AWS.SNS client class. You can use the subscribe method to subscribe several different endpoints to an Amazon SNS topic, depending on the values used for parameters passed, as other examples in this topic will show.
+Create an object containing the Protocol parameter to specify the email protocol, the TopicArn for the topic to subscribe to, and an email address as the message Endpoint. Pass the parameters to the subscribe method of the AWS.SNS client class. You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
 
-To call the subscribe method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -71,7 +80,7 @@ Subscribing an Application Endpoint to a Topic
 
 Create an object containing the Protocol parameter to specify the application protocol, the TopicArn for the topic to subscribe to, and the ARN of a mobile application endpoint for the Endpoint parameter. Pass the parameters to the subscribe method of the AWS.SNS client class.
 
-To call the subscribe method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -90,7 +99,7 @@ Subscribing a Lambda Function to a Topic
 
 Create an object containing the Protocol parameter, specifying the lambda protocol, the TopicArn for the topic to subscribe to, and the ARN of an AWS Lambda function as the Endpoint parameter. Pass the parameters to the subscribe method of the AWS.SNS client class.
 
-To call the subscribe method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
@@ -141,7 +150,7 @@ Unsubscribing from a Topic
 
 Create an object containing the SubscriptionArn parameter, specifying the ARN of the subscription to unsubscribe. Pass the parameters to the unsubscribe method of the AWS.SNS client class.
 
-To call the unsubscribe method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+To call the unsubscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
 
 **Imports**
 
