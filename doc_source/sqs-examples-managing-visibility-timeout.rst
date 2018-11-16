@@ -25,6 +25,8 @@ The following example shows how to:
 
 .. include:: text/git-php-examples.txt
 
+
+
 Change the Visibility Timeout of Multiple Messages
 ==================================================
 

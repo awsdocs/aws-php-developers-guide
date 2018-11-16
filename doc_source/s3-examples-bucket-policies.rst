@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-################################################################
-Working with |S3| Bucket Policies with AWS SDK for PHP version 3 
-################################################################
+####################################################################
+Working with |S3| Bucket Policies with the AWS SDK for PHP Version 3 
+####################################################################
 
 .. meta::
    :description: Return, replace, or delete Amazon S3 bucket policies using the AWS SDK for PHP version 3.

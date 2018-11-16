@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-######################################################################
-Managing |S3| Bucket Access Permissions with AWS SDK for PHP version 3 
-######################################################################
+##########################################################################
+Managing |S3| Bucket Access Permissions with the AWS SDK for PHP Version 3
+##########################################################################
 
 .. meta::
    :description: Get access control lists (ACLs) and set permissions for Amazon S3 buckets using the AWS SDK for PHP version 3.

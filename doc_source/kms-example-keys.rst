@@ -21,11 +21,11 @@ The primary resources in |KMSlong| (|KMS|) are :KMS-dg:`customer master keys (CM
 The following examples show how to:
 
 * Create a customer CMK using :aws-php-class:`CreateKey <api-kms-2014-11-01.html#createkey>`.
-* Generate a data key using :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html.html#generatedatakey>`.
-* View a CMK using :aws-php-class:`DescribeKey <api-kms-2014-11-01.html.html#describekey>`.
-* Get key IDs and key ARNS of CMKs using :aws-php-class:`ListKeys <api-kms-2014-11-01.html.html#listkeys>`.
-* Enable CMKs using :aws-php-class:`EnableKey <api-kms-2014-11-01.html.html#enablekey>`.
-* Disable CMKs using :aws-php-class:`DisableKey <api-kms-2014-11-01.html.html#disablekey>`.
+* Generate a data key using :aws-php-class:`GenerateDataKey <api-kms-2014-11-01.html#generatedatakey>`.
+* View a CMK using :aws-php-class:`DescribeKey <api-kms-2014-11-01.html#describekey>`.
+* Get key IDs and key ARNS of CMKs using :aws-php-class:`ListKeys <api-kms-2014-11-01.html#listkeys>`.
+* Enable CMKs using :aws-php-class:`EnableKey <api-kms-2014-11-01.html#enablekey>`.
+* Disable CMKs using :aws-php-class:`DisableKey <api-kms-2014-11-01.html#disablekey>`.
 
 .. include:: text/git-php-examples.txt
 

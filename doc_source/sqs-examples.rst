@@ -10,7 +10,7 @@
 
 
 #############################################
-|SQS| Examples Using the |sdk-php| Version 3 
+|SQS| Examples Using the |sdk-php| Version 3
 #############################################
 
 .. meta::
@@ -18,7 +18,7 @@
    :keywords: Amazon SQS code examples for PHP
 
 
-|SQSlong| (SQS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS| 
+|SQSlong| (SQS) is a fast, reliable, scalable, fully managed message queuing service. |SQS| lets you decouple the components of a cloud application. |SQS|
 includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first>-in, first>-out) delivery and exactly-once processing.
 
 .. image:: images/code-samples-sqs.png
@@ -29,12 +29,8 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 .. toctree::
     :maxdepth: 1
 
-    Enabling Long Polling in Amazon SQS <sqs-examples-enable-long-polling.rst>
-    Managing Visibility Timeout in Amazon SQS <sqs-examples-managing-visibility-timeout.rst>
-    Sending and Receiving Messages in Amazon SQS <sqs-examples-send-receive-messages.rst>
-    Using Dead Letter Queues in Amazon SQS <sqs-examples-dead-letter-queues.rst>
-    Using Queues in Amazon SQS <sqs-examples-using-queues.rst>
-
-
-
-
+    Enabling Long Polling <sqs-examples-enable-long-polling.rst>
+    Managing Visibility Timeout <sqs-examples-managing-visibility-timeout.rst>
+    Sending and Receiving Messages <sqs-examples-send-receive-messages.rst>
+    Using Dead Letter Queues <sqs-examples-dead-letter-queues.rst>
+    Using Queues <sqs-examples-using-queues.rst>

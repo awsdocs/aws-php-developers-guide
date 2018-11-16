@@ -20,9 +20,9 @@ When you create an |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts
 
 The following examples show how to:
 
-* List the names of key policies using :aws-php-class:`ListKeyPolicies </api-kms-2014-11-01.html#listkeypolicies>`.
-* Get a key policy using :aws-php-class:`GetKeyPolicy </api-kms-2014-11-01.html.html#getkeypolicy>`.
-* Set a key policy using :aws-php-class:`PutKeyPolicy </api-kms-2014-11-01.html.html#putkeypolicy>`.
+* List the names of key policies using :aws-php-class:`ListKeyPolicies <api-kms-2014-11-01.html#listkeypolicies>`.
+* Get a key policy using :aws-php-class:`GetKeyPolicy <api-kms-2014-11-01.html#getkeypolicy>`.
+* Set a key policy using :aws-php-class:`PutKeyPolicy <api-kms-2014-11-01.html#putkeypolicy>`.
 
 
 .. include:: text/git-php-examples.txt

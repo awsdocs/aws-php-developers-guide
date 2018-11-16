@@ -21,9 +21,15 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 | Change             | Description                            | Release Date      |
 +====================+========================================+===================+
-|  Credentials       | Clarify and Simplify credentials guide |  June 15th, 2018  |
+|  |SES| Examples    | Add more service examples              |  Oct 5th, 2018    |
 +--------------------+----------------------------------------+-------------------+
-|  new web layout    |  Documenation switched to AWS style    |  May  9th, 2018   |
+|  |KMS| Examples    | Add more service examples              |  Aug 8th, 2018    |
++--------------------+----------------------------------------+-------------------+
+|  Credentials       | Clarify and Simplify credentials guide |  June 30th, 2018  |
++--------------------+----------------------------------------+-------------------+
+|  |EMC| Examples    | Add more service examples              |  June 15th, 2018  |
++--------------------+----------------------------------------+-------------------+
+|  new web layout    |  Documentation switched to AWS style   |  May 9th, 2018    |
 +--------------------+----------------------------------------+-------------------+
 |  |S3| Encryption   |  Client Side Encryption                |  Nov 17th, 2017   |
 +--------------------+----------------------------------------+-------------------+
