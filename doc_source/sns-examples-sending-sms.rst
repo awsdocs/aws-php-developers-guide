@@ -9,34 +9,39 @@
    limitations under the License.
 
 ##########################################################
-Sending SMS Messages in |SQS| with |sdk-php| Version 3 
+Sending SMS Messages in |SNS| with |sdk-php| Version 3 
 ##########################################################
 
 .. meta::
    :description: Get and set SMS messaging preferences, check a phone number,  and get a list of phone numbers for Amazon SNS using the AWS SDK for PHP version 3.
-   :keywords: Amazon SNS code examples for PHP, Amazon SNS for PHP
+   :keywords: Amazon SNS code examples for PHP, Amazon SNS for PHP, Send SMS messages with Simple Notification Service
 
-You can use Amazon SNS to send text messages, or SMS messages,  to SMS-enabled devices. You can send a message directly to a phone number, or you can send a message to multiple phone numbers at once by subscribing those phone numbers to a topic and sending your message to the topic.
+You can use |SNS| to send text messages, or SMS messages,  to SMS-enabled devices. You can send a message directly to a phone number, or you can send a message to multiple phone numbers at once by subscribing those phone numbers to a topic and sending your message to the topic.
+
+Use |SNS| to specify preferences for SMS messaging, such as how your deliveries are optimized (for cost or for reliable delivery), your monthly spending limit, how message deliveries are logged, and whether to subscribe to daily SMS usage reports. These preferences are retrieved and set as SMS attributes for |SNS|.
+
+When you send an SMS message, specify the phone number using the E.164 format. E.164 is a standard for the phone number structure used for international telecommunication. Phone numbers that follow this format can have a maximum of 15 digits, and they are prefixed with the plus character (+) and the country code. For example, a US phone number in E.164 format would appear as +1001XXX5550100.
+
 
 The following example shows how to:
 
-* Returns the settings for sending SMS messages from your account using :aws-php-class:`GetSMSAttributes <api-sns-2010-03-31.html#getsmsattributes>`.
-* Returns the settings for sending SMS messages from your account using :aws-php-class:`SetSMSAttributes <api-sns-2010-03-31.html#setsmsattributes>`.
-* Returns the settings for sending SMS messages from your account using :aws-php-class:`CheckIfPhoneNumberISOptedOut <api-sns-2010-03-31.html#checkifphonenumberisoptedout>`.
-* Returns the settings for sending SMS messages from your account using :aws-php-class:`ListPhoneNumberOptedOut <api/api-sns-2010-03-31.html#listphonenumbersoptedout>`.
-* Returns the settings for sending SMS messages from your account using :aws-php-class:`Publish <api-sns-2010-03-31.html#publish>`.
+* Retrieve the default settings for sending SMS messages from your account using :aws-php-class:`GetSMSAttributes <api-sns-2010-03-31.html#getsmsattributes>`.
+* Update the default settings for sending SMS messages from your account using :aws-php-class:`SetSMSAttributes <api-sns-2010-03-31.html#setsmsattributes>`.
+* Discover if a given phone number owner has opted out of receiving SMS messages from your account using :aws-php-class:`CheckIfPhoneNumberISOptedOut <api-sns-2010-03-31.html#checkifphonenumberisoptedout>`.
+* List phone numbers where the owner has opted out of receiving SMS messages from your account  using :aws-php-class:`ListPhoneNumberOptedOut <api/api-sns-2010-03-31.html#listphonenumbersoptedout>`.
+* Send a text message (SMS message) directly to a phone number using :aws-php-class:`Publish <api-sns-2010-03-31.html#publish>`.
+
+For more information about using |SNS|, see :SNS-dg:`Using Amazon SNS for User Notifications with a Mobile Phone Number as a Subscriber (Send SMS) <sns-mobile-phone-number-as-subscriber>`.
 
 .. include:: text/git-php-examples.txt
 
 
 Getting SMS Attributes
-==========================
+======================
 
-Use Amazon SNS to specify preferences for SMS messaging, such as how your deliveries are optimized (for cost or for reliable delivery), your monthly spending limit, how message deliveries are logged, and whether to subscribe to daily SMS usage reports. These preferences are retrieved and set as SMS attributes for Amazon SNS.
+To retrieve the default settings for SMS messages, use the :SNS-api:`GetSMSAttributes <API_GetSMSAttributes>` operation.
 
-Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes to get. For details on available SMS attributes, see SetSMSAttributes in the Amazon Simple Notification Service API Reference.
-
-This example gets the DefaultSMSType attribute, which controls whether SMS messages are sent as Promotional, which optimizes message delivery to incur the lowest cost, or as Transactional, which optimizes message delivery to achieve the highest reliability. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the getSMSAttributes method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+This example gets the DefaultSMSType attribute, which controls whether SMS messages are sent as Promotional, which optimizes message delivery to incur the lowest cost, or as Transactional, which optimizes message delivery to achieve the highest reliability. 
 
 **Imports**
 
@@ -51,11 +56,11 @@ This example gets the DefaultSMSType attribute, which controls whether SMS messa
    :language: php
    
 Setting SMS Attributes
-==========================
+======================
 
-Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each. For details on available SMS attributes, see SetSMSAttributes in the Amazon Simple Notification Service API Reference.
+To update the default settings for SMS messages, use the :SNS-api:`SetSMSAttributes <API_SetSMSAttributes>` operation.
 
-This example sets the DefaultSMSType attribute to Transactional, which optimizes message delivery to achieve the highest reliability. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the getSMSAttributes method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+This example sets the DefaultSMSType attribute to Transactional, which optimizes message delivery to achieve the highest reliability. 
 
 **Imports**
 
@@ -72,9 +77,9 @@ This example sets the DefaultSMSType attribute to Transactional, which optimizes
 Checking If a Phone Number Has Opted Out
 ========================================
 
-Create an object containing the phone number to check as a parameter.
+To determine if a given phone number owner has opted out of receiving SMS messages from your account, use the :SNS-api:`CheckIfPhoneNumberIsOptedOut <API_CheckIfPhoneNumberIsOptedOut>` operation.
 
-This example sets the PhoneNumber parameter to specify the phone number to check. Pass the object to the checkIfPhoneNumberIsOptedOut method of the AWS.SNS client class. To call the checkIfPhoneNumberIsOptedOut method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+In this example the phone number is E.164 format, a standard for international telecommunication.
 
 **Imports**
 
@@ -92,9 +97,7 @@ This example sets the PhoneNumber parameter to specify the phone number to check
 Listing Opted-Out Phone Numbers
 ========================================
 
-Create an empty object as a parameter.
-
-Pass the object to the listPhoneNumbersOptedOut method of the AWS.SNS client class. To call the listPhoneNumbersOptedOut method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+To retrieve a list of phone numbers where owner has opted out of receiving SMS messages from your account, use the :SNS-api:`ListPhoneNumbersOptedOut <API_ListPhoneNumbersOptedOut>` operation.
 
 **Imports**
 
@@ -111,11 +114,13 @@ Pass the object to the listPhoneNumbersOptedOut method of the AWS.SNS client cla
 Publishing to a SMS Text Message 
 ================================
 
-Create an object containing the Message and PhoneNumber parameters.
+To deliver a text message (SMS message) directly to a phone number, use the :SNS-api:`Publish <API_Publish>` operation.
 
-When you send an SMS message, specify the phone number using the E.164 format. E.164 is a standard for the phone number structure used for international telecommunication. Phone numbers that follow this format can have a maximum of 15 digits, and they are prefixed with the plus character (+) and the country code. For example, a US phone number in E.164 format would appear as +1001XXX5550100.
+In this example the phone number is E.164 format, a standard for international telecommunication. 
 
-This example sets the PhoneNumber parameter to specify the phone number to send the message. Pass the object to the publish method of the AWS.SNS client class. To call the publish method, create a promise for invoking an Amazon SNS service object, passing the parameters object. Then handle the response in the promise callback.
+SMS message can contain up to 140 bytes. The total size limit for a single SMS publish action is 1600 bytes
+
+For more details on sending SMS messages, see :SNS-dg:`Sending an SMS Message <sms_publish-to-phone>`.
 
 **Imports**
 

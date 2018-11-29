@@ -33,7 +33,6 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
     :maxdepth: 1
 
     Managing Topics <sns-examples-managing-topics.rst>
-    Publishing Messages to a Topic <sns-examples-publishing-messages.rst>
     Managing Subscriptions <sns-examples-subscribing-unsubscribing-topics.rst>
     Sending SMS Messages <sns-examples-sending-sms.rst>
     
