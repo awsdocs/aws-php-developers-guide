@@ -17,14 +17,14 @@ Managing Subscriptions in |SNS| with |sdk-php| Version 3
    :keywords: Amazon SNS code examples for PHP
 
 
-Use |SNS| topics to send notifications to |SQS|, HTTP/S, email addresses, |SMS|, or |LAM|. Before you begin, create a topic. 
+Use |SNS| topics to send notifications to |SQS|, HTTP/S, email addresses, |SMS|, or |LAM|. 
 
-Learn more about managing topics in :doc:`sns-examples-managing-topics`
+Subscriptions are attached to a topic that manages sending messages to subscribers. Learn more about creating topics in :doc:`sns-examples-managing-topics`
 
 
 The following example shows how to:
 
-* Subscribe to a topic using :aws-php-class:`Subscribe <api-sns-2010-03-31.html#subscribe>`.
+* Subscribe to an existing topic using :aws-php-class:`Subscribe <api-sns-2010-03-31.html#subscribe>`.
 * Verify a subscription using :aws-php-class:`ConfirmSubscription <api-sns-2010-03-31.html#confirmsubscription>`.
 * List existing subscriptions using :aws-php-class:`ListSubscriptionsByTopic <api-sns-2010-03-31.html#listsubscriptionsbytopic>`.
 * Delete a subscription using :aws-php-class:`Unsubscribe <api-sns-2010-03-31.html#unsubscribe>`.
@@ -39,9 +39,11 @@ For more information about using |SNS|, see :SNS-dg:`Using Amazon SNS for System
 Subscribing an Email Address to a Topic
 =======================================
 
-Create an object containing the Protocol parameter to specify the email protocol, the TopicArn for the topic to subscribe to, and an email address as the message Endpoint. Pass the parameters to the subscribe method of the AWS.SNS client class. You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
+To initiate a subscription to an email address, use the :SNS-api:`Subscribe <API_Subscribe>` operation.
 
-To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
+
+In this example the endpoint is an email address. A confirmation token will be sent to this email. Verify the subscription with this confirmation token within 3 days of receipt. 
 
 **Imports**
 
@@ -58,9 +60,12 @@ To call the subscribe method, create a promise for invoking an |SNS| service obj
 Subscribing an Application Endpoint to a Topic
 ==============================================
 
-Create an object containing the Protocol parameter to specify the application protocol, the TopicArn for the topic to subscribe to, and the ARN of a mobile application endpoint for the Endpoint parameter. Pass the parameters to the subscribe method of the AWS.SNS client class.
+To initiate a subscription to an web app, use the :SNS-api:`Subscribe <API_Subscribe>` operation.
 
-To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
+
+In this example the endpoint is a url. A confirmation token will be sent to this web address. Verify the subscription with this confirmation token within 3 days of receipt. 
+
 
 **Imports**
 
@@ -77,9 +82,12 @@ To call the subscribe method, create a promise for invoking an |SNS| service obj
 Subscribing a Lambda Function to a Topic
 ==============================================
 
-Create an object containing the Protocol parameter, specifying the lambda protocol, the TopicArn for the topic to subscribe to, and the ARN of an AWS Lambda function as the Endpoint parameter. Pass the parameters to the subscribe method of the AWS.SNS client class.
+To initiate a subscription to an |LAM|, use the :SNS-api:`Subscribe <API_Subscribe>` operation.
 
-To call the subscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
+
+In this example the endpoint is an |LAM|. A confirmation token will be sent to this |LAM|. Verify the subscription with this confirmation token within 3 days of receipt. 
+
 
 **Imports**
 
@@ -93,8 +101,21 @@ To call the subscribe method, create a promise for invoking an |SNS| service obj
    :lines: 31-50
    :language: php
    
-Subscriping a Text SMS to a Topic
+Subscripting a Text SMS to a Topic
 =================================
+
+If you want to send SMS messages to multiple numbers at the same time, subscribe each number to a topic. 
+
+To initiate a subscription to a phone number, use the :SNS-api:`Subscribe <API_Subscribe>` operation.
+
+You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed, as other examples in this topic will show.
+
+In this example the endpoint is an phone number in E.164 format, a standard for international telecommunication. 
+
+A confirmation token will be sent to this phone number. Verify the subscription with this confirmation token within 3 days of receipt. 
+
+For an alternative way to send SMS messages with |SNS| see :doc:`sns-examples-sending-sms`.
+
 
 **Imports**
 
@@ -110,6 +131,13 @@ Subscriping a Text SMS to a Topic
    
 Confirm Subscription to a Topic
 ===============================
+
+To actually create a subscription, the endpoint owner must acknowledge intent to receive messages from the topic with a token sent when a subscriptions is initially 
+established as described above. Confirmation tokens are valid for three days. After three days, you can resend a token by creating a new subscription. 
+
+To confirm a subscription, use the :SNS-api:`ConfirmSubscription <API_ConfirmSubscription>` operation.
+
+
 
 **Imports**
 
@@ -127,9 +155,7 @@ Confirm Subscription to a Topic
 Listing Subscriptions to a Topic
 ================================
 
-Configure the SDK as previously shown.
-
-Create an object containing the TopicArn parameter for the topic whose subscriptions you want to list. Pass the parameters to the listSubscriptionsByTopic method of the AWS.SNS client class. To call the listSubscriptionsByTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+To list up to 100 existing subscriptions in a given AWS region, use the :SNS-api:`ListSubscriptions <API_ListSubscriptions>` operation.
 
 **Imports**
 
@@ -146,9 +172,14 @@ Create an object containing the TopicArn parameter for the topic whose subscript
 Unsubscribing from a Topic
 ==========================
 
-Create an object containing the SubscriptionArn parameter, specifying the ARN of the subscription to unsubscribe. Pass the parameters to the unsubscribe method of the AWS.SNS client class.
+To remove an endpoint subscribed to a topic, use the :SNS-api:`Unsubscribe <API_Unsubscribe>` operation.
 
-To call the unsubscribe method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+
+
+If the subscription requires authentication for deletion, only the owner of the subscription or the topic's owner can unsubscribe, and an AWS signature is required. 
+If the Unsubscribe call does not require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the endpoint
+
+To call the unsubscribe method, 
 
 **Imports**
 

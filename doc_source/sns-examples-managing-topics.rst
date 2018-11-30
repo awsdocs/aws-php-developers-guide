@@ -16,7 +16,9 @@ Managing Topics in |SQS| with |sdk-php| Version 3
    :description: How to  create, list, and delete Amazon SNS topics, and to handle topic attributes using the AWS SDK for PHP version 3.
    :keywords: Amazon SNS topics for PHP
 
-To send notifications to |SQS|, HTTP/S, email, |SMS|, or |LAM|, first create a topic that will deliver messages to to any subscribers of a topic.  
+To send notifications to |SQS|, HTTP/S, email, |SMS|, or |LAM|, you must first create a topic that manages the delivery of messages to any subscribers of that topic.
+
+In terms of the observer design pattern, a topic is like the subject. After a topic is created, add subscribers, that will be notified automatically when a message is published to a topic. 
 
 Learn more about subscribing to topics in :doc:`sns-examples-subscribing-unsubscribing-topics`
 
@@ -37,8 +39,9 @@ For more information about using |SNS|, see :SNS-dg:`Amazon SNS Topic Attributes
 
 Creating a Topic
 ==========================
+To create a new topic, use the :SNS-api:`CreateTopic <API_CreateTopic>` operation.
 
-Pass the Name for the new topic to the createTopic method of the AWS.SNS client class. To call the createTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains the ARN of the topic.
+Each topic name in your AWS account must be unique. 
 
 **Imports**
 
@@ -55,7 +58,7 @@ Pass the Name for the new topic to the createTopic method of the AWS.SNS client 
 Listing Your Topics
 ==========================
 
-Create an empty object to pass to the listTopics method of the AWS.SNS client class. To call the listTopics method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback. The data returned by the promise contains an array of your topic ARNs.
+To list up to 100 existing topics in the current AWS Region, use the :SNS-api:`ListTopics <API_ListTopics>` operation.
 
 **Imports**
 
@@ -72,7 +75,9 @@ Create an empty object to pass to the listTopics method of the AWS.SNS client cl
 Deleting a Topic
 ==========================
 
-Create an object containing the TopicArn of the topic to delete to pass to the deleteTopic method of the AWS.SNS client class. To call the deleteTopic method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+To remove an existing topic and all of its subscriptions, use the :SNS-api:`DeleteTopic <API_DeleteTopic>` operation.
+
+Any messages that have not been delivered to subscribers yet will also be deleted. 
 
 **Imports**
 
@@ -89,7 +94,7 @@ Create an object containing the TopicArn of the topic to delete to pass to the d
 Getting Topic Attributes
 ==========================
 
-Create an object containing the TopicArn of a topic to delete to pass to the getTopicAttributes method of the AWS.SNS client class. To call the getTopicAttributes method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+To retrieve properties of a single existing topic, use the :SNS-api:`GetTopicAttributes <API_GetTopicAttributes>` operation.
 
 **Imports**
 
@@ -106,7 +111,9 @@ Create an object containing the TopicArn of a topic to delete to pass to the get
 Setting Topic Attributes
 ==========================
 
-Create an object containing the parameters for the attribute update, including the TopicArn of the topic whose attributes you want to set, the name of the attribute to set, and the new value for that attribute. You can set only the Policy, DisplayName, and DeliveryPolicy attributes. Pass the parameters to the setTopicAttributes method of the AWS.SNS client class. To call the setTopicAttributes method, create a promise for invoking an |SNS| service object, passing the parameters object. Then handle the response in the promise callback.
+To updated properties of a single existing topic, use the :SNS-api:`SetTopicAttributes <API_SetTopicAttributes>` operation.
+
+You can set only the Policy, DisplayName, and DeliveryPolicy attributes. 
 
 **Imports**
 
