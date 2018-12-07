@@ -24,8 +24,8 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
     :maxdepth: 2
 
     Amazon CloudWatch Examples <cw-examples.rst>
-    Amazon EC2 Examples <ec2-examples.rst>
-    AWS IAM Examples <iam-examples.rst>
+    Amazon EC2 Examples <ec2-examples.rst>    
+    AWS Identity and Access Management (IAM) Examples <iam-examples.rst>
     AWS Key Management Service <kms-examples>
     AWS Elemental MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>
