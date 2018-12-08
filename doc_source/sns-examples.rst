@@ -10,22 +10,22 @@
 
 
 #############################################
-|SNS| Examples Using the |sdk-php| Version 3 
+|SNS| Examples Using the |sdk-php| Version 3
 #############################################
 
 .. meta::
-   :description: Amazon sns code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon sns code examples for PHP
+   :description: Amazon SNS code examples for the AWS SDK for PHP version 3.
+   :keywords: Amazon SNS code examples for PHP
 
 
-|snslong| (sns) is a web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients.
+|SNSlong| (|SNS|) is a web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients.
 
-In |snslong|, there are two types of clients—publishers and subscribers—also referred to as producers and consumers.
+In |SNS|, there are two types of clients: publishers (also referred to as producers) and subscribers (also referred to as consumers).
 
 .. image:: images/code-samples-sns.png
-   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon sns
+   :alt: Diagram that provides an overview of how AWS SDK for PHP connects to |SNS|
 
-Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (web servers, email addresses, |SQS| queues, Lambda functions) consume or receive the message or notification over one of the supported protocols (|SQS|, HTTP/S, email, |SMS|, |LAM|) when they are subscribed to the topic.
+Publishers communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel. Subscribers (web servers, email addresses, |SQS| queues, |LAMlong| functions) consume or receive the message or notification over one of the supported protocols (|SQS|, HTTP/HTTPS URLs, email, |SMS|, |LAM|) when they are subscribed to the topic.
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
@@ -34,8 +34,4 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 
     Managing Topics <sns-examples-managing-topics.rst>
     Managing Subscriptions <sns-examples-subscribing-unsubscribing-topics.rst>
-    Sending SMS Messages <sns-examples-sending-sms.rst>
-    
-
-
-
+    Sending Amazon SMS Messages <sns-examples-sending-sms.rst>

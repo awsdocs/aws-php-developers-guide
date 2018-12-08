@@ -8,28 +8,28 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##########################################################
-Managing Topics in |SQS| with |sdk-php| Version 3 
-##########################################################
+#####################################################
+Managing Topics in |SQS| with the |sdk-php| Version 3
+#####################################################
 
 .. meta::
-   :description: How to  create, list, and delete Amazon SNS topics, and to handle topic attributes using the AWS SDK for PHP version 3.
+   :description: How to  create, list, and delete Amazon SNS topics, and how to handle topic attributes using the AWS SDK for PHP version 3.
    :keywords: Amazon SNS topics for PHP
 
-To send notifications to |SQS|, HTTP/S, email, |SMS|, or |LAM|, you must first create a topic that manages the delivery of messages to any subscribers of that topic.
+To send notifications to |SQSlong| (|SQS|), HTTP/HTTPS URLs, email, |SMS|, or |LAMlong|, you must first create a topic that manages the delivery of messages to any subscribers of that topic.
 
-In terms of the observer design pattern, a topic is like the subject. After a topic is created, add subscribers, that will be notified automatically when a message is published to a topic. 
+In terms of the observer design pattern, a topic is like the subject. After a topic is created, you add subscribers that are notified automatically when a message is published to the topic.
 
-Learn more about subscribing to topics in :doc:`sns-examples-subscribing-unsubscribing-topics`
+Learn more about subscribing to topics in :doc:`sns-examples-subscribing-unsubscribing-topics`.
 
 
-The following example shows how to:
+The following examples show how to:
 
-* Creates a topic to which notifications can be published using :aws-php-class:`CreateTopic <api-sns-2010-03-31.html#createtopic>`.
-* Returns a list of the requester's topics using :aws-php-class:`ListTopics <api-sns-2010-03-31.html#listtopic>`.
-* Deletes a topic and all its subscriptions using :aws-php-class:`DeleteTopic <api-sns-2010-03-31.html#deletetopic>`.
-* Returns all of the properties of a topic using :aws-php-class:`GetTopicAttributes <api-sns-2010-03-31.html#gettopicattributes>`.
-* Allows a topic owner to set an attribute of the topic to a new value using :aws-php-class:`SetTopicAttributes <api-sns-2010-03-31.html#settopicattributes>`.
+* Create a topic to publish notifications to using :aws-php-class:`CreateTopic <api-sns-2010-03-31.html#createtopic>`.
+* Return a list of the requester's topics using :aws-php-class:`ListTopics <api-sns-2010-03-31.html#listtopic>`.
+* Delete a topic and all of its subscriptions using :aws-php-class:`DeleteTopic <api-sns-2010-03-31.html#deletetopic>`.
+* Return all of the properties of a topic using :aws-php-class:`GetTopicAttributes <api-sns-2010-03-31.html#gettopicattributes>`.
+* Allow a topic owner to set an attribute of the topic to a new value using :aws-php-class:`SetTopicAttributes <api-sns-2010-03-31.html#settopicattributes>`.
 
 For more information about using |SNS|, see :SNS-dg:`Amazon SNS Topic Attributes for Message Delivery Status <sns-topic-attributes>`.
 
@@ -37,11 +37,11 @@ For more information about using |SNS|, see :SNS-dg:`Amazon SNS Topic Attributes
 .. include:: text/git-php-examples.txt
 
 
-Creating a Topic
-==========================
-To create a new topic, use the :SNS-api:`CreateTopic <API_CreateTopic>` operation.
+Create a Topic
+==============
+To create a topic, use the :SNS-api:`CreateTopic <API_CreateTopic>` operation.
 
-Each topic name in your AWS account must be unique. 
+Each topic name in your AWS account must be unique.
 
 **Imports**
 
@@ -55,8 +55,8 @@ Each topic name in your AWS account must be unique.
    :lines: 31-50
    :language: php
 
-Listing Your Topics
-==========================
+List Your Topics
+================
 
 To list up to 100 existing topics in the current AWS Region, use the :SNS-api:`ListTopics <API_ListTopics>` operation.
 
@@ -72,12 +72,12 @@ To list up to 100 existing topics in the current AWS Region, use the :SNS-api:`L
    :lines: 31-50
    :language: php
 
-Deleting a Topic
-==========================
+Delete a Topic
+==============
 
 To remove an existing topic and all of its subscriptions, use the :SNS-api:`DeleteTopic <API_DeleteTopic>` operation.
 
-Any messages that have not been delivered to subscribers yet will also be deleted. 
+Any messages that have not been delivered yet to subscribers will also be deleted.
 
 **Imports**
 
@@ -90,9 +90,9 @@ Any messages that have not been delivered to subscribers yet will also be delete
 .. literalinclude:: example_code/sns/DeleteTopic.php
    :lines: 31-50
    :language: php
-   
-Getting Topic Attributes
-==========================
+
+Get Topic Attributes
+====================
 
 To retrieve properties of a single existing topic, use the :SNS-api:`GetTopicAttributes <API_GetTopicAttributes>` operation.
 
@@ -107,13 +107,13 @@ To retrieve properties of a single existing topic, use the :SNS-api:`GetTopicAtt
 .. literalinclude:: example_code/sns/GetTopicAttributes.php
    :lines: 31-50
    :language: php
-   
-Setting Topic Attributes
-==========================
 
-To updated properties of a single existing topic, use the :SNS-api:`SetTopicAttributes <API_SetTopicAttributes>` operation.
+Set Topic Attributes
+====================
 
-You can set only the Policy, DisplayName, and DeliveryPolicy attributes. 
+To update properties of a single existing topic, use the :SNS-api:`SetTopicAttributes <API_SetTopicAttributes>` operation.
+
+You can set only the :code:`Policy`, :code:`DisplayName`, and :code:`DeliveryPolicy` attributes.
 
 **Imports**
 
@@ -126,5 +126,3 @@ You can set only the Policy, DisplayName, and DeliveryPolicy attributes.
 .. literalinclude:: example_code/sns/SetTopicAttributes.php
    :lines: 31-50
    :language: php
-   
-
