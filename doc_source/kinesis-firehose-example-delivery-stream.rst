@@ -16,8 +16,8 @@ Creating Delivery Streams Using the |AKF| API and the |sdk-php| Version 3
    :description: Kinesis Data Firehose delivery streams code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Kinesis Data Firehose for PHP, delivery streams for PHP, data streams for PHP
 
-|AKFlong| enables you to send real-time data to other AWS services including |AKS|, |S3|, |ESlong| (|ES|), and |RS|, or to Splunk. Create a data producer with delivery streams,
-which will deliver data to the configured destination every time you add data.
+|AKFlong| enables you to send real-time data to other AWS services including |AKSlong|, |S3|, |ESlong| (|ES|), and |RS|, or to Splunk. Create a data producer with delivery streams
+to deliver data to the configured destination every time you add data.
 
 The following examples show how to:
 
@@ -34,10 +34,10 @@ For more information about using |AKFlong|, see the |AKF-dg|_.
 Create a Delivery Stream Using a |AK| Data Stream
 =================================================
 
-To establish a delivery stream that puts data into an existing |AK| data stream, 
-use the :AKF-api:`CreateDeliveryStream <API_CreateDeliveryStream>` operation. 
+To establish a delivery stream that puts data into an existing |AK| data stream,
+use the :AKF-api:`CreateDeliveryStream <API_CreateDeliveryStream>` operation.
 
-This allows developers to migrate existing |AK| services to |AKF|.
+This enables developers to migrate existing |AK| services to |AKF|.
 
 **Imports**
 
@@ -54,7 +54,7 @@ This allows developers to migrate existing |AK| services to |AKF|.
 Create a Delivery Stream Using an |S3| Bucket
 =============================================
 
-To establish a delivery stream that puts data into an existing |S3| bucket, 
+To establish a delivery stream that puts data into an existing |S3| bucket,
 use the :AKF-api:`CreateDeliveryStream <API_CreateDeliveryStream>` operation.
 
 Provide the destination parameters,
@@ -76,7 +76,7 @@ as described in :AKF-dg:`Grant Kinesis Data Firehose Access to an Amazon S3 Dest
 Create a Delivery Stream Using |ES|
 ===================================
 
-To establish a |AKF| Delivery Stream that will put data into an |ES|, 
+To establish a |AKF| delivery stream that puts data into an |ES| cluster,
 use the :AKF-api:`CreateDeliveryStream <API_CreateDeliveryStream>` operation.
 
 Provide the destination parameters, as described in
@@ -99,7 +99,7 @@ Provide the destination parameters, as described in
 Retrieve a Delivery Stream
 ==========================
 
-To get the details about an existing |AKF| Delivery Stream, 
+To get the details about an existing |AKF| delivery stream,
 use the :AKF-api:`DescribeDeliveryStream <API_DescribeDeliveryStream>` operation.
 
 **Imports**
@@ -117,7 +117,7 @@ use the :AKF-api:`DescribeDeliveryStream <API_DescribeDeliveryStream>` operation
 List Existing Delivery Streams Connected to |AKS|
 =================================================
 
-To list all the existing |AKF| Delivery Streams sending data to |AKS|, 
+To list all the existing |AKF| delivery streams sending data to |AKS|,
 use the :AKF-api:`ListDeliveryStreams <API_ListDeliveryStreams>` operation.
 
 **Imports**
@@ -135,7 +135,7 @@ use the :AKF-api:`ListDeliveryStreams <API_ListDeliveryStreams>` operation.
 List Existing Delivery Streams Sending Data to Other |AWS| Services
 ===================================================================
 
-To list all the existing |AKF| Delivery Streams sending data to to |S3|, |ES|, or |RS|, or Splunk, 
+To list all the existing |AKF| delivery streams sending data to |S3|, |ES|, or |RS|, or to Splunk,
 use the :AKF-api:`ListDeliveryStreams <API_ListDeliveryStreams>` operation.
 
 **Imports**
@@ -154,10 +154,10 @@ use the :AKF-api:`ListDeliveryStreams <API_ListDeliveryStreams>` operation.
 Send Data to an Existing |AKF| Delivery Stream
 ==============================================
 
-To send data through a |AKF| Delivery Stream to your specified destination, 
-use the :AKF-api:`PutRecord <API_API_PutRecord>` operation once you've created a |AKF| Delivery Stream. 
+To send data through a |AKF| delivery stream to your specified destination,
+use the :AKF-api:`PutRecord <API_API_PutRecord>` operation after you create a |AKF| delivery stream.
 
-Before sending data to a |AKF| Delivery Stream, use ``DescribeDeliveryStream`` to see if the delivery stream is active.
+Before sending data to a |AKF| delivery stream, use ``DescribeDeliveryStream`` to see if the delivery stream is active.
 
 **Imports**
 
@@ -174,7 +174,7 @@ Before sending data to a |AKF| Delivery Stream, use ``DescribeDeliveryStream`` t
 Delete a |AKF| Delivery Stream
 ==============================
 
-To delete a |AKF| Delivery Stream, 
+To delete a |AKF| delivery stream,
 use the :AKF-api:`DeleteDeliveryStreams <API_DeleteDeliveryStreams>` operation.
 This also deletes any data you have sent to the delivery stream.
 
