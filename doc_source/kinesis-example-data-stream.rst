@@ -24,11 +24,11 @@ For more information, see  :AKS-dg:`Creating and Managing Streams
 
 The following examples show how to:
 
-* Create an alias using :aws-php-class:`CreateAlias <api-kinesis-2013-12-02.html#createstream>`.
-* Get details about a single data stream using :aws-php-class:`DescribeStream <api-kinesis-2013-12-02.html#describestream>`.
-* List your data streams using :aws-php-class:`ListStreams <api-kinesis-2013-12-02.html#liststreams>`.
-* Send data to a data stream using :aws-php-class:`PutRecord <api-kinesis-2013-12-02.html#putrecord>`.
-* Delete a data stream using :aws-php-class:`DeleteStream <api-kinesis-2013-12-02.html#deletestream>`.
+* Create a data stream using :aws-php-class:`CreateAlias <api-kinesis-1913-12-02.html#createstream>`.
+* Get details about a single data stream using :aws-php-class:`DescribeStream <api-kinesis-1913-12-02.html#describestream>`.
+* List existing data streams using :aws-php-class:`ListStreams <api-kinesis-1913-12-02.html#liststreams>`.
+* Send data to an existing data stream using :aws-php-class:`PutRecord <api-kinesis-1913-12-02.html#putrecord>`.
+* Delete a data stream using :aws-php-class:`DeleteStream <api-kinesis-1913-12-02.html#deletestream>`.
 
 .. include:: text/git-php-examples.txt
 
@@ -45,13 +45,13 @@ To create a |AK| data stream, use the :AKS-api:`CreateStream <API_CreateStream>`
 **Imports**
 
 .. literalinclude::  example_code/kinesis/CreateDataStream.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/CreateDataStream.php
-   :lines: 33-
+   :lines: 32-
    :language: php
 
 Retrieve a Data Stream
@@ -64,13 +64,13 @@ To retrieve details about a specified |AK| data stream, use the :AKS-api:`Descri
 **Imports**
 
 .. literalinclude::  example_code/kinesis/DescribeDataStream.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/DescribeDataStream.php
-   :lines: 33-
+   :lines: 32-
    :language: php
 
 List Existing Data Streams That Are Connected to |AK|
@@ -83,13 +83,13 @@ To list your |AK| data streams, use the :AKS-api:`ListStreams <API_ListStreams>`
 **Imports**
 
 .. literalinclude::  example_code/kinesis/ListDataStreams.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/ListDataStreams.php
-   :lines: 33-
+   :lines: 32-
    :language: php
 
 
@@ -104,13 +104,13 @@ To write a single data record to a |AK| data stream, use the :AKS-api:`PutRecord
 **Imports**
 
 .. literalinclude::  example_code/kinesis/PutDataStreamRecord.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/PutDataStreamRecord.php
-   :lines: 33-
+   :lines: 32-
    :language: php
 
 Delete a Data Stream
@@ -124,11 +124,11 @@ To delete a |AK| data stream, use the :AKS-api:`DeleteStream <API_DeleteStream>`
 **Imports**
 
 .. literalinclude::  example_code/kinesis/DeleteDataStream.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/DeleteDataStream.php
-   :lines: 33-
+   :lines: 32-
    :language: php

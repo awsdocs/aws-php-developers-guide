@@ -22,8 +22,8 @@ You can write 1,000 records per second to a single shard. Each shard also has an
 
 The following examples show how to:
 
-* List shards in a stream using :aws-php-class:`ListShards <api-kinesis-2013-12-02.html#listshards>`.
-* Add or reduce the number of shards in a stream using :aws-php-class:`UpdateShardCount <api-kinesis-2013-12-02.html#updateshardcount>`.
+* List shards in a stream using :aws-php-class:`ListShards <api-kinesis-1913-12-02.html#listshards>`.
+* Add or reduce the number of shards in a stream using :aws-php-class:`UpdateShardCount <api-kinesis-1913-12-02.html#updateshardcount>`.
 
 .. include:: text/git-php-examples.txt
 
@@ -39,13 +39,13 @@ To list the shards in a |AK| data stream, use the :AKS-api:`ListShards <API_List
 **Imports**
 
 .. literalinclude::  example_code/kinesis/ListDataStreamShards.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/ListDataStreamShards.php
-   :lines: 33-
+   :lines: 32-
    :language: php
 
 Add More Data Stream Shards
@@ -60,11 +60,11 @@ To update the shard count of a |AK| data stream, use the :AKS-api:`UpdateShardCo
 **Imports**
 
 .. literalinclude::  example_code/kinesis/UpdateDataStreamShards.php
-   :lines: 20-23
+   :lines: 19-23
    :language: PHP
 
 **Sample Code**
 
 .. literalinclude:: example_code/kinesis/UpdateDataStreamShards.php
-   :lines: 33-
+   :lines: 32-
    :language: php
