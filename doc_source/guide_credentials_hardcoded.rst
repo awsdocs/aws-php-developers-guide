@@ -38,7 +38,7 @@ a client constructor.
 .. code-block:: php
 
     // Hard-coded credentials
-	$s3Client = new S3Client([
+    $s3Client = new S3Client([
         'version'     => 'latest',
         'region'      => 'us-west-2',
         'credentials' => [
