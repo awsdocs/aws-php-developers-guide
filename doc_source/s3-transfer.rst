@@ -13,11 +13,11 @@
 ##############################################
 
 .. meta::
-   :description: Upload, copy, or download files and directories to an |S3| bucket using the AWS SDK for PHP version 3.
-   :keywords: |S3|, AWS SDK for PHP version 3 examples, |S3| for PHP code examples, |S3| transfer
+   :description: Upload, copy, or download files and directories to an Amazon S3 bucket using the AWS SDK for PHP version 3.
+   :keywords: Amazon S3, AWS SDK for PHP version 3 examples, Amazon S3 for PHP code examples, Amazon S3 transfer
 
 
-The |sdk-php| |S3| transfer manager is used to upload entire directories to
+The |S3| transfer manager in the |sdk-php| is used to upload entire directories to 
 an |S3| bucket and download entire buckets to a local directory.
 
 Uploading a Local Directory to |S3|

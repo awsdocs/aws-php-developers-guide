@@ -9,27 +9,27 @@
    limitations under the License.
 
 ##########################################################
-Using Dead Letter Queues in |SQS| with |sdk-php| Version 3 
+Using Dead-Letter Queues in |SQS| with |sdk-php| Version 3
 ##########################################################
 
 .. meta::
-   :description: Enable dead letter queues with Amazon SQS using the AWS SDK for PHP version 3.
+   :description: Enable dead-letter queues with Amazon SQS using the AWS SDK for PHP version 3.
    :keywords: Amazon SQS code examples for PHP
 
-A dead letter queue is one that other (source) queues can target for messages that can't be processed successfully. You can set aside and isolate these messages
-in the dead letter queue to determine why their processing did not succeed. You must individually configure each source queue that sends messages to a dead letter
-queue. Multiple queues can target a single dead letter queue.
+A dead-letter queue is one that other (source) queues can target for messages that can't be processed successfully. You can set aside and isolate these messages
+in the dead-letter queue to determine why their processing did not succeed. You must individually configure each source queue that sends messages to a dead-letter
+queue. Multiple queues can target a single dead-letter queue.
 
 To learn more, see :SQS-dg:`Using SQS Dead Letter Queues <sqs-dead-letter-queues>`.
 
 The following example shows how to:
 
-* Enable a dead letter queue using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
+* Enable a dead-letter queue using :aws-php-class:`SetQueueAttributes <api-sqs-2012-11-05.html#setqueueattributes>`.
 
 .. include:: text/git-php-examples.txt
 
 
-Enable a Dead Letter Queue
+Enable a Dead-Letter Queue
 ==========================
 
 **Imports**
