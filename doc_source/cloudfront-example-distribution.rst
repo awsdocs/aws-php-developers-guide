@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##########################################################################
+#############################################################################
 Manage |CFlong| Distributions Using the |AKS| API and the |sdk-php| Version 3
-##########################################################################
+#############################################################################
 
 .. meta::
    :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
-|CFSlong| 
+|CFlong| 
 
 The following examples show how to:
 
@@ -29,7 +29,7 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |CFSlong| , see the |CF-dg|_.
+For more information about using |CFlong| , see the |CF-dg|_.
 
 Create |CF| Distribution
 ========================
