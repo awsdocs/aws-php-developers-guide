@@ -31,8 +31,8 @@ The following examples show how to:
 
 For more information about using |CFSlong| , see the |CF-dg|_.
 
-Create Distribution
-=======================
+Create |CF| Distribution
+========================
 
 Create a distribution.
 
@@ -47,5 +47,90 @@ To create a |CF| distribution, use the :CF-api:`CreateDistribution <API_CreateDi
 **Sample Code**
 
 .. literalinclude:: example_code/cloudfront/CreateDistributionS3.php
+   :lines: 34-
+   :language: php
+
+Retrieve a |CF| Distribution
+============================
+
+To retrieve the details of the specified |CF| distribution, use the :CF-api:`GetDistribution <API_GetDistribution>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/GetDistribution.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/GetDistribution.php
+   :lines: 34-
+   :language: php
+
+List |CF| Distributions
+========================
+
+To list the existing |CF| distributions in the given accounts, use the :CF-api:`ListDistributions <API_ListDistributions>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/ListDistributions.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/ListDistributions.php
+   :lines: 34-
+   :language: php
+
+Update a |CF| Distribution
+============================
+
+To update a specified |CF| distribution, use the :CF-api:`UpdateDistribution <API_UpdateDistribution>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/UpdateDistributionS3.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/UpdateDistributionS3.php
+   :lines: 34-
+   :language: php
+
+Disable a |CF| Distribution
+============================
+
+To disable the specified |CF| distribution, use the :CF-api:`DisableDistribution <API_DisableDistribution>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/DisableDistributionS3.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/DisableDistributionS3.php
+   :lines: 34-
+   :language: php
+
+Delete a |CF| Distribution
+============================
+
+To remove a specified |CF| distribution, use the :CF-api:`DeleteDistribution <API_DeleteDistribution>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/DeleteDistribution.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/DeleteDistribution.php
    :lines: 34-
    :language: php

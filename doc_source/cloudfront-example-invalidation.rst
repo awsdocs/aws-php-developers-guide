@@ -47,3 +47,37 @@ To create a |CF| distribution invalidation, use the :CF-api:`CreateInvalidation 
 .. literalinclude:: example_code/cloudfront/CreateInvalidation.php
    :lines: 34-
    :language: php
+
+Get a Distribution Invalidation
+===============================
+
+To retrieve a |CF| distribution invalidation, use the :CF-api:`GetInvalidation <API_GetInvalidation>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/GetInvalidation.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/GetInvalidation.php
+   :lines: 34-
+   :language: php
+
+List Distribution Invalidations
+===============================
+
+To list all |CF| distribution invalidations, use the :CF-api:`ListInvalidations <API_ListInvalidations>` operation.
+
+**Imports**
+
+.. literalinclude::  example_code/cloudfront/ListInvalidations.php
+   :lines: 20-23
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: example_code/cloudfront/ListInvalidations.php
+   :lines: 34-
+   :language: php
