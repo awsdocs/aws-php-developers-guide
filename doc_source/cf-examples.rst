@@ -29,5 +29,5 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 .. toctree::
    :maxdepth: 1
 
-   CloudFront Distributions <cloudfront-example-distribution>
-   CloudFront Invalidations <cloudfront-example-invalidation>
+   CloudFront Distributions <cf-example-distribution>
+   CloudFront Invalidations <cf-example-invalidation>
