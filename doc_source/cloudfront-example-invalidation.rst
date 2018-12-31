@@ -17,7 +17,8 @@ Manage |CFlong| Invalidations Using the |AKS| API and the |sdk-php| Version 3
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
 
-|CFlong| 
+|CFlong| distributes static and dynamic content to edge locations. To remove or update a file from all edge locations, create an invalidation for each file. 
+Each calendar month, your first 1,000 invalidations are free. Learn more about removing content from a |CF| edge at :CF-dg:`Invalidating Files <Invalidation>`
 
 The following examples show how to:
 
@@ -32,52 +33,48 @@ For more information about using |CFlong| , see the |CF-dg|_.
 Create a Distribution Invalidation
 ==================================
 
-Create a |CF| Distribution Invalidation.
+Create a |CF| Distribution Invalidation by specifying the path location for the files you need to remove.
+This example invalidates all files in the distribution, but you can identify specific files under :code:`Items`.
 
 To create a |CF| distribution invalidation, use the :CF-api:`CreateInvalidation <API_CreateInvalidation>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/cloudfront/CreateInvalidation.php
-   :lines: 20-23
+.. literalinclude:: cloudfront.php.createinvalidation.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudfront/CreateInvalidation.php
-   :lines: 34-
+.. literalinclude:: cloudfront.php.createinvalidation.main.txt
    :language: php
+
 
 Get a Distribution Invalidation
 ===============================
 
-To retrieve a |CF| distribution invalidation, use the :CF-api:`GetInvalidation <API_GetInvalidation>` operation.
+To retrieve the status and details about a |CF| distribution invalidation, use the :CF-api:`GetInvalidation <API_GetInvalidation>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/cloudfront/GetInvalidation.php
-   :lines: 20-23
+.. literalinclude:: cloudfront.php.getinvalidation.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudfront/GetInvalidation.php
-   :lines: 34-
+.. literalinclude:: cloudfront.php.getinvalidation.main.txt
    :language: php
 
 List Distribution Invalidations
 ===============================
 
-To list all |CF| distribution invalidations, use the :CF-api:`ListInvalidations <API_ListInvalidations>` operation.
+To list all current |CF| distribution invalidations, use the :CF-api:`ListInvalidations <API_ListInvalidations>` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/cloudfront/ListInvalidations.php
-   :lines: 20-23
+.. literalinclude:: cloudfront.php.listinvalidation.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudfront/ListInvalidations.php
-   :lines: 34-
+.. literalinclude:: cloudfront.php.listinvalidation.main.txt
    :language: php
