@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -8,32 +8,33 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-#############################################################################
-Manage |CFlong| Invalidations Using the |AKS| API and the |sdk-php| Version 3
-#############################################################################
+###############################################################################
+Managing |CFlong| Invalidations Using the |AKS| API and the |sdk-php| Version 3
+###############################################################################
 
 .. meta::
    :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
 
-|CFlong| distributes static and dynamic content to edge locations. To remove or update a file from all edge locations, create an invalidation for each file. 
-Each calendar month, your first 1,000 invalidations are free. Learn more about removing content from a |CF| edge at :CF-dg:`Invalidating Files <Invalidation>`
+|CFlong| distributes static and dynamic content to edge locations. To remove or update a file from all edge locations, create an invalidation for each file.
+
+Each calendar month, your first 1,000 invalidations are free. To learn more about removing content from a |CF| edge, see :CF-dg:`Invalidating Files <Invalidation>`.
 
 The following examples show how to:
 
-* Create a Distribution Invalidation using :aws-php-class:`CreateInvalidation <api-cloudfront-2018-11-05.html#createinvalidation>`.
-* Get Invalidation using :aws-php-class:`GetInvalidation <api-cloudfront-2018-11-05.html#getinvalidation>`.
-* List Distributions using :aws-php-class:`ListInvalidations <api-cloudfront-2018-11-05.html#listinvalidations>`.
+* Create a distribution invalidation using :aws-php-class:`CreateInvalidation <api-cloudfront-2018-11-05.html#createinvalidation>`.
+* Get a distribution invalidation using :aws-php-class:`GetInvalidation <api-cloudfront-2018-11-05.html#getinvalidation>`.
+* List distributions using :aws-php-class:`ListInvalidations <api-cloudfront-2018-11-05.html#listinvalidations>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |CFlong| , see the |CF-dg|_.
+For more information about using |CFlong|, see the |CF-dg|_.
 
 Create a Distribution Invalidation
 ==================================
 
-Create a |CF| Distribution Invalidation by specifying the path location for the files you need to remove.
+Create a |CF| distribution invalidation by specifying the path location for the files you need to remove.
 This example invalidates all files in the distribution, but you can identify specific files under :code:`Items`.
 
 To create a |CF| distribution invalidation, use the :CF-api:`CreateInvalidation <API_CreateInvalidation>` operation.

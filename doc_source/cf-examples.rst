@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -17,19 +17,19 @@
    :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
-|CFlong| is an AWS service that manages the distribution of web content to edge locations. Store static files from |S3| in multiple origin servers, 
-or use |EC2| to deliver dynamically generated content. When a request is made, |CF| will deliver a locally cached version from the nearest edge location. 
-If unavailable from that edge location |CF| retrieves a copy of the files, and stores them at an edge location for future requests. 
+|CFlong| is an AWS service that manages the distribution of web content to edge locations. Store static files from |S3| in multiple origin servers,
+or use |EC2| to deliver dynamically generated content. When a request is made, |CF| delivers a locally cached version from the nearest edge location.
+If unavailable from that edge location, |CF| retrieves a copy of the files, and stores them at an edge location for future requests.
 
 For more information about |CF|, see the |CF-dg|_.
 
 .. image:: images/code-samples-cloudfront.png
-   :alt: A diagram that provides an overview of how AWS SDK for PHP connects to Amazon CloudFront
+   :alt: An overview of how AWS SDK for PHP connects to Amazon CloudFront
 
 All the example code for the |sdk-php| Version 3 is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code>`_.
 
 .. toctree::
    :maxdepth: 1
 
-   CloudFront Distributions <cloudfront-example-distribution>
-   CloudFront Invalidations <cloudfront-example-invalidation>
+   Managing CloudFront Distributions <cloudfront-example-distribution>
+   Managing CloudFront Invalidations <cloudfront-example-invalidation>
