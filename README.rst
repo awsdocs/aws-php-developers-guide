@@ -84,8 +84,8 @@ more details.
 Copyright and license
 =====================
 
-All content in this repository, unless otherwise stated, is Copyright © 2010-2018, Amazon Web
-Services, Inc. or its affiliates. All rights reserved.
+All content in this repository, unless otherwise stated, is 
+Copyright © 2010-2019, Amazon Web Services, Inc. or its affiliates. All rights reserved.
 
 Except where otherwise noted, this work is licensed under a `Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License
