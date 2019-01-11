@@ -62,6 +62,7 @@ SDK Guides
 * :doc:`Paginators in the AWS SDK for PHP <guide_paginators>`
 * :doc:`Waiters in the AWS SDK for PHP <guide_waiters>`
 * :doc:`JMESPath Expressions in the AWS SDK for PHP <guide_jmespath>`
+* :doc:`SDK Metrics <guide_sdk-metrics>`
 
 Service-Specific Features
 =========================
@@ -107,3 +108,4 @@ API Documentation
 =================
 
 Find API documentation for the SDK at  http://docs.aws.amazon.com/aws-sdk-php/v3/api/.
+
