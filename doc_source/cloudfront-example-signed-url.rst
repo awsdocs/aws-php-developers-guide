@@ -28,6 +28,8 @@ sign URLs, see :CF-dg:`Serving Private Content through Amazon CloudFront
 
     You must have the OpenSSL extension installed in you PHP environment
     to be able to sign |CF| URLs.
+    
+The following examples show how to:
 
 * Create a signed Amazon CloudFront URL using :aws-php-class:`getSignedURL <class-Aws.CloudFront.CloudFrontClient.html#_getSignedUrl>`.
 * Create a signed Amazon CloudFront cookie using :aws-php-class:`getSignedCookie <class-Aws.CloudFront.CloudFrontClient.html#_getSignedCookie>`.
