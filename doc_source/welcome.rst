@@ -84,7 +84,7 @@ Examples
 * :doc:`Amazon CloudFront <cf-examples>`
 * :doc:`Amazon CloudWatch Examples <cw-examples>`
 * :doc:`Amazon EC2 <ec2-examples>`
-* :doc:`AWS IAM Examples <iam-examples>`
+* :doc:`AWS Identity and Access Management Examples <iam-examples>`
 * :doc:`AWS Key Management Service <kms-examples>`
 * :doc:`Amazon MediaConvert Examples <emc-examples>`
 * :doc:`Amazon S3 Examples <s3-examples>`

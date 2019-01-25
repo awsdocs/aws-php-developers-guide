@@ -21,6 +21,10 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 | Change             | Description                            | Release Date      |
 +====================+========================================+===================+
+|  |CFlong|          | Add more service examples              |  Jan 25th, 2019   |
++--------------------+----------------------------------------+-------------------+
+|  Service Features  | SDK Metrics                            |  Jan 11th, 2018   |
++--------------------+----------------------------------------+-------------------+
 |  |AKlong|, |SNS|   | Add more service examples              |  Dec 14th, 2018   |
 +--------------------+----------------------------------------+-------------------+
 |  |SES| Examples    | Add more service examples              |  Oct 5th, 2018    |

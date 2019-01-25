@@ -17,7 +17,7 @@ Signing |CFlong| URLs with |sdk-php| Version 3
    :keywords: CloudFront, AWS SDK for PHP version 3 examples, CloudFront for PHP code examples
    
 Signed URLs enable you to provide users access to your private content. A signed
-URL includes additional information (e.g., expiration time) that gives you more
+URL includes additional information (for example, expiration time) that gives you more
 control over access to your content. This additional information appears in a
 policy statement, which is based on either a canned policy or a custom policy.
 For information about how to set up private distributions and why you need to
@@ -26,8 +26,8 @@ sign URLs, see :CF-dg:`Serving Private Content through Amazon CloudFront
 
 .. note:
 
-    You must have the OpenSSL extension installed in you PHP environment
-    to be able to sign |CF| URLs.
+    You must have the OpenSSL extension installed in your PHP environment
+    to sign |CF| URLs.
 
 * Create a signed Amazon CloudFront URL using :aws-php-class:`getSignedURL <class-Aws.CloudFront.CloudFrontClient.html#_getSignedUrl>`.
 * Create a signed Amazon CloudFront cookie using :aws-php-class:`getSignedCookie <class-Aws.CloudFront.CloudFrontClient.html#_getSignedCookie>`.
@@ -54,7 +54,7 @@ custom policy.
 .. literalinclude:: cloudfront.php.private_distribution.main.txt
    :language: PHP
 
-Use a Custom Policy when creating |CF| URLs
+Use a Custom Policy When Creating |CF| URLs
 ===========================================
 
 To use a custom policy, provide the ``policy`` key instead of ``expires``.
@@ -72,9 +72,9 @@ To use a custom policy, provide the ``policy`` key instead of ``expires``.
 Use a |CF| Signed URL
 ==========================
 
-The form of the signed URL is actually different depending on whether the URL you
-are signing is using the "http" or "rtmp" scheme. In the case of "http", the
-full, absolute URL is returned. For "rtmp", only the relative URL is returned
+The form of the signed URL differs, depending on whether the URL you
+are signing is using the "HTTP" or "RTMP" scheme. In the case of "HTTP", the
+full, absolute URL is returned. For "RTMP", only the relative URL is returned
 for your convenience. This is because some players require the host and path to be
 provided as separate parameters.
 
@@ -110,8 +110,7 @@ distribution via signed cookies. Signed cookies enable you to provide access to
 multiple restricted files, such as all of the files for a video in HLS format or
 all of the files in the subscribers' area of a website. For more information on
 why you might want to use signed cookies instead of signed URLs (or vice versa),
-see `Choosing Between Signed URLs and Signed Cookies <http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-choosing-signed-urls-cookies.html>`_
-in the |cf-dg|.
+see `:CF-dg:`Choosing Between Signed URLs and Signed Cookies <private-content-choosing-signed-urls-cookies>` in the |cf-dg|.
 
 .. note:
 
@@ -172,6 +171,6 @@ with a Guzzle client.
 
     $client->get('video.mp4');
 
-For more information, see `Using Signed
-Cookies <http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-cookies.html>`_
+For more information, see :cf-dg:`Using Signed
+Cookies <private-content-signed-cookies>`
 in the |cf-dg|.
