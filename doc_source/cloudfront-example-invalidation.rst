@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###############################################################################
-Managing |CFlong| Invalidations Using the |AKS| API and the |sdk-php| Version 3
+Managing |CFlong| Invalidations Using the |CF| API and the |sdk-php| Version 3
 ###############################################################################
 
 .. meta::

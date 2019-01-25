@@ -67,7 +67,6 @@ Service-Specific Features
 =========================
 
 * :doc:`Signing Custom Amazon CloudSearch Domain Requests  <service_cloudsearch-custom-requests>`
-* :doc:`Signing Amazon CloudFront URLs  <service_cloudfront-signed-url>`
 * :doc:`Using AWS Cloud9 with the AWS SDK for PHP  <cloud9>`
 * :doc:`Using the DynamoDB Session Handler with AWS SDK for PHP  <service_dynamodb-session-handler>`
 * :doc:`Signing an Amazon Elasticsearch Service Search Request  <service_es-data-plane>`
@@ -82,6 +81,7 @@ Service-Specific Features
 
 Examples
 ========
+* :doc:`Amazon CloudFront <cf-examples>`
 * :doc:`Amazon CloudWatch Examples <cw-examples>`
 * :doc:`Amazon EC2 <ec2-examples>`
 * :doc:`AWS IAM Examples <iam-examples>`

@@ -9,7 +9,7 @@
    limitations under the License.
 
 ###############################################################################
-Managing |CFlong| Distributions Using the |AKS| API and the |sdk-php| Version 3
+Managing |CFlong| Distributions Using the |CF| API and the |sdk-php| Version 3
 ###############################################################################
 
 .. meta::

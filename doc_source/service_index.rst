@@ -24,7 +24,6 @@ higher-level features per service.
     :maxdepth: 2
 
     Amazon CloudSearch <service_cloudsearch-custom-requests.rst>
-    Amazon CloudFront <service_cloudfront-signed-url.rst>
     AWS Cloud9 <cloud9>
     Amazon DynamoDB <service_dynamodb-session-handler.rst>
     Amazon Elasticsearch <service_es-data-plane.rst>

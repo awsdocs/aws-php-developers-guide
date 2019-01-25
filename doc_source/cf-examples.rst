@@ -33,3 +33,4 @@ All the example code for the |sdk-php| Version 3 is available `here on GitHub <h
 
    Managing CloudFront Distributions <cloudfront-example-distribution>
    Managing CloudFront Invalidations <cloudfront-example-invalidation>
+   Signing CloudFront URLs <cloudfront-example-signed-url>
