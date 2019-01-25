@@ -16,11 +16,15 @@ Managing |CFlong| Distributions Using the |CF| API and the |sdk-php| Version 3
    :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
-|CFlong| distributes your static and dynamic web content from Amazon services like |S3| and |EC2| to worldwide data centers, known as edge locations.
-When customers request content from your website, it's stored in the closest edge location. This reduces the latency of similar requests in that area.
+|CFlong| caches content in worldwide edge locations to speed up distribution of static and dynamic files that you store 
+on your own server, or on an Amazon service like |S3| and |EC2|. When users request content from your website, |CF| serves 
+it from the closest edge location, if the file is cached there. Otherwise |CF| retrieves a copy of the file, serves it, 
+and then caches it for the next request. Caching content at an edge location reduces the latency of similar user 
+requests in that area.
 
-Each distribution specifies where your content is located and how to distribute it. This topic focuses on distributions for static and
-dynamic files such as HTML, CSS, JSON, and image files. For more information about video on demand files for multimedia streaming and live events,
+For each |CF| distribution that you create, you specify where the content is located and how to distribute it when users 
+make requests. This topic focuses on distributions for static and dynamic files such as HTML, CSS, JSON, and image files. F
+or information about using |CF| with video on demand, 
 see :CF-dg:`On-Demand and Live Streaming Video with CloudFront <on-demand-streaming-video>`.
 
 The following examples show how to:

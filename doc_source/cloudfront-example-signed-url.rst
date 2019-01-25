@@ -13,8 +13,8 @@ Signing |CFlong| URLs with |sdk-php| Version 3
 ##############################################
 
 .. meta::
-   :description: Programing Cloud Front using the AWS SDK for PHP version 3.
-   :keywords: Cloud Front, AWS SDK for PHP version 3 examples, Cloud Front for PHP code examples
+   :description: Programing CloudFront using the AWS SDK for PHP version 3.
+   :keywords: CloudFront, AWS SDK for PHP version 3 examples, CloudFront for PHP code examples
    
 Signed URLs enable you to provide users access to your private content. A signed
 URL includes additional information (e.g., expiration time) that gives you more
@@ -28,8 +28,6 @@ sign URLs, see :CF-dg:`Serving Private Content through Amazon CloudFront
 
     You must have the OpenSSL extension installed in you PHP environment
     to be able to sign |CF| URLs.
-    
-The following examples show how to:
 
 * Create a signed Amazon CloudFront URL using :aws-php-class:`getSignedURL <class-Aws.CloudFront.CloudFrontClient.html#_getSignedUrl>`.
 * Create a signed Amazon CloudFront cookie using :aws-php-class:`getSignedCookie <class-Aws.CloudFront.CloudFrontClient.html#_getSignedCookie>`.
@@ -121,7 +119,7 @@ in the |cf-dg|.
     instead.
 
 Creating a signed cookie is similar to creating a signed URL. The only
-difference is the method called (``getSignedCookie`` instead of ``getSignedUrl``).
+difference is the method that is called (``getSignedCookie`` instead of ``getSignedUrl``).
 
 **Imports**
 
@@ -133,7 +131,7 @@ difference is the method called (``getSignedCookie`` instead of ``getSignedUrl``
 .. literalinclude:: cloudfront.php.signed_cookie.main.txt
    :language: PHP
 
-Use a Custom Policy when creating |CF| Cookies 
+Use a Custom Policy When Creating |CF| Cookies 
 ===============================================
 
 As with ``getSignedUrl``, you can provide a ``'policy'`` parameter instead of an
@@ -155,7 +153,7 @@ be set as cookies to grant access to a private distribution.
    :language: PHP
 
 
-Send |CF| Cookies to Guzzle client
+Send |CF| Cookies to Guzzle Client
 ==================================
 
 You can also pass these cookies to a ``GuzzleHttp\Cookie\CookieJar`` for use

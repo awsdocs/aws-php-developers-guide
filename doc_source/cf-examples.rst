@@ -17,9 +17,11 @@
    :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
 
-|CFlong| is an AWS service that manages the distribution of web content to edge locations. Store static files from |S3| in multiple origin servers,
-or use |EC2| to deliver dynamically generated content. When a request is made, |CF| delivers a locally cached version from the nearest edge location.
-If unavailable from that edge location, |CF| retrieves a copy of the files, and stores them at an edge location for future requests.
+|CFlong| is an AWS web service that speeds up serving static and dynamic web content from your own web 
+server or an AWS server, such as |S3|. |CF| delivers content through a worldwide network of data 
+centers called edge locations. When a user requests content that you're distributing with |CF|, they’re 
+routed to the edge location that provides the lowest latency. If the content isn’t cached there already, 
+|CF| retrieves a copy from the origin server, serves it, and then caches it for future requests. 
 
 For more information about |CF|, see the |CF-dg|_.
 
