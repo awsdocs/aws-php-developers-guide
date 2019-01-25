@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -34,15 +34,4 @@ higher-level features per service.
     Amazon S3 Stream Wrapper <s3-stream-wrapper.rst>
     Amazon S3 Transfer Manager <s3-transfer.rst>
     Amazon S3 Client Side Encryption <s3-encryption-client.rst>
-
-
-
-
-
-
-
-
-
-
-
 
