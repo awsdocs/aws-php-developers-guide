@@ -110,7 +110,7 @@ distribution via signed cookies. Signed cookies enable you to provide access to
 multiple restricted files, such as all of the files for a video in HLS format or
 all of the files in the subscribers' area of a website. For more information on
 why you might want to use signed cookies instead of signed URLs (or vice versa),
-see `:CF-dg:`Choosing Between Signed URLs and Signed Cookies <private-content-choosing-signed-urls-cookies>` in the |cf-dg|.
+see :CF-dg:`Choosing Between Signed URLs and Signed Cookies <private-content-choosing-signed-urls-cookies>` in the |cf-dg|.
 
 .. note:
 
@@ -171,6 +171,5 @@ with a Guzzle client.
 
     $client->get('video.mp4');
 
-For more information, see :cf-dg:`Using Signed
-Cookies <private-content-signed-cookies>`
+For more information, see :CF-dg:`Using Signed Cookies <private-content-signed-cookies>`
 in the |cf-dg|.
