@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -23,10 +23,11 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
 .. toctree::
     :maxdepth: 2
 
+    Amazon CloudFront Examples <cf-examples.rst>
     Amazon CloudWatch Examples <cw-examples.rst>
     Amazon EC2 Examples <ec2-examples.rst>
     AWS Identity and Access Management (IAM) Examples <iam-examples.rst>
-    AWS Key Management Service <kms-examples>    
+    AWS Key Management Service <kms-examples>
     Amazon Kinesis Examples <kinesis-examples.rst>
     AWS Elemental MediaConvert <emc-examples.rst>
     Amazon S3 Examples <s3-examples.rst>

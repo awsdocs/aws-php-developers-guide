@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License").  You may not
 # use this file except in compliance with the License.  A copy of the License
@@ -67,7 +67,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'AWS PHP Developer Guide'
-copyright = u'2018, Amazon Web Services'
+copyright = u'2019, Amazon Web Services'
 author = u'Amazon Web Services'
 
 # The version info for the project you're documenting, acts as replacement for

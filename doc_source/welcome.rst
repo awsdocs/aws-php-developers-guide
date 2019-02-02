@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -62,12 +62,12 @@ SDK Guides
 * :doc:`Paginators in the AWS SDK for PHP <guide_paginators>`
 * :doc:`Waiters in the AWS SDK for PHP <guide_waiters>`
 * :doc:`JMESPath Expressions in the AWS SDK for PHP <guide_jmespath>`
+* :doc:`SDK Metrics <guide_sdk-metrics>`
 
 Service-Specific Features
 =========================
 
 * :doc:`Signing Custom Amazon CloudSearch Domain Requests  <service_cloudsearch-custom-requests>`
-* :doc:`Signing Amazon CloudFront URLs  <service_cloudfront-signed-url>`
 * :doc:`Using AWS Cloud9 with the AWS SDK for PHP  <cloud9>`
 * :doc:`Using the DynamoDB Session Handler with AWS SDK for PHP  <service_dynamodb-session-handler>`
 * :doc:`Signing an Amazon Elasticsearch Service Search Request  <service_es-data-plane>`
@@ -79,12 +79,12 @@ Service-Specific Features
 * :doc:`Amazon S3 Transfer Manager  <s3-transfer>`
 * :doc:`Amazon S3 Client Side Encryption  <s3-encryption-client>`
 
-
 Examples
 ========
+* :doc:`Amazon CloudFront <cf-examples>`
 * :doc:`Amazon CloudWatch Examples <cw-examples>`
 * :doc:`Amazon EC2 <ec2-examples>`
-* :doc:`AWS IAM Examples <iam-examples>`
+* :doc:`AWS Identity and Access Management Examples <iam-examples>`
 * :doc:`AWS Key Management Service <kms-examples>`
 * :doc:`Amazon Kinesis Examples <kinesis-examples>
 * :doc:`AWS Elemental MediaConvert Examples <emc-examples>`
