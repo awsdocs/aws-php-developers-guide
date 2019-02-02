@@ -60,7 +60,7 @@ Step 2. Create a Table to Store Your Sessions
 ---------------------------------------------
 
 Before you can actually use the session handler, you need to create a table in
-which to store the sessions. You can this ahead of time by using the
+which to store the sessions. You can do this ahead of time by using the
 `AWS Console for Amazon DynamoDB <https://console.aws.amazon.com/dynamodb/home>`_,
 or by using the |sdk-php|.
 
