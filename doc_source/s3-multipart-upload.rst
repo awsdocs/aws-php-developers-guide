@@ -14,13 +14,37 @@ Using |S3| Multipart Uploads with AWS SDK for PHP version 3
 
 .. meta::
    :description: Break larger files into smaller parts when you upload to Amazon S3 using the AWS SDK for PHP version 3 .
-   :keywords: Amazon S3, AWS SDK for PHP version 3  examples, |S3| for PHP code examples
+   :keywords: Amazon S3, AWS SDK for PHP version 3  examples, S3 for PHP code examples
 
 
 With a single ``PutObject`` operation, you can upload objects up to 5 GB in
-size. However, by using the multipart upload methods (e.g., ``CreateMultipartUpload``,
+size. However, by using the multipart upload methods (for example, ``CreateMultipartUpload``,
 ``UploadPart``, ``CompleteMultipartUpload``, ``AbortMultipartUpload``), you can
 upload objects from 5 MB to 5 TB in size.
+
+The following example shows how to:
+
+* Upload an object to |S3|, using :aws-php-class:`ObjectUploader <class-Aws.S3.ObjectUploader.html>`.
+* Create a multipart upload for an |S3| object using :aws-php-class:`MultipartUploader <class-Aws.S3.MultipartUploader.html>`.
+* Copy objects from one |S3| location to another using :aws-php-class:`ObjectCopier <class-Aws.S3.ObjectCopier.html>`.
+
+.. include:: text/git-php-examples.txt
+
+Object Uploader
+================
+
+If you're not sure whether ``PutObject`` or ``MultipartUploader`` is best for the task, use ``ObjectUploader``. ``ObjectUploader`` uploads a large file to |S3| using either ``PutObject`` or ``MultipartUploader``, depending on what is best based on the payload size. 
+
+.. literalinclude::  s3.php.objectuploader.import.txt
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: s3.php.objectuploader.main.txt
+   :language: PHP
+   
+MultipartUploader
+=================
 
 Multipart uploads are designed to improve the upload experience for larger
 objects. They enable you to upload objects in parts
@@ -35,23 +59,16 @@ MultipartUploader Object
 The SDK has a special ``MultipartUploader`` object that simplifies the multipart upload
 process.
 
-.. code-block:: php
+**Imports**
 
-    use Aws\S3\MultipartUploader;
-    use Aws\Exception\MultipartUploadException;
+.. literalinclude::  s3.php.multipart_upload.import.txt
+   :language: PHP
 
-    $uploader = new MultipartUploader($s3Client, '/path/to/large/file.zip', [
-        'bucket' => 'your-bucket',
-        'key'    => 'my-file.zip',
-    ]);
+**Sample Code**
 
-    try {
-        $result = $uploader->upload();
-        echo "Upload complete: {$result['ObjectURL']}\n";
-    } catch (MultipartUploadException $e) {
-        echo $e->getMessage() . "\n";
-    }
-
+.. literalinclude:: s3.php.multipart_upload.main.txt
+   :language: PHP
+   
 The uploader creates a generator of part data, based on the provided source and
 configuration, and attempts to upload all parts. If some part uploads fail, the
 uploader keeps track of them and continues to upload later parts until the entire
@@ -65,25 +82,15 @@ You can set custom options on the ``CreateMultipartUpload``, ``UploadPart``, and
 ``CompleteMultipartUpload`` operations executed by the multipart uploader via
 callbacks passed to its constructor.
 
-.. code-block:: php
+**Imports**
 
-    $source = '/path/to/large/file.zip';
-    $uploader = new MultipartUploader($s3Client, $source, [
-        'bucket' => 'your-bucket',
-        'key'    => 'my-file.zip',
-        'before_initiate' => function (\Aws\Command $command) {
-            // $command is a CreateMultipartUpload operation
-            $command['CacheControl'] = 'max-age=3600';
-        },
-        'before_upload' => function (\Aws\Command $command) {
-           // $command is an UploadPart operation
-           $command['RequestPayer'] = 'requester';
-        },
-        'before_complete' => function (\Aws\Command $command) {
-           // $command is a CompleteMultipartUpload operation
-           $command['RequestPayer'] = 'requester';
-        },
-    ]);
+.. literalinclude::  s3.php.multipart_upload_custom.import.txt
+   :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: s3.php.multipart_upload_custom.main.txt
+   :language: PHP
 
 Recovering from Errors
 ======================
@@ -94,23 +101,15 @@ When an error occurs during the multipart upload process, a
 progress. The ``UploadState`` can be used to resume an upload that failed to
 complete.
 
-.. code-block:: php
+**Imports**
 
-    $source = '/path/to/large/file.zip';
-    $uploader = new MultipartUploader($s3Client, $source, [
-        'bucket' => 'your-bucket',
-        'key'    => 'my-file.zip',
-    ]);
+.. literalinclude::  s3.php.multipart_upload_errors.import.txt
+   :language: PHP
 
-    do {
-        try {
-            $result = $uploader->upload();
-        } catch (MultipartUploadException $e) {
-            $uploader = new MultipartUploader($s3Client, $source, [
-                'state' => $e->getState(),
-            ]);
-        }
-    } while (!isset($result));
+**Sample Code**
+
+.. literalinclude:: s3.php.multipart_upload_errors.main.txt
+   :language: PHP
 
 Resuming an upload from an ``UploadState`` will only attempt to upload parts
 that are not already uploaded. The state object keeps track of missing parts,
@@ -129,24 +128,15 @@ when you're not handling an exception, by calling ``$uploader->getState()``.
     file path in a loop similar to the previous example, you need to reset the
     ``$source`` variable inside of the ``catch`` block.
 
-    .. code-block:: php
+**Imports**
 
-        $source = fopen('/path/to/large/file.zip', 'rb');
-        $uploader = new MultipartUploader($s3Client, $source, [
-            'bucket' => 'your-bucket',
-            'key'    => 'my-file.zip',
-        ]);
+.. literalinclude::  s3.php.multipart_upload_stream.import.txt
+   :language: PHP
 
-        do {
-            try {
-                $result = $uploader->upload();
-            } catch (MultipartUploadException $e) {
-                rewind($source);
-                $uploader = new MultipartUploader($s3Client, $source, [
-                    'state' => $e->getState(),
-                ]);
-            }
-        } while (!isset($result));
+**Sample Code**
+
+.. literalinclude:: s3.php.multipart_upload_stream.main.txt
+   :language: PHP
 
 Aborting a Multipart Upload
 ---------------------------
@@ -172,15 +162,13 @@ Calling ``upload()`` on the ``MultipartUploader`` is a blocking request. If you 
 working in an asynchronous context, you can get a :doc:`promise <guide_promises>`
 for the multipart upload.
 
-.. code-block:: php
+.. literalinclude::  s3.php.multipart_upload_async.import.txt
+   :language: PHP
 
-    $source = '/path/to/large/file.zip';
-    $uploader = new MultipartUploader($s3Client, $source, [
-        'bucket' => 'your-bucket',
-        'key'    => 'my-file.zip',
-    ]);
+**Sample Code**
 
-    $promise = $uploader->promise();
+.. literalinclude:: s3.php.multipart_upload_async.main.txt
+   :language: PHP
 
 Configuration
 =============
@@ -192,8 +180,8 @@ The ``MultipartUploader`` object constructor accepts the following arguments:
     This should be an instance of ``Aws\S3\S3Client``.
 
 ``$source``
-    The source data being uploaded. This can be a path or URL (e.g.,
-    ``/path/to/file.jpg``), a resource handle (e.g., ``fopen('/path/to/file.jpg', 'r)``),
+    The source data being uploaded. This can be a path or URL (for example,
+    ``/path/to/file.jpg``), a resource handle (for example, ``fopen('/path/to/file.jpg', 'r)``),
     or an instance of a :aws-php-class:`PSR-7 stream </class-Psr.Http.Message.StreamInterface.html>`.
 
 ``$config``
@@ -239,19 +227,13 @@ The |sdk-php| also includes a ``MultipartCopy`` object that is used in a similar
 to the ``MultipartUploader``, but is designed for copying objects between 5 GB and
 5 TB in size within |S3|.
 
-.. code-block:: php
+.. literalinclude::  s3.php.multipart_upload_copy.import.txt
+   :language: PHP
 
-    use Aws\S3\MultipartCopy;
-    use Aws\Exception\MultipartUploadException;
+**Sample Code**
 
-    $copier = new MultipartCopy($s3Client, '/bucket/key?versionId=foo', [
-        'bucket' => 'your-bucket',
-        'key'    => 'my-file.zip',
-    ]);
+.. literalinclude:: s3.php.multipart_upload_copy.main.txt
+   :language: PHP
+   
 
-    try {
-        $result = $copier->copy();
-        echo "Copy complete: {$result['ObjectURL']}\n";
-    } catch (MultipartUploadException $e) {
-        echo $e->getMessage() . "\n";
-    }
+   
