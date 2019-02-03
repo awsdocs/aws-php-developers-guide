@@ -38,15 +38,13 @@ If you create an alias for a CMK that already has an alias, ``CreateAlias`` crea
 
 **Imports**
 
-.. literalinclude::  example_code/kms/CreateAlias.php
-   :lines: 20-23
+.. literalinclude::  kms.php.create_alias.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/CreateAlias.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.create_alias.main.txt
+   :language: PHP
 
 
 View an Alias
@@ -54,18 +52,15 @@ View an Alias
 
 To list all aliases, use the :KMS-api:`ListAliases <API_ListAliases>` operation. The response includes aliases that are defined by AWS services, but are not associated with a CMK.
 
-
 **Imports**
 
-.. literalinclude::  example_code/kms/ListAliases.php
-   :lines: 20-23
+.. literalinclude::  kms.php.list_alias.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/ListAliases.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.list_alias.main.txt
+   :language: PHP
 
 Update an Alias
 ===============
@@ -74,15 +69,13 @@ To associate an existing alias with a different CMK, use the :KMS-api:`UpdateAli
 
 **Imports**
 
-.. literalinclude::  example_code/kms/UpdateAlias.php
-   :lines: 20-23
+.. literalinclude::  kms.php.update_alias.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/UpdateAlias.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.update_alias.main.txt
+   :language: PHP
 
 Delete an Alias
 ===============
@@ -91,12 +84,10 @@ To delete an alias, use the :KMS-api:`DeleteAlias <API_DeleteAlias>` operation. 
 
 **Imports**
 
-.. literalinclude::  example_code/kms/DeleteAlias.php
-   :lines: 20-23
+.. literalinclude::  kms.php.delete_alias.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/DeleteAlias.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.delete_alias.main.txt
+   :language: PHP
