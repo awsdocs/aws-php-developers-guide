@@ -33,44 +33,36 @@ Create a Key Pair
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/CreateKeyPair.php
-   :lines: 19-21
-   :language: php
+.. literalinclude:: ec2.php.create_key_pair.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/CreateKeyPair.php
-   :lines: 30-47
-   :language: php
-
+.. literalinclude:: ec2.php.create_key_pair.main.txt
+   :language: PHP
 
 Delete a Key Pair
 =================
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DeleteKeypair.php
-   :lines: 19-21
-   :language: php
+.. literalinclude:: ec2.php.delete_key_pair.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DeleteKeypair.php
-   :lines: 30-43
-   :language: php
-
-
+.. literalinclude:: ec2.php.delete_key_pair.main.txt
+   :language: PHP
+   
 Describe Key Pairs
 ==================
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeKeyPairs.php
-   :lines: 19-21
-   :language: php
+.. literalinclude:: ec2.php.describe_key_pair.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeKeyPairs.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_key_pair.main.txt
+   :language: PHP

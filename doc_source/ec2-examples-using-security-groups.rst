@@ -32,58 +32,48 @@ Describe Security Groups
 
 **Imports**
 
-.. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.describe_security_groups.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeSecurityGroups.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_security_groups.main.txt
+   :language: PHP
 
 Add an Ingress Rule
 ====================
 
 **Imports**
 
-.. literalinclude:: example_code/ec2/AuthorizeSecurityGroupIngress.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.authorize_security_group_ingress.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/AuthorizeSecurityGroupIngress.php
-   :lines: 30-41
-   :language: php
-
+.. literalinclude:: ec2.php.authorize_security_group_ingress.main.txt
+   :language: PHP
 
 Create a Security Group
 =======================
 
 **Imports**
 
-.. literalinclude:: example_code/ec2/CreateSecurityGroup.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.create_security_group.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/CreateSecurityGroup.php
-   :lines: 30-47
-   :language: php
-
+.. literalinclude:: ec2.php.create_security_group.main.txt
+   :language: PHP
 Delete a Security Group
 =======================
 
 **Imports**
 
-.. literalinclude:: example_code/ec2/DeleteSecurityGroup.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.delete_security_group.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DeleteSecurityGroup.php
-   :lines: 30-42
-   :language: php
+.. literalinclude:: ec2.php.delete_security_group.main.txt
+   :language: PHP

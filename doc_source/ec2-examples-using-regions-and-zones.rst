@@ -31,28 +31,24 @@ Describe Availability Zones
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeAvailabilityZones.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.describe_availability_zones.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeAvailabilityZones.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_availability_zones.main.txt
+   :language: PHP
 
 Describe Regions
 ================
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeRegions.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.describe_regions.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeRegions.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_regions.main.txt
+   :language: PHP
 
