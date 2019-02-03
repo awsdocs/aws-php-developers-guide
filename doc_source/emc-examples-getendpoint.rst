@@ -36,27 +36,22 @@ describeEndpoints method, create a promise for invoking an |EMClong| service obj
 
 **Imports**
 
-.. literalinclude:: example_code/mediaconvert/GetEndpoint.php
-   :lines: 19-22
+.. literalinclude:: mediaconvert.php.get_endpoint.import.txt
    :language: PHP
-   
-   
+
 
 **Sample Code**
 
 Define the region in which to get the endpoint, and create an |EMC| client object:
 
-.. literalinclude:: example_code/mediaconvert/GetEndpoint.php
-   :lines: 32-36
-   :language: php
+.. literalinclude:: mediaconvert.php.get_endpoint.region.txt
+   :language: PHP
    
 
 Call the describeEndpoints method to retrieve the endpoints and save the endpoint's URL:
 
-.. literalinclude:: example_code/mediaconvert/GetEndpoint.php
-   :lines: 39-49
-   :language: php
-   
+.. literalinclude:: mediaconvert.php.get_endpoint.main.txt
+   :language: PHP
 
 
 

@@ -41,16 +41,13 @@ set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples
 
 **Imports**
 
-.. literalinclude::  example_code/mediaconvert/CreateJob.php
-   :lines: 19-22
+.. literalinclude:: mediaconvert.php.create_job.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude::  example_code/mediaconvert/CreateJob.php
-   :lines: 32-37
-   :language: php
-
+.. literalinclude:: mediaconvert.php.create_job.region.txt
+   :language: PHP
 
 Defining a Simple Transcoding Job
 =================================
@@ -62,9 +59,8 @@ This example shows the JSON for a simple job.
 
 **Sample Code**
 
-.. literalinclude:: example_code/mediaconvert/CreateJob.php
-   :lines: 39-162
-   :language: php
+.. literalinclude:: mediaconvert.php.create_job.jobsettings.txt
+   :language: PHP
 
 Create a Job
 ============
@@ -75,11 +71,9 @@ The ID of the job created is returned in the response data.
 
 **Sample Code**
 
-.. literalinclude:: example_code/mediaconvert/CreateJob.php
-   :lines: 164-
-   :language: php
-   
-   
+.. literalinclude:: mediaconvert.php.create_job.main.txt
+   :language: PHP   
+
 Retrieve a Job
 ==============
 
@@ -87,9 +81,8 @@ With the JobID returned when you called createjob, you can get detailed descript
 
 **Sample Code**
 
-.. literalinclude:: example_code/mediaconvert/GetJob.php
-   :lines: 39-47
-   :language: php
+.. literalinclude:: mediaconvert.php.get_job.main.txt
+   :language: PHP
    
 Cancel a Job
 ============
@@ -99,9 +92,8 @@ already started transcoding.
 
 **Sample Code**
 
-.. literalinclude:: example_code/mediaconvert/CancelJob.php
-   :lines: 39-47
-   :language: php
+.. literalinclude:: mediaconvert.php.cancel_job.main.txt
+   :language: PHP
    
 Listing Recent Transcoding Jobs
 ===============================
@@ -112,8 +104,6 @@ string returned with result.
 
 **Sample Code**
 
-.. literalinclude:: example_code/mediaconvert/ListJobs.php
-   :lines: 39-
-   :language: php
-   
-     
+.. literalinclude:: mediaconvert.php.list_jobs.main.txt
+   :language: PHP
+
