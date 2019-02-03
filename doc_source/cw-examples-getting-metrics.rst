@@ -29,18 +29,16 @@ The following examples show how to:
 
 List Metrics
 ============
-
+   
 **Imports**
 
-.. literalinclude::  example_code/cloudwatch/ListMetrics.php
-   :lines: 19-22
+.. literalinclude::  cloudwatch.php.list_metrics.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatch/ListMetrics.php
-   :lines: 31-43
-   :language: php
+.. literalinclude:: cloudwatch.php.list_metrics.main.txt
+   :language: PHP
 
 
 Retrieve Alarms for a Metric
@@ -48,27 +46,23 @@ Retrieve Alarms for a Metric
 
 **Imports**
 
-.. literalinclude::  example_code/cloudwatch/DescribeAlarmsForMetric.php
-   :lines: 19-22
+.. literalinclude::  cloudwatch.php.describe_alarms_metric.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatch/DescribeAlarmsForMetric.php
-   :lines: 31-48
-   :language: php
+.. literalinclude:: cloudwatch.php.describe_alarms_metric.main.txt
+   :language: PHP
 
 Get Metric Statistics
 =====================
 
 **Imports**
 
-.. literalinclude::  example_code/cloudwatch/GetMetricStatistics.php
-   :lines: 19-22
+.. literalinclude::  cloudwatch.php.get_metric_stats.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatch/GetMetricStatistics.php
-   :lines: 31-53
-   :language: php
+.. literalinclude:: cloudwatch.php.get_metric_stats.main.txt
+   :language: PHP

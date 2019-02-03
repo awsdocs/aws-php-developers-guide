@@ -32,42 +32,36 @@ Create a Rule
 
 **Imports**
 
-.. literalinclude::  example_code/cloudwatchevents/PutRule.php
-   :lines: 19-22
+.. literalinclude:: cloudwatch.php.put_rule.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatchevents/PutRule.php
-   :lines: 31-48
-   :language: php
+.. literalinclude:: cloudwatch.php.put_rule.main.txt
+   :language: PHP
 
 Add Targets to a Rule
 =====================
 
 **Imports**
 
-.. literalinclude::  example_code/cloudwatchevents/PutTargets.php
-   :lines: 19-22
+.. literalinclude:: cloudwatch.php.put_target.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatchevents/PutTargets.php
-   :lines: 31-51
-   :language: php
+.. literalinclude:: cloudwatch.php.put_target.main.txt
+   :language: PHP
 
 Send Custom Events
 ==================
 
 **Imports**
 
-.. literalinclude::  example_code/cloudwatchevents/PutEvents.php
-   :lines: 19-22
+.. literalinclude:: cloudwatch.php.put_events.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/cloudwatchevents/PutEvents.php
-   :lines: 31-53
-   :language: php
+.. literalinclude:: cloudwatch.php.put_events.main.txt
+   :language: PHP

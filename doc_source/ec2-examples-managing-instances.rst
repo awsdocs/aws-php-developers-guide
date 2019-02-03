@@ -32,15 +32,13 @@ Describe Instances
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeInstances.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.describe_instances.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeInstances.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_instances.main.txt
+   :language: PHP
 
 Enable and Disable Monitoring
 =============================
@@ -48,42 +46,38 @@ Enable and Disable Monitoring
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/InstanceMonitoring.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.monitor_instances.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/InstanceMonitoring.php
-   :lines: 30-50
-   :language: php
+.. literalinclude:: ec2.php.monitor_instances.main.txt
+   :language: PHP
 
 Start and Stop an Instance
 ==========================
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/StartAndStopInstance.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.start_and_stop_instance.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/StartAndStopInstance.php
-   :lines: 30-50
-   :language: php
+.. literalinclude:: ec2.php.start_and_stop_instance.main.txt
+   :language: PHP
+
 
 Reboot an Instance
 ==================
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/RebootInstances.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.reboot_instance.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/RebootInstances.php
-   :lines: 30-42
-   :language: php
+.. literalinclude:: ec2.php.reboot_instance.main.txt
+   :language: PHP
+

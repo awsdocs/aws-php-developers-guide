@@ -33,15 +33,13 @@ Describe an Instance
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/DescribeInstances.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.describe_instances.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/DescribeInstances.php
-   :lines: 30-38
-   :language: php
+.. literalinclude:: ec2.php.describe_instances.main.txt
+   :language: PHP
 
 
 Allocate and Associate an Address
@@ -49,15 +47,14 @@ Allocate and Associate an Address
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/AllocateAddresses.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.allocate_addresses.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/AllocateAddresses.php
-   :lines: 30-49
-   :language: php
+.. literalinclude:: ec2.php.allocate_addresses.main.txt
+   :language: PHP
+
 
 
 Release an Address
@@ -65,12 +62,11 @@ Release an Address
 
 **Imports**
 
-.. literalinclude::  example_code/ec2/ReleaseAddress.php
-   :lines: 19-21
+.. literalinclude:: ec2.php.release_address.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ec2/ReleaseAddress.php
-   :lines: 30-48
-   :language: php
+.. literalinclude:: ec2.php.release_address.main.txt
+   :language: PHP
+

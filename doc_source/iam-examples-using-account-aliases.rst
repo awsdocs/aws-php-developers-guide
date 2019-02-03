@@ -31,42 +31,39 @@ Create an Alias
 
 **Imports**
 
-.. literalinclude::  example_code/iam/CreateAccountAlias.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.create_account_alias.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/CreateAccountAlias.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.create_account_alias.main.txt
+   :language: PHP
+
 
 List Account Aliases
 ====================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/ListAccountAliases.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.list_account_aliases.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/ListAccountAliases.php
-   :lines: 31-43
-   :language: php
+.. literalinclude:: iam.php.list_account_aliases.main.txt
+   :language: PHP
+
 
 Delete an Alias
 ===============
 
 **Imports**
 
-.. literalinclude::  example_code/iam/DeleteAccountAlias.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.delete_account_alias.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/DeleteAccountAlias.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.delete_account_alias.main.txt
+   :language: PHP
+

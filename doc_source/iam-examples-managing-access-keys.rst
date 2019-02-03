@@ -35,31 +35,26 @@ Create an Access Key
 
 **Imports**
 
-.. literalinclude::  example_code/iam/CreateAccessKey.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.create_access_key.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/CreateAccessKey.php
-   :lines: 31-
-   :language: php
-
+.. literalinclude:: iam.php.create_access_key.main.txt
+   :language: PHP
 
 List Access Keys
 ================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/ListAccessKeys.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.list_access_keys.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/ListAccessKeys.php
-   :lines: 31-43
-   :language: php
+.. literalinclude:: iam.php.list_access_keys.main.txt
+   :language: PHP
 
 
 Get Information about an Access Key's Last Use
@@ -67,42 +62,36 @@ Get Information about an Access Key's Last Use
 
 **Imports**
 
-.. literalinclude::  example_code/iam/GetAccessKeyLastUsed.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.get_access_key_last_used.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/GetAccessKeyLastUsed.php
-   :lines: 31-45
-   :language: php
+.. literalinclude:: iam.php.get_access_key_last_used.main.txt
+   :language: PHP
 
 Update an Access Key
 ====================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/UpdateAccessKey.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.update_access_key.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/UpdateAccessKey.php
-   :lines: 31-47
-   :language: php
+.. literalinclude:: iam.php.update_access_key.main.txt
+   :language: PHP
 
 Delete an Access Key
 ====================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/DeleteAccessKey.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.delete_access_key.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/DeleteAccessKey.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.delete_access_key.main.txt
+   :language: PHP

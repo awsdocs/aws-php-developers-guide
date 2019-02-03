@@ -38,15 +38,13 @@ To create a :KMS-dg:`CMK <concepts.html#master_keys>`, use the :KMS-api:`CreateK
 
 **Imports**
 
-.. literalinclude::  example_code/kms/CreateKey.php
-   :lines: 20-23
+.. literalinclude::  kms.php.create_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/CreateKey.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.create_key.main.txt
+   :language: PHP
 
 Generate a Data Key
 ===================
@@ -55,15 +53,13 @@ To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_Genera
 
 **Imports**
 
-.. literalinclude::  example_code/kms/GenerateDataKey.php
-   :lines: 20-23
+.. literalinclude::  kms.php.generate_data_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/GenerateDataKey.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.generate_data_key.main.txt
+   :language: PHP
 
 View a CMK
 ==========
@@ -74,15 +70,13 @@ To get detailed information about a CMK, including the CMK's Amazon Resource Nam
 
 **Imports**
 
-.. literalinclude::  example_code/kms/DescribeKey.php
-   :lines: 20-23
+.. literalinclude::  kms.php.describe_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/DescribeKey.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.describe_key.main.txt
+   :language: PHP
 
 Get the Key ID and Key ARNs of a CMK
 ====================================
@@ -91,15 +85,13 @@ To get the ID and ARN of the CMK, use the :KMS-api:`ListAliases <API_ListKeys>` 
 
 **Imports**
 
-.. literalinclude::  example_code/kms/ListKeys.php
-   :lines: 20-23
+.. literalinclude::  kms.php.list_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/ListKeys.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.list_key.main.txt
+   :language: PHP
 
 Enable a CMK
 ============
@@ -108,15 +100,13 @@ To enable a disabled CMK, use the :KMS-api:`EnableKey <API_EnableKey>` operation
 
 **Imports**
 
-.. literalinclude::  example_code/kms/EnableKey.php
-   :lines: 20-23
+.. literalinclude::  kms.php.enable_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/EnableKey.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.enable_key.main.txt
+   :language: PHP
 
 Disable a CMK
 =============
@@ -125,12 +115,10 @@ To disable a CMK, use the :KMS-api:`DisableKey <API_DisableKey>` operation. Disa
 
 **Imports**
 
-.. literalinclude::  example_code/kms/DisableKey.php
-   :lines: 20-23
+.. literalinclude::  kms.php.disable_key.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/DisableKey.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.disable_key.main.txt
+   :language: PHP

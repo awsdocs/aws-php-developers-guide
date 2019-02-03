@@ -40,15 +40,13 @@ method when you're moving encrypted data to a new AWS Region and want to encrypt
 
 **Imports**
 
-.. literalinclude::  example_code/kms/encrypt.php
-   :lines: 20-23
+.. literalinclude::  kms.php.encrypt.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/encrypt.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.encrypt.main.txt
+   :language: PHP
 
 Decrypt
 =======
@@ -61,15 +59,13 @@ The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlo
 
 **Imports**
 
-.. literalinclude::  example_code/kms/decrypt.php
-   :lines: 20-23
+.. literalinclude::  kms.php.decrypt.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/decrypt.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.decrypt.main.txt
+   :language: PHP
 
 Reencrypt
 =========
@@ -82,12 +78,10 @@ The ``ciphertextBlob`` that you specify must be the value of the ``CiphertextBlo
 
 **Imports**
 
-.. literalinclude::  example_code/kms/rencrypt.php
-   :lines: 20-23
+.. literalinclude::  kms.php.reencrypt.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/rencrypt.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.reencrypt.main.txt
+   :language: PHP

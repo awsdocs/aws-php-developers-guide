@@ -36,16 +36,13 @@ To create a grant for an |KMS| CMK, use the :KMS-api:`CreateGrant <API_CreateGra
 
 **Imports**
 
-.. literalinclude::  example_code/kms/CreateGrant.php
-   :lines: 20-23
+.. literalinclude::  kms.php.create_grant.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/CreateGrant.php
-   :lines: 33-
-   :language: php
-
+.. literalinclude:: kms.php.create_grant.main.txt
+   :language: PHP
 
 View a Grant
 ============
@@ -55,15 +52,13 @@ To get detailed information about the grants on an |KMS| CMK, use the :KMS-api:`
 
 **Imports**
 
-.. literalinclude::  example_code/kms/ListGrants.php
-   :lines: 20-23
+.. literalinclude::  kms.php.list_grants.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/ListGrants.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.list_grants.main.txt
+   :language: PHP
 
 Retire a Grant
 ==============
@@ -72,15 +67,13 @@ To retire a grant for an |KMS| CMK, use the :KMS-api:`RetireGrant <API_RetireGra
 
 **Imports**
 
-.. literalinclude::  example_code/kms/RetireGrant.php
-   :lines: 20-23
+.. literalinclude::  kms.php.retire_grant.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/RetireGrant.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.retire_grant.main.txt
+   :language: PHP
 
 Revoke a Grant
 ==============
@@ -89,12 +82,10 @@ To revoke a grant to an |KMS| CMK, use the :KMS-api:`RevokeGrant <API_RevokeGran
 
 **Imports**
 
-.. literalinclude::  example_code/kms/RevokeGrant.php
-   :lines: 20-23
+.. literalinclude::  kms.php.revoke_grant.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/RevokeGrant.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.revoke_grant.main.txt
+   :language: PHP

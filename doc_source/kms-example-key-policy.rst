@@ -36,15 +36,13 @@ To get the names of key policies for a CMK, use the :code:`ListKeyPolicies` oper
 
 **Imports**
 
-.. literalinclude::  example_code/kms/ListKeyPolicies.php
-   :lines: 20-23
+.. literalinclude::  kms.php.list_key_policies.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/ListKeyPolicies.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.list_key_policies.main.txt
+   :language: PHP
 
 Retrieve a Key Policy
 =====================
@@ -55,15 +53,13 @@ To get the key policy for a CMK, use the :code:`GetKeyPolicy` operation.
 
 **Imports**
 
-.. literalinclude::  example_code/kms/GetKeyPolicy.php
-   :lines: 20-23
+.. literalinclude::  kms.php.get_key_policies.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/GetKeyPolicy.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.get_key_policies.main.txt
+   :language: PHP
 
 Set a Key Policy
 ================
@@ -74,12 +70,10 @@ To establish or change a key policy for a CMK, use the :code:`PutKeyPolicy` oper
 
 **Imports**
 
-.. literalinclude::  example_code/kms/PutKeyPolicy.php
-   :lines: 20-23
+.. literalinclude::  kms.php.put_key_policy.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kms/PutKeyPolicy.php
-   :lines: 33-
-   :language: php
+.. literalinclude:: kms.php.put_key_policy.main.txt
+   :language: PHP
