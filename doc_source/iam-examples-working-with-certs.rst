@@ -33,15 +33,13 @@ List Server Certificates
 
 **Imports**
 
-.. literalinclude::  example_code/iam/ListServerCertificates.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.list_server_certificates.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/ListServerCertificates.php
-   :lines: 31-43
-   :language: php
+.. literalinclude:: iam.php.list_server_certificates.main.txt
+   :language: PHP
 
 
 Retrieve a Server Certificate
@@ -49,15 +47,13 @@ Retrieve a Server Certificate
 
 **Imports**
 
-.. literalinclude::  example_code/iam/GetServerCertificate.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.get_server_certificate.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/GetServerCertificate.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.get_server_certificate.main.txt
+   :language: PHP
 
 
 Update a Server Certificate
@@ -65,15 +61,13 @@ Update a Server Certificate
 
 **Imports**
 
-.. literalinclude::  example_code/iam/UpdateServerCertificate.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.update_server_certificate.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/UpdateServerCertificate.php
-   :lines: 31-47
-   :language: php
+.. literalinclude:: iam.php.update_server_certificate.main.txt
+   :language: PHP
 
 
 Delete a Server Certificate
@@ -81,12 +75,10 @@ Delete a Server Certificate
 
 **Imports**
 
-.. literalinclude::  example_code/iam/DeleteServerCertificate.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.delete_server_certificate.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/DeleteServerCertificate.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.delete_server_certificate.main.txt
+   :language: PHP

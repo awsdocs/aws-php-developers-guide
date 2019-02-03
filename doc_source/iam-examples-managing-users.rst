@@ -33,15 +33,13 @@ Create an |IAM| User
 
 **Imports**
 
-.. literalinclude::  example_code/iam/CreateUser.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.create_user.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/CreateUser.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.create_user.main.txt
+   :language: PHP
 
 
 List |IAM| Users
@@ -49,30 +47,26 @@ List |IAM| Users
 
 **Imports**
 
-.. literalinclude::  example_code/iam/ListUsers.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.list_users.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/ListUsers.php
-   :lines: 31-43
-   :language: php
+.. literalinclude:: iam.php.list_users.main.txt
+   :language: PHP
 
 Update an |IAM| User
 ====================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/UpdateUser.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.update_user.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/UpdateUser.php
-   :lines: 31-47
-   :language: php
+.. literalinclude:: iam.php.update_user.main.txt
+   :language: PHP
 
 
 Get Information about an |IAM| User
@@ -80,27 +74,23 @@ Get Information about an |IAM| User
 
 **Imports**
 
-.. literalinclude::  example_code/iam/GetUser.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.get_user.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/GetUser.php
-   :lines: 31-45
-   :language: php
+.. literalinclude:: iam.php.get_user.main.txt
+   :language: PHP
 
 Delete an |IAM| User
 ====================
 
 **Imports**
 
-.. literalinclude::  example_code/iam/DeleteUser.php
-   :lines: 19-22
-   :language: php
+.. literalinclude::  iam.php.delete_user.import.txt
+   :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/iam/DeleteUser.php
-   :lines: 31-46
-   :language: php
+.. literalinclude:: iam.php.delete_user.main.txt
+   :language: PHP
