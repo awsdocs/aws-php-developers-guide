@@ -86,7 +86,7 @@ Examples
 * :doc:`Amazon EC2 <ec2-examples>`
 * :doc:`AWS Identity and Access Management Examples <iam-examples>`
 * :doc:`AWS Key Management Service <kms-examples>`
-* :doc:`Amazon Kinesis Examples <kinesis-examples>
+* :doc:`Amazon Kinesis Examples <kinesis-examples>`
 * :doc:`AWS Elemental MediaConvert Examples <emc-examples>`
 * :doc:`Amazon S3 Examples <s3-examples>`
 * :doc:`Amazon Simple Email Services Examples <ses-examples>`

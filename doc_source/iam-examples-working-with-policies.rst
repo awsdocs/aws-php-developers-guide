@@ -86,19 +86,6 @@ Attach a Policy to a Group
 .. literalinclude:: iam.php.attach_group_policy.main.txt
    :language: PHP
 
-Detach a Role Policy
-====================
-
-**Imports**
-
-.. literalinclude::  iam.php.detach_role_policy.import.txt
-   :language: PHP
-
-**Sample Code**
-
-.. literalinclude:: iam.php.detach_role_policy.main.txt
-   :language: PHP
-
 Detach a User Policy
 ====================
 
