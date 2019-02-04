@@ -65,6 +65,7 @@ Create a Security Group
 
 .. literalinclude:: ec2.php.create_security_group.main.txt
    :language: PHP
+   
 Delete a Security Group
 =======================
 

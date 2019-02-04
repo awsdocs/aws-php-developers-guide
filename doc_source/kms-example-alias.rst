@@ -54,12 +54,12 @@ To list all aliases, use the :KMS-api:`ListAliases <API_ListAliases>` operation.
 
 **Imports**
 
-.. literalinclude::  kms.php.list_alias.import.txt
+.. literalinclude::  kms.php.list_aliases.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: kms.php.list_alias.main.txt
+.. literalinclude:: kms.php.list_aliases.main.txt
    :language: PHP
 
 Update an Alias

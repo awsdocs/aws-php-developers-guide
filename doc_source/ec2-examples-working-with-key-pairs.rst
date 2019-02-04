@@ -59,10 +59,10 @@ Describe Key Pairs
 
 **Imports**
 
-.. literalinclude:: ec2.php.describe_key_pair.import.txt
+.. literalinclude:: ec2.php.describe_key_pairs.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: ec2.php.describe_key_pair.main.txt
+.. literalinclude:: ec2.php.describe_key_pairs.main.txt
    :language: PHP
