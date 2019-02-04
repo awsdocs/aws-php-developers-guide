@@ -113,7 +113,7 @@ Detach a User Policy
    :language: PHP
 
 Detach a Group Policy
-====================
+=====================
 
 **Imports**
 
@@ -165,7 +165,7 @@ Delete a User Policy
    :language: PHP
 
 Delete a Group Policy
-====================
+=====================
 
 **Imports**
 
