@@ -85,12 +85,12 @@ To get the ID and ARN of the CMK, use the :KMS-api:`ListAliases <API_ListKeys>` 
 
 **Imports**
 
-.. literalinclude::  kms.php.list_key.import.txt
+.. literalinclude::  kms.php.list_keys.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: kms.php.list_key.main.txt
+.. literalinclude:: kms.php.list_keys.main.txt
    :language: PHP
 
 Enable a CMK

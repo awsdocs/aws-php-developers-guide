@@ -32,12 +32,12 @@ Describe Alarms
 
 **Imports**
 
-.. literalinclude:: cloudwatch.php.describe_alarm.import.txt
+.. literalinclude:: cloudwatch.php.describe_alarms.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudwatch.php.describe_alarm.main.txt
+.. literalinclude:: cloudwatch.php.describe_alarms.main.txt
    :language: PHP
 
 
