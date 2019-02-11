@@ -303,6 +303,7 @@ Here's an example of connecting to |DDBlong| Local:
 
 See the :AWS-gr:`AWS Regions and Endpoints <rande>` for a list of available AWS Regions and endpoints.
 
+
 endpoint_provider
 =================
 
@@ -323,6 +324,59 @@ Here's an example of how to create a minimal endpoint provider.
         // Return null when the provider cannot handle the parameters
         return null;
     });
+
+
+endpoint discovery
+==================
+
+:Type: ``array|Aws\CacheInterface|Aws\EndpointDiscovery\ConfigurationInterface|callable``
+
+Endpoint discovery identifies and connects to the correct endpoint for a service API. To use endpoint discovery when not required, enable ``endpoint_discovery`` during client creation.
+
+``Aws\EndpointDiscovery\ConfigurationInterface`` 
+
+An optional configuration provider that enables automatic connection to the 
+appropriate endpoint of a service API for operations the service specifies. 
+
+The ``Aws\EndpointDiscovery\Configuration`` object accepts two options, including a Boolean value, "enabled", that indicates
+if endpoint discovery is enabled, and an integer "cache_limit" that indicates the maximum number of keys in the
+endpoint cache.
+
+For each client created, pass an ``Aws\EndpointDiscovery\Configuration`` object to use a specific configuration for endpoint discovery.
+
+.. code-block:: php
+
+    use Aws\EndpointDiscovery\Configuration;
+    use Aws\S3\S3Client;
+    
+    $enabled = true;
+    $cache_limit = 1000;
+    
+    $config = new Aws\EndpointDiscovery\Configuration (
+        $enabled,
+        $cache_limit
+    );
+    
+    $s3 = new Aws\S3\S3Client([
+        'version' => 'latest',
+        'region' => 'us-east-2',
+        'endpoint_discovery' => $config,
+    
+    ]);
+    
+Pass an instance of ``Aws\CacheInterface`` to cache the values returned by endpoint discovery across multiple processes.
+
+.. code-block:: php
+
+    use Aws\DoctrineCacheAdapter;
+    use Aws\S3\S3Client;
+    use Doctrine\Common\Cache\ApcuCache;
+
+    $s3 = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'endpoint_discovery' => new DoctrineCacheAdapter(new ApcuCache),
+    ]);
 
 handler
 =======
