@@ -27,7 +27,7 @@ The following examples show how to:
 * Retrieve the default settings for sending SMS messages from your account using :aws-php-class:`GetSMSAttributes <api-sns-2010-03-31.html#getsmsattributes>`.
 * Update the default settings for sending SMS messages from your account using :aws-php-class:`SetSMSAttributes <api-sns-2010-03-31.html#setsmsattributes>`.
 * Discover if a given phone number owner has opted out of receiving SMS messages from your account using :aws-php-class:`CheckIfPhoneNumberISOptedOut <api-sns-2010-03-31.html#checkifphonenumberisoptedout>`.
-* List phone numbers where the owner has opted out of receiving SMS messages from your account  using :aws-php-class:`ListPhoneNumberOptedOut <api/api-sns-2010-03-31.html#listphonenumbersoptedout>`.
+* List phone numbers where the owner has opted out of receiving SMS messages from your account  using :aws-php-class:`ListPhoneNumberOptedOut <api-sns-2010-03-31.html#listphonenumbersoptedout>`.
 * Send a text message (SMS message) directly to a phone number using :aws-php-class:`Publish <api-sns-2010-03-31.html#publish>`.
 
 For more information about using |SNS|, see :SNS-dg:`Using Amazon SNS for User Notifications with a Mobile Phone Number as a Subscriber (Send SMS) <sns-mobile-phone-number-as-subscriber>`.
