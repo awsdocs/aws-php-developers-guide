@@ -331,7 +331,9 @@ endpoint discovery
 
 :Type: ``array|Aws\CacheInterface|Aws\EndpointDiscovery\ConfigurationInterface|callable``
 
-Endpoint discovery identifies and connects to the correct endpoint for a service API. To use endpoint discovery when not required, enable ``endpoint_discovery`` during client creation.
+Endpoint discovery identifies and connects to the correct endpoint for a service API that supports endpoint discovery. For services 
+that support but don't require endpoint discovery, enable ``endpoint_discovery`` during client creation. If a service does 
+not support endpoint discovery this configuration is ignored.
 
 ``Aws\EndpointDiscovery\ConfigurationInterface`` 
 
@@ -376,6 +378,21 @@ Pass an instance of ``Aws\CacheInterface`` to cache the values returned by endpo
         'version'     => 'latest',
         'region'      => 'us-west-2',
         'endpoint_discovery' => new DoctrineCacheAdapter(new ApcuCache),
+    ]);
+    
+Pass an array to endpoint discovery.
+
+.. code-block:: php
+
+    use Aws\S3\S3Client;
+
+    $s3 = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'endpoint_discovery' => [
+            'enabled' => true,
+            'cache_limit' => 1000
+        ],
     ]);
 
 handler
