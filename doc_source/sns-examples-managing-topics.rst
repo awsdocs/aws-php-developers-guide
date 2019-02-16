@@ -45,15 +45,13 @@ Each topic name in your AWS account must be unique.
 
 **Imports**
 
-.. literalinclude::  example_code/sns/CreateTopic.php
-   :lines: 19-22
+.. literalinclude:: sns.php.create_topic.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/CreateTopic.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.create_topic.main.txt
+   :language: PHP
 
 List Your Topics
 ================
@@ -62,15 +60,13 @@ To list up to 100 existing topics in the current AWS Region, use the :SNS-api:`L
 
 **Imports**
 
-.. literalinclude::  example_code/sns/ListTopics.php
-   :lines: 19-22
+.. literalinclude:: sns.php.list_topics.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/ListTopics.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.list_topics.main.txt
+   :language: PHP
 
 Delete a Topic
 ==============
@@ -81,16 +77,14 @@ Any messages that have not been delivered yet to subscribers will also be delete
 
 **Imports**
 
-.. literalinclude::  example_code/sns/DeleteTopic.php
-   :lines: 19-22
+.. literalinclude:: sns.php.delete_topic.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/DeleteTopic.php
-   :lines: 31-50
-   :language: php
-
+.. literalinclude:: sns.php.delete_topic.main.txt
+   :language: PHP
+   
 Get Topic Attributes
 ====================
 
@@ -98,15 +92,13 @@ To retrieve properties of a single existing topic, use the :SNS-api:`GetTopicAtt
 
 **Imports**
 
-.. literalinclude::  example_code/sns/GetTopicAttributes.php
-   :lines: 19-22
+.. literalinclude:: sns.php.get_topic_attributes.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/GetTopicAttributes.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.get_topic_attributes.main.txt
+   :language: PHP
 
 Set Topic Attributes
 ====================
@@ -117,12 +109,10 @@ You can set only the :code:`Policy`, :code:`DisplayName`, and :code:`DeliveryPol
 
 **Imports**
 
-.. literalinclude::  example_code/sns/SetTopicAttributes.php
-   :lines: 19-22
+.. literalinclude:: sns.php.set_topic_attributes.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SetTopicAttributes.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.set_topic_attributes.main.txt
+   :language: PHP

@@ -63,15 +63,13 @@ client's constructor.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/CreateClient.php
-   :lines: 20-22
+.. literalinclude:: s3.php.create_client.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 32-37
-   :language: php
+.. literalinclude:: s3.php.create_client.client.txt
+   :language: PHP
 
 Notice that we did **not** explicitly provide credentials to the client. That's
 because the SDK should detect the credentials from
@@ -101,15 +99,13 @@ provided to a specific client constructor can also be supplied to the
 
 **Imports**
 
-.. literalinclude::  example_code/s3/CreateClient.php
-   :lines: 20-22
+.. literalinclude:: s3.php.create_client.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/CreateClient.php
-   :lines: 39-
-   :language: php
+.. literalinclude:: s3.php.create_client.sdk.txt
+   :language: PHP
 
 Options that are shared across all clients are placed in root-level key-value
 pairs. Service-specific configuration data can be provided in a key that is the
@@ -151,15 +147,13 @@ call the ``Aws\S3\S3Client::putObject()`` method.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/PutObjectServiceOperations.php
-   :lines: 20-22
+.. literalinclude:: s3.php.put_service_operations.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/PutObjectServiceOperations.php
-   :lines: 31-
-   :language: php
+.. literalinclude:: s3.php.put_service_operations.main.txt
+   :language: PHP
 
 Operations available to a client and the structure of the input and output are
 defined at runtime based on a service description file. When creating a client,
@@ -205,15 +199,13 @@ transfers the requests.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ListBucketsAsync.php
-   :lines: 20-22
+.. literalinclude:: s3.php.list_buckets_async.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 31-44
-   :language: php
+.. literalinclude:: s3.php.list_buckets_async.async.txt
+   :language: PHP
 
 You can force a promise to complete synchronously by using the ``wait`` method of
 the promise. Forcing the promise to complete also "unwraps" the state of
@@ -228,20 +220,16 @@ that is resolved or rejected when the operation completes.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ListBucketsAsync.php
-   :lines: 20-22
+.. literalinclude:: s3.php.list_buckets_async.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 31-40
-   :language: php
+.. literalinclude:: s3.php.list_buckets_async.client.txt
+   :language: PHP
 
-.. literalinclude:: example_code/s3/ListBucketsAsync.php
-   :lines: 46-
-   :language: php
-
+.. literalinclude:: s3.php.list_buckets_async.promise.txt
+   :language: PHP
 
 .. _result_objects:
 
@@ -258,17 +246,13 @@ You can access data from the AWS\Result object like an associative PHP array.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ListBucketsResultObject.php
-   :lines: 20-22
+.. literalinclude:: s3.php.list_bucket_results.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 31-50
-   :language: php
-
-
+.. literalinclude:: s3.php.list_bucket_results.client.txt
+   :language: PHP
 
 The contents of the result object depend on the operation that was executed
 and the version of a service. The result structure of each API operation is
@@ -282,14 +266,11 @@ result.
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ListBucketsResultObject.php
-   :lines: 41-43
-   :language: php
+.. literalinclude:: s3.php.list_bucket_results.call.txt
+   :language: PHP
 
-.. literalinclude:: example_code/s3/ListBucketsResultObject.php
-  :lines: 51-
-  :language: php
-
+.. literalinclude:: s3.php.list_bucket_results.result.txt
+   :language: PHP
 
 
 Handling Errors
@@ -312,15 +293,13 @@ about the failure, including the request-id, error code, and error type.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 20-24
+.. literalinclude:: s3.php.error_handling.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 33-54
-   :language: php
+.. literalinclude:: s3.php.error_handling.client.txt
+   :language: PHP
 
 
 Asynchronous Error Handling
@@ -332,31 +311,28 @@ receive the result or error.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 20-24
+.. literalinclude:: s3.php.error_handling.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 56-66
-   :language: php
+.. literalinclude:: s3.php.error_handling.async.txt
+   :language: PHP
 
 
 You can "unwrap" the promise and cause the exception to be thrown instead.
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ErrorHandling.php
-   :lines: 20-24
+  **Imports**
+
+.. literalinclude:: s3.php.error_handling.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ErrorHandling.php
-   :lines: 57
-   :language: php
+.. literalinclude:: s3.php.error_handling.promise.txt
+   :language: PHP
 
-.. literalinclude:: example_code/s3/ErrorHandling.php
-  :lines: 68-
-  :language: php
+.. literalinclude:: s3.php.error_handling.trycatch.txt
+   :language: PHP

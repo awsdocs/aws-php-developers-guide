@@ -47,15 +47,13 @@ In this example, the endpoint is an email address. A confirmation token will be 
 
 **Imports**
 
-.. literalinclude::  example_code/sns/SubscribeEmail.php
-   :lines: 19-22
+.. literalinclude:: sns.php.subscribe_email.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SubscribeEmail.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.subscribe_email.main.txt
+   :language: PHP
 
 Subscribe an Application Endpoint to a Topic
 ============================================
@@ -69,15 +67,13 @@ In this example, the endpoint is a URL. A confirmation token will be sent to thi
 
 **Imports**
 
-.. literalinclude::  example_code/sns/SubscribeHTTPS.php
-   :lines: 19-22
+.. literalinclude:: sns.php.subscribe_HTTPS.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SubscribeHTTPS.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.subscribe_HTTPS.main.txt
+   :language: PHP
 
 Subscribe a |LAM| Function to a Topic
 =====================================
@@ -91,15 +87,13 @@ In this example, the endpoint is a |LAM| function. A confirmation token will be 
 
 **Imports**
 
-.. literalinclude::  example_code/sns/SubscribeLambda.php
-   :lines: 19-22
+.. literalinclude:: sns.php.subscribe_lambda.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SubscribeLambda.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.subscribe_lambda.main.txt
+   :language: PHP
 
 Subscribe a Text SMS to a Topic
 ===============================
@@ -116,19 +110,16 @@ A confirmation token will be sent to this phone number. Verify the subscription 
 
 For an alternative way to send SMS messages with |SNS|, see :doc:`sns-examples-sending-sms`.
 
-
 **Imports**
 
-.. literalinclude::  example_code/sns/SubscribeTextSMS.php
-   :lines: 19-22
+.. literalinclude:: sns.php.subscribe_text_sms.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SubscribeTextSMS.php
-   :lines: 31-50
-   :language: php
-
+.. literalinclude:: sns.php.subscribe_text_sms.main.txt
+   :language: PHP
+   
 Confirm Subscription to a Topic
 ===============================
 
@@ -137,19 +128,15 @@ established initially, as described earlier. Confirmation tokens are valid for t
 
 To confirm a subscription, use the :SNS-api:`ConfirmSubscription <API_ConfirmSubscription>` operation.
 
-
-
 **Imports**
 
-.. literalinclude::  example_code/sns/ConfirmSubscription.php
-   :lines: 19-22
+.. literalinclude:: sns.php.confirm_subscription.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/ConfirmSubscription.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.confirm_subscription.main.txt
+   :language: PHP
 
 
 List Subscriptions to a Topic
@@ -159,15 +146,13 @@ To list up to 100 existing subscriptions in a given AWS Region, use the :SNS-api
 
 **Imports**
 
-.. literalinclude::  example_code/sns/ListSubscriptions.php
-   :lines: 19-22
+.. literalinclude:: sns.php.list_subscriptions.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/ListSubscriptions.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.list_subscriptions.main.txt
+   :language: PHP
 
 Unsubscribe from a Topic
 ========================
@@ -180,15 +165,13 @@ If the unsubscribe call doesn't require authentication and the requester isn't t
 
 **Imports**
 
-.. literalinclude::  example_code/sns/Unsubscribe.php
-   :lines: 19-22
+.. literalinclude:: sns.php.unsubscribe.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/Unsubscribe.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.unsubscribe.main.txt
+   :language: PHP
 
 
 Publish a Message to an |SNS| Topic
@@ -201,12 +184,12 @@ Create an object that contains the parameters for publishing a message, includin
 
 **Imports**
 
-.. literalinclude::  example_code/sns/PublishTopic.php
-   :lines: 19-22
+.. literalinclude:: sns.php.publish_topic.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/PublishTopic.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.publish_topic.main.txt
+   :language: PHP
+
+
