@@ -35,15 +35,13 @@ To allow or block emails from a specific IP address, use the :SES-api:`CreateRec
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Create_Filter.php
-   :lines: 20-23
+.. literalinclude:: ses.php.create_filter.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Create_Filter.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.create_filter.main.txt
+   :language: PHP
 
 List All Email Filters
 ======================
@@ -53,15 +51,13 @@ To list the IP address filters associated with your AWS account in the current A
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Filters.php
-   :lines: 20-23
+.. literalinclude:: ses.php.list_filters.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Filters.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.list_filters.main.txt
+   :language: PHP
 
 Delete an Email Filter
 ======================
@@ -72,12 +68,10 @@ If you need to change the range of addresses that are filtered, you can delete a
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Filter.php
-   :lines: 20-23
+.. literalinclude::  ses.php.delete_filter.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Filter.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_filter.main.txt
+   :language: PHP

@@ -33,58 +33,55 @@ Return a List of Queues
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/ListQueues.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.list_queues.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/ListQueues.php
-   :lines: 31-45
-   :language: php
+.. literalinclude:: sqs.php.list_queues.main.txt
+   :language: PHP
+
+
 
 Create a Queue
 ==============
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/CreateQueue.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.create_queue.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/CreateQueue.php
-   :lines: 31-51
-   :language: php
+.. literalinclude:: sqs.php.create_queue.main.txt
+   :language: PHP
+
 
 Return the URL of a Queue
 =========================
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/GetQueueUrl.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.get_queue_url.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/GetQueueUrl.php
-   :lines: 31-47
-   :language: php
+.. literalinclude:: sqs.php.get_queue_url.main.txt
+   :language: PHP
+
 
 Delete a Queue
 ==============
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/DeleteQueue.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.delete_queue.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/DeleteQueue.php
-   :lines: 31-47
-   :language: php
+.. literalinclude:: sqs.php.delete_queue.main.txt
+   :language: PHP
+
 

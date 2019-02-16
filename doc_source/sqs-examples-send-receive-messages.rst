@@ -36,27 +36,23 @@ Send a Message
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/SendMessage.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.send_message.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/SendMessage.php
-   :lines: 31-63
-   :language: php
+.. literalinclude:: sqs.php.send_message.main.txt
+   :language: PHP
 
 Receive and Delete Messages
 ===========================
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/ReceiveMessage.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.recieve_message.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/ReceiveMessage.php
-   :lines: 31-59
-   :language: php
+.. literalinclude:: sqs.php.recieve_message.main.txt
+   :language: PHP
