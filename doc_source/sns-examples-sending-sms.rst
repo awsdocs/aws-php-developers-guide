@@ -44,15 +44,13 @@ This example gets the :code:`DefaultSMSType` attribute. This attribute controls 
 
 **Imports**
 
-.. literalinclude::  example_code/sns/GetSMSAtrributes.php
-   :lines: 19-22
+.. literalinclude:: sns.php.get_sms_attributes.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/GetSMSAtrributes.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.get_sms_attributes.main.txt
+   :language: PHP
 
 Set SMS Attributes
 ==================
@@ -63,15 +61,13 @@ This example sets the :code:`DefaultSMSType` attribute to :code:`Transactional`,
 
 **Imports**
 
-.. literalinclude::  example_code/sns/SetSMSAtrributes.php
-   :lines: 19-22
+.. literalinclude:: sns.php.set_sms_attributes.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/SetSMSAtrributes.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.set_sms_attributes.main.txt
+   :language: PHP
 
 Check If a Phone Number Has Opted Out
 =====================================
@@ -82,15 +78,13 @@ In this example, the phone number is in E.164 format, a standard for internation
 
 **Imports**
 
-.. literalinclude::  example_code/sns/CheckOptOut.php
-   :lines: 19-22
+.. literalinclude:: sns.php.check_opt_out.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/CheckOptOut.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.check_opt_out.main.txt
+   :language: PHP
 
 
 List Opted-Out Phone Numbers
@@ -100,15 +94,13 @@ To retrieve a list of phone numbers where the owner has opted out of receiving S
 
 **Imports**
 
-.. literalinclude::  example_code/sns/ListOptOut.php
-   :lines: 19-22
+.. literalinclude:: sns.php.list_optout.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/ListOptOut.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.list_optout.main.txt
+   :language: PHP
 
 Publish to a Text Message (SMS Message)
 =======================================
@@ -123,12 +115,10 @@ For more details on sending SMS messages, see :SNS-dg:`Sending an SMS Message <s
 
 **Imports**
 
-.. literalinclude::  example_code/sns/PublishTextSMS.php
-   :lines: 19-22
+.. literalinclude:: sns.php.publish_text_SMS.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sns/PublishTextSMS.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sns.php.publish_text_SMS.main.txt
+   :language: PHP

@@ -41,16 +41,13 @@ To authorize another AWS account to send emails on your behalf, use an identity 
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Authorize_Sender.php
-   :lines: 20-23
+.. literalinclude:: ses.php.authorize_sender.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Authorize_Sender.php
-   :lines: 26-
-   :language: php
-
+.. literalinclude:: ses.php.authorize_sender.main.txt
+   :language: PHP
 
 
 Retrieve Polices for an Authorized Sender
@@ -60,15 +57,14 @@ Return the sending authorization policies that are associated with a specific em
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Get_Authorized_Policies.php
-   :lines: 20-23
+.. literalinclude:: ses.php.get_authorized_policies.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Get_Authorized_Policies.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.get_authorized_policies.main.txt
+   :language: PHP
+
 
 List Authorized Senders
 =======================
@@ -77,16 +73,13 @@ To list the sending authorization policies that are associated with a specific e
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Authorized_Senders.php
-   :lines: 20-23
+.. literalinclude:: ses.php.list_authorized_senders.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Authorized_Senders.php
-   :lines: 26-
-   :language: php
-
+.. literalinclude:: ses.php.list_authorized_senders.main.txt
+   :language: PHP
 
 
 Revoke Permission for an Authorized Sender
@@ -96,12 +89,10 @@ Remove sending authorization for another AWS account to send emails with an emai
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Authorized_Sender.php
-   :lines: 20-23
+.. literalinclude:: ses.php.delete_authorized_senders.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Authorized_Sender.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_authorized_senders.main.txt
+   :language: PHP

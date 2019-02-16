@@ -35,9 +35,16 @@ Then create a role using :aws-php-class:`CreateRole  <api-iam-2010-05-08.html#cr
 Finally, attach the policy you created to your new role with
 :aws-php-class:`AttachRolePolicy <api-iam-2010-05-08.html#attachrolepolicy>`.
 
-.. literalinclude:: example_code/iam/CreateRole.php
-   :lines: 19-
+**Imports**
+
+.. literalinclude:: iam.php.create_role.import.txt
    :language: PHP
+
+**Sample Code**
+
+.. literalinclude:: iam.php.create_role.main.txt
+   :language: PHP
+
 
 Set Up Access Permissions by Using the |IAM| Console
 ====================================================

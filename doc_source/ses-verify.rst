@@ -42,15 +42,13 @@ To add an email address to your |SES| account, use the :SES-api:`VerifyEmailIden
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Add_Email.php
-   :lines: 20-23
+.. literalinclude:: ses.php.add_email.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Add_Email.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.add_email.main.txt
+   :language: PHP
 
 Verify an Email Domain
 ======================
@@ -63,15 +61,13 @@ To add a sending domain to your |SES| account, use the :SES-api:`VerifyDomainIde
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Add_Domain.php
-   :lines: 20-23
+.. literalinclude:: ses.php.add_domain.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Add_Domain.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.add_domain.main.txt
+   :language: PHP
 
 List Email Addresses
 ====================
@@ -81,15 +77,13 @@ To retrieve a list of email addresses submitted in the current AWS Region, regar
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Email.php
-   :lines: 20-23
+.. literalinclude:: ses.php.list_email.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Email.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.list_email.main.txt
+   :language: PHP
 
 List Email Domains
 ==================
@@ -98,15 +92,13 @@ To retrieve a list of email domains submitted in the current AWS Region, regardl
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Domain.php
-   :lines: 20-23
+.. literalinclude:: ses.php.list_domain.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Domain.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.list_domain.main.txt
+   :language: PHP
 
 Delete an Email Address
 ========================
@@ -115,15 +107,13 @@ To delete a verified email address from the list of identities, use the :SES-api
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Email.php
-   :lines: 20-23
+.. literalinclude:: ses.php.delete_email.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Email.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_email.main.txt
+   :language: PHP
 
 Delete an Email Domain
 ======================
@@ -132,12 +122,10 @@ To delete a verified email domain from the list of verified identities, use the 
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Domain.php
-   :lines: 20-23
+.. literalinclude:: ses.php.delete_domain.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Domain.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_domain.main.txt
+   :language: PHP

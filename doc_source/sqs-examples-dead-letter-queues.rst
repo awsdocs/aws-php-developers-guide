@@ -34,12 +34,10 @@ Enable a Dead-Letter Queue
 
 **Imports**
 
-.. literalinclude::  example_code/sqs/DeadLetterQueue.php
-   :lines: 19-22
+.. literalinclude:: sqs.php.dead_letter_queue.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/sqs/DeadLetterQueue.php
-   :lines: 31-50
-   :language: php
+.. literalinclude:: sqs.php.dead_letter_queue.main.txt
+   :language: PHP

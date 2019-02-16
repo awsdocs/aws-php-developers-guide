@@ -34,15 +34,13 @@ You are limited to sending only a certain amount of messages in a single 24-hour
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Send_Quota.php
-   :lines: 20-23
+.. literalinclude::  ses.php.send_quota.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Send_Quota.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.send_quota.main.txt
+   :language: PHP
 
 Monitor Your Sending Activity
 =============================
@@ -51,12 +49,10 @@ To retrieve metrics for messages you've sent in the past two weeks, use the :SES
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Send_Statistics.php
-   :lines: 20-23
+.. literalinclude::  ses.php.send_statistics.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Send_Statistics.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.send_statistics.main.txt
+   :language: PHP

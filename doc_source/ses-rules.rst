@@ -43,15 +43,13 @@ A receipt rule set contains a collection of receipt rules. You must have at leas
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Create_Rule_Set.php
-   :lines: 20-23
+.. literalinclude::  ses.php.create_rule_set.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Create_Rule_Set.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.create_rule_set.main.txt
+   :language: PHP
 
 Create a Receipt Rule
 =====================
@@ -60,15 +58,13 @@ Control your incoming email by adding a receipt rule to an existing receipt rule
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Create_Rule.php
-   :lines: 20-23
+.. literalinclude::  ses.php.create_rule.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Create_Rule.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.create_rule.main.txt
+   :language: PHP
 
 Describe a Receipt Rule Set
 ============================
@@ -78,15 +74,13 @@ To use the :SES-api:`DescribeReceiptRuleSet <API_DescribeReceiptRuleSet>` operat
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Describe_Rule_Set.php
-   :lines: 20-23
+.. literalinclude::  ses.php.describe_rule_set.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Describe_Rule_Set.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.describe_rule_set.main.txt
+   :language: PHP
 
 Describe a Receipt Rule
 ========================
@@ -95,15 +89,13 @@ Return the details of a specified receipt rule. To use the :SES-api:`DescribeRec
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Describe_Rule.php
-   :lines: 20-23
+.. literalinclude::  ses.php.describe_rule.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Describe_Rule.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.describe_rule.main.txt
+   :language: PHP
 
 List All Receipt Rule Sets
 ==========================
@@ -112,16 +104,15 @@ To list the receipt rule sets that exist under your AWS account in the current A
 
 **Imports**
 
-.. literalinclude::  example_code/ses/List_Rules_Sets.php
-   :lines: 20-23
+.. literalinclude::  ses.php.list_rules_sets.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/List_Rules_Sets.php
-   :lines: 26-
-   :language: php
-
+.. literalinclude:: ses.php.list_rules_sets.main.txt
+   :language: PHP
+   
+   
 Update a Receipt Rule
 =======================
 
@@ -129,15 +120,14 @@ This example shows you how to update a receipt rule that sends incoming messages
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Update_Rule.php
-   :lines: 20-23
+.. literalinclude::  ses.php.update_rule.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Update_Rule.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.update_rule.main.txt
+   :language: PHP
+
 
 Delete a Receipt Rule Set
 ==========================
@@ -146,15 +136,14 @@ Remove a specified receipt rule set that isn't currently disabled. This also del
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Rule_Set.php
-   :lines: 20-23
+.. literalinclude::  ses.php.delete_rule_set.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Rule_Set.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_rule_set.main.txt
+   :language: PHP
+
 
 Delete a Receipt Rule
 =====================
@@ -163,12 +152,11 @@ To delete a specified receipt rule, provide the RuleName and RuleSetName to the 
 
 **Imports**
 
-.. literalinclude::  example_code/ses/Delete_Rule.php
-   :lines: 20-23
+.. literalinclude::  ses.php.delete_rule.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/ses/Delete_Rule.php
-   :lines: 26-
-   :language: php
+.. literalinclude:: ses.php.delete_rule.main.txt
+   :language: PHP
+

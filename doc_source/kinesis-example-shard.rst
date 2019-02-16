@@ -38,15 +38,13 @@ To list the shards in a |AK| data stream, use the :AKS-api:`ListShards <API_List
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/ListDataStreamShards.php
-   :lines: 19-23
+.. literalinclude:: kinesis.php.list_data_stream_shards.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/ListDataStreamShards.php
-   :lines: 32-
-   :language: php
+.. literalinclude:: kinesis.php.list_data_stream_shards.main.txt
+   :language: PHP
 
 Add More Data Stream Shards
 ===========================
@@ -59,12 +57,10 @@ To update the shard count of a |AK| data stream, use the :AKS-api:`UpdateShardCo
 
 **Imports**
 
-.. literalinclude::  example_code/kinesis/UpdateDataStreamShards.php
-   :lines: 19-23
+.. literalinclude:: kinesis.php.update_data_stream_shards.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: example_code/kinesis/UpdateDataStreamShards.php
-   :lines: 32-
-   :language: php
+.. literalinclude:: kinesis.php.update_data_stream_shards.main.txt
+   :language: PHP
