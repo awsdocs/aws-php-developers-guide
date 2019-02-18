@@ -326,7 +326,7 @@ Here's an example of how to create a minimal endpoint provider.
     });
 
 
-endpoint discovery
+endpoint_discovery
 ==================
 
 :Type: ``array|Aws\CacheInterface|Aws\EndpointDiscovery\ConfigurationInterface|callable``
