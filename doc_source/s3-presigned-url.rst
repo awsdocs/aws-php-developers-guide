@@ -43,12 +43,12 @@ The most common scenario is creating a pre-signed URL to GET an object.
 
 **Imports**
 
-.. literalinclude:: s3.php.presigned_post.import.txt
+.. literalinclude:: s3.php.presigned_url.import.txt
    :language: php
 
 **Sample Code**
 
-.. literalinclude:: s3.php.presigned_post.get_object.txt
+.. literalinclude:: s3.php.presigned_url.get_object.txt
    :language: php
 
 Creating a Pre-Signed URL
@@ -62,7 +62,7 @@ returned request.
 
 **Sample Code**
 
-.. literalinclude:: s3.php.presigned_post.create_url.txt
+.. literalinclude:: s3.php.presigned_url.create_url.txt
    :language: php
 
 Getting the URL to an Object
@@ -74,7 +74,7 @@ returns an unsigned URL to the given bucket and key.
 
 **Sample Code**
 
-.. literalinclude:: s3.php.presigned_post.get_url.txt
+.. literalinclude:: s3.php.presigned_url.get_url.txt
    :language: php
 
 .. important::

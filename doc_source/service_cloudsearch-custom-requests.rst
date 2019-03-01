@@ -37,10 +37,10 @@ Sign CSlong Domain Request
 
 **Imports**
 
-.. literalinclude:: s3.php.sign_cloudsearch_domain_request.import.txt
+.. literalinclude:: cloudsearch.php.sign_cloudsearch_domain_request.import.txt
    :language: php
 
 **Sample Code**
 
-.. literalinclude:: s3.php.sign_cloudsearch_domain_request.main.txt
+.. literalinclude:: cloudsearch.php.sign_cloudsearch_domain_request.main.txt
    :language: php
