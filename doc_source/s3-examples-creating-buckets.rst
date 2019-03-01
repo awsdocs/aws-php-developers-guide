@@ -26,9 +26,8 @@ The following examples show how to:
 
 **Imports**
 
-.. literalinclude::  example_code/s3/ListBuckets.php
-   :lines: 20-23
-   :language: PHP
+.. literalinclude:: s3.php.list_buckets.import.txt
+   :language: php
 
 
 List Buckets
@@ -38,8 +37,7 @@ Create a PHP file with the following code. First create an AWS.S3 client service
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/ListBuckets.php
-   :lines: 32-
+.. literalinclude:: s3.php.list_buckets.main.txt
    :language: php
 
 Create a Bucket
@@ -49,8 +47,7 @@ Create a PHP file with the following code. First create an AWS.S3 client service
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/CreateBucket.php
-   :lines: 31-
+.. literalinclude:: s3.php.create_bucket.main.txt
    :language: php
 
 Put an Object in a Bucket
@@ -62,6 +59,5 @@ In your command line, execute this file and pass in the name of the bucket where
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3//PutObject.php
-   :lines: 31-
+.. literalinclude:: s3.php.put_object.main.txt
    :language: php

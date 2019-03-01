@@ -24,6 +24,12 @@ a "pre-signed" request and encode it as a URL that an end-user's browser can
 retrieve. Additionally, you can limit a pre-signed request by specifying an
 expiration time.
 
+The following examples show how to:
+
+* Create a pre-signed URL to get an S3 object using :aws-php-class:`createPresignedRequest <class-Aws.S3.S3Client.html#_createPresignedRequest>`.
+
+.. include:: text/git-php-examples.txt
+
 Creating a Pre-Signed Request
 =============================
 
@@ -35,10 +41,14 @@ URL of the object using the ``getUri()`` method of the request.
 
 The most common scenario is creating a pre-signed URL to GET an object.
 
+**Imports**
+
+.. literalinclude:: s3.php.presigned_url.import.txt
+   :language: php
+
 **Sample Code**
 
-.. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 25-37
+.. literalinclude:: s3.php.presigned_url.get_object.txt
    :language: php
 
 Creating a Pre-Signed URL
@@ -52,8 +62,7 @@ returned request.
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 39-48
+.. literalinclude:: s3.php.presigned_url.create_url.txt
    :language: php
 
 Getting the URL to an Object
@@ -65,8 +74,7 @@ returns an unsigned URL to the given bucket and key.
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/PresignedURL.php
-   :lines: 49-
+.. literalinclude:: s3.php.presigned_url.get_url.txt
    :language: php
 
 .. important::

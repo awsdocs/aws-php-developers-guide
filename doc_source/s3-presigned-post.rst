@@ -20,6 +20,15 @@ Much like pre-signed URLs, pre-signed POSTs enable you to give write access to a
 user without giving them AWS credentials. Pre-signed POST forms can be created
 with the help of an instance of :aws-php-class:`Aws\S3\PostObjectV4 </class-Aws.S3.PostObjectV4.html>`.
 
+The following examples show how to:
+
+* Get data for an S3 Object POST upload form using :aws-php-class:`PostObjectV4 <class-Aws.S3.PostObjectV4.html>`.
+
+.. include:: text/git-php-examples.txt
+
+Create PostObjectV4
+===================
+
 To create an instance of ``PostObjectV4``, you must provide the following: 
 
 - instance of ``Aws\S3\S3Client``
@@ -28,39 +37,13 @@ To create an instance of ``PostObjectV4``, you must provide the following:
 - array of policy conditions (see :s3-dg:`Policy Construction <HTTPPOSTForms>` in the |S3-dg|)
 - expiration time string for the policy (optional, one hour by default).
 
-.. code-block:: php
+**Imports**
 
-    $client = new \Aws\S3\S3Client([
-        'version' => 'latest',
-        'region' => 'us-west-2',
-    ]);
-    $bucket = 'mybucket';
+.. literalinclude:: s3.php.presigned_post.import.txt
+   :language: php
 
-    // Set some defaults for form input fields
-    $formInputs = ['acl' => 'public-read'];
+**Sample Code**
 
-    // Construct an array of conditions for policy
-    $options = [
-        ['acl' => 'public-read'],
-        ['bucket' => $bucket],
-        ['starts-with', '$key', 'user/eric/'],
-    ];
+.. literalinclude:: s3.php.presigned_post.main.txt
+   :language: php
 
-    // Optional: configure expiration time string
-    $expires = '+2 hours';
-
-    $postObject = new \Aws\S3\PostObjectV4(
-        $client,
-        $bucket,
-        $formInputs,
-        $options,
-        $expires
-    );
-
-    // Get attributes to set on an HTML form, e.g., action, method, enctype
-    $formAttributes = $postObject->getFormAttributes();
-
-    // Get form input fields. This will include anything set as a form input in
-    // the constructor, the provided JSON policy, your AWS access key ID, and an
-    // auth signature.
-    $formInputs = $postObject->getFormInputs();

@@ -25,6 +25,12 @@ control. Many |ESlong| clients support request signing, but if you're using
 a client that doesn't, you can sign arbitrary PSR-7 requests with the
 built-in credential providers and signers of the |sdk-php|.
 
+The following examples show how to:
+
+* Sign a request with the AWS signing protocol using :aws-php-class:`SignatureV4 <class-Aws.Signature.SignatureV4.html#_signRequest>`.
+
+.. include:: text/git-php-examples.txt
+
 Signing an |ES| Request
 =======================
 

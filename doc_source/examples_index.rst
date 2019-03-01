@@ -24,8 +24,10 @@ The |sdk-php| Version 3 includes code examples that demonstrate common |AWSlong|
     :maxdepth: 2
 
     Amazon CloudFront Examples <cf-examples.rst>
+    Amazon CloudSearch <service_cloudsearch-custom-requests.rst>
     Amazon CloudWatch Examples <cw-examples.rst>
     Amazon EC2 Examples <ec2-examples.rst>
+    Amazon Elasticsearch <service_es-data-plane.rst>
     AWS Identity and Access Management (IAM) Examples <iam-examples.rst>
     AWS Key Management Service <kms-examples>
     Amazon Kinesis Examples <kinesis-examples.rst>
