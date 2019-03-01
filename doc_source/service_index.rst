@@ -23,14 +23,9 @@ higher-level features per service.
 .. toctree::
     :maxdepth: 2
 
-    Amazon CloudSearch <service_cloudsearch-custom-requests.rst>
     AWS Cloud9 <cloud9>
     Amazon DynamoDB <service_dynamodb-session-handler.rst>
-    Amazon Elasticsearch <service_es-data-plane.rst>
-    Amazon S3 Multipart Uploads <s3-multipart-upload.rst>
     Amazon S3 Multi-Region Client <s3-multiregion-client.rst>
-    Amazon S3 Pre-Signed POSTs <s3-presigned-post.rst>
-    Amazon S3 Pre-Signed URL <s3-presigned-url.rst>
     Amazon S3 Stream Wrapper <s3-stream-wrapper.rst>
     Amazon S3 Transfer Manager <s3-transfer.rst>
     Amazon S3 Client Side Encryption <s3-encryption-client.rst>

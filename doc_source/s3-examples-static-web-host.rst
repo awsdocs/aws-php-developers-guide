@@ -38,12 +38,11 @@ Get, Set, and Delete the Website Configuration for a Bucket
 
 **Imports**
 
-.. literalinclude::  example_code/s3/s3WebHost.php
-   :lines: 20-23
-   :language: PHP
+.. literalinclude:: s3.php.webhost.import.txt
+   :language: php
+
 
 **Sample Code**
 
-.. literalinclude:: example_code/s3/s3WebHost.php
-   :lines: 25-
+.. literalinclude:: s3.php.webhost.main.txt
    :language: php

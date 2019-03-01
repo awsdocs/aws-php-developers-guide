@@ -26,31 +26,21 @@ For example, if you're following :CS-dg:`Cloud Search's Getting Started guide <g
 and want to use an IAM-protected domain for :CS-dg:`Step 3 <getting-started-search>`,
 you would need to sign and execute your request as follows.
 
-.. code-block:: php
+The following examples show how to:
 
-    use Aws\Credentials\CredentialProvider;
-    use Aws\Signature\SignatureV4;
-    use GuzzleHttp\Client;
-    use GuzzleHttp\Psr7\Request;
+* Sign a request with the AWS signing protocol using :aws-php-class:`SignatureV4 <class-Aws.Signature.SignatureV4.html#_signRequest>`.
 
-    // Prepare a CloudSearch domain request
-    $request = new Request(
-        'GET',
-        'https://<your-domain>.<region-of-domain>.cloudsearch.amazonaws.com/2013-01-01/search?q=star+wars&return=title'
-    );
+.. include:: text/git-php-examples.txt
 
-    // Get your credentials from the environment
-    $credentials = call_user_func(CredentialProvider::defaultProvider())->wait();
+Sign CSlong Domain Request
+==========================
 
-    // Construct a request signer
-    $signer = new SignatureV4('cloudsearch', '<region-of-domain>');
+**Imports**
 
-    // Sign the request
-    $request = $signer->signRequest($request, $credentials);
+.. literalinclude:: s3.php.sign_cloudsearch_domain_request.import.txt
+   :language: php
 
-    // Send the request
-    $response = (new Client)->send($request);
-    $results = json_decode($response->getBody());
-    if ($results->hits->found > 0) {
-        echo $results->hits->hit[0]->fields->title . "\n";
-    }
+**Sample Code**
+
+.. literalinclude:: s3.php.sign_cloudsearch_domain_request.main.txt
+   :language: php
