@@ -64,6 +64,10 @@ which to store the sessions. You can do this ahead of time by using the
 `AWS Console for Amazon DynamoDB <https://console.aws.amazon.com/dynamodb/home>`_,
 or by using the |sdk-php|.
 
+When creating this table use 'id' as the name of the primary key.  Also it is recommended
+to setup a `Time To Live attribute <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html>`_
+using the 'expires' attribute to benefit from automatic garbage collection of sessions.
+
 Step 3. Use PHP Sessions as You Normally Would
 ----------------------------------------------
 
@@ -201,7 +205,10 @@ To enable session locking, set the ``'locking'`` option to ``true`` when you ins
 Garbage Collection
 ==================
 
-The |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``
+You should setup a TTL attribute in your DynamoDB table, using the attribute 'expires'.  This will automatically garbage
+collect your sessions and avoid the need to garbage collect them yourself.
+
+Alternatively, the |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``
 operations. Due to the nature of how the ``Scan`` operation works, and to find all of the expired sessions and
 delete them, the garbage collection process can require a lot of provisioned throughput.
 
@@ -248,7 +255,8 @@ Best Practices
 #. Create your sessions table in an AWS Region that is geographically closest to or in the same Region as your application
    servers. This ensures the lowest latency between your application and |DDB| database.
 #. Choose the provisioned throughput capacity of your sessions table carefully. Take into account the expected traffic
-   to your application and the expected size of your sessions.
+   to your application and the expected size of your sessions.  Alternatively use the 'On Demand' Read/Write capacity
+   mode for your table.
 #. Monitor your consumed throughput through the AWS Management Console or with |CWlong|, and adjust your
    throughput settings as needed to meet the demands of your application.
 #. Keep the size of your sessions small (ideally less than 1 KB). Small sessions perform better and require less
