@@ -1,8 +1,14 @@
 __SERVICE__
+
+shared entities - https://github.com/awsdocs/aws-doc-shared-content/blob/master/sphinx_shared/_includes/common_includes.txt
 |long|
 |__|
 :___-api:
 |___-dg|
+
+aws-php-class - https://docs.aws.amazon.com/aws-sdk-php/v3/api/ 
+
+literalinclude - https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code 
 
 .. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
