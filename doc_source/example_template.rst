@@ -1,3 +1,8 @@
+__SERVICE__
+|long|
+___
+
+
 .. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -9,116 +14,116 @@
    limitations under the License.
 
 ###############################################################################
-Managing |CFlong| Distributions Using the |__| API and the |sdk-php| Version 3
+Managing |long| Distributions Using the |___| API and the |sdk-php| Version 3
 ###############################################################################
 
 .. meta::
-   :description: Amazon CloudFront code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon CloudFront code examples for PHP, Amazon CloudFront Data for PHP.
+   :description: Amazon __SERVICE__ code examples for the AWS SDK for PHP version 3.
+   :keywords: Amazon __SERVICE__ code examples for PHP, Amazon __SERVICE__ Data for PHP.
 
 |long| Description
 
 
 The following examples show how to:
 
-* Create _____________ using :aws-php-class:`Create_________ <api-cloudfront-2018-11-05.html#create______>`.
-* Get ________________ using :aws-php-class:`Get____________ <api-cloudfront-2018-11-05.html#get_________>`.
-* List _______________ using :aws-php-class:`List___________ <api-cloudfront-2018-11-05.html#list________>`.
-* Update _____________ using :aws-php-class:`Update_________ <api-cloudfront-2018-11-05.html#update______>`.
-* Disable ____________ using :aws-php-class:`Disable________ <api-cloudfront-2018-11-05.html#disable_____>`.
-* Delete _____________ using :aws-php-class:`Delete_________ <api-cloudfront-2018-11-05.html#delete______>`.
+* Create _____________ using :aws-php-class:`Create_________ <api-__SERVICE__-2018-11-05.html#create______>`.
+* Get ________________ using :aws-php-class:`Get____________ <api-__SERVICE__-2018-11-05.html#get_________>`.
+* List _______________ using :aws-php-class:`List___________ <api-__SERVICE__-2018-11-05.html#list________>`.
+* Update _____________ using :aws-php-class:`Update_________ <api-__SERVICE__-2018-11-05.html#update______>`.
+* Disable ____________ using :aws-php-class:`Disable________ <api-__SERVICE__-2018-11-05.html#disable_____>`.
+* Delete _____________ using :aws-php-class:`Delete_________ <api-__SERVICE__-2018-11-05.html#delete______>`.
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |CFlong|, see the |CF-dg|_.
+For more information about using |___long|, see the |___-dg|_.
 
-Create a |__| Distribution
+Create a |___| Distribution
 ==========================
 
-To create a |__|, use the :CF-api:`CreateDistribution <API_CreateDistribution>` operation.
+To create a |___|, use the :___-api:`CreateDistribution <API_CreateDistribution>` operation.
 
 **Imports**
 
-.. literalinclude::  cloudfront.php.creates3distribution.import.txt
+.. literalinclude::  __SERVICE__.php.creates3distribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.creates3distribution.main.txt
+.. literalinclude:: __SERVICE__.php.creates3distribution.main.txt
    :language: PHP
 
-Retrieve a |__| Distribution
+Retrieve a |___| Distribution
 ============================
 
-To retrieve |__| distribution, use the :CF-api:`GetDistribution <API_GetDistribution>` operation.
+To retrieve |___| distribution, use the :___-api:`GetDistribution <API_GetDistribution>` operation.
 
 **Imports**
 
-.. literalinclude:: cloudfront.php.getdistribution.import.txt
+.. literalinclude:: __SERVICE__.php.getdistribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.getdistribution.main.txt
+.. literalinclude:: __SERVICE__.php.getdistribution.main.txt
    :language: php
 
-List |__| Distributions
+List |___| Distributions
 =======================
 
-Get a list of existing |__| using the :CF-api:`ListDistributions <API_ListDistributions>` operation.
+Get a list of existing |___| using the :___-api:`ListDistributions <API_ListDistributions>` operation.
 
 **Imports**
 
-.. literalinclude:: cloudfront.php.listdistribution.import.txt
+.. literalinclude:: __SERVICE__.php.listdistribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.listdistribution.main.txt
+.. literalinclude:: __SERVICE__.php.listdistribution.main.txt
    :language: php
 
 
-Update a |__| Distribution
+Update a |___| Distribution
 ==========================
 
-To update a specified |__| distribution, use the :CF-api:`UpdateDistribution <API_UpdateDistribution>` operation.
+To update a specified |___| distribution, use the :___-api:`UpdateDistribution <API_UpdateDistribution>` operation.
 
 **Imports**
 
-.. literalinclude:: cloudfront.php.updatedistribution.import.txt
+.. literalinclude:: __SERVICE__.php.updatedistribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.updatedistribution.main.txt
+.. literalinclude:: __SERVICE__.php.updatedistribution.main.txt
    :language: php
 
-Disable a |__| Distribution
+Disable a |___| Distribution
 ============================
 
-To disable the specified |__| distribution, use the :CF-api:`DisableDistribution <API_DisableDistribution>` operation.
+To disable the specified |___| distribution, use the :___-api:`DisableDistribution <API_DisableDistribution>` operation.
 
 **Imports**
 
-.. literalinclude:: cloudfront.php.disabledistribution.import.txt
+.. literalinclude:: __SERVICE__.php.disabledistribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.disabledistribution.main.txt
+.. literalinclude:: __SERVICE__.php.disabledistribution.main.txt
    :language: php
 
-Delete a |__| Distribution
+Delete a |___| Distribution
 ==========================
 
-To remove a specified |__| distribution, use the :CF-api:`DeleteDistribution <API_DeleteDistribution>` operation.
+To remove a specified |___| distribution, use the :___-api:`DeleteDistribution <API_DeleteDistribution>` operation.
 
 **Imports**
 
-.. literalinclude:: cloudfront.php.deletedistribution.import.txt
+.. literalinclude:: __SERVICE__.php.deletedistribution.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: cloudfront.php.deletedistribution.main.txt
+.. literalinclude:: __SERVICE__.php.deletedistribution.main.txt
    :language: php
