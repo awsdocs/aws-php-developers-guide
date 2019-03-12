@@ -37,100 +37,84 @@ The following examples show how to:
 * Get ________________ using :aws-php-class:`Get____________ <api-__SERVICE__-2018-11-05.html#get_________>`.
 * List _______________ using :aws-php-class:`List___________ <api-__SERVICE__-2018-11-05.html#list________>`.
 * Update _____________ using :aws-php-class:`Update_________ <api-__SERVICE__-2018-11-05.html#update______>`.
-* Disable ____________ using :aws-php-class:`Disable________ <api-__SERVICE__-2018-11-05.html#disable_____>`.
 * Delete _____________ using :aws-php-class:`Delete_________ <api-__SERVICE__-2018-11-05.html#delete______>`.
 
 .. include:: text/git-php-examples.txt
 
 For more information about using |long|, see the |___-dg|_.
 
-Create a |___| Distribution
+Create a |___| 
 ==========================
 
-To create a |___|, use the :___-api:`CreateDistribution <API_CreateDistribution>` operation.
+To create a |___|, use the :___-api:`Create_________ <API_Create_________>` operation.
 
 **Imports**
 
-.. literalinclude::  __SERVICE__.php.creates3distribution.import.txt
+.. literalinclude::  __SERVICE__.php._____________.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: __SERVICE__.php.creates3distribution.main.txt
+.. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: PHP
 
-Retrieve a |___| Distribution
+Retrieve a |___| 
 ============================
 
-To retrieve |___| distribution, use the :___-api:`GetDistribution <API_GetDistribution>` operation.
+To retrieve |___| , use the :___-api:`Get____________ <API_Get____________>` operation.
 
 **Imports**
 
-.. literalinclude:: __SERVICE__.php.getdistribution.import.txt
+.. literalinclude:: __SERVICE__.php._____________.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: __SERVICE__.php.getdistribution.main.txt
+.. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: php
 
-List |___| Distributions
+List |___| 
 =======================
 
-Get a list of existing |___| using the :___-api:`ListDistributions <API_ListDistributions>` operation.
+Get a list of existing |___| using the :___-api:`List___________ <API_List___________>` operation.
 
 **Imports**
 
-.. literalinclude:: __SERVICE__.php.listdistribution.import.txt
+.. literalinclude:: __SERVICE__.php._____________.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: __SERVICE__.php.listdistribution.main.txt
+.. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: php
 
 
-Update a |___| Distribution
+Update a |___| 
 ==========================
 
-To update a specified |___| distribution, use the :___-api:`UpdateDistribution <API_UpdateDistribution>` operation.
+To update a specified |___|, use the :___-api:`Update_________ <API_Update_________>` operation.
 
 **Imports**
 
-.. literalinclude:: __SERVICE__.php.updatedistribution.import.txt
+.. literalinclude:: __SERVICE__.php._____________.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: __SERVICE__.php.updatedistribution.main.txt
+.. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: php
 
-Disable a |___| Distribution
-============================
-
-To disable the specified |___| distribution, use the :___-api:`DisableDistribution <API_DisableDistribution>` operation.
-
-**Imports**
-
-.. literalinclude:: __SERVICE__.php.disabledistribution.import.txt
-   :language: PHP
-
-**Sample Code**
-
-.. literalinclude:: __SERVICE__.php.disabledistribution.main.txt
-   :language: php
-
-Delete a |___| Distribution
+Delete a |___| 
 ==========================
 
-To remove a specified |___| distribution, use the :___-api:`DeleteDistribution <API_DeleteDistribution>` operation.
+To remove a specified |___|, use the :___-api:`Delete_________ <API_Delete_________>` operation.
 
 **Imports**
 
-.. literalinclude:: __SERVICE__.php.deletedistribution.import.txt
+.. literalinclude:: __SERVICE__.php._____________.import.txt
    :language: PHP
 
 **Sample Code**
 
-.. literalinclude:: __SERVICE__.php.deletedistribution.main.txt
+.. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: php
