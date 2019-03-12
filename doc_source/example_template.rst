@@ -1,7 +1,8 @@
 __SERVICE__
 |long|
-___
-
+|__|
+:___-api:
+|___-dg|
 
 .. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
@@ -19,7 +20,7 @@ Managing |long| Distributions Using the |___| API and the |sdk-php| Version 3
 
 .. meta::
    :description: Amazon __SERVICE__ code examples for the AWS SDK for PHP version 3.
-   :keywords: Amazon __SERVICE__ code examples for PHP, Amazon __SERVICE__ Data for PHP.
+   :keywords: Amazon __SERVICE__ code examples for PHP, 
 
 |long| Description
 
@@ -35,7 +36,7 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |___long|, see the |___-dg|_.
+For more information about using |long|, see the |___-dg|_.
 
 Create a |___| Distribution
 ==========================
