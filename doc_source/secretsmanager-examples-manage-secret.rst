@@ -9,7 +9,7 @@
    limitations under the License.
 
 ####################################################################################
-Managing Secrets stored in |ASMlong| Using the |ASM| API and the |sdk-php| Version 3
+Managing Secrets Stored in |ASMlong| Using the |ASM| API and the |sdk-php| Version 3
 ####################################################################################
 
 .. meta::
@@ -120,7 +120,8 @@ To rotate the value of an existing secret stored in |ASM|, use a |LAM| rotation 
 
 For more information about rotating secrets see  :ASM-ug:`Rotating Your AWS Secrets Manager Secrets <rotating-secrets>` in the |ASM-ug|.
 
-Before you begin, create a |LAM| function to rotate your secret. We currently have several |LAM| code examples for rotating RDS database credentials in the `AWS Code Sample Catalog<https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-lambda_functions-secretsmanager.html>`__ .
+Before you begin, create a |LAM| function to rotate your secret. We currently have several |LAM| code examples for rotating RDS database credentials in the 
+S`AWS Code Sample Catalog <https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-lambda_functions-secretsmanager.html>`__ .
 
 Once you set up your |LAM| function, configure a new secret rotation. 
 
