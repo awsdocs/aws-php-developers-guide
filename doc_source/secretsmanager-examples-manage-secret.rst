@@ -150,7 +150,7 @@ Delete a Secret from |ASM|
 ==========================
 
 To remove a specified secret from |ASM|, use the :ASM-api:`DeleteSecret <API_DeleteSecret>` operation.
-To prevent deleting a secret accidentally, a DeleteData stamp is added to the secret that specifies a window of 
+To prevent deleting a secret accidentally, a DeletionDate stamp is added to the secret that specifies a window of 
 recovery time in which you can reverse the deletion. If the time isn't specified for the recovery window, the 
 default amount of time is 30 days.
 
