@@ -17,7 +17,7 @@ Managing Secrets Stored in |ASM| Using the |ASM| API and the |sdk-php| Version 3
    :keywords: Amazon Secrets Manager code examples for PHP, Amazon Secrets Manager Secret
 
 |ASMlong| stores and manages shared secrets such as passwords, API keys, and database credentials. With the |ASM| 
-service, developers can replace hard-coded credentials in deployed code with an embedded call to |ASM|. 
+service, developers can replace hard-coded credentials in deployed code with an embedded call to |ASM|.
 
 |ASM| natively supports automatic scheduled credential rotation for |RDSlong| (|RDS|) databases, increasing application security. |ASM| can
 also seamlessly rotate secrets for other databases and third-party services using |LAMlong| to implement service-specific details. 
@@ -66,8 +66,8 @@ To retrieve the value of a secret stored in |ASM|, use the :ASM-api:`GetSecretVa
 .. literalinclude:: secretsmanager.php.get_secret_value.main.txt
    :language: php
 
-List Secrets Stored in the |ASM|
-================================
+List Secrets Stored in |ASM|
+============================
 
 Get a list of all the secrets that are stored by |ASM| using the :ASM-api:`ListSecrets <API_ListSecrets>` operation.
 
