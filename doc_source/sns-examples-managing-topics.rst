@@ -9,7 +9,7 @@
    limitations under the License.
 
 #####################################################
-Managing Topics in |SQS| with the |sdk-php| Version 3
+Managing Topics in |SNS| with the |sdk-php| Version 3
 #####################################################
 
 .. meta::
