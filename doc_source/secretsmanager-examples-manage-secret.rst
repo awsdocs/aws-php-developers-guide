@@ -37,9 +37,9 @@ The following examples show how to:
 Create a Secret in |ASM|
 ==========================
 
-To create a secret in |ASM|, use the :aws-php-class:`CreateSecret <api-secretsmanager-2017-10-17.html#createsecret>`.
+To create a secret in |ASM|, use the :aws-php-class:`CreateSecret <api-secretsmanager-2017-10-17.html#createsecret>` operation.
 
-In this example a username and password are stored as a json string. 
+In this example, a user name and password are stored as a JSON string. 
 
 
 **Imports**
@@ -57,7 +57,7 @@ Retrieve a Secret from |ASM|
 
 To retrieve the value of a secret stored in |ASM|, use the :aws-php-class:`GetSecretValue <api-secretsmanager-2017-10-17.html#getsecretvalue>` operation.
 
-In this example `$secret` will be a string containing the value stored. This sample will output  ```[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``` if called on the secret we created above. Use `json.loads` on `$secret` to access indexed values.
+In this example, secret is a string that contains the stored value. If called on the secret we created earlier, this sample will output ``[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``. Use ``json.loads`` to access indexed values.
 
 
 **Imports**
@@ -89,7 +89,7 @@ Get a list of all the secrets that are stored by |ASM| using the :aws-php-class:
 Retrieve Details about a Secret  
 ===============================
 
-Stored secrets contain metadata about rotation rules, when it was last accessed or changed, user created tags and the ARN. To get the details of a specified secret stored in |ASM|,  use the :aws-php-class:`DescribeSecret <api-secretsmanager-2017-10-17.html#describesecret>` operation.
+Stored secrets contain metadata about rotation rules, when it was last accessed or changed, user-created tags, and the Amazon Resource Name (ARN).. To get the details of a specified secret stored in |ASM|,  use the :aws-php-class:`DescribeSecret <api-secretsmanager-2017-10-17.html#describesecret>` operation.
 
 **Imports**
 
@@ -106,7 +106,7 @@ Update the Secret Value
 
 To store a new encrypted secret valuein |ASM|, use the :aws-php-class:`PutSecretValue <api-secretsmanager-2017-10-17.html#putsecretvalue>` operation.
 
-This creates a new version of the secret. If a version of the secret already exists, add the `VersionStages` parameter with the value `AWSCURRENT` to ensure the new value is used when retrieving the value.
+This creates a new version of the secret. If a version of the secret already exists, add the ``VersionStages`` parameter with the value in ``AWSCURRENT`` to ensure the new value is used when retrieving the value.
 
 **Imports**
 
@@ -125,7 +125,7 @@ Rotate the Value to an Existing Secret in |ASM|
 To rotate the value of an existing secret stored in |ASM|, use a |LAM| rotation function and the :aws-php-class:`RotateSecret <api-secretsmanager-2017-10-17.html#rotatesecret>` operation.
 
 
-Before you begin, create a |LAM| function to rotate your secret. The `AWS Code Sample Catalog <https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-lambda_functions-secretsmanager.html>`__. currently contains several |LAM| code examples for rotating |RDSlong| (|RDS|) database credentials.
+Before you begin, create a |LAM| function to rotate your secret. The `AWS Code Sample Catalog <https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-lambda_functions-secretsmanager.html>`__ currently contains several |LAM| code examples for rotating |RDS| database credentials.
 
 .. note::
     
@@ -173,8 +173,8 @@ default amount of time is 30 days.
 .. literalinclude:: secretsmanager.php.delete_secret.main.txt
    :language: php
    
-See Also
-========
+Related Information
+===================
 
 The |sdk-php| examples use the following REST operations from the |ASM-api|: 
 
