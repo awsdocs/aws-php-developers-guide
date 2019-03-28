@@ -104,7 +104,7 @@ Stored secrets contain metadata about rotation rules, when it was last accessed 
 Update the Secret Value 
 =======================
 
-To store a new encrypted secret valuein |ASM|, use the :aws-php-class:`PutSecretValue <api-secretsmanager-2017-10-17.html#putsecretvalue>` operation.
+To store a new encrypted secret value in |ASM|, use the :aws-php-class:`PutSecretValue <api-secretsmanager-2017-10-17.html#putsecretvalue>` operation.
 
 This creates a new version of the secret. If a version of the secret already exists, add the ``VersionStages`` parameter with the value in ``AWSCURRENT`` to ensure the new value is used when retrieving the value.
 
