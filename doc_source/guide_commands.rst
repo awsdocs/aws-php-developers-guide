@@ -9,12 +9,12 @@
    limitations under the License.
 
 ##########################################
-Command Objects in the |sdk-php| Version 3
+Command Objects in the |sdk-php| (Version 3)
 ##########################################
 
 .. meta::
-   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP version 3. 
-   :keywords: AWS SDK for PHP version 3, php handler, use php for aws
+   :description:  Fine-tune how the underlying HTTP handler executes the request to AWS services with the AWS SDK for PHP - version 3. 
+   :keywords: AWS SDK for PHP - version 3, php handler, use php for aws
 
 
 The |sdk-php| uses the `command pattern <http://en.wikipedia.org/wiki/Command_pattern>`_
