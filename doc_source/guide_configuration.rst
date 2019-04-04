@@ -633,9 +633,14 @@ expect
 This option is passed through to the underlying HTTP handler.  By default,
 Expect: 100-Continue header is set when the body of the request exceeds 1 MB.
 ``true`` or ``false`` enables or disables the header on all requests.  If an
-integer is used, only requests with bodies that exceed this setting wil use
+integer is used, only requests with bodies that exceed this setting will use
 the header.  When used as an integer, if the body size is unknown the Expect
 header will be sent.
+
+.. warning::
+
+Disabling the Expect header can prevent the service from returning authentication
+or other errors. This option should be configured with caution.
 
 .. _http_sink:
 
