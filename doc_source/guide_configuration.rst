@@ -625,6 +625,18 @@ You can use the ``HTTP_PROXY`` environment variable to configure an "http"
 protocol-specific proxy, and the ``HTTPS_PROXY`` environment variable to
 configure an "https" specific proxy.
 
+.. _http_expect:
+
+expect
+------
+
+This option is passed through to the underlying HTTP handler.  By default,
+Expect: 100-Continue header is set when the body of the request exceeds 1 MB.
+``true`` or ``false`` enables or disables the header on all requests.  If an
+integer is used, only requests with bodies that exceed this setting wil use
+the header.  When used as an integer, if the body size is unknown the Expect
+header will be sent.
+
 .. _http_sink:
 
 sink
