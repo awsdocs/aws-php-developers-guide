@@ -92,6 +92,24 @@ callbacks passed to its constructor.
 .. literalinclude:: s3.php.multipart_upload_custom.main.txt
    :language: PHP
 
+Manual Garbage Collection Between Part Uploads
+----------------------------------------------
+
+If you run into memory issues with large uploads, you can use a callback to invoke
+the `PHP garbage collector<https://www.php.net/manual/en/features.gc.php/>`_
+manually. The following example calls the collection algorithm before each part
+upload, but optimal usage will depend on your use case and environment.
+
+.. code-block:: php
+
+   $uploader = new MultipartUploader($client, $source, [
+      'bucket' => 'your-bucket,
+      'key' => 'your-key',
+      'before_upload' => function(\Aws\Command $command) {
+         gc_collect_cycles();
+      }
+   ]);
+
 Recovering from Errors
 ======================
 
