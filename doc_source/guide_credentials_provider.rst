@@ -96,7 +96,7 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
 
     // To avoid unnecessarily fetching STS credentials on every API operation,
     // the memoize function handles automatically refreshing the credentials when they expire
-    $provider = CredentialProvider::memoize($provider);
+    $provider = CredentialProvider::memoize($assumeRoleCredentials);
 
     $client = new S3Client([
         'region'      => 'us-west-2',
