@@ -412,6 +412,8 @@ even been removed.
     * The ``Aws\DynamoDb\Model\BatchRequest`` namespace has been replaced by
       ``Aws\DynamoDb\WriteRequestBatch``. See the documentation for
       :aws-php-class:`DynamoDB WriteRequestBatch </class-Aws.DynamoDb.WriteRequestBatch.html>`.
+    * The ``Aws\Ses\SesClient`` now handles base64 encoding the ``RawMessage`` when using 
+      ``SendRawEmail`` operation.
 
 * Removed:
     * |DDBlong| ``Item``, ``Attribute``, and ``ItemIterator`` classes - These
