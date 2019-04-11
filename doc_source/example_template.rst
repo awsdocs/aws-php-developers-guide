@@ -21,7 +21,7 @@ literalinclude - https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php
    limitations under the License.
 
 ###############################################################################
-Managing |long| Distributions Using the |___| API and the |sdk-php| Version 3
+|long| the |___| API and the |sdk-php| Version 3
 ###############################################################################
 
 .. meta::
@@ -41,12 +41,10 @@ The following examples show how to:
 
 .. include:: text/git-php-examples.txt
 
-For more information about using |long|, see the |___-dg|_.
-
 Create a |___| 
 ==========================
 
-To create a |___|, use the :___-api:`Create_________ <API_Create_________>` operation.
+To create a |___|, use the :aws-php-class:`Create_________ <api-__SERVICE__-2018-11-05.html#create______>` operation.
 
 **Imports**
 
@@ -61,7 +59,7 @@ To create a |___|, use the :___-api:`Create_________ <API_Create_________>` oper
 Retrieve a |___| 
 ============================
 
-To retrieve |___| , use the :___-api:`Get____________ <API_Get____________>` operation.
+To retrieve |___| , use the :aws-php-class:`Get____________ <api-__SERVICE__-2018-11-05.html#get_________>` operation.
 
 **Imports**
 
@@ -76,7 +74,7 @@ To retrieve |___| , use the :___-api:`Get____________ <API_Get____________>` ope
 List |___| 
 =======================
 
-Get a list of existing |___| using the :___-api:`List___________ <API_List___________>` operation.
+Get a list of existing |___| using the :aws-php-class:`List___________ <api-__SERVICE__-2018-11-05.html#list________>` operation.
 
 **Imports**
 
@@ -92,7 +90,7 @@ Get a list of existing |___| using the :___-api:`List___________ <API_List______
 Update a |___| 
 ==========================
 
-To update a specified |___|, use the :___-api:`Update_________ <API_Update_________>` operation.
+To update a specified |___|, use the :aws-php-class:`Update_________ <api-__SERVICE__-2018-11-05.html#update______>` operation.
 
 **Imports**
 
@@ -107,7 +105,7 @@ To update a specified |___|, use the :___-api:`Update_________ <API_Update______
 Delete a |___| 
 ==========================
 
-To remove a specified |___|, use the :___-api:`Delete_________ <API_Delete_________>` operation.
+To remove a specified |___|, use the :aws-php-class:`Delete_________ <api-__SERVICE__-2018-11-05.html#delete______>` operation.
 
 **Imports**
 
@@ -118,3 +116,18 @@ To remove a specified |___|, use the :___-api:`Delete_________ <API_Delete______
 
 .. literalinclude:: __SERVICE__.php._____________.main.txt
    :language: php
+   
+Related Information
+===================
+
+The |sdk-php| examples use the following REST operations from the |___-api|: 
+
+* :___-api:`Create_________ <API_Create_________>`
+* :___-api:`Get_________ <API_Get_________>`
+* :___-api:`List_________ <API_List_________>`
+* :___-api:`Describe_________ <API_Describe_________>`
+* :___-api:`Put_________ <API_PutSecret_________>`
+* :___-api:`Rotate_________ <API_Rotate_________>`
+* :___-api:`Delete_________ <API_Delete_________>` 
+   
+For more information about using |long|, see the |___-dg|_.
