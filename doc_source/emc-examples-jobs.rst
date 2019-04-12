@@ -36,7 +36,7 @@ files are stored. For details, see :EMC-ug:`Set Up IAM Permissions <iam-role>` i
 Create a Client
 ===============
 Configure the |sdk-php| by creating a |EMC| client, with the region for your code. In this example, the region is set to us-west-2. Because |EMClong| 
-uses custom endpoints for each account, you must also configure the ``AWS.MediaConvert client class`` to use your account-specific endpoint. To do this, 
+uses custom endpoints for each account, configure the ``AWS.MediaConvert client class`` to use your account-specific endpoint. To do this, 
 set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples-getendpoint>`.
 
 **Imports**
