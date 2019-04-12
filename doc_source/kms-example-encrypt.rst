@@ -18,7 +18,7 @@ Encrypting and Decrypting |KMS| Data Keys Using the |sdk-php| Version 3
 
 Data keys are encryption keys that you can use to encrypt data, including large amounts of data and other data encryption keys.
 
-You can use a |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>` to generate, encrypt, and decrypt data keys. However, |KMS| does not store, manage, or track your data keys, or perform cryptographic operations with data keys. You must use and manage data keys outside of |KMS|.
+You can use a |KMSlong| (|KMS|) :KMS-dg:`customer master key (CMK)<concepts.html#master_keys>` to generate, encrypt, and decrypt data keys. However, |KMS| does not store, manage, or track your data keys, or perform cryptographic operations with data keys. Use and manage data keys outside of |KMS|.
 
 The following examples show how to:
 
