@@ -17,7 +17,7 @@ Signing an |ESlong| Search Request with |sdk-php| Version 3
    :keywords: AWS SDK for PHP Elasticsearch, Amazon Elasticsearch Service for PHP
 
 |ESlong| (|ES|) is a managed service that makes it easy
-to deploy, operate, and scale |ESlong|, a popular open-source search and
+to deploy, operate, and scale |ESlong|, a popular open-source search, and
 analytics engine. |ES| offers direct access to the |ESlong| API. This
 means that developers can use the tools with which they’re familiar, as well
 as robust security options, such as using |IAM| users and roles for access
