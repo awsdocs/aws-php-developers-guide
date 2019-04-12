@@ -63,7 +63,7 @@ To get detailed information about the grants on an |KMS| CMK, use the :KMS-api:`
 Retire a Grant
 ==============
 
-To retire a grant for an |KMS| CMK, use the :KMS-api:`RetireGrant <API_RetireGrant>` operation. You should retire a grant to clean up after you finish using it.
+To retire a grant for an |KMS| CMK, use the :KMS-api:`RetireGrant <API_RetireGrant>` operation. Retire a grant to clean up after you finish using it.
 
 **Imports**
 
