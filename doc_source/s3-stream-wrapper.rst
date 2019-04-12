@@ -174,12 +174,6 @@ Stream wrappers allow many different built-in PHP functions to work with a
 custom system such as |S3|. Here are some of the functions that the |S3|
 stream wrapper enables you to perform with objects stored in |S3|.
 
-
-
-Stream wrappers allow many different built-in PHP functions to work with a
-custom system such as |S3|. Here are some of the functions that the |S3|
-stream wrapper enables you to perform with objects stored in |S3|.
-
 =============== ================================================================
 unlink()        Delete an object from a bucket.
 
