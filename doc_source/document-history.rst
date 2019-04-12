@@ -21,6 +21,8 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 | Change             | Description                            | Release Date      |
 +====================+========================================+===================+
+| |ASM| Examples     | Add more service examples              |  Mar 27th, 2019   |
++--------------------+----------------------------------------+-------------------+
 | endpoint discovery | Configuration of endpoint discovery    |  Feb 15th, 2019   |
 +--------------------+----------------------------------------+-------------------+
 |  |CFlong|          | Add more service examples              |  Jan 25th, 2019   |
