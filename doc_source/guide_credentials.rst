@@ -16,7 +16,7 @@ Credentials for the |sdk-php| Version 3
    :description: How to load credentials for AWS using the AWS SDK for PHP.
    :keywords: configuration, specify region, region, credentials, proxy
 
-To make requests to |AWSlong|, you must supply :iam-ug:`AWS access keys <id_credentials_access-keys>`, also known as credentials,
+To make requests to |AWSlong|, supply :iam-ug:`AWS access keys <id_credentials_access-keys>`, also known as credentials,
 to the |sdk-php|.
 
 You can do this in the following ways:
