@@ -99,7 +99,7 @@ The dependencies of the SDK have changed in this version.
 Region and Version Options Are Now Required
 -------------------------------------------
 
-When instantiating a client for any service, you must specify the ``'region'``
+When instantiating a client for any service, specify the ``'region'``
 and ``'version'`` options. In version 2 of the |sdk-php|, ``'version'`` was completely
 optional, and ``'region'`` was sometimes optional. In version 3, both are always
 required. Being explicit about both of these options allows you to lock into the
