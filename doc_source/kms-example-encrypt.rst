@@ -13,8 +13,8 @@ Encrypting and Decrypting |KMS| Data Keys Using the |sdk-php| Version 3
 #######################################################################
 
 .. meta::
-   :description: Use the AWS KMS API to encrpypt and decrypt data.
-   :keywords: AWS KMS code examples for PHP, encrypt data in PHP, decypt data in PHP
+   :description: Use the AWS KMS API to encrypt and decrypt data.
+   :keywords: AWS KMS code examples for PHP, encrypt data in PHP, decrypt data in PHP
 
 Data keys are encryption keys that you can use to encrypt data, including large amounts of data and other data encryption keys.
 
