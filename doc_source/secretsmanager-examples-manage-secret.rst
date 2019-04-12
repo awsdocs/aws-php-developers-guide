@@ -89,7 +89,7 @@ Get a list of all the secrets that are stored by |ASM| using the :aws-php-class:
 Retrieve Details about a Secret  
 ===============================
 
-Stored secrets contain metadata about rotation rules, when it was last accessed or changed, user-created tags, and the Amazon Resource Name (ARN).. To get the details of a specified secret stored in |ASM|,  use the :aws-php-class:`DescribeSecret <api-secretsmanager-2017-10-17.html#describesecret>` operation.
+Stored secrets contain metadata about rotation rules, when it was last accessed or changed, user-created tags, and the Amazon Resource Name (ARN). To get the details of a specified secret stored in |ASM|,  use the :aws-php-class:`DescribeSecret <api-secretsmanager-2017-10-17.html#describesecret>` operation.
 
 **Imports**
 
