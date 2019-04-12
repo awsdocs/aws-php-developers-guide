@@ -93,7 +93,7 @@ Configuration
 =============
 
 You can configure the behavior of the session handler using the following
-options. All options are optional, but you should be sure to understand
+options. All options are optional, but be sure to understand
 what the defaults are.
 
 ``table_name``
@@ -205,7 +205,7 @@ To enable session locking, set the ``'locking'`` option to ``true`` when you ins
 Garbage Collection
 ==================
 
-You should setup a TTL attribute in your DynamoDB table, using the attribute 'expires'.  This will automatically garbage
+Setup a TTL attribute in your DynamoDB table, using the attribute 'expires'.  This will automatically garbage
 collect your sessions and avoid the need to garbage collect them yourself.
 
 Alternatively, the |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``
