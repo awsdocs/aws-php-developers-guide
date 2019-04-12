@@ -280,7 +280,7 @@ Synchronous Error Handling
 --------------------------
 
 If an error occurs while performing an operation, an exception is thrown.
-For this reason, if you need to handle errors in your code, you should use
+For this reason, if you need to handle errors in your code, use
 ``try``/``catch`` blocks around your operations. The SDK throws service-specific
 exceptions when an error occurs.
 
