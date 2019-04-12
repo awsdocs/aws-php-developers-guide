@@ -58,7 +58,7 @@ with any custom providers.
     Credential providers are invoked every time an API operation is performed.
     If loading credentials is an expensive task (e.g., loading from disk or a
     network resource), or if credentials are not cached by your provider,
-    you should consider wrapping your credential provider in an
+    consider wrapping your credential provider in an
     ``Aws\Credentials\CredentialProvider::memoize`` function. The default
     credential provider used by the SDK is automatically memoized.
 
