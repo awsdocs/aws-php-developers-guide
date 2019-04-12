@@ -116,7 +116,7 @@ what the defaults are.
 ``batch_config``
     Configuration used to batch deletes during garbage collection. These options are passed directly into
     :aws-php-class:`DynamoDB WriteRequestBatch <class-Aws.DynamoDb.WriteRequestBatch.html>` objects.
-    You must manually trigger garbage collection via ``SessionHandler::garbageCollect()``.
+    Manually trigger garbage collection via ``SessionHandler::garbageCollect()``.
 
 ``max_lock_wait_time``
     Maximum time (in seconds) that the session handler should wait to acquire a lock before giving up. The default
@@ -130,7 +130,7 @@ what the defaults are.
     Maximum time (in microseconds) that the session handler should wait between attempts to acquire a lock. The
     default is ``50000`` and is only used with session locking.
 
-To configure the Session Handler, you must specify the configuration options when you instantiate the handler. The
+To configure the Session Handler, specify the configuration options when you instantiate the handler. The
 following code is an example with all of the configuration options specified.
 
 .. code-block:: php
