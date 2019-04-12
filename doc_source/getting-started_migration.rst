@@ -118,7 +118,7 @@ changes until you are ready to explicitly update your configuration.
     available Regions using the :AWS-gr:`Regions and Endpoints <rande>` reference.
 
     For services that are available only via a single, global endpoint (e.g., |R53long|,
-    |IAMlong|, and |CFLong|), you should instantiate clients with their configured
+    |IAMlong|, and |CFLong|), instantiate clients with their configured
     Region set to ``us-east-1``.
 
 .. important::
@@ -308,7 +308,7 @@ can conflict with PHP reserved words, and ended up not being very useful, we
 have removed them in version 3. This supports the data-driven and API version
 agnostic nature of version 3.
 
-Instead of using values from ``Enum`` objects, you should use the literal
+Instead of using values from ``Enum`` objects, use the literal
 values directly (e.g., ``CannedAcl::PUBLIC_READ`` → ``'public-read'``).
 
 Fine-Grained Exception Classes Have Been Removed
@@ -322,7 +322,7 @@ change from version to version). Also, the complete list of the exceptions that 
 be thrown by a given operation is not available, which made version 2's
 fine-grained exception classes incomplete.
 
-You should handle errors by catching the root exception class for each service
+Handle errors by catching the root exception class for each service
 (e.g., ``Aws\Rds\Exception\RdsException``). You can use the ``getAwsErrorCode()``
 method of the exception to check for specific error codes. This is functionally
 equivalent to catching different exception classes, but provides that function
@@ -335,7 +335,7 @@ In version 2 of the |sdk-php|, there was an obscure feature inspired by Laravel 
 to call ``enableFacades()`` on the ``Aws`` class to enable static access to the
 various service clients. This feature goes against PHP best practices, and we
 stopped documenting it over a year ago. In version 3, this feature is removed
-completely. You should retrieve your client objects from the ``Aws\Sdk`` object
+completely. Retrieve your client objects from the ``Aws\Sdk`` object
 and use them as object instances, not static classes.
 
 Paginators Supersede  iterators
