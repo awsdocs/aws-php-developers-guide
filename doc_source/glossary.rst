@@ -20,7 +20,7 @@ API Version
     Services have one or more API versions, and which version you are using
     dictates which operations and parameters are valid. API versions are
     formatted like a date. For example, the latest API version for |S3| is
-    ``2006-03-01``. You must :ref:`specify a version <cfg_version>` when you
+    ``2006-03-01``. :ref:`Specify a version <cfg_version>` when you
     configure a client object.
 
 Client
@@ -39,12 +39,12 @@ Command
     the :doc:`guide_commands` guide for more details.
 
 Credentials
-    To interact with AWS services, you must authenticate with the service using
+    To interact with AWS services, authenticate with the service using
     your credentials, or `AWS access keys
     <http://aws.amazon.com/developers/access-keys/>`_. Your access keys consist
     of two parts: your access key ID, which identifies your account, and your
     secret access, which is used to create **signatures** when executing
-    operations. You must :doc:`provide credentials <guide_credentials>` when
+    operations. :doc:`Provide credentials <guide_credentials>` when
     you configure a client object.
 
 Handler
@@ -99,7 +99,7 @@ Promise
 Region
     Services are supported in :AWS-gr:`one or more geographical regions <rande>`. 
     Services may have different endpoints/URLs in each region, which exist to reduce data
-    latency in your applications. You must :ref:`provide a region <cfg_region>`
+    latency in your applications. :ref:`Provide a region <cfg_region>`
     when you configure a client object, so that the SDK can determine which
     endpoint to use with the service.
 
