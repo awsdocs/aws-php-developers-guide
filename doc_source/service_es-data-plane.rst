@@ -39,7 +39,7 @@ This means that you need to sign requests against the service's signing
 name (``es``, in this case) and the AWS Region of your |ES| domain. A full list
 of Regions supported by |ES| can be found :AWS-gr:`on the AWS Regions and Endpoints
 page <rande>` in the |AWS-gr|.
-However, in this example, we'll sign requests against an |ES| domain in the
+However, in this example, we sign requests against an |ES| domain in the
 ``us-west-2`` region.
 
 You'll need to provide credentials, which you can do either with the SDK's
