@@ -43,7 +43,7 @@ To initiate a subscription to an email address, use the :SNS-api:`Subscribe <API
 
 You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed. This is shown in other examples in this topic.
 
-In this example, the endpoint is an email address. A confirmation token will be sent to this email. Verify the subscription with this confirmation token within three days of receipt.
+In this example, the endpoint is an email address. A confirmation token is sent to this email. Verify the subscription with this confirmation token within three days of receipt.
 
 **Imports**
 
@@ -62,7 +62,7 @@ To initiate a subscription to a web app, use the :SNS-api:`Subscribe <API_Subscr
 
 You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed. This is shown in other examples in this topic.
 
-In this example, the endpoint is a URL. A confirmation token will be sent to this web address. Verify the subscription with this confirmation token within three days of receipt.
+In this example, the endpoint is a URL. A confirmation token is sent to this web address. Verify the subscription with this confirmation token within three days of receipt.
 
 
 **Imports**
@@ -82,7 +82,7 @@ To initiate a subscription to a |LAM| function, use the :SNS-api:`Subscribe <API
 
 You can use the subscribe method to subscribe several different endpoints to an |SNS| topic, depending on the values used for parameters passed. This is shown in other examples in this topic.
 
-In this example, the endpoint is a |LAM| function. A confirmation token will be sent to this |LAM| function. Verify the subscription with this confirmation token within three days of receipt.
+In this example, the endpoint is a |LAM| function. A confirmation token is sent to this |LAM| function. Verify the subscription with this confirmation token within three days of receipt.
 
 
 **Imports**
@@ -106,7 +106,7 @@ You can use the subscribe method to subscribe several different endpoints to an 
 
 In this example, the endpoint is a phone number in E.164 format, a standard for international telecommunications.
 
-A confirmation token will be sent to this phone number. Verify the subscription with this confirmation token within three days of receipt.
+A confirmation token is sent to this phone number. Verify the subscription with this confirmation token within three days of receipt.
 
 For an alternative way to send SMS messages with |SNS|, see :doc:`sns-examples-sending-sms`.
 
