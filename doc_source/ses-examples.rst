@@ -17,7 +17,7 @@
    :description: Amazon SES code examples for the AWS SDK for PHP version 3.
    :keywords: Amazon Simple Email Service code examples for PHP, AWS Email, Amazon bulk email
 
-|SESlong| (|SES|) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own
+|SESlong| (|SES|) is an email platform that provides an easy, money-saving way for you to send and receive email using your own
 email addresses and domains. For more information about |SES|, see the |SES-dg|_.
 
 .. image:: images/code-samples-ses.png
