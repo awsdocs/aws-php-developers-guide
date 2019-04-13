@@ -57,7 +57,7 @@ Retrieve a Secret from |ASM|
 
 To retrieve the value of a secret stored in |ASM|, use the :aws-php-class:`GetSecretValue <api-secretsmanager-2017-10-17.html#getsecretvalue>` operation.
 
-In this example, secret is a string that contains the stored value. If called on the secret we created earlier, this sample will output ``[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``. Use ``json.loads`` to access indexed values.
+In this example, secret is a string that contains the stored value. If called on the secret we created earlier, this sample outputs ``[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``. Use ``json.loads`` to access indexed values.
 
 
 **Imports**
@@ -106,7 +106,7 @@ Update the Secret Value
 
 To store a new encrypted secret value in |ASM|, use the :aws-php-class:`PutSecretValue <api-secretsmanager-2017-10-17.html#putsecretvalue>` operation.
 
-This creates a new version of the secret. If a version of the secret already exists, add the ``VersionStages`` parameter with the value in ``AWSCURRENT`` to ensure the new value is used when retrieving the value.
+This creates a new version of the secret. If a version of the secret already exists, add the ``VersionStages`` parameter with the value in ``AWSCURRENT`` to ensure that the new value is used when retrieving the value.
 
 **Imports**
 

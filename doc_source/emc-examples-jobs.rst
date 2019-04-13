@@ -16,14 +16,14 @@ Creating and Managing Transcoding Jobs in |EMClong| with |sdk-php| Version 3
    :description: Example that shows how to create and manage conversion jobs in AWS Elemental MediaConvert using the AWS SDK for PHP version 3.
    :keywords: AWS Elemental MediaConvert Examples for PHP, Create MediaConvert Job for PHP
 
-In this example, you use the |sdk-php| Version 3 to call |EMClong| and create a transcoding job. Before you begin, you will need to upload the 
-input video to the |S3| bucket you provisioned for input storage. For a list of supported input video codecs and containers, see 
+In this example, you use the |sdk-php| Version 3 to call |EMClong| and create a transcoding job. Before you begin, you need to upload the 
+input video to the |S3| bucket you provisioned for the input storage. For a list of supported input video codecs and containers, see 
 :EMC-ug:`Supported Input Codecs and Containers <reference-codecs-containers-input>` in the |EMC-ug|_.
 
 The following examples show how to:
 
 * Create transcoding jobs in |EMClong|. :aws-php-class:`CreateJob </api-mediaconvert-2017-08-29.html#createjob>`.
-* Cancel a transcoding job from |EMClong| queue. :aws-php-class:`CancelJob </api-mediaconvert-2017-08-29.html#canceljob>`
+* Cancel a transcoding job from  the |EMClong| queue. :aws-php-class:`CancelJob </api-mediaconvert-2017-08-29.html#canceljob>`
 * Retrieve the JSON for a completed transcoding job. :aws-php-class:`GetJob </api-mediaconvert-2017-08-29.html#getjob>`
 * Retrieve a JSON array for up to 20 of the most recently created jobs. :aws-php-class:`ListJobs </api-mediaconvert-2017-08-29.html#listjobs>`
 
@@ -36,7 +36,7 @@ files are stored. For details, see :EMC-ug:`Set Up IAM Permissions <iam-role>` i
 Create a Client
 ===============
 Configure the |sdk-php| by creating a |EMC| client, with the region for your code. In this example, the region is set to us-west-2. Because |EMClong| 
-uses custom endpoints for each account, you must also configure the ``AWS.MediaConvert client class`` to use your account-specific endpoint. To do this, 
+uses custom endpoints for each account, configure the ``AWS.MediaConvert client class`` to use your account-specific endpoint. To do this, 
 set the endpoint parameter to your :doc:`account-specific endpoint <emc-examples-getendpoint>`.
 
 **Imports**
@@ -99,7 +99,7 @@ Listing Recent Transcoding Jobs
 ===============================
 
 Create the parameters JSON, including values to specify whether to sort the list in ASCENDING, or DESCENDING order, the ARN of the job queue 
-to check, and the status of jobs to include. This will return up to 20 Jobs. To retrieve the twenty next most recent jobs use the nextToken 
+to check, and the status of jobs to include. This returns up to 20 Jobs. To retrieve the 20 next most recent jobs use the nextToken 
 string returned with result.
 
 **Sample Code**

@@ -19,7 +19,7 @@ Enabling Long Polling in |SQS| with |sdk-php| Version 3
 
 Long polling reduces the number of empty responses by allowing |SQS| to wait a specified time for a message to become available in the queue before
 sending a response. Also, long polling eliminates false empty responses by querying all of the servers instead of a sampling of servers. To enable
-long polling, you must specify a non-zero wait time for received messages. To learn more, see :SQS-dg:`SQS Long Polling <sqs-long-polling>`.
+long polling, specify a non-zero wait time for received messages. To learn more, see :SQS-dg:`SQS Long Polling <sqs-long-polling>`.
 
 The following examples show how to:
 

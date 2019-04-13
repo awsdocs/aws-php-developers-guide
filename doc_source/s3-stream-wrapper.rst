@@ -159,10 +159,10 @@ following modes.
 
 = =============================================================================
 r A read-only stream where the file must already exist.
-w A write-only stream. If the file already exists, it will be overwritten.
-a A write-only stream. If the file already exists, it will be downloaded to a
+w A write-only stream. If the file already exists, it is overwritten.
+a A write-only stream. If the file already exists, it is downloaded to a
   temporary stream and any writes to
-  the stream will be appended to any previously uploaded data.
+  the stream is appended to any previously uploaded data.
 x A write-only stream. An error is raised if the file does not already exist.
 = =============================================================================
 
@@ -234,7 +234,7 @@ rename()        Rename an object by copying the object then deleting the
 
 .. note::
 
-    Although ``copy`` will generally work with the |S3| stream wrapper, some errors
+    Although ``copy`` generally works with the |S3| stream wrapper, some errors
     might not be properly reported due to the internals of the ``copy`` function
     in PHP. We recommend that you use an instance of :aws-php-class:`Aws\S3\ObjectCopier
     </class-Aws.S3.ObjectCopier.html>`
@@ -339,4 +339,4 @@ operation.
 
 ``cache``
     An instance of ``Aws\CacheInterface`` to use to cache previously obtained
-    file stats. By default, the stream wrapper will use an in-memory LRU cache.
+    file stats. By default, the stream wrapper uses an in-memory LRU cache.

@@ -17,7 +17,7 @@ Verifying Email Identities Using the |SES| API and the |sdk-php| Version 3
    :keywords: Amazon SES code examples for PHP, approve emails recipients with PHP
 
 When you first start using your |SESlong| (|SES|) account, all senders and recipients must be verified in the same AWS Region that you
-will be sending emails to. For more information about sending emails, see :SES-dg:`Sending Email with Amazon SES <sending-email>`.
+are sending emails to. For more information about sending emails, see :SES-dg:`Sending Email with Amazon SES <sending-email>`.
 
 The following examples show how to:
 

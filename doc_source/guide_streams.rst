@@ -28,16 +28,16 @@ can be satisfied with a string, a PHP stream resource, or an instance of
 
 .. warning::
 
-    The SDK will take ownership of any raw PHP stream resource supplied as an
-    input parameter to a command. The stream will be consumed and closed on your
+    The SDK takes ownership of any raw PHP stream resource supplied as an
+    input parameter to a command. The stream is consumed and closed on your
     behalf.
 
     If you need to share a stream between an SDK operation and your code, wrap
     it in an instance of ``GuzzleHttp\Psr7\Stream`` before including it as a
-    command parameter. The SDK will consume the stream, so your code will need
-    to account for movement of the stream's internal cursor. Guzzle streams will
+    command parameter. The SDK consumes the stream, so your code needs
+    to account for movement of the stream's internal cursor. Guzzle streams 
     call ``fclose`` on the underlying stream resource when they are destroyed by
-    PHP's garbage collector, so you will not need to close the stream yourself.
+    PHP's garbage collector, so you do not need to close the stream yourself.
 
 Stream Decorators
 =================
@@ -75,7 +75,7 @@ CachingStream
 Used to allow seeking over previously read bytes on
 non-seekable streams. This can be useful when transferring a non-seekable
 entity body fails due to needing to rewind the stream (for example, resulting
-from a redirect). Data that is read from the remote stream will be buffered in
+from a redirect). Data that is read from the remote stream is buffered in
 a PHP temp stream so that previously read bytes are cached first in memory,
 then on disk.
 
@@ -177,7 +177,7 @@ PumpStream
 
 Provides a read-only stream that pumps data from a PHP callable.
 
-When invoking the provided callable, the PumpStream will pass the amount of
+When invoking the provided callable, the PumpStream passes the amount of
 data requested to read to the callable. The callable can choose to ignore
 this value and return fewer or more bytes than requested. Any extra data
 returned by the provided callable is buffered internally until drained using

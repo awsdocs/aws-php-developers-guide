@@ -65,7 +65,7 @@ Enumerating Data from Results
 =============================
 
 Paginator objects have a method named ``search()``, which allows you to create
-iterators for data within a set of results. When you call ``search()``, you must
+iterators for data within a set of results. When you call ``search()``, 
 provide a :doc:`JMESPath expression <guide_jmespath>` to specify what data to extract.
 Calling ``search()`` returns an iterator that yields the results of the
 expression on each page of results. This is evaluated lazily, as you iterate

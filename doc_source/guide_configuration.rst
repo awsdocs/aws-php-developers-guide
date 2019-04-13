@@ -731,7 +731,7 @@ using the ``verify`` ``http`` option.
   verification using a custom CA bundle.
 
 If the CA bundle cannot be found for your system and you receive an error,
-you must provide the path to a CA bundle to the SDK. If you do not
+provide the path to a CA bundle to the SDK. If you do not
 need a specific CA bundle, Mozilla provides a commonly used CA bundle
 which you can download `here <https://raw.githubusercontent.com/bagder/ca-bundle/master/ca-bundle.crt>`_
 (this is maintained by the maintainer of cURL). Once you have a CA bundle

@@ -12,7 +12,7 @@
 Using |S3| Multipart Uploads with AWS SDK for PHP version 3 
 ###########################################################
 
-.. meta::
+.. meta::you need to reset the variable inside of the block.
    :description: Break larger files into smaller parts when you upload to Amazon S3 using the AWS SDK for PHP version 3 .
    :keywords: Amazon S3, AWS SDK for PHP version 3  examples, S3 for PHP code examples
 
@@ -71,9 +71,9 @@ process.
    
 The uploader creates a generator of part data, based on the provided source and
 configuration, and attempts to upload all parts. If some part uploads fail, the
-uploader keeps track of them and continues to upload later parts until the entire
-source data is read. It then either completes the upload or throws an
-exception that contains information about the parts that failed to upload.
+uploader continues to upload later parts until the entire
+source data is read. Afterwards, the uploader retries to upload the failed parts or throws an
+exception containing information about the parts that failed to upload.
 
 Customizing a Multipart Upload
 ==============================
@@ -133,8 +133,8 @@ complete.
 .. literalinclude:: s3.php.multipart_upload_errors.main.txt
    :language: PHP
 
-Resuming an upload from an ``UploadState`` will only attempt to upload parts
-that are not already uploaded. The state object keeps track of missing parts,
+Resuming an upload from an ``UploadState`` attempts to upload parts
+that are not already uploaded. The state object tracks the missing parts,
 even if they are not consecutive. The uploader reads or seeks through the
 provided source file to the byte ranges that belong to the parts that still need
 to be uploaded.
@@ -147,7 +147,7 @@ when you're not handling an exception, by calling ``$uploader->getState()``.
 
     Streams passed in as a source to a ``MultipartUploader`` are not
     automatically rewound before uploading. If you're using a stream instead of a
-    file path in a loop similar to the previous example, you need to reset the
+    file path in a loop similar to the previous example, reset the
     ``$source`` variable inside of the ``catch`` block.
 
 **Imports**

@@ -49,9 +49,9 @@ To list the shards in a |AK| data stream, use the :AKS-api:`ListShards <API_List
 Add More Data Stream Shards
 ===========================
 
-If you need more data stream shards, you can increase your current number of shards. We recommend that you double your shard count when increasing. This will make a copy of each shard currently available to increase your capacity. You can double the number of your shards only twice in one 24-hour period.
+If you need more data stream shards, you can increase your current number of shards. We recommend that you double your shard count when increasing. This makes a copy of each shard currently available to increase your capacity. You can double the number of your shards only twice in one 24-hour period.
 
-Remember billing for |AKS| usage is calculated per shard, so when demand decreases, we recommend that you reduce your shard count by half. When you remove shards, you can only scale down the amount of shards to half of your current shard count.
+Remember that billing for |AKS| usage is calculated per shard, so when demand decreases, we recommend that you reduce your shard count by half. When you remove shards, you can only scale down the amount of shards to half of your current shard count.
 
 To update the shard count of a |AK| data stream, use the :AKS-api:`UpdateShardCount <API_UpdateShardCount>` operation.
 

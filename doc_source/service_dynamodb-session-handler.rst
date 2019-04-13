@@ -93,7 +93,7 @@ Configuration
 =============
 
 You can configure the behavior of the session handler using the following
-options. All options are optional, but you should be sure to understand
+options. All options are optional, but be sure to understand
 what the defaults are.
 
 ``table_name``
@@ -116,7 +116,7 @@ what the defaults are.
 ``batch_config``
     Configuration used to batch deletes during garbage collection. These options are passed directly into
     :aws-php-class:`DynamoDB WriteRequestBatch <class-Aws.DynamoDb.WriteRequestBatch.html>` objects.
-    You must manually trigger garbage collection via ``SessionHandler::garbageCollect()``.
+    Manually trigger garbage collection via ``SessionHandler::garbageCollect()``.
 
 ``max_lock_wait_time``
     Maximum time (in seconds) that the session handler should wait to acquire a lock before giving up. The default
@@ -130,7 +130,7 @@ what the defaults are.
     Maximum time (in microseconds) that the session handler should wait between attempts to acquire a lock. The
     default is ``50000`` and is only used with session locking.
 
-To configure the Session Handler, you must specify the configuration options when you instantiate the handler. The
+To configure the Session Handler, specify the configuration options when you instantiate the handler. The
 following code is an example with all of the configuration options specified.
 
 .. code-block:: php
@@ -205,7 +205,7 @@ To enable session locking, set the ``'locking'`` option to ``true`` when you ins
 Garbage Collection
 ==================
 
-You should setup a TTL attribute in your DynamoDB table, using the attribute 'expires'.  This will automatically garbage
+Setup a TTL attribute in your DynamoDB table, using the attribute 'expires'.  This will automatically garbage
 collect your sessions and avoid the need to garbage collect them yourself.
 
 Alternatively, the |DDB| Session Handler supports session garbage collection by using a series of ``Scan`` and ``BatchWriteItem``

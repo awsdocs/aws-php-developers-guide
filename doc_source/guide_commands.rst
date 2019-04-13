@@ -147,7 +147,7 @@ instead of sending actual HTTP requests.
     $command = $s3Client->getCommand('ListObjects');
     // Associate the mock handler with the command
     $command->getHandlerList()->setHandler($mock);
-    // Executing the command will use the mock handler, which will return the
+    // Executing the command will use the mock handler, which returns the
     // mocked result object
     $result = $client->execute($command);
 
@@ -227,7 +227,7 @@ complex example. Let's say you want to upload files on disk to an |S3|
 bucket. To get a list of files from disk, we can use PHP's
 ``DirectoryIterator``. This iterator yields ``SplFileInfo`` objects. The
 ``CommandPool`` accepts an iterator that yields ``Aws\CommandInterface``
-objects, so we will need to map over the ``SplFileInfo`` objects to return
+objects, so we map over the ``SplFileInfo`` objects to return
 ``Aws\CommandInterface`` objects.
 
 .. code-block:: php
@@ -264,7 +264,7 @@ objects, so we will need to map over the ``SplFileInfo`` objects to return
                 continue;
             }
             $filename = $file->getPath() . '/' . $file->getFilename();
-            // Yield a command that will be executed by the pool
+            // Yield a command that is executed by the pool
             yield $client->getCommand('PutObject', [
                 'Bucket' => $bucket,
                 'Key'    => $file->getBaseName(),
@@ -319,7 +319,7 @@ The ``Aws\CommandPool`` constructor accepts various configuration options.
 
 concurrency (callable|int)
     Maximum number of commands to execute concurrently.
-    Provide a function to resize the pool dynamically. The function will be
+    Provide a function to resize the pool dynamically. The function is
     provided the current number of pending requests and is expected to return
     an integer representing the new pool size limit.
 

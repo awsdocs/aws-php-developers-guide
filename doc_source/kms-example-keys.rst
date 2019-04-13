@@ -49,7 +49,7 @@ To create a :KMS-dg:`CMK <concepts.html#master_keys>`, use the :KMS-api:`CreateK
 Generate a Data Key
 ===================
 
-To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates. You must specify the customer master key (CMK) under which to generate the data key.
+To generate a data encryption key, use the :KMS-api:`GenerateDataKey <API_GenerateDataKey>` operation. This operation returns plaintext and encrypted copies of the data key that it creates. Specify the customer master key (CMK) under which to generate the data key.
 
 **Imports**
 
