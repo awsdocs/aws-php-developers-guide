@@ -133,7 +133,7 @@ complete.
 .. literalinclude:: s3.php.multipart_upload_errors.main.txt
    :language: PHP
 
-Resuming an upload from an ``UploadState`` will only attempt to upload parts
+Resuming an upload from an ``UploadState`` attempts to upload parts
 that are not already uploaded. The state object keeps track of missing parts,
 even if they are not consecutive. The uploader reads or seeks through the
 provided source file to the byte ranges that belong to the parts that still need
