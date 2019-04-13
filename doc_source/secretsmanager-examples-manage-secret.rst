@@ -57,7 +57,7 @@ Retrieve a Secret from |ASM|
 
 To retrieve the value of a secret stored in |ASM|, use the :aws-php-class:`GetSecretValue <api-secretsmanager-2017-10-17.html#getsecretvalue>` operation.
 
-In this example, secret is a string that contains the stored value. If called on the secret we created earlier, this sample will output ``[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``. Use ``json.loads`` to access indexed values.
+In this example, secret is a string that contains the stored value. If called on the secret we created earlier, this sample outputs ``[{\"username\":\"<<USERNAME>>\",\"password\":\"<<PASSWORD>>\"}]``. Use ``json.loads`` to access indexed values.
 
 
 **Imports**
