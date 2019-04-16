@@ -319,7 +319,7 @@ the function that creates the provider.
     $profile = 'production';
     $path = '/full/path/to/credentials.ini';
 
-    $provider = CredentialProvider::ini($profile, $path);
+    $provider = CredentialProvider::process($profile, $path);
     $provider = CredentialProvider::memoize($provider);
 
     $client = new S3Client([
