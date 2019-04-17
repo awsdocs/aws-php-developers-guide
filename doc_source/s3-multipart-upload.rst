@@ -107,7 +107,7 @@ cost, and optimal usage will depend on your use case and environment.
 .. code-block:: php
 
    $uploader = new MultipartUploader($client, $source, [
-      'bucket' => 'your-bucket,
+      'bucket' => 'your-bucket',
       'key' => 'your-key',
       'before_upload' => function(\Aws\Command $command) {
          gc_collect_cycles();
