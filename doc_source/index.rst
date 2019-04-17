@@ -12,6 +12,10 @@
 |sdk-php|
 ###############
 
+.. meta::	
+    :description: Introduces the AWS SDK for PHP and walks you through simple examples to use the SDK for the first time. Also provides tips and links to advanced features and resources.	   
+    :keywords: php, sdk, aws
+
 .. toctree::
 
     AWS SDK for PHP <welcome.rst>
