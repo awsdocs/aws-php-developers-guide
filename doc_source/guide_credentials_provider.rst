@@ -272,6 +272,62 @@ the function that creates the provider.
         'credentials' => $provider
     ]);
 
+process provider
+================
+
+``Aws\Credentials\CredentialProvider::process`` attempts to load credentials from
+a credential_process specified in an :doc:`ini credential file
+<guide_credentials_profiles>`. By default, the SDK attempts to load the "default"
+profile from a file located at ``~/.aws/credentials``. The SDK will call the
+credential_process command exactly as given and then read JSON data from stdout.
+The credential_process must write credentials to stdout in the following format:
+
+.. code-block:: javascript
+
+    {
+        "Version": 1,
+        "AccessKeyId": "",
+        "SecretAccessKey": "",
+        "SessionToken": "",
+        "Expiration": ""
+    }
+
+``SessionToken`` and ``Expiration`` are optional. If present, the credentials
+will be treated as temporary.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+
+    $provider = CredentialProvider::process();
+    // Cache the results in a memoize function to avoid loading and parsing
+    // the ini file on every API operation
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
+You can use a custom profile or .ini file location by providing arguments to
+the function that creates the provider.
+
+.. code-block:: php
+
+    $profile = 'production';
+    $path = '/full/path/to/credentials.ini';
+
+    $provider = CredentialProvider::process($profile, $path);
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
 instanceProfile provider
 ========================
 
