@@ -171,5 +171,72 @@ using the |EC2| instance’s role, you can associate an |IAM| role with an ECS t
 For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Tasks<task-iam-roles>`.
 
 
+Using an |IAM| Role from another AWS account
+============================================
 
-  
+To assume a role from another AWS account, first you must create an IAM role in that account that allows entities in other AWS accounts to perform actions in that account. 
+For more information about cross account access see 
+:iam-ug:`Tutorial: Delegate Access Across AWS Accounts Using IAM Roles <tutorial_cross-account-with-roles>`
+
+Once created record the role-arn to be used when authenticating. You will need permission to 
+assume this role using the AWS account associated with your provided credentials.
+
+Create an |STS| client with credentials for your AWS account. Below we used a Credentials 
+profile, but you can use any method. With the newly created STS client, call assume-role and 
+provide a sessionName. Create new credentials from the result. These credentials will last an 
+hour by default, but can be configured to last between 15 minutes and the maximum session 
+duration using the DurationSeconds parameter.
+
+**Sample Code**
+
+    .. code-block:: php
+    
+        $stsClient = new Aws\Sts\StsClient([
+            'profile' => 'default',
+            'region' => 'us-east-2',
+            'version' => '2011-06-15'
+        ]);
+        
+        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access"
+        $sessionName = "s3-access-example"
+        
+        $result = $stsClient->AssumeRole([
+              'RoleArn' => $ARN,
+              'RoleSessionName' => $sessionName,
+        ]);
+        
+         $s3Client = new S3Client([
+            'version'     => '2006-03-01',
+            'region'      => 'us-west-2',
+            'credentials' =>  [
+                'key'    => $result['Credentials']['AccessKeyId'],
+                'secret' => $result['Credentials']['SecretAccessKey'],
+                'token'  => $result['Credentials']['SessionToken']
+            ]
+        ]);
+
+For more information see :iam-ug:`Using IAM Roles <id_roles_use>` or 
+:aws-php-class:`AssumeRole <api-sts-2011-06-15.html#assumerole>` in the |sdk-php| API Reference.
+
+
+Assuming a Role with Cognito
+============================
+
+|COG| provides authentication, authorization, and user management for applications when users do not have an AWS account. Create a directory of users with a User Pool. Users can sign in directly or with a third party identity provider by using an Identity Pool. 
+
+For more information about User Pools see :iam-ug:`Getting Started with User Pools <getting-started-with-cognito-user-pools>` or 
+:aws-php-class:`Amazon Cognito Identity Provider <api-cognito-idp-2016-04-18>` in the |sdk-php| API Reference.
+ 
+For more information about Identity Pools see :iam-ug:`Getting Started with Amazon Cognito Identity Pools (Federated Identities) <getting-started-with-identity-pools>` or 
+:aws-php-class:`Amazon Cognito Identity <api-cognito-identity-2014-06-30>` in the |sdk-php| API Reference.   
+
+1. Create a User Pool
+1. Create an Admin User (or other users)
+1. Create an Identity Pool 
+1. Create a User Pool Client 
+1. Add Identity Pool Login Provider
+1. Create IAM Role for User Pool to Assume
+1. Generate a Cognito ID
+1. ... 
+1. Associate Identity with User Pool
+1. Authenticate Identity with Third Party - GetCredentialsForIdentity 

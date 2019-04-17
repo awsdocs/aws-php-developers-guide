@@ -82,3 +82,18 @@ credentials were defined in environment variables, but a credentials file is
 defined, the SDK uses the "default" profile. You can change the default
 profile by specifying an alternate profile name in the ``AWS_PROFILE``
 environment variable.
+
+Assume Role with Profile
+========================
+
+You can configure the AWS SDK for PHP to use an IAM role by defining a profile for the role in the :file:`config` inside the :file:`.aws/` folder.
+
+Create a new profile and add the :code:`role_arn` for the role you will assume and the profile 
+from the credentials file that has permissions to assume this role. 
+
+
+.. code-block:: ini
+
+    [profile test_role]
+    role_arn = arn:aws:iam::123456789012:role/testing
+    source_profile = project1
