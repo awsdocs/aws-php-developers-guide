@@ -49,7 +49,7 @@ almost no work on your part.
     use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
     
    
-Create and assign |IAM| role to an |EC2| Instance
+Create and Assign |IAM| Role to an |EC2| Instance
 -------------------------------------------------
 
 1. Create an |IAM| client.
@@ -171,5 +171,91 @@ using the |EC2| instance’s role, you can associate an |IAM| role with an ECS t
 For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Tasks<task-iam-roles>`.
 
 
+Using an |IAM| Role from Another AWS Account
+============================================
 
-  
+To assume a role from another AWS account (Account B), first you must create an IAM role in Account B that allows entities in other AWS accounts (Account A) to perform actions in Account B. 
+For more information about cross-account access, see 
+:iam-ug:`Tutorial: Delegate Access Across AWS Accounts Using IAM Roles <tutorial_cross-account-with-roles>`
+
+After you create a role in Account B, record the role-arn to be used when authenticating with Account A.
+Account A assumes the role using the AWS credentials associated with Account A.
+
+Create an |STS| client with credentials for your AWS account. Below we used a Credentials 
+profile, but you can use any method. With the newly created STS client, call assume-role and 
+provide a custom sessionName. Create new credentials from the result. By default credentials last an 
+hour, but can be configured to last between 15 minutes and the maximum session 
+duration specified in the DurationSeconds parameter of AssumeRole.
+
+**Sample Code**
+
+    .. code-block:: php
+    
+        $stsClient = new Aws\Sts\StsClient([
+            'profile' => 'default',
+            'region' => 'us-east-2',
+            'version' => '2011-06-15'
+        ]);
+        
+        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access";
+        $sessionName = "s3-access-example";
+        
+        $result = $stsClient->AssumeRole([
+              'RoleArn' => $ARN,
+              'RoleSessionName' => $sessionName,
+        ]);
+        
+         $s3Client = new S3Client([
+            'version'     => '2006-03-01',
+            'region'      => 'us-west-2',
+            'credentials' =>  [
+                'key'    => $result['Credentials']['AccessKeyId'],
+                'secret' => $result['Credentials']['SecretAccessKey'],
+                'token'  => $result['Credentials']['SessionToken']
+            ]
+        ]);
+
+For more information, see :iam-ug:`Using IAM Roles <id_roles_use>` or 
+:aws-php-class:`AssumeRole <api-sts-2011-06-15.html#assumerole>` in the |sdk-php| API Reference.
+
+Using an |IAM| Role with Web Identity
+=====================================
+
+Web Identity Federation allows customers to use third-party identity providers for authentication when accessing AWS resources. Before you can assume a role with web identity, you must create an IAM Role and configure a web identity IdP. For more information, see :iam-ug:`Creating a Role for Web Identity or OpenID Connect Federation (Console) <id_roles_create_for-idp_oidc>`.
+
+After creating an identity and a role, use an |STS| client to authenticate a user. Provide the webIdentityToken and ProviderId for your identity, and the RoleArn for the IAM role with permissions for the user. 
+
+**Sample Code**
+
+    .. code-block:: php
+    
+        $stsClient = new Aws\Sts\StsClient([
+            'profile' => 'default',
+            'region' => 'us-east-2',
+            'version' => '2011-06-15'
+        ]);
+        
+        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access";
+        $sessionName = "s3-access-example";
+        $duration = 3600;
+        
+        $result = $stsClient->AssumeRoleWithWebIdentity([
+              'WebIdentityToken' => "FACEBOOK_ACCESS_TOKEN",
+              'ProviderId' => "graph.facebook.com",
+              'RoleArn' => $ARN,
+              'RoleSessionName' => $sessionName,
+              'DurationSeconds' => $duration
+        ]);
+        
+         $s3Client = new S3Client([
+            'version'     => '2006-03-01',
+            'region'      => 'us-west-2',
+            'credentials' =>  [
+                'key'    => $result['Credentials']['AccessKeyId'],
+                'secret' => $result['Credentials']['SecretAccessKey'],
+                'token'  => $result['Credentials']['SessionToken']
+            ]
+        ]);
+        
+For more information, see :iam-ug:`AssumeRoleWithWebIdentity—Federation Through a Web-based Identity Provider <id_credentials_temp_request.html#api_assumerolewithwebidentity>` or 
+:aws-php-class:`AssumeRoleWithWebIdentity  <api-sts-2011-06-15.html#assumerolewithwebidentity>` in the |sdk-php| API Reference.
