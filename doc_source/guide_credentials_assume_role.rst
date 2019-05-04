@@ -49,8 +49,8 @@ almost no work on your part.
     use cached instance profile credentials instead. For details, see :doc:`guide_configuration`.
     
    
-Create and assign |IAM| role to an |EC2| Instance
--------------------------------------------------
+Create and Assign an |IAM| Role to an |EC2| Instance
+----------------------------------------------------
 
 1. Create an |IAM| client.
 
@@ -171,21 +171,20 @@ using the |EC2| instance’s role, you can associate an |IAM| role with an ECS t
 For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Tasks<task-iam-roles>`.
 
 
-Using an |IAM| Role from another AWS account
-============================================
+Assuming an |IAM| Role from Another AWS Account
+===============================================
 
-To assume a role from another AWS account, first you must create an IAM role in that account that allows entities in other AWS accounts to perform actions in that account. 
-For more information about cross account access see 
+To assume a role from another AWS account (Account B), first you must create an IAM role in Account B. This role allows entities in other accounts,such as your account (Account A), to perform actions in Account B. 
+For more information about cross-account access, see 
 :iam-ug:`Tutorial: Delegate Access Across AWS Accounts Using IAM Roles <tutorial_cross-account-with-roles>`
 
-Once created record the role-arn to be used when authenticating. You will need permission to 
-assume this role using the AWS account associated with your provided credentials.
+After you create a role in Account B, record the role-arn. You will use this AR when you assume the role from Account A.
+You assume the role using the AWS credentials associated with your entity in Account A
 
 Create an |STS| client with credentials for your AWS account. Below we used a Credentials 
 profile, but you can use any method. With the newly created STS client, call assume-role and 
-provide a sessionName. Create new credentials from the result. These credentials will last an 
-hour by default, but can be configured to last between 15 minutes and the maximum session 
-duration using the DurationSeconds parameter.
+provide a custom sessionName. Retrieve the new temporary credentials from the result. 
+By default credentials last an hour.
 
 **Sample Code**
 
@@ -197,8 +196,8 @@ duration using the DurationSeconds parameter.
             'version' => '2011-06-15'
         ]);
         
-        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access"
-        $sessionName = "s3-access-example"
+        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access";
+        $sessionName = "s3-access-example";
         
         $result = $stsClient->AssumeRole([
               'RoleArn' => $ARN,
@@ -215,28 +214,49 @@ duration using the DurationSeconds parameter.
             ]
         ]);
 
-For more information see :iam-ug:`Using IAM Roles <id_roles_use>` or 
+For more information, see :iam-ug:`Using IAM Roles <id_roles_use>` or 
 :aws-php-class:`AssumeRole <api-sts-2011-06-15.html#assumerole>` in the |sdk-php| API Reference.
 
+Using an |IAM| Role with Web Identity
+=====================================
 
-Assuming a Role with Cognito
-============================
+Web Identity Federation allows customers to use third-party identity providers for authentication when 
+accessing AWS resources. Before you can assume a role with web identity, you must create an IAM Role and 
+configure a web identity provider (IdP). 
+For more information, see :iam-ug:`Creating a Role for Web Identity or OpenID Connect Federation (Console) <id_roles_create_for-idp_oidc>`.
 
-|COG| provides authentication, authorization, and user management for applications when users do not have an AWS account. Create a directory of users with a User Pool. Users can sign in directly or with a third party identity provider by using an Identity Pool. 
+After :iam-ug:`creating an identity <id_roles_providers_create_oidc>` and :iam-ug:`creating a role <id_roles_create_for-idp_oidc>`, use an |STS| client to authenticate a user. Provide the webIdentityToken and ProviderId for your identity, and the RoleArn for the IAM role with permissions for the user. 
 
-For more information about User Pools see :iam-ug:`Getting Started with User Pools <getting-started-with-cognito-user-pools>` or 
-:aws-php-class:`Amazon Cognito Identity Provider <api-cognito-idp-2016-04-18>` in the |sdk-php| API Reference.
- 
-For more information about Identity Pools see :iam-ug:`Getting Started with Amazon Cognito Identity Pools (Federated Identities) <getting-started-with-identity-pools>` or 
-:aws-php-class:`Amazon Cognito Identity <api-cognito-identity-2014-06-30>` in the |sdk-php| API Reference.   
+**Sample Code**
 
-1. Create a User Pool
-1. Create an Admin User (or other users)
-1. Create an Identity Pool 
-1. Create a User Pool Client 
-1. Add Identity Pool Login Provider
-1. Create IAM Role for User Pool to Assume
-1. Generate a Cognito ID
-1. ... 
-1. Associate Identity with User Pool
-1. Authenticate Identity with Third Party - GetCredentialsForIdentity 
+    .. code-block:: php
+    
+        $stsClient = new Aws\Sts\StsClient([
+            'profile' => 'default',
+            'region' => 'us-east-2',
+            'version' => '2011-06-15'
+        ]);
+        
+        $ARN = "arn:aws:iam::123456789012:role/xaccounts3access";
+        $sessionName = "s3-access-example";
+        $duration = 3600;
+        
+        $result = $stsClient->AssumeRoleWithWebIdentity([
+              'WebIdentityToken' => "FACEBOOK_ACCESS_TOKEN",
+              'ProviderId' => "graph.facebook.com",
+              'RoleArn' => $ARN,
+              'RoleSessionName' => $sessionName,
+        ]);
+        
+         $s3Client = new S3Client([
+            'version'     => '2006-03-01',
+            'region'      => 'us-west-2',
+            'credentials' =>  [
+                'key'    => $result['Credentials']['AccessKeyId'],
+                'secret' => $result['Credentials']['SecretAccessKey'],
+                'token'  => $result['Credentials']['SessionToken']
+            ]
+        ]);
+        
+For more information, see :iam-ug:`AssumeRoleWithWebIdentity—Federation Through a Web-based Identity Provider <id_credentials_temp_request.html#api_assumerolewithwebidentity>` or 
+:aws-php-class:`AssumeRoleWithWebIdentity  <api-sts-2011-06-15.html#assumerolewithwebidentity>` in the |sdk-php| API Reference.
