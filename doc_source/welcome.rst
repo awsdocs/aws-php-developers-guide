@@ -99,6 +99,12 @@ Reference
 * `Contributing to the SDK <https://github.com/aws/aws-sdk-php/blob/master/CONTRIBUTING.md>`_
 * `Guzzle Documentation <http://guzzlephp.org>`_
 
+Submit issues on GitHub:
+
+* `Submit documentation issues <https://github.com/awsdocs/aws-php-developers-guide/issues>`_
+* `Report a bug or request a feature <https://github.com/aws/aws-sdk-php/issues/new/choose>`_
+
+
 .. _supported-services:
 
 API Documentation
