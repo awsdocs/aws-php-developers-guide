@@ -137,7 +137,7 @@ Create and Assign an |IAM| Role to an |EC2| Instance
 
        $result = $ec2Client->associateIamInstanceProfile([
           'IamInstanceProfile' => [
-              'Arn' => $ARN
+              'Arn' => $ARN,
               'Name' => $IPN,
           ],
           'InstanceId' => $InstanceID
@@ -171,18 +171,19 @@ using the |EC2| instance’s role, you can associate an |IAM| role with an ECS t
 For more information, see :EC2-ug:`IAM Roles for Amazon EC2 Container Service Tasks<task-iam-roles>`.
 
 
-Assuming an |IAM| Role from Another AWS Account
+Assuming an |IAM| Role in Another AWS Account
 ===============================================
 
-To assume a role from another AWS account (Account B), first you must create an IAM role in Account B. This role allows entities in other accounts,such as your account (Account A), to perform actions in Account B. 
+When you work in an AWS account (Account A) and want to assume a role in another account (Account B), you must first create an IAM role in Account B. 
+This role allows entities in your account (Account A) to perform specific actions in Account B.
 For more information about cross-account access, see 
-:iam-ug:`Tutorial: Delegate Access Across AWS Accounts Using IAM Roles <tutorial_cross-account-with-roles>`
+:iam-ug:`Tutorial: Delegate Access Across AWS Accounts Using IAM Roles <tutorial_cross-account-with-roles>`.
 
-After you create a role in Account B, record the role-arn. You will use this AR when you assume the role from Account A.
-You assume the role using the AWS credentials associated with your entity in Account A
+After you create a role in Account B, record the Role ARN. You will use this ARN when you assume the role from Account A.
+You assume the role using the AWS credentials associated with your entity in Account A.
 
-Create an |STS| client with credentials for your AWS account. Below we used a Credentials 
-profile, but you can use any method. With the newly created STS client, call assume-role and 
+Create an |STS| client with credentials for your AWS account. In the following, we used a credentials 
+profile, but you can use any method. With the newly created |STS| client, call assume-role and 
 provide a custom sessionName. Retrieve the new temporary credentials from the result. 
 By default credentials last an hour.
 
@@ -220,12 +221,14 @@ For more information, see :iam-ug:`Using IAM Roles <id_roles_use>` or
 Using an |IAM| Role with Web Identity
 =====================================
 
-Web Identity Federation allows customers to use third-party identity providers for authentication when 
-accessing AWS resources. Before you can assume a role with web identity, you must create an IAM Role and 
+Web Identity Federation enables customers to use third-party identity providers for authentication when 
+accessing AWS resources. Before you can assume a role with web identity, you must create an IAM role and 
 configure a web identity provider (IdP). 
 For more information, see :iam-ug:`Creating a Role for Web Identity or OpenID Connect Federation (Console) <id_roles_create_for-idp_oidc>`.
 
-After :iam-ug:`creating an identity <id_roles_providers_create_oidc>` and :iam-ug:`creating a role <id_roles_create_for-idp_oidc>`, use an |STS| client to authenticate a user. Provide the webIdentityToken and ProviderId for your identity, and the RoleArn for the IAM role with permissions for the user. 
+After :iam-ug:`creating an identity provider <id_roles_providers_create_oidc>` and 
+:iam-ug:`creating a role for your web identity <id_roles_create_for-idp_oidc>`, use an |STS| client to authenticate a user. Provide 
+the webIdentityToken and ProviderId for your identity, and the Role ARN for the IAM role with permissions for the user. 
 
 **Sample Code**
 
