@@ -102,9 +102,15 @@ what the defaults are.
 ``hash_key``
     The name of the hash key in the |DDB| sessions table. This defaults to ``'id'``.
 
+``data_attribute``
+    The name of the attribute in the |DDB| sessions table in which the session data is stored. This defaults to ``'data'``.
+
 ``session_lifetime``
     The lifetime of an inactive session before it should be garbage collected. If it isn't provided, the actual
     lifetime value that will be used is ``ini_get('session.gc_maxlifetime')``.
+
+``session_lifetime_attribute``
+    The name of the attribute in the |DDB| sessions table in which the session expiration time is stored. This defaults to ``'expires'``.
 
 ``consistent_read``
     Whether the session handler should use consistent reads for the ``GetItem`` operation. The default
@@ -136,15 +142,17 @@ following code is an example with all of the configuration options specified.
 .. code-block:: php
 
     $sessionHandler = SessionHandler::fromClient($dynamoDb, [
-        'table_name'               => 'sessions',
-        'hash_key'                 => 'id',
-        'session_lifetime'         => 3600,
-        'consistent_read'          => true,
-        'locking'                  => false,
-        'batch_config'             => [],
-        'max_lock_wait_time'       => 10,
-        'min_lock_retry_microtime' => 5000,
-        'max_lock_retry_microtime' => 50000,
+        'table_name'                    => 'sessions',
+        'hash_key'                      => 'id',
+        'data_attribute'                => 'data',
+        'session_lifetime'              => 3600,
+        'session_lifetime_attribute'    => 'expires',
+        'consistent_read'               => true,
+        'locking'                       => false,
+        'batch_config'                  => [],
+        'max_lock_wait_time'            => 10,
+        'min_lock_retry_microtime'      => 5000,
+        'max_lock_retry_microtime'      => 50000,
     ]);
 
 Pricing
