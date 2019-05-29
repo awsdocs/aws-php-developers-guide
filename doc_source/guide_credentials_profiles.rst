@@ -87,9 +87,7 @@ Assume Role with Profile
 ========================
 
 You can configure the AWS SDK for PHP to use an IAM role by defining a profile 
-for the role in :file:`~/.aws/credentials`.  Profiles can also be read from 
-:file:`~/.aws/config` if the environment variable :code:`AWS_SDK_LOAD_NONDEFAULT_CONFIG`
-has been set.
+for the role in :file:`~/.aws/credentials`.
 
 Create a new profile with the :code:`role_arn` for the role you will assume. Also
 include the :code:`source_profile` of a profile with credentials that have permissions
@@ -99,16 +97,15 @@ Profile in :file:`~/.aws/credentials':
 
 .. code-block:: ini
 
-    [test_role]
+    [default]
+    aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
+    aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
+
+    [project1]
     role_arn = arn:aws:iam::123456789012:role/testing
-    source_profile = project1
-    role_session_name = optional
+    source_profile = default
+    role_session_name = OPTIONAL_SESSION_NAME
 
-Profile in :file:`~/.aws/config':
-
-.. code-block:: ini
-
-    [profile test_role]
-    role_arn = arn:aws:iam::123456789012:role/testing
-    source_profile = project1
-    role_session_name = optional
+By setting the ``AWS_PROFILE`` environment variable, or ``profile`` option when
+instantiating a client, the role specified in ``project1`` will be assumed,
+using the ``default`` profile as the source credentials.
