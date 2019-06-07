@@ -83,24 +83,29 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
     use Aws\Sts\StsClient;
 
     // Passing Aws\Credentials\AssumeRoleCredentialProvider options directly
+    $profile = new InstanceProfileProvider();
+    $ARN = "arn:aws:iam::123456789012:role/xaccounts3access";
+    $sessionName = "s3-access-example";
+     
     $assumeRoleCredentials = new AssumeRoleCredentialProvider([
         'client' => new StsClient([
-            'region' => 'us-west-2',
+            'region' => 'us-east-2',
             'version' => '2011-06-15'
+            'credentials' => $profile
         ]),
         'assume_role_params' => [
-            'RoleArn' => 'arn:aws:iam::123456789012:role/role_name',
-            'RoleSessionName' => 'test_session',
-        ]
+            'RoleArn' => $ARN,
+            'RoleSessionName' => $sessionName,
+        ],
     ]);
-
+    
     // To avoid unnecessarily fetching STS credentials on every API operation,
     // the memoize function handles automatically refreshing the credentials when they expire
     $provider = CredentialProvider::memoize($assumeRoleCredentials);
 
     $client = new S3Client([
-        'region'      => 'us-west-2',
-        'version'     => 'latest',
+        'region'      => 'us-east-2',
+        'version'     => '2006-03-01',
         'credentials' => $provider
     ]);
 
