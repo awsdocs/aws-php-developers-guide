@@ -455,6 +455,27 @@ created by the SDK.
 
 The SDK supports the following configuration options:
 
+.. _http_cert:
+
+cert
+----
+
+:Type: ``string|array``
+
+Specify the PEM formatted client side certificate.
+
+* Set as a string for the path to only the certificate file.
+
+.. code-block:: php
+
+    'cert' => '/path/to/cert.pem'
+
+* Set as an array containing the path and password.
+
+.. code-block:: php
+
+    'cert' => ['/path/to/cert.pem', 'password']
+
 .. _http_connect_timeout:
 
 connect_timeout
