@@ -468,27 +468,27 @@ Specify the PEM formatted client side certificate.
 
 .. code-block:: php
 
-use Aws\S3\S3Client;
+    use Aws\S3\S3Client;
 
-$client = new S3Client([
-    'region'  => 'us-west-2',
-    'version' => 'latest',
-    'http'    => ['cert' => '/path/to/cert.pem']
-]);
+    $client = new S3Client([
+        'region'  => 'us-west-2',
+        'version' => 'latest',
+        'http'    => ['cert' => '/path/to/cert.pem']
+    ]);
 
 * Set as an array containing the path and password.
 
 .. code-block:: php
 
-use Aws\S3\S3Client;
+    use Aws\S3\S3Client;
 
-$client = new S3Client([
-    'region'  => 'us-west-2',
-    'version' => 'latest',
-    'http'    => [
-        'cert' => ['/path/to/cert.pem', 'password']
-    ]
-]);
+    $client = new S3Client([
+        'region'  => 'us-west-2',
+        'version' => 'latest',
+        'http'    => [
+            'cert' => ['/path/to/cert.pem', 'password']
+        ]
+    ]);
 
 .. _http_connect_timeout:
 
