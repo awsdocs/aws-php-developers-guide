@@ -45,13 +45,14 @@ For more information, see the following:
 Enable |SDKM| for the |sdk-php|
 ===============================
 
-By default, |SDKM| is turned off, and the port is set to 31000. The following are the default parameters.
+By default, |SDKM| is turned off, host is set to '127.0.0.1' and the port is set to 31000. The following are the default parameters.
 
 .. code-block:: ini
 
     //default values
      [
          'enabled' => false,
+         'host' => '127.0.0.1',
          'port' => 31000,
      ]
 
@@ -102,17 +103,18 @@ If no CSM configuration is found in the environment variables, the SDK looks for
 Update a |CW| Agent
 ===================
 
-To make changes to the port ID, you need to set the values and then restart any AWS jobs that are currently active.
+To make changes to the host or port ID, you need to set the values and then restart any AWS jobs that are currently active.
 
 Option 1: Set Environment Variables
 -----------------------------------
 
 Most AWS services use the default port. But if the service you want |SDKM| to monitor uses a unique port, add `AWS_CSM_PORT=[port_number]`, to the host's environment variables.
-
+Additionally, a different host can be specified using the `AWS_CSM_HOST` environment variable.
 .. code-block:: ini
 
     export AWS_CSM_ENABLED=true
     export AWS_CSM_PORT=1234
+    export AWS_CSM_HOST=192.168.0.1
 
 
 Option 2: AWS Shared Config File
@@ -120,15 +122,18 @@ Option 2: AWS Shared Config File
 
 Most services use the default port. But if your service requires a
 unique port ID, add `csm_port = [port_number]` to `~/.aws/config`.
+A non-default host can be configured using `csm_host`.
 
 .. code-block:: ini
 
     [default]
     csm_enabled = false
+    csm_host = 123.4.5.6
     csm_port = 1234
 
     [profile aws_csm]
     csm_enabled = false
+    csm_host = 123.4.5.6
     csm_port = 1234
 
 Restart |SDKM|
