@@ -110,6 +110,7 @@ Option 1: Set Environment Variables
 
 Most AWS services use the default port. But if the service you want |SDKM| to monitor uses a unique port, add `AWS_CSM_PORT=[port_number]`, to the host's environment variables.
 Additionally, a different host can be specified using the `AWS_CSM_HOST` environment variable.
+
 .. code-block:: ini
 
     export AWS_CSM_ENABLED=true
