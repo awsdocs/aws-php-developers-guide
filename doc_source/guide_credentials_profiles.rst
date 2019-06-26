@@ -42,12 +42,11 @@ We use this method in all our PHP code examples.
 Using an AWS credentials file offers the following benefits:
 
 * Your projects' credentials are stored outside of your projects, so there is
-   no chance of accidentally committing them into version control.
+  no chance of accidentally committing them into version control.
 * You can define and name multiple sets of credentials in one place.
 * You can easily reuse the same credentials among projects.
-* Other AWS SDKs and tools support, this same
-   credentials file. This allows you to reuse your credentials with other
-   tools.
+* Other AWS SDKs and tools support, this same credentials file. This allows
+  you to reuse your credentials with other tools.
 
 The format of the AWS credentials file should look something like the
 following.
@@ -93,7 +92,7 @@ Create a new profile with the :code:`role_arn` for the role you will assume. Als
 include the :code:`source_profile` of a profile with credentials that have permissions
 to assume the IAM role.
 
-Profile in :file:`~/.aws/credentials':
+Profile in :file:`~/.aws/credentials`:
 
 .. code-block:: ini
 
@@ -109,3 +108,32 @@ Profile in :file:`~/.aws/credentials':
 By setting the ``AWS_PROFILE`` environment variable, or ``profile`` option when
 instantiating a client, the role specified in ``project1`` will be assumed,
 using the ``default`` profile as the source credentials.
+
+Roles can also be assumed for profiles defined in :file:`~/.aws/config`. Setting
+the environment variable ``AWS_SDK_LOAD_NONDEFAULT_CONFIG`` enables loading
+profiles for assuming a role from :file:`~/.aws/config`.  When enabled, profiles
+from both :file:`~/.aws/config` and :file:`~/.aws/credentials` will be loaded.
+Profiles from :file:`~/.aws/credentials` are loaded last and will take
+precedence over a profile from :file:`~/.aws/config` with the same name. Profiles
+from either location can serve as the :code:`source_profile` or the profile to be
+assumed.
+
+Profile in :file:`~/.aws/config`:
+
+.. code-block:: ini
+
+    [profile project1]
+    role_arn = arn:aws:iam::123456789012:role/testing
+    source_profile = default
+    role_session_name = OPTIONAL_SESSION_NAME
+
+Profile in :file:`~/.aws/credentials`:
+
+.. code-block:: ini
+
+    [project2]
+    aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
+    aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
+
+Using the above files, ``[project1]`` will be assumed using ``[project2]`` as
+the source credentials.
