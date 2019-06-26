@@ -42,12 +42,11 @@ We use this method in all our PHP code examples.
 Using an AWS credentials file offers the following benefits:
 
 * Your projects' credentials are stored outside of your projects, so there is
-   no chance of accidentally committing them into version control.
+  no chance of accidentally committing them into version control.
 * You can define and name multiple sets of credentials in one place.
 * You can easily reuse the same credentials among projects.
-* Other AWS SDKs and tools support, this same
-   credentials file. This allows you to reuse your credentials with other
-   tools.
+* Other AWS SDKs and tools support, this same credentials file. This allows
+  you to reuse your credentials with other tools.
 
 The format of the AWS credentials file should look something like the
 following.
