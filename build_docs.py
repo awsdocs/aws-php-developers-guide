@@ -17,7 +17,7 @@
 # Documentation build script for AWS Sphinx documentation on GitHub.
 # ------------------------------------------------------------------
 
-import sys, os
+import sys, os, stat, errno
 import subprocess
 import shutil
 
@@ -42,6 +42,20 @@ OUTPUT_DIR = 'doc_output'
 SOURCE_DIR = 'doc_source'
 
 
+def handle_remove_readonly(func, path, excinfo):
+    """Handler for shutil.rmtree() failure
+
+    If the removal failed because of Access denied error due to a R/O file, change the file's
+    permissions to R/W and retry the removal operation.
+    """
+
+    if excinfo[1].errno == errno.EACCES:
+        os.chmod(path, stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO)  # 0777
+        func(path)
+    else:
+        raise excinfo[0]
+
+
 def check_and_remove_dir(dir_name):
     """Check to see if the named directory exists. If it does, then remove it.
     Throw an exception if the directory can't be removed."""
@@ -49,8 +63,8 @@ def check_and_remove_dir(dir_name):
     if os.path.exists(dir_name):
         print("Removing directory: " + dir_name)
         try:
-            shutil.rmtree(dir_name)
-        except:
+            shutil.rmtree(dir_name, onerror=handle_remove_readonly)
+        except Exception as e:
             print("Couldn't remove " + dir_name)
             print("Remove this directory before building!")
             sys.exit(1)
