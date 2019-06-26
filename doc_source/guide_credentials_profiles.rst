@@ -116,11 +116,13 @@ profiles for assuming a role from :file:`~/.aws/config`.  When enabled, profiles
 from both :file:`~/.aws/config` and :file:`~/.aws/credentials` will be loaded.
 Profiles from :file:`~/.aws/credentials` are loaded last and will take
 precedence over a profile from :file:`~/.aws/config` with the same name. Profiles
-from either location can serve as the source_profile or the profile to be assumed.
+from either location can serve as the :code:`source_profile` or the profile to be
+assumed.
 
 Profile in :file:`~/.aws/config`:
 
 .. code-block:: ini
+
     [profile project1]
     role_arn = arn:aws:iam::123456789012:role/testing
     source_profile = default
