@@ -58,9 +58,83 @@ By default, |SDKM| is turned off, host is set to '127.0.0.1' and the port is set
 
 Enabling |SDKM| is independent of configuring your credentials to use an AWS service.
 
-You can enable |SDKM| by setting environment variables or by using the AWS Shared config file.
+You can enable |SDKM| by passing in a client configuration option, setting environment variables, or by using the AWS Shared config file.
 
-Option 1: Set Environment Variables
+**Order of Precedence**
+
+The order of precedence is as follows (1 overrides 2-3, etc.):
+
+1. Client configuration option
+2. Environment variables
+3. AWS Shared config file
+
+Option 1: Client Configuration Option
+-------------------------------------
+
+You can pass in a :code:`csm` option to your client constructor to enable and set the configuration options.
+This option can be an associative array, an instance of :code:`\Aws\ClientSideMonitoring\ConfigurationInterface`,
+a callable that provides an instance of :code:`\Aws\ClientSideMonitoring\ConfigurationInterface`,
+or the boolean value of :code:`false`.
+
+**Associative array:**
+
+.. code-block:: php
+
+    $client = new \Aws\S3\S3Client([
+        'region' => 'your-region',
+        'version' => 'latest',
+        'csm' => [
+            'enabled' => true,
+            'host' => 'my.host',
+            'port' => 1234,
+            'client_id' => 'My Application'
+         ]
+    ]);
+
+**Instance of \\Aws\\ClientSideMonitoring\\ConfigurationInterface:**
+
+.. code-block:: php
+
+    $client = new \Aws\S3\S3Client([
+        'region' => 'your-region',
+        'version' => 'latest',
+        'csm' => new \Aws\ClientSideMonitoring\Configuration(
+            true,
+            'my.host',
+            1234,
+            'My Application'
+        )
+    ]);
+
+**Callable:**
+
+.. code-block:: php
+
+    $client = new \Aws\S3\S3Client([
+        'region' => 'your-region',
+        'version' => 'latest',
+        'csm' => function() {
+            return new \Aws\ClientSideMonitoring\Configuration(
+                true,
+                '127.0.0.1',
+                1234,
+                'My Application'
+            );
+        }
+    ]);
+
+**Boolean `false`:**
+
+.. code-block:: php
+
+    $client = new \Aws\S3\S3Client([
+        'region' => 'your-region',
+        'version' => 'latest',
+        'csm' => false
+    ]);
+
+
+Option 2: Set Environment Variables
 -----------------------------------
 
 The SDK first checks the profile specified in the environment variable under :code:`AWS_PROFILE` to determine if |SDKM| is enabled.
@@ -78,7 +152,7 @@ To turn on |SDKM|, add the following to your environmental variables.
     Enabling |SDKM| does not configure your credentials to use an AWS service. 
     To do that, see :doc:`Credentials for the AWS SDK for PHP Version 3<guide_credentials>`.
 
-Option 2: AWS Shared Config File
+Option 3: AWS Shared Config File
 --------------------------------
 
 If no CSM configuration is found in the environment variables, the SDK looks for your default AWS profile field. If :code:`AWS_DEFAULT_PROFILE` is set to something other than default, update that profile. To enable SDK Metrics, add :code:`csm_enabled` to the shared config file located at :file:`~/.aws/config`.
@@ -105,7 +179,14 @@ Update a |CW| Agent
 
 To make changes to the host or port ID, you need to set the values and then restart any AWS jobs that are currently active.
 
-Option 1: Set Environment Variables
+Option 1: Client Configuration Option
+-------------------------------------
+
+See Option 1 above under "Enable |SDKM| for the |sdk-php|" for examples of how to set the
+client configuration :code:`csm` option to modify CSM settings.
+
+
+Option 2: Set Environment Variables
 -----------------------------------
 
 Most AWS services use the default port. But if the service you want |SDKM| to monitor uses a unique port, add `AWS_CSM_PORT=[port_number]`, to the host's environment variables.
@@ -118,7 +199,7 @@ Additionally, a different host can be specified using the `AWS_CSM_HOST` environ
     export AWS_CSM_HOST=192.168.0.1
 
 
-Option 2: AWS Shared Config File
+Option 3: AWS Shared Config File
 --------------------------------
 
 Most services use the default port. But if your service requires a
@@ -159,16 +240,26 @@ Then restart your |CW| agent so that the changes can take effect.
 Set csm_enabled to false
 ------------------------
 
-**Option 1: Environment Variables**
+.. note:: Note the order of precedence listed above. For example, if |SDKM| is enabled in the environment variables but disabled in the config file, the |SDKM| remains enabled.
+
+**Option 1: Client configuration**
+
+.. code-block:: php
+
+    $client = new \Aws\S3\S3Client([
+        'region' => 'your-region',
+        'version' => 'latest',
+        'csm' => false
+    ]);
+
+**Option 2: Environment Variables**
 
 .. code-block:: ini
 
     export AWS_CSM_ENABLED=false
 
 
-**Option 2: AWS Shared Config File**
-
-.. note:: Environment variables override the AWS Shared config file. If |SDKM| is enabled in the environment variables, the |SDKM| remains enabled.
+**Option 3: AWS Shared Config File**
 
 .. code-block:: ini
 
