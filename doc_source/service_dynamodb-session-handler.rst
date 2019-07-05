@@ -105,6 +105,10 @@ what the defaults are.
 ``data_attribute``
     The name of the attribute in the |DDB| sessions table in which the session data is stored. This defaults to ``'data'``.
 
+``data_attribute_type``
+    The type of the attribute in the |DDB| sessions table in which the session data is stored. This defaults to ``'string'``,
+    but can optionally be set to ``'binary'``.
+
 ``session_lifetime``
     The lifetime of an inactive session before it should be garbage collected. If it isn't provided, the actual
     lifetime value that will be used is ``ini_get('session.gc_maxlifetime')``.
@@ -145,6 +149,7 @@ following code is an example with all of the configuration options specified.
         'table_name'                    => 'sessions',
         'hash_key'                      => 'id',
         'data_attribute'                => 'data',
+        'data_attribute_type'           => 'string,
         'session_lifetime'              => 3600,
         'session_lifetime_attribute'    => 'expires',
         'consistent_read'               => true,
