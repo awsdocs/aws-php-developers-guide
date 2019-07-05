@@ -354,6 +354,19 @@ credentials from |EC2| instance profiles.
         'credentials' => $memoizedProvider
     ]);
 
+By default, the provider retries fetching credentials up to three times.
+The number of retries can be set with the ``retries`` option, and
+disabled entirely by setting the option to ``0``.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+
+    $provider = CredentialProvider::instanceProfile([
+        'retries' => 0
+    ]);
+    $memoizedProvider = CredentialProvider::memoize($provider);
+
 .. note::
 
     You can disable this attempt to load from |EC2| instance profiles by
