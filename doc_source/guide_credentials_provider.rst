@@ -359,6 +359,7 @@ The number of retries can be set with the ``retries`` option, and
 disabled entirely by setting the option to ``0``.
 
 .. code-block:: php
+
     use Aws\Credentials\CredentialProvider;
 
     $provider = CredentialProvider::instanceProfile([
