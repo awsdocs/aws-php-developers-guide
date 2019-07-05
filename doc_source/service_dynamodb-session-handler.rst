@@ -149,7 +149,7 @@ following code is an example with all of the configuration options specified.
         'table_name'                    => 'sessions',
         'hash_key'                      => 'id',
         'data_attribute'                => 'data',
-        'data_attribute_type'           => 'string,
+        'data_attribute_type'           => 'string',
         'session_lifetime'              => 3600,
         'session_lifetime_attribute'    => 'expires',
         'consistent_read'               => true,
