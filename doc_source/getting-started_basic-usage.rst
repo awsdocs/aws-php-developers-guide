@@ -288,8 +288,11 @@ The following example uses the ``Aws\S3\S3Client``. If there is an
 error, the exception thrown will be of the type ``Aws\S3\Exception\S3Exception``.
 All service-specific exceptions that the SDK throws extend from the
 ``Aws\Exception\AwsException`` class. This class contains useful information
-about the failure, including the request-id, error code, and error type.
-
+about the failure, including the request-id, error code, and error type. Note
+for some services which support it, response data is coerced into an
+associative array structure (similar to ``Aws\Result`` objects), which can be
+accessed like a normal PHP associative array. The ``toArray()`` method will
+return any such data, if it exists.
 
 **Imports**
 
