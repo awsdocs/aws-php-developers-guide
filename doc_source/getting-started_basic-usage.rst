@@ -27,7 +27,7 @@ Prerequisites
 Including the SDK in Your Code
 ==============================
 
-No matter which technique you used to to install the SDK, you can include
+No matter which technique you used to install the SDK, you can include
 the SDK in your code with just a single ``require`` statement. See
 the following table for the PHP code that best fits your installation technique.
 Replace any instances of ``/path/to/`` with the actual path on your system.
@@ -135,15 +135,16 @@ shallow-merged onto root-level values).
     ``Sdk`` class automatically uses the same HTTP client for each SDK
     client, allowing SDK clients for different services to perform nonblocking
     HTTP requests. If the SDK clients don't use the same HTTP client, then
-    HTTP requests sent by the SDK client might block promise orchestration between services.
+    HTTP requests sent by the SDK client might block promise orchestration 
+    between services.
 
 Executing Service Operations
 ============================
 
 You can execute a service operation by calling the method of the same name on
-a client object. For example, to perform the |S3|  :S3-api:`PutObject operation
-<RESTObjectPUT>`, you must
-call the ``Aws\S3\S3Client::putObject()`` method.
+a client object. For example, to perform the Amazon S3 :S3-api:`PutObject 
+operation <RESTObjectPUT>`, you must call the ``Aws\S3\S3Client::putObject()`` 
+method.
 
 **Imports**
 

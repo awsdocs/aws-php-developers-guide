@@ -53,7 +53,7 @@ bare minimum amount of code needed to perform a transfer. The transfer object
 can perform transfers asynchronously and has various configuration options you can
 use to customize the transfers.
 
-You can upload the local files to a "subfolder" of a an |S3| bucket by
+You can upload the local files to a "subfolder" of an |S3| bucket by
 providing a key prefix in the ``s3://`` URI. The following example uploads the
 local files on disk to the ``bucket`` bucket and stores the files under the
 ``foo`` key prefix.

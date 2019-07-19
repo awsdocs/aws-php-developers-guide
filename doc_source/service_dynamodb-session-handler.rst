@@ -13,7 +13,7 @@ Using the |DDB| Session Handler with |sdk-php| Version 3
 #########################################################
 
 .. meta::
-   :description: Programing Amazon DynamoDB using the AWS SDK for PHP..
+   :description: Programing Amazon DynamoDB using the AWS SDK for PHP.
    :keywords: Amazon DynamoDB, AWS SDK for PHP examples, Amazon DynamoDB for PHP code examples
 
 
