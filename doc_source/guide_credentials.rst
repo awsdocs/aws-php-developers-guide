@@ -83,7 +83,7 @@ You can also add credentials in these ways:
 * :doc:`Using temporary credentials from AWS STS <guide_credentials_temporary>`.
 
    When using a multi-factor authentication (MFA) token for two-factor authentication, use |STS| to
-   give the user temporary crentials to access AWS services or use the |sdk-php|.
+   give the user temporary credentials to access AWS services or use the |sdk-php|.
 
 
 * :doc:`Using hard-coded credentials <guide_credentials_hardcoded>` (not recommended).

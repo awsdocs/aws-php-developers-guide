@@ -17,7 +17,9 @@
    :keywords: Elastic Compute Cloud (EC2), AWS SDK for PHP version 3 examples, EC2 for PHP code examples
 
 
-|EC2long| (|EC2|) is a web service that provides virtual server hosting in the cloud. It's designed to make web-scale cloud computing easier for developers by providing resizeable compute capacity.
+|EC2long| (|EC2|) is a web service that provides virtual server hosting in the 
+cloud. It's designed to make web-scale cloud computing easier for developers by 
+providing resizable compute capacity.
 
 .. image:: images/code-samples-ec2.png
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to Amazon EC2

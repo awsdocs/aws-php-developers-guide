@@ -56,7 +56,6 @@ Handler
     with an ``Aws\ResultInterface`` or rejected with an
     ``Aws\Exception\AwsException`` reason.
 
-
 JMESPath
     `JMESPath <http://jmespath.org/>`_ is a query language for JSON-like data.
     The |sdk-php| uses JMESPath expressions to query PHP data structures.
@@ -64,13 +63,12 @@ JMESPath
     ``Aws\ResultPaginator`` objects via the ``search($expression)`` method.
 
 Middleware
-    Middleware are a special type of high level function that that augment the
-    behavior of transferring a command and delegate to a "next" handler. Middleware
-    functions accept an ``Aws\CommandInterface`` and a
-    ``Psr\Http\Message\RequestInterface`` and return a promise that is fulfilled
-    with an ``Aws\ResultInterface`` or rejected with an
+    Middleware is a special type of high-level function that augments the
+    behavior of transferring a command and delegating to a "next" handler. 
+    Middleware functions accept an ``Aws\CommandInterface`` and a
+    ``Psr\Http\Message\RequestInterface`` and return a promise that is 
+    fulfilled with an ``Aws\ResultInterface`` or rejected with an
     ``Aws\Exception\AwsException`` reason.
-
 
 Operation
     Refers to a single operation within a service's API (e.g., ``CreateTable``

@@ -163,9 +163,8 @@ when you're not handling an exception, by calling ``$uploader->getState()``.
 Aborting a Multipart Upload
 ---------------------------
 
-Sometimes, you might not want to resume an upload, and would rather
-abort the the whole thing when an error occurs. This is also easy using the
-data contained in the ``UploadState`` object.
+A multipart upload can be aborted by retrieving the ``UploadId`` contained in
+the ``UploadState`` object and passing it to ``abortMultipartUpload``.
 
 .. code-block:: php
 
