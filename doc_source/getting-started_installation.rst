@@ -49,14 +49,14 @@ Add |sdk-php| as a dependency via Composer
 
 If `Composer is already installed globally <https://getcomposer.org/doc/00-intro.md#globally>`_ on your system, run the following in the base directory of your project to install |sdk-php| as a dependency:
 
-   ::
+   .. code-block:: php
 
        composer require aws/aws-sdk-php
        
      
 Otherwise type this Composer command to install the latest version of the |sdk-php| as a dependency.
 
-   ::
+   .. code-block:: php
 
        php -d memory_limit=-1 composer.phar require aws/aws-sdk-php
 
@@ -96,7 +96,7 @@ and include it in your scripts.
     including a phar file in your code will cause a silent failure. To modify suhosin.ini, add the
     following line.
 
-    ::
+    .. code-block:: php
 
         suhosin.executor.include.whitelist = phar
 
@@ -109,7 +109,7 @@ Additionally, the ZIP file includes a class autoloader for the |sdk-php| and its
 To install the SDK, `download the .zip file <http://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip>`_,
 and then extract it into your project at a location you choose. Then include the autoloader in your scripts, as follows.
 
-::
+.. code-block:: php
 
      <?php
         require '/path/to/aws-autoloader.php';
