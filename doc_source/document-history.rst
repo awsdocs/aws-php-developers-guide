@@ -21,27 +21,27 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 | Change             | Description                            | Release Date      |
 +====================+========================================+===================+
-| |ASM| Examples     | Add more service examples              |  Mar 27th, 2019   |
+| |ASM| examples     | Add more service examples              |  Mar 27th, 2019   |
 +--------------------+----------------------------------------+-------------------+
-| endpoint discovery | Configuration of endpoint discovery    |  Feb 15th, 2019   |
+| Endpoint discovery | Configuration of endpoint discovery    |  Feb 15th, 2019   |
 +--------------------+----------------------------------------+-------------------+
 |  |CFlong|          | Add more service examples              |  Jan 25th, 2019   |
 +--------------------+----------------------------------------+-------------------+
-|  Service Features  | SDK Metrics                            |  Jan 11th, 2018   |
+|  Service features  | SDK metrics                            |  Jan 11th, 2018   |
 +--------------------+----------------------------------------+-------------------+
 |  |AKlong|, |SNS|   | Add more service examples              |  Dec 14th, 2018   |
 +--------------------+----------------------------------------+-------------------+
-|  |SES| Examples    | Add more service examples              |  Oct 5th, 2018    |
+|  |SES| examples    | Add more service examples              |  Oct 5th, 2018    |
 +--------------------+----------------------------------------+-------------------+
-|  |KMS| Examples    | Add more service examples              |  Aug 8th, 2018    |
+|  |KMS| examples    | Add more service examples              |  Aug 8th, 2018    |
 +--------------------+----------------------------------------+-------------------+
-|  Credentials       | Clarify and Simplify credentials guide |  June 30th, 2018  |
+|  Credentials       | Clarify and simplify credentials guide |  June 30th, 2018  |
 +--------------------+----------------------------------------+-------------------+
-|  |EMC| Examples    | Add more service examples              |  June 15th, 2018  |
+|  |EMC| examples    | Add more service examples              |  June 15th, 2018  |
 +--------------------+----------------------------------------+-------------------+
-|  new web layout    |  Documentation switched to AWS style   |  May 9th, 2018    |
+|  New web layout    |  Documentation switched to AWS style   |  May 9th, 2018    |
 +--------------------+----------------------------------------+-------------------+
-|  |S3| Encryption   |  Client Side Encryption                |  Nov 17th, 2017   |
+|  |S3| encryption   |  Client side encryption                |  Nov 17th, 2017   |
 +--------------------+----------------------------------------+-------------------+
 |  |S3|, |SQS|       |  Add more service examples             |  Mar 26th, 2017   |
 +--------------------+----------------------------------------+-------------------+
@@ -49,13 +49,13 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 |  Add credentials   |  Adds support for AssumeRole and ini   |  Jan 17th, 2017   |
 +--------------------+----------------------------------------+-------------------+
-|  S3 Examples       |  S3 Multi-Region and presigned Posts   |  Mar 18th, 2016   |
+|  S3 Examples       |  S3 Multi-Region and presigned posts   |  Mar 18th, 2016   |
 +--------------------+----------------------------------------+-------------------+
 |  |ES| and |CS|     |  Add more service examples             |  Dec 28th, 2015   |
 +--------------------+----------------------------------------+-------------------+
 |  Command line      |  Add command parameters                |  Aug 13th, 2015   |
 +--------------------+----------------------------------------+-------------------+
-|  Service Features  |  Adds service features for S3 and AWS  |  Apr 30th, 2015   |
+|  Service features  |  Adds service features for S3 and AWS  |  Apr 30th, 2015   |
 +--------------------+----------------------------------------+-------------------+
 |  New SDK version   |  Version 3 of the |sdk-php| released.  |  May 26th, 2015   |
 +--------------------+----------------------------------------+-------------------+
