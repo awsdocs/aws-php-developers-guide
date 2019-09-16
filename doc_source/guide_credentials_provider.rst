@@ -274,7 +274,7 @@ The provider is called as part of the default chain and can be called directly.
     ]);
 
 By default, this credential provider will inherit the configured region which will
-be used the StsClient to assume the role. Optionally, a full StsClient can be
+be used by the StsClient to assume the role. Optionally, a full StsClient can be
 provided. Credentials should be set as ``false`` on any provided StsClient.
 
 .. code-block:: php
