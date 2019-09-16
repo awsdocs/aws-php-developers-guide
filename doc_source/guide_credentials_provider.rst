@@ -273,6 +273,36 @@ The provider is called as part of the default chain and can be called directly.
         'credentials' => $provider
     ]);
 
+By default, this credential provider will inherit the configured region which will
+be used the StsClient to assume the role. Optionally, a full StsClient can be
+provided. Credentials should be set as ``false`` on any provided StsClient.
+
+.. code-block:: php
+
+    use Aws\Credentials\CredentialProvider;
+    use Aws\S3\S3Client;
+    use Aws\Sts\StsClient;
+
+    $stsClient = new StsClient([
+        'region'      => 'us-west-2',
+        'version'     => 'latest',
+        'credentials' => false
+    ])
+
+    $provider = CredentialProvider::assumeRoleWithWebIdentityCredentialProvider([
+        'stsClient' => $stsClient
+    ]);
+    // Cache the results in a memoize function to avoid loading and parsing
+    // the ini file on every API operation
+    $provider = CredentialProvider::memoize($provider);
+
+    $client = new S3Client([
+        'region'      => 'us-west-2',
+        'version'     => '2006-03-01',
+        'credentials' => $provider
+    ]);
+
+
 ini provider
 ============
 
