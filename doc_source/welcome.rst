@@ -91,6 +91,8 @@ Examples
 * :doc:`Amazon SNS Examples <sns-examples>`
 * :doc:`Amazon SQS Examples <sqs-examples>`
 
+For additional examples, see the `AWS Code Sample Catalog <https://docs.aws.amazon.com/code-samples/latest/catalog>`_.
+
 Reference
 =========
 
