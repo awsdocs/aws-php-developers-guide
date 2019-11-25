@@ -34,6 +34,7 @@
     Amazon S3 Pre-Signed URL  <s3-presigned-url.rst>
     Using an Amazon S3 Bucket as a Static Web Host <s3-examples-static-web-host.rst>
     Working with Amazon S3 Bucket Policies <s3-examples-bucket-policies.rst>
+    Using S3 Access Point ARNs <s3-examples-access-point-arn.rst>
 
 
 
