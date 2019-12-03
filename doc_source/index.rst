@@ -23,6 +23,7 @@
     Configuring the SDK <guide_index>
     Using AWS Services <service_index.rst>
     Code Examples <examples_index>
+    Security <security>
     FAQ <faq>
     glossary 
     resources
