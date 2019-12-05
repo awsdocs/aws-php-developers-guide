@@ -16,7 +16,7 @@ Using S3 Access Point ARNs the AWS SDK for PHP Version 3
    :description: Using Access Point ARNs in S3 requests with the AWS SDK for PHP version 3.
    :keywords: Amazon S3 code examples for PHP
 
-S3 introduced access points, a new way to interact with S3 buckets. Access Points can have unique policies and configuration applied to them instead of directly to the bucket. The AWS SDK for PHP allows you to use access point ARNs in the bucket field for API operations instead of specifying bucket name explicitly. More details on how S3 access points and ARNs work can be found `here <https://todo/when/docs/are/up`_. The following examples show how to:
+S3 introduced access points, a new way to interact with S3 buckets. Access Points can have unique policies and configuration applied to them instead of directly to the bucket. The AWS SDK for PHP allows you to use access point ARNs in the bucket field for API operations instead of specifying bucket name explicitly. More details on how S3 access points and ARNs work can be found `here <https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html`_. The following examples show how to:
 
 * Use :aws-php-class:`GetObject <api-s3-2006-03-01.html#getobject>` with an access point ARN to fetch an object from a bucket.
 * Use :aws-php-class:`PutObject <api-s3-2006-03-01.html#putobject>` with an access point ARN to add an object to a bucket.
