@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##################################################################
-Creating and Using |S3| Buckets with the AWS SDK for PHP Version 3
-##################################################################
+########################################################
+Using S3 Access Point ARNs the AWS SDK for PHP Version 3
+########################################################
 
 .. meta::
    :description: Using Access Point ARNs in S3 requests with the AWS SDK for PHP version 3.
