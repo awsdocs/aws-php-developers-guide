@@ -23,6 +23,14 @@ creating. These custom client configuration options are described in the
 `API documentation <http://docs.aws.amazon.com/aws-sdk-php/latest/>`_ of each
 client.
 
+Note that some configuration options will check and use default values based on
+environment variables or an AWS configuration file. By default, the configuration
+file being checked will be :file:`.aws/config` in your home directory, commonly
+:file:`~/.aws/config`. However, you can use the environment variable
+:code:`AWS_CONFIG_FILE` to set where your default config file location is. This
+may be especially useful if you are restricting file access to certain directories
+with :code:`open_basedir` and the like.
+
 .. contents:: Configuration Options
     :depth: 1
     :local:

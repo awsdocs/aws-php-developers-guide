@@ -155,7 +155,12 @@ To turn on |SDKM|, add the following to your environmental variables.
 Option 3: AWS Shared Config File
 --------------------------------
 
-If no CSM configuration is found in the environment variables, the SDK looks for your default AWS profile field. If :code:`AWS_DEFAULT_PROFILE` is set to something other than default, update that profile. To enable SDK Metrics, add :code:`csm_enabled` to the shared config file located at :file:`~/.aws/config`.
+If no CSM configuration is found in the environment variables, the SDK looks for
+your default AWS profile field in a shared configuration file. Typically this is
+in :file:`~/.aws/config`, but you can change which file is used by setting the
+:code:`AWS_CONFIG_FILE` environment variable. If :code:`AWS_DEFAULT_PROFILE`
+is set to something other than default, update that profile. To enable SDK
+Metrics, add :code:`csm_enabled` to the shared config file.
 
 .. code-block:: ini
 
@@ -203,7 +208,8 @@ Option 3: AWS Shared Config File
 --------------------------------
 
 Most services use the default port. But if your service requires a
-unique port ID, add `csm_port = [port_number]` to `~/.aws/config`.
+unique port ID, add `csm_port = [port_number]` to `~/.aws/config` (or the file
+specified by the environment variable :code:`AWS_CONFIG_FILE`).
 A non-default host can be configured using `csm_host`.
 
 .. code-block:: ini
@@ -234,8 +240,10 @@ To restart a job, run the following commands.
 Disable |SDKM|
 ==============
 
-To turn off |SDKM|, set `csm_enabled` to `false` in your environment variables, or in your AWS Shared config file located at :file:`~/.aws/config`.
-Then restart your |CW| agent so that the changes can take effect.
+To turn off |SDKM|, set `csm_enabled` to `false` in your environment variables,
+or in your AWS Shared config file located at :file:`~/.aws/config` (or the file
+specified by the environment variable :code:`AWS_CONFIG_FILE`). Then restart
+your |CW| agent so that the changes can take effect.
 
 Set csm_enabled to false
 ------------------------
