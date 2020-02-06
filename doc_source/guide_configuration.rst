@@ -825,8 +825,8 @@ HTTP handler here, or provide a Guzzle client with your own custom defined optio
 
 **Setting TLS version**
 
-One use case is to set the TLS version used by Guzzle with Curl, assuming Curl is
-installed in your environment. Note the Curl
+One use case is to set the minimum TLS version used by Guzzle with Curl,
+assuming Curl is installed in your environment. Note the Curl
 `version constraints <https://curl.haxx.se/libcurl/c/CURLOPT_SSLVERSION.html>`_
 for what version of TLS is supported. Example setting TLS 1.2 with Guzzle 6:
 
