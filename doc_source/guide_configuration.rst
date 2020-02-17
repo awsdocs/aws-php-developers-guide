@@ -825,10 +825,18 @@ HTTP handler here, or provide a Guzzle client with your own custom defined optio
 
 **Setting TLS version**
 
-One use case is to set the minimum TLS version used by Guzzle with Curl,
-assuming Curl is installed in your environment. Note the Curl
+One use case is to set the TLS version used by Guzzle with Curl, assuming Curl
+is installed in your environment. Note the Curl
 `version constraints <https://curl.haxx.se/libcurl/c/CURLOPT_SSLVERSION.html>`_
-for what version of TLS is supported. Example setting TLS 1.2 with Guzzle 6:
+for what version of TLS is supported - by default, the highest version is used.
+If the TLS version is explicitly set, and the remote server does not support
+this version, it will produce an error instead of using a lower TLS version.
+
+You can determine the TLS version being used for a given client operation by
+setting the ``debug`` client option to true and examining the SSL connection
+output.
+
+Example setting TLS 1.2 with Guzzle 6:
 
 .. code-block:: php
 
