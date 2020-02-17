@@ -834,7 +834,7 @@ this version, it will produce an error instead of using a lower TLS version.
 
 You can determine the TLS version being used for a given client operation by
 setting the ``debug`` client option to true and examining the SSL connection
-output.
+output. That line may look something like: ``SSL connection using TLSv1.2``
 
 Example setting TLS 1.2 with Guzzle 6:
 
