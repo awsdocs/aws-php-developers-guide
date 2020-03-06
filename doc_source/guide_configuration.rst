@@ -820,9 +820,47 @@ The SDK automatically converts the given ``http_handler`` into a normal
 ``handler`` option by wrapping the provided ``http_handler`` with a
 ``Aws\WrappedHttpHandler`` object.
 
+By default, the SDK uses Guzzle as its HTTP handler. You can supply a different
+HTTP handler here, or provide a Guzzle client with your own custom defined options.
+
+**Setting TLS version**
+
+One use case is to set the TLS version used by Guzzle with Curl, assuming Curl
+is installed in your environment. Note the Curl
+`version constraints <https://curl.haxx.se/libcurl/c/CURLOPT_SSLVERSION.html>`_
+for what version of TLS is supported - by default, the highest version is used.
+If the TLS version is explicitly set, and the remote server does not support
+this version, it will produce an error instead of using a lower TLS version.
+
+You can determine the TLS version being used for a given client operation by
+setting the ``debug`` client option to true and examining the SSL connection
+output. That line may look something like: ``SSL connection using TLSv1.2``
+
+Example setting TLS 1.2 with Guzzle 6:
+
+.. code-block:: php
+
+    use Aws\DynamoDb\DynamoDbClient;
+    use Aws\Handler\GuzzleV6\GuzzleHandler;
+    use GuzzleHttp\Client;
+
+    $handler = new GuzzleHandler(
+        new Client([
+            'curl' => [
+                CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2
+            ]
+        ])
+    );
+
+    $client = new DynamoDbClient([
+        'region'  => 'us-west-2',
+        'version' => 'latest',
+        'http_handler' => $handler
+    ]);
+
 .. note::
 
-    This option supersedes any provided ``handler`` option.
+    The ``http_handler`` option supersedes any provided ``handler`` option.
 
 profile
 =======
