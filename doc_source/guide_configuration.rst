@@ -797,6 +797,8 @@ You can find much more detail on SSL certificates on the
         ]
     ]);
 
+.. _http_handler:
+
 http_handler
 ============
 
