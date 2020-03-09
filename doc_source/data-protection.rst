@@ -30,7 +30,8 @@ you secure your data in the following ways:
 
 * Use multi-factor authentication (MFA) with each account.
 * Use TLS v1.2 or later to communicate with |AWS| resources. All versions of SSL, and TLS versions prior to 1.2, have known
-  vulnerabilities that can compromise security.  See the :doc:`http_handler configuration options <guide_configuration.html#http-handler>` for more information about specifying the mnimum TLS version.
+  vulnerabilities that can compromise security.  See the :doc:`http_handler configuration options <guide_configuration#http-handler>` 
+  for more information about specifying the mnimum TLS version.
 * Set up API and user activity logging with |CTlong|.
 * Use |AWS| encryption solutions, along with all default security controls within |AWS| services.
 * Use advanced managed security services such as |MCElong|, which assists in discovering and securing personal data that 
