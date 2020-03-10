@@ -830,13 +830,13 @@ HTTP handler here, or provide a Guzzle client with your own custom defined optio
 One use case is to set the TLS version used by Guzzle with Curl, assuming Curl
 is installed in your environment. Note the Curl
 `version constraints <https://curl.haxx.se/libcurl/c/CURLOPT_SSLVERSION.html>`_
-for what version of TLS is supported - by default, the highest version is used.
-If the TLS version is explicitly set, and the remote server does not support
-this version, it will produce an error instead of using a lower TLS version.
+for what version of TLS is supported. By default, the latest version is used.
+If the TLS version is explicitly set, and the remote server doesn't support
+this version, it will produce an error instead of using an earlier TLS version.
 
 You can determine the TLS version being used for a given client operation by
 setting the ``debug`` client option to true and examining the SSL connection
-output. That line may look something like: ``SSL connection using TLSv1.2``
+output. That line might look something like: ``SSL connection using TLSv1.2``
 
 Example setting TLS 1.2 with Guzzle 6:
 
