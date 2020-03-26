@@ -913,11 +913,42 @@ for a list of available Regions.
 retries
 =======
 
-:Type: ``int``
+:Type: ``int|array|Aws\CacheInterface|Aws\Retry\ConfigurationInterface|callable``
 :Default: ``int(3)``
 
-Configures the maximum number of allowed retries for a client. Pass ``0`` to
-disable retries.
+Configures the retry mode and maximum number of allowed retries for a client.
+Pass ``0`` to disable retries.
+
+The three retry modes are:
+* ``legacy`` - the default legacy retry implementation
+* ``standard`` - adds a retry quota system to prevent retries that are unlikely
+  to succeed
+* ``adaptive`` - builds on the standard mode, adding a client-side rate limiter.
+  Note this mode is experimental and implementation is subject to change.
+
+The configuration for retries consists of the mode and the max attempts to be used
+for each request. The configuration can be set in a couple of different locations,
+in the following order of precedence.
+
+**Order of Precedence**
+
+The order of precedence for retry configuration is as follows (1 overrides 2-3, etc.):
+
+1. Client configuration option
+2. Environment variables
+3. AWS Shared config file
+
+**Environment variables**
+
+* ``AWS_RETRY_MODE`` - set to ``legacy``, ``standard``, or ``adaptive``.
+* ``AWS_MAX_ATTEMPTS`` - set to an integer value for the max attempts per request
+
+**Shared config file keys**
+
+* ``retry_mode`` - set to ``legacy``, ``standard``, or ``adaptive``.
+* ``max_attempts`` - set to an integer value for the max attempts per request
+
+**Client configuration**
 
 The following example disables retries for the |DDBlong| client.
 
@@ -928,6 +959,68 @@ The following example disables retries for the |DDBlong| client.
         'version' => '2012-08-10',
         'region'  => 'us-west-2',
         'retries' => 0
+    ]);
+
+The following example passes in an integer, which will default to ``legacy`` mode
+with the passed in number of retries
+
+.. code-block:: php
+
+    // Disable retries by setting "retries" to 0
+    $client = new Aws\DynamoDb\DynamoDbClient([
+        'version' => '2012-08-10',
+        'region'  => 'us-west-2',
+        'retries' => 6
+    ]);
+
+The ``Aws\Retry\Configuration`` object accepts two parameters, the retry mode
+ and an integer for the maximum attempts per request. This example passes in an
+``Aws\Retry\Configuration`` object for retry configuration.
+
+.. code-block:: php
+
+    use Aws\EndpointDiscovery\Configuration;
+    use Aws\S3\S3Client;
+
+    $enabled = true;
+    $cache_limit = 1000;
+
+    $config = new Aws\Retry\Configuration('adaptive', 10);
+
+    $s3 = new Aws\S3\S3Client([
+        'version' => 'latest',
+        'region' => 'us-east-2',
+        'retries' => $config,
+    ]);
+
+This example passes in an array for retry configuration.
+
+.. code-block:: php
+
+    use Aws\S3\S3Client;
+
+    $s3 = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'retries' => [
+            'mode' => 'standard,
+            'max_attempts' => 7
+        ],
+    ]);
+
+This examples passes an instance of ``Aws\CacheInterface`` to cache the values
+returned by the default retry configuration provider.
+
+.. code-block:: php
+
+    use Aws\DoctrineCacheAdapter;
+    use Aws\S3\S3Client;
+    use Doctrine\Common\Cache\ApcuCache;
+
+    $s3 = new S3Client([
+        'version'     => 'latest',
+        'region'      => 'us-west-2',
+        'endpoint_discovery' => new DoctrineCacheAdapter(new ApcuCache),
     ]);
 
 scheme
