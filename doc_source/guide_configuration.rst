@@ -924,7 +924,7 @@ The three retry modes are:
 * ``standard`` - adds a retry quota system to prevent retries that are unlikely
   to succeed
 * ``adaptive`` - builds on the standard mode, adding a client-side rate limiter.
-  Note this mode is experimental and implementation is subject to change.
+  Note this mode is considered experimental.
 
 The configuration for retries consists of the mode and the max attempts to be used
 for each request. The configuration can be set in a couple of different locations,
