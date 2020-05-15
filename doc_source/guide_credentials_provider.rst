@@ -90,7 +90,7 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
     $assumeRoleCredentials = new AssumeRoleCredentialProvider([
         'client' => new StsClient([
             'region' => 'us-east-2',
-            'version' => '2011-06-15'
+            'version' => '2011-06-15',
             'credentials' => $profile
         ]),
         'assume_role_params' => [
