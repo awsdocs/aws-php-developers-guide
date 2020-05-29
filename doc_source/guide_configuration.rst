@@ -116,20 +116,24 @@ create credentials using a function.
         'credentials' => $provider
     ]);
 
-Pass an instance of ``Aws\CacheInterface`` to cache the values returned by the
+Pass credentials cached to an instance of ``Aws\CacheInterface`` to cache the values returned by the
 default provider chain across multiple processes.
 
 .. code-block:: php
 
+    use Aws\Credentials\CredentialProvider;
     use Aws\DoctrineCacheAdapter;
-    use Aws\S3\S3Client;
     use Doctrine\Common\Cache\ApcuCache;
 
-    $s3 = new S3Client([
-        'version'     => 'latest',
-        'region'      => 'us-west-2',
-        'credentials' => new DoctrineCacheAdapter(new ApcuCache),
-    ]);
+    $cache = new DoctrineCacheAdapter(new ApcuCache);
+    $provider = CredentialProvider::defaultProvider();
+    $cachedProvider = CredentialProvider::cache($provider, $cache);
+
+    $s3 = new Aws\S3\S3Client([
+        'version' => 'latest',
+        'region' => 'us-west-2',
+        'credentials' => $cachedProvider
+        ]);
 
 You can find more information about providing credentials to a client in the
 :doc:`guide_credentials` guide.
