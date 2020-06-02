@@ -21,7 +21,7 @@ URL from the service default endpoint and so do not yet need your acccount-speci
 
 The following examples show how to:
 
-* Retrieve your account-specific endpoint. using :aws-php-class:`DescribeEndpoints </api-mediaconvert-2017-08-29.html#describeendpoints>`.
+* Retrieve your account-specific endpoint. using :aws-php-class:`DescribeEndpoints <api-mediaconvert-2017-08-29.html#describeendpoints>`.
 
 .. include:: text/git-php-examples.txt
 

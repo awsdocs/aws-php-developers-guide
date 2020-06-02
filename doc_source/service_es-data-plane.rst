@@ -45,7 +45,7 @@ However, in this example, we sign requests against an |ES| domain in the
 You need to provide credentials, which you can do either with the SDK's
 default provider chain or with any form of credentials described in
 :doc:`guide_credentials`. You'll also need a :aws-php-class:`PSR-7 request
-</class-Psr.Http.Message.RequestInterface.html>` (assumed in the code below to be named ``$psr7Request``).
+<class-Psr.Http.Message.RequestInterface.html>` (assumed in the code below to be named ``$psr7Request``).
 
 .. code-block:: php
 

@@ -21,9 +21,9 @@ such as your |EC2| instances, or of your own application metrics.
 
 The following examples show how to:
 
-* List metrics using :aws-php-class:`ListMetrics </api-monitoring-2010-08-01.html#listmetrics>`.
-* Retrieve alarms for a metric using :aws-php-class:`DescribeAlarmsForMetric </api-monitoring-2010-08-01.html#describealarmsformetric>`.
-* Get statistics for a specified metric using :aws-php-class:`GetMetricStatistics </api-monitoring-2010-08-01.html#getmetricstatistics>`.
+* List metrics using :aws-php-class:`ListMetrics <api-monitoring-2010-08-01.html#listmetrics>`.
+* Retrieve alarms for a metric using :aws-php-class:`DescribeAlarmsForMetric <api-monitoring-2010-08-01.html#describealarmsformetric>`.
+* Get statistics for a specified metric using :aws-php-class:`GetMetricStatistics <api-monitoring-2010-08-01.html#getmetricstatistics>`.
 
 .. include:: text/git-php-examples.txt
 

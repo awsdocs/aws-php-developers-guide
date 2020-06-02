@@ -104,7 +104,7 @@ Region
 SDK
     The term "SDK" can refer to the |sdk-php| library as a whole, but also
     refers to the ``Aws\Sdk`` class :aws-php-class:`(docs)
-    </class-Aws.Sdk.html>`, which
+    <class-Aws.Sdk.html>`, which
     acts as a factory for the client objects for each **service**. The ``Sdk``
     class also let's you provide a set of :doc:`global configuration values
     <guide_configuration>` that are applied to all client objects that it

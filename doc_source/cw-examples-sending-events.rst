@@ -21,9 +21,9 @@ Sending Events to |CWElong| with |sdk-php| Version 3
 
 The following examples show how to:
 
-* Create a rule using :aws-php-class:`PutRule </api-events-2015-10-07.html#putrule>`.
-* Add targets to a rule using :aws-php-class:`PutTargets </api-events-2015-10-07.html#puttargets>`.
-* Send custom events to |CWE| using :aws-php-class:`PutEvents </api-events-2015-10-07.html#putevents>`.
+* Create a rule using :aws-php-class:`PutRule <api-events-2015-10-07.html#putrule>`.
+* Add targets to a rule using :aws-php-class:`PutTargets <api-events-2015-10-07.html#puttargets>`.
+* Send custom events to |CWE| using :aws-php-class:`PutEvents <api-events-2015-10-07.html#putevents>`.
 
 .. include:: text/git-php-examples.txt
 

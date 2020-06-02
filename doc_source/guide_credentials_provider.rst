@@ -110,7 +110,7 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
     ]);
 
 
-For more information regarding ``'assume_role_params'``, see :aws-php-class:`AssumeRole </api-sts-2011-06-15.html#assumerole>`.
+For more information regarding ``'assume_role_params'``, see :aws-php-class:`AssumeRole <api-sts-2011-06-15.html#assumerole>`.
 
 Chaining Providers
 ==================

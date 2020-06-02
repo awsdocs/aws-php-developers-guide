@@ -18,7 +18,7 @@
 
 Much like pre-signed URLs, pre-signed POSTs enable you to give write access to a
 user without giving them AWS credentials. Pre-signed POST forms can be created
-with the help of an instance of :aws-php-class:`Aws\S3\PostObjectV4 </class-Aws.S3.PostObjectV4.html>`.
+with the help of an instance of :aws-php-class:`Aws\S3\PostObjectV4 <class-Aws.S3.PostObjectV4.html>`.
 
 The following examples show how to:
 

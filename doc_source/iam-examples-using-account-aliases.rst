@@ -20,9 +20,9 @@ If you want the URL for your sign-in page to contain your company name or other 
 
 The following examples show how to:
 
-* Create an alias using :aws-php-class:`CreateAccountAlias </api-iam-2010-05-08.html#createaccountalias>`.
-* List the alias associated with the AWS account using :aws-php-class:`ListAccountAliases </api-iam-2010-05-08.html#listaccountaliases>`.
-* Delete an alias using :aws-php-class:`DeleteAccountAlias </api-iam-2010-05-08.html#deleteaccountalias>`.
+* Create an alias using :aws-php-class:`CreateAccountAlias <api-iam-2010-05-08.html#createaccountalias>`.
+* List the alias associated with the AWS account using :aws-php-class:`ListAccountAliases <api-iam-2010-05-08.html#listaccountaliases>`.
+* Delete an alias using :aws-php-class:`DeleteAccountAlias <api-iam-2010-05-08.html#deleteaccountalias>`.
 
 .. include:: text/git-php-examples.txt
 

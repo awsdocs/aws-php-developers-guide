@@ -237,7 +237,7 @@ rename()        Rename an object by copying the object then deleting the
     Although ``copy`` generally works with the |S3| stream wrapper, some errors
     might not be properly reported due to the internals of the ``copy`` function
     in PHP. We recommend that you use an instance of :aws-php-class:`Aws\S3\ObjectCopier
-    </class-Aws.S3.ObjectCopier.html>`
+    <class-Aws.S3.ObjectCopier.html>`
     instead.
 
 Working with Buckets
@@ -254,7 +254,7 @@ Here's an example of creating a bucket.
 
 You can pass in stream context options to the ``mkdir()`` method to modify how
 the bucket is created using the parameters available to the :aws-php-class:`CreateBucket
-</class-Aws.S3.S3Client.html#_createBucket>`
+<class-Aws.S3.S3Client.html#_createBucket>`
 operation.
 
 .. code-block:: php

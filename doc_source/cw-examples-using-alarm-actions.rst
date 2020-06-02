@@ -20,8 +20,8 @@ Use alarm actions to create alarms that automatically stop, terminate, reboot, o
 
 The following examples show how to:
 
-* Enable actions for specified alarms using :aws-php-class:`EnableAlarmActions </api-monitoring-2010-08-01.html#enablealarmactions>`.
-* Disable actions for specified alarms using :aws-php-class:`DisableAlarmActions </api-monitoring-2010-08-01.html#disablealarmactions>`.
+* Enable actions for specified alarms using :aws-php-class:`EnableAlarmActions <api-monitoring-2010-08-01.html#enablealarmactions>`.
+* Disable actions for specified alarms using :aws-php-class:`DisableAlarmActions <api-monitoring-2010-08-01.html#disablealarmactions>`.
 
 .. include:: text/git-php-examples.txt
 

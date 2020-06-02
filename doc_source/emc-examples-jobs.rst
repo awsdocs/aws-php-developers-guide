@@ -22,10 +22,10 @@ input video to the |S3| bucket you provisioned for the input storage. For a list
 
 The following examples show how to:
 
-* Create transcoding jobs in |EMClong|. :aws-php-class:`CreateJob </api-mediaconvert-2017-08-29.html#createjob>`.
-* Cancel a transcoding job from  the |EMClong| queue. :aws-php-class:`CancelJob </api-mediaconvert-2017-08-29.html#canceljob>`
-* Retrieve the JSON for a completed transcoding job. :aws-php-class:`GetJob </api-mediaconvert-2017-08-29.html#getjob>`
-* Retrieve a JSON array for up to 20 of the most recently created jobs. :aws-php-class:`ListJobs </api-mediaconvert-2017-08-29.html#listjobs>`
+* Create transcoding jobs in |EMClong|. :aws-php-class:`CreateJob <api-mediaconvert-2017-08-29.html#createjob>`.
+* Cancel a transcoding job from  the |EMClong| queue. :aws-php-class:`CancelJob <api-mediaconvert-2017-08-29.html#canceljob>`
+* Retrieve the JSON for a completed transcoding job. :aws-php-class:`GetJob <api-mediaconvert-2017-08-29.html#getjob>`
+* Retrieve a JSON array for up to 20 of the most recently created jobs. :aws-php-class:`ListJobs <api-mediaconvert-2017-08-29.html#listjobs>`
 
 
 .. include:: text/git-php-examples.txt

@@ -21,10 +21,10 @@ which is reachable from the internet. If your instance does not have a public IP
 
 The following examples show how to:
 
-* Describe one or more of your instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
-* Acquire an Elastic IP address using :aws-php-class:`AllocateAddress </api-ec2-2016-11-15.html#allocateaddress>`.
-* Associate an Elastic IP address with an instance using :aws-php-class:`AssociateAddress </api-ec2-2016-11-15.html#associateaddress>`.
-* Release an Elastic IP address using :aws-php-class:`ReleaseAddress </api-ec2-2016-11-15.html#releaseaddress>`.
+* Describe one or more of your instances using :aws-php-class:`DescribeInstances <api-ec2-2016-11-15.html#describeinstances>`.
+* Acquire an Elastic IP address using :aws-php-class:`AllocateAddress <api-ec2-2016-11-15.html#allocateaddress>`.
+* Associate an Elastic IP address with an instance using :aws-php-class:`AssociateAddress <api-ec2-2016-11-15.html#associateaddress>`.
+* Release an Elastic IP address using :aws-php-class:`ReleaseAddress <api-ec2-2016-11-15.html#releaseaddress>`.
 
 .. include:: text/git-php-examples.txt
 

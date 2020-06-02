@@ -159,7 +159,7 @@ provide credentials to |EC2| instances.
 
 Instead of creating and distributing your AWS credentials to the containers or
 using the |EC2| instance’s role, you can associate an |IAM| role with an ECS task definition or
-``RunTask`` :aws-php-class:`API </api-ecs-2014-11-13.html#runtask>` operation.
+``RunTask`` :aws-php-class:`API <api-ecs-2014-11-13.html#runtask>` operation.
 
 .. note::
 

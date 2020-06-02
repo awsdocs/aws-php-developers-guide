@@ -22,7 +22,7 @@ What methods are available on a client?
 The |sdk-php| uses service descriptions and dynamic
 `magic __call() methods <http://www.php.net/manual/en/language.oop5.overloading.php#object.call>`_
 to execute API operations. You can find a full list of methods available for a
-web service client in the :aws-php-class:`API documentation </index.html>`
+web service client in the :aws-php-class:`API documentation <index.html>`
 of the client.
 
 What do I do about a cURL SSL certificate error?
@@ -117,8 +117,8 @@ See :ref:`map-request` for more information.
 How can I sign an arbitrary request?
 ====================================
 
-You can sign an arbitrary :aws-php-class: `PSR-7 request </class-Psr.Http.Message.RequestInterface.html>`
-using the SDK's :aws-php-class: `SignatureV4 class </class-Aws.Signature.SignatureV4.html>`.
+You can sign an arbitrary :aws-php-class: `PSR-7 request <class-Psr.Http.Message.RequestInterface.html>`
+using the SDK's :aws-php-class: `SignatureV4 class <class-Aws.Signature.SignatureV4.html>`.
 
 See :doc:`service_cloudsearch-custom-requests` for a full example of how to do
 this.
@@ -256,11 +256,11 @@ How do I handle exceptions with error codes?
 ============================================
 
 Besides |sdk-php|-customized ``Exception`` classes, each AWS service client has its own exception class that
-inherits from :aws-php-class:`Aws\Exception\AwsException </class-Aws.Exception.AwsException.html>`.
+inherits from :aws-php-class:`Aws\Exception\AwsException <class-Aws.Exception.AwsException.html>`.
 You can determine more specific error types to catch with the API-specific errors listed under the
 ``Errors`` section of each method.
 
-Error code information is available with :aws-php-class:`getAwsErrorCode() </class-Aws.Exception.AwsException.html#_getAwsErrorCode>`
+Error code information is available with :aws-php-class:`getAwsErrorCode() <class-Aws.Exception.AwsException.html#_getAwsErrorCode>`
 from ``Aws\Exception\AwsException``.
 
 .. code-block:: php

@@ -18,12 +18,12 @@ Managing |EC2| Instances Using the |sdk-php| Version 3
 
 The following examples show how to:
 
-* Describe |EC2| instances using :aws-php-class:`DescribeInstances </api-ec2-2016-11-15.html#describeinstances>`.
-* Enable detailed monitoring for a running instance using :aws-php-class:`MonitorInstances </api-ec2-2016-11-15.html#monitorinstances>`.
-* Disable monitoring for a running instance using :aws-php-class:`UnmonitorInstances </api-ec2-2016-11-15.html#unmonitorinstances>`.
-* Start an |EBS|-backed AMI that you've previously stopped, using :aws-php-class:`StartInstances </api-ec2-2016-11-15.html#startinstances>`.
-* Stop an |EBS|-backed instance using :aws-php-class:`StopInstances </api-ec2-2016-11-15.html#stopinstances>`.
-* Request a reboot of one or more instances using :aws-php-class:`RebootInstances </api-ec2-2016-11-15.html#rebootinstances>`.
+* Describe |EC2| instances using :aws-php-class:`DescribeInstances <api-ec2-2016-11-15.html#describeinstances>`.
+* Enable detailed monitoring for a running instance using :aws-php-class:`MonitorInstances <api-ec2-2016-11-15.html#monitorinstances>`.
+* Disable monitoring for a running instance using :aws-php-class:`UnmonitorInstances <api-ec2-2016-11-15.html#unmonitorinstances>`.
+* Start an |EBS|-backed AMI that you've previously stopped, using :aws-php-class:`StartInstances <api-ec2-2016-11-15.html#startinstances>`.
+* Stop an |EBS|-backed instance using :aws-php-class:`StopInstances <api-ec2-2016-11-15.html#stopinstances>`.
+* Request a reboot of one or more instances using :aws-php-class:`RebootInstances <api-ec2-2016-11-15.html#rebootinstances>`.
 
 .. include:: text/git-php-examples.txt
 

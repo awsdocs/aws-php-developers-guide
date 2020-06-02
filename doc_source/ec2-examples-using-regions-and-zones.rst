@@ -21,8 +21,8 @@ with multiple isolated locations known as Availability Zones. |EC2| provides the
 
 The following examples show how to:
 
-* Describe the Availability Zones that are available to you using :aws-php-class:`DescribeAvailabilityZones </api-ec2-2016-11-15.html#describeavailabilityzones>`.
-* Describe AWS Regions that are currently available to you using :aws-php-class:`DescribeRegions </api-ec2-2016-11-15.html#describeregions>`.
+* Describe the Availability Zones that are available to you using :aws-php-class:`DescribeAvailabilityZones <api-ec2-2016-11-15.html#describeavailabilityzones>`.
+* Describe AWS Regions that are currently available to you using :aws-php-class:`DescribeRegions <api-ec2-2016-11-15.html#describeregions>`.
 
 .. include:: text/git-php-examples.txt
 

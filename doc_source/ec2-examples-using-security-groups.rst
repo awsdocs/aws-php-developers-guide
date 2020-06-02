@@ -20,10 +20,10 @@ An |EC2| security group acts as a virtual firewall that controls the traffic for
 
 The following examples show how to:
 
-* Describe one or more of your security groups using :aws-php-class:`DescribeSecurityGroups </api-ec2-2016-11-15.html#describesecuritygroups>`.
-* Add an ingress rule to a security group using :aws-php-class:`AuthorizeSecurityGroupIngress </api-ec2-2016-11-15.html#authorizesecuritygroupingress>`.
-* Create a security group using :aws-php-class:`CreateSecurityGroup </api-ec2-2016-11-15.html#createsecuritygroup>`.
-* Delete a security group using :aws-php-class:`DeleteSecurityGroup </api-ec2-2016-11-15.html#deletesecuritygroup>`.
+* Describe one or more of your security groups using :aws-php-class:`DescribeSecurityGroups <api-ec2-2016-11-15.html#describesecuritygroups>`.
+* Add an ingress rule to a security group using :aws-php-class:`AuthorizeSecurityGroupIngress <api-ec2-2016-11-15.html#authorizesecuritygroupingress>`.
+* Create a security group using :aws-php-class:`CreateSecurityGroup <api-ec2-2016-11-15.html#createsecuritygroup>`.
+* Delete a security group using :aws-php-class:`DeleteSecurityGroup <api-ec2-2016-11-15.html#deletesecuritygroup>`.
 
 .. include:: text/git-php-examples.txt
 

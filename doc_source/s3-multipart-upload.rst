@@ -203,7 +203,7 @@ The ``MultipartUploader`` object constructor accepts the following arguments:
 ``$source``
     The source data being uploaded. This can be a path or URL (for example,
     ``/path/to/file.jpg``), a resource handle (for example, ``fopen('/path/to/file.jpg', 'r)``),
-    or an instance of a :aws-php-class:`PSR-7 stream </class-Psr.Http.Message.StreamInterface.html>`.
+    or an instance of a :aws-php-class:`PSR-7 stream <class-Psr.Http.Message.StreamInterface.html>`.
 
 ``$config``
     An associative array of configuration options for the multipart upload.

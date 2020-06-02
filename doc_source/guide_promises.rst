@@ -253,7 +253,7 @@ workflows. The ``guzzlehttp/promise`` package contains various functions that
 you can use to combine promises.
 
 You can find the API documentation for all of the promise collection functions
-at :aws-php-class:`namespace-GuzzleHttp.Promise </namespace-GuzzleHttp.Promise.html>`.
+at :aws-php-class:`namespace-GuzzleHttp.Promise <namespace-GuzzleHttp.Promise.html>`.
 
 each and each_limit
 -------------------

@@ -21,8 +21,8 @@ specify. It performs one or more actions based on the value of the metric, relat
 
 The following examples show how to:
 
-* Publish metric data using :aws-php-class:`PutMetricData </api-monitoring-2010-08-01.html#putmetricdata>`.
-* Create an alarm using :aws-php-class:`PutMetricAlarm </api-monitoring-2010-08-01.html#putmetricalarm>`.
+* Publish metric data using :aws-php-class:`PutMetricData <api-monitoring-2010-08-01.html#putmetricdata>`.
+* Create an alarm using :aws-php-class:`PutMetricAlarm <api-monitoring-2010-08-01.html#putmetricalarm>`.
 
 .. include:: text/git-php-examples.txt
 

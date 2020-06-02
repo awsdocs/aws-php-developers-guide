@@ -25,7 +25,7 @@
    :alt: Diagram that provides an overview of how AWS SDK for PHP connects to AWS Elemental MediaConvert
 
 
-The PHP API for |EMClong| is exposed through the `AWS.MediaConvert` client class\. For more information, see :aws-php-class:`Class: AWS.MediaConvert </api-mediaconvert-2017-08-29.html>` 
+The PHP API for |EMClong| is exposed through the `AWS.MediaConvert` client class\. For more information, see :aws-php-class:`Class: AWS.MediaConvert <api-mediaconvert-2017-08-29.html>` 
 in the API reference\.
 
 .. include:: text/git-php-examples.txt
