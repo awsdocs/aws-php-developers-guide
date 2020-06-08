@@ -79,6 +79,8 @@ you need to provide ``'client'`` information with an ``StsClient`` object and
 .. code-block:: php
 
     use Aws\Credentials\CredentialProvider;
+    use Aws\Credentials\InstanceProfileProvider;
+    use Aws\Credentials\AssumeRoleCredentialProvider;
     use Aws\S3\S3Client;
     use Aws\Sts\StsClient;
 
