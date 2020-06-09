@@ -22,7 +22,11 @@ You can install the |sdk-php| Version 3:
 * As a prepackaged phar of the SDK
 * As a ZIP file of the SDK
 
-Before you install |sdk-php| Version 3 ensure your environment is using PHP version 5.5 or later. Learn more about :doc:`environment requirements and recommendations <getting-started_requirements>`
+Before you install |sdk-php| Version 3 ensure your environment is using PHP version 5.5 or later. Learn more about :doc:`environment requirements and recommendations <getting-started_requirements>`.
+
+.. note::
+
+    Installing the SDK via the .phar and .zip methods requires the `Multibyte String PHP extension <https://www.php.net/manual/en/book.mbstring.php>`_ to be installed and enabled separately.
 
 Install |sdk-php| as a dependency via Composer
 ==============================================

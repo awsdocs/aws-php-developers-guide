@@ -21,7 +21,7 @@ For best results with |sdk-php|, ensure your environment supports the following 
 Requirements
 ============
 
-To use the |sdk-php|, you must be using PHP version 5.5.0 or later. If you need to sign private |CWlong| URLs, you
+To use the |sdk-php|, you must be using PHP version 5.5.0 or later with the `SimpleXML PHP extension <https://www.php.net/manual/en/book.simplexml.php>`_ enabled. If you need to sign private |CWlong| URLs, you
 also need the `OpenSSL PHP extension <http://php.net/manual/en/book.openssl.php>`_.
 
 Recommendations
