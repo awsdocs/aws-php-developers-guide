@@ -19,11 +19,11 @@
 The |sdk-php| provides an ``S3EncryptionClientV2``. With client-side
 encryption, data is encrypted and decrypted directly in your environment. This
 means that this data is encrypted before it's transferred to |S3|, and you
-don’t rely on an external service to handle encryption for you. Note that there
-is an ``S3EncryptionClient``, but it is deprecated in favor of the V2 version.
-New implementations should use ``S3EncryptionClientV2``, and older implementations
-should be looking to migrate to it. Note that ``S3EncryptionClientV2`` does
-support decrypting data that was encrypted with the legacy ``S3EncryptionClient``.
+don’t rely on an external service to handle encryption for you. For new implementations,
+we suggest the use of ``S3EncryptionClientV2`` over the deprecated ``S3EncryptionClient``.
+Older implementations still using ``S3EncryptionClient`` should attempt to migrate.
+``S3EncryptionClientV2`` maintains support for decrypting data that was encrypted
+using the legacy ``S3EncryptionClient``.
 
 The |sdk-php| implements :KMS-dg:`envelope encryption <workflow>`
 and uses `OpenSSL <https://www.openssl.org/>`_ for its encrypting and
@@ -135,7 +135,7 @@ Cipher Configuration
     using OpenSSL for GCM encryption. For PHP versions 7.0 and earlier, a polyfill
     for GCM support is provided and used by the encryption clients
     ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploaderV2``.
-    However, the performance for large inputs will be a lot slower using the polyfill
+    However, the performance for large inputs will be much slower using the polyfill
     than using the native implementation for PHP 7.1+, so upgrading older PHP
     version environments may be necessary to use them effectively.
 
@@ -200,7 +200,7 @@ Multipart Uploads
 =================
 
 Performing a multipart upload with client-side encryption is also possible. The
-``Aws\S3\Crypto\S3EncryptionMultipartUploaderV2`` prepares the source stream for
+``Aws\S3\Crypto\S3EncryptionMultipartUploaderV2`` prepares the source stream
 for encryption before uploading. Creating one takes on a similar experience to
 using the ``Aws\S3\MultipartUploader`` and the ``Aws\S3\Crypto\S3EncryptionClientV2``.
 The ``S3EncryptionMultipartUploaderV2`` can handle the same ``'@MetadataStrategy'``
