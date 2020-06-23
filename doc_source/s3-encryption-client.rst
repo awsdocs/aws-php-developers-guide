@@ -134,10 +134,10 @@ Cipher Configuration
     and `decrypt <http://php.net/manual/en/function.openssl-decrypt.php>`_
     using OpenSSL for GCM encryption. For PHP versions 7.0 and earlier, a polyfill
     for GCM support is provided and used by the encryption clients
-    ``Aws\S3\Crypto\S3EncryptionClient`` and ``S3EncryptionMultipartUploaderV2``.
-    However, the performance for large inputs will be a lot slower than for PHP 7.1+,
-    so upgrading older PHP version environments may be necessary to use them
-    effectively.
+    ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploaderV2``.
+    However, the performance for large inputs will be a lot slower using the polyfill
+    than using the native implementation for PHP 7.1+, so upgrading older PHP
+    version environments may be necessary to use them effectively.
 
 ``'KeySize'`` (int)
     The length of the content encryption key to generate for
