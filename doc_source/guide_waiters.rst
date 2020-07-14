@@ -56,7 +56,7 @@ You can modify waiter configuration options by passing an associative array of
             'maxAttempts' => 10
         ]
     ]);
-
+	
 
 delay (int)
     Number of seconds to delay between polling attempts. Each waiter has
