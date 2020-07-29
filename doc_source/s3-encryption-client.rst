@@ -16,10 +16,14 @@
    :description: Client-side encryption for the Amazon S3 client with the AWS SDK for PHP version 3.
    :keywords: AWS SDK for PHP version 3 constructor, AWS SDK for PHP version 3 client configuration
 
-The |sdk-php| provides an ``S3EncryptionClient``. With client-side
+The |sdk-php| provides an ``S3EncryptionClientV2``. With client-side
 encryption, data is encrypted and decrypted directly in your environment. This
 means that this data is encrypted before it's transferred to |S3|, and you
-don’t rely on an external service to handle encryption for you.
+don’t rely on an external service to handle encryption for you. For new implementations,
+we suggest the use of ``S3EncryptionClientV2`` over the deprecated ``S3EncryptionClient``.
+Older implementations still using ``S3EncryptionClient`` should attempt to migrate.
+``S3EncryptionClientV2`` maintains support for decrypting data that was encrypted
+using the legacy ``S3EncryptionClient``.
 
 The |sdk-php| implements :KMS-dg:`envelope encryption <workflow>`
 and uses `OpenSSL <https://www.openssl.org/>`_ for its encrypting and
@@ -45,12 +49,12 @@ interface and requires two new parameters.
 .. code-block:: php
 
    use Aws\S3\S3Client;
-   use Aws\S3\Crypto\S3EncryptionClient;
+   use Aws\S3\Crypto\S3EncryptionClientV2;
    use Aws\Kms\KmsClient;
-   use Aws\Crypto\KmsMaterialsProvider;
+   use Aws\Crypto\KmsMaterialsProviderV2;
 
     // Let's construct our S3EncryptionClient using an S3Client
-    $encryptionClient = new S3EncryptionClient(
+    $encryptionClient = new S3EncryptionClientV2(
         new S3Client([
             'profile' => 'default',
             'region' => 'us-east-1',
@@ -61,7 +65,7 @@ interface and requires two new parameters.
     $kmsKeyArn = 'arn-to-the-kms-key';
     // This materials provider handles generating a cipher key and
     // initialization vector, as well as encrypting your cipher key via AWS KMS
-    $materialsProvider = new KmsMaterialsProvider(
+    $materialsProvider = new KmsMaterialsProviderV2(
         new KmsClient([
             'profile' => 'default',
             'region' => 'us-east-1',
@@ -121,20 +125,24 @@ Cipher Configuration
 
 ``'Cipher'`` (string)
     Cipher method that the encryption client uses while
-    encrypting. Only 'gcm' and 'cbc' are supported at this time.
+    encrypting. Only 'gcm' is supported at this time.
 
 .. important::
 
     PHP is `updated in version 7.1 <http://php.net/manual/en/migration71.new-features.php>`_
     to include the extra parameters necessary to `encrypt <http://php.net/manual/en/function.openssl-encrypt.php>`_
     and `decrypt <http://php.net/manual/en/function.openssl-decrypt.php>`_
-    using OpenSSL for GCM encryption. As a result, using GCM with your
-    ``Aws\S3\Crypto\S3EncryptionClient`` is only available on PHP 7.1 or later.
+    using OpenSSL for GCM encryption. For PHP versions 7.0 and earlier, a polyfill
+    for GCM support is provided and used by the encryption clients
+    ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploaderV2``.
+    However, the performance for large inputs will be much slower using the polyfill
+    than using the native implementation for PHP 7.1+, so upgrading older PHP
+    version environments may be necessary to use them effectively.
 
 ``'KeySize'`` (int)
     The length of the content encryption key to generate for
-    encrypting. Defaults to 256 bits. Valid configuration options are 256,
-    192, and 128.
+    encrypting. Defaults to 256 bits. Valid configuration options are 256 and
+    128 bits.
 
 ``'Aad'`` (string)
     Optional 'Additional authentication data' to include with your
@@ -192,11 +200,11 @@ Multipart Uploads
 =================
 
 Performing a multipart upload with client-side encryption is also possible. The
-``Aws\S3\Crypto\S3EncryptionMultipartUploader`` prepares the source stream for
+``Aws\S3\Crypto\S3EncryptionMultipartUploaderV2`` prepares the source stream
 for encryption before uploading. Creating one takes on a similar experience to
-using the ``Aws\S3\MultipartUploader`` and the ``Aws\S3\Crypto\S3EncryptionClient``.
-The ``S3EncryptionMultipartUploader`` can handle the same ``'@MetadataStrategy'``
-option as the ``S3EncryptionClient``, as well as all available ``'@CipherOptions'``
+using the ``Aws\S3\MultipartUploader`` and the ``Aws\S3\Crypto\S3EncryptionClientV2``.
+The ``S3EncryptionMultipartUploaderV2`` can handle the same ``'@MetadataStrategy'``
+option as the ``S3EncryptionClientV2``, as well as all available ``'@CipherOptions'``
 configurations.
 
 .. code-block:: php
@@ -204,7 +212,7 @@ configurations.
     $kmsKeyArn = 'arn-to-the-kms-key';
     // This materials provider handles generating a cipher key and
     // initialization vector, as well as encrypting your cipher key via AWS KMS
-    $materialsProvider = new KmsMaterialsProvider(
+    $materialsProvider = new KmsMaterialsProviderV2(
         new KmsClient([
             'region' => 'us-east-1',
             'version' => 'latest',
@@ -221,7 +229,7 @@ configurations.
         // Additional configuration options
     ];
 
-    $multipartUploader = new S3EncryptionMultipartUploader(
+    $multipartUploader = new S3EncryptionMultipartUploaderV2(
         new S3Client([
             'region' => 'us-east-1',
             'version' => 'latest',
