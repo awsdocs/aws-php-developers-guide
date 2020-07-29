@@ -19,7 +19,11 @@ Waiters in the |sdk-php| Version 3
 Waiters help make it easier to work with *eventually consistent* systems by
 providing an abstracted way to wait until a resource enters into a particular
 state by polling the resource. You can find a list of the waiters supported by
-a client by viewing the API documentation of a service client.
+a client by viewing the `API documentation <https://docs.aws.amazon.com/aws-sdk-php/v3/api/index.html>`_
+for a single version of a service client. To navigate there, go to the client's
+page in the API documentation and navigate to the specific version number
+(represented by a date) and scroll down to the 'Waiters' section. `This link will bring you to the waiters section of S3. <https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#waiters>`_
+
 
 In the following example, the |S3| client is used to create a bucket. Then
 the waiter is used to wait until the bucket exists.
@@ -56,7 +60,7 @@ You can modify waiter configuration options by passing an associative array of
             'maxAttempts' => 10
         ]
     ]);
-	
+
 
 delay (int)
     Number of seconds to delay between polling attempts. Each waiter has
@@ -165,3 +169,4 @@ resources, and do something with the first waiter that successfully resolved?
 
     // Force the promise to complete
     $any->wait();
+
