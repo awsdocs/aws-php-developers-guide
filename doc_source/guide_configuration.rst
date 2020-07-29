@@ -1119,6 +1119,15 @@ ua_append
 A string or array of strings that are added to the user-agent string passed
 to the HTTP handler.
 
+use_aws_shared_config_files
+=========
+
+:Type: ``bool|array``
+:Default: ``bool(true)``
+
+Set to false to disable checking for shared config file in '~/.aws/config' and
+'~/.aws/credentials'.  This will override the AWS_CONFIG_FILE environment variable.
+
 validate
 ========
 
