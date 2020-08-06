@@ -21,8 +21,6 @@ The following table describes the important changes since the last release of th
 +--------------------+----------------------------------------+-------------------+
 | Change             | Description                            | Release Date      |
 +====================+========================================+===================+
-| |S3| encryption    | Updated cryptography to V2             |  Aug 7th, 2019   |
-+--------------------+----------------------------------------+-------------------+
 | |ASM| examples     | Add more service examples              |  Mar 27th, 2019   |
 +--------------------+----------------------------------------+-------------------+
 | Endpoint discovery | Configuration of endpoint discovery    |  Feb 15th, 2019   |

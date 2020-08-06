@@ -22,7 +22,7 @@ don’t rely on an external service to handle encryption for you. For new implem
 we suggest the use of ``S3EncryptionClientV2`` over the deprecated ``S3EncryptionClient``.
 It is recommended that older implementations still using ``S3EncryptionClient`` attempt to migrate.
 ``S3EncryptionClientV2`` maintains support for decrypting data that was encrypted
-using the legacy ``S3EncryptionClient`` through using the security profile 'V2_AND_LEGACY' as outlined below.
+using the legacy ``S3EncryptionClient``.
 
 The |sdk-php| implements :KMS-dg:`envelope encryption <workflow>`
 and uses `OpenSSL <https://www.openssl.org/>`_ for its encrypting and
@@ -44,13 +44,14 @@ Encryption
 
 Uploading an encrypted object in ``S3EncryptionClientV2`` takes three additional parameters on top of
 ``PutObject``:
-* ``'@KmsEncryptionContext```` is a key-value pair which can be used to add an extra layer of security to
-your encrypted object.  Anyone who attempts to get the object must pass the same key-value pair into
-the ``GetObject`` call in order to decrypt it.  If no additional context is desired, pass in an
-empty array.
+
+* ``'@KmsEncryptionContext'`` is a key-value pair which can be used to add an extra layer of security to
+  your encrypted object.  Anyone who attempts to get the object must pass the same key-value pair into
+  the ``GetObject`` call in order to decrypt it.  If no additional context is desired, pass in an
+  empty array.
 * ``@CipherOptions`` are additional configurations for the encryption including which cipher to use and keysize
 * ``@MaterialsProvider`` is a provider which handles generating a cipher key and initialization vector, as
-well as encrypting your cipher key via AWS KMS
+  well as encrypting your cipher key via AWS KMS
 
 .. code-block:: php
 
@@ -71,11 +72,11 @@ well as encrypting your cipher key via AWS KMS
     $kmsKeyId = 'kms-key-id';
     $materialsProvider = new KmsMaterialsProviderV2(
          new KmsClient([
-             'profile' => 'default',
-             'region' => 'us-east-1',
-             'version' => 'latest',
-         ]),
-         $kmsKeyId
+            'profile' => 'default',
+            'region' => 'us-east-1',
+            'version' => 'latest',
+        ]),
+        $kmsKeyId
     );
 
     $bucket = 'the-bucket-name';
@@ -86,8 +87,7 @@ well as encrypting your cipher key via AWS KMS
         // Additional configuration options
     ];
 
-
-    $encryptionClient->putObject([
+    $result = $encryptionClient->putObject([
         '@MaterialsProvider' => $materialsProvider,
         '@CipherOptions' => $cipherOptions,
         '@KmsEncryptionContext' => ['context-key' => 'context-value'],
@@ -105,17 +105,18 @@ Decryption
 ==========
 
 Downloading and decrypting an object requires two additional parameter on
-top of ``GetObject``, and the client will detect the basic cipher options for you.
+top of ``GetObject`` and has two more optional ones.  The client will
+detect the basic cipher options for you.
 
 * ``'@SecurityProfile'``:  If set to ‘V2’, only objects that are encrypted in V2-compatible
-format can be decrypted. Setting this parameter  to ‘V2_AND_LEGACY’ also allows objects
-encrypted in V1-compatible format to be decrypted. To support migration, set @SecurityProfile
-to ‘V2_AND_LEGACY’.  Use ‘V2’ only for new application development.
-* ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
-well as encrypting your cipher key via AWS KMS
-* ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
-without supplying a KMS key. The default value is false.
-* ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which cipher to use and keysize
+   format can be decrypted. Setting this parameter  to ‘V2_AND_LEGACY’ also allows objects
+   encrypted in V1-compatible format to be decrypted. To support migration, set @SecurityProfile
+   to ‘V2_AND_LEGACY’.  Use ‘V2’ only for new application development.
+ * ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
+   well as encrypting your cipher key via AWS KMS
+ * ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
+   without supplying a KMS key. The default value is false.
+ * ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which cipher to use and keysize
 
 .. code-block:: php
 
@@ -160,7 +161,7 @@ Cipher Configuration
 
 ``'Aad'`` (string)
     Optional 'Additional authentication data' to include with your
-    encrypted payload. This information is validated on decryption.``Aad`` is
+    encrypted payload. This information is validated on decryption. ``Aad`` is
     available only when using the 'gcm' cipher.
 
 .. important::
