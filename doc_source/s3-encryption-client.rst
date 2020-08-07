@@ -8,8 +8,7 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-########################################################
-|S3| Client-Side Encryption with the |sdk-php| Version 3
+s|S3| Client-Side Encryption with the |sdk-php| Version 3
 ########################################################
 
 .. meta::
@@ -19,15 +18,21 @@
 With client-side encryption, data is encrypted and decrypted directly in your environment. This
 means that this data is encrypted before it's transferred to |S3|, and you
 don’t rely on an external service to handle encryption for you. For new implementations,
-we suggest the use of ``S3EncryptionClientV2`` over the deprecated ``S3EncryptionClient``.
-It is recommended that older implementations still using ``S3EncryptionClient`` attempt to migrate.
-``S3EncryptionClientV2`` maintains support for decrypting data that was encrypted
-using the legacy ``S3EncryptionClient``.
+we suggest the use of ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploader`` over the deprecated
+``S3EncryptionClient`` and ``S3EncryptionMultipartUploader``.  It is recommended that older implementations
+still using the deprecated versions attempt to migrate. ``S3EncryptionClientV2`` maintains
+support for decrypting data that was encrypted using the legacy ``S3EncryptionClient``.
 
 The |sdk-php| implements :KMS-dg:`envelope encryption <workflow>`
 and uses `OpenSSL <https://www.openssl.org/>`_ for its encrypting and
 decrypting. The implementation is interoperable with :AWS-gr:`other SDKs that match its feature support <aws_sdk_cryptography>`.
 It's also compatible with :doc:`the SDK’s promise-based asynchronous workflow <guide_promises>`.
+
+Migration Guide
+==========
+
+For those who are trying to migrate to from the deprecated clients to the new clients, there is a migration
+guide which can be found at `this link <https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html/>`
 
 Setup
 =====
@@ -43,15 +48,15 @@ Encryption
 ==========
 
 Uploading an encrypted object in ``S3EncryptionClientV2`` takes three additional parameters on top of
-``PutObject``:
+the standard ``PutObject`` parameters:
 
 * ``'@KmsEncryptionContext'`` is a key-value pair which can be used to add an extra layer of security to
   your encrypted object.  Anyone who attempts to get the object must pass the same key-value pair into
   the ``GetObject`` call in order to decrypt it.  If no additional context is desired, pass in an
   empty array.
-* ``@CipherOptions`` are additional configurations for the encryption including which cipher to use and keysize
+* ``@CipherOptions`` are additional configurations for the encryption including which cipher to use and keysize.
 * ``@MaterialsProvider`` is a provider which handles generating a cipher key and initialization vector, as
-  well as encrypting your cipher key via AWS KMS
+  well as encrypting your cipher key via AWS KMS.
 
 .. code-block:: php
 
@@ -104,19 +109,19 @@ Uploading an encrypted object in ``S3EncryptionClientV2`` takes three additional
 Decryption
 ==========
 
-Downloading and decrypting an object requires two additional parameter on
-top of ``GetObject`` and has two more optional ones.  The client will
-detect the basic cipher options for you.
+Downloading and decrypting an object has four additional parameters, two of which are required, on top of the standard
+``GetObject`` parameters, two of which are required.  The client will detect the basic cipher options for you.
 
 * ``'@SecurityProfile'``:  If set to ‘V2’, only objects that are encrypted in V2-compatible
    format can be decrypted. Setting this parameter  to ‘V2_AND_LEGACY’ also allows objects
    encrypted in V1-compatible format to be decrypted. To support migration, set @SecurityProfile
    to ‘V2_AND_LEGACY’.  Use ‘V2’ only for new application development.
  * ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
-   well as encrypting your cipher key via AWS KMS
+   well as encrypting your cipher key via AWS KMS.  The KMS key id is provided in the constructor of the provider.
  * ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
    without supplying a KMS key. The default value is false.
- * ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which cipher to use and keysize
+ * ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which
+   cipher to use and keysize.
 
 .. code-block:: php
 
@@ -190,6 +195,7 @@ is used by default.
     $result = $encryptionClient->putObject([
         '@MaterialsProvider' => $materialsProvider,
         '@MetadataStrategy' => $strategy,
+        '@KmsEncryptionContext' => [],
         '@CipherOptions' => $cipherOptions,
         'Bucket' => $bucket,
         'Key' => $key,
@@ -225,7 +231,7 @@ for encryption before uploading. Creating one takes on a similar experience to
 using the ``Aws\S3\MultipartUploader`` and the ``Aws\S3\Crypto\S3EncryptionClientV2``.
 The ``S3EncryptionMultipartUploaderV2`` can handle the same ``'@MetadataStrategy'``
 option as the ``S3EncryptionClientV2``, as well as all available ``'@CipherOptions'``
-configurations, ``'@SecurityProfile'``, and ``'@KmsAllowDecryptWithAnyCmk'``.
+configurations.
 
 .. code-block:: php
 
@@ -255,8 +261,6 @@ configurations, ``'@SecurityProfile'``, and ``'@KmsAllowDecryptWithAnyCmk'``.
         ]),
         fopen('large-file-to-encrypt.txt'),
         [
-            '@KmsAllowDecryptWithAnyCmk' => false,
-            '@SecurityProfile' => 'V2',
             '@MaterialsProvider' => $materialsProvider,
             '@CipherOptions' => $cipherOptions,
             'Bucket' => $bucket,
