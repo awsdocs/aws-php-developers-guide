@@ -8,7 +8,8 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-s|S3| Client-Side Encryption with the |sdk-php| Version 3
+########################################################
+|S3| Client-Side Encryption with the |sdk-php| Version 3
 ########################################################
 
 .. meta::
@@ -18,7 +19,7 @@ s|S3| Client-Side Encryption with the |sdk-php| Version 3
 With client-side encryption, data is encrypted and decrypted directly in your environment. This
 means that this data is encrypted before it's transferred to |S3|, and you
 don’t rely on an external service to handle encryption for you. For new implementations,
-we suggest the use of ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploader`` over the deprecated
+we suggest the use of ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploaderV2`` over the deprecated
 ``S3EncryptionClient`` and ``S3EncryptionMultipartUploader``.  It is recommended that older implementations
 still using the deprecated versions attempt to migrate. ``S3EncryptionClientV2`` maintains
 support for decrypting data that was encrypted using the legacy ``S3EncryptionClient``.
@@ -32,7 +33,7 @@ Migration Guide
 ==========
 
 For those who are trying to migrate to from the deprecated clients to the new clients, there is a migration
-guide which can be found at `this link <https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html/>`
+guide which can be found at https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html
 
 Setup
 =====
@@ -51,12 +52,11 @@ Uploading an encrypted object in ``S3EncryptionClientV2`` takes three additional
 the standard ``PutObject`` parameters:
 
 * ``'@KmsEncryptionContext'`` is a key-value pair which can be used to add an extra layer of security to
-  your encrypted object.  Anyone who attempts to get the object must pass the same key-value pair into
-  the ``GetObject`` call in order to decrypt it.  If no additional context is desired, pass in an
-  empty array.
+  your encrypted object.  The encryption client must pass in the same key, which it will automatically do
+  on a get call.  If no additional context is desired, pass in an empty array.
 * ``@CipherOptions`` are additional configurations for the encryption including which cipher to use and keysize.
 * ``@MaterialsProvider`` is a provider which handles generating a cipher key and initialization vector, as
-  well as encrypting your cipher key via AWS KMS.
+  well as encrypting your cipher key via AWS KMS.  The KMS key id is provided in the constructor of the provider.
 
 .. code-block:: php
 
@@ -116,11 +116,11 @@ Downloading and decrypting an object has four additional parameters, two of whic
    format can be decrypted. Setting this parameter  to ‘V2_AND_LEGACY’ also allows objects
    encrypted in V1-compatible format to be decrypted. To support migration, set @SecurityProfile
    to ‘V2_AND_LEGACY’.  Use ‘V2’ only for new application development.
- * ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
+* ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
    well as encrypting your cipher key via AWS KMS.  The KMS key id is provided in the constructor of the provider.
- * ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
-   without supplying a KMS key. The default value is false.
- * ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which
+* ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
+   without supplying a KMS key id to the constructor of the MaterialsProvider. The default value is false.
+* ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which
    cipher to use and keysize.
 
 .. code-block:: php
@@ -188,18 +188,27 @@ is used by default.
 .. code-block:: php
 
     $strategy = new InstructionFileMetadataStrategy(
-        $s3Client,
-        '.instr'
+        $s3Client
     );
 
-    $result = $encryptionClient->putObject([
+    $encryptionClient->putObject([
         '@MaterialsProvider' => $materialsProvider,
         '@MetadataStrategy' => $strategy,
         '@KmsEncryptionContext' => [],
         '@CipherOptions' => $cipherOptions,
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => fopen('file-to-encrypt.txt'),
+        'Body' => fopen('file-to-encrypt.txt', 'r'),
+    ]);
+
+    $result = $encryptionClient->getObject([
+        '@KmsAllowDecryptWithAnyCmk' => false,
+        '@MaterialsProvider' => $materialsProvider,
+        '@SecurityProfile' => 'V2',
+        '@MetadataStrategy' => $strategy,
+        '@CipherOptions' => $cipherOptions,
+        'Bucket' => $bucket,
+        'Key' => $key,
     ]);
 
 Class name constants for the ``HeadersMetadataStrategy`` and
@@ -214,7 +223,7 @@ Class name constants for the ``HeadersMetadataStrategy`` and
         '@CipherOptions' => $cipherOptions,
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => fopen('file-to-encrypt.txt'),
+        'Body' => fopen('file-to-encrypt.txt', 'r'),
     ]);
 
 .. note::
@@ -235,14 +244,14 @@ configurations.
 
 .. code-block:: php
 
-    $kmsKeyArn = 'arn-to-the-kms-key';
+    $kmsKeyId = 'kms-key-id';
     $materialsProvider = new KmsMaterialsProviderV2(
         new KmsClient([
             'region' => 'us-east-1',
             'version' => 'latest',
             'profile' => 'default',
         ]),
-        $kmsKeyArn
+        $kmsKeyId
     );
 
     $bucket = 'the-bucket-name';
@@ -259,12 +268,12 @@ configurations.
             'version' => 'latest',
             'profile' => 'default',
         ]),
-        fopen('large-file-to-encrypt.txt'),
+        fopen('large-file-to-encrypt.txt', 'r'),
         [
             '@MaterialsProvider' => $materialsProvider,
             '@CipherOptions' => $cipherOptions,
-            'Bucket' => $bucket,
-            'Key' => $key,
+            'bucket' => $bucket,
+            'key' => $key,
         ]
     );
     $multipartUploader->upload();
