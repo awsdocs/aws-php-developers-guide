@@ -76,7 +76,7 @@ the standard ``PutObject`` parameters:
 
     $kmsKeyId = 'kms-key-id';
     $materialsProvider = new KmsMaterialsProviderV2(
-         new KmsClient([
+        new KmsClient([
             'profile' => 'default',
             'region' => 'us-east-1',
             'version' => 'latest',
@@ -100,6 +100,7 @@ the standard ``PutObject`` parameters:
         'Key' => $key,
         'Body' => fopen('file-to-encrypt.txt', 'r'),
     ]);
+
 .. note::
 
     In addition to the |S3| and |KMS|-based service errors, you might
