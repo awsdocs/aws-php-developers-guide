@@ -20,7 +20,7 @@ With client-side encryption, data is encrypted and decrypted directly in your en
 means that this data is encrypted before it's transferred to |S3|, and you
 don’t rely on an external service to handle encryption for you. For new implementations,
 we suggest the use of ``S3EncryptionClientV2`` and ``S3EncryptionMultipartUploaderV2`` over the deprecated
-``S3EncryptionClient`` and ``S3EncryptionMultipartUploader``.  It is recommended that older implementations
+``S3EncryptionClient`` and ``S3EncryptionMultipartUploader``. It is recommended that older implementations
 still using the deprecated versions attempt to migrate. ``S3EncryptionClientV2`` maintains
 support for decrypting data that was encrypted using the legacy ``S3EncryptionClient``.
 
@@ -33,7 +33,7 @@ Migration Guide
 ==========
 
 For those who are trying to migrate to from the deprecated clients to the new clients, there is a migration
-guide which can be found at https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html
+guide which can be found `here <https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html>`_.
 
 Setup
 =====
@@ -52,11 +52,11 @@ Uploading an encrypted object in ``S3EncryptionClientV2`` takes three additional
 the standard ``PutObject`` parameters:
 
 * ``'@KmsEncryptionContext'`` is a key-value pair which can be used to add an extra layer of security to
-  your encrypted object.  The encryption client must pass in the same key, which it will automatically do
-  on a get call.  If no additional context is desired, pass in an empty array.
+  your encrypted object. The encryption client must pass in the same key, which it will automatically do
+  on a get call. If no additional context is desired, pass in an empty array.
 * ``@CipherOptions`` are additional configurations for the encryption including which cipher to use and keysize.
 * ``@MaterialsProvider`` is a provider which handles generating a cipher key and initialization vector, as
-  well as encrypting your cipher key via AWS KMS.  The KMS key id is provided in the constructor of the provider.
+  well as encrypting your cipher key.
 
 .. code-block:: php
 
@@ -111,14 +111,14 @@ Decryption
 ==========
 
 Downloading and decrypting an object has four additional parameters, two of which are required, on top of the standard
-``GetObject`` parameters, two of which are required.  The client will detect the basic cipher options for you.
+``GetObject`` parameters.  The client will detect the basic cipher options for you.
 
 * ``'@SecurityProfile'``:  If set to ‘V2’, only objects that are encrypted in V2-compatible
-   format can be decrypted. Setting this parameter  to ‘V2_AND_LEGACY’ also allows objects
+   format can be decrypted. Setting this parameter to ‘V2_AND_LEGACY’ also allows objects
    encrypted in V1-compatible format to be decrypted. To support migration, set @SecurityProfile
-   to ‘V2_AND_LEGACY’.  Use ‘V2’ only for new application development.
+   to ‘V2_AND_LEGACY’. Use ‘V2’ only for new application development.
 * ``'@MaterialsProvider'`` is a provider which handles generating a cipher key and initialization vector, as
-   well as encrypting your cipher key via AWS KMS.  The KMS key id is provided in the constructor of the provider.
+   well as encrypting your cipher key.
 * ``'@KmsAllowDecryptWithAnyCmk'``: (optional) Setting this parameter to true enables decryption
    without supplying a KMS key id to the constructor of the MaterialsProvider. The default value is false.
 * ``'@CipherOptions'`` (optional) are additional configurations for the encryption including which
