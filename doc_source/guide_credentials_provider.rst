@@ -346,6 +346,8 @@ the function that creates the provider.
         'credentials' => $provider
     ]);
 
+When assuming a role, you can specify the credential location `using the credential_source config option <https://docs.aws.amazon.com/credref/latest/refdocs/setting-global-credential_source.html>`_.
+
 process provider
 ================
 
