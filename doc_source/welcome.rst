@@ -113,3 +113,15 @@ API Documentation
 =================
 
 Find API documentation for the SDK at  http://docs.aws.amazon.com/aws-sdk-php/v3/api/.
+
+Maintenance and support for SDK major versions
+==============================================
+
+For information about maintenance and support for SDK major versions and their underlying dependencies,
+see the following in the `AWS SDKs and Tools Shared Configuration and Credentials Reference Guide <https://docs.aws.amazon.com/credref/latest/refdocs/overview.html>`_:
+
+* `AWS SDKs and Tools Maintenance Policy <https://docs.aws.amazon.com/credref/latest/refdocs/maint-policy.html>`_
+
+* `AWS SDKs and Tools Version Support Matrix <https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html>`_
+
+
