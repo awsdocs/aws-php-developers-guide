@@ -11,10 +11,6 @@ This repository contains the open source version of the official [AWS SDK for PH
 
 The GitHub repository for the AWS SDK for PHP is at https://github.com/aws/aws-sdk-PHP/.
 
-The guide content is written Markdown. It relies upon content
-which is provided in the AWS documentation team's `shared content`_ and `SDK examples`_
-repositories.
-
 ## Recent updates
 
 You can find out when this guide has had major updates and what those updates were by looking in the [Document History](doc_source/document-history.md) topic.
