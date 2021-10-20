@@ -10,7 +10,7 @@
 + [AWS Identity and Access Management Examples](iam-examples.md)
 + [AWS Key Management Service](kms-examples.md)
 + [Amazon Kinesis Examples](kinesis-examples.md)
-+ [AWS Elemental MediaConvertt](emc-examples.md)
++ [AWS Elemental MediaConvert](emc-examples.md)
 + [Amazon S3 Examples](s3-examples.md)
 + [AWS Secrets Manager](secretsmanager-examples-manage-secret.md)
 + [Amazon SES Examples](ses-examples.md)
