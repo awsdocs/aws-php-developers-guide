@@ -834,7 +834,7 @@ $s3 = new S3Client([
     'version'     => 'latest',
     'region'      => 'us-west-2',
     'retries' => [
-        'mode' => 'standard,
+        'mode' => 'standard',
         'max_attempts' => 7
     ],
 ]);
