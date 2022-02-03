@@ -17,7 +17,7 @@ To create an instance of `PostObjectV4`, you must provide the following:
 + instance of `Aws\S3\S3Client` 
 + bucket
 + associative array of form input fields
-+ array of policy conditions \(see [Policy Construction](https://docs.aws.amazon.com/AmazonS3/latest/dev/HTTPPOSTForms.html) in the Amazon Simple Storage Service Developer Guide\)
++ array of policy conditions \(see [Policy Construction](https://docs.aws.amazon.com/AmazonS3/latest/dev/HTTPPOSTForms.html) in the Amazon Simple Storage Service User Guide\)
 + expiration time string for the policy \(optional, one hour by default\)\.
 
  **Imports** 

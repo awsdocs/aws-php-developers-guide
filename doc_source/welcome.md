@@ -2,8 +2,6 @@
 
 The AWS SDK for PHP Version 3 enables PHP developers to use [Amazon Web Services](https://aws.amazon.com/) in their PHP code, and build robust applications and software using services like Amazon S3, Amazon DynamoDB, S3 Glacier, etc\. You can get started in minutes by installing the SDK through Composer — by requiring the `aws/aws-sdk-php` package — or by downloading the standalone [https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip](https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip) or [https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar](https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar) file\.
 
-![\[Diagram that provides an overview of how AWS SDK for PHP version 3 works\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/images/php-sdk-overview.png)
-
 Not all services are immediately available in the SDK\. To find out which services are currently supported by the AWS SDK for PHP, see [Service Name and API Version](https://docs.aws.amazon.com/aws-sdk-php/v3/api/index.html)\. For information about the AWS SDK for PHP Version 3 on GitHub, see [Additional Resources](resources.md)\.
 
 **Note**  
@@ -25,7 +23,6 @@ If you’re migrating your code from using Version 2 of the SDK to Version 3, be
 +  [Paginators in the AWS SDK for PHP](guide_paginators.md) 
 +  [Waiters in the AWS SDK for PHP](guide_waiters.md) 
 +  [JMESPath Expressions in the AWS SDK for PHP](guide_jmespath.md) 
-+  [SDK Metrics](guide_sdk-metrics.md) 
 
 ## Service\-Specific Features<a name="service-specific-features"></a>
 +  [Using AWS Cloud9 with the AWS SDK for PHP](cloud9.md) 
@@ -64,7 +61,7 @@ Submit issues on GitHub:
 
 ## API Documentation<a name="supported-services"></a>
 
-Find API documentation for the SDK at [https://docs\.aws\.amazon\.com/aws\-sdk\-php/latest/](https://docs.aws.amazon.com/aws-sdk-php/v3/api/)\.
+Find API documentation for the SDK at [https://docs\.aws\.amazon\.com/sdk\-for\-php/latest/reference/](https://docs.aws.amazon.com/aws-sdk-php/v3/api/)\.
 
 ## Maintenance and support for SDK major versions<a name="maintenance-and-support-for-sdk-major-versions"></a>
 

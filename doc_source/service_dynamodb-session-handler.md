@@ -2,8 +2,6 @@
 
 The DynamoDB Session Handler is a custom session handler for PHP that enables developers to use Amazon DynamoDB as a session store\. Using DynamoDB for session storage alleviates issues that occur with session handling in a distributed web application by moving sessions off of the local file system and into a shared location\. DynamoDB is fast, scalable, easy to set up, and handles replication of your data automatically\.
 
-![\[Diagram that provides an overview of how AWS SDK for PHP connects to Amazon DynamoDB\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/images/code-samples-dynamodb.png)
-
 The DynamoDB Session Handler uses the `session_set_save_handler()` function to hook DynamoDB operations into PHP’s [native session functions](http://www.php.net/manual/en/ref.session.php) to allow for a true drop in replacement\. This includes support for features such as session locking and garbage collection, which are a part of PHP’s default session handler\.
 
 For more information about the DynamoDB service, see the [Amazon DynamoDB homepage](https://aws.amazon.com/dynamodb/)\.

@@ -12,4 +12,3 @@ The AWS SDK for PHP consists of various features and components\. Each of the fo
 + [Paginators](guide_paginators.md)
 + [Waiters](guide_waiters.md)
 + [JMESPath Expressions](guide_jmespath.md)
-+ [SDK Metrics](guide_sdk-metrics.md)

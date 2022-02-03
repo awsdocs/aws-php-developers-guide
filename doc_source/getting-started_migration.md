@@ -48,7 +48,7 @@ When instantiating a client for any service, specify the `'region'` and `'versio
 **Note**  
 If you’re not concerned about which API version you are using, you can just set the `'version'` option to `'latest'`\. However, we recommend that you set the API version numbers explicitly for production code\.  
 Not all services are available in all AWS Regions\. You can find a list of available Regions using the [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) reference\.  
-For services that are available only via a single, global endpoint \(e\.g\., Amazon Route 53, AWS Identity and Access Management, and Amazon CloudFront\), instantiate clients with their configured Region set to `us-east-1`\.
+For services that are available only via a single, global endpoint \(e\.g\., Amazon Route 53, AWS Identity and Access Management, and Amazon CloudFront\), instantiate clients with their configured Region set to `us-east-1`\.
 
 **Important**  
 The SDK also includes multi\-region clients, which can dispatch requests to different AWS Regions based on a parameter \(`@region`\) supplied as a command parameter\. The Region used by default by these clients is specified with the `region` option supplied to the client constructor\.

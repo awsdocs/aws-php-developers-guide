@@ -1,6 +1,6 @@
 # Creating Delivery Streams Using the Kinesis Data Firehose API and the AWS SDK for PHP Version 3<a name="kinesis-firehose-example-delivery-stream"></a>
 
-Amazon Kinesis Data Firehose enables you to send real\-time data to other AWS services including Amazon Kinesis Data Streams, Amazon S3, Amazon Elasticsearch Service \(Amazon ES\), and Amazon Redshift, or to Splunk\. Create a data producer with delivery streams to deliver data to the configured destination every time you add data\.
+Amazon Kinesis Data Firehose enables you to send real\-time data to other AWS services including Amazon Kinesis Data Streams, Amazon S3, Amazon OpenSearch Service \(OpenSearch Service\), and Amazon Redshift, or to Splunk\. Create a data producer with delivery streams to deliver data to the configured destination every time you add data\.
 
 The following examples show how to:
 + Create a delivery stream using [CreateDeliveryStream](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-firehose-2015-08-04.html#createdeliverystream)\.
@@ -112,11 +112,11 @@ try {
 }
 ```
 
-## Create a Delivery Stream Using Amazon ES<a name="create-a-delivery-stream-using-es"></a>
+## Create a Delivery Stream Using OpenSearch Service<a name="create-a-delivery-stream-using-es"></a>
 
-To establish a Kinesis Data Firehose delivery stream that puts data into an Amazon ES cluster, use the [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) operation\.
+To establish a Kinesis Data Firehose delivery stream that puts data into an OpenSearch Service cluster, use the [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) operation\.
 
-Provide the destination parameters, as described in [Destination Parameters](https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html)\. Ensure that you grant Kinesis Data Firehose access to your Amazon ES cluster, as described in [Grant Kinesis Data Firehose Access to an Amazon ES Destination](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es.html)\.
+Provide the destination parameters, as described in [Destination Parameters](https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html)\. Ensure that you grant Kinesis Data Firehose access to your OpenSearch Service cluster, as described in [Grant Kinesis Data Firehose Access to an Amazon ES Destination](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es.html)\.
 
  **Imports** 
 
@@ -247,7 +247,7 @@ try {
 
 ## List Existing Delivery Streams Sending Data to Other AWS Services<a name="list-existing-delivery-streams-sending-data-to-other-aws-services"></a>
 
-To list all the existing Kinesis Data Firehose delivery streams sending data to Amazon S3, Amazon ES, or Amazon Redshift, or to Splunk, use the [ListDeliveryStreams](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ListDeliveryStreams.html) operation\.
+To list all the existing Kinesis Data Firehose delivery streams sending data to Amazon S3, OpenSearch Service, or Amazon Redshift, or to Splunk, use the [ListDeliveryStreams](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ListDeliveryStreams.html) operation\.
 
  **Imports** 
 

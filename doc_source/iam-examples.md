@@ -2,8 +2,6 @@
 
 AWS Identity and Access Management \(IAM\) is a web service that enables Amazon Web Services customers to manage users and user permissions in AWS\. The service is targeted at organizations with multiple users or systems in the cloud that use AWS products\. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users can access\.
 
-![\[Diagram that provides an overview of how AWS SDK for PHP version 3 connects to Amazon Identity & Access Management\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/images/code-samples-iam.png)
-
 All the example code for the AWS SDK for PHP Version 3 is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>

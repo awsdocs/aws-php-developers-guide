@@ -2,8 +2,6 @@
 
 Amazon Simple Storage Service \(Amazon S3\) is a web service that provides highly scalable cloud storage\. Amazon S3 provides easy to use object storage, with a simple web service interface to store and retrieve any amount of data from anywhere on the web\.
 
-![\[Diagram that provides an overview of how AWS SDK for PHP connects to Amazon S3\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/images/code-samples-s3.png)
-
 All the example code for the AWS SDK for PHP Version 3 is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
