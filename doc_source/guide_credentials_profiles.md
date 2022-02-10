@@ -72,7 +72,7 @@ Profile in `~/.aws/config`:
 ```
 [profile project1]
 role_arn = arn:aws:iam::123456789012:role/testing
-source_profile = default
+source_profile = project2
 role_session_name = OPTIONAL_SESSION_NAME
 ```
 
