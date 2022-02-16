@@ -1,4 +1,4 @@
-# Creating Anonymous Clients<a name="guide_credentials_anonymous"></a><a name="anonymous-access"></a>
+# Creating Anonymous Clients<a name="guide_credentials_anonymous"></a>
 
 In some cases, you might want to create a client that is not associated with any credentials\. This enables you to make anonymous requests to a service\.
 

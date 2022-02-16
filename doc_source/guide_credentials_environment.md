@@ -1,4 +1,4 @@
-# Using Credentials from Environment Variables<a name="guide_credentials_environment"></a><a name="environment-credentials"></a>
+# Using Credentials from Environment Variables<a name="guide_credentials_environment"></a>
 
 Using environment variables to contain your credentials prevents you from accidentally sharing your AWS secret access key\. We recommend that you never add your AWS access keys directly to the client in any production files\. Many developers have had their account compromised by leaked keys\.
 
