@@ -679,9 +679,9 @@ By default, the SDK uses Guzzle as its HTTP handler\. You can supply a different
 
 One use case is to set the TLS version used by Guzzle with Curl, assuming Curl is installed in your environment\. Note the Curl [version constraints](https://curl.haxx.se/libcurl/c/CURLOPT_SSLVERSION.html) for what version of TLS is supported\. By default, the latest version is used\. If the TLS version is explicitly set, and the remote server doesn’t support this version, it will produce an error instead of using an earlier TLS version\.
 
-You can determine the TLS version being used for a given client operation by setting the `debug` client option to true and examining the SSL connection output\. That line might look something like: `SSL connection using TLSv1.2` 
+You can determine the TLS version being used for a given client operation by setting the `debug` client option to true and examining the SSL connection output\. That line might look something like: `SSL connection using TLSv1.3` 
 
-Example setting TLS 1\.2 with Guzzle 6:
+Example setting TLS 1\.3 with Guzzle 6:
 
 ```
 use Aws\DynamoDb\DynamoDbClient;
@@ -691,7 +691,7 @@ use GuzzleHttp\Client;
 $handler = new GuzzleHandler(
     new Client([
         'curl' => [
-            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2
+            CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_3
         ]
     ])
 );
