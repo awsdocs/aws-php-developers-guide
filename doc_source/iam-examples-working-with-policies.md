@@ -15,11 +15,11 @@ The following examples show how to:
 + Delete a user policy using [DeleteUserPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteuserpolicy)\.
 + Delete a group policy using [DeleteGroupPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deletegrouppolicy)\.
 
-All the example code for the AWS SDK for PHP Version 3 is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Credentials for the AWS SDK for PHP Version 3](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage Patterns of the AWS SDK for PHP Version 3](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
 
 ## Create a Policy<a name="create-a-policy"></a>
 

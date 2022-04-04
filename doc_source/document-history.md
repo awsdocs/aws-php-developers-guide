@@ -1,16 +1,22 @@
 # Document History<a name="document-history"></a>
 
-The following table describes the important changes since the last release of the AWS SDK for PHP Developer Guide\.
+The following tables describe the important changes since the last release of the AWS SDK for PHP Developer Guide\.
 
- *Last major documentation update: Aug 7th, 2020* 
+Most recent changes:
+
+| Change | Description | Date | 
+| --- |--- |--- |
+| [Working with AWS services](working-with-aws-services.md) | Included lists of the code examples that are available on GitHub\. | April 1, 2022 | 
+| [Enabling SDK metrics](#document-history) | Removed information about enabling SDK metrics, which was deprecated on December 20, 2021\. | January 27, 2022 | 
+| [S3 Encryption Client Migration](s3-encryption-migration.md) | Added topic on Amazon S3 encryption client migration | August 7, 2020 | 
+
+Older changes:
 
 
 ****  
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
-|  Enabling SDK metrics removed  |  Removed information about enabling SDK metrics, which was deprecated on December 20, 2021\.  |  Jan 27th, 2022  | 
-|  Amazon S3 encryption  |  Add topic on Amazon S3 encryption client migration  |  Aug 7th, 2020  | 
 |  Secrets Manager examples  |  Add more service examples  |  Mar 27th, 2019  | 
 |  Endpoint discovery  |  Configuration of endpoint discovery  |  Feb 15th, 2019  | 
 |  Amazon CloudFront  |  Add more service examples  |  Jan 25th, 2019  | 

@@ -9,11 +9,11 @@ The following examples show how to:
 + Change the status of an access key from Active to Inactive, or vice versa, using [UpdateAccessKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#updateaccesskey)\.
 + Delete an access key pair associated with an IAM user using [DeleteAccessKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteaccesskey)\.
 
-All the example code for the AWS SDK for PHP Version 3 is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Credentials for the AWS SDK for PHP Version 3](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage Patterns of the AWS SDK for PHP Version 3](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
 
 ## Create an Access Key<a name="create-an-access-key"></a>
 

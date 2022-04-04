@@ -4,11 +4,11 @@ Signed URLs enable you to provide users access to your private content\. A signe
 + Create a signed Amazon CloudFront URL using [getSignedURL](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.CloudFront.CloudFrontClient.html#_getSignedUrl)\.
 + Create a signed Amazon CloudFront cookie using [getSignedCookie](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.CloudFront.CloudFrontClient.html#_getSignedCookie)\.
 
-All the example code for the AWS SDK for PHP Version 3 is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Credentials for the AWS SDK for PHP Version 3](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage Patterns of the AWS SDK for PHP Version 3](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon CloudFront, see the [Amazon CloudFront Developer Guide](Amazon CloudFront Developer Guide)\.
 

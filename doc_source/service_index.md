@@ -1,4 +1,4 @@
-# Using AWS Services with AWS SDK for PHP Version 3<a name="service_index"></a>
+# Using high\-level features with the AWS SDK for PHP<a name="service_index"></a>
 
 Some of the AWS services supported by the AWS SDK for PHP Version 3 include additional features beyond executing operations on an API\. This guide documents these higher\-level features per service\.
 
