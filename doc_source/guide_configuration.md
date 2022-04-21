@@ -188,7 +188,7 @@ $s3->listBuckets();
 ```
 
 **Note**  
-The debug output is extremely useful when diagnosing issues in the AWS SDK for PHP\. Please provide the debug output for an isolated failure case when opening issues on the SDK\.
+The debug output is extremely useful when diagnosing issues in the AWS SDK for PHP\. Please provide the debug output for an isolated failure case when opening issues on the SDK\. Also note that this option will also output the same information produced by the `http` debug option. Using both options simultaneously may result in errors.
 
 ## stats<a name="config-stats"></a>
 
