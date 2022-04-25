@@ -38,6 +38,13 @@ You can also change the handler of a client after it is constructed using the `s
 $s3->getHandlerList()->setHandler($myHandler);
 ```
 
+**Note** 
+To change the handler of a multi-region client after it is constructed, use the `useCustomHandler` method of an `Aws\MultiRegionClient`.
+
+```
+$multiRegionClient->useCustomHandler($myHandler);
+```
+
 ### Mock Handler<a name="mock-handler"></a>
 
 We recommend using the `MockHandler` when writing tests that use the SDK\. You can use the `Aws\MockHandler` to return mocked results or throw mock exceptions\. You enqueue results or exceptions, and the MockHandler dequeues them in FIFO order\.
