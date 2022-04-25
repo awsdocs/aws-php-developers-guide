@@ -188,7 +188,7 @@ $s3->listBuckets();
 ```
 
 **Note**  
-This option will also output the underlying HTTP handler information produced by the `http` debug option. The debug output is extremely useful when diagnosing issues in the AWS SDK for PHP\. Please provide the debug output for an isolated failure case when opening issues on the SDK\.
+This option also outputs the underlying HTTP handler information produced by the `http` debug option\. The debug output is extremely useful when diagnosing issues in the AWS SDK for PHP\. Please provide the debug output for an isolated failure case when opening issues on the SDK\.
 
 ## stats<a name="config-stats"></a>
 

@@ -32,10 +32,13 @@ $ec2Client = new Aws\Ec2\Ec2Client([
     'version' => '2016-11-15',
     'profile' => 'default'
 ]);
-
 $result = $ec2Client->describeInstances();
-
-var_dump($result);
+echo "Instances: \n";
+foreach ($result['Reservations'] as $reservation) {
+    foreach ($reservation['Instances'] as $instance) {
+        echo "InstanceId: {$instance['InstanceId']} - {$instance['State']['Name']} \n";
+    }
+}
 ```
 
 ## Allocate and Associate an Address<a name="allocate-and-associate-an-address"></a>

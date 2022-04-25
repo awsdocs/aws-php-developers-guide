@@ -38,8 +38,8 @@ You can also change the handler of a client after it is constructed using the `s
 $s3->getHandlerList()->setHandler($myHandler);
 ```
 
-**Note** 
-To change the handler of a multi-region client after it is constructed, use the `useCustomHandler` method of an `Aws\MultiRegionClient`.
+**Note**  
+To change the handler of a multi\-region client after it's constructed, use the `useCustomHandler` method of an `Aws\MultiRegionClient`\.  
 
 ```
 $multiRegionClient->useCustomHandler($myHandler);

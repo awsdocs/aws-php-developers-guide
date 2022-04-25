@@ -35,14 +35,13 @@ You can create a client by passing an associative array of options to a clientâ€
 require 'vendor/autoload.php';
 
 use Aws\S3\S3Client;
-
 use Aws\Exception\AwsException;
 ```
 
  **Sample Code** 
 
 ```
-//Create a S3Client
+//Create an S3Client
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
     'region' => 'us-east-2'
@@ -63,7 +62,6 @@ The `Aws\Sdk` class acts as a client factory and is used to manage shared config
 require 'vendor/autoload.php';
 
 use Aws\S3\S3Client;
-
 use Aws\Exception\AwsException;
 ```
 
@@ -76,10 +74,8 @@ $sharedConfig = [
     'region' => 'us-west-2',
     'version' => 'latest'
 ];
-
 // Create an SDK class used to share configuration across clients.
 $sdk = new Aws\Sdk($sharedConfig);
-
 // Create an Amazon S3 client using the shared configuration data.
 $client = $sdk->createS3();
 ```
