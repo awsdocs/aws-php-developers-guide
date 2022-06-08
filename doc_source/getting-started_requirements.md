@@ -4,7 +4,7 @@ For best results with AWS SDK for PHP, ensure your environment supports the foll
 
 ## Requirements<a name="requirements"></a>
 
-To use the AWS SDK for PHP, you must be using PHP version 5\.5\.0 or later with the [SimpleXML PHP extension](https://www.php.net/manual/en/book.simplexml.php) enabled\. If you need to sign private Amazon CloudWatch URLs, you also need the [OpenSSL PHP extension](http://php.net/manual/en/book.openssl.php)\.
+To use the AWS SDK for PHP, you must be using PHP version 5\.5\.0 or later with the [SimpleXML PHP extension](https://www.php.net/manual/en/book.simplexml.php) enabled\. If you need to sign private Amazon CloudFront URLs, you also need the [OpenSSL PHP extension](http://php.net/manual/en/book.openssl.php)\.
 
 ## Recommendations<a name="recommendations"></a>
 
