@@ -269,9 +269,9 @@ See the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/g
 ## endpoint\_provider<a name="endpoint-provider"></a>
 
 Type  
- `callable` 
+ `Aws\EndpointV2\EndpointProviderV2|callable` 
 
-An optional PHP callable that accepts a hash of options, including a “service” and “region” key\. It returns `NULL` or a hash of endpoint data, of which the “endpoint” key is required\.
+An optional instance of EndpointProviderV2 or PHP callable that accepts a hash of options, including a “service” and “region” key\. It returns `NULL` or a hash of endpoint data, of which the “endpoint” key is required\.  
 
 Here’s an example of how to create a minimal endpoint provider\.
 
