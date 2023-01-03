@@ -1,4 +1,4 @@
-# Using the DynamoDB Session Handler with AWS SDK for PHP Version 3<a name="service_dynamodb-session-handler"></a>
+# Using the DynamoDB session handler with AWS SDK for PHP Version 3<a name="service_dynamodb-session-handler"></a>
 
 The DynamoDB Session Handler is a custom session handler for PHP that enables developers to use Amazon DynamoDB as a session store\. Using DynamoDB for session storage alleviates issues that occur with session handling in a distributed web application by moving sessions off of the local file system and into a shared location\. DynamoDB is fast, scalable, easy to set up, and handles replication of your data automatically\.
 
@@ -6,9 +6,9 @@ The DynamoDB Session Handler uses the `session_set_save_handler()` function to h
 
 For more information about the DynamoDB service, see the [Amazon DynamoDB homepage](https://aws.amazon.com/dynamodb/)\.
 
-## Basic Usage<a name="basic-usage"></a>
+## Basic usage<a name="basic-usage"></a>
 
-### Step 1: Register the Handler<a name="step-1-register-the-handler"></a>
+### Step 1: Register the handler<a name="step-1-register-the-handler"></a>
 
 First, instantiate and register the session handler\.
 
@@ -22,13 +22,13 @@ $sessionHandler = SessionHandler::fromClient($dynamoDb, [
 $sessionHandler->register();
 ```
 
-### Step 2\. Create a Table to Store Your Sessions<a name="create-a-table-for-storing-your-sessions"></a>
+### Step 2\. Create a table to store your sessions<a name="create-a-table-for-storing-your-sessions"></a>
 
 Before you can actually use the session handler, you need to create a table in which to store the sessions\. You can do this ahead of time by using the [AWS Console for Amazon DynamoDB](https://console.aws.amazon.com/dynamodb/home), or by using the AWS SDK for PHP\.
 
 When creating this table use ‘id’ as the name of the primary key\. Also it is recommended to setup a [Time To Live attribute](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) using the ‘expires’ attribute to benefit from automatic garbage collection of sessions\.
 
-### Step 3\. Use PHP Sessions as You Normally Would<a name="step-3-use-php-sessions-as-you-normally-would"></a>
+### Step 3\. Use PHP sessions as you normally would<a name="step-3-use-php-sessions-as-you-normally-would"></a>
 
 Once the session handler is registered and the table exists, you can write to and read from the session using the `$_SESSION` superglobal, just like you normally do with PHP’s default session handler\. The DynamoDB Session Handler encapsulates and abstracts the interactions with DynamoDB and enables you to simply use PHP’s native session functions and interface\.
 
@@ -122,7 +122,7 @@ Ultimately, the throughput and the costs required for your sessions table will c
 |  Delete via `session_destroy()`   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/service_dynamodb-session-handler.html)  | 
 |  Garbage Collection  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/service_dynamodb-session-handler.html)  | 
 
-## Session Locking<a name="ddbsh-session-locking"></a>
+## Session locking<a name="ddbsh-session-locking"></a>
 
 The DynamoDB Session Handler supports pessimistic session locking to mimic the behavior of PHP’s default session handler\. By default, the DynamoDB Session Handler has this feature *turned off* because it can become a performance bottleneck and drive up costs, especially when an application accesses the session when using Ajax requests or iframes\. Carefully consider whether your application requires session locking before enabling it\.
 
@@ -135,7 +135,7 @@ $sessionHandler = SessionHandler::fromClient($dynamoDb, [
 ]);
 ```
 
-## Garbage Collection<a name="ddbsh-garbage-collection"></a>
+## Garbage collection<a name="ddbsh-garbage-collection"></a>
 
 Setup a TTL attribute in your DynamoDB table, using the attribute ‘expires’\. This will automatically garbage collect your sessions and avoid the need to garbage collect them yourself\.
 
@@ -172,7 +172,7 @@ $sessionHandler = SessionHandler::fromClient($dynamoDb, [
 $sessionHandler->garbageCollect();
 ```
 
-## Best Practices<a name="best-practices"></a>
+## Best practices<a name="best-practices"></a>
 
 1. Create your sessions table in an AWS Region that is geographically closest to or in the same Region as your application servers\. This ensures the lowest latency between your application and DynamoDB database\.
 
@@ -186,7 +186,7 @@ $sessionHandler->garbageCollect();
 
 1. Instead of using PHP’s built\-in session garbage collection triggers, schedule your garbage collection via a cron job, or another scheduling mechanism, to run during off\-peak hours\. Use the `'batch_config'` option to your advantage\.
 
-## Required IAM Permissions<a name="required-iam-permissions"></a>
+## Required IAM permissions<a name="required-iam-permissions"></a>
 
 To use the DynamoDB SessionHhandler, your [configured credentials](guide_credentials.md) must have permission to use the DynamoDB table that [you created in a previous step](#create-a-table-for-storing-your-sessions)\. The following IAM policy contains the minimum permissions that you need\. To use this policy, replace the Resource value with the Amazon Resource Name \(ARN\) of the table that you created previously\. For more information about creating and attaching IAM policies, see [Managing IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage.html) in the IAM User Guide\.
 

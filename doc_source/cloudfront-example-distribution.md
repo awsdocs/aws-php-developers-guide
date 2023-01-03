@@ -1,4 +1,4 @@
-# Managing Amazon CloudFront Distributions Using the CloudFront API and the AWS SDK for PHP Version 3<a name="cloudfront-example-distribution"></a>
+# Managing Amazon CloudFront distributions using the CloudFront API and the AWS SDK for PHP Version 3<a name="cloudfront-example-distribution"></a>
 
 Amazon CloudFront caches content in worldwide edge locations to speed up distribution of static and dynamic files that you store on your own server, or on an Amazon service like Amazon S3 and Amazon EC2\. When users request content from your website, CloudFront serves it from the closest edge location, if the file is cached there\. Otherwise CloudFront retrieves a copy of the file, serves it, and then caches it for the next request\. Caching content at an edge location reduces the latency of similar user requests in that area\.
 
@@ -12,15 +12,15 @@ The following examples show how to:
 + Disable distributions using [DisableDistribution](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-cloudfront-2018-11-05.html#disabledistribution)\.
 + Delete distributions using [DeleteDistributions](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-cloudfront-2018-11-05.html#deletedistribution)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon CloudFront, see the [Amazon CloudFront Developer Guide](Amazon CloudFront Developer Guide)\.
 
-## Create a CloudFront Distribution<a name="create-a-cf-distribution"></a>
+## Create a CloudFront distribution<a name="create-a-cf-distribution"></a>
 
 Create a distribution from an Amazon S3 bucket\. In the following example, optional parameters are commented out, but default values are displayed\. To add customizations to your distribution, uncomment both the value and the parameter inside `$distribution`\.
 
@@ -137,7 +137,7 @@ function createsTheS3Distribution()
 // createsTheS3Distribution();
 ```
 
-## Retrieve a CloudFront Distribution<a name="retrieve-a-cf-distribution"></a>
+## Retrieve a CloudFront distribution<a name="retrieve-a-cf-distribution"></a>
 
 To retrieve the status and details of a specified CloudFront distribution, use the [GetDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistribution.html) operation\.
 
@@ -202,7 +202,7 @@ function getsADistribution()
 // getsADistribution();
 ```
 
-## List CloudFront Distributions<a name="list-cf-distributions"></a>
+## List CloudFront distributions<a name="list-cf-distributions"></a>
 
 Get a list of existing CloudFront distributions in the specified AWS Region from your current account using the [ListDistributions](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributions.html) operation\.
 
@@ -254,7 +254,7 @@ function listTheDistributions()
 // listTheDistributions();
 ```
 
-## Update a CloudFront Distribution<a name="update-a-cf-distribution"></a>
+## Update a CloudFront distribution<a name="update-a-cf-distribution"></a>
 
 Updating a CloudFront distribution is similar to creating a distribution\. However, when you update a distribution, more fields are required and all values must be included\. To make changes to an existing distribution, we recommend that you first retrieve the existing distribution, and update the values you want to change in the `$distribution` array\.
 
@@ -407,7 +407,7 @@ function updateADistribution()
 // updateADistribution();
 ```
 
-## Disable a CloudFront Distribution<a name="disable-a-cf-distribution"></a>
+## Disable a CloudFront distribution<a name="disable-a-cf-distribution"></a>
 
 To deactivate or remove a distribution, change its status from deployed to disabled\.
 
@@ -550,7 +550,7 @@ function disableADistribution()
 // disableADistribution();
 ```
 
-## Delete a CloudFront Distribution<a name="delete-a-cf-distribution"></a>
+## Delete a CloudFront distribution<a name="delete-a-cf-distribution"></a>
 
 Once a distribution is in a disabled status, you can delete the distribution\.
 

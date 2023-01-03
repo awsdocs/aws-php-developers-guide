@@ -9,15 +9,16 @@ The following code examples show you how to perform actions and implement common
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w72aac11c14b9c11c13)
++ [Actions](#w2aac11c13c13c11c13)
 
-## Actions<a name="w72aac11c14b9c11c13"></a>
+## Actions<a name="w2aac11c13c13c11c13"></a>
 
 ### Get base path mapping<a name="api-gateway_GetBasePathMapping_php_topic"></a>
 
 The following code example shows how to get an API Gateway base path mapping\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
   
 
 ```
@@ -71,7 +72,6 @@ function getsTheBasePathMapping()
 // Uncomment the following line to run this code in an AWS account.
 // getsTheBasePathMapping();
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
 +  For API details, see [GetBasePathMapping](https://docs.aws.amazon.com/goto/SdkForPHPV3/apigateway-2015-07-09/GetBasePathMapping) in *AWS SDK for PHP API Reference*\. 
 
 ### List base path mapping<a name="api-gateway_ListBasePathMappings_php_topic"></a>
@@ -79,6 +79,7 @@ function getsTheBasePathMapping()
 The following code example shows how to list an API Gateway base path mapping\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
   
 
 ```
@@ -130,7 +131,6 @@ function listTheBasePathMappings()
 // Uncomment the following line to run this code in an AWS account.
 // listTheBasePathMappings();
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
 +  For API details, see [ListBasePathMappings](https://docs.aws.amazon.com/goto/SdkForPHPV3/apigateway-2015-07-09/ListBasePathMappings) in *AWS SDK for PHP API Reference*\. 
 
 ### Update base path mapping<a name="api-gateway_UpdateBasePathMapping_php_topic"></a>
@@ -138,6 +138,7 @@ function listTheBasePathMappings()
 The following code example shows how to update an API Gateway base path mapping\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
   
 
 ```
@@ -203,5 +204,4 @@ function updateTheBasePathMapping()
 // Uncomment the following line to run this code in an AWS account.
 // updateTheBasePathMapping();
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/apigateway#code-examples)\. 
 +  For API details, see [UpdateBasePathMapping](https://docs.aws.amazon.com/goto/SdkForPHPV3/apigateway-2015-07-09/UpdateBasePathMapping) in *AWS SDK for PHP API Reference*\. 

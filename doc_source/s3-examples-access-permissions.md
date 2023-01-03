@@ -1,4 +1,4 @@
-# Managing Amazon S3 Bucket Access Permissions with the AWS SDK for PHP Version 3<a name="s3-examples-access-permissions"></a>
+# Managing Amazon S3 bucket access permissions with the AWS SDK for PHP Version 3<a name="s3-examples-access-permissions"></a>
 
 Access control lists \(ACLs\) are one of the resource\-based access policy options you can use to manage access to your buckets and objects\. You can use ACLs to grant basic read/write permissions to other AWS accounts\. To learn more, see [Managing Access with ACLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html)\.
 
@@ -6,13 +6,13 @@ The following example shows how to:
 + Get the access control policy for a bucket using [GetBucketAcl](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#getbucketacl)\.
 + Set the permissions on a bucket using ACLs, using [PutBucketAcl](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putbucketacl)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Get and Set an Access Control List Policy<a name="get-and-set-an-access-control-list-policy"></a>
+## Get and set an access control list policy<a name="get-and-set-an-access-control-list-policy"></a>
 
  **Imports** 
 

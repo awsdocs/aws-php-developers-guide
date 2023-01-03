@@ -1,15 +1,15 @@
-# Amazon S3 Pre\-Signed POSTs with AWS SDK for PHP Version 3<a name="s3-presigned-post"></a>
+# Amazon S3 pre\-signed POSTs with AWS SDK for PHP Version 3<a name="s3-presigned-post"></a>
 
 Much like pre\-signed URLs, pre\-signed POSTs enable you to give write access to a user without giving them AWS credentials\. Pre\-signed POST forms can be created with the help of an instance of [AwsS3PostObjectV4](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.S3.PostObjectV4.html)\.
 
 The following examples show how to:
 + Get data for an S3 Object POST upload form using [PostObjectV4](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.S3.PostObjectV4.html)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 ## Create PostObjectV4<a name="create-postobjectv4"></a>
 

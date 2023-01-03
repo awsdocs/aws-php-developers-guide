@@ -1,4 +1,4 @@
-# Working with Amazon EC2 Key Pairs with AWS SDK for PHP Version 3<a name="ec2-examples-working-with-key-pairs"></a>
+# Working with Amazon EC2 key pairs with AWS SDK for PHP Version 3<a name="ec2-examples-working-with-key-pairs"></a>
 
 Amazon EC2 uses public–key cryptography to encrypt and decrypt login information\. Public–key cryptography uses a public key to encrypt data\. Then the recipient uses the private key to decrypt the data\. The public and private keys are known as a key pair\.
 
@@ -7,13 +7,13 @@ The following examples show how to:
 + Delete a specified key pair using [DeleteKeyPair](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-ec2-2016-11-15.html#deletekeypair)\.
 + Describe one or more of your key pairs using [DescribeKeyPairs](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-ec2-2016-11-15.html#describekeypairs)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create a Key Pair<a name="create-a-key-pair"></a>
+## Create a key pair<a name="create-a-key-pair"></a>
 
  **Imports** 
 
@@ -46,7 +46,7 @@ file_put_contents($saveKeyLocation, $result['keyMaterial']);
 chmod($saveKeyLocation, 0600);
 ```
 
-## Delete a Key Pair<a name="delete-a-key-pair"></a>
+## Delete a key pair<a name="delete-a-key-pair"></a>
 
  **Imports** 
 
@@ -74,7 +74,7 @@ $result = $ec2Client->deleteKeyPair(array(
 var_dump($result);
 ```
 
-## Describe Key Pairs<a name="describe-key-pairs"></a>
+## Describe key pairs<a name="describe-key-pairs"></a>
 
  **Imports** 
 

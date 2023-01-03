@@ -1,4 +1,4 @@
-# Verifying Email Identities Using the Amazon SES API and the AWS SDK for PHP Version 3<a name="ses-verify"></a>
+# Verifying email identities using the Amazon SES API and the AWS SDK for PHP Version 3<a name="ses-verify"></a>
 
 When you first start using your Amazon Simple Email Service \(Amazon SES\) account, all senders and recipients must be verified in the same AWS Region that you are sending emails to\. For more information about sending emails, see [Sending Email with Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-email.html)\.
 
@@ -10,15 +10,15 @@ The following examples show how to:
 + Remove an email address using [DeleteIdentity](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#deleteidentity)\.
 + Remove an email domain using [DeleteIdentity](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#deleteidentity)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon SES, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
 
-## Verifying Email addresses<a name="verifying-email-addresses"></a>
+## Verify an email addresses<a name="verifying-email-addresses"></a>
 
 Amazon SES can send email only from verified email addresses or domains\. By verifying an email address, you demonstrate that you’re the owner of that address and want to allow Amazon SES to send email from that address\.
 
@@ -58,7 +58,7 @@ try {
 }
 ```
 
-## Verify an Email Domain<a name="verify-an-email-domain"></a>
+## Verify an email domain<a name="verify-an-email-domain"></a>
 
 Amazon SES can send email only from verified email addresses or domains\. By verifying a domain, you demonstrate that you’re the owner of that domain\. When you verify a domain, you allow Amazon SES to send email from any address on that domain\.
 
@@ -98,7 +98,7 @@ try {
 }
 ```
 
-## List Email Addresses<a name="list-email-addresses"></a>
+## List email addresses<a name="list-email-addresses"></a>
 
 To retrieve a list of email addresses submitted in the current AWS Region, regardless of verification status, use the [ListIdentities](https://docs.aws.amazon.com/ses/latest/APIReference/API_ListIdentities.html) operation\.
 
@@ -132,7 +132,7 @@ try {
 }
 ```
 
-## List Email Domains<a name="list-email-domains"></a>
+## List email domains<a name="list-email-domains"></a>
 
 To retrieve a list of email domains submitted in the current AWS Region, regardless of verification status use the [ListIdentities](https://docs.aws.amazon.com/ses/latest/APIReference/API_ListIdentities.html) operation\.
 
@@ -166,7 +166,7 @@ try {
 }
 ```
 
-## Delete an Email Address<a name="delete-an-email-address"></a>
+## Delete an email address<a name="delete-an-email-address"></a>
 
 To delete a verified email address from the list of identities, use the [DeleteIdentity](https://docs.aws.amazon.com/ses/latest/APIReference/API_DeleteIdentity.html) operation\.
 
@@ -202,7 +202,7 @@ try {
 }
 ```
 
-## Delete an Email Domain<a name="delete-an-email-domain"></a>
+## Delete an email domain<a name="delete-an-email-domain"></a>
 
 To delete a verified email domain from the list of verified identities, use the [DeleteIdentity](https://docs.aws.amazon.com/ses/latest/APIReference/API_DeleteIdentity.html) operation\.
 

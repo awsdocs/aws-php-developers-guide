@@ -1,4 +1,4 @@
-# Working with Amazon S3 Bucket Policies with the AWS SDK for PHP Version 3<a name="s3-examples-bucket-policies"></a>
+# Working with Amazon S3 bucket policies with the AWS SDK for PHP Version 3<a name="s3-examples-bucket-policies"></a>
 
 You can use a bucket policy to grant permission to your Amazon S3 resources\. To learn more, see [Using Bucket Policies and User Policies](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html)\.
 
@@ -7,13 +7,13 @@ The following example shows how to:
 + Replace a policy on a bucket using [PutBucketPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putbucketpolicy)\.
 + Delete a policy from a bucket using [DeleteBucketPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#deletebucketpolicy)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Get, Delete, and Replace a Policy on a Bucket<a name="get-delete-and-replace-a-policy-on-a-bucket"></a>
+## Get, delete, and replace a policy on a bucket<a name="get-delete-and-replace-a-policy-on-a-bucket"></a>
 
  **Imports** 
 

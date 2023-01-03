@@ -1,4 +1,4 @@
-# Creating Custom Email Templates Using the Amazon SES API and the AWS SDK for PHP Version 3<a name="ses-template"></a>
+# Creating custom email templates using the Amazon SES API and the AWS SDK for PHP Version 3<a name="ses-template"></a>
 
 Amazon Simple Email Service \(Amazon SES\) enables you to send emails that are personalized for each recipient by using templates\. Templates include a subject line and the text and HTML parts of the email body\. The subject and body sections can also contain unique values that are personalized for each recipient\.
 
@@ -12,15 +12,15 @@ The following examples show how to:
 + Remove an email template using [DeleteTemplate](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#deletetemplate)\.
 + Send a templated email using [SendTemplatedEmail](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#sendtemplatedemail)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon SES, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
 
-## Create an Email Template<a name="create-an-email-template"></a>
+## Create an email template<a name="create-an-email-template"></a>
 
 To create a template to send personalized email messages, use the [CreateTemplate](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateTemplate.html) operation\. The template can be used by any account authorized to send messages in the AWS Region to which the template is added\.
 
@@ -70,7 +70,7 @@ try {
 }
 ```
 
-## Get an Email Template<a name="get-an-email-template"></a>
+## Get an email template<a name="get-an-email-template"></a>
 
 To view the content for an existing email template including the subject line, HTML body, and plain text, use the [GetTemplate](https://docs.aws.amazon.com/ses/latest/APIReference/API_GetTemplate.html) operation\. Only TemplateName is required\.
 
@@ -106,7 +106,7 @@ try {
 }
 ```
 
-## List All Email Templates<a name="list-all-email-templates"></a>
+## List all email templates<a name="list-all-email-templates"></a>
 
 To retrieve a list of all email templates that are associated with your AWS account in the current AWS Region, use the [ListTemplates](https://docs.aws.amazon.com/ses/latest/APIReference/API_ListTemplates.html) operation\.
 
@@ -140,7 +140,7 @@ try {
 }
 ```
 
-## Update an Email Template<a name="update-an-email-template"></a>
+## Update an email template<a name="update-an-email-template"></a>
 
 To change the content for a specific email template including the subject line, HTML body, and plain text, use the [UpdateTemplate](https://docs.aws.amazon.com/ses/latest/APIReference/API_UpdadteTemplate.html) operation\.
 
@@ -187,7 +187,7 @@ try {
 }
 ```
 
-## Delete an Email Template<a name="delete-an-email-template"></a>
+## Delete an email template<a name="delete-an-email-template"></a>
 
 To remove a specific email template, use the [DeleteTemplate](https://docs.aws.amazon.com/ses/latest/APIReference/API_DeleteTemplate.html) operation\. All you need is the TemplateName\.
 
@@ -223,7 +223,7 @@ try {
 }
 ```
 
-## Send an Email with a Template<a name="send-an-email-with-a-template"></a>
+## Send an email with a template<a name="send-an-email-with-a-template"></a>
 
 To use a template to send an email to recipients, use the [SendTemplatedEmail](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html) operation\.
 

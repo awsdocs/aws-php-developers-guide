@@ -1,4 +1,4 @@
-# Working with IAM Server Certificates with AWS SDK for PHP Version 3<a name="iam-examples-working-with-certs"></a>
+# Working with IAM server certificates with AWS SDK for PHP Version 3<a name="iam-examples-working-with-certs"></a>
 
 To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate\. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to IAM or import it into AWS Certificate Manager\.
 
@@ -8,13 +8,13 @@ The following examples show how to:
 + Update a certificate using [UpdateServerCertificate](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#updateservercertificate)\.
 + Delete a certificate using [DeleteServerCertificate](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteservercertificate)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## List Server Certificates<a name="list-server-certificates"></a>
+## List server certificates<a name="list-server-certificates"></a>
 
  **Imports** 
 
@@ -43,7 +43,7 @@ try {
 }
 ```
 
-## Retrieve a Server Certificate<a name="retrieve-a-server-certificate"></a>
+## Retrieve a server certificate<a name="retrieve-a-server-certificate"></a>
 
  **Imports** 
 
@@ -75,7 +75,7 @@ try {
 }
 ```
 
-## Update a Server Certificate<a name="update-a-server-certificate"></a>
+## Update a server certificate<a name="update-a-server-certificate"></a>
 
  **Imports** 
 
@@ -108,7 +108,7 @@ try {
 }
 ```
 
-## Delete a Server Certificate<a name="delete-a-server-certificate"></a>
+## Delete a server certificate<a name="delete-a-server-certificate"></a>
 
  **Imports** 
 

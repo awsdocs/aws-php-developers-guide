@@ -1,4 +1,4 @@
-# Enabling Long Polling in Amazon SQS with AWS SDK for PHP Version 3<a name="sqs-examples-enable-long-polling"></a>
+# Enabling long polling in Amazon SQS with AWS SDK for PHP Version 3<a name="sqs-examples-enable-long-polling"></a>
 
 Long polling reduces the number of empty responses by allowing Amazon SQS to wait a specified time for a message to become available in the queue before sending a response\. Also, long polling eliminates false empty responses by querying all of the servers instead of a sampling of servers\. To enable long polling, specify a non\-zero wait time for received messages\. To learn more, see [SQS Long Polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)\.
 
@@ -7,13 +7,13 @@ The following examples show how to:
 + Retrieve one or more messages with long polling using [ReceiveMessage](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#receivemessage)\.
 + Create a long polling queue using [CreateQueue](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#createqueue)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Set Attributes on a Queue to Enable Long Polling<a name="set-attributes-on-a-queue-to-enable-long-polling"></a>
+## Set attributes on a queue to enable long polling<a name="set-attributes-on-a-queue-to-enable-long-polling"></a>
 
  **Imports** 
 
@@ -50,7 +50,7 @@ try {
 }
 ```
 
-## Retrieve Messages with Long Polling<a name="retrieve-messages-with-long-polling"></a>
+## Retrieve messages with long polling<a name="retrieve-messages-with-long-polling"></a>
 
  **Imports** 
 
@@ -88,7 +88,7 @@ try {
 }
 ```
 
-## Create a Queue with Long Polling<a name="create-a-queue-with-long-polling"></a>
+## Create a queue with long polling<a name="create-a-queue-with-long-polling"></a>
 
  **Imports** 
 

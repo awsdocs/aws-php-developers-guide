@@ -1,4 +1,4 @@
-# Managing IAM Access Keys with AWS SDK for PHP Version 3<a name="iam-examples-managing-access-keys"></a>
+# Managing IAM access keys with AWS SDK for PHP Version 3<a name="iam-examples-managing-access-keys"></a>
 
 Users need their own access keys to make programmatic calls to AWS\. To fill this need, you can create, modify, view, or rotate access keys \(access key IDs and secret access keys\) for IAM users\. By default, when you create an access key, its status is Active\. This means the user can use the access key for API calls\.
 
@@ -9,13 +9,13 @@ The following examples show how to:
 + Change the status of an access key from Active to Inactive, or vice versa, using [UpdateAccessKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#updateaccesskey)\.
 + Delete an access key pair associated with an IAM user using [DeleteAccessKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteaccesskey)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create an Access Key<a name="create-an-access-key"></a>
+## Create an access key<a name="create-an-access-key"></a>
 
  **Imports** 
 
@@ -53,7 +53,7 @@ try {
 }
 ```
 
-## List Access Keys<a name="list-access-keys"></a>
+## List access keys<a name="list-access-keys"></a>
 
  **Imports** 
 
@@ -82,7 +82,7 @@ try {
 }
 ```
 
-## Get Information about an Access Key’s Last Use<a name="get-information-about-an-access-key-s-last-use"></a>
+## Get information about an access key’s last use<a name="get-information-about-an-access-key-s-last-use"></a>
 
  **Imports** 
 
@@ -113,7 +113,7 @@ try {
 }
 ```
 
-## Update an Access Key<a name="update-an-access-key"></a>
+## Update an access key<a name="update-an-access-key"></a>
 
  **Imports** 
 
@@ -146,7 +146,7 @@ try {
 }
 ```
 
-## Delete an Access Key<a name="delete-an-access-key"></a>
+## Delete an access key<a name="delete-an-access-key"></a>
 
  **Imports** 
 

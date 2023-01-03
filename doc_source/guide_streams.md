@@ -6,7 +6,7 @@ As part of its integration of the [PSR\-7](http://www.php-fig.org/psr/psr-7/) HT
 The SDK takes ownership of any raw PHP stream resource supplied as an input parameter to a command\. The stream is consumed and closed on your behalf\.  
 If you need to share a stream between an SDK operation and your code, wrap it in an instance of `GuzzleHttp\Psr7\Stream` before including it as a command parameter\. The SDK consumes the stream, so your code needs to account for movement of the stream’s internal cursor\. Guzzle streams call `fclose` on the underlying stream resource when they are destroyed by PHP’s garbage collector, so you do not need to close the stream yourself\.
 
-## Stream Decorators<a name="stream-decorators"></a>
+## Stream decorators<a name="stream-decorators"></a>
 
 Guzzle provides several stream decorators that you can use to control how the SDK and Guzzle interact with the streaming resource provided as an input parameter to a command\. These decorators can modify how handlers are able to read and seek on a given stream\. The following is a partial list; more can be found on the [GuzzleHttpPsr7 repository](https://github.com/guzzle/psr7)\.
 
@@ -123,7 +123,7 @@ Provides a read\-only stream that pumps data from a PHP callable\.
 
 When invoking the provided callable, the PumpStream passes the amount of data requested to read to the callable\. The callable can choose to ignore this value and return fewer or more bytes than requested\. Any extra data returned by the provided callable is buffered internally until drained using the read\(\) function of the PumpStream\. The provided callable MUST return false when there is no more data to read\.
 
-### Implementing Stream Decorators<a name="implementing-stream-decorators"></a>
+### Implementing stream decorators<a name="implementing-stream-decorators"></a>
 
 Creating a stream decorator is very easy thanks to the [GuzzleHttp\\Psr7\\StreamDecoratorTrait](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-GuzzleHttp.Psr7.StreamDecoratorTrait.html)\. This trait provides methods that implement `Psr\Http\Message\StreamInterface` by proxying to an underlying stream\. Just `use` the `StreamDecoratorTrait` and implement your custom methods\.
 

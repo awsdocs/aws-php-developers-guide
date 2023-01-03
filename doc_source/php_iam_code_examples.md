@@ -9,16 +9,17 @@ The following code examples show you how to perform actions and implement common
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w72aac11c14b9c13c13)
-+ [Scenarios](#w72aac11c14b9c13c15)
++ [Actions](#w2aac11c13c13c17c13)
++ [Scenarios](#w2aac11c13c13c17c15)
 
-## Actions<a name="w72aac11c14b9c13c13"></a>
+## Actions<a name="w2aac11c13c13c17c13"></a>
 
 ### Attach a policy to a role<a name="iam_AttachRolePolicy_php_topic"></a>
 
 The following code example shows how to attach an IAM policy to a role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -58,7 +59,6 @@ $service->attachRolePolicy($assumeRoleRole['RoleName'], $listAllBucketsPolicy['A
         });
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [AttachRolePolicy](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/AttachRolePolicy) in *AWS SDK for PHP API Reference*\. 
 
 ### Create a policy<a name="iam_CreatePolicy_php_topic"></a>
@@ -66,6 +66,7 @@ $service->attachRolePolicy($assumeRoleRole['RoleName'], $listAllBucketsPolicy['A
 The following code example shows how to create an IAM policy\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -93,7 +94,6 @@ echo "Created policy: {$listAllBucketsPolicy['PolicyName']}\n";
         return $result['Policy'];
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreatePolicy](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreatePolicy) in *AWS SDK for PHP API Reference*\. 
 
 ### Create a role<a name="iam_CreateRole_php_topic"></a>
@@ -101,6 +101,7 @@ echo "Created policy: {$listAllBucketsPolicy['PolicyName']}\n";
 The following code example shows how to create an IAM role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -135,7 +136,6 @@ echo "Created role: {$assumeRoleRole['RoleName']}\n";
         return $result['Role'];
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreateRole](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreateRole) in *AWS SDK for PHP API Reference*\. 
 
 ### Create a service\-linked role<a name="iam_CreateServiceLinkedRole_php_topic"></a>
@@ -143,6 +143,7 @@ echo "Created role: {$assumeRoleRole['RoleName']}\n";
 The following code example shows how to create an IAM service\-linked role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -161,7 +162,6 @@ $service = new IamService();
         return $this->iamClient->createServiceLinkedRole($createServiceLinkedRoleArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreateServiceLinkedRole](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreateServiceLinkedRole) in *AWS SDK for PHP API Reference*\. 
 
 ### Create a user<a name="iam_CreateUser_php_topic"></a>
@@ -169,6 +169,7 @@ $service = new IamService();
 The following code example shows how to create an IAM user\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -193,7 +194,6 @@ echo "Created user with the arn: {$user['Arn']}\n";
         return $result['User'];
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [CreateUser](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreateUser) in *AWS SDK for PHP API Reference*\. 
 
 ### Get a policy<a name="iam_GetPolicy_php_topic"></a>
@@ -201,6 +201,7 @@ echo "Created user with the arn: {$user['Arn']}\n";
 The following code example shows how to get an IAM policy\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -214,7 +215,6 @@ $service = new IamService();
         });
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [GetPolicy](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/GetPolicy) in *AWS SDK for PHP API Reference*\. 
 
 ### Get a role<a name="iam_GetRole_php_topic"></a>
@@ -222,6 +222,7 @@ $service = new IamService();
 The following code example shows how to get an IAM role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -235,7 +236,6 @@ $service = new IamService();
         });
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [GetRole](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/GetRole) in *AWS SDK for PHP API Reference*\. 
 
 ### Get the account password policy<a name="iam_GetAccountPasswordPolicy_php_topic"></a>
@@ -243,6 +243,7 @@ $service = new IamService();
 The following code example shows how to get the IAM account password policy\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -254,7 +255,6 @@ $service = new IamService();
         return $this->iamClient->getAccountPasswordPolicy();
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [GetAccountPasswordPolicy](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/GetAccountPasswordPolicy) in *AWS SDK for PHP API Reference*\. 
 
 ### List SAML providers<a name="iam_ListSAMLProviders_php_topic"></a>
@@ -262,6 +262,7 @@ $service = new IamService();
 The following code example shows how to list SAML providers for IAM\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -273,7 +274,6 @@ $service = new IamService();
         return $this->iamClient->listSAMLProviders();
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListSAMLProviders](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListSAMLProviders) in *AWS SDK for PHP API Reference*\. 
 
 ### List groups<a name="iam_ListGroups_php_topic"></a>
@@ -281,6 +281,7 @@ $service = new IamService();
 The following code example shows how to list IAM groups\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -303,7 +304,6 @@ $service = new IamService();
         return $this->iamClient->listGroups($listGroupsArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListGroups](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListGroups) in *AWS SDK for PHP API Reference*\. 
 
 ### List inline policies for a role<a name="iam_ListRolePolicies_php_topic"></a>
@@ -311,6 +311,7 @@ $service = new IamService();
 The following code example shows how to list inline policies for an IAM role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -331,7 +332,6 @@ $service = new IamService();
         });
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListRolePolicies](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListRolePolicies) in *AWS SDK for PHP API Reference*\. 
 
 ### List policies<a name="iam_ListPolicies_php_topic"></a>
@@ -339,6 +339,7 @@ $service = new IamService();
 The following code example shows how to list IAM policies\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -361,7 +362,6 @@ $service = new IamService();
         return $this->iamClient->listPolicies($listPoliciesArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListPolicies](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListPolicies) in *AWS SDK for PHP API Reference*\. 
 
 ### List policies attached to a role<a name="iam_ListAttachedRolePolicies_php_topic"></a>
@@ -369,6 +369,7 @@ $service = new IamService();
 The following code example shows how to list policies attached to an IAM role\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -390,7 +391,6 @@ $service = new IamService();
         return $this->iamClient->listAttachedRolePolicies($listAttachRolePoliciesArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListAttachedRolePolicies](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListAttachedRolePolicies) in *AWS SDK for PHP API Reference*\. 
 
 ### List roles<a name="iam_ListRoles_php_topic"></a>
@@ -398,6 +398,7 @@ $service = new IamService();
 The following code example shows how to list IAM roles\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -426,7 +427,6 @@ $service = new IamService();
         return $this->iamClient->listRoles($listRolesArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListRoles](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListRoles) in *AWS SDK for PHP API Reference*\. 
 
 ### List users<a name="iam_ListUsers_php_topic"></a>
@@ -434,6 +434,7 @@ $service = new IamService();
 The following code example shows how to list IAM users\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -456,10 +457,9 @@ $service = new IamService();
         return $this->iamClient->listUsers($listUsersArguments);
     }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 +  For API details, see [ListUsers](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListUsers) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w72aac11c14b9c13c15"></a>
+## Scenarios<a name="w2aac11c13c13c17c15"></a>
 
 ### Create a user and assume a role<a name="iam_Scenario_CreateUserAssumeRole_php_topic"></a>
 
@@ -471,6 +471,7 @@ The following code example shows how to:
 + Delete the policy, role, and user\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
   
 
 ```
@@ -565,7 +566,6 @@ $deletedKey = $service->deleteAccessKey($key['AccessKeyId']);
 $deletedUser = $service->deleteUser($user['UserName']);
 echo "Delete user: {$user['UserName']}\n";
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
 + For API details, see the following topics in *AWS SDK for PHP API Reference*\.
   + [AttachRolePolicy](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/AttachRolePolicy)
   + [CreateAccessKey](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/CreateAccessKey)

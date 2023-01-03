@@ -1,4 +1,4 @@
-# JMESPath Expressions in the AWS SDK for PHP Version 3<a name="guide_jmespath"></a>
+# JMESPath expressions in the AWS SDK for PHP Version 3<a name="guide_jmespath"></a>
 
  [JMESPath](http://jmespath.org/) enables you to declaratively specify how to extract elements from a JSON document\. The AWS SDK for PHP has a dependency on [jmespath\.php](https://github.com/jmespath/jmespath.php) to power some of the high\-level abstractions like [Paginators in the AWS SDK for PHP Version 3](guide_paginators.md) and [Waiters in the AWS SDK for PHP Version 3](guide_waiters.md), but also exposes JMESPath searching on `Aws\ResultInterface` and `Aws\ResultPaginator`\.
 
@@ -6,7 +6,7 @@ You can play around with JMESPath in your browser by trying the online [JMESPath
 
 The [AWS CLI](https://aws.amazon.com/cli/) supports JMESPath\. Expressions you write for CLI output are 100 percent compatible with expressions written for the AWS SDK for PHP\.
 
-## Extracting Data from Results<a name="extracting-data-from-results"></a>
+## Extracting data from results<a name="extracting-data-from-results"></a>
 
 The `Aws\ResultInterface` interface has a `search($expression)` method that extracts data from a result model based on a JMESPath expression\. Using JMESPath expressions to query the data from a result object can help to remove boilerplate conditional code, and more concisely express the data that is being extracted\.
 
@@ -201,7 +201,7 @@ JMESPath also supports function expressions\. Let’s say you want to run the sa
 $data = $result->search('Volumes[?starts_with(AvailabilityZone, 'us-') ## `true`]');
 ```
 
-## Extracting Data from paginators<a name="extracting-data-from-paginators"></a>
+## Extracting data from paginators<a name="extracting-data-from-paginators"></a>
 
 As you know from the [Paginators in the AWS SDK for PHP Version 3](guide_paginators.md) guide, `Aws\ResultPaginator` objects are used to yield results from a pageable API operation\. The AWS SDK for PHP enables you to extract and iterate over filtered data from `Aws\ResultPaginator` objects, essentially implementing a [flat\-map](http://martinfowler.com/articles/collection-pipeline/flat-map.html) over the iterator in which the result of a JMESPath expression is the map function\.
 

@@ -9,17 +9,17 @@ Follow these instructions to set up AWS Cloud9 with the AWS SDK for PHP:
 +  [Step 4: Download Example Code](#cloud9-php-examples) 
 +  [Step 5: Run and Debug Example Code](#cloud9-php-run) 
 
-## Step 1: Set up Your AWS Account to Use AWS Cloud9<a name="cloud9-php-account"></a>
+## Step 1: Set up your AWS account to use AWS Cloud9<a name="cloud9-php-account"></a>
 
 Start to use AWS Cloud9 by signing in to the AWS Cloud9 console as an AWS Identity and Access Management \(IAM\) entity \(for example, an IAM user\) in your AWS account who has access permissions for AWS Cloud9\.
 
 To set up an IAM entity in your AWS account to access AWS Cloud9, and to sign in to the AWS Cloud9 console, see [Team Setup for AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/setup.html) in the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/)\.
 
-## Step 2: Set up Your AWS Cloud9 Development Environment<a name="cloud9-php-environment"></a>
+## Step 2: Set up your AWS Cloud9 development environment<a name="cloud9-php-environment"></a>
 
 After you sign in to the AWS Cloud9 console, use the console to create an AWS Cloud9 development environment\. After you create the environment, AWS Cloud9 opens the IDE for that environment\.
 
-See [Creating an Environment in AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/) for details\.
+See [Creating an environment in AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/) for details\.
 
 **Note**  
 As you create your environment in the console for the first time, we recommend that you choose the option to **Create a new instance for environment \(EC2\)**\. This option tells AWS Cloud9 to create an environment, launch an Amazon EC2 instance, and then connect the new instance to the new environment\. This is the fastest way to begin using AWS Cloud9\.
@@ -43,7 +43,7 @@ If the IDE can’t find PHP, run the following command to install it\. \(This co
 sudo yum -y install php56
 ```
 
-## Step 4: Download Example Code<a name="cloud9-php-examples"></a>
+## Step 4: Download example code<a name="cloud9-php-examples"></a>
 
 Use the terminal you opened in the previous step to download example code for the AWS SDK for PHP into the AWS Cloud9 development environment\.
 
@@ -57,7 +57,7 @@ To find code examples for the AWS SDK for PHP, use the **Environment** window to
 
 To learn how to work with these and other code examples, see [Code Examples](examples_index.md)\.
 
-## Step 5: Run and Debug Example Code<a name="cloud9-php-run"></a>
+## Step 5: Run and debug example code<a name="cloud9-php-run"></a>
 
 To run code in your AWS Cloud9 development environment, see [Run Your Code](https://docs.aws.amazon.com/cloud9/latest/user-guide/build-run-debug.html) in the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/)\.
 

@@ -1,8 +1,8 @@
-# Amazon S3 Transfer Manager with AWS SDK for PHP Version 3<a name="s3-transfer"></a>
+# Amazon S3 transfer manager with AWS SDK for PHP Version 3<a name="s3-transfer"></a>
 
 The Amazon S3 transfer manager in the AWS SDK for PHP is used to upload entire directories to an Amazon S3 bucket and download entire buckets to a local directory\.
 
-## Uploading a Local Directory to Amazon S3<a name="uploading-a-local-directory-to-s3"></a>
+## Uploading a local directory to Amazon S3<a name="uploading-a-local-directory-to-s3"></a>
 
 The `Aws\S3\Transfer` object is used to perform transfers\. The following example shows how to recursively upload a local directory of files to an Amazon S3 bucket\.
 
@@ -37,7 +37,7 @@ $manager = new \Aws\S3\Transfer($client, $source, $dest);
 $manager->transfer();
 ```
 
-## Downloading an Amazon S3 Bucket<a name="downloading-an-s3-bucket"></a>
+## Downloading an Amazon S3 bucket<a name="downloading-an-s3-bucket"></a>
 
 You can recursively download an Amazon S3 bucket to a local directory on disk by specifying the `$source` argument as an Amazon S3 URI \(e\.g\., `s3://bucket`\) and the `$dest` argument as the path to a local directory\.
 
@@ -82,7 +82,7 @@ The destination where the files will be transferred\. If the `$source` argument 
 ** `$options` **  
 An associative array of [transfer options](#s3-transfer-options)\.
 
-## Transfer Options<a name="s3-transfer-options"></a>
+## Transfer options<a name="s3-transfer-options"></a>
 
 ** `base_dir` \(string\)**  
 Base directory of the source, if `$source` is an iterator\. If the `$source` option is not an array, then this option is ignored\.
@@ -99,7 +99,7 @@ Number of files to upload concurrently\. The ideal concurrency value will vary b
 ** `debug` \(bool\)**  
 Set to `true` to print out debug information for transfers\. Set to an `fopen()` resource to write to a specific stream instead of writing to STDOUT\.
 
-## Async Transfers<a name="async-transfers"></a>
+## Async transfers<a name="async-transfers"></a>
 
 The `Transfer` object is an instance of `GuzzleHttp\Promise\PromisorInterface`\. This means that the transfer can occur asynchronously and is initiated by calling the `promise` method of the object\.
 
@@ -128,7 +128,7 @@ $promise->otherwise(function ($reason) {
 
 Because the `Transfer` object returns a promise, these transfers can occur concurrently with other asynchronous promises\.
 
-## Customizing the Transfer Manager’s Commands<a name="customizing-the-transfer-manager-s-commands"></a>
+## Customizing the transfer manager’s commands<a name="customizing-the-transfer-manager-s-commands"></a>
 
 Custom options can be set on the operations executed by the transfer manager via a callback passed to its constructor\.
 

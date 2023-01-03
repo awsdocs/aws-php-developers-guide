@@ -1,8 +1,8 @@
-# Amazon S3 Encryption Client Migration<a name="s3-encryption-migration"></a>
+# Amazon S3 encryption client migration<a name="s3-encryption-migration"></a>
 
 This topic shows how to migrate your applications from Version 1 \(V1\) of the Amazon Simple Storage Service \(Amazon S3\) encryption client to Version 2 \(V2\), and ensure application availability throughout the migration process\.
 
-## Migration Overview<a name="migration-overview"></a>
+## Migration overview<a name="migration-overview"></a>
 
 This migration happens in two phases:
 
@@ -10,7 +10,7 @@ This migration happens in two phases:
 
 2\. **Migrate encryption and decryption clients to V2\.** Once all of your V1 encryption clients can read new formats, you can migrate your existing encryption and decryption clients to their respective V2 versions\.
 
-## Update Existing Clients to Read New Formats<a name="update-existing-clients-to-read-new-formats"></a>
+## Update existing clients to read new formats<a name="update-existing-clients-to-read-new-formats"></a>
 
 The V2 encryption client uses encryption algorithms that older versions of the client don’t support\. The first step in the migration is to update your V1 decryption clients to the latest SDK release\. After completing this step, your application’s V1 clients will be able to decrypt objects encrypted by V2 encryption clients\. See details below for each major version of the AWS SDK for PHP\.
 
@@ -46,7 +46,7 @@ For projects that were installed using the Zip file, download the updated file: 
 ?>
 ```
 
-## Migrate Encryption and Decryption Clients to V2<a name="migrate-encryption-and-decryption-clients-to-v2"></a>
+## Migrate encryption and decryption clients to V2<a name="migrate-encryption-and-decryption-clients-to-v2"></a>
 
 After updating your clients to read the new encryption formats, you can update your applications to the V2 encryption and decryption clients\. The following steps show you how to successfully migrate your code from V1 to V2\.
 
@@ -60,9 +60,9 @@ After updating your clients to read the new encryption formats, you can update y
 
 4\. For decryption with a V2 client, if the `@KmsAllowDecryptWithAnyCmk` parameter isn’t set to `true` for the `“getObject...”` method calls, a `kms-key-id` must be supplied to the `KmsMaterialsProviderV2` constructor\.
 
-## Migration Examples<a name="migration-examples"></a>
+## Migration examples<a name="migration-examples"></a>
 
-### Example 1: Migrating to V2 Clients<a name="example-1-migrating-to-v2-clients"></a>
+### Example 1: Migrating to V2 clients<a name="example-1-migrating-to-v2-clients"></a>
 
  **Pre\-migration** 
 
@@ -94,7 +94,7 @@ $encryptionClient = new S3EncryptionClientV2(
 );
 ```
 
-### Example 2: Using KMS with kms\-key\-id<a name="example-2-using-kms-with-kms-key-id"></a>
+### Example 2: Using AWS KMS with kms\-key\-id<a name="example-2-using-kms-with-kms-key-id"></a>
 
 **Note**  
 These examples use imports and variables defined in Example 1\. For example, `$encryptionClient`\.

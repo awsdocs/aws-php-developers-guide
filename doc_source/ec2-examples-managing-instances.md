@@ -1,4 +1,4 @@
-# Managing Amazon EC2 Instances Using the AWS SDK for PHP Version 3<a name="ec2-examples-managing-instances"></a>
+# Managing Amazon EC2 instances using the AWS SDK for PHP Version 3<a name="ec2-examples-managing-instances"></a>
 
 The following examples show how to:
 + Describe Amazon EC2 instances using [DescribeInstances](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-ec2-2016-11-15.html#describeinstances)\.
@@ -8,13 +8,13 @@ The following examples show how to:
 + Stop an Amazon EBS\-backed instance using [StopInstances](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-ec2-2016-11-15.html#stopinstances)\.
 + Request a reboot of one or more instances using [RebootInstances](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-ec2-2016-11-15.html#rebootinstances)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Describe Instances<a name="describe-instances"></a>
+## Describe instances<a name="describe-instances"></a>
 
  **Imports** 
 
@@ -41,7 +41,7 @@ foreach ($result['Reservations'] as $reservation) {
 }
 ```
 
-## Enable and Disable Monitoring<a name="enable-and-disable-monitoring"></a>
+## Enable and disable monitoring<a name="enable-and-disable-monitoring"></a>
 
  **Imports** 
 
@@ -77,7 +77,7 @@ if ($monitorInstance == 'ON') {
 var_dump($result);
 ```
 
-## Start and Stop an Instance<a name="start-and-stop-an-instance"></a>
+## Start and stop an instance<a name="start-and-stop-an-instance"></a>
 
  **Imports** 
 
@@ -113,7 +113,7 @@ if ($action == 'START') {
 var_dump($result);
 ```
 
-## Reboot an Instance<a name="reboot-an-instance"></a>
+## Reboot an instance<a name="reboot-an-instance"></a>
 
  **Imports** 
 

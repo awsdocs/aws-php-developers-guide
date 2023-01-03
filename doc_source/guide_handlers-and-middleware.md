@@ -1,4 +1,4 @@
-# Handlers and Middleware in the AWS SDK for PHP Version 3<a name="guide_handlers-and-middleware"></a>
+# Handlers and middleware in the AWS SDK for PHP Version 3<a name="guide_handlers-and-middleware"></a>
 
 The primary mechanism for extending the AWS SDK for PHP is through **handlers** and **middleware**\. Each SDK client class owns an `Aws\HandlerList` instance that is accessible through the `getHandlerList()` method of a client\. You can retrieve a client’s `HandlerList` and modify it to add or remove client behavior\.
 
@@ -45,7 +45,7 @@ To change the handler of a multi\-region client after it's constructed, use the 
 $multiRegionClient->useCustomHandler($myHandler);
 ```
 
-### Mock Handler<a name="mock-handler"></a>
+### Mock handler<a name="mock-handler"></a>
 
 We recommend using the `MockHandler` when writing tests that use the SDK\. You can use the `Aws\MockHandler` to return mocked results or throw mock exceptions\. You enqueue results or exceptions, and the MockHandler dequeues them in FIFO order\.
 
@@ -195,7 +195,7 @@ $client->getHandlerList()->appendSign($middleware, 'custom-name');
 $client->getHandlerList()->prependSign($middleware, 'custom-name');
 ```
 
-### Available Middleware<a name="available-middleware"></a>
+### Available middleware<a name="available-middleware"></a>
 
 The SDK provides several middleware that you can use to augment the behavior of a client or to observe the execution of a command\.
 
@@ -362,7 +362,7 @@ $handlerList->appendInit(
 );
 ```
 
-## Creating Custom handlers<a name="creating-custom-handlers"></a>
+## Creating custom handlers<a name="creating-custom-handlers"></a>
 
 A handler is simply a function that accepts an `Aws\CommandInterface` object and `Psr\Http\Message\RequestInterface` object, and returns a `GuzzleHttp\Promise\PromiseInterface` that is fulfilled with an `Aws\ResultInterface` or rejected with an `Aws\Exception\AwsException`\.
 

@@ -1,4 +1,4 @@
-# Creating Delivery Streams Using the Kinesis Data Firehose API and the AWS SDK for PHP Version 3<a name="kinesis-firehose-example-delivery-stream"></a>
+# Creating delivery streams using the Kinesis Data Firehose API and the AWS SDK for PHP Version 3<a name="kinesis-firehose-example-delivery-stream"></a>
 
 Amazon Kinesis Data Firehose enables you to send real\-time data to other AWS services including Amazon Kinesis Data Streams, Amazon S3, Amazon OpenSearch Service \(OpenSearch Service\), and Amazon Redshift, or to Splunk\. Create a data producer with delivery streams to deliver data to the configured destination every time you add data\.
 
@@ -9,15 +9,15 @@ The following examples show how to:
 + Send data to a delivery stream using [PutRecord](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-firehose-2015-08-04.html#putrecord)\.
 + Delete a delivery stream using [DeleteDeliveryStream](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-firehose-2015-08-04.html#deletedeliverystream)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon Kinesis Data Firehose, see the [Amazon Kinesis Data Firehose Developer Guide](https://docs.aws.amazon.com/streams/latest/dev/)\.
 
-## Create a Delivery Stream Using a Kinesis Data Stream<a name="create-a-delivery-stream-using-a-ak-data-stream"></a>
+## Create a delivery stream using a Kinesis data stream<a name="create-a-delivery-stream-using-a-ak-data-stream"></a>
 
 To establish a delivery stream that puts data into an existing Kinesis data stream, use the [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) operation\.
 
@@ -63,7 +63,7 @@ try {
 }
 ```
 
-## Create a Delivery Stream Using an Amazon S3 Bucket<a name="create-a-delivery-stream-using-an-s3-bucket"></a>
+## Create a delivery stream using an Amazon S3 bucket<a name="create-a-delivery-stream-using-an-s3-bucket"></a>
 
 To establish a delivery stream that puts data into an existing Amazon S3 bucket, use the [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) operation\.
 
@@ -112,7 +112,7 @@ try {
 }
 ```
 
-## Create a Delivery Stream Using OpenSearch Service<a name="create-a-delivery-stream-using-es"></a>
+## Create a delivery stream using OpenSearch Service<a name="create-a-delivery-stream-using-es"></a>
 
 To establish a Kinesis Data Firehose delivery stream that puts data into an OpenSearch Service cluster, use the [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) operation\.
 
@@ -174,7 +174,7 @@ try {
 }
 ```
 
-## Retrieve a Delivery Stream<a name="retrieve-a-delivery-stream"></a>
+## Retrieve a delivery stream<a name="retrieve-a-delivery-stream"></a>
 
 To get the details about an existing Kinesis Data Firehose delivery stream, use the [DescribeDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_DescribeDeliveryStream.html) operation\.
 
@@ -210,7 +210,7 @@ try {
 }
 ```
 
-## List Existing Delivery Streams Connected to Kinesis Data Streams<a name="list-existing-delivery-streams-connected-to-aks"></a>
+## List existing delivery streams connected to Kinesis Data Streams<a name="list-existing-delivery-streams-connected-to-aks"></a>
 
 To list all the existing Kinesis Data Firehose delivery streams sending data to Kinesis Data Streams, use the [ListDeliveryStreams](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ListDeliveryStreams.html) operation\.
 
@@ -245,7 +245,7 @@ try {
 }
 ```
 
-## List Existing Delivery Streams Sending Data to Other AWS Services<a name="list-existing-delivery-streams-sending-data-to-other-aws-services"></a>
+## List existing delivery streams sending data to other AWS services<a name="list-existing-delivery-streams-sending-data-to-other-aws-services"></a>
 
 To list all the existing Kinesis Data Firehose delivery streams sending data to Amazon S3, OpenSearch Service, or Amazon Redshift, or to Splunk, use the [ListDeliveryStreams](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ListDeliveryStreams.html) operation\.
 
@@ -280,7 +280,7 @@ try {
 }
 ```
 
-## Send Data to an Existing Kinesis Data Firehose Delivery Stream<a name="send-data-to-an-existing-akf-delivery-stream"></a>
+## Send data to an existing Kinesis Data Firehose delivery stream<a name="send-data-to-an-existing-akf-delivery-stream"></a>
 
 To send data through a Kinesis Data Firehose delivery stream to your specified destination, use the [PutRecord](https://docs.aws.amazon.com/firehose/latest/APIReference/API_API_PutRecord.html) operation after you create a Kinesis Data Firehose delivery stream\.
 
@@ -322,7 +322,7 @@ try {
 }
 ```
 
-## Delete a Kinesis Data Firehose Delivery Stream<a name="delete-a-akf-delivery-stream"></a>
+## Delete a Kinesis Data Firehose delivery stream<a name="delete-a-akf-delivery-stream"></a>
 
 To delete a Kinesis Data Firehose delivery stream, use the [DeleteDeliveryStreams](https://docs.aws.amazon.com/firehose/latest/APIReference/API_DeleteDeliveryStreams.html) operation\. This also deletes any data you have sent to the delivery stream\.
 

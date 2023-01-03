@@ -1,4 +1,4 @@
-# Creating Data Streams Using the Kinesis Data Streams API and the AWS SDK for PHP Version 3<a name="kinesis-example-data-stream"></a>
+# Creating data streams using the Kinesis Data Streams API and the AWS SDK for PHP Version 3<a name="kinesis-example-data-stream"></a>
 
 Amazon Kinesis Data Streams allows you to send real\-time data\. Create a data producer with Kinesis Data Streams that delivers data to the configured destination every time you add data\.
 
@@ -11,15 +11,15 @@ The following examples show how to:
 + Send data to an existing data stream using [PutRecord](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kinesis-1913-12-02.html#putrecord)\.
 + Delete a data stream using [DeleteStream](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kinesis-1913-12-02.html#deletestream)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon Kinesis Developer Guide, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/kinesis/latest/dev/)\.
 
-## Create a Data Stream Using a Kinesis Data Stream<a name="create-a-data-stream-using-a-ak-data-stream"></a>
+## Create a data stream using a Kinesis data stream<a name="create-a-data-stream-using-a-ak-data-stream"></a>
 
 Establish a Kinesis data stream where you can send information to be processed by Kinesis using the following code example\. Learn more about [Creating and Updating Data Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) in the Amazon Kinesis Developer Guide\.
 
@@ -60,7 +60,7 @@ try {
 }
 ```
 
-## Retrieve a Data Stream<a name="retrieve-a-data-stream"></a>
+## Retrieve a data stream<a name="retrieve-a-data-stream"></a>
 
 Get details about an existing data stream using the following code example\. By default, this returns information about the first 10 shards connected to the specified Kinesis data stream\. Remember to check `StreamStatus` from the response before writing data to a Kinesis data stream\.
 
@@ -98,7 +98,7 @@ try {
 }
 ```
 
-## List Existing Data Streams That Are Connected to Kinesis<a name="list-existing-data-streams-that-are-connected-to-ak"></a>
+## List existing data streams that are connected to Kinesis<a name="list-existing-data-streams-that-are-connected-to-ak"></a>
 
 List the first 10 data streams from your AWS account in the selected AWS Region\. Use the returned ``HasMoreStreams` to determine if there are more streams associated with your account\.
 
@@ -133,7 +133,7 @@ try {
 }
 ```
 
-## Send Data to an Existing Data Stream<a name="send-data-to-an-existing-data-stream"></a>
+## Send data to an existing data stream<a name="send-data-to-an-existing-data-stream"></a>
 
 Once you create a data stream, use the following example to send data\. Before sending data to it, use `DescribeStream` to check whether the data `StreamStatus` is active\.
 
@@ -176,7 +176,7 @@ try {
 }
 ```
 
-## Delete a Data Stream<a name="delete-a-data-stream"></a>
+## Delete a data stream<a name="delete-a-data-stream"></a>
 
 This example demonstrates how to delete a data stream\. Deleting a data stream also deletes any data you sent to the data stream\. Active Kinesis data streams switch to the DELETING state until the stream deletion is complete\. While in the DELETING state, the stream continues to process data\.
 

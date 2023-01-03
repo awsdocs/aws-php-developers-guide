@@ -1,5 +1,7 @@
 # Credentials for the AWS SDK for PHP Version 3<a name="guide_credentials"></a>
 
+For reference information on available credentials mechanisms for the AWS SDKs, see [Credentials and access](https://docs.aws.amazon.com/sdkref/latest/guide/access.html) in the *AWS SDKs and Tools Reference Guide*\.
+
 To make requests to Amazon Web Services, supply [AWS access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html), also known as credentials, to the AWS SDK for PHP\.
 
 You can do this in the following ways:
@@ -8,9 +10,9 @@ You can do this in the following ways:
 + Supply the credentials yourself\. These can be root account credentials, IAM credentials, or temporary credentials retrieved from AWS STS\.
 
 **Important**  
-For security, we *strongly recommend* that you *use IAM users* instead of the root account for AWS access\. For more information, see [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the IAM User Guide\.
+For security, we *strongly recommend* that you do **not** use the root account for AWS access\. Always refer to the [Security best practices in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the *IAM User Guide* for the latest security recommendations\.
 
-## Using the Default Credential Provider Chain<a name="default-credential-chain"></a>
+## Using the default credential provider chain<a name="default-credential-chain"></a>
 
 When you initialize a new service client without providing any credential arguments, the SDK uses the default credential provider chain to find AWS credentials\. The SDK uses the first provider in the chain that returns credentials without an error\.
 
@@ -30,7 +32,7 @@ The default provider chain looks for and uses credentials as follows, in this or
 
    IAM roles provide applications on the instance with temporary security credentials to make AWS calls\. For example, IAM roles offer an easy way to distribute and manage credentials on multiple Amazon EC2 instances\.
 
-## Other Ways to Add Credentials<a name="other-credentials"></a>
+## Other ways to add credentials<a name="other-credentials"></a>
 
 You can also add credentials in these ways:
 +  [Using a credential provider](guide_credentials_provider.md)\.

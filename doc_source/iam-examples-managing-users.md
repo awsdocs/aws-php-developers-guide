@@ -1,4 +1,4 @@
-# Managing IAM Users with AWS SDK for PHP Version 3<a name="iam-examples-managing-users"></a>
+# Managing IAM users with AWS SDK for PHP Version 3<a name="iam-examples-managing-users"></a>
 
 An IAM user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS\. A user in AWS consists of a name and credentials\.
 
@@ -9,13 +9,13 @@ The following examples show how to:
 + Retrieve information about an IAM user using [GetUser](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#getuser)\.
 + Delete an IAM user using [DeleteUser](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteuser)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create an IAM User<a name="create-an-iam-user"></a>
+## Create an IAM user<a name="create-an-iam-user"></a>
 
  **Imports** 
 
@@ -47,7 +47,7 @@ try {
 }
 ```
 
-## List IAM Users<a name="list-iam-users"></a>
+## List IAM users<a name="list-iam-users"></a>
 
  **Imports** 
 
@@ -76,7 +76,7 @@ try {
 }
 ```
 
-## Update an IAM User<a name="update-an-iam-user"></a>
+## Update an IAM user<a name="update-an-iam-user"></a>
 
  **Imports** 
 
@@ -109,7 +109,7 @@ try {
 }
 ```
 
-## Get Information about an IAM User<a name="get-information-about-an-iam-user"></a>
+## Get information about an IAM user<a name="get-information-about-an-iam-user"></a>
 
  **Imports** 
 
@@ -140,7 +140,7 @@ try {
 }
 ```
 
-## Delete an IAM User<a name="delete-an-iam-user"></a>
+## Delete an IAM user<a name="delete-an-iam-user"></a>
 
  **Imports** 
 

@@ -1,15 +1,15 @@
-# Creating and Using Amazon S3 Buckets with the AWS SDK for PHP Version 3<a name="s3-examples-creating-buckets"></a>
+# Creating and using Amazon S3 buckets with the AWS SDK for PHP Version 3<a name="s3-examples-creating-buckets"></a>
 
 The following examples show how to:
 + Return a list of buckets owned by the authenticated sender of the request using [ListBuckets](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#listbuckets)\.
 + Create a new bucket using [CreateBucket](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#createbucket)\.
 + Add an object to a bucket using [PutObject](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putobject)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
  **Imports** 
 
@@ -20,7 +20,7 @@ use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 ```
 
-## List Buckets<a name="list-buckets"></a>
+## List buckets<a name="list-buckets"></a>
 
 Create a PHP file with the following code\. First create an AWS\.S3 client service that specifies the AWS Region and version\. Then call the `listBuckets` method, which returns all Amazon S3 buckets owned by the sender of the request as an array of Bucket structures\.
 
@@ -40,7 +40,7 @@ foreach ($buckets['Buckets'] as $bucket) {
 }
 ```
 
-## Create a Bucket<a name="create-a-bucket"></a>
+## Create a bucket<a name="create-a-bucket"></a>
 
 Create a PHP file with the following code\. First create an AWS\.S3 client service that specifies the AWS Region and version\. Then call the `createBucket` method with an array as the parameter\. The only required field is the key ‘Bucket’, with a string value for the bucket name to create\. However, you can specify the AWS Region with the ‘CreateBucketConfiguration’ field\. If successful, this method returns the ‘Location’ of the bucket\.
 
@@ -77,7 +77,7 @@ function createTheBucket()
 // createTheBucket();
 ```
 
-## Put an Object in a Bucket<a name="put-an-object-in-a-bucket"></a>
+## Put an object in a bucket<a name="put-an-object-in-a-bucket"></a>
 
 To add files to your new bucket, create a PHP file with the following code\.
 

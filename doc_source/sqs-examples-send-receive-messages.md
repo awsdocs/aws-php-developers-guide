@@ -1,4 +1,4 @@
-# Sending and Receiving Messages in Amazon SQS with AWS SDK for PHP Version 3<a name="sqs-examples-send-receive-messages"></a>
+# Sending and receiving messages in Amazon SQS with AWS SDK for PHP Version 3<a name="sqs-examples-send-receive-messages"></a>
 
 To learn about Amazon SQS messages, see [Sending a Message to an SQS Queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-send-message.html) and [Receiving and Deleting a Message from an SQS Queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-receive-delete-message.html.html) in the Service Quotas User Guide\.
 
@@ -7,13 +7,13 @@ The following examples show how to:
 + Retrieve one or more messages \(up to 10\) from a specified queue using [ReceiveMessage](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#receivemessage)\.
 + Delete a message from a queue using [DeleteMessage](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#deletemessage)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Send a Message<a name="send-a-message"></a>
+## Send a message<a name="send-a-message"></a>
 
  **Imports** 
 
@@ -62,7 +62,7 @@ try {
 }
 ```
 
-## Receive and Delete Messages<a name="receive-and-delete-messages"></a>
+## Receive and delete messages<a name="receive-and-delete-messages"></a>
 
  **Imports** 
 

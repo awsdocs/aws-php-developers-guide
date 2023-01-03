@@ -1,4 +1,4 @@
-# Sending Events to Amazon CloudWatch Events with AWS SDK for PHP Version 3<a name="cw-examples-sending-events"></a>
+# Sending events to Amazon CloudWatch Events with AWS SDK for PHP Version 3<a name="cw-examples-sending-events"></a>
 
 CloudWatch Events delivers a near real\-time stream of system events that describe changes in Amazon Web Services \(AWS\) resources to any of various targets\. Using simple rules, you can match events and route them to one or more target functions or streams\.
 
@@ -7,13 +7,13 @@ The following examples show how to:
 + Add targets to a rule using [PutTargets](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-events-2015-10-07.html#puttargets)\.
 + Send custom events to CloudWatch Events using [PutEvents](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-events-2015-10-07.html#putevents)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create a Rule<a name="create-a-rule"></a>
+## Create a rule<a name="create-a-rule"></a>
 
  **Imports** 
 
@@ -47,7 +47,7 @@ try {
 }
 ```
 
-## Add Targets to a Rule<a name="add-targets-to-a-rule"></a>
+## Add targets to a rule<a name="add-targets-to-a-rule"></a>
 
  **Imports** 
 
@@ -84,7 +84,7 @@ try {
 }
 ```
 
-## Send Custom Events<a name="send-custom-events"></a>
+## Send custom events<a name="send-custom-events"></a>
 
  **Imports** 
 

@@ -1,4 +1,4 @@
-# Using Credentials from Environment Variables<a name="guide_credentials_environment"></a>
+# Using credentials from environment variables<a name="guide_credentials_environment"></a>
 
 Using environment variables to contain your credentials prevents you from accidentally sharing your AWS secret access key\. We recommend that you never add your AWS access keys directly to the client in any production files\. Many developers have had their account compromised by leaked keys\.
 
@@ -6,7 +6,9 @@ To authenticate to Amazon Web Services, the SDK first checks for credentials in 
 
 If you’re hosting your application on [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_PHP_eb.html), you can set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_KEY` environment variables through the AWS Elastic Beanstalk console so that the SDK can use those credentials automatically\.
 
-You can also set the enviroment variables in the command line, as shown here\.
+For more information on how to set environment variables, see [Environment variables support](https://docs.aws.amazon.com/sdkref/latest/guide/environment-variables.html) in the *AWS SDKs and Tools Reference Guide*\. Also, for a list of all environment variables supported by most AWS SDKs, see [Environment variables list](https://docs.aws.amazon.com/sdkref/latest/guide/settings-reference.html#EVarSettings)\.
+
+You can also set the environment variables in the command line, as shown here\.
 
  **Linux** 
 

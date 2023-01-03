@@ -2,7 +2,7 @@
 
 The AWS SDK for PHP uses **promises** to allow for asynchronous workflows, and this asynchronicity allows HTTP requests to be sent concurrently\. The promise specification used by the SDK is [Promises/A\+](https://promisesaplus.com/)\.
 
-## What Is a Promise?<a name="what-is-a-promise"></a>
+## What is a promise?<a name="what-is-a-promise"></a>
 
 A *promise* represents the eventual result of an asynchronous operation\. The primary way of interacting with a promise is through its `then` method\. This method registers callbacks to receive either a promise’s eventual value or the reason why the promise can’t be fulfilled\.
 
@@ -45,7 +45,7 @@ $promise->then(
 );
 ```
 
-### Executing Commands Concurrently<a name="executing-commands-concurrently"></a>
+### Executing commands concurrently<a name="executing-commands-concurrently"></a>
 
 Multiple promises can be composed together such that they are executed concurrently\. This can be achieved by integrating the SDK with a non\-blocking event loop, or by building up multiple promises and waiting on them to complete concurrently\.
 
@@ -76,7 +76,7 @@ var_dump($results['tables']->toArray());
 **Note**  
 The [CommandPool](guide_commands.md#command-pool) provides a more powerful mechanism for executing multiple API operations concurrently\.
 
-## Chaining Promises<a name="chaining-promises"></a>
+## Chaining promises<a name="chaining-promises"></a>
 
 One of the best aspects of promises is that they are composable, allowing you to create transformation pipelines\. Promises are composed by chaining `then` callbacks with subsequent `then` callbacks\. The return value of a `then` method is a promise that is fulfilled or rejected based on the result of the provided callbacks\.
 
@@ -112,11 +112,11 @@ $promise
 **Note**  
 The return value of a promise callback is the `$value` argument that is supplied to downstream promises\. If you want to provide a value to downstream promise chains, you must return a value in the callback function\.
 
-### Rejection Forwarding<a name="rejection-forwarding"></a>
+### Rejection forwarding<a name="rejection-forwarding"></a>
 
 You can register a callback to invoke when a promise is rejected\. If an exception is thrown in any callback, the promise is rejected with the exception and the next promises in the chain are rejected with the exception\. If you return a value successfully from an `$onRejected` callback, the next promises in the promise chain is fulfilled with the return value from the `$onRejected` callback\.
 
-## Waiting on Promises<a name="waiting-on-promises"></a>
+## Waiting on promises<a name="waiting-on-promises"></a>
 
 You can synchronously force promises to complete by using a promise’s `wait` method\.
 
@@ -152,11 +152,11 @@ Calling `wait` on a promise that has been rejected throws an exception\. If the 
 **Note**  
 API operation calls in the AWS SDK for PHP are rejected with subclasses of the `Aws\Exception\AwsException` class\. However, it’s possible that the reason delivered to a `then` method is different because the addition of a custom middleware that alters a rejection reason\.
 
-## Canceling Promises<a name="canceling-promises"></a>
+## Canceling promises<a name="canceling-promises"></a>
 
 Promises can be canceled using the `cancel()` method of a promise\. If a promise has already been resolved, calling `cancel()` will have no effect\. Canceling a promise cancels the promise and any promises that are awaiting delivery from the promise\. A canceled promise is rejected with a `GuzzleHttp\Promise\RejectionException`\.
 
-## Combining Promises<a name="combining-promises"></a>
+## Combining promises<a name="combining-promises"></a>
 
 You can combine promises into aggregate promises to build more sophisticated workflows\. The `guzzlehttp/promise` package contains various functions that you can use to combine promises\.
 
@@ -194,7 +194,7 @@ $promise = Promise\each_limit($promiseGenerator(), 5);
 $promise->wait();
 ```
 
-### Promise Coroutines<a name="promise-coroutines"></a>
+### Promise coroutines<a name="promise-coroutines"></a>
 
 One of the more powerful features of the Guzzle promises library is that it allows you to use promise coroutines that make writing asynchronous workflows seem more like writing traditional synchronous workflows\. In fact, the AWS SDK for PHP uses coroutine promises in most of the high\-level abstractions\.
 

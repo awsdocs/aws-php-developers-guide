@@ -1,4 +1,4 @@
-# Publishing Custom Metrics in Amazon CloudWatch with AWS SDK for PHP Version 3<a name="cw-examples-publishing-custom-metrics"></a>
+# Publishing custom metrics in Amazon CloudWatch with AWS SDK for PHP Version 3<a name="cw-examples-publishing-custom-metrics"></a>
 
 Metrics are data about the performance of your systems\. An alarm watches a single metric over a time period you specify\. It performs one or more actions based on the value of the metric, relative to a given threshold over a number of time periods\.
 
@@ -6,13 +6,13 @@ The following examples show how to:
 + Publish metric data using [PutMetricData](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#putmetricdata)\.
 + Create an alarm using [PutMetricAlarm](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#putmetricalarm)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Publish Metric Data<a name="publish-metric-data"></a>
+## Publish metric data<a name="publish-metric-data"></a>
 
  **Imports** 
 
@@ -90,7 +90,7 @@ function putTheMetricData()
 // putTheMetricData();
 ```
 
-## Create an Alarm<a name="create-an-alarm"></a>
+## Create an alarm<a name="create-an-alarm"></a>
 
  **Imports** 
 

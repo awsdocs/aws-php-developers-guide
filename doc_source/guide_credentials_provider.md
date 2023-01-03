@@ -1,4 +1,4 @@
-# Using a Credential Provider<a name="guide_credentials_provider"></a>
+# Using a credential provider<a name="guide_credentials_provider"></a>
 
 A credential provider is a function that returns a `GuzzleHttp\Promise\PromiseInterface` that is fulfilled with an `Aws\Credentials\CredentialsInterface` instance or rejected with an `Aws\Exception\CredentialsException`\. You can use credential providers to implement your own custom logic for creating credentials or to optimize credential loading\.
 
@@ -21,7 +21,7 @@ $client = new S3Client([
 
 ## Built\-In Providers in the SDK<a name="built-in-providers-in-the-sdk"></a>
 
-The SDK provides several built\-in providers that you can combine with any custom providers\.
+The SDK provides several built\-in providers that you can combine with any custom providers\. For more information on configuring the standardized providers and the credential provider chain in AWS SDKs, see [Standardized credential providers](https://docs.aws.amazon.com/sdkref/latest/guide/standardized-credentials.html) in the *AWS SDKs and Tools Reference Guide*\.
 
 **Important**  
 Credential providers are invoked every time an API operation is performed\. If loading credentials is an expensive task \(e\.g\., loading from disk or a network resource\), or if credentials are not cached by your provider, consider wrapping your credential provider in an `Aws\Credentials\CredentialProvider::memoize` function\. The default credential provider used by the SDK is automatically memoized\.
@@ -70,7 +70,7 @@ $client = new S3Client([
 
 For more information regarding `'assume_role_params'`, see [AssumeRole](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sts-2011-06-15.html#assumerole)\.
 
-## Chaining Providers<a name="chaining-providers"></a>
+## Chaining providers<a name="chaining-providers"></a>
 
 You can chain credential providers by using the `Aws\Credentials\CredentialProvider::chain()` function\. This function accepts a variadic number of arguments, each of which are credential provider functions\. This function then returns a new function that’s the composition of the provided functions, such that they are invoked one after the other until one of the providers returns a promise that is fulfilled successfully\.
 
@@ -93,7 +93,7 @@ public static function defaultProvider(array $config = [])
 }
 ```
 
-## Creating a Custom Provider<a name="creating-a-custom-provider"></a>
+## Creating a custom provider<a name="creating-a-custom-provider"></a>
 
 Credential providers are simply functions that when invoked return a promise \(`GuzzleHttp\Promise\PromiseInterface`\) that is fulfilled with an `Aws\Credentials\CredentialsInterface` object or rejected with an `Aws\Exception\CredentialsException`\.
 
@@ -165,7 +165,7 @@ $client = new S3Client([
 ]);
 ```
 
-## assume role with web identity provider<a name="assume-role-with-web-identity-provider"></a>
+## assumeRoleWithWebIdentityCredentialProvider provider<a name="assume-role-with-web-identity-provider"></a>
 
  `Aws\Credentials\CredentialProvider::assumeRoleWithWebIdentityCredentialProvider` attempts to load credentials by assuming a role\. If the environment variables `AWS_ROLE_ARN` and `AWS_WEB_IDENTITY_TOKEN_FILE` are present, the provider will attempt to assume the role specified at `AWS_ROLE_ARN` using the token on disk at the full path specified in `AWS_WEB_IDENTITY_TOKEN_FILE`\. If environment variables are used, the provider will attempt to set the session from the `AWS_ROLE_SESSION_NAME` environment variable\.
 
@@ -333,7 +333,7 @@ $memoizedProvider = CredentialProvider::memoize($provider);
 **Note**  
 You can disable this attempt to load from Amazon EC2 instance profiles by setting the `AWS_EC2_METADATA_DISABLED` environment variable to `true`\.
 
-## Memoizing Credentials<a name="memoizing-credentials"></a>
+## Memoizing credentials<a name="memoizing-credentials"></a>
 
 At times you might need to create a credential provider that remembers the previous return value\. This can be useful for performance when loading credentials is an expensive operation or when using the `Aws\Sdk` class to share a credential provider across multiple clients\. You can add memoization to a credential provider by wrapping the credential provider function in a `memoize` function\.
 

@@ -1,4 +1,4 @@
-# Using Alarm Actions with Amazon CloudWatch Alarms with AWS SDK for PHP Version 3<a name="cw-examples-using-alarm-actions"></a>
+# Using alarm actions with Amazon CloudWatch alarms with AWS SDK for PHP Version 3<a name="cw-examples-using-alarm-actions"></a>
 
 Use alarm actions to create alarms that automatically stop, terminate, reboot, or recover your Amazon EC2 instances\. You can use the stop or terminate actions when you no longer need an instance to be running\. You can use the reboot and recover actions to automatically reboot those instances\.
 
@@ -6,13 +6,13 @@ The following examples show how to:
 + Enable actions for specified alarms using [EnableAlarmActions](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#enablealarmactions)\.
 + Disable actions for specified alarms using [DisableAlarmActions](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#disablealarmactions)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Enable Alarm Actions<a name="enable-alarm-actions"></a>
+## Enable alarm actions<a name="enable-alarm-actions"></a>
 
  **Imports** 
 
@@ -65,7 +65,7 @@ function enableTheAlarmActions()
 // enableTheAlarmActions();
 ```
 
-## Disable Alarm Actions<a name="disable-alarm-actions"></a>
+## Disable alarm actions<a name="disable-alarm-actions"></a>
 
  **Imports** 
 

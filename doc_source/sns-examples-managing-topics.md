@@ -1,4 +1,4 @@
-# Managing Topics in Amazon SNS with the AWS SDK for PHP Version 3<a name="sns-examples-managing-topics"></a>
+# Managing topics in Amazon SNS with the AWS SDK for PHP Version 3<a name="sns-examples-managing-topics"></a>
 
 To send notifications to Amazon Simple Queue Service \(Amazon SQS\), HTTP/HTTPS URLs, email, AWS SMS, or AWS Lambda, you must first create a topic that manages the delivery of messages to any subscribers of that topic\.
 
@@ -15,15 +15,15 @@ The following examples show how to:
 
 For more information about using Amazon SNS, see [Amazon SNS Topic Attributes for Message Delivery Status](https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create a Topic<a name="create-a-topic"></a>
+## Create a topic<a name="create-a-topic"></a>
 
-To create a topic, use the [CreateTopic](https://docs.aws.amazon.com/sns/latest/api/API_API_CreateTopic.html) operation\.
+To create a topic, use the [CreateTopic](https://docs.aws.amazon.com/sns/latest/api/API_CreateTopic.html) operation\.
 
 Each topic name in your AWS account must be unique\.
 
@@ -58,9 +58,9 @@ try {
 }
 ```
 
-## List Your Topics<a name="list-your-topics"></a>
+## List your topics<a name="list-your-topics"></a>
 
-To list up to 100 existing topics in the current AWS Region, use the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_API_ListTopics.html) operation\.
+To list up to 100 existing topics in the current AWS Region, use the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation\.
 
  **Imports** 
 
@@ -90,9 +90,9 @@ try {
 }
 ```
 
-## Delete a Topic<a name="delete-a-topic"></a>
+## Delete a topic<a name="delete-a-topic"></a>
 
-To remove an existing topic and all of its subscriptions, use the [DeleteTopic](https://docs.aws.amazon.com/sns/latest/api/API_API_DeleteTopic.html) operation\.
+To remove an existing topic and all of its subscriptions, use the [DeleteTopic](https://docs.aws.amazon.com/sns/latest/api/API_DeleteTopic.html) operation\.
 
 Any messages that have not been delivered yet to subscribers will also be deleted\.
 
@@ -127,9 +127,9 @@ try {
 }
 ```
 
-## Get Topic Attributes<a name="get-topic-attributes"></a>
+## Get topic attributes<a name="get-topic-attributes"></a>
 
-To retrieve properties of a single existing topic, use the [GetTopicAttributes](https://docs.aws.amazon.com/sns/latest/api/API_API_GetTopicAttributes.html) operation\.
+To retrieve properties of a single existing topic, use the [GetTopicAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetTopicAttributes.html) operation\.
 
  **Imports** 
 
@@ -162,9 +162,9 @@ try {
 }
 ```
 
-## Set Topic Attributes<a name="set-topic-attributes"></a>
+## Set topic attributes<a name="set-topic-attributes"></a>
 
-To update properties of a single existing topic, use the [SetTopicAttributes](https://docs.aws.amazon.com/sns/latest/api/API_API_SetTopicAttributes.html) operation\.
+To update properties of a single existing topic, use the [SetTopicAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetTopicAttributes.html) operation\.
 
 You can set only the `Policy`, `DisplayName`, and `DeliveryPolicy` attributes\.
 

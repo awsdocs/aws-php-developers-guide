@@ -4,15 +4,15 @@ Signed URLs enable you to provide users access to your private content\. A signe
 + Create a signed Amazon CloudFront URL using [getSignedURL](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.CloudFront.CloudFrontClient.html#_getSignedUrl)\.
 + Create a signed Amazon CloudFront cookie using [getSignedCookie](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.CloudFront.CloudFrontClient.html#_getSignedCookie)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon CloudFront, see the [Amazon CloudFront Developer Guide](Amazon CloudFront Developer Guide)\.
 
-## Signing CloudFront URLs for Private Distributions<a name="signing-cf-urls-for-private-distributions"></a>
+## Signing CloudFront URLs for private distributions<a name="signing-cf-urls-for-private-distributions"></a>
 
 You can sign a URL using the CloudFront client in the SDK\. First, you must create a `CloudFrontClient` object\. You can sign a CloudFront URL for a video resource using either a canned or custom policy\.
 
@@ -67,7 +67,7 @@ function signAPrivateDistribution()
 // signAPrivateDistribution();
 ```
 
-## Use a Custom Policy When Creating CloudFront URLs<a name="use-a-custom-policy-when-creating-cf-urls"></a>
+## Use a custom policy when creating CloudFront URLs<a name="use-a-custom-policy-when-creating-cf-urls"></a>
 
 To use a custom policy, provide the `policy` key instead of `expires`\.
 
@@ -135,7 +135,7 @@ POLICY;
 // signAPrivateDistributionPolicy();
 ```
 
-## Use a CloudFront Signed URL<a name="use-a-cf-signed-url"></a>
+## Use a CloudFront signed URL<a name="use-a-cf-signed-url"></a>
 
 The form of the signed URL differs, depending on whether the URL you are signing is using the “HTTP” or “RTMP” scheme\. In the case of “HTTP”, the full, absolute URL is returned\. For “RTMP”, only the relative URL is returned for your convenience\. This is because some players require the host and path to be provided as separate parameters\.
 
@@ -160,9 +160,9 @@ The following example shows how you could use the signed URL to construct a webp
 </html>
 ```
 
-## Signing CloudFront Cookies for Private Distributions<a name="signing-cf-cookies-for-private-distributions"></a>
+## Signing CloudFront cookies for private distributions<a name="signing-cf-cookies-for-private-distributions"></a>
 
-As an alternative to signed URLs, you can also grant clients access to a private distribution via signed cookies\. Signed cookies enable you to provide access to multiple restricted files, such as all of the files for a video in HLS format or all of the files in the subscribers’ area of a website\. For more information on why you might want to use signed cookies instead of signed URLs \(or vice versa\), see [Choosing Between Signed URLs and Signed Cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-choosing-signed-urls-cookies.html) in the Amazon CloudFront Developer Guide\.
+As an alternative to signed URLs, you can also grant clients access to a private distribution via signed cookies\. Signed cookies enable you to provide access to multiple restricted files, such as all of the files for a video in HLS format or all of the files in the subscribers’ area of a website\. For more information on why you might want to use signed cookies instead of signed URLs \(or vice versa\), see [Choosing between signed URLs and signed cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-choosing-signed-urls-cookies.html) in the Amazon CloudFront Developer Guide\.
 
 Creating a signed cookie is similar to creating a signed URL\. The only difference is the method that is called \(`getSignedCookie` instead of `getSignedUrl`\)\.
 
@@ -227,7 +227,7 @@ function signACookie()
 // signACookie();
 ```
 
-## Use a Custom Policy When Creating CloudFront Cookies<a name="use-a-custom-policy-when-creating-cf-cookies"></a>
+## Use a custom policy when creating CloudFront cookies<a name="use-a-custom-policy-when-creating-cf-cookies"></a>
 
 As with `getSignedUrl`, you can provide a `'policy'` parameter instead of an `expires` parameter and a `url` parameter to sign a cookie with a custom policy\. A custom policy can contain wildcards in the resource key\. This enables you to create a single signed cookie for multiple files\.
 
@@ -305,7 +305,7 @@ POLICY;
 // signACookiePolicy();
 ```
 
-## Send CloudFront Cookies to Guzzle Client<a name="send-cf-cookies-to-guzzle-client"></a>
+## Send CloudFront cookies to Guzzle client<a name="send-cf-cookies-to-guzzle-client"></a>
 
 You can also pass these cookies to a `GuzzleHttp\Cookie\CookieJar` for use with a Guzzle client\.
 

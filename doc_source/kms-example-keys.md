@@ -1,26 +1,26 @@
-# Working with Keys Using the AWS KMS API and the AWS SDK for PHP Version 3<a name="kms-example-keys"></a>
+# Working with keys using the AWS KMS API and the AWS SDK for PHP Version 3<a name="kms-example-keys"></a>
 
-The primary resources in AWS Key Management Service \(AWS KMS\) are [customer master keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys.html)\. You can use a CMK to encrypt your data\.
+The primary resources in AWS Key Management Service \(AWS KMS\) are [AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys)\. You can use a KMS key to encrypt your data\.
 
 The following examples show how to:
-+ Create a customer CMK using [CreateKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#createkey)\.
++ Create a customer KMS key using [CreateKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#createkey)\.
 + Generate a data key using [GenerateDataKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#generatedatakey)\.
-+ View a CMK using [DescribeKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#describekey)\.
-+ Get key IDs and key ARNS of CMKs using [ListKeys](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#listkeys)\.
-+ Enable CMKs using [EnableKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#enablekey)\.
-+ Disable CMKs using [DisableKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#disablekey)\.
++ View a KMS key using [DescribeKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#describekey)\.
++ Get key IDs and key ARNS of KMS keys using [ListKeys](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#listkeys)\.
++ Enable KMS keys using [EnableKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#enablekey)\.
++ Disable KMS keys using [DisableKey](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#disablekey)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using AWS Key Management Service \(AWS KMS\), see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/)\.
 
-## Create a CMK<a name="create-a-cmk"></a>
+## Create a KMS key<a name="create-a-cmk"></a>
 
-To create a [CMK](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys.html), use the [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) operation\.
+To create a [KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys), use the [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) operation\.
 
  **Imports** 
 
@@ -55,9 +55,9 @@ try {
 }
 ```
 
-## Generate a Data Key<a name="generate-a-data-key"></a>
+## Generate a data key<a name="generate-a-data-key"></a>
 
-To generate a data encryption key, use the [GenerateDataKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateDataKey.html) operation\. This operation returns plaintext and encrypted copies of the data key that it creates\. Specify the customer master key \(CMK\) under which to generate the data key\.
+To generate a data encryption key, use the [GenerateDataKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateDataKey.html) operation\. This operation returns plaintext and encrypted copies of the data key that it creates\. Specify the AWS KMS key under which to generate the data key\.
 
  **Imports** 
 
@@ -93,9 +93,9 @@ try {
 }
 ```
 
-## View a CMK<a name="view-a-cmk"></a>
+## View a KMS key<a name="view-a-cmk"></a>
 
-To get detailed information about a CMK, including the CMK’s Amazon Resource Name \(ARN\) and [key state](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html), use the [DescribeKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html) operation\.
+To get detailed information about a KMS key, including the KMS key’s Amazon Resource Name \(ARN\) and [key state](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html), use the [DescribeKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html) operation\.
 
  `DescribeKey` doesn’t get aliases\. To get aliases, use the [ListAliases](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListKeys.html) operation\.
 
@@ -131,9 +131,9 @@ try {
 }
 ```
 
-## Get the Key ID and Key ARNs of a CMK<a name="get-the-key-id-and-key-arns-of-a-cmk"></a>
+## Get the key ID and key ARNs of a KMS key<a name="get-the-key-id-and-key-arns-of-a-cmk"></a>
 
-To get the ID and ARN of the CMK, use the [ListAliases](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListKeys.html) operation\.
+To get the ID and ARN of the KMS key, use the [ListAliases](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListKeys.html) operation\.
 
  **Imports** 
 
@@ -167,9 +167,9 @@ try {
 }
 ```
 
-## Enable a CMK<a name="enable-a-cmk"></a>
+## Enable a KMS key<a name="enable-a-cmk"></a>
 
-To enable a disabled CMK, use the [EnableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_EnableKey.html) operation\.
+To enable a disabled KMS key, use the [EnableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_EnableKey.html) operation\.
 
  **Imports** 
 
@@ -204,9 +204,9 @@ try {
 }
 ```
 
-## Disable a CMK<a name="disable-a-cmk"></a>
+## Disable a KMS key<a name="disable-a-cmk"></a>
 
-To disable a CMK, use the [DisableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DisableKey.html) operation\. Disabling a CMK prevents it from being used\.
+To disable a KMS key, use the [DisableKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DisableKey.html) operation\. Disabling a KMS key prevents it from being used\.
 
  **Imports** 
 

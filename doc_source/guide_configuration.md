@@ -1,8 +1,12 @@
 # Configuration for the AWS SDK for PHP Version 3<a name="guide_configuration"></a>
 
-This guide describes client constructor options\. These options can be provided in a client constructor or provided to the `Aws\Sdk` class\. The array of options provided to a specific type of client can vary, based on which client you are creating\. These custom client configuration options are described in the [API documentation](https://docs.aws.amazon.com/aws-sdk-php/latest/) of each client\.
+Client constructor options can be provided in a client constructor or provided to the [https://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.Sdk.html](https://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.Sdk.html) class\. The array of options provided to a specific type of client can vary, based on which client you are creating\. These custom client configuration options are described in the [API documentation](https://docs.aws.amazon.com/aws-sdk-php/latest/) of each client\.
 
-Note that some configuration options will check and use default values based on environment variables or an AWS configuration file\. By default, the configuration file being checked will be `.aws/config` in your home directory, commonly `~/.aws/config`\. However, you can use the environment variable `AWS_CONFIG_FILE` to set where your default config file location is\. This may be especially useful if you are restricting file access to certain directories with `open_basedir` and the like\.
+Note that some configuration options will check and use default values based on environment variables or an AWS configuration file\. By default, the configuration file being checked will be `.aws/config` in your home directory, commonly `~/.aws/config`\. However, you can use the environment variable `AWS_CONFIG_FILE` to set where your default config file location is\. For example, this may be useful if you are restricting file access to certain directories with `open_basedir`\.
+
+For more information on the location and formatting of the shared AWS `config` and `credentials` files, see [Configuration](https://docs.aws.amazon.com/sdkref/latest/guide/creds-config-files.html) in the *AWS SDKs and Tools Reference Guide*\.
+
+For details on all global configuration settings that you can set in the AWS configuration files or as environment variables, see [Configuration and authentication settings reference](https://docs.aws.amazon.com/sdkref/latest/guide/settings-reference.html) in the *AWS SDKs and Tools Reference Guide*\.
 
 **Topics**
 + [api\_provider](#api-provider)
@@ -259,7 +263,7 @@ Here’s an example of connecting to Amazon DynamoDB Local:
 ```
 $client = new Aws\DynamoDb\DynamoDbClient([
     'version'  => '2012-08-10',
-    'region'   => 'us-east-1'
+    'region'   => 'us-east-1',
     'endpoint' => 'http://localhost:8000'
 ]);
 ```
@@ -271,7 +275,7 @@ See the [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/g
 Type  
  `Aws\EndpointV2\EndpointProviderV2|callable` 
 
-An optional instance of EndpointProviderV2 or PHP callable that accepts a hash of options, including a “service” and “region” key\. It returns `NULL` or a hash of endpoint data, of which the “endpoint” key is required\.  
+An optional instance of EndpointProviderV2 or PHP callable that accepts a hash of options, including a “service” and “region” key\. It returns `NULL` or a hash of endpoint data, of which the “endpoint” key is required\.
 
 Here’s an example of how to create a minimal endpoint provider\.
 

@@ -1,4 +1,4 @@
-# Managing Secrets Using the Secrets Manager API and the AWS SDK for PHP Version 3<a name="secretsmanager-examples-manage-secret"></a>
+# Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3<a name="secretsmanager-examples-manage-secret"></a>
 
 AWS Secrets Manager stores and manages shared secrets such as passwords, API keys, and database credentials\. With the Secrets Manager service, developers can replace hard\-coded credentials in deployed code with an embedded call to Secrets Manager\.
 
@@ -13,13 +13,13 @@ The following examples show how to:
 + Set up a secret rotation using [RotateSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#rotatesecret)\.
 + Mark a secret for deletion using [DeleteSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#deletesecret)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create a Secret in Secrets Manager<a name="create-a-secret-in-asm"></a>
+## Create a secret in Secrets Manager<a name="create-a-secret-in-asm"></a>
 
 To create a secret in Secrets Manager, use the [CreateSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#createsecret) operation\.
 
@@ -61,7 +61,7 @@ try {
 }
 ```
 
-## Retrieve a Secret from Secrets Manager<a name="retrieve-a-secret-from-asm"></a>
+## Retrieve a secret from Secrets Manager<a name="retrieve-a-secret-from-asm"></a>
 
 To retrieve the value of a secret stored in Secrets Manager, use the [GetSecretValue](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#getsecretvalue) operation\.
 
@@ -131,7 +131,7 @@ if (isset($result['SecretString'])) {
 // Your code goes here;
 ```
 
-## List Secrets Stored in Secrets Manager<a name="list-secrets-stored-in-asm"></a>
+## List secrets stored in Secrets Manager<a name="list-secrets-stored-in-asm"></a>
 
 Get a list of all the secrets that are stored by Secrets Manager using the [ListSecrets](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#listsecrets) operation\.
 
@@ -164,7 +164,7 @@ try {
 }
 ```
 
-## Retrieve Details about a Secret<a name="retrieve-details-about-a-secret"></a>
+## Retrieve details about a secret<a name="retrieve-details-about-a-secret"></a>
 
 Stored secrets contain metadata about rotation rules, when it was last accessed or changed, user\-created tags, and the Amazon Resource Name \(ARN\)\. To get the details of a specified secret stored in Secrets Manager, use the [DescribeSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#describesecret) operation\.
 
@@ -200,7 +200,7 @@ try {
 }
 ```
 
-## Update the Secret Value<a name="update-the-secret-value"></a>
+## Update the secret value<a name="update-the-secret-value"></a>
 
 To store a new encrypted secret value in Secrets Manager, use the [PutSecretValue](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#putsecretvalue) operation\.
 
@@ -240,7 +240,7 @@ try {
 }
 ```
 
-## Rotate the Value to an Existing Secret in Secrets Manager<a name="rotate-the-value-to-an-existing-secret-in-asm"></a>
+## Rotate the value to an existing secret in Secrets Manager<a name="rotate-the-value-to-an-existing-secret-in-asm"></a>
 
 To rotate the value of an existing secret stored in Secrets Manager, use a Lambda rotation function and the [RotateSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#rotatesecret) operation\.
 
@@ -321,7 +321,7 @@ try {
 }
 ```
 
-## Delete a Secret from Secrets Manager<a name="delete-a-secret-from-asm"></a>
+## Delete a secret from Secrets Manager<a name="delete-a-secret-from-asm"></a>
 
 To remove a specified secret from Secrets Manager, use the [DeleteSecret](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-secretsmanager-2017-10-17.html#deletesecret) operation\. To prevent deleting a secret accidentally, a DeletionDate stamp is automatically added to the secret that specifies a window of recovery time in which you can reverse the deletion\. If the time isn’t specified for the recovery window, the default amount of time is 30 days\.
 
@@ -357,7 +357,7 @@ try {
 }
 ```
 
-## Related Information<a name="related-information"></a>
+## Related information<a name="related-information"></a>
 
 The AWS SDK for PHP examples use the following REST operations from the AWS Secrets Manager API Reference:
 +  [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) 

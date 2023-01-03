@@ -1,19 +1,19 @@
-# Getting Your Account\-Specific Endpoint for AWS Elemental MediaConvert with AWS SDK for PHP Version 3<a name="emc-examples-getendpoint"></a>
+# Getting your account\-specific endpoint for AWS Elemental MediaConvert with AWS SDK for PHP Version 3<a name="emc-examples-getendpoint"></a>
 
 In this example, you use the AWS SDK for PHP Version 3 to call AWS Elemental MediaConvert and retrieve your account\-specific endpoint\. You can retrieve your endpoint URL from the service default endpoint and so do not yet need your acccount\-specific endpoint\.
 
 The following examples show how to:
 + Retrieve your account\-specific endpoint\. using [DescribeEndpoints](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-mediaconvert-2017-08-29.html#describeendpoints)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 To access the MediaConvert client, create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored\. For details, see [Set Up IAM Permissions](https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html) in the [AWS Elemental MediaConvert User Guide](https://docs.aws.amazon.com/mediaconvert/latest/ug/)\.
 
-## Retrieve Endpoints<a name="retrieve-endpoints"></a>
+## Retrieve endpoints<a name="retrieve-endpoints"></a>
 
 Create an object to pass the empty request parameters for the describeEndpoints method of the `AWS.MediaConvert` client class\. To call the describeEndpoints method, create a promise for invoking an AWS Elemental MediaConvert service object, passing the parameters\. Handle the response in the promise callback\.
 

@@ -1,4 +1,4 @@
-# Using Hard\-Coded Credentials<a name="guide_credentials_hardcoded"></a>
+# Using hard\-coded credentials<a name="guide_credentials_hardcoded"></a>
 
 When testing new services or debugging issues, developers often want to include AWS credentials when constructing the client\. See the following for an example of how to authenticate to AWS, but do so with caution\. [Credentials for the AWS SDK for PHP Version 3](guide_credentials.md) lists many recommended ways to add credentials to your project safely\.
 

@@ -16,13 +16,13 @@ foreach ($results as $result) {
 }
 ```
 
-## Paginator Objects<a name="paginator-objects"></a>
+## Paginator objects<a name="paginator-objects"></a>
 
 The object returned by `getPaginator()` method is an instance of the `Aws\ResultPaginator` class\. This class implements PHP’s native `iterator` interface, which is why it works with `foreach`\. It can also be used with iterator functions, like `iterator_to_array`, and integrates well with [SPL iterators](http://www.php.net/manual/en/spl.iterators.php) like the `LimitIterator` object\.
 
 Paginator objects hold only one “page” of results at a time and are executed lazily\. This means that they make only as many requests as they need to yield the current page of results\. For example, the Amazon S3`ListObjects` operation only returns up to 1,000 objects at a time, so if your bucket has \~10,000 objects, the paginator would need to do 10 requests total\. When you iterate through the results, the first request is executed when you start iterating, the second in the second iteration of the loop, and so on\.
 
-## Enumerating Data from Results<a name="enumerating-data-from-results"></a>
+## Enumerating data from results<a name="enumerating-data-from-results"></a>
 
 Paginator objects have a method named `search()`, which allows you to create iterators for data within a set of results\. When you call `search()`, provide a [JMESPath expression](guide_jmespath.md) to specify what data to extract\. Calling `search()` returns an iterator that yields the results of the expression on each page of results\. This is evaluated lazily, as you iterate through the returned iterator\.
 
@@ -53,7 +53,7 @@ foreach ($results->search($expression) as $item) {
 }
 ```
 
-## Asynchronous Pagination<a name="async-paginators"></a>
+## Asynchronous pagination<a name="async-paginators"></a>
 
 You can iterate over the results of a paginator asynchronously by providing a callback for the `each()` method of an `Aws\ResultPaginator`\. The callback is invoked for each value that is yielded by the paginator\.
 
@@ -75,7 +75,7 @@ A non\-null return value from the callback will be yielded by the underlying cor
 ```
 // Delete all keys that end with "Foo"
 $promise = $results->each(function ($result) use ($s3Client) {
-    if (substr($result['Key'], -3) ### 'Foo') {
+    if (substr($result['Key'], -3) === 'Foo') {
         // Merge this promise into the iterator
         return $s3Client->deleteAsync([
             'Bucket' => 'my-bucket',

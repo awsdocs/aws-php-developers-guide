@@ -1,4 +1,4 @@
-# Sending SMS Messages in Amazon SNS with the AWS SDK for PHP Version 3<a name="sns-examples-sending-sms"></a>
+# Sending SMS messages in Amazon SNS with the AWS SDK for PHP Version 3<a name="sns-examples-sending-sms"></a>
 
 You can use Amazon Simple Notification Service \(Amazon SNS\) to send text messages, or SMS messages, to SMS\-enabled devices\. You can send a message directly to a phone number, or you can send a message to multiple phone numbers at once by subscribing those phone numbers to a topic and sending your message to the topic\.
 
@@ -15,15 +15,15 @@ The following examples show how to:
 
 For more information about using Amazon SNS, see [Using Amazon SNS for User Notifications with a Mobile Phone Number as a Subscriber \(Send SMS\)](https://docs.aws.amazon.com/sns/latest/dg/sns-mobile-phone-number-as-subscriber.html)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Get SMS Attributes<a name="get-sms-attributes"></a>
+## Get SMS attributes<a name="get-sms-attributes"></a>
 
-To retrieve the default settings for SMS messages, use the [GetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_API_GetSMSAttributes.html) operation\.
+To retrieve the default settings for SMS messages, use the [GetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSMSAttributes.html) operation\.
 
 This example gets the `DefaultSMSType` attribute\. This attribute controls whether SMS messages are sent as `Promotional`, which optimizes message delivery to incur the lowest cost, or as `Transactional`, which optimizes message delivery to achieve the highest reliability\.
 
@@ -56,9 +56,9 @@ try {
 }
 ```
 
-## Set SMS Attributes<a name="set-sms-attributes"></a>
+## Set SMS attributes<a name="set-sms-attributes"></a>
 
-To update the default settings for SMS messages, use the [SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_API_SetSMSAttributes.html) operation\.
+To update the default settings for SMS messages, use the [SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) operation\.
 
 This example sets the `DefaultSMSType` attribute to `Transactional`, which optimizes message delivery to achieve the highest reliability\.
 
@@ -93,9 +93,9 @@ try {
 }
 ```
 
-## Check If a Phone Number Has Opted Out<a name="check-if-a-phone-number-has-opted-out"></a>
+## Check if a phone number has opted out<a name="check-if-a-phone-number-has-opted-out"></a>
 
-To determine if a given phone number owner has opted out of receiving SMS messages from your account, use the [CheckIfPhoneNumberIsOptedOut](https://docs.aws.amazon.com/sns/latest/api/API_API_CheckIfPhoneNumberIsOptedOut.html) operation\.
+To determine if a given phone number owner has opted out of receiving SMS messages from your account, use the [CheckIfPhoneNumberIsOptedOut](https://docs.aws.amazon.com/sns/latest/api/API_CheckIfPhoneNumberIsOptedOut.html) operation\.
 
 In this example, the phone number is in E\.164 format, a standard for international telecommunications\.
 
@@ -130,9 +130,9 @@ try {
 }
 ```
 
-## List Opted\-Out Phone Numbers<a name="list-opted-out-phone-numbers"></a>
+## List opted\-out phone numbers<a name="list-opted-out-phone-numbers"></a>
 
-To retrieve a list of phone numbers where the owner has opted out of receiving SMS messages from your account, use the [ListPhoneNumbersOptedOut](https://docs.aws.amazon.com/sns/latest/api/API_API_ListPhoneNumbersOptedOut.html) operation\.
+To retrieve a list of phone numbers where the owner has opted out of receiving SMS messages from your account, use the [ListPhoneNumbersOptedOut](https://docs.aws.amazon.com/sns/latest/api/API_ListPhoneNumbersOptedOut.html) operation\.
 
  **Imports** 
 
@@ -162,9 +162,9 @@ try {
 }
 ```
 
-## Publish to a Text Message \(SMS Message\)<a name="publish-to-a-text-message-sms-message"></a>
+## Publish to a text message \(SMS message\)<a name="publish-to-a-text-message-sms-message"></a>
 
-To deliver a text message \(SMS message\) directly to a phone number, use the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_API_Publish.html) operation\.
+To deliver a text message \(SMS message\) directly to a phone number, use the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) operation\.
 
 In this example, the phone number is in E\.164 format, a standard for international telecommunications\.
 

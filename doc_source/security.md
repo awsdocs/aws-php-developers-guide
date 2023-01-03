@@ -7,9 +7,9 @@ Cloud security at Amazon Web Services \(AWS\) is the highest priority\. As an AW
  **Security in the Cloud**– Your responsibility is determined by the AWS service you are using, and other factors including the sensitivity of your data, your organization’s requirements, and applicable laws and regulations\.
 
 **Topics**
-+ [Data Protection](data-protection.md)
-+ [Identity and Access Management](security-iam.md)
-+ [Compliance Validation](compliance-validation.md)
++ [Data protection](data-protection.md)
++ [Identity and access management](security-iam.md)
++ [Compliance validation](compliance-validation.md)
 + [Resilience](disaster-recovery-resiliency.md)
-+ [Infrastructure Security](infrastructure-security.md)
-+ [S3 Encryption Client Migration](s3-encryption-migration.md)
++ [Infrastructure security](infrastructure-security.md)
++ [Amazon S3 encryption client migration](s3-encryption-migration.md)

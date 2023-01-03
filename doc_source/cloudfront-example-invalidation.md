@@ -1,4 +1,4 @@
-# Managing Amazon CloudFront Invalidations Using the CloudFront API and the AWS SDK for PHP Version 3<a name="cloudfront-example-invalidation"></a>
+# Managing Amazon CloudFront invalidations using the CloudFront API and the AWS SDK for PHP Version 3<a name="cloudfront-example-invalidation"></a>
 
 Amazon CloudFront caches copies of static and dynamic files in worldwide edge locations\. To remove or update a file on all edge locations, create an invalidation for each file or for a group of files\.
 
@@ -9,15 +9,15 @@ The following examples show how to:
 + Get a distribution invalidation using [GetInvalidation](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-cloudfront-2018-11-05.html#getinvalidation)\.
 + List distributions using [ListInvalidations](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-cloudfront-2018-11-05.html#listinvalidations)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon CloudFront, see the [Amazon CloudFront Developer Guide](Amazon CloudFront Developer Guide)\.
 
-## Create a Distribution Invalidation<a name="create-a-distribution-invalidation"></a>
+## Create a distribution invalidation<a name="create-a-distribution-invalidation"></a>
 
 Create a CloudFront distribution invalidation by specifying the path location for the files you need to remove\. This example invalidates all files in the distribution, but you can identify specific files under `Items`\.
 
@@ -88,7 +88,7 @@ function createTheInvalidation()
 // createTheInvalidation();
 ```
 
-## Get a Distribution Invalidation<a name="get-a-distribution-invalidation"></a>
+## Get a distribution invalidation<a name="get-a-distribution-invalidation"></a>
 
 To retrieve the status and details about a CloudFront distribution invalidation, use the [GetInvalidation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetInvalidation.html) operation\.
 
@@ -156,7 +156,7 @@ function getsAnInvalidation()
 // getsAnInvalidation();
 ```
 
-## List Distribution Invalidations<a name="list-distribution-invalidations"></a>
+## List distribution invalidations<a name="list-distribution-invalidations"></a>
 
 To list all current CloudFront distribution invalidations, use the [ListInvalidations](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListInvalidations.html) operation\.
 

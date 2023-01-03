@@ -1,4 +1,4 @@
-# Manage Data Shards Using the Kinesis Data Streams API and the AWS SDK for PHP Version 3<a name="kinesis-example-shard"></a>
+# Manage data shards using the Kinesis Data Streams API and the AWS SDK for PHP Version 3<a name="kinesis-example-shard"></a>
 
 Amazon Kinesis Data Streams enables you to send real\-time data to an endpoint\. The rate of data flow depends on the number of shards in your stream\.
 
@@ -8,15 +8,15 @@ The following examples show how to:
 + List shards in a stream using [ListShards](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kinesis-1913-12-02.html#listshards)\.
 + Add or reduce the number of shards in a stream using [UpdateShardCount](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kinesis-1913-12-02.html#updateshardcount)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using Amazon Kinesis Data Streams, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/streams/latest/dev/)\.
 
-## List Data Stream Shards<a name="list-data-stream-shards"></a>
+## List data stream shards<a name="list-data-stream-shards"></a>
 
 List the details of up to 100 shards in a specific stream\.
 
@@ -54,7 +54,7 @@ try {
 }
 ```
 
-## Add More Data Stream Shards<a name="add-more-data-stream-shards"></a>
+## Add more data stream shards<a name="add-more-data-stream-shards"></a>
 
 If you need more data stream shards, you can increase your current number of shards\. We recommend that you double your shard count when increasing\. This makes a copy of each shard currently available to increase your capacity\. You can double the number of your shards only twice in one 24\-hour period\.
 

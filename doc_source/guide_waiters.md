@@ -14,7 +14,7 @@ $s3Client->waitUntil('BucketExists', ['Bucket' => 'my-bucket']);
 
 If the waiter has to poll the bucket too many times, it will throw a `\RuntimeException` exception\.
 
-## Waiter Configuration<a name="waiter-configuration"></a>
+## Waiter configuration<a name="waiter-configuration"></a>
 
 Waiters are driven by an associative array of configuration options\. All of the options used by a particular waiter have default values, but they can be overridden to support different waiting strategies\.
 
@@ -60,7 +60,7 @@ $s3Client->waitUntil('BucketExists', [
 ]);
 ```
 
-## Waiting Asynchronously<a name="async-waiters"></a>
+## Waiting asynchronously<a name="async-waiters"></a>
 
 In addition to waiting synchronously, you can invoke a waiter to wait asynchronously while sending other requests or waiting on multiple resources at once\.
 

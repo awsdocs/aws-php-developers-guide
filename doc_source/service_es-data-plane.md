@@ -1,17 +1,17 @@
-# Signing an Amazon OpenSearch Service Search Request with AWS SDK for PHP Version 3<a name="service_es-data-plane"></a>
+# Signing an Amazon OpenSearch Service search request with AWS SDK for PHP Version 3<a name="service_es-data-plane"></a>
 
-Amazon OpenSearch Service \(OpenSearch Service\) is a managed service that makes it easy to deploy, operate, and scale Amazon OpenSearch Service, a popular open\-source search, and analytics engine\. OpenSearch Service offers direct access to the Amazon OpenSearch Service API\. This means that developers can use the tools with which they’re familiar, as well as robust security options, such as using IAM users and roles for access control\. Many Amazon OpenSearch Service clients support request signing, but if you’re using a client that doesn’t, you can sign arbitrary PSR\-7 requests with the built\-in credential providers and signers of the AWS SDK for PHP\.
+Amazon OpenSearch Service is a managed service that makes it easy to deploy, operate, and scale Amazon OpenSearch Service, a popular open\-source search, and analytics engine\. OpenSearch Service offers direct access to the Amazon OpenSearch Service API\. This means that developers can use the tools with which they’re familiar, as well as robust security options, such as using IAM users and roles for access control\. Many Amazon OpenSearch Service clients support request signing, but if you’re using a client that doesn’t, you can sign arbitrary PSR\-7 requests with the built\-in credential providers and signers of the AWS SDK for PHP\.
 
 The following examples show how to:
 + Sign a request with the AWS signing protocol using [SignatureV4](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.Signature.SignatureV4.html#_signRequest)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Signing an OpenSearch Service Request<a name="signing-an-es-request"></a>
+## Signing an OpenSearch Service request<a name="signing-an-es-request"></a>
 
 OpenSearch Service uses [Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\. This means that you need to sign requests against the service’s signing name \(`es`, in this case\) and the AWS Region of your OpenSearch Service domain\. A full list of Regions supported by OpenSearch Service can be found [ on the AWS Regions and Endpoints page](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\. However, in this example, we sign requests against an OpenSearch Service domain in the `us-west-2` region\.
 

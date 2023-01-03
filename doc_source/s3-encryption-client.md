@@ -1,10 +1,10 @@
-# Amazon S3 Client\-Side Encryption with the AWS SDK for PHP Version 3<a name="s3-encryption-client"></a>
+# Amazon S3 client\-side encryption with the AWS SDK for PHP Version 3<a name="s3-encryption-client"></a>
 
 With client\-side encryption, data is encrypted and decrypted directly in your environment\. This means that this data is encrypted before it’s transferred to Amazon S3, and you don’t rely on an external service to handle encryption for you\. For new implementations, we suggest the use of `S3EncryptionClientV2` and `S3EncryptionMultipartUploaderV2` over the deprecated `S3EncryptionClient` and `S3EncryptionMultipartUploader`\. It is recommended that older implementations still using the deprecated versions attempt to migrate\. `S3EncryptionClientV2` maintains support for decrypting data that was encrypted using the legacy `S3EncryptionClient`\.
 
 The AWS SDK for PHP implements [envelope encryption](https://docs.aws.amazon.com/kms/latest/developerguide/workflow.html) and uses [OpenSSL](https://www.openssl.org/) for its encrypting and decrypting\. The implementation is interoperable with [other SDKs that match its feature support](https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html)\. It’s also compatible with [the SDK’s promise\-based asynchronous workflow](guide_promises.md)\.
 
-## Migration Guide<a name="migration-guide"></a>
+## Migration guide<a name="migration-guide"></a>
 
 For those who are trying to migrate to from the deprecated clients to the new clients, there is a migration guide which can be found [here](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/s3-encryption-migration.html)\.
 
@@ -99,7 +99,7 @@ $result = $encryptionClient->getObject([
 **Note**  
 In addition to the Amazon S3 and AWS KMS\-based service errors, you might receive thrown `InvalidArgumentException` objects if your `'@CipherOptions'` are not correctly configured\.
 
-## Cipher Configuration<a name="cipher-configuration"></a>
+## Cipher configuration<a name="cipher-configuration"></a>
 
 ** `'Cipher'` \(string\)**  
 Cipher method that the encryption client uses while encrypting\. Only ‘gcm’ is supported at this time\.
@@ -116,7 +116,7 @@ Optional ‘Additional authentication data’ to include with your encrypted pay
 **Important**  
 Additional authentication data is not supported by all AWS SDKs and as such other SDKs may not be able to decrypt files encrypted using this parameter\.
 
-## Metadata Strategies<a name="metadata-strategies"></a>
+## Metadata strategies<a name="metadata-strategies"></a>
 
 You also have the option of providing an instance of a class that implements the `Aws\Crypto\MetadataStrategyInterface`\. This simple interface handles saving and loading the `Aws\Crypto\MetadataEnvelope` that contains your envelope encryption materials\. The SDK provides two classes that implement this: `Aws\S3\Crypto\HeadersMetadataStrategy` and `Aws\S3\Crypto\InstructionFileMetadataStrategy`\. `HeadersMetadataStrategy` is used by default\.
 
@@ -162,7 +162,7 @@ $result = $encryptionClient->putObject([
 **Note**  
 If there is a failure after an instruction file is uploaded, it will not be automatically deleted\.
 
-## Multipart Uploads<a name="multipart-uploads"></a>
+## Multipart uploads<a name="multipart-uploads"></a>
 
 Performing a multipart upload with client\-side encryption is also possible\. The `Aws\S3\Crypto\S3EncryptionMultipartUploaderV2` prepares the source stream for encryption before uploading\. Creating one takes on a similar experience to using the `Aws\S3\MultipartUploader` and the `Aws\S3\Crypto\S3EncryptionClientV2`\. The `S3EncryptionMultipartUploaderV2` can handle the same `'@MetadataStrategy'` option as the `S3EncryptionClientV2`, as well as all available `'@CipherOptions'` configurations\.
 

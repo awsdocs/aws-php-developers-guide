@@ -9,16 +9,17 @@ The following code examples show you how to perform actions and implement common
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w72aac11c14b9c15c13)
-+ [Scenarios](#w72aac11c14b9c15c15)
++ [Actions](#w2aac11c13c13c21c13)
++ [Scenarios](#w2aac11c13c13c21c15)
 
-## Actions<a name="w72aac11c14b9c15c13"></a>
+## Actions<a name="w2aac11c13c13c21c13"></a>
 
 ### Copy an object from one bucket to another<a name="s3_CopyObject_php_topic"></a>
 
-The following code example shows how to copy an Amazon S3 object from one bucket to another\.
+The following code example shows how to copy an S3 object from one bucket to another\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Simple copy of an object\.  
 
 ```
@@ -37,14 +38,14 @@ try {
     exit("Please fix error with object copying before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [CopyObject](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/CopyObject) in *AWS SDK for PHP API Reference*\. 
 
 ### Create a bucket<a name="s3_CreateBucket_php_topic"></a>
 
-The following code example shows how to create an Amazon S3 bucket\.
+The following code example shows how to create an S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Create a bucket\.  
 
 ```
@@ -61,14 +62,14 @@ try {
     exit("Please fix error with bucket creation before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [CreateBucket](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/CreateBucket) in *AWS SDK for PHP API Reference*\. 
 
 ### Delete an empty bucket<a name="s3_DeleteBucket_php_topic"></a>
 
-The following code example shows how to delete an empty Amazon S3 bucket\.
+The following code example shows how to delete an empty S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Delete an empty bucket\.  
 
 ```
@@ -84,14 +85,14 @@ try {
     exit("Please fix error with bucket deletion before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [DeleteBucket](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/DeleteBucket) in *AWS SDK for PHP API Reference*\. 
 
 ### Delete multiple objects<a name="s3_DeleteObjects_php_topic"></a>
 
-The following code example shows how to delete multiple objects from an Amazon S3 bucket\.
+The following code example shows how to delete multiple objects from an S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Delete a set of objects from a list of keys\.  
 
 ```
@@ -123,14 +124,14 @@ try {
     exit("Please fix error with object deletion before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [DeleteObjects](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/DeleteObjects) in *AWS SDK for PHP API Reference*\. 
 
 ### Get an object from a bucket<a name="s3_GetObject_php_topic"></a>
 
-The following code example shows how to read data from an object in an Amazon S3 bucket\.
+The following code example shows how to read data from an object in an S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Get an object\.  
 
 ```
@@ -149,14 +150,14 @@ try {
     exit("Please fix error with file downloading before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [GetObject](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/GetObject) in *AWS SDK for PHP API Reference*\. 
 
 ### List objects in a bucket<a name="s3_ListObjects_php_topic"></a>
 
-The following code example shows how to list objects in an Amazon S3 bucket\.
+The following code example shows how to list objects in an S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 List objects in a bucket\.  
 
 ```
@@ -175,14 +176,14 @@ try {
     exit("Please fix error with listing objects before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [ListObjects](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/ListObjects) in *AWS SDK for PHP API Reference*\. 
 
 ### Upload an object to a bucket<a name="s3_PutObject_php_topic"></a>
 
-The following code example shows how to upload an object to an Amazon S3 bucket\.
+The following code example shows how to upload an object to an S3 bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 Upload an object to a bucket\.  
 
 ```
@@ -201,12 +202,11 @@ try {
     exit("Please fix error with file upload before continuing.");
 }
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 +  For API details, see [PutObject](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/PutObject) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w72aac11c14b9c15c15"></a>
+## Scenarios<a name="w2aac11c13c13c21c15"></a>
 
-### Getting started with buckets and objects<a name="s3_Scenario_GettingStarted_php_topic"></a>
+### Get started with buckets and objects<a name="s3_Scenario_GettingStarted_php_topic"></a>
 
 The following code example shows how to:
 + Create a bucket\.
@@ -218,6 +218,7 @@ The following code example shows how to:
 + Delete a bucket\.
 
 **SDK for PHP**  
+ There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
   
 
 ```
@@ -343,7 +344,6 @@ try {
 
 echo "Successfully ran the Amazon S3 with PHP demo.\n";
 ```
-+  Find instructions and more code on [GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 
 + For API details, see the following topics in *AWS SDK for PHP API Reference*\.
   + [CopyObject](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/CopyObject)
   + [CreateBucket](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/CreateBucket)

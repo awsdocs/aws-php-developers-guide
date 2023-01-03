@@ -1,4 +1,4 @@
-# Working with IAM Policies with AWS SDK for PHP Version 3<a name="iam-examples-working-with-policies"></a>
+# Working with IAM policies with AWS SDK for PHP Version 3<a name="iam-examples-working-with-policies"></a>
 
 You grant permissions to a user by creating a policy\. A policy is a document that lists the actions that a user can perform and the resources those actions can affect\. By default, any actions or resources that are not explicitly allowed are denied\. Policies can be created and attached to users, groups of users, roles assumed by users, and resources\.
 
@@ -15,13 +15,13 @@ The following examples show how to:
 + Delete a user policy using [DeleteUserPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deleteuserpolicy)\.
 + Delete a group policy using [DeleteGroupPolicy](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-iam-2010-05-08.html#deletegrouppolicy)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Create a Policy<a name="create-a-policy"></a>
+## Create a policy<a name="create-a-policy"></a>
 
  **Imports** 
 
@@ -77,7 +77,7 @@ try {
 }
 ```
 
-## Attach a Policy to a Role<a name="attach-a-policy-to-a-role"></a>
+## Attach a policy to a role<a name="attach-a-policy-to-a-role"></a>
 
  **Imports** 
 
@@ -128,7 +128,7 @@ try {
 }
 ```
 
-## Attach a Policy to a User<a name="attach-a-policy-to-a-user"></a>
+## Attach a policy to a user<a name="attach-a-policy-to-a-user"></a>
 
  **Imports** 
 
@@ -179,7 +179,7 @@ try {
 }
 ```
 
-## Attach a Policy to a Group<a name="attach-a-policy-to-a-group"></a>
+## Attach a policy to a group<a name="attach-a-policy-to-a-group"></a>
 
  **Imports** 
 
@@ -213,7 +213,7 @@ try {
 }
 ```
 
-## Detach a User Policy<a name="detach-a-user-policy"></a>
+## Detach a user policy<a name="detach-a-user-policy"></a>
 
  **Imports** 
 
@@ -247,7 +247,7 @@ try {
 }
 ```
 
-## Detach a Group Policy<a name="detach-a-group-policy"></a>
+## Detach a group policy<a name="detach-a-group-policy"></a>
 
  **Imports** 
 
@@ -281,7 +281,7 @@ try {
 }
 ```
 
-## Delete a Policy<a name="delete-a-policy"></a>
+## Delete a policy<a name="delete-a-policy"></a>
 
  **Imports** 
 
@@ -313,7 +313,7 @@ try {
 }
 ```
 
-## Delete a Role Policy<a name="delete-a-role-policy"></a>
+## Delete a role policy<a name="delete-a-role-policy"></a>
 
  **Imports** 
 
@@ -347,7 +347,7 @@ try {
 }
 ```
 
-## Delete a User Policy<a name="delete-a-user-policy"></a>
+## Delete a user policy<a name="delete-a-user-policy"></a>
 
  **Imports** 
 
@@ -381,7 +381,7 @@ try {
 }
 ```
 
-## Delete a Group Policy<a name="delete-a-group-policy"></a>
+## Delete a group policy<a name="delete-a-group-policy"></a>
 
  **Imports** 
 

@@ -48,7 +48,7 @@ To utilize the AWS SDK for PHP in your scripts, include the autoloader in your s
 ?>
 ```
 
-## Installing by Using the Packaged Phar<a name="installing-by-using-the-packaged-phar"></a>
+## Installing by using the packaged phar<a name="installing-by-using-the-packaged-phar"></a>
 
 Each release of the AWS SDK for PHP includes a prepackaged phar \(PHP archive\) that contains all the classes and dependencies you need to run the SDK\. Additionally, the phar automatically registers a class autoloader for the AWS SDK for PHP and all its dependencies\.
 
@@ -67,7 +67,7 @@ Using PHP with the Suhosin patch is not recommended, but is common on Ubuntu and
 suhosin.executor.include.whitelist = phar
 ```
 
-## Installing by Using the ZIP file<a name="installing-by-using-the-zip-file"></a>
+## Installing by using the ZIP file<a name="installing-by-using-the-zip-file"></a>
 
 The AWS SDK for PHP includes a ZIP file containing all the classes and dependencies you need to run the SDK\. Additionally, the ZIP file includes a class autoloader for the AWS SDK for PHP and its dependencies\.
 

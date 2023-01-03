@@ -1,6 +1,6 @@
-# Working with Aliases Using the AWS KMS API and the AWS SDK for PHP Version 3<a name="kms-example-alias"></a>
+# Working with aliases using the AWS KMS API and the AWS SDK for PHP Version 3<a name="kms-example-alias"></a>
 
-An alias is an optional display name for an AWS Key Management Service \(AWS KMS\) [customer master key \(CMK\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys.html)\.
+AWS Key Management Service \(AWS KMS\) provides an optional display name for an [AWS KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys) called an alias\.
 
 The following examples show how to:
 + Create an alias using [CreateAlias](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#createalias)\.
@@ -8,17 +8,17 @@ The following examples show how to:
 + Update an alias using [UpdateAlias](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#updatealias)\.
 + Delete an alias using [DeleteAlias](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#deletealias)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using AWS Key Management Service \(AWS KMS\), see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/)\.
 
-## Create an Alias<a name="create-an-alias"></a>
+## Create an alias<a name="create-an-alias"></a>
 
-To create an alias for a CMK, use the [CreateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateAlias.html) operation\. The alias must be unique in the account and AWS Region\. If you create an alias for a CMK that already has an alias, `CreateAlias` creates another alias to the same CMK\. It doesn’t replace the existing alias\.
+To create an alias for a KMS key, use the [CreateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateAlias.html) operation\. The alias must be unique in the account and AWS Region\. If you create an alias for a KMS key that already has an alias, `CreateAlias` creates another alias to the same KMS key\. It doesn’t replace the existing alias\.
 
  **Imports** 
 
@@ -54,9 +54,9 @@ try {
 }
 ```
 
-## View an Alias<a name="view-an-alias"></a>
+## View an alias<a name="view-an-alias"></a>
 
-To list all aliases, use the [ListAliases](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListAliases.html) operation\. The response includes aliases that are defined by AWS services, but are not associated with a CMK\.
+To list all aliases in the caller's AWS account and AWS Region, use the [ListAliases](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListAliases.html) operation\. 
 
  **Imports** 
 
@@ -90,9 +90,9 @@ try {
 }
 ```
 
-## Update an Alias<a name="update-an-alias"></a>
+## Update an alias<a name="update-an-alias"></a>
 
-To associate an existing alias with a different CMK, use the [UpdateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_UpdateAlias.html) operation\.
+To associate an existing alias with a different KMS key, use the [UpdateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_UpdateAlias.html) operation\.
 
  **Imports** 
 
@@ -129,9 +129,9 @@ try {
 }
 ```
 
-## Delete an Alias<a name="delete-an-alias"></a>
+## Delete an alias<a name="delete-an-alias"></a>
 
-To delete an alias, use the [DeleteAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_DeleteAlias.html) operation\. Deleting an alias has no effect on the underlying CMK\.
+To delete an alias, use the [DeleteAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_DeleteAlias.html) operation\. Deleting an alias has no effect on the underlying KMS key\.
 
  **Imports** 
 

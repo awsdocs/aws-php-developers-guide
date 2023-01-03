@@ -1,4 +1,4 @@
-# Using Queues in Amazon SQS with AWS SDK for PHP version 3<a name="sqs-examples-using-queues"></a>
+# Using queues in Amazon SQS with AWS SDK for PHP Version 3<a name="sqs-examples-using-queues"></a>
 
 To learn about Amazon SQS queues, see [How SQS Queues Work](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-it-works.html)\.
 
@@ -8,13 +8,13 @@ The following examples show how to:
 + Return the URL of an existing queue using [GetQueueUrl](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#getqueueurl)\.
 + Delete a specified queue using [DeleteQueue](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sqs-2012-11-05.html#deletequeue)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## Return a List of Queues<a name="return-a-list-of-queues"></a>
+## Return a list of queues<a name="return-a-list-of-queues"></a>
 
  **Imports** 
 
@@ -45,7 +45,7 @@ try {
 }
 ```
 
-## Create a Queue<a name="create-a-queue"></a>
+## Create a queue<a name="create-a-queue"></a>
 
  **Imports** 
 
@@ -82,7 +82,7 @@ try {
 }
 ```
 
-## Return the URL of a Queue<a name="return-the-url-of-a-queue"></a>
+## Return the URL of a queue<a name="return-the-url-of-a-queue"></a>
 
  **Imports** 
 
@@ -115,7 +115,7 @@ try {
 }
 ```
 
-## Delete a Queue<a name="delete-a-queue"></a>
+## Delete a queue<a name="delete-a-queue"></a>
 
  **Imports** 
 

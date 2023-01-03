@@ -1,24 +1,24 @@
-# Working with Grants Using the AWS KMS API and the AWS SDK for PHP Version 3<a name="kms-example-grants"></a>
+# Working with grants using the AWS KMS API and the AWS SDK for PHP version 3<a name="kms-example-grants"></a>
 
-A grant is another mechanism for providing permissions, an alternative to the key policy\. You can use grants to give long\-term access that allows AWS principals to use your AWS Key Management Service \(AWS KMS\) [customer\-managed CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys.html)\. For more information, see [Using Grants](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html)\.
+A grant is another mechanism for providing permissions\. It is an alternative to the key policy\. You can use grants to give long\-term access that allows AWS principals to use your AWS Key Management Service \(AWS KMS\) customer\-managed [AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys)\. For more information, see [Grants in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html) in the *AWS Key Management Service Developer Guide*\.
 
 The following examples show how to:
-+ Create a grant for a customer master key \(CMK\) using [CreateGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#creategrant)\.
-+ View a grant for a CMK using [ListGrants](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#listgrants)\.
-+ Retire a grant for a CMK using [RetireGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#retiregrant)\.
-+ Revoke a grant for a CMK using [RevokeGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#revokegrant)\.
++ Create a grant for a KMS key using [CreateGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#creategrant)\.
++ View a grant for a KMS key using [ListGrants](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#listgrants)\.
++ Retire a grant for a KMS key using [RetireGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#retiregrant)\.
++ Revoke a grant for a KMS key using [RevokeGrant](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-kms-2014-11-01.html#revokegrant)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
 For more information about using AWS Key Management Service \(AWS KMS\), see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/)\.
 
-## Create a Grant<a name="create-a-grant"></a>
+## Create a grant<a name="create-a-grant"></a>
 
-To create a grant for an AWS KMS CMK, use the [CreateGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateGrant.html) operation\.
+To create a grant for an AWS KMS key, use the [CreateGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateGrant.html) operation\.
 
  **Imports** 
 
@@ -56,9 +56,9 @@ try {
 }
 ```
 
-## View a Grant<a name="view-a-grant"></a>
+## View a grant<a name="view-a-grant"></a>
 
-To get detailed information about the grants on an AWS KMS CMK, use the [ListGrants](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListGrants.html) operation\.
+To get detailed information about the grants on an AWS KMS key, use the [ListGrants](https://docs.aws.amazon.com/kms/latest/APIReference/API_ListGrants.html) operation\.
 
  **Imports** 
 
@@ -94,9 +94,9 @@ try {
 }
 ```
 
-## Retire a Grant<a name="retire-a-grant"></a>
+## Retire a grant<a name="retire-a-grant"></a>
 
-To retire a grant for an AWS KMS CMK, use the [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) operation\. Retire a grant to clean up after you finish using it\.
+To retire a grant for an AWS KMS key, use the [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) operation\. Retire a grant to clean up after you finish using it\.
 
  **Imports** 
 
@@ -147,9 +147,9 @@ try {
 }
 ```
 
-## Revoke a Grant<a name="revoke-a-grant"></a>
+## Revoke a grant<a name="revoke-a-grant"></a>
 
-To revoke a grant to an AWS KMS CMK, use the [RevokeGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RevokeGrant.html) operation\. You can revoke a grant to explicitly deny operations that depend on it\.
+To revoke a grant to an AWS KMS key, use the [RevokeGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RevokeGrant.html) operation\. You can revoke a grant to explicitly deny operations that depend on it\.
 
  **Imports** 
 

@@ -1,4 +1,4 @@
-# Getting Metrics from Amazon CloudWatch with AWS SDK for PHP Version 3<a name="cw-examples-getting-metrics"></a>
+# Getting metrics from Amazon CloudWatch with AWS SDK for PHP Version 3<a name="cw-examples-getting-metrics"></a>
 
 Metrics are data about the performance of your systems\. You can enable detailed monitoring of some resources, such as your Amazon EC2 instances, or of your own application metrics\.
 
@@ -7,13 +7,13 @@ The following examples show how to:
 + Retrieve alarms for a metric using [DescribeAlarmsForMetric](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#describealarmsformetric)\.
 + Get statistics for a specified metric using [GetMetricStatistics](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-monitoring-2010-08-01.html#getmetricstatistics)\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
-## List Metrics<a name="list-metrics"></a>
+## List metrics<a name="list-metrics"></a>
 
  **Imports** 
 
@@ -93,7 +93,7 @@ function listTheMetrics()
 // listTheMetrics();
 ```
 
-## Retrieve Alarms for a Metric<a name="retrieve-alarms-for-a-metric"></a>
+## Retrieve alarms for a metric<a name="retrieve-alarms-for-a-metric"></a>
 
  **Imports** 
 
@@ -175,7 +175,7 @@ function describeTheAlarmsForMetric()
 // describeTheAlarmsForMetric();
 ```
 
-## Get Metric Statistics<a name="get-metric-statistics"></a>
+## Get metric statistics<a name="get-metric-statistics"></a>
 
  **Imports** 
 

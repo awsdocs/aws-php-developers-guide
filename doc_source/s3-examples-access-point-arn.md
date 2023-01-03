@@ -1,15 +1,15 @@
-# Using S3 Access Point ARNs the AWS SDK for PHP Version 3<a name="s3-examples-access-point-arn"></a>
+# Using S3 access point ARNs the AWS SDK for PHP Version 3<a name="s3-examples-access-point-arn"></a>
 
 S3 introduced access points, a new way to interact with S3 buckets\. Access Points can have unique policies and configuration applied to them instead of directly to the bucket\. The AWS SDK for PHP allows you to use access point ARNs in the bucket field for API operations instead of specifying bucket name explicitly\. More details on how S3 access points and ARNs work can be found [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html)\. The following examples show how to:
 + Use [GetObject](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#getobject) with an access point ARN to fetch an object from a bucket\.
 + Use [PutObject](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putobject) with an access point ARN to add an object to a bucket\.
 + Configure the S3 client to use the ARN region instead of the client region\.
 
-All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/php/example_code)\.
+All the example code for the AWS SDK for PHP is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code)\.
 
 ## Credentials<a name="credentials"></a>
 
-Before running the example code, configure your AWS credentials, as described in [Setting Credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic Usage](getting-started_basic-usage.md)\.
+Before running the example code, configure your AWS credentials, as described in [Setting credentials](guide_credentials.md)\. Then import the AWS SDK for PHP, as described in [Basic usage](getting-started_basic-usage.md)\.
 
  **Imports** 
 
@@ -20,7 +20,7 @@ use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 ```
 
-## Get Object<a name="get-object"></a>
+## Get object<a name="get-object"></a>
 
 First create an AWS\.S3 client service that specifies the AWS region and version\. Then call the `getObject` method with your key and an S3 access point ARN in the `Bucket` field, which will fetch the object from the bucket associated with that access point\.
 
@@ -37,7 +37,7 @@ $result = $s3->getObject([
 ]);
 ```
 
-## Put an Object in a Bucket<a name="put-an-object-in-a-bucket"></a>
+## Put an object in a bucket<a name="put-an-object-in-a-bucket"></a>
 
 First create an AWS\.S3 client service that specifies the AWS Region and version\. Then call the `putObject` method with the desired key, the body or source file, and an S3 access point ARN in the `Bucket` field, which will put the object in the bucket associated with that access point\.
 

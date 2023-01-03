@@ -1,4 +1,7 @@
-# Using the AWS Credentials File and Credential Profiles<a name="guide_credentials_profiles"></a>
+# Using the AWS credentials file and credential Profiles<a name="guide_credentials_profiles"></a>
+
+**Note**  
+For reference information on the location and formatting of the shared AWS `config` and `credentials` files, see [Configuration](https://docs.aws.amazon.com/sdkref/latest/guide/creds-config-files.html) and [Location of the shared AWS`config` and `credentials` files](https://docs.aws.amazon.com/sdkref/latest/guide/file-location.html) in the *AWS SDKs and Tools Reference Guide*\. 
 
 A credentials file is a plaintext file that contains your access keys\. The file must:
 + Be on the same machine on which you’re running your application\.
@@ -44,11 +47,11 @@ $client = new DynamoDbClient([
 
 If no credentials or profiles were explicitly provided to the SDK and no credentials were defined in environment variables, but a credentials file is defined, the SDK uses the “default” profile\. You can change the default profile by specifying an alternate profile name in the `AWS_PROFILE` environment variable\.
 
-## Assume Role with Profile<a name="assume-role-with-profile"></a>
+## Assume role with profile<a name="assume-role-with-profile"></a>
 
 You can configure the AWS SDK for PHP to use an IAM role by defining a profile for the role in `~/.aws/credentials`\.
 
-Create a new profile with the `role_arn` for the role you will assume\. Also include the `source_profile` of a profile with credentials that have permissions to assume the IAM role\.
+Create a new profile with the `role_arn` for the role you will assume\. Also include the `source_profile` of a profile with credentials that have permissions to assume the IAM role\. For more details on these configuration settings, see [Assume role credentials](https://docs.aws.amazon.com/sdkref/latest/guide/feature-assume-role-credentials.html) in the *AWS SDKs and Tools Reference Guide*\.
 
 Profile in `~/.aws/credentials`:
 
