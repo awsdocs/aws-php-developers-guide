@@ -88,7 +88,7 @@ The `Aws\ClientInterface` object to use for performing the transfers\. This shou
 An associative array of configuration options for the multipart upload\.  
 The following configuration options are valid:  
 ** **add\_content\_md5** **  
-\(`boolean`\) Set to true to automatically calculate the MD5 checksum for the upload\.
+\(`bool`\) Set to true to automatically calculate the MD5 checksum for the upload\.
 ** **mup_threshold** **  
 \(`int`, *default*: `int(16777216)`\) Number (in bytes) limit wherein when the file size exceeds the limit, a multipart upload is executed\.
 ** **before\_complete** **  
