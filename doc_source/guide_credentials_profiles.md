@@ -27,7 +27,7 @@ The format of the AWS credentials file should look something like the following\
 aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
 aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
 
-[project1]
+[profile project1]
 aws_access_key_id = ANOTHER_AWS_ACCESS_KEY_ID
 aws_secret_access_key = ANOTHER_AWS_SECRET_ACCESS_KEY
 ```
@@ -60,7 +60,7 @@ Profile in `~/.aws/credentials`:
 aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
 aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
 
-[project1]
+[profile project1]
 role_arn = arn:aws:iam::123456789012:role/testing
 source_profile = default
 role_session_name = OPTIONAL_SESSION_NAME
@@ -82,7 +82,7 @@ role_session_name = OPTIONAL_SESSION_NAME
 Profile in `~/.aws/credentials`:
 
 ```
-[project2]
+[profile project2]
 aws_access_key_id = YOUR_AWS_ACCESS_KEY_ID
 aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
 ```
