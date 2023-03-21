@@ -73,7 +73,7 @@ Roles can also be assumed for profiles defined in `~/.aws/config`\. Setting the 
 Profile in `~/.aws/config`:
 
 ```
-[profile project1]
+[project1]
 role_arn = arn:aws:iam::123456789012:role/testing
 source_profile = default
 role_session_name = OPTIONAL_SESSION_NAME
