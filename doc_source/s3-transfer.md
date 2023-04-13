@@ -84,6 +84,9 @@ An associative array of [transfer options](#s3-transfer-options)\.
 
 ## Transfer options<a name="s3-transfer-options"></a>
 
+** `add_content_md5` \(bool\)**  
+Set to `true` to calculate the MD5 checksum for uploads.\.
+
 ** `base_dir` \(string\)**  
 Base directory of the source, if `$source` is an iterator\. If the `$source` option is not an array, then this option is ignored\.
 
