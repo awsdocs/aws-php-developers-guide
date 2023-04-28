@@ -2,16 +2,16 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with Amazon SNS\.
 
-*Actions* are code excerpts that show you how to call individual Amazon SNS functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple Amazon SNS functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c23c13)
++ [Actions](#actions)
 
-## Actions<a name="w2aac11c13c13c23c13"></a>
+## Actions<a name="actions"></a>
 
 ### Check whether a phone number is opted out<a name="sns_CheckIfPhoneNumberIsOptedOut_php_topic"></a>
 

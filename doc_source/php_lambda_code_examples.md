@@ -2,17 +2,17 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with Lambda\.
 
-*Actions* are code excerpts that show you how to call individual Lambda functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple Lambda functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c19c13)
-+ [Scenarios](#w2aac11c13c13c19c15)
++ [Actions](#actions)
++ [Scenarios](#scenarios)
 
-## Actions<a name="w2aac11c13c13c19c13"></a>
+## Actions<a name="actions"></a>
 
 ### Create a function<a name="lambda_CreateFunction_php_topic"></a>
 
@@ -163,18 +163,16 @@ The following code example shows how to update Lambda function configuration\.
 ```
 +  For API details, see [UpdateFunctionConfiguration](https://docs.aws.amazon.com/goto/SdkForPHPV3/lambda-2015-03-31/UpdateFunctionConfiguration) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w2aac11c13c13c19c15"></a>
+## Scenarios<a name="scenarios"></a>
 
 ### Get started with functions<a name="lambda_Scenario_GettingStartedFunctions_php_topic"></a>
 
 The following code example shows how to:
-+ Create an AWS Identity and Access Management \(IAM\) role that grants Lambda permission to write to logs\.
-+ Create a Lambda function and upload handler code\.
++ Create an IAM role and Lambda function, then upload handler code\.
 + Invoke the function with a single parameter and get results\.
-+ Update the function code and configure its Lambda environment with an environment variable\.
-+ Invoke the function with new parameters and get results\. Display the execution log that's returned from the invocation\.
-+ List the functions for your account\.
-+ Delete the IAM role and the Lambda function\.
++ Update the function code and configure with an environment variable\.
++ Invoke the function with new parameters and get results\. Display the returned execution log\.
++ List the functions for your account, then clean up resources\.
 
 For more information, see [Create a Lambda function with the console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html)\.
 
@@ -187,7 +185,7 @@ namespace Lambda;
 
 use Aws\S3\S3Client;
 use GuzzleHttp\Psr7\Stream;
-use Iam\IamService;
+use Iam\IAMService;
 
 class GettingStartedWithLambda
 {
@@ -204,7 +202,7 @@ class GettingStartedWithLambda
         ];
         $uniqid = uniqid();
 
-        $iamService = new IamService();
+        $iamService = new IAMService();
         $s3client = new S3Client($clientArgs);
         $lambdaService = new LambdaService();
 
@@ -239,7 +237,7 @@ class GettingStartedWithLambda
         echo "Created bucket $bucketName.\n";
 
         $functionName = "doc_example_lambda_$uniqid";
-        $codeBasic = "lambda_handler_basic.zip";
+        $codeBasic = __DIR__ . "/lambda_handler_basic.zip";
         $handler = "lambda_handler_basic";
         $file = file_get_contents($codeBasic);
         $s3client->putObject([

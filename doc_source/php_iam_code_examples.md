@@ -2,17 +2,17 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with IAM\.
 
-*Actions* are code excerpts that show you how to call individual IAM functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple IAM functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c17c13)
-+ [Scenarios](#w2aac11c13c13c17c15)
++ [Actions](#actions)
++ [Scenarios](#scenarios)
 
-## Actions<a name="w2aac11c13c13c17c13"></a>
+## Actions<a name="actions"></a>
 
 ### Attach a policy to a role<a name="iam_AttachRolePolicy_php_topic"></a>
 
@@ -24,7 +24,7 @@ The following code example shows how to attach an IAM policy to a role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
 $assumeRolePolicyDocument = "{
                 \"Version\": \"2012-10-17\",
@@ -71,7 +71,7 @@ The following code example shows how to create an IAM policy\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
 $listAllBucketsPolicyDocument = "{
                 \"Version\": \"2012-10-17\",
@@ -106,7 +106,7 @@ The following code example shows how to create an IAM role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
 $assumeRolePolicyDocument = "{
                 \"Version\": \"2012-10-17\",
@@ -148,7 +148,7 @@ The following code example shows how to create an IAM service\-linked role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function createServiceLinkedRole($awsServiceName, $customSuffix = "", $description = "")
     {
@@ -166,7 +166,10 @@ $service = new IamService();
 
 ### Create a user<a name="iam_CreateUser_php_topic"></a>
 
-The following code example shows how to create an IAM user\.
+The following code example shows how to create an IAM user\. 
+
+**Warning**  
+To avoid security risks, don't use IAM users for authentication when developing purpose\-built software or working with real data\. Instead, use federation with an identity provider such as [AWS IAM Identity Center \(successor to AWS Single Sign\-On\)](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html)\.
 
 **SDK for PHP**  
  There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
@@ -174,7 +177,7 @@ The following code example shows how to create an IAM user\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
 $user = $service->createUser("iam_demo_user_$uuid");
 echo "Created user with the arn: {$user['Arn']}\n";
@@ -206,7 +209,7 @@ The following code example shows how to get an IAM policy\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function getPolicy($policyArn)
     {
@@ -227,7 +230,7 @@ The following code example shows how to get an IAM role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function getRole($roleName)
     {
@@ -248,7 +251,7 @@ The following code example shows how to get the IAM account password policy\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function getAccountPasswordPolicy()
     {
@@ -267,7 +270,7 @@ The following code example shows how to list SAML providers for IAM\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listSAMLProviders()
     {
@@ -286,7 +289,7 @@ The following code example shows how to list IAM groups\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listGroups($pathPrefix = "", $marker = "", $maxItems = 0)
     {
@@ -316,7 +319,7 @@ The following code example shows how to list inline policies for an IAM role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listRolePolicies($roleName, $marker = "", $maxItems = 0)
     {
@@ -344,7 +347,7 @@ The following code example shows how to list IAM policies\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listPolicies($pathPrefix = "", $marker = "", $maxItems = 0)
     {
@@ -374,7 +377,7 @@ The following code example shows how to list policies attached to an IAM role\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listAttachedRolePolicies($roleName, $pathPrefix = "", $marker = "", $maxItems = 0)
     {
@@ -403,7 +406,7 @@ The following code example shows how to list IAM roles\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     /**
      * @param string $pathPrefix
@@ -431,7 +434,10 @@ $service = new IamService();
 
 ### List users<a name="iam_ListUsers_php_topic"></a>
 
-The following code example shows how to list IAM users\.
+The following code example shows how to list IAM users\. 
+
+**Warning**  
+To avoid security risks, don't use IAM users for authentication when developing purpose\-built software or working with real data\. Instead, use federation with an identity provider such as [AWS IAM Identity Center \(successor to AWS Single Sign\-On\)](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html)\.
 
 **SDK for PHP**  
  There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
@@ -439,7 +445,7 @@ The following code example shows how to list IAM users\.
 
 ```
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
     public function listUsers($pathPrefix = "", $marker = "", $maxItems = 0)
     {
@@ -459,16 +465,18 @@ $service = new IamService();
 ```
 +  For API details, see [ListUsers](https://docs.aws.amazon.com/goto/SdkForPHPV3/iam-2010-05-08/ListUsers) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w2aac11c13c13c17c15"></a>
+## Scenarios<a name="scenarios"></a>
 
 ### Create a user and assume a role<a name="iam_Scenario_CreateUserAssumeRole_php_topic"></a>
 
-The following code example shows how to:
-+ Create a user who has no permissions\.
+The following code example shows how to create a user and assume a role\. 
+
+**Warning**  
+To avoid security risks, don't use IAM users for authentication when developing purpose\-built software or working with real data\. Instead, use federation with an identity provider such as [AWS IAM Identity Center \(successor to AWS Single Sign\-On\)](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html)\.
++ Create a user with no permissions\.
 + Create a role that grants permission to list Amazon S3 buckets for the account\.
 + Add a policy to let the user assume the role\.
-+ Assume the role and list Amazon S3 buckets using temporary credentials\.
-+ Delete the policy, role, and user\.
++ Assume the role and list S3 buckets using temporary credentials, then clean up resources\.
 
 **SDK for PHP**  
  There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/iam/iam_basics#code-examples)\. 
@@ -483,13 +491,13 @@ use Aws\Credentials\Credentials;
 use Aws\S3\Exception\S3Exception;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
-use Iam\IamService;
+use Iam\IAMService;
 
 echo("--------------------------------------\n");
 print("Welcome to the Amazon IAM getting started demo using PHP!\n");
 echo("--------------------------------------\n");
 $uuid = uniqid();
-$service = new IamService();
+$service = new IAMService();
 
 $user = $service->createUser("iam_demo_user_$uuid");
 echo "Created user with the arn: {$user['Arn']}\n";

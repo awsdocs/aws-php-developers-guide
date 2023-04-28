@@ -6,6 +6,8 @@ Most recent changes:
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Amazon S3 transfer manager](s3-transfer.md) | Added the `add_content_md5` transfer option\. | April 13, 2023 | 
+| [Amazon S3 multipart uploads](s3-multipart-upload.md) | Included configuration information for synchronous uploads\. Added the `add_content_md5` upload option for asynchronous uploads\. | April 13, 2023 | 
 | [Reference information](#document-history) | Added multiple links to relevant detail content in the AWS SDKs and Tools Reference Guide\. Updated guide formatting\. | September 14, 2022 | 
 | [General cleanup](#document-history) | Added references to the AWS SDKs and Tools Reference Guide\. Updated AWS Key Management Service sections to reflect terminology updates\.  | August 23, 2022 | 
 | [Working with AWS services](working-with-aws-services.md) | Included lists of the code examples that are available on GitHub\. | April 1, 2022 | 

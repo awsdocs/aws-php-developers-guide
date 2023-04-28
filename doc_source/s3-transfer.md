@@ -71,7 +71,7 @@ The `Transfer` object constructor accepts the following arguments\.
 ** `$client` **  
 The `Aws\ClientInterface` object to use to perform the transfers\.
 
-** `$source` \(string\|``Iterator``\)**  
+** `$source` \(string \| `Iterator`\)**  
 The source data being transferred\. This can point to a local path on disk \(e\.g\., `/path/to/files`\) or an Amazon S3 bucket \(e\.g\., `s3://bucket`\)\. The `s3://` URI may also contain a key prefix that can be used to only transfer objects under a common prefix\.  
 If the `$source` argument is an Amazon S3 URI, the `$dest` argument must be a local directory \(and vice versa\)\.  
 In addition to providing a string value, you can also provide an `\Iterator` object that yields absolute file names\. If you provide an iterator, you **must** provide a `base_dir` option in the `$options` associative array\.
@@ -80,25 +80,17 @@ In addition to providing a string value, you can also provide an `\Iterator` obj
 The destination where the files will be transferred\. If the `$source` argument is a local path on disk, `$dest` must be an Amazon S3 bucket URI \(e\.g\., `s3://bucket`\)\. If the `$source` argument is an Amazon S3 bucket URI, the `$dest` argument must be a local path on disk\.
 
 ** `$options` **  
-An associative array of [transfer options](#s3-transfer-options)\.
-
-## Transfer options<a name="s3-transfer-options"></a>
-
-** `add_content_md5` \(bool\)**  
-Set to `true` to calculate the MD5 checksum for uploads.\.
-
+An associative array of transfer options\. The following transfer options are valid:    
+**`add_content_md5` \(bool\)**  
+Set to `true` to calculate the MD5 checksum for uploads\.  
 ** `base_dir` \(string\)**  
-Base directory of the source, if `$source` is an iterator\. If the `$source` option is not an array, then this option is ignored\.
-
+Base directory of the source, if `$source` is an iterator\. If the `$source` option is not an array, then this option is ignored\.  
 ** `before` \(callable\)**  
-A callback to invoke before each transfer\. The callback should have a function signature like `function (Aws\Command $command) {...}`\. The provided command will be a `GetObject`, `PutObject`, `CreateMultipartUpload`, `UploadPart`, or `CompleteMultipartUpload` command\.
-
+A callback to invoke before each transfer\. The callback should have a function signature like `function (Aws\Command $command) {...}`\. The provided command will be a `GetObject`, `PutObject`, `CreateMultipartUpload`, `UploadPart`, or `CompleteMultipartUpload` command\.  
 ** `mup_threshold` \(int\)**  
-Size in bytes in which a multipart upload should be used instead of `PutObject`\. Defaults to `16777216` \(16 MB\)\.
-
+Size in bytes in which a multipart upload should be used instead of `PutObject`\. Defaults to `16777216` \(16 MB\)\.  
 ** `concurrency` \(int, default=5\)**  
-Number of files to upload concurrently\. The ideal concurrency value will vary based on the number of files being uploaded and the average size of each file\. Generally, smaller files benefit from a higher concurrency while larger files do not\.
-
+Number of files to upload concurrently\. The ideal concurrency value will vary based on the number of files being uploaded and the average size of each file\. Generally, smaller files benefit from a higher concurrency while larger files do not\.  
 ** `debug` \(bool\)**  
 Set to `true` to print out debug information for transfers\. Set to an `fopen()` resource to write to a specific stream instead of writing to STDOUT\.
 

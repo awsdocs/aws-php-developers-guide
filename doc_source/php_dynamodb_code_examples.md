@@ -2,17 +2,17 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with DynamoDB\.
 
-*Actions* are code excerpts that show you how to call individual DynamoDB functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple DynamoDB functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c13c13)
-+ [Scenarios](#w2aac11c13c13c13c15)
++ [Actions](#actions)
++ [Scenarios](#scenarios)
 
-## Actions<a name="w2aac11c13c13c13c13"></a>
+## Actions<a name="actions"></a>
 
 ### Create a table<a name="dynamodb_CreateTable_php_topic"></a>
 
@@ -460,9 +460,9 @@ The following code example shows how to write a batch of DynamoDB items\.
 ```
 +  For API details, see [BatchWriteItem](https://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/BatchWriteItem) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w2aac11c13c13c13c15"></a>
+## Scenarios<a name="scenarios"></a>
 
-### Get started using tables, items, and queries<a name="dynamodb_Scenario_GettingStartedMovies_php_topic"></a>
+### Get started with tables, items, and queries<a name="dynamodb_Scenario_GettingStartedMovies_php_topic"></a>
 
 The following code example shows how to:
 + Create a table that can hold movie data\.
@@ -470,8 +470,7 @@ The following code example shows how to:
 + Write movie data to the table from a sample JSON file\.
 + Query for movies that were released in a given year\.
 + Scan for movies that were released in a range of years\.
-+ Delete a movie from the table\.
-+ Delete the table\.
++ Delete a movie from the table, then delete the table\.
 
 **SDK for PHP**  
  There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/dynamodb#code-examples)\. 
@@ -484,6 +483,8 @@ use Aws\DynamoDb\Marshaler;
 use DynamoDb;
 use DynamoDb\DynamoDBAttribute;
 use DynamoDb\DynamoDBService;
+
+use function AwsUtilities\testable_readline;
 
 class GettingStartedWithDynamoDB
 {
@@ -662,6 +663,8 @@ namespace DynamoDb\PartiQL_Basics;
 use Aws\DynamoDb\Marshaler;
 use DynamoDb;
 use DynamoDb\DynamoDBAttribute;
+
+use function AwsUtilities\testable_readline;
 
 class GettingStartedWithPartiQLBatch
 {
@@ -871,6 +874,8 @@ namespace DynamoDb\PartiQL_Basics;
 use Aws\DynamoDb\Marshaler;
 use DynamoDb;
 use DynamoDb\DynamoDBAttribute;
+
+use function AwsUtilities\testable_readline;
 
 class GettingStartedWithPartiQL
 {

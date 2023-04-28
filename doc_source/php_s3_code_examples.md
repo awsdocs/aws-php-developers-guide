@@ -2,17 +2,17 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with Amazon S3\.
 
-*Actions* are code excerpts that show you how to call individual Amazon S3 functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple Amazon S3 functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c21c13)
-+ [Scenarios](#w2aac11c13c13c21c15)
++ [Actions](#actions)
++ [Scenarios](#scenarios)
 
-## Actions<a name="w2aac11c13c13c21c13"></a>
+## Actions<a name="actions"></a>
 
 ### Copy an object from one bucket to another<a name="s3_CopyObject_php_topic"></a>
 
@@ -204,18 +204,16 @@ try {
 ```
 +  For API details, see [PutObject](https://docs.aws.amazon.com/goto/SdkForPHPV3/s3-2006-03-01/PutObject) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w2aac11c13c13c21c15"></a>
+## Scenarios<a name="scenarios"></a>
 
 ### Get started with buckets and objects<a name="s3_Scenario_GettingStarted_php_topic"></a>
 
 The following code example shows how to:
-+ Create a bucket\.
-+ Upload a file to the bucket\.
++ Create a bucket and upload a file to it\.
 + Download an object from a bucket\.
 + Copy an object to a subfolder in a bucket\.
 + List the objects in a bucket\.
-+ Delete the objects in a bucket\.
-+ Delete a bucket\.
++ Delete the bucket objects and the bucket\.
 
 **SDK for PHP**  
  There's more on GitHub\. Find the complete example and learn how to set up and run in the [AWS Code Examples Repository](https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/php/example_code/s3/s3_basics#code-examples)\. 

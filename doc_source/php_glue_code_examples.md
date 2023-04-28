@@ -2,17 +2,17 @@
 
 The following code examples show you how to perform actions and implement common scenarios by using the AWS SDK for PHP with AWS Glue\.
 
-*Actions* are code excerpts that show you how to call individual AWS Glue functions\.
+*Actions* are code excerpts that show you how to call individual service functions\.
 
-*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple AWS Glue functions\.
+*Scenarios* are code examples that show you how to accomplish a specific task by calling multiple functions within the same service\.
 
 Each example includes a link to GitHub, where you can find instructions on how to set up and run the code in context\.
 
 **Topics**
-+ [Actions](#w2aac11c13c13c15c13)
-+ [Scenarios](#w2aac11c13c13c15c15)
++ [Actions](#actions)
++ [Scenarios](#scenarios)
 
-## Actions<a name="w2aac11c13c13c15c13"></a>
+## Actions<a name="actions"></a>
 
 ### Create a crawler<a name="glue_CreateCrawler_php_topic"></a>
 
@@ -333,7 +333,7 @@ The following code example shows how to list AWS Glue job definitions\.
         if ($nextToken) {
             $arguments['NextToken'] = $nextToken;
         }
-        if (!isEmpty($tags)) {
+        if (!empty($tags)) {
             $arguments['Tags'] = $tags;
         }
         return $this->glueClient->listJobs($arguments);
@@ -400,16 +400,15 @@ The following code example shows how to start an AWS Glue job run\.
 ```
 +  For API details, see [StartJobRun](https://docs.aws.amazon.com/goto/SdkForPHPV3/glue-2017-03-31/StartJobRun) in *AWS SDK for PHP API Reference*\. 
 
-## Scenarios<a name="w2aac11c13c13c15c15"></a>
+## Scenarios<a name="scenarios"></a>
 
-### Get started running crawlers and jobs<a name="glue_Scenario_GetStartedCrawlersJobs_php_topic"></a>
+### Get started with crawlers and jobs<a name="glue_Scenario_GetStartedCrawlersJobs_php_topic"></a>
 
 The following code example shows how to:
-+ Create and run a crawler that crawls a public Amazon Simple Storage Service \(Amazon S3\) bucket and generates a metadata database that describes the CSV\-formatted data it finds\.
++ Create a crawler that crawls a public Amazon S3 bucket and generates a database of CSV\-formatted metadata\.
 + List information about databases and tables in your AWS Glue Data Catalog\.
-+ Create and run a job that extracts CSV data from the source Amazon S3 bucket, transforms it by removing and renaming fields, and loads JSON\-formatted output into another Amazon S3 bucket\.
-+ List information about job runs and view some of the transformed data\.
-+ Delete all resources created by the demo\.
++ Create a job to extract CSV data from the S3 bucket, transform the data, and load JSON\-formatted output into another S3 bucket\.
++ List information about job runs, view transformed data, and clean up resources\.
 
 For more information, see [Tutorial: Getting started with AWS Glue Studio](https://docs.aws.amazon.com/glue/latest/ug/tutorial-create-job.html)\.
 
@@ -424,7 +423,7 @@ use Aws\Glue\GlueClient;
 use Aws\S3\S3Client;
 use AwsUtilities\AWSServiceClass;
 use GuzzleHttp\Psr7\Stream;
-use Iam\IamService;
+use Iam\IAMService;
 
 class GettingStartedWithGlue
 {
@@ -443,7 +442,7 @@ class GettingStartedWithGlue
 
         $glueClient = new GlueClient($clientArgs);
         $glueService = new GlueService($glueClient);
-        $iamService = new IamService();
+        $iamService = new IAMService();
         $crawlerName = "example-crawler-test-" . $uniqid;
 
         AWSServiceClass::$waitTime = 5;
@@ -478,12 +477,12 @@ class GettingStartedWithGlue
         $s3client->putObject([
             'Bucket' => $bucketName,
             'Key' => 'run_job.py',
-            'SourceFile' => 'glue/flight_etl_job_script.py'
+            'SourceFile' => __DIR__ . '/flight_etl_job_script.py'
         ]);
         $s3client->putObject([
             'Bucket' => $bucketName,
             'Key' => 'setup_scenario_getting_started.yaml',
-            'SourceFile' => 'glue/setup_scenario_getting_started.yaml'
+            'SourceFile' => __DIR__ . '/setup_scenario_getting_started.yaml'
         ]);
 
         $tables = $glueService->getTables($databaseName);
@@ -668,7 +667,7 @@ class GlueService extends \AwsUtilities\AWSServiceClass
         if ($nextToken) {
             $arguments['NextToken'] = $nextToken;
         }
-        if (!isEmpty($tags)) {
+        if (!empty($tags)) {
             $arguments['Tags'] = $tags;
         }
         return $this->glueClient->listJobs($arguments);
