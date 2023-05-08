@@ -835,8 +835,8 @@ This example passes in an array for retry configuration\.
 use Aws\S3\S3Client;
 
 $s3 = new S3Client([
-    'version'     => 'latest',
-    'region'      => 'us-west-2',
+    'version' => 'latest',
+    'region' => 'us-west-2',
     'retries' => [
         'mode' => 'standard',
         'max_attempts' => 7
@@ -852,8 +852,8 @@ use Aws\S3\S3Client;
 use Doctrine\Common\Cache\ApcuCache;
 
 $s3 = new S3Client([
-    'version'     => 'latest',
-    'region'      => 'us-west-2',
+    'version' => 'latest',
+    'region' => 'us-west-2',
     'endpoint_discovery' => new DoctrineCacheAdapter(new ApcuCache),
 ]);
 ```

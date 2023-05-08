@@ -115,6 +115,7 @@ sponsored by Amazon.
       + [Actions and scenarios using SDK for PHP](php_code_examples_categorized.md)
          + [API Gateway examples using SDK for PHP](php_api-gateway_code_examples.md)
          + [DynamoDB examples using SDK for PHP](php_dynamodb_code_examples.md)
+         + [Auto Scaling examples using SDK for PHP](php_auto-scaling_code_examples.md)
          + [AWS Glue examples using SDK for PHP](php_glue_code_examples.md)
          + [IAM examples using SDK for PHP](php_iam_code_examples.md)
          + [Lambda examples using SDK for PHP](php_lambda_code_examples.md)
