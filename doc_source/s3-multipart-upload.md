@@ -388,7 +388,9 @@ The following configuration options are valid:
 ** `state` **  
 \(`Aws\Multipart\UploadState`\) An object that represents the state of the multipart upload and that is used to resume a previous upload\. When this option is provided, the `bucket`, `key`, and `part_size` options are ignored\.  
 **`add_content_md5`**  
-\(`boolean`\) Set to true to automatically calculate the MD5 checksum for the upload\.
+\(`boolean`\) Set to true to automatically calculate the MD5 checksum for the upload\.  
+** `track_upload` **  
+\(`boolean` \) Set true to track status in 1/8th increments of upload\.
 
 ## Multipart copies<a name="multipart-copies"></a>
 
