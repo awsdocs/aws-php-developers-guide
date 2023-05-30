@@ -390,7 +390,7 @@ The following configuration options are valid:
 **`add_content_md5`**  
 \(`boolean`\) Set to true to automatically calculate the MD5 checksum for the upload\.  
 ** `track_upload` **  
-\(`boolean` \) Set true to track status in 1/8th increments of upload\.
+\(`boolean` \) Set true to track status in 1/8th increments for upload\.
 
 ## Multipart copies<a name="multipart-copies"></a>
 
